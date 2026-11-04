@@ -39,7 +39,7 @@ Push-Location -LiteralPath $PSScriptRoot
 try {
     & $compiler '-std=c89' '-pedantic-errors' '-Wall' '-Wextra' '-Wshadow' '-Wconversion' '-Werror' '-O2' `
         '-I' $includePath 'src/engine.c' 'src/game.c' 'src/json.c' 'src/lighting.c' 'src/physics.c' 'src/localization.c' `
-        '-L' $libPath '-lSDL2' '-lopengl32' $zlib '-lm' '-o' $OutputName
+        '-L' $libPath '-lSDL2' '-lopengl32' $zlib '-lshell32' '-lole32' '-luuid' '-luser32' '-lm' '-o' $OutputName
     exit $LASTEXITCODE
 } finally {
     Pop-Location

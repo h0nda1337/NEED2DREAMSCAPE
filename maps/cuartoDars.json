@@ -394,7 +394,7 @@
       "label": "Marco ",
       "position": [
         4.41,
-        1.99,
+        2.0,
         -5.84
       ],
       "camera_hidden": false,
@@ -407,7 +407,7 @@
       "position": [
         4.41,
         1.9,
-        -5.84
+        -5.8
       ],
       "camera_hidden": false,
       "vanishes": false,
@@ -419,7 +419,7 @@
       "position": [
         4.99,
         1.96,
-        -5.96
+        -5.72
       ],
       "camera_hidden": false,
       "vanishes": false,

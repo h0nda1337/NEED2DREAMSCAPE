@@ -8,10 +8,28 @@
 #include <math.h>
 #include <limits.h>
 #include <errno.h>
+#include <sys/stat.h>
 #include <zlib.h>
+#ifdef _WIN32
+#include <windows.h>
+#include <shlobj.h>
+#include <wchar.h>
+typedef wchar_t SaveChar;
+#define SAVE_NAME L"\\history-progress.n2d"
+#define SAVE_OPEN _wfopen
+#define SAVE_READ_MODE L"rb"
+#define SAVE_WRITE_MODE L"wb"
+#else
+#include <unistd.h>
+typedef char SaveChar;
+#define SAVE_OPEN fopen
+#define SAVE_READ_MODE "rb"
+#define SAVE_WRITE_MODE "wb"
+#endif
 
 Engine E;
 static int no_save;
+static SaveChar desktop_save[MAX_PATH_SIZE];
 static double frame_limit;
 static int scene_loading;
 static int billboard_pass;
@@ -1046,33 +1064,108 @@ void engine_fade(const char *scene, double rate, int white)
     E.fading=1;E.fade_in=0;E.fade_alpha=0;E.fade_rate=rate;E.pending_scene=index;
     E.fade_color[0]=E.fade_color[1]=E.fade_color[2]=white?1:0;
 }
+static void desktop_save_init(void)
+{
+#ifdef _WIN32
+    PWSTR folder;
+    folder=NULL;
+    if(SUCCEEDED(SHGetKnownFolderPath(&FOLDERID_Desktop,0,NULL,&folder))&&folder&&
+       wcslen(folder)+sizeof(SAVE_NAME)/sizeof(SaveChar)<MAX_PATH_SIZE){
+        wcscpy(desktop_save,folder);
+        wcscat(desktop_save,SAVE_NAME);
+    }
+    CoTaskMemFree(folder);
+#else
+    const char *home;
+    const char *suffix;
+    home=getenv("HOME");suffix="/Desktop/history-progress.n2d";
+    if(home&&strlen(home)+strlen(suffix)<sizeof(desktop_save)){
+        strcpy(desktop_save,home);strcat(desktop_save,suffix);
+    }
+#endif
+}
+static int progress_path(SaveChar path[MAX_PATH_SIZE])
+{
+    if(E.save_path[0]){
+#ifdef _WIN32
+        return MultiByteToWideChar(CP_ACP,0,E.save_path,-1,path,MAX_PATH_SIZE)>0;
+#else
+        strcpy(path,E.save_path);
+        return 1;
+#endif
+    }
+    if(!desktop_save[0])return 0;
+    memcpy(path,desktop_save,sizeof(desktop_save));
+    return 1;
+}
 void engine_save(void)
 {
     FILE *f;
+    SaveChar path[MAX_PATH_SIZE];
+    SaveChar pending[MAX_PATH_SIZE+32];
+    int written;
+    int closed;
     if(no_save)return;
-    E.saved_level=E.scene_index;f=fopen(E.save_path,"wb");
-    if(f){fprintf(f,"PETSCOP_C89_SAVE_1\n%d\n%d\n%d\n%d\n%d\n%d\n%d\n",E.saved_level,E.custom_story_seen,E.custom_key_unlocked,E.computer_progress,E.search_progress,E.chapter2_choice,E.chapter2_flags);fclose(f);}
+    if(!progress_path(path)){fprintf(stderr,"No se encontro el Escritorio para guardar la partida.\n");return;}
+#ifdef _WIN32
+    wsprintfW(pending,L"%ls.%lu.tmp",path,(unsigned long)GetCurrentProcessId());
+#else
+    sprintf(pending,"%s.%lu.tmp",path,(unsigned long)getpid());
+#endif
+    f=SAVE_OPEN(pending,SAVE_WRITE_MODE);
+    if(!f){perror("No se pudo guardar la partida");return;}
+    written=fprintf(f,"PETSCOP_C89_SAVE_1\n%d\n%d\n%d\n%d\n%d\n%d\n%d\n",E.scene_index,
+        E.custom_story_seen,E.custom_key_unlocked,E.computer_progress,E.search_progress,E.chapter2_choice,E.chapter2_flags);
+    closed=fclose(f);
+#ifdef _WIN32
+    if(written>=0&&closed==0&&MoveFileExW(pending,path,MOVEFILE_REPLACE_EXISTING|MOVEFILE_WRITE_THROUGH)){
+        E.saved_level=E.scene_index;return;
+    }
+    DeleteFileW(pending);
+#else
+    if(written>=0&&closed==0&&rename(pending,path)==0){E.saved_level=E.scene_index;return;}
+    remove(pending);
+#endif
+    fprintf(stderr,"No se pudo actualizar la partida guardada.\n");
+}
+static int read_progress(FILE *f)
+{
+    char magic[64];
+    int level;
+    if(!f)return 0;
+    if(!fgets(magic,sizeof(magic),f)||strcmp(magic,"PETSCOP_C89_SAVE_1\n")||
+       fscanf(f,"%d",&level)!=1||level<0||level>=jc(jg(E.game,"scenes"))){
+        fclose(f);return 0;
+    }
+    E.saved_level=level;
+    if(fscanf(f,"%d",&E.custom_story_seen)!=1)E.custom_story_seen=0;
+    if(fscanf(f,"%d",&E.custom_key_unlocked)!=1)
+        E.custom_key_unlocked=E.custom_story_seen||E.saved_level==9||E.saved_level>=engine_scene_index("casaCustom");
+    if(fscanf(f,"%d",&E.computer_progress)!=1||E.computer_progress<COMPUTER_LOCKED||E.computer_progress>COMPUTER_EMPTY)
+        E.computer_progress=COMPUTER_LOCKED;
+    if(fscanf(f,"%d",&E.search_progress)!=1||E.search_progress<0||E.search_progress>ji(jg(E.game,"chapter_two_complete"),31))
+        E.search_progress=0;
+    if(fscanf(f,"%d",&E.chapter2_choice)!=1||E.chapter2_choice<0||E.chapter2_choice>2)
+        E.chapter2_choice=0;
+    if(fscanf(f,"%d",&E.chapter2_flags)!=1||E.chapter2_flags<0)E.chapter2_flags=0;
+    fclose(f);
+    return 1;
 }
 static void save_read(void)
 {
-    FILE *f;
-    char magic[64];
-    campaign_reset();
-    E.saved_level=-1;f=fopen(E.save_path,"rb");if(!f)return;
-    if(fgets(magic,sizeof(magic),f)&&!strcmp(magic,"PETSCOP_C89_SAVE_1\n")){
-        if(fscanf(f,"%d",&E.saved_level)!=1)E.saved_level=-1;
-        if(fscanf(f,"%d",&E.custom_story_seen)!=1)E.custom_story_seen=0;
-        if(fscanf(f,"%d",&E.custom_key_unlocked)!=1)
-            E.custom_key_unlocked=E.custom_story_seen||E.saved_level==9||E.saved_level>=engine_scene_index("casaCustom");
-        if(fscanf(f,"%d",&E.computer_progress)!=1||E.computer_progress<COMPUTER_LOCKED||E.computer_progress>COMPUTER_EMPTY)
-            E.computer_progress=COMPUTER_LOCKED;
-        if(fscanf(f,"%d",&E.search_progress)!=1||E.search_progress<0||E.search_progress>ji(jg(E.game,"chapter_two_complete"),31))
-            E.search_progress=0;
-        if(fscanf(f,"%d",&E.chapter2_choice)!=1||E.chapter2_choice<0||E.chapter2_choice>2)
-            E.chapter2_choice=0;
-        if(fscanf(f,"%d",&E.chapter2_flags)!=1||E.chapter2_flags<0)E.chapter2_flags=0;
+    SaveChar path[MAX_PATH_SIZE];
+    struct stat main_save;
+    struct stat chapter_save;
+    const char *first;
+    const char *second;
+    campaign_reset();E.saved_level=-1;
+    if(progress_path(path)&&read_progress(SAVE_OPEN(path,SAVE_READ_MODE)))return;
+    if(E.save_path[0])return;
+    first="petscop.save";second="capitulo2.save";
+    if(stat(second,&chapter_save)==0&&(stat(first,&main_save)!=0||chapter_save.st_mtime>=main_save.st_mtime)){
+        first="capitulo2.save";second="petscop.save";
     }
-    fclose(f);
+    if(!read_progress(fopen(first,"rb")))read_progress(fopen(second,"rb"));
 }
 void engine_settings(int width, int fps, int aa)
 {
@@ -2640,7 +2733,7 @@ int main(int argc,char **argv)
     int preview_chapter;
     int status;
     int scene_index;
-    memset(&E,0,sizeof(E));strcpy(E.root,"assets");strcpy(E.save_path,"petscop.save");E.width=1280;E.height=640;E.fps_target=60;E.pending_scene=-1;E.video=-1;
+    memset(&E,0,sizeof(E));strcpy(E.root,"assets");E.width=1280;E.height=640;E.fps_target=60;E.pending_scene=-1;E.video=-1;
     scene="mainmenu2";language="es";bathroom_test=NULL;audio_test=NULL;render_test=NULL;capture=NULL;light_test=NULL;physics_test=NULL;selftest=0;preview_chapter=0;frame_limit=0;
     for(i=1;i<argc;++i){
         if(!strcmp(argv[i],"--assets")&&i+1<argc){if(strlen(argv[++i])<MAX_PATH_SIZE)strcpy(E.root,argv[i]);}
@@ -2670,9 +2763,10 @@ int main(int argc,char **argv)
     E.textures=(Texture*)calloc((size_t)E.texture_count,sizeof(Texture));E.meshes=(Mesh*)calloc((size_t)E.mesh_count,sizeof(Mesh));E.sounds=(Sound*)calloc((size_t)E.sound_count,sizeof(Sound));
     if(!E.textures||!E.meshes||!E.sounds){cleanup();return 1;}
     if(SDL_Init(E.headless?SDL_INIT_TIMER:SDL_INIT_VIDEO|SDL_INIT_AUDIO|SDL_INIT_TIMER)!=0){fprintf(stderr,"SDL: %s\n",SDL_GetError());cleanup();return 1;}
+    if(!E.save_path[0])desktop_save_init();
     save_read();
     if(preview_chapter){
-        if(E.search_progress>=13&&E.saved_level>=0)scene="loader";
+        if(E.saved_level>=0&&E.search_progress!=12)scene="loader";
         else{
             E.search_progress=12;E.computer_progress=COMPUTER_EMPTY;
             E.custom_story_seen=1;E.custom_key_unlocked=1;

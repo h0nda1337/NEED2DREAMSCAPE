@@ -276,8 +276,8 @@
       "label": "Marco ABIERTO",
       "position": [
         0,
-        1.99,
-        -5.85
+        2.0,
+        -5.84
       ],
       "camera_hidden": false,
       "vanishes": false,
@@ -289,7 +289,7 @@
       "position": [
         0,
         1.9,
-        -5.85
+        -5.8
       ],
       "camera_hidden": false,
       "vanishes": false,
@@ -301,7 +301,7 @@
       "position": [
         0.58,
         1.96,
-        -5.97
+        -5.72
       ],
       "camera_hidden": false,
       "vanishes": false,

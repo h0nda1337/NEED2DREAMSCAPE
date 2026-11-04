@@ -257,8 +257,8 @@
       "label": "Marco ",
       "position": [
         0,
-        1.99,
-        -3.82
+        1.475,
+        -3.85
       ],
       "camera_hidden": false,
       "vanishes": false,
@@ -269,8 +269,8 @@
       "label": "Hoja ",
       "position": [
         0,
-        1.9,
-        -3.82
+        1.375,
+        -3.81
       ],
       "camera_hidden": false,
       "vanishes": false,
@@ -281,8 +281,8 @@
       "label": "Manija ",
       "position": [
         0.58,
-        1.96,
-        -3.94
+        1.4455,
+        -3.73
       ],
       "camera_hidden": false,
       "vanishes": false,

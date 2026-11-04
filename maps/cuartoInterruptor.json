@@ -127,7 +127,7 @@
       "cutaway": false
     },
     {
-      "name": "cuartoInterruptor_c2_22",
+      "name": "cuartoInterruptor_c2_23",
       "position": [
         0,
         2.27,
@@ -240,11 +240,11 @@
     },
     {
       "id": "cuartoInterruptor_c2_15",
-      "label": "Marco ",
+      "label": "Zócalo del muro de entrada",
       "position": [
         0,
-        1.99,
-        -5.86
+        0.48,
+        -6.0
       ],
       "camera_hidden": false,
       "vanishes": false,
@@ -252,11 +252,11 @@
     },
     {
       "id": "cuartoInterruptor_c2_16",
-      "label": "Hoja ",
+      "label": "Marco ",
       "position": [
         0,
-        1.9,
-        -5.86
+        2.0,
+        -5.84
       ],
       "camera_hidden": false,
       "vanishes": false,
@@ -264,11 +264,11 @@
     },
     {
       "id": "cuartoInterruptor_c2_17",
-      "label": "Manija ",
+      "label": "Hoja ",
       "position": [
-        0.58,
-        1.96,
-        -5.98
+        0,
+        1.9,
+        -5.8
       ],
       "camera_hidden": false,
       "vanishes": false,
@@ -276,11 +276,11 @@
     },
     {
       "id": "cuartoInterruptor_c2_18",
-      "label": "Marco REGISTRO",
+      "label": "Manija ",
       "position": [
-        0,
-        1.99,
-        5.86
+        0.58,
+        1.96,
+        -5.72
       ],
       "camera_hidden": false,
       "vanishes": false,
@@ -288,11 +288,11 @@
     },
     {
       "id": "cuartoInterruptor_c2_19",
-      "label": "Hoja REGISTRO",
+      "label": "Marco REGISTRO",
       "position": [
         0,
-        1.9,
-        5.86
+        2.0,
+        5.84
       ],
       "camera_hidden": false,
       "vanishes": false,
@@ -300,18 +300,30 @@
     },
     {
       "id": "cuartoInterruptor_c2_20",
-      "label": "Manija REGISTRO",
+      "label": "Hoja REGISTRO",
       "position": [
-        0.58,
-        1.96,
-        5.74
+        0,
+        1.9,
+        5.8
       ],
       "camera_hidden": false,
       "vanishes": false,
       "movable": false
     },
     {
-      "id": "cuartoInterruptor_c2_22",
+      "id": "cuartoInterruptor_c2_21",
+      "label": "Manija REGISTRO",
+      "position": [
+        0.58,
+        1.96,
+        5.72
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cuartoInterruptor_c2_23",
       "label": "Tablero",
       "position": [
         0,
@@ -323,7 +335,7 @@
       "movable": false
     },
     {
-      "id": "cuartoInterruptor_c2_24",
+      "id": "cuartoInterruptor_c2_25",
       "label": "Interruptor PASILLO",
       "position": [
         -2.12,
@@ -335,7 +347,7 @@
       "movable": false
     },
     {
-      "id": "cuartoInterruptor_c2_26",
+      "id": "cuartoInterruptor_c2_27",
       "label": "Interruptor CUARTO",
       "position": [
         -0.72,
@@ -347,7 +359,7 @@
       "movable": false
     },
     {
-      "id": "cuartoInterruptor_c2_28",
+      "id": "cuartoInterruptor_c2_29",
       "label": "Interruptor COCINA",
       "position": [
         0.72,
@@ -359,7 +371,7 @@
       "movable": false
     },
     {
-      "id": "cuartoInterruptor_c2_30",
+      "id": "cuartoInterruptor_c2_31",
       "label": "Interruptor EXTERIOR",
       "position": [
         2.12,

@@ -14,7 +14,7 @@
     "cuartoSalida": [
       3.15,
       2.64,
-      4.72
+      6.21
     ],
     "azoteaDesfase": [
       -3.1,
@@ -44,7 +44,7 @@
       "pos": [
         3.2,
         2.64,
-        6.1
+        7.44
       ],
       "radius": 0.95,
       "min_stage": 127,
@@ -296,34 +296,10 @@
     },
     {
       "id": "escaleraServicio_c2_15",
-      "label": "Marco SERVICIO",
+      "label": "Zócalo del muro de entrada",
       "position": [
         0,
-        1.99,
-        -8.38
-      ],
-      "camera_hidden": false,
-      "vanishes": false,
-      "movable": false
-    },
-    {
-      "id": "escaleraServicio_c2_16",
-      "label": "Hoja SERVICIO",
-      "position": [
-        0,
-        1.9,
-        -8.38
-      ],
-      "camera_hidden": false,
-      "vanishes": false,
-      "movable": false
-    },
-    {
-      "id": "escaleraServicio_c2_17",
-      "label": "Manija SERVICIO",
-      "position": [
-        0.58,
-        1.96,
+        0.48,
         -8.5
       ],
       "camera_hidden": false,
@@ -331,12 +307,36 @@
       "movable": false
     },
     {
-      "id": "escaleraServicio_c2_19",
-      "label": "Marco SALIDA",
+      "id": "escaleraServicio_c2_16",
+      "label": "Marco SERVICIO",
       "position": [
-        3.2,
-        1.99,
-        7.0
+        0,
+        2.0,
+        -8.34
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "escaleraServicio_c2_17",
+      "label": "Hoja SERVICIO",
+      "position": [
+        0,
+        1.9,
+        -8.3
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "escaleraServicio_c2_18",
+      "label": "Manija SERVICIO",
+      "position": [
+        0.58,
+        1.96,
+        -8.22
       ],
       "camera_hidden": false,
       "vanishes": false,
@@ -344,34 +344,10 @@
     },
     {
       "id": "escaleraServicio_c2_20",
-      "label": "Hoja SALIDA",
+      "label": "Marco SALIDA",
       "position": [
         3.2,
-        1.9,
-        7.0
-      ],
-      "camera_hidden": false,
-      "vanishes": false,
-      "movable": false
-    },
-    {
-      "id": "escaleraServicio_c2_21",
-      "label": "Manija SALIDA",
-      "position": [
-        3.7800000000000002,
-        1.96,
-        6.88
-      ],
-      "camera_hidden": false,
-      "vanishes": false,
-      "movable": false
-    },
-    {
-      "id": "escaleraServicio_c2_23",
-      "label": "Marco ",
-      "position": [
-        -3.1,
-        1.99,
+        2.0,
         8.34
       ],
       "camera_hidden": false,
@@ -379,11 +355,35 @@
       "movable": false
     },
     {
+      "id": "escaleraServicio_c2_21",
+      "label": "Hoja SALIDA",
+      "position": [
+        3.2,
+        1.9,
+        8.3
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "escaleraServicio_c2_22",
+      "label": "Manija SALIDA",
+      "position": [
+        3.7800000000000002,
+        1.96,
+        8.22
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
       "id": "escaleraServicio_c2_24",
-      "label": "Hoja ",
+      "label": "Marco ",
       "position": [
         -3.1,
-        1.9,
+        2.0,
         8.34
       ],
       "camera_hidden": false,
@@ -392,6 +392,18 @@
     },
     {
       "id": "escaleraServicio_c2_25",
+      "label": "Hoja ",
+      "position": [
+        -3.1,
+        1.9,
+        8.3
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "escaleraServicio_c2_26",
       "label": "Manija ",
       "position": [
         -2.52,
@@ -403,7 +415,7 @@
       "movable": false
     },
     {
-      "id": "escaleraServicio_c2_26",
+      "id": "escaleraServicio_c2_27",
       "label": "Escalón de concreto",
       "position": [
         0,
@@ -415,7 +427,7 @@
       "movable": false
     },
     {
-      "id": "escaleraServicio_c2_27",
+      "id": "escaleraServicio_c2_28",
       "label": "Escalón de concreto",
       "position": [
         0,
@@ -427,7 +439,7 @@
       "movable": false
     },
     {
-      "id": "escaleraServicio_c2_28",
+      "id": "escaleraServicio_c2_29",
       "label": "Escalón de concreto",
       "position": [
         0,
@@ -439,7 +451,7 @@
       "movable": false
     },
     {
-      "id": "escaleraServicio_c2_29",
+      "id": "escaleraServicio_c2_30",
       "label": "Escalón de concreto",
       "position": [
         0,
@@ -451,7 +463,7 @@
       "movable": false
     },
     {
-      "id": "escaleraServicio_c2_30",
+      "id": "escaleraServicio_c2_31",
       "label": "Escalón de concreto",
       "position": [
         0,
@@ -463,7 +475,7 @@
       "movable": false
     },
     {
-      "id": "escaleraServicio_c2_31",
+      "id": "escaleraServicio_c2_32",
       "label": "Escalón de concreto",
       "position": [
         0,
@@ -475,7 +487,7 @@
       "movable": false
     },
     {
-      "id": "escaleraServicio_c2_32",
+      "id": "escaleraServicio_c2_33",
       "label": "Escalón de concreto",
       "position": [
         0,
@@ -487,7 +499,7 @@
       "movable": false
     },
     {
-      "id": "escaleraServicio_c2_33",
+      "id": "escaleraServicio_c2_34",
       "label": "Escalón de concreto",
       "position": [
         0,
@@ -499,24 +511,12 @@
       "movable": false
     },
     {
-      "id": "escaleraServicio_c2_34",
+      "id": "escaleraServicio_c2_35",
       "label": "Pasamanos",
       "position": [
         -2.28,
         1.48,
         -3.38
-      ],
-      "camera_hidden": false,
-      "vanishes": false,
-      "movable": false
-    },
-    {
-      "id": "escaleraServicio_c2_35",
-      "label": "Soporte",
-      "position": [
-        -2.28,
-        0.73,
-        -5.0
       ],
       "camera_hidden": false,
       "vanishes": false,
@@ -528,7 +528,7 @@
       "position": [
         -2.28,
         0.73,
-        -2.1
+        -5.0
       ],
       "camera_hidden": false,
       "vanishes": false,
@@ -536,6 +536,18 @@
     },
     {
       "id": "escaleraServicio_c2_37",
+      "label": "Soporte",
+      "position": [
+        -2.28,
+        0.73,
+        -2.1
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "escaleraServicio_c2_38",
       "label": "Pasamanos",
       "position": [
         2.28,
@@ -547,7 +559,7 @@
       "movable": false
     },
     {
-      "id": "escaleraServicio_c2_38",
+      "id": "escaleraServicio_c2_39",
       "label": "Soporte",
       "position": [
         2.28,
@@ -559,7 +571,7 @@
       "movable": false
     },
     {
-      "id": "escaleraServicio_c2_39",
+      "id": "escaleraServicio_c2_40",
       "label": "Soporte",
       "position": [
         2.28,
@@ -571,7 +583,7 @@
       "movable": false
     },
     {
-      "id": "escaleraServicio_c2_41",
+      "id": "escaleraServicio_c2_42",
       "label": "Escalón de concreto",
       "position": [
         0,
@@ -583,7 +595,7 @@
       "movable": false
     },
     {
-      "id": "escaleraServicio_c2_42",
+      "id": "escaleraServicio_c2_43",
       "label": "Escalón de concreto",
       "position": [
         0,
@@ -595,7 +607,7 @@
       "movable": false
     },
     {
-      "id": "escaleraServicio_c2_43",
+      "id": "escaleraServicio_c2_44",
       "label": "Escalón de concreto",
       "position": [
         0,
@@ -607,7 +619,7 @@
       "movable": false
     },
     {
-      "id": "escaleraServicio_c2_44",
+      "id": "escaleraServicio_c2_45",
       "label": "Escalón de concreto",
       "position": [
         0,
@@ -619,7 +631,7 @@
       "movable": false
     },
     {
-      "id": "escaleraServicio_c2_45",
+      "id": "escaleraServicio_c2_46",
       "label": "Escalón de concreto",
       "position": [
         0,
@@ -631,7 +643,7 @@
       "movable": false
     },
     {
-      "id": "escaleraServicio_c2_46",
+      "id": "escaleraServicio_c2_47",
       "label": "Escalón de concreto",
       "position": [
         0,
@@ -643,7 +655,7 @@
       "movable": false
     },
     {
-      "id": "escaleraServicio_c2_47",
+      "id": "escaleraServicio_c2_48",
       "label": "Escalón de concreto",
       "position": [
         0,
@@ -655,7 +667,7 @@
       "movable": false
     },
     {
-      "id": "escaleraServicio_c2_48",
+      "id": "escaleraServicio_c2_49",
       "label": "Escalón de concreto",
       "position": [
         0,
@@ -667,24 +679,12 @@
       "movable": false
     },
     {
-      "id": "escaleraServicio_c2_49",
+      "id": "escaleraServicio_c2_50",
       "label": "Pasamanos",
       "position": [
         -2.28,
         1.48,
         1.77
-      ],
-      "camera_hidden": false,
-      "vanishes": false,
-      "movable": false
-    },
-    {
-      "id": "escaleraServicio_c2_50",
-      "label": "Soporte",
-      "position": [
-        -2.28,
-        0.73,
-        0.15
       ],
       "camera_hidden": false,
       "vanishes": false,
@@ -696,7 +696,7 @@
       "position": [
         -2.28,
         0.73,
-        3.05
+        0.15
       ],
       "camera_hidden": false,
       "vanishes": false,
@@ -704,6 +704,18 @@
     },
     {
       "id": "escaleraServicio_c2_52",
+      "label": "Soporte",
+      "position": [
+        -2.28,
+        0.73,
+        3.05
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "escaleraServicio_c2_53",
       "label": "Pasamanos",
       "position": [
         2.28,
@@ -715,7 +727,7 @@
       "movable": false
     },
     {
-      "id": "escaleraServicio_c2_53",
+      "id": "escaleraServicio_c2_54",
       "label": "Soporte",
       "position": [
         2.28,
@@ -727,7 +739,7 @@
       "movable": false
     },
     {
-      "id": "escaleraServicio_c2_54",
+      "id": "escaleraServicio_c2_55",
       "label": "Soporte",
       "position": [
         2.28,
@@ -739,7 +751,7 @@
       "movable": false
     },
     {
-      "id": "escaleraServicio_c2_56",
+      "id": "escaleraServicio_c2_57",
       "label": "Escalón de concreto",
       "position": [
         0,
@@ -751,7 +763,7 @@
       "movable": false
     },
     {
-      "id": "escaleraServicio_c2_57",
+      "id": "escaleraServicio_c2_58",
       "label": "Escalón de concreto",
       "position": [
         0,
@@ -763,7 +775,7 @@
       "movable": false
     },
     {
-      "id": "escaleraServicio_c2_58",
+      "id": "escaleraServicio_c2_59",
       "label": "Escalón de concreto",
       "position": [
         0,
@@ -775,7 +787,7 @@
       "movable": false
     },
     {
-      "id": "escaleraServicio_c2_59",
+      "id": "escaleraServicio_c2_60",
       "label": "Escalón de concreto",
       "position": [
         0,
@@ -787,7 +799,7 @@
       "movable": false
     },
     {
-      "id": "escaleraServicio_c2_60",
+      "id": "escaleraServicio_c2_61",
       "label": "Escalón de concreto",
       "position": [
         0,
@@ -799,7 +811,7 @@
       "movable": false
     },
     {
-      "id": "escaleraServicio_c2_61",
+      "id": "escaleraServicio_c2_62",
       "label": "Escalón de concreto",
       "position": [
         0,
@@ -811,7 +823,7 @@
       "movable": false
     },
     {
-      "id": "escaleraServicio_c2_62",
+      "id": "escaleraServicio_c2_63",
       "label": "Escalón de concreto",
       "position": [
         0,
@@ -823,7 +835,7 @@
       "movable": false
     },
     {
-      "id": "escaleraServicio_c2_63",
+      "id": "escaleraServicio_c2_64",
       "label": "Escalón de concreto",
       "position": [
         0,
@@ -835,24 +847,12 @@
       "movable": false
     },
     {
-      "id": "escaleraServicio_c2_64",
+      "id": "escaleraServicio_c2_65",
       "label": "Pasamanos",
       "position": [
         -2.28,
         1.48,
         6.9
-      ],
-      "camera_hidden": false,
-      "vanishes": false,
-      "movable": false
-    },
-    {
-      "id": "escaleraServicio_c2_65",
-      "label": "Soporte",
-      "position": [
-        -2.28,
-        0.73,
-        5.28
       ],
       "camera_hidden": false,
       "vanishes": false,
@@ -864,7 +864,7 @@
       "position": [
         -2.28,
         0.73,
-        8.18
+        5.28
       ],
       "camera_hidden": false,
       "vanishes": false,
@@ -872,6 +872,18 @@
     },
     {
       "id": "escaleraServicio_c2_67",
+      "label": "Soporte",
+      "position": [
+        -2.28,
+        0.73,
+        8.18
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "escaleraServicio_c2_68",
       "label": "Pasamanos",
       "position": [
         2.28,
@@ -883,7 +895,7 @@
       "movable": false
     },
     {
-      "id": "escaleraServicio_c2_68",
+      "id": "escaleraServicio_c2_69",
       "label": "Soporte",
       "position": [
         2.28,
@@ -895,7 +907,7 @@
       "movable": false
     },
     {
-      "id": "escaleraServicio_c2_69",
+      "id": "escaleraServicio_c2_70",
       "label": "Soporte",
       "position": [
         2.28,
@@ -907,7 +919,7 @@
       "movable": false
     },
     {
-      "id": "escaleraServicio_c2_71",
+      "id": "escaleraServicio_c2_72",
       "label": "Marco de ventana",
       "position": [
         4.87,
@@ -919,7 +931,7 @@
       "movable": false
     },
     {
-      "id": "escaleraServicio_c2_72",
+      "id": "escaleraServicio_c2_73",
       "label": "Cristal nocturno",
       "position": [
         4.77,
@@ -931,7 +943,7 @@
       "movable": false
     },
     {
-      "id": "escaleraServicio_c2_73",
+      "id": "escaleraServicio_c2_74",
       "label": "Fachada en el cristal",
       "position": [
         4.73,
@@ -943,7 +955,7 @@
       "movable": false
     },
     {
-      "id": "escaleraServicio_c2_74",
+      "id": "escaleraServicio_c2_75",
       "label": "Vehículo",
       "position": [
         4.68,
@@ -955,7 +967,7 @@
       "movable": false
     },
     {
-      "id": "escaleraServicio_c2_75",
+      "id": "escaleraServicio_c2_76",
       "label": "Marco de ventana",
       "position": [
         4.87,
@@ -967,7 +979,7 @@
       "movable": false
     },
     {
-      "id": "escaleraServicio_c2_76",
+      "id": "escaleraServicio_c2_77",
       "label": "Cristal nocturno",
       "position": [
         4.77,
@@ -979,7 +991,7 @@
       "movable": false
     },
     {
-      "id": "escaleraServicio_c2_77",
+      "id": "escaleraServicio_c2_78",
       "label": "Fachada en el cristal",
       "position": [
         4.73,
@@ -991,7 +1003,7 @@
       "movable": false
     },
     {
-      "id": "escaleraServicio_c2_78",
+      "id": "escaleraServicio_c2_79",
       "label": "Vehículo",
       "position": [
         4.68,
@@ -1003,7 +1015,7 @@
       "movable": false
     },
     {
-      "id": "escaleraServicio_c2_79",
+      "id": "escaleraServicio_c2_80",
       "label": "Puerta del vehículo abierta",
       "position": [
         4.63,
@@ -1017,7 +1029,7 @@
       "chapter_max": 169
     },
     {
-      "id": "escaleraServicio_c2_80",
+      "id": "escaleraServicio_c2_81",
       "label": "Botella del sexto descanso",
       "position": [
         -1.16,
@@ -1031,7 +1043,7 @@
       "chapter_max": 169
     },
     {
-      "id": "escaleraServicio_c2_81",
+      "id": "escaleraServicio_c2_82",
       "label": "Rejilla",
       "position": [
         -4.82,
@@ -1043,7 +1055,7 @@
       "movable": false
     },
     {
-      "id": "escaleraServicio_c2_82",
+      "id": "escaleraServicio_c2_83",
       "label": "Caja de herramientas",
       "position": [
         0.93,
@@ -1055,7 +1067,7 @@
       "movable": false
     },
     {
-      "id": "escaleraServicio_c2_83",
+      "id": "escaleraServicio_c2_84",
       "label": "Espejo roto",
       "position": [
         -0.44,
@@ -1069,7 +1081,7 @@
       "chapter_max": 151
     },
     {
-      "id": "escaleraServicio_c2_84",
+      "id": "escaleraServicio_c2_85",
       "label": "Desarmador",
       "position": [
         0.93,

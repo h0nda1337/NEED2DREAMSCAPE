@@ -6,11 +6,11 @@ Rade vuelve a casa en Navidad y encuentra a Dars junto a su computadora. Al ence
 
 ## Jugar en Windows
 
-Descarga y extrae el ZIP de la v14. Abre `compile_and_playnow.cmd` para jugar. Si tienes GCC para Windows con SDL2 y zlib, el acceso compila el código C89 y lo ejecuta. En el resto de las instalaciones abre el ejecutable incluido. El mismo acceso funciona en una copia completa del repositorio. [Descargar NEED2DREAMSCAPE v14 para Windows](https://github.com/h0nda1337/NEED2DREAMSCAPE/releases/latest)
+Descarga y extrae el ZIP. Abre `compile_and_playnow.cmd` para jugar. Si tienes GCC para Windows con SDL2 y zlib, el acceso compila el código C89 y lo ejecuta. En el resto de las instalaciones abre el ejecutable incluido. El mismo acceso funciona en una copia completa del repositorio. [Descargar NEED2DREAMSCAPE para Windows](https://github.com/h0nda1337/NEED2DREAMSCAPE/releases/latest)
 
 - `game/jugar.cmd` abre el ejecutable incluido.
-- `game/capitulo_2.cmd` abre directamente el segundo capítulo.
-- Para continuar desde una versión anterior, copia el archivo `.save` a `game/`. En el menú selecciona **Cargar partida**, o abre `capitulo_2.cmd` si usabas su guardado separado.
+- `game/capitulo_2.cmd` abre el segundo capítulo si aún no hay una partida y retoma el progreso si ya existe.
+- El progreso se guarda en `history-progress.n2d` en el Escritorio de Windows. Para recuperar una partida anterior, deja su `.save` en `game/` y elige **Cargar partida**. El primer arranque usa el `.save` más reciente si todavía no hay guardado en el Escritorio.
 
 Usa WASD o las flechas para moverte, E para interactuar, clic o Enter para avanzar los diálogos e I para abrir el inventario del capítulo 2.
 

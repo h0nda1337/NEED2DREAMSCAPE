@@ -122,7 +122,7 @@
       "cutaway": false
     },
     {
-      "name": "cuartoSalida_c2_23",
+      "name": "cuartoSalida_c2_24",
       "position": [
         -1.35,
         0.83,
@@ -141,7 +141,7 @@
       "cutaway": false
     },
     {
-      "name": "cuartoSalida_c2_27",
+      "name": "cuartoSalida_c2_28",
       "position": [
         1.83,
         0.55,
@@ -254,34 +254,10 @@
     },
     {
       "id": "cuartoSalida_c2_15",
-      "label": "Marco SALIDA",
+      "label": "Zócalo del muro de entrada",
       "position": [
         0,
-        1.99,
-        -5.38
-      ],
-      "camera_hidden": false,
-      "vanishes": false,
-      "movable": false
-    },
-    {
-      "id": "cuartoSalida_c2_16",
-      "label": "Hoja SALIDA",
-      "position": [
-        0,
-        1.9,
-        -5.38
-      ],
-      "camera_hidden": false,
-      "vanishes": false,
-      "movable": false
-    },
-    {
-      "id": "cuartoSalida_c2_17",
-      "label": "Manija SALIDA",
-      "position": [
-        0.58,
-        1.96,
+        0.48,
         -5.5
       ],
       "camera_hidden": false,
@@ -289,12 +265,36 @@
       "movable": false
     },
     {
-      "id": "cuartoSalida_c2_19",
+      "id": "cuartoSalida_c2_16",
       "label": "Marco SALIDA",
       "position": [
         0,
-        1.99,
-        5.38
+        2.0,
+        -5.34
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cuartoSalida_c2_17",
+      "label": "Hoja SALIDA",
+      "position": [
+        0,
+        1.9,
+        -5.3
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cuartoSalida_c2_18",
+      "label": "Manija SALIDA",
+      "position": [
+        0.58,
+        1.96,
+        -5.22
       ],
       "camera_hidden": false,
       "vanishes": false,
@@ -302,11 +302,11 @@
     },
     {
       "id": "cuartoSalida_c2_20",
-      "label": "Hoja SALIDA",
+      "label": "Marco SALIDA",
       "position": [
         0,
-        1.9,
-        5.38
+        2.0,
+        5.34
       ],
       "camera_hidden": false,
       "vanishes": false,
@@ -314,18 +314,30 @@
     },
     {
       "id": "cuartoSalida_c2_21",
-      "label": "Manija SALIDA",
+      "label": "Hoja SALIDA",
       "position": [
-        0.58,
-        1.96,
-        5.26
+        0,
+        1.9,
+        5.3
       ],
       "camera_hidden": false,
       "vanishes": false,
       "movable": false
     },
     {
-      "id": "cuartoSalida_c2_23",
+      "id": "cuartoSalida_c2_22",
+      "label": "Manija SALIDA",
+      "position": [
+        0.58,
+        1.96,
+        5.22
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cuartoSalida_c2_24",
       "label": "Banca",
       "position": [
         -1.35,
@@ -337,7 +349,7 @@
       "movable": false
     },
     {
-      "id": "cuartoSalida_c2_24",
+      "id": "cuartoSalida_c2_25",
       "label": "Respaldo",
       "position": [
         -1.35,
@@ -349,7 +361,7 @@
       "movable": false
     },
     {
-      "id": "cuartoSalida_c2_25",
+      "id": "cuartoSalida_c2_26",
       "label": "Apoyo de la banca",
       "position": [
         -2.33,
@@ -361,7 +373,7 @@
       "movable": false
     },
     {
-      "id": "cuartoSalida_c2_26",
+      "id": "cuartoSalida_c2_27",
       "label": "Apoyo de la banca",
       "position": [
         -0.3700000000000001,
@@ -373,7 +385,7 @@
       "movable": false
     },
     {
-      "id": "cuartoSalida_c2_27",
+      "id": "cuartoSalida_c2_28",
       "label": "Bote de basura",
       "position": [
         1.83,

@@ -1,3 +1,3 @@
 @echo off
 cd /d "%~dp0"
-petscop_c89.exe --chapter2 --save capitulo2.save %*
+petscop_c89.exe --chapter2 %*
