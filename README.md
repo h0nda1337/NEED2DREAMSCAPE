@@ -14,6 +14,8 @@ Descarga y extrae el ZIP. Abre `compile_and_playnow.cmd` para jugar. Si tienes G
 
 Usa WASD o las flechas para moverte, E para interactuar, clic o Enter para avanzar los diálogos e I para abrir el inventario del capítulo 2.
 
+En el capítulo 2, la señal que cambia de amarillo a azul marca el próximo punto del recorrido.
+
 ## Contenido de esta rama
 
 - `game/` incluye el código C89, los recursos que necesita el juego y la compilación para Windows. Las dependencias y tipografías se acreditan en [`game/third_party/`](game/third_party/).

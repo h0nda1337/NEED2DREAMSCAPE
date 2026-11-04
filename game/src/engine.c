@@ -537,6 +537,10 @@ void campaign_reset(void)
     E.search_progress=0;
     E.chapter2_choice=0;E.chapter2_flags=0;
 }
+static int portal_at_stage(Json *portal)
+{
+    return E.search_progress>=ji(jg(portal,"min_stage"),0)&&E.search_progress<=ji(jg(portal,"max_stage"),99);
+}
 static Json *nearby_portal(void)
 {
     Json *portals;
@@ -556,7 +560,7 @@ static Json *nearby_portal(void)
     best=1e30;
     for(i=0;i<jc(portals);++i){
         portal=ja(portals,i);
-        if(E.search_progress<ji(jg(portal,"min_stage"),0)||E.search_progress>ji(jg(portal,"max_stage"),99))continue;
+        if(!portal_at_stage(portal))continue;
         jvec(jg(portal,"pos"),position,3);
         dx=E.nodes[E.player].p[0]-position[0];
         dz=E.nodes[E.player].p[2]-position[2];
@@ -889,6 +893,45 @@ int custom_movement_locked(void)
 {
     return E.chapter_inventory_open||chapter_two_complete()||ji(jg(E.scene,"chapter_cutscene"),0)||(E.search_progress==12&&jg(E.scene,"chapter_end"))||
         (E.search_progress==13&&ji(jg(E.scene,"chapter2_entry"),0))||chapter_choice_pending()||search_modal()||E.computer_time>0||E.npc_dialog_page>=0||E.custom_key_page>=0||E.custom_key_insert>0||E.custom_door_time>0||(E.fading&&jc(jg(E.scene,"portals"))>0);
+}
+static Json *chapter_waypoint(void)
+{
+    Json *event;
+    Json *items;
+    Json *item;
+    Json *nearest;
+    double point[3];
+    double dx;
+    double dz;
+    double distance;
+    double best;
+    int missing;
+    int start;
+    int newest;
+    int i;
+    if(E.search_progress<13||E.fading||E.pending_scene>=0||!node_valid(E.player)||custom_movement_locked())return NULL;
+    event=chapter_event();
+    if(event){
+        missing=ji(jg(event,"required_flags"),0)&~E.chapter2_flags;
+        if(!missing)return jg(event,"pos");
+        items=jg(event,"actions");
+        for(i=0;i<jc(items);++i){
+            item=ja(items,i);
+            if(ji(jg(item,"toggle"),0)&missing)return jg(item,"pos");
+        }
+        return NULL;
+    }
+    items=jg(E.scene,"portals");nearest=NULL;best=1e30;newest=-1;
+    for(i=0;i<jc(items);++i){
+        item=ja(items,i);
+        if(!portal_at_stage(item)||!jg(item,"pos"))continue;
+        start=ji(jg(item,"min_stage"),0);
+        jvec(jg(item,"pos"),point,3);
+        dx=point[0]-E.nodes[E.player].p[0];dz=point[2]-E.nodes[E.player].p[2];
+        distance=dx*dx+dz*dz;
+        if(start>newest||(start==newest&&distance<best)){newest=start;best=distance;nearest=item;}
+    }
+    return jg(nearest,"pos");
 }
 static void custom_story_advance(void)
 {
@@ -1862,6 +1905,55 @@ static void overlay_begin(void)
 {
     lighting_end();glDisable(GL_LIGHTING);glDisable(GL_DEPTH_TEST);glMatrixMode(GL_PROJECTION);glLoadIdentity();glOrtho(0,1920,0,960,-10,10);glMatrixMode(GL_MODELVIEW);glLoadIdentity();
 }
+static void waypoint_arrow(double x,double y,double dx,double dy,double size)
+{
+    glBegin(GL_TRIANGLE_FAN);
+    glVertex2d(x+dx*size,y+dy*size);
+    glVertex2d(x+(-.65*dx+.79*dy)*size,y+(-.65*dy-.79*dx)*size);
+    glVertex2d(x-dx*.32*size,y-dy*.32*size);
+    glVertex2d(x+(-.65*dx-.79*dy)*size,y+(-.65*dy+.79*dx)*size);
+    glEnd();
+}
+static void render_chapter_waypoint(void)
+{
+    Json *target;
+    double projection[16];
+    double view[16];
+    double clip[16];
+    double point[3];
+    double projected[3];
+    double depth;
+    double x;
+    double y;
+    double length;
+    double limit;
+    double edge;
+    double dx;
+    double dy;
+    double blue;
+    target=chapter_waypoint();
+    if(!target||!node_valid(E.camera))return;
+    jvec(target,point,3);point[1]+=.94;
+    glGetDoublev(GL_MODELVIEW_MATRIX,view);glGetDoublev(GL_PROJECTION_MATRIX,projection);
+    multiply(projection,view,clip);matrix_point(clip,point,projected);
+    depth=clip[3]*point[0]+clip[7]*point[1]+clip[11]*point[2]+clip[15];
+    x=projected[0]*960;y=projected[1]*480;
+    dx=0;dy=-1;
+    if(depth<=0||fabs(x)>880*depth||fabs(y)>365*depth){
+        length=sqrt(x*x+y*y);
+        if(length<.0001)return;
+        dx=x/length;dy=y/length;
+        limit=fabs(dx)>.0001?(dx>0?510:880)/fabs(dx):1e30;
+        edge=fabs(dy)>.0001?365/fabs(dy):1e30;
+        if(edge<limit)limit=edge;
+        x=dx*limit;y=dy*limit;
+    }else{x/=depth;y/=depth;}
+    x+=960;y+=480;
+    blue=(1-cos(E.elapsed*1.0471975511965976))*.5;
+    overlay_begin();glDisable(GL_TEXTURE_2D);
+    glColor4d(.035,.045,.09,.96);waypoint_arrow(x,y,dx,dy,34);
+    glColor4d(1-.71*blue,.86-.25*blue,.23+.77*blue,1);waypoint_arrow(x,y,dx,dy,27);
+}
 static void lights_setup(void)
 {
     Node *n;
@@ -2146,6 +2238,7 @@ static void render_frame(void)
     glEnable(GL_DEPTH_TEST);glDepthMask(GL_TRUE);glDisable(GL_LIGHTING);camera_view();lights_setup();
     for(i=0;i<E.count;++i)if(node_active(i))draw_mesh_node(i);
     for(i=0;i<E.count;++i)if(node_active(i))draw_sprite_node(i);
+    if(E.video<0)render_chapter_waypoint();
     if(E.video>=0&&E.video_texture){overlay_begin();glEnable(GL_TEXTURE_2D);glBindTexture(GL_TEXTURE_2D,E.video_texture);glColor4d(1,1,1,1);draw_quad(0,0,1920,960,0,1);}
     render_ui();
     render_custom_overlay();
