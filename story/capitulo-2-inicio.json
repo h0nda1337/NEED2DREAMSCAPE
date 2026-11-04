@@ -424,19 +424,23 @@
         },
         {
           "personaje": "GWEN · TELEVISIÓN",
-          "texto": "¿Dónde chingados estabas?"
+          "texto": "—¿Dónde chingados estabas? Es Navidad y tú llegando a la hora que se te da la gana."
         },
         {
           "personaje": "GWEN · TELEVISIÓN",
-          "texto": "Es Navidad y tú llegando a la hora que se te da la gana."
+          "texto": "—Pudiste avisar. Pero claro, a ti te vale madre quién se queda despierto esperándote."
+        },
+        {
+          "personaje": "RADE · TELEVISIÓN",
+          "texto": "—¿Puedo pasar a mi cuarto?"
+        },
+        {
+          "personaje": "GWEN · TELEVISIÓN",
+          "texto": "—Vete. Y cierra la puerta. Ya nos arruinaste bastante la noche."
         },
         {
           "personaje": "RADE",
           "texto": "..."
-        },
-        {
-          "personaje": "GWEN · TELEVISIÓN",
-          "texto": "Pudiste avisar."
         },
         {
           "personaje": "RADE",
@@ -445,14 +449,6 @@
         {
           "personaje": "RADE",
           "texto": "¿Están grabando las conversaciones o qué?"
-        },
-        {
-          "personaje": "RADE · TELEVISIÓN",
-          "texto": "¿Puedo pasar a mi cuarto?"
-        },
-        {
-          "personaje": "GWEN · TELEVISIÓN",
-          "texto": "Vete. Y cierra la puerta."
         },
         {
           "personaje": "RADE",
