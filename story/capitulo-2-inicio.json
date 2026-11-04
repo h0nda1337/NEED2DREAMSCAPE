@@ -1,0 +1,550 @@
+{
+  "titulo": "Los cuartos que no caben",
+  "alcance": "Acto I, escenas 1–9",
+  "eleccion": [
+    "No sé. Pero esto no es una puerta normal.",
+    "Haz lo que quieras. Igual nunca escuchas."
+  ],
+  "eventos": [
+    {
+      "mapa": "pasilloDesfaseC2",
+      "etapa": 13,
+      "dialogo": [
+        {
+          "personaje": "DARS",
+          "texto": "¿Rade?"
+        },
+        {
+          "personaje": "DARS",
+          "texto": "Rade, te estoy hablando."
+        },
+        {
+          "personaje": "RADE",
+          "texto": "Estoy aquí."
+        },
+        {
+          "personaje": "DARS",
+          "texto": "¿Entonces por qué no abres?"
+        },
+        {
+          "personaje": "RADE",
+          "texto": "Ya te dije que no puedo."
+        },
+        {
+          "personaje": "DARS",
+          "texto": "Pues hazte a un lado. Voy a intentarlo."
+        },
+        {
+          "personaje": "DARS",
+          "texto": "Está atorada."
+        },
+        {
+          "personaje": "RADE",
+          "texto": "De este lado no tiene manija."
+        },
+        {
+          "personaje": "DARS",
+          "texto": "¿Cómo que no tiene?"
+        },
+        {
+          "personaje": "RADE",
+          "texto": "No tiene, Dars. Hay puro metal donde debería estar."
+        },
+        {
+          "personaje": "DARS",
+          "texto": "¿Y cómo chingados la cerraste?"
+        },
+        {
+          "personaje": "RADE",
+          "texto": "¡Yo no cerré nada!"
+        },
+        {
+          "personaje": "DARS",
+          "texto": "Baja la voz."
+        },
+        {
+          "personaje": "RADE",
+          "texto": "Estoy encerrado en un pasillo que no existe. Discúlpame si no estoy hablando bonito."
+        },
+        {
+          "personaje": "DARS",
+          "texto": "¿Me escuchas bien?"
+        },
+        {
+          "personaje": "RADE",
+          "texto": "Sí."
+        },
+        {
+          "personaje": "DARS",
+          "texto": "Bueno. No te muevas de ahí."
+        },
+        {
+          "personaje": "RADE",
+          "texto": "¿Qué vas a hacer?"
+        },
+        {
+          "personaje": "DARS",
+          "texto": "Buscar algo para abrirla."
+        },
+        {
+          "personaje": "RADE",
+          "texto": "No me dejes aquí."
+        },
+        {
+          "personaje": "DARS",
+          "texto": "No he dicho que vaya a dejarte."
+        }
+      ]
+    },
+    {
+      "mapa": "pasilloDesfaseC2",
+      "etapa": 14,
+      "dialogo": [
+        {
+          "personaje": "RADE",
+          "texto": "¿Qué pedo con esto?"
+        },
+        {
+          "personaje": "RADE",
+          "texto": "Caminé como cinco metros."
+        },
+        {
+          "personaje": "RADE",
+          "texto": "..."
+        },
+        {
+          "personaje": "RADE",
+          "texto": "No puede ser tan largo."
+        }
+      ]
+    },
+    {
+      "mapa": "pasilloDesfaseC2",
+      "etapa": 15,
+      "dialogo": [
+        {
+          "personaje": "DARS",
+          "texto": "¿Rade?"
+        },
+        {
+          "personaje": "RADE",
+          "texto": "Aquí."
+        },
+        {
+          "personaje": "DARS",
+          "texto": "Encontré un desarmador."
+        },
+        {
+          "personaje": "RADE",
+          "texto": "¿Y?"
+        },
+        {
+          "personaje": "DARS",
+          "texto": "Déjame trabajar, ¿quieres?"
+        }
+      ]
+    },
+    {
+      "mapa": "pasilloDesfaseC2",
+      "etapa": 16,
+      "dialogo": [
+        {
+          "personaje": "RADE",
+          "texto": "Cayó un tornillo de este lado."
+        },
+        {
+          "personaje": "DARS",
+          "texto": "¿Cuál?"
+        },
+        {
+          "personaje": "RADE",
+          "texto": "No sé. Uno."
+        },
+        {
+          "personaje": "DARS",
+          "texto": "Pues guárdalo."
+        },
+        {
+          "personaje": "RADE",
+          "texto": "¿Para qué?"
+        },
+        {
+          "personaje": "DARS",
+          "texto": "Porque no quiero que se pierda, Rade."
+        },
+        {
+          "personaje": "RADE",
+          "texto": "Bueno, bueno."
+        },
+        {
+          "personaje": "DARS",
+          "texto": "Está raro esto."
+        },
+        {
+          "personaje": "RADE",
+          "texto": "¿Qué?"
+        },
+        {
+          "personaje": "DARS",
+          "texto": "Los tornillos están flojos, pero la pieza no sale."
+        },
+        {
+          "personaje": "RADE",
+          "texto": "De mi lado ni siquiera hay pieza."
+        },
+        {
+          "personaje": "DARS",
+          "texto": "Ya entendí eso."
+        },
+        {
+          "personaje": "DARS",
+          "texto": "¡Ay, chingada madre!"
+        },
+        {
+          "personaje": "RADE",
+          "texto": "¿Qué pasó?"
+        },
+        {
+          "personaje": "DARS",
+          "texto": "Me pegué en el dedo."
+        },
+        {
+          "personaje": "RADE",
+          "texto": "¿Estás bien?"
+        },
+        {
+          "personaje": "DARS",
+          "texto": "Sí. Dame un segundo."
+        },
+        {
+          "personaje": "DARS",
+          "texto": "Rade."
+        },
+        {
+          "personaje": "RADE",
+          "texto": "¿Qué?"
+        },
+        {
+          "personaje": "DARS",
+          "texto": "Hazme un favor."
+        },
+        {
+          "personaje": "RADE",
+          "texto": "Dime."
+        },
+        {
+          "personaje": "DARS",
+          "texto": "Golpea la puerta tres veces."
+        }
+      ]
+    },
+    {
+      "mapa": "pasilloDesfaseC2",
+      "etapa": 17,
+      "dialogo": [
+        {
+          "personaje": "DARS",
+          "texto": "Otra vez."
+        }
+      ]
+    },
+    {
+      "mapa": "pasilloDesfaseC2",
+      "etapa": 18,
+      "dialogo": [
+        {
+          "personaje": "DARS",
+          "texto": "..."
+        },
+        {
+          "personaje": "RADE",
+          "texto": "¿Qué?"
+        },
+        {
+          "personaje": "DARS",
+          "texto": "Nada."
+        },
+        {
+          "personaje": "RADE",
+          "texto": "Dime."
+        },
+        {
+          "personaje": "DARS",
+          "texto": "Escuché seis."
+        },
+        {
+          "personaje": "RADE",
+          "texto": "Yo golpeé tres."
+        },
+        {
+          "personaje": "DARS",
+          "texto": "Pues yo escuché seis."
+        },
+        {
+          "personaje": "RADE",
+          "texto": "A lo mejor hay eco."
+        },
+        {
+          "personaje": "DARS",
+          "texto": "Sí. A lo mejor."
+        },
+        {
+          "personaje": "RADE",
+          "texto": "Dars."
+        },
+        {
+          "personaje": "DARS",
+          "texto": "¿Qué?"
+        },
+        {
+          "personaje": "RADE",
+          "texto": "Yo también escuché el doble."
+        },
+        {
+          "personaje": "DARS",
+          "texto": "No te muevas."
+        }
+      ]
+    },
+    {
+      "mapa": "pasilloDesfaseC2",
+      "etapa": 19,
+      "dialogo": [
+        {
+          "personaje": "DARS",
+          "texto": "¡Rade!"
+        },
+        {
+          "personaje": "RADE",
+          "texto": "¿Qué pasó?"
+        },
+        {
+          "personaje": "DARS",
+          "texto": "Voy a buscar a alguien."
+        },
+        {
+          "personaje": "RADE",
+          "texto": "¿A quién?"
+        },
+        {
+          "personaje": "DARS",
+          "texto": "A quien encuentre despierto."
+        },
+        {
+          "personaje": "RADE",
+          "texto": "¿Para qué?"
+        },
+        {
+          "personaje": "DARS",
+          "texto": "Para abrir la puerta, obviamente."
+        },
+        {
+          "personaje": "RADE",
+          "texto": "No creo que eso sirva."
+        },
+        {
+          "personaje": "DARS",
+          "texto": "¿Y qué propones?"
+        }
+      ]
+    },
+    {
+      "mapa": "pasilloDesfaseC2",
+      "etapa": 21,
+      "dialogo": [
+        {
+          "personaje": "DARS",
+          "texto": "Ya me di cuenta de que no es normal."
+        },
+        {
+          "personaje": "RADE",
+          "texto": "No era eso lo que quería decir."
+        },
+        {
+          "personaje": "DARS",
+          "texto": "Entonces explícate mejor."
+        }
+      ]
+    },
+    {
+      "mapa": "cuartoPrestado",
+      "etapa": 22,
+      "dialogo": [
+        {
+          "personaje": "RADE",
+          "texto": "¿Y esto?"
+        },
+        {
+          "personaje": "RADE",
+          "texto": "No tenemos un cuarto así."
+        }
+      ]
+    },
+    {
+      "mapa": "cuartoPrestado",
+      "etapa": 23,
+      "dialogo": [
+        {
+          "personaje": "RADE",
+          "texto": "No son míos."
+        },
+        {
+          "personaje": "RADE",
+          "texto": "Tampoco es mía."
+        },
+        {
+          "personaje": "RADE",
+          "texto": "..."
+        },
+        {
+          "personaje": "RADE",
+          "texto": "¿Dars?"
+        },
+        {
+          "personaje": "INVENTARIO",
+          "texto": "Cinta con cabello blanco."
+        }
+      ]
+    },
+    {
+      "mapa": "salaIncompleta",
+      "etapa": 24,
+      "dialogo": [
+        {
+          "personaje": "RADE",
+          "texto": "¿Qué chingados?"
+        },
+        {
+          "personaje": "RADE",
+          "texto": "Esta es la sala."
+        },
+        {
+          "personaje": "RADE",
+          "texto": "No... no es."
+        },
+        {
+          "personaje": "GWEN · TELEVISIÓN",
+          "texto": "¿Dónde chingados estabas?"
+        },
+        {
+          "personaje": "GWEN · TELEVISIÓN",
+          "texto": "Es Navidad y tú llegando a la hora que se te da la gana."
+        },
+        {
+          "personaje": "RADE",
+          "texto": "..."
+        },
+        {
+          "personaje": "GWEN · TELEVISIÓN",
+          "texto": "Pudiste avisar."
+        },
+        {
+          "personaje": "RADE",
+          "texto": "Ya escuché eso."
+        },
+        {
+          "personaje": "RADE",
+          "texto": "¿Están grabando las conversaciones o qué?"
+        },
+        {
+          "personaje": "RADE · TELEVISIÓN",
+          "texto": "¿Puedo pasar a mi cuarto?"
+        },
+        {
+          "personaje": "GWEN · TELEVISIÓN",
+          "texto": "Vete. Y cierra la puerta."
+        },
+        {
+          "personaje": "RADE",
+          "texto": "No me gusta esto."
+        }
+      ]
+    },
+    {
+      "mapa": "pasilloDesfaseC2",
+      "etapa": 25,
+      "dialogo": [
+        {
+          "personaje": "RADE",
+          "texto": "¿Quién anda ahí?"
+        },
+        {
+          "personaje": "RADE",
+          "texto": "Dars, si eres tú, deja de hacerte pendeja."
+        }
+      ]
+    },
+    {
+      "mapa": "pasilloDesfaseC2",
+      "etapa": 26,
+      "dialogo": [
+        {
+          "personaje": "VOZ DESCONOCIDA",
+          "texto": "¿Ya acabaste?"
+        },
+        {
+          "personaje": "RADE",
+          "texto": "¿Quién eres?"
+        },
+        {
+          "personaje": "VOZ DESCONOCIDA",
+          "texto": "¿Ya acabaste?"
+        },
+        {
+          "personaje": "RADE",
+          "texto": "¿Con qué?"
+        }
+      ]
+    },
+    {
+      "mapa": "cuartoAbrigos",
+      "etapa": 27,
+      "dialogo": [
+        {
+          "personaje": "RADE",
+          "texto": "¿Hola?"
+        },
+        {
+          "personaje": "RADE",
+          "texto": "..."
+        }
+      ]
+    },
+    {
+      "mapa": "cuartoAbrigos",
+      "etapa": 29,
+      "dialogo": [
+        {
+          "personaje": "RADE",
+          "texto": "Está haciendo un ruido de la chingada."
+        },
+        {
+          "personaje": "RADE",
+          "texto": "..."
+        },
+        {
+          "personaje": "RADE",
+          "texto": "Sal."
+        },
+        {
+          "personaje": "RADE",
+          "texto": "Te estoy viendo."
+        }
+      ]
+    },
+    {
+      "mapa": "cuartoAbrigos",
+      "etapa": 30,
+      "dialogo": [
+        {
+          "personaje": "RADE",
+          "texto": "No."
+        },
+        {
+          "personaje": "RADE",
+          "texto": "No me voy a quedar a averiguar."
+        }
+      ]
+    }
+  ]
+}

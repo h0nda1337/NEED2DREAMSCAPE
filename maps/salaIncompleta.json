@@ -1,0 +1,377 @@
+{
+  "name": "salaIncompleta",
+  "spawn": [
+    0,
+    2.64,
+    -4.35
+  ],
+  "arrival": {},
+  "portals": [
+    {
+      "target": "pasilloDesfaseC2",
+      "pos": [
+        0,
+        2.64,
+        -5.7
+      ],
+      "radius": 1.0,
+      "min_stage": 25,
+      "max_stage": 99
+    }
+  ],
+  "colliders": [
+    {
+      "name": "salaIncompleta_c2_9",
+      "position": [
+        0,
+        -0.1,
+        0
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        13.5,
+        0.2,
+        13.0
+      ],
+      "cutaway": false
+    },
+    {
+      "name": "salaIncompleta_c2_10",
+      "position": [
+        -6.75,
+        2.7,
+        0
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.2,
+        5.4,
+        13.0
+      ],
+      "cutaway": true
+    },
+    {
+      "name": "salaIncompleta_c2_11",
+      "position": [
+        6.75,
+        2.7,
+        0
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.2,
+        5.4,
+        13.0
+      ],
+      "cutaway": true
+    },
+    {
+      "name": "salaIncompleta_c2_12",
+      "position": [
+        0,
+        2.7,
+        6.5
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        13.5,
+        5.4,
+        0.22
+      ],
+      "cutaway": true
+    },
+    {
+      "name": "salaIncompleta_c2_13",
+      "position": [
+        0,
+        2.7,
+        -6.5
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        13.5,
+        5.4,
+        0.22
+      ],
+      "cutaway": false
+    },
+    {
+      "name": "salaIncompleta_c2_16",
+      "position": [
+        3.05,
+        0.6,
+        0.55
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        4.25,
+        1.2,
+        1.89
+      ],
+      "cutaway": false
+    },
+    {
+      "name": "salaIncompleta_c2_18",
+      "position": [
+        -3.2,
+        0.66,
+        0.92
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.88,
+        1.32,
+        1.28
+      ],
+      "cutaway": false
+    },
+    {
+      "name": "salaIncompleta_c2_20",
+      "position": [
+        -2.7,
+        0.89,
+        4.26
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        2.17,
+        1.78,
+        1.28
+      ],
+      "cutaway": false
+    }
+  ],
+  "lights": [
+    {
+      "position": [
+        -2.7,
+        1.08,
+        3.2
+      ],
+      "type": 2,
+      "color": [
+        0.4,
+        0.57,
+        1
+      ],
+      "intensity": 1.25,
+      "range": 7.5,
+      "enabled": true
+    }
+  ],
+  "markers": [],
+  "objects": [
+    {
+      "id": "salaIncompleta_c2_9",
+      "label": "Piso",
+      "position": [
+        0,
+        -0.1,
+        0
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "salaIncompleta_c2_10",
+      "label": "Pared izquierda",
+      "position": [
+        -6.75,
+        2.7,
+        0
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "salaIncompleta_c2_11",
+      "label": "Pared derecha",
+      "position": [
+        6.75,
+        2.7,
+        0
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "salaIncompleta_c2_12",
+      "label": "Pared de fondo",
+      "position": [
+        0,
+        2.7,
+        6.5
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "salaIncompleta_c2_13",
+      "label": "Pared de entrada",
+      "position": [
+        0,
+        2.7,
+        -6.5
+      ],
+      "camera_hidden": true,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "salaIncompleta_c2_14",
+      "label": "Marco de salida",
+      "position": [
+        0,
+        1.8,
+        -6.37
+      ],
+      "camera_hidden": true,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "salaIncompleta_c2_15",
+      "label": "Alfombra",
+      "position": [
+        0.42,
+        0.028,
+        0.63
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "salaIncompleta_c2_16",
+      "label": "Sofá invertido",
+      "position": [
+        3.05,
+        0.6,
+        0.55
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "salaIncompleta_c2_17",
+      "label": "Respaldo",
+      "position": [
+        3.05,
+        1.41,
+        1.32
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "salaIncompleta_c2_18",
+      "label": "Mesa",
+      "position": [
+        -3.2,
+        0.66,
+        0.92
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "salaIncompleta_c2_19",
+      "label": "Marco de fotografía",
+      "position": [
+        -3.37,
+        1.34,
+        0.88
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "salaIncompleta_c2_20",
+      "label": "Televisión en el suelo",
+      "position": [
+        -2.7,
+        0.89,
+        4.26
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "salaIncompleta_c2_21",
+      "label": "Pantalla azul",
+      "position": [
+        -2.7,
+        0.92,
+        3.58
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false,
+      "chapter_min": 24,
+      "chapter_max": 24
+    }
+  ],
+  "ambient": [
+    0.17,
+    0.17,
+    0.23
+  ],
+  "inspections": [
+    {
+      "pos": [
+        -3.2,
+        2.64,
+        -0.14
+      ],
+      "radius": 1.4,
+      "stage": 25,
+      "max_stage": 99
+    }
+  ],
+  "events": [
+    {
+      "stage": 24
+    }
+  ]
+}

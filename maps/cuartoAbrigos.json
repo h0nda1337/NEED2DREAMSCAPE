@@ -1,0 +1,679 @@
+{
+  "name": "cuartoAbrigos",
+  "spawn": [
+    0,
+    2.64,
+    -3.65
+  ],
+  "arrival": {},
+  "portals": [
+    {
+      "target": "pasilloDesfaseC2",
+      "pos": [
+        0,
+        2.64,
+        -5.12
+      ],
+      "radius": 1.04,
+      "min_stage": 31,
+      "max_stage": 99
+    }
+  ],
+  "colliders": [
+    {
+      "name": "cuartoAbrigos_c2_9",
+      "position": [
+        0,
+        -0.1,
+        0
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        10.7,
+        0.2,
+        11.8
+      ],
+      "cutaway": false
+    },
+    {
+      "name": "cuartoAbrigos_c2_10",
+      "position": [
+        -5.35,
+        2.7,
+        0
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.2,
+        5.4,
+        11.8
+      ],
+      "cutaway": true
+    },
+    {
+      "name": "cuartoAbrigos_c2_11",
+      "position": [
+        5.35,
+        2.7,
+        0
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.2,
+        5.4,
+        11.8
+      ],
+      "cutaway": true
+    },
+    {
+      "name": "cuartoAbrigos_c2_12",
+      "position": [
+        0,
+        2.7,
+        5.9
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        10.7,
+        5.4,
+        0.22
+      ],
+      "cutaway": true
+    },
+    {
+      "name": "cuartoAbrigos_c2_13",
+      "position": [
+        0,
+        2.7,
+        -5.9
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        10.7,
+        5.4,
+        0.22
+      ],
+      "cutaway": false
+    },
+    {
+      "name": "cuartoAbrigos_c2_18",
+      "position": [
+        -3.9,
+        2.41,
+        3.86
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.94,
+        2.6,
+        0.47
+      ],
+      "cutaway": false
+    },
+    {
+      "name": "cuartoAbrigos_c2_20",
+      "position": [
+        -2.76,
+        2.41,
+        3.86
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.94,
+        2.39,
+        0.47
+      ],
+      "cutaway": false
+    },
+    {
+      "name": "cuartoAbrigos_c2_22",
+      "position": [
+        -1.59,
+        2.41,
+        3.86
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.94,
+        2.18,
+        0.47
+      ],
+      "cutaway": false
+    },
+    {
+      "name": "cuartoAbrigos_c2_24",
+      "position": [
+        -0.38,
+        2.41,
+        3.86
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.94,
+        2.6,
+        0.47
+      ],
+      "cutaway": false
+    },
+    {
+      "name": "cuartoAbrigos_c2_26",
+      "position": [
+        0.86,
+        2.41,
+        3.86
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.94,
+        2.39,
+        0.47
+      ],
+      "cutaway": false
+    },
+    {
+      "name": "cuartoAbrigos_c2_28",
+      "position": [
+        2.05,
+        2.41,
+        3.86
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.94,
+        2.18,
+        0.47
+      ],
+      "cutaway": false
+    },
+    {
+      "name": "cuartoAbrigos_c2_36",
+      "position": [
+        3.54,
+        0.66,
+        2.71
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.13,
+        1.32,
+        1.12
+      ],
+      "cutaway": false
+    }
+  ],
+  "lights": [
+    {
+      "position": [
+        0,
+        4.83,
+        1.75
+      ],
+      "type": 2,
+      "color": [
+        0.86,
+        0.86,
+        0.77
+      ],
+      "intensity": 0.87,
+      "range": 11,
+      "enabled": true
+    }
+  ],
+  "markers": [],
+  "objects": [
+    {
+      "id": "cuartoAbrigos_c2_9",
+      "label": "Piso",
+      "position": [
+        0,
+        -0.1,
+        0
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cuartoAbrigos_c2_10",
+      "label": "Pared izquierda",
+      "position": [
+        -5.35,
+        2.7,
+        0
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cuartoAbrigos_c2_11",
+      "label": "Pared derecha",
+      "position": [
+        5.35,
+        2.7,
+        0
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cuartoAbrigos_c2_12",
+      "label": "Pared de fondo",
+      "position": [
+        0,
+        2.7,
+        5.9
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cuartoAbrigos_c2_13",
+      "label": "Pared de entrada",
+      "position": [
+        0,
+        2.7,
+        -5.9
+      ],
+      "camera_hidden": true,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cuartoAbrigos_c2_14",
+      "label": "Marco de salida",
+      "position": [
+        0,
+        1.8,
+        -5.7700000000000005
+      ],
+      "camera_hidden": true,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cuartoAbrigos_c2_16",
+      "label": "Ventana cegada",
+      "position": [
+        3.9,
+        3.52,
+        5.7
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cuartoAbrigos_c2_17",
+      "label": "Barra de ropa",
+      "position": [
+        -1.04,
+        3.86,
+        3.81
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cuartoAbrigos_c2_18",
+      "label": "Abrigo",
+      "position": [
+        -3.9,
+        2.41,
+        3.86
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false,
+      "chapter_min": 27,
+      "chapter_max": 99
+    },
+    {
+      "id": "cuartoAbrigos_c2_19",
+      "label": "Manga",
+      "position": [
+        -4.37,
+        2.47,
+        3.77
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false,
+      "chapter_min": 27,
+      "chapter_max": 99
+    },
+    {
+      "id": "cuartoAbrigos_c2_20",
+      "label": "Abrigo",
+      "position": [
+        -2.76,
+        2.41,
+        3.86
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false,
+      "chapter_min": 27,
+      "chapter_max": 99
+    },
+    {
+      "id": "cuartoAbrigos_c2_21",
+      "label": "Manga",
+      "position": [
+        -3.2299999999999995,
+        2.47,
+        3.77
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false,
+      "chapter_min": 27,
+      "chapter_max": 99
+    },
+    {
+      "id": "cuartoAbrigos_c2_22",
+      "label": "Abrigo",
+      "position": [
+        -1.59,
+        2.41,
+        3.86
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false,
+      "chapter_min": 27,
+      "chapter_max": 30
+    },
+    {
+      "id": "cuartoAbrigos_c2_23",
+      "label": "Manga",
+      "position": [
+        -2.06,
+        2.47,
+        3.77
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false,
+      "chapter_min": 27,
+      "chapter_max": 30
+    },
+    {
+      "id": "cuartoAbrigos_c2_24",
+      "label": "Abrigo",
+      "position": [
+        -0.38,
+        2.41,
+        3.86
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false,
+      "chapter_min": 27,
+      "chapter_max": 30
+    },
+    {
+      "id": "cuartoAbrigos_c2_25",
+      "label": "Manga",
+      "position": [
+        -0.85,
+        2.47,
+        3.77
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false,
+      "chapter_min": 27,
+      "chapter_max": 30
+    },
+    {
+      "id": "cuartoAbrigos_c2_26",
+      "label": "Abrigo",
+      "position": [
+        0.86,
+        2.41,
+        3.86
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false,
+      "chapter_min": 27,
+      "chapter_max": 99
+    },
+    {
+      "id": "cuartoAbrigos_c2_27",
+      "label": "Manga",
+      "position": [
+        0.39,
+        2.47,
+        3.77
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false,
+      "chapter_min": 27,
+      "chapter_max": 99
+    },
+    {
+      "id": "cuartoAbrigos_c2_28",
+      "label": "Abrigo",
+      "position": [
+        2.05,
+        2.41,
+        3.86
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false,
+      "chapter_min": 27,
+      "chapter_max": 99
+    },
+    {
+      "id": "cuartoAbrigos_c2_29",
+      "label": "Manga",
+      "position": [
+        1.5799999999999998,
+        2.47,
+        3.77
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false,
+      "chapter_min": 27,
+      "chapter_max": 99
+    },
+    {
+      "id": "cuartoAbrigos_c2_30",
+      "label": "Huella",
+      "position": [
+        -0.5,
+        0.013,
+        4.48
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false,
+      "chapter_min": 31,
+      "chapter_max": 99
+    },
+    {
+      "id": "cuartoAbrigos_c2_31",
+      "label": "Huella",
+      "position": [
+        0.1,
+        0.013,
+        4.48
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false,
+      "chapter_min": 31,
+      "chapter_max": 99
+    },
+    {
+      "id": "cuartoAbrigos_c2_32",
+      "label": "Base del ventilador",
+      "position": [
+        0,
+        4.75,
+        1.29
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cuartoAbrigos_c2_33",
+      "label": "Aspa horizontal",
+      "position": [
+        0,
+        4.54,
+        1.29
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": true
+    },
+    {
+      "id": "cuartoAbrigos_c2_34",
+      "label": "Aspa vertical",
+      "position": [
+        0,
+        4.54,
+        1.29
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": true
+    },
+    {
+      "id": "cuartoAbrigos_c2_35",
+      "label": "Interruptor",
+      "position": [
+        -4.94,
+        2.12,
+        -2.55
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cuartoAbrigos_c2_36",
+      "label": "Silla con bolsa",
+      "position": [
+        3.54,
+        0.66,
+        2.71
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cuartoAbrigos_c2_37",
+      "label": "Bolsa",
+      "position": [
+        3.54,
+        1.42,
+        2.71
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    }
+  ],
+  "ambient": [
+    0.18,
+    0.18,
+    0.22
+  ],
+  "inspections": [
+    {
+      "pos": [
+        3.54,
+        2.64,
+        1.66
+      ],
+      "radius": 1.4,
+      "stage": 29,
+      "max_stage": 31
+    }
+  ],
+  "events": [
+    {
+      "stage": 27
+    },
+    {
+      "stage": 29,
+      "pos": [
+        -4.43,
+        2.64,
+        -2.55
+      ],
+      "radius": 1.34,
+      "interact": true
+    },
+    {
+      "stage": 30,
+      "pos": [
+        -0.95,
+        2.64,
+        2.68
+      ],
+      "radius": 1.53,
+      "interact": true
+    }
+  ]
+}

@@ -1,0 +1,1101 @@
+{
+  "name": "pasilloDesfaseC2",
+  "spawn": [
+    0,
+    2.64,
+    -10.7
+  ],
+  "arrival": {
+    "cuartoPrestado": [
+      -0.98,
+      2.64,
+      -3.5
+    ],
+    "salaIncompleta": [
+      -0.98,
+      2.64,
+      8.5
+    ],
+    "cuartoAbrigos": [
+      -0.98,
+      2.64,
+      2.5
+    ]
+  },
+  "portals": [
+    {
+      "target": "cuartoPrestado",
+      "pos": [
+        -1.95,
+        2.64,
+        -3.5
+      ],
+      "radius": 0.68,
+      "min_stage": 22,
+      "max_stage": 24
+    },
+    {
+      "target": "salaIncompleta",
+      "pos": [
+        -1.95,
+        2.64,
+        8.5
+      ],
+      "radius": 0.68,
+      "min_stage": 24,
+      "max_stage": 24
+    },
+    {
+      "target": "cuartoAbrigos",
+      "pos": [
+        -2.14,
+        2.64,
+        2.5
+      ],
+      "radius": 0.55,
+      "min_stage": 27,
+      "max_stage": 30
+    }
+  ],
+  "colliders": [
+    {
+      "name": "pasilloDesfaseC2_c2_9",
+      "position": [
+        0,
+        -0.1,
+        0
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        5.3,
+        0.2,
+        27.0
+      ],
+      "cutaway": false
+    },
+    {
+      "name": "pasilloDesfaseC2_c2_10",
+      "position": [
+        -2.65,
+        2.7,
+        0
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.2,
+        5.4,
+        27.0
+      ],
+      "cutaway": true
+    },
+    {
+      "name": "pasilloDesfaseC2_c2_11",
+      "position": [
+        2.65,
+        2.7,
+        0
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.2,
+        5.4,
+        27.0
+      ],
+      "cutaway": true
+    },
+    {
+      "name": "pasilloDesfaseC2_c2_12",
+      "position": [
+        0,
+        2.7,
+        13.5
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        5.3,
+        5.4,
+        0.22
+      ],
+      "cutaway": true
+    },
+    {
+      "name": "pasilloDesfaseC2_c2_13",
+      "position": [
+        0,
+        2.7,
+        -13.5
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        5.3,
+        5.4,
+        0.22
+      ],
+      "cutaway": false
+    },
+    {
+      "name": "pasilloDesfaseC2_c2_40",
+      "position": [
+        0,
+        1.9,
+        -13.31
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        2.08,
+        3.8,
+        0.13
+      ],
+      "cutaway": true
+    }
+  ],
+  "lights": [
+    {
+      "position": [
+        0,
+        4.94,
+        -7.4
+      ],
+      "type": 2,
+      "color": [
+        0.93,
+        0.88,
+        0.77
+      ],
+      "intensity": 1.25,
+      "range": 8.3,
+      "enabled": true
+    },
+    {
+      "position": [
+        0,
+        4.94,
+        -0.4
+      ],
+      "type": 2,
+      "color": [
+        0.93,
+        0.88,
+        0.77
+      ],
+      "intensity": 1.25,
+      "range": 8.3,
+      "enabled": true
+    },
+    {
+      "position": [
+        0,
+        4.94,
+        6.7
+      ],
+      "type": 2,
+      "color": [
+        0.93,
+        0.88,
+        0.77
+      ],
+      "intensity": 1.25,
+      "range": 8.3,
+      "enabled": true
+    },
+    {
+      "position": [
+        0,
+        4.94,
+        11.0
+      ],
+      "type": 2,
+      "color": [
+        0.93,
+        0.88,
+        0.77
+      ],
+      "intensity": 1.25,
+      "range": 8.3,
+      "enabled": true
+    },
+    {
+      "position": [
+        1.83,
+        3.8,
+        -7.3
+      ],
+      "type": 2,
+      "color": [
+        1,
+        0.14,
+        0.1
+      ],
+      "intensity": 2.2,
+      "range": 6.1,
+      "enabled": true
+    },
+    {
+      "position": [
+        0,
+        3.1,
+        -11.2
+      ],
+      "type": 2,
+      "color": [
+        0.54,
+        0.13,
+        0.13
+      ],
+      "intensity": 0.31,
+      "range": 4.5,
+      "enabled": true
+    },
+    {
+      "position": [
+        0.26,
+        0.45,
+        -11.8
+      ],
+      "type": 2,
+      "color": [
+        0.85,
+        0.75,
+        0.54
+      ],
+      "intensity": 0.43,
+      "range": 1.15,
+      "enabled": true
+    }
+  ],
+  "markers": [],
+  "objects": [
+    {
+      "id": "pasilloDesfaseC2_c2_9",
+      "label": "Piso",
+      "position": [
+        0,
+        -0.1,
+        0
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "pasilloDesfaseC2_c2_10",
+      "label": "Pared izquierda",
+      "position": [
+        -2.65,
+        2.7,
+        0
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "pasilloDesfaseC2_c2_11",
+      "label": "Pared derecha",
+      "position": [
+        2.65,
+        2.7,
+        0
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "pasilloDesfaseC2_c2_12",
+      "label": "Pared de fondo",
+      "position": [
+        0,
+        2.7,
+        13.5
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "pasilloDesfaseC2_c2_13",
+      "label": "Pared de entrada",
+      "position": [
+        0,
+        2.7,
+        -13.5
+      ],
+      "camera_hidden": true,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "pasilloDesfaseC2_c2_14",
+      "label": "Marco de salida",
+      "position": [
+        0,
+        1.8,
+        -13.37
+      ],
+      "camera_hidden": true,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "pasilloDesfaseC2_c2_15",
+      "label": "Junta de piso",
+      "position": [
+        0,
+        0.008,
+        -12
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "pasilloDesfaseC2_c2_16",
+      "label": "Junta de piso",
+      "position": [
+        0,
+        0.008,
+        -11
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "pasilloDesfaseC2_c2_17",
+      "label": "Junta de piso",
+      "position": [
+        0,
+        0.008,
+        -10
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "pasilloDesfaseC2_c2_18",
+      "label": "Junta de piso",
+      "position": [
+        0,
+        0.008,
+        -9
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "pasilloDesfaseC2_c2_19",
+      "label": "Junta de piso",
+      "position": [
+        0,
+        0.008,
+        -8
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "pasilloDesfaseC2_c2_20",
+      "label": "Junta de piso",
+      "position": [
+        0,
+        0.008,
+        -7
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "pasilloDesfaseC2_c2_21",
+      "label": "Junta de piso",
+      "position": [
+        0,
+        0.008,
+        -6
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "pasilloDesfaseC2_c2_22",
+      "label": "Junta de piso",
+      "position": [
+        0,
+        0.008,
+        -5
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "pasilloDesfaseC2_c2_23",
+      "label": "Junta de piso",
+      "position": [
+        0,
+        0.008,
+        -4
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "pasilloDesfaseC2_c2_24",
+      "label": "Junta de piso",
+      "position": [
+        0,
+        0.008,
+        -3
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "pasilloDesfaseC2_c2_25",
+      "label": "Junta de piso",
+      "position": [
+        0,
+        0.008,
+        -2
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "pasilloDesfaseC2_c2_26",
+      "label": "Junta de piso",
+      "position": [
+        0,
+        0.008,
+        -1
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "pasilloDesfaseC2_c2_27",
+      "label": "Junta de piso",
+      "position": [
+        0,
+        0.008,
+        0
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "pasilloDesfaseC2_c2_28",
+      "label": "Junta de piso",
+      "position": [
+        0,
+        0.008,
+        1
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "pasilloDesfaseC2_c2_29",
+      "label": "Junta de piso",
+      "position": [
+        0,
+        0.008,
+        2
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "pasilloDesfaseC2_c2_30",
+      "label": "Junta de piso",
+      "position": [
+        0,
+        0.008,
+        3
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "pasilloDesfaseC2_c2_31",
+      "label": "Junta de piso",
+      "position": [
+        0,
+        0.008,
+        4
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "pasilloDesfaseC2_c2_32",
+      "label": "Junta de piso",
+      "position": [
+        0,
+        0.008,
+        5
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "pasilloDesfaseC2_c2_33",
+      "label": "Junta de piso",
+      "position": [
+        0,
+        0.008,
+        6
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "pasilloDesfaseC2_c2_34",
+      "label": "Junta de piso",
+      "position": [
+        0,
+        0.008,
+        7
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "pasilloDesfaseC2_c2_35",
+      "label": "Junta de piso",
+      "position": [
+        0,
+        0.008,
+        8
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "pasilloDesfaseC2_c2_36",
+      "label": "Junta de piso",
+      "position": [
+        0,
+        0.008,
+        9
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "pasilloDesfaseC2_c2_37",
+      "label": "Junta de piso",
+      "position": [
+        0,
+        0.008,
+        10
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "pasilloDesfaseC2_c2_38",
+      "label": "Junta de piso",
+      "position": [
+        0,
+        0.008,
+        11
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "pasilloDesfaseC2_c2_39",
+      "label": "Junta de piso",
+      "position": [
+        0,
+        0.008,
+        12
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "pasilloDesfaseC2_c2_40",
+      "label": "Puerta sin manija",
+      "position": [
+        0,
+        1.9,
+        -13.31
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "pasilloDesfaseC2_c2_41",
+      "label": "Puerta metálica",
+      "position": [
+        0,
+        1.9,
+        13.37
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "pasilloDesfaseC2_c2_42",
+      "label": "Marco 4",
+      "position": [
+        -2.51,
+        2.0,
+        -3.5
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "pasilloDesfaseC2_c2_43",
+      "label": "Puerta 4",
+      "position": [
+        -2.395,
+        1.88,
+        -3.5
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "pasilloDesfaseC2_c2_45",
+      "label": "Marco 1",
+      "position": [
+        -2.51,
+        2.0,
+        2.5
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "pasilloDesfaseC2_c2_46",
+      "label": "Puerta 1",
+      "position": [
+        -2.395,
+        1.88,
+        2.5
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false,
+      "chapter_min": 13,
+      "chapter_max": 26
+    },
+    {
+      "id": "pasilloDesfaseC2_c2_47",
+      "label": "Hueco de la puerta 1",
+      "position": [
+        -2.375,
+        1.87,
+        2.5
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false,
+      "chapter_min": 27,
+      "chapter_max": 99
+    },
+    {
+      "id": "pasilloDesfaseC2_c2_48",
+      "label": "Canto de la puerta 1",
+      "position": [
+        -2.28,
+        1.88,
+        3.23
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false,
+      "chapter_min": 27,
+      "chapter_max": 99
+    },
+    {
+      "id": "pasilloDesfaseC2_c2_50",
+      "label": "Marco 4",
+      "position": [
+        -2.51,
+        2.0,
+        8.5
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "pasilloDesfaseC2_c2_51",
+      "label": "Puerta 4",
+      "position": [
+        -2.395,
+        1.88,
+        8.5
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "pasilloDesfaseC2_c2_53",
+      "label": "Marco ",
+      "position": [
+        2.51,
+        2.0,
+        -3.5
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "pasilloDesfaseC2_c2_54",
+      "label": "Puerta ",
+      "position": [
+        2.395,
+        1.88,
+        -3.5
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "pasilloDesfaseC2_c2_55",
+      "label": "Marco 0",
+      "position": [
+        2.51,
+        2.0,
+        2.5
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "pasilloDesfaseC2_c2_56",
+      "label": "Puerta 0",
+      "position": [
+        2.395,
+        1.88,
+        2.5
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "pasilloDesfaseC2_c2_58",
+      "label": "Marco ○",
+      "position": [
+        2.51,
+        2.0,
+        8.5
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "pasilloDesfaseC2_c2_59",
+      "label": "Puerta ○",
+      "position": [
+        2.395,
+        1.88,
+        8.5
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "pasilloDesfaseC2_c2_61",
+      "label": "Lámpara roja",
+      "position": [
+        1.87,
+        4.37,
+        -7.34
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "pasilloDesfaseC2_c2_62",
+      "label": "Interruptor",
+      "position": [
+        2.36,
+        2.06,
+        -7.34
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "pasilloDesfaseC2_c2_63",
+      "label": "Tubo de techo",
+      "position": [
+        0,
+        5.19,
+        -7.4
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false,
+      "chapter_min": 15,
+      "chapter_max": 99
+    },
+    {
+      "id": "pasilloDesfaseC2_c2_65",
+      "label": "Tubo de techo",
+      "position": [
+        0,
+        5.19,
+        -0.4
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false,
+      "chapter_min": 15,
+      "chapter_max": 99
+    },
+    {
+      "id": "pasilloDesfaseC2_c2_67",
+      "label": "Tubo de techo",
+      "position": [
+        0,
+        5.19,
+        6.7
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false,
+      "chapter_min": 15,
+      "chapter_max": 99
+    },
+    {
+      "id": "pasilloDesfaseC2_c2_69",
+      "label": "Tubo de techo",
+      "position": [
+        0,
+        5.19,
+        11.0
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false,
+      "chapter_min": 15,
+      "chapter_max": 99
+    },
+    {
+      "id": "pasilloDesfaseC2_c2_73",
+      "label": "Tornillo",
+      "position": [
+        0.28,
+        0.052,
+        -11.84
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false,
+      "chapter_min": 16,
+      "chapter_max": 16
+    }
+  ],
+  "ambient": [
+    0.035,
+    0.023,
+    0.026
+  ],
+  "inspections": [
+    {
+      "pos": [
+        0,
+        2.64,
+        -11.35
+      ],
+      "radius": 1.4,
+      "stage": 14,
+      "max_stage": 14
+    },
+    {
+      "pos": [
+        -1.55,
+        2.64,
+        2.5
+      ],
+      "radius": 1.4,
+      "stage": 15,
+      "max_stage": 24
+    },
+    {
+      "pos": [
+        1.55,
+        2.64,
+        -3.5
+      ],
+      "radius": 1.4,
+      "stage": 15,
+      "max_stage": 24
+    },
+    {
+      "pos": [
+        1.55,
+        2.64,
+        2.5
+      ],
+      "radius": 1.4,
+      "stage": 15,
+      "max_stage": 24
+    },
+    {
+      "pos": [
+        1.55,
+        2.64,
+        8.5
+      ],
+      "radius": 1.4,
+      "stage": 15,
+      "max_stage": 24
+    },
+    {
+      "pos": [
+        0,
+        2.64,
+        12.1
+      ],
+      "radius": 1.4,
+      "stage": 15,
+      "max_stage": 31
+    }
+  ],
+  "events": [
+    {
+      "stage": 13,
+      "delay": 2.7
+    },
+    {
+      "stage": 14,
+      "pos": [
+        1.28,
+        2.64,
+        -7.34
+      ],
+      "radius": 1.45,
+      "interact": true
+    },
+    {
+      "stage": 15,
+      "pos": [
+        0,
+        2.64,
+        -11.35
+      ],
+      "radius": 1.37
+    },
+    {
+      "stage": 16,
+      "pos": [
+        0,
+        2.64,
+        -11.35
+      ],
+      "radius": 1.42,
+      "interact": true
+    },
+    {
+      "stage": 17,
+      "pos": [
+        0,
+        2.64,
+        -11.35
+      ],
+      "radius": 1.42,
+      "interact": true
+    },
+    {
+      "stage": 18,
+      "pos": [
+        0,
+        2.64,
+        -11.35
+      ],
+      "radius": 1.42,
+      "interact": true
+    },
+    {
+      "stage": 19,
+      "delay": 0.9
+    },
+    {
+      "stage": 21,
+      "delay": 0.65
+    },
+    {
+      "stage": 25,
+      "delay": 0.75
+    },
+    {
+      "stage": 26,
+      "pos": [
+        -1.5,
+        2.64,
+        2.5
+      ],
+      "radius": 1.0,
+      "interact": true
+    }
+  ]
+}
