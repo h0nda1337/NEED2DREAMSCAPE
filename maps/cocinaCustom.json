@@ -1,0 +1,385 @@
+{
+  "name": "cocinaCustom",
+  "spawn": [
+    0,
+    2.64,
+    -5.6
+  ],
+  "arrival": {
+    "patioTrasero": [
+      0,
+      2.64,
+      5.43
+    ]
+  },
+  "portals": [
+    {
+      "target": "casaCustom",
+      "pos": [
+        0,
+        2.64,
+        -7
+      ],
+      "radius": 1.25,
+      "redirect_stage": 8,
+      "redirect": "cuartoCustom"
+    },
+    {
+      "target": "patioTrasero",
+      "pos": [
+        0,
+        2.64,
+        7
+      ],
+      "radius": 1.25,
+      "min_stage": 5
+    }
+  ],
+  "colliders": [
+    {
+      "name": "cocinaCustom_obj_0",
+      "position": [
+        0,
+        -0.12,
+        0
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        17.0,
+        0.24,
+        16.0
+      ],
+      "cutaway": false
+    },
+    {
+      "name": "cocinaCustom_obj_256",
+      "position": [
+        -8.55,
+        3.6,
+        0
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.24,
+        7.2,
+        16.0
+      ],
+      "cutaway": true
+    },
+    {
+      "name": "cocinaCustom_obj_257",
+      "position": [
+        8.55,
+        3.6,
+        0
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.24,
+        7.2,
+        16.0
+      ],
+      "cutaway": true
+    },
+    {
+      "name": "cocinaCustom_obj_258",
+      "position": [
+        -5,
+        3.6,
+        -8
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        7.0,
+        7.2,
+        0.24
+      ],
+      "cutaway": true
+    },
+    {
+      "name": "cocinaCustom_obj_259",
+      "position": [
+        5,
+        3.6,
+        -8
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        7.0,
+        7.2,
+        0.24
+      ],
+      "cutaway": true
+    },
+    {
+      "name": "cocinaCustom_obj_260",
+      "position": [
+        0,
+        5.8,
+        -8
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        3.0,
+        2.8,
+        0.24
+      ],
+      "cutaway": true
+    },
+    {
+      "name": "cocinaCustom_obj_263",
+      "position": [
+        -5,
+        3.6,
+        8
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        7.0,
+        7.2,
+        0.24
+      ],
+      "cutaway": true
+    },
+    {
+      "name": "cocinaCustom_obj_264",
+      "position": [
+        5,
+        3.6,
+        8
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        7.0,
+        7.2,
+        0.24
+      ],
+      "cutaway": true
+    },
+    {
+      "name": "cocinaCustom_obj_265",
+      "position": [
+        0,
+        5.8,
+        8
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        3.0,
+        2.8,
+        0.24
+      ],
+      "cutaway": true
+    },
+    {
+      "name": "cocinaCustom_obj_268",
+      "position": [
+        -3.45,
+        1.36,
+        -1.4
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        4.5,
+        2.72,
+        2.5
+      ],
+      "cutaway": false
+    },
+    {
+      "name": "cocinaCustom_obj_279",
+      "position": [
+        -3.7,
+        0.77,
+        -3.16
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.17,
+        1.54,
+        1.13
+      ],
+      "cutaway": false
+    },
+    {
+      "name": "cocinaCustom_obj_281",
+      "position": [
+        -3.7,
+        0.77,
+        0.44
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.17,
+        1.54,
+        1.13
+      ],
+      "cutaway": false
+    },
+    {
+      "name": "cocinaCustom_obj_283",
+      "position": [
+        -6.26,
+        0.77,
+        -1.45
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.17,
+        1.54,
+        1.13
+      ],
+      "cutaway": false
+    },
+    {
+      "name": "cocinaCustom_obj_285",
+      "position": [
+        6.27,
+        2.27,
+        5.83
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        2.36,
+        4.54,
+        2.6
+      ],
+      "cutaway": false
+    },
+    {
+      "name": "cocinaCustom_obj_290",
+      "position": [
+        -5.1,
+        1.17,
+        5.9
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        5.6,
+        2.34,
+        2.05
+      ],
+      "cutaway": false
+    }
+  ],
+  "lights": [
+    {
+      "position": [
+        0,
+        6.1,
+        0
+      ],
+      "type": 2,
+      "color": [
+        1,
+        0.78,
+        0.53
+      ],
+      "intensity": 1.25,
+      "range": 14,
+      "enabled": true
+    }
+  ],
+  "markers": [
+    {
+      "name": "Dars con un vaso",
+      "position": [
+        -4.5,
+        2.64,
+        3.15
+      ],
+      "stage": 7
+    },
+    {
+      "name": "Vaso de Dars",
+      "position": [
+        -4.16,
+        1.25,
+        3.08
+      ],
+      "stage": 7
+    }
+  ],
+  "ambient": [
+    0.24,
+    0.23,
+    0.25
+  ],
+  "events": [
+    {
+      "stage": 3
+    },
+    {
+      "stage": 4,
+      "pos": [
+        0,
+        2.64,
+        5.65
+      ],
+      "radius": 1.65
+    },
+    {
+      "stage": 7
+    }
+  ]
+}

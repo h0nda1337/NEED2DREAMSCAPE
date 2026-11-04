@@ -1,0 +1,685 @@
+[
+  {
+    "escena": 1,
+    "mapa": "exteriorCustom",
+    "dialogo": [
+      {
+        "personaje": "Rade",
+        "texto": "La luz sigue prendida. Todavía están despiertos."
+      },
+      {
+        "personaje": "Rade",
+        "texto": "Si me quito los zapatos aquí, quizá llegue al pasillo antes de que alguien se dé cuenta."
+      },
+      {
+        "personaje": "Rade",
+        "texto": "Me pesan hasta los párpados. Solo quiero cerrar la puerta de mi cuarto."
+      },
+      {
+        "personaje": "Rade",
+        "texto": "Gira despacio. Que no haga ruido."
+      }
+    ]
+  },
+  {
+    "escena": 2,
+    "mapa": "casaCustom",
+    "dialogo": [
+      {
+        "personaje": "Voz de la casa",
+        "texto": "¿Dónde chingados estabas? Es Navidad y tú llegando a la hora que se te da la gana."
+      },
+      {
+        "personaje": "Voz de la casa",
+        "texto": "Pudiste avisar. Pero claro, a ti te vale madre quién se queda despierto esperándote."
+      },
+      {
+        "personaje": "Rade",
+        "texto": "¿Puedo pasar a mi cuarto?"
+      },
+      {
+        "personaje": "Voz de la casa",
+        "texto": "Vete. Y cierra la puerta. Ya nos arruinaste bastante la noche."
+      }
+    ]
+  },
+  {
+    "escena": 3,
+    "mapa": "cuartoFondo",
+    "dialogo": [
+      {
+        "personaje": "DARS",
+        "texto": "¿Estás cansado, Rade?"
+      },
+      {
+        "personaje": "RADE",
+        "texto": "¿Se me nota tanto?"
+      },
+      {
+        "personaje": "DARS",
+        "texto": "No. Siempre miras la pared como si te debiera dinero."
+      },
+      {
+        "personaje": "RADE",
+        "texto": "¿Y qué haces con mi computadora?"
+      },
+      {
+        "personaje": "DARS",
+        "texto": "Intenté correr tu programa en Java. Lo único que corre es el ventilador."
+      },
+      {
+        "personaje": "DARS",
+        "texto": "Te dejé la consola abierta. A ver si a ti sí te contesta."
+      }
+    ]
+  },
+  {
+    "escena": 4,
+    "mapa": "cuartoFondo",
+    "dialogo": [
+      {
+        "personaje": "Rade",
+        "texto": "Dars, ¿dónde estás?"
+      }
+    ]
+  },
+  {
+    "escena": 5,
+    "mapa": "cuartoFondo",
+    "dialogo": [
+      {
+        "personaje": "RADE",
+        "texto": "Esa silueta… Creí que te había dejado atrás."
+      },
+      {
+        "personaje": "FIGURA",
+        "texto": "Te fuiste tú."
+      },
+      {
+        "personaje": "RADE",
+        "texto": "¿Vienes por mí o por ella?"
+      },
+      {
+        "personaje": "FIGURA",
+        "texto": "Tú fuiste quien encendió la pantalla."
+      }
+    ]
+  },
+  {
+    "escena": 6,
+    "mapa": "cuartoFondo",
+    "dialogo": [
+      {
+        "personaje": "RADE",
+        "texto": "¿Qué le hiciste a Dars?"
+      },
+      {
+        "personaje": "FIGURA",
+        "texto": "No la toqué."
+      },
+      {
+        "personaje": "RADE",
+        "texto": "Estaba aquí hace un minuto."
+      },
+      {
+        "personaje": "FIGURA",
+        "texto": "Lo sé."
+      },
+      {
+        "personaje": "RADE",
+        "texto": "Entonces dime dónde chingados está."
+      },
+      {
+        "personaje": "FIGURA",
+        "texto": "No sé qué viste."
+      },
+      {
+        "personaje": "RADE",
+        "texto": "No te hagas pendejo."
+      },
+      {
+        "personaje": "FIGURA",
+        "texto": "Sigues hablando igual."
+      },
+      {
+        "personaje": "RADE",
+        "texto": "¿Por qué apareciste aquí?"
+      },
+      {
+        "personaje": "FIGURA",
+        "texto": "Eso deberías preguntártelo tú."
+      }
+    ]
+  },
+  {
+    "escena": 7,
+    "mapa": "cuartoCustom",
+    "dialogo": [
+      {
+        "personaje": "RADE",
+        "texto": "No puede ser."
+      },
+      {
+        "personaje": "RADE",
+        "texto": "La puerta no se abrió. Yo estaba enfrente."
+      },
+      {
+        "personaje": "RADE",
+        "texto": "Dars..."
+      },
+      {
+        "personaje": "RADE",
+        "texto": "No, ya. Tengo que buscarla."
+      }
+    ]
+  },
+  {
+    "escena": 8,
+    "mapa": "casaCustom",
+    "dialogo": [
+      {
+        "personaje": "VOZ DE LA CASA",
+        "texto": "¿Qué estás haciendo ahora?"
+      },
+      {
+        "personaje": "RADE",
+        "texto": "¿Viste a Dars salir?"
+      },
+      {
+        "personaje": "VOZ DE LA CASA",
+        "texto": "No. ¿Por?"
+      },
+      {
+        "personaje": "RADE",
+        "texto": "Estaba en mi cuarto. Ahora no sé dónde está."
+      },
+      {
+        "personaje": "VOZ DE LA CASA",
+        "texto": "Pues búscala."
+      },
+      {
+        "personaje": "RADE",
+        "texto": "Eso estoy haciendo."
+      },
+      {
+        "personaje": "VOZ DE LA CASA",
+        "texto": "Entonces deja de hacer tanto ruido."
+      },
+      {
+        "personaje": "RADE",
+        "texto": "Te estoy preguntando si la viste. Nada más."
+      },
+      {
+        "personaje": "VOZ DE LA CASA",
+        "texto": "Y ya te contesté."
+      },
+      {
+        "personaje": "RADE",
+        "texto": "Bueno, chingada madre."
+      },
+      {
+        "personaje": "VOZ DE LA CASA",
+        "texto": "¿Qué dijiste?"
+      },
+      {
+        "personaje": "RADE",
+        "texto": "Nada."
+      }
+    ]
+  },
+  {
+    "escena": 9,
+    "mapa": "cocinaCustom",
+    "etapa": 3,
+    "dialogo": [
+      {
+        "personaje": "RADE",
+        "texto": "¿Dars?"
+      },
+      {
+        "personaje": "RADE",
+        "texto": "..."
+      },
+      {
+        "personaje": "RADE",
+        "texto": "Qué pinche noche."
+      }
+    ]
+  },
+  {
+    "escena": 9,
+    "mapa": "cocinaCustom",
+    "etapa": 4,
+    "dialogo": [
+      {
+        "personaje": "RADE",
+        "texto": "¿Dars? ¿Eres tú?"
+      }
+    ]
+  },
+  {
+    "escena": 10,
+    "mapa": "patioTrasero",
+    "etapa": 5,
+    "dialogo": [
+      {
+        "personaje": "RADE",
+        "texto": "Aquí tampoco."
+      },
+      {
+        "personaje": "RADE",
+        "texto": "¿Para qué saldría a estas horas?"
+      },
+      {
+        "personaje": "RADE",
+        "texto": "Dars, si me estás escuchando, contesta."
+      },
+      {
+        "personaje": "RADE",
+        "texto": "..."
+      },
+      {
+        "personaje": "RADE",
+        "texto": "Carajo."
+      }
+    ]
+  },
+  {
+    "escena": 10,
+    "mapa": "patioTrasero",
+    "etapa": 6,
+    "dialogo": [
+      {
+        "personaje": "RADE",
+        "texto": "¿Qué?"
+      }
+    ]
+  },
+  {
+    "escena": 11,
+    "mapa": "cocinaCustom",
+    "etapa": 7,
+    "dialogo": [
+      {
+        "personaje": "DARS",
+        "texto": "¿Qué chingados andas haciendo?"
+      },
+      {
+        "personaje": "RADE",
+        "texto": "¿De dónde saliste?"
+      },
+      {
+        "personaje": "DARS",
+        "texto": "¿Cómo que de dónde salí?"
+      },
+      {
+        "personaje": "RADE",
+        "texto": "Te estuve buscando por toda la casa."
+      },
+      {
+        "personaje": "DARS",
+        "texto": "Vine por agua."
+      },
+      {
+        "personaje": "RADE",
+        "texto": "No estabas aquí cuando entré."
+      },
+      {
+        "personaje": "DARS",
+        "texto": "Pues ahora sí estoy."
+      },
+      {
+        "personaje": "RADE",
+        "texto": "Dars, desapareciste."
+      },
+      {
+        "personaje": "DARS",
+        "texto": "¿Qué?"
+      },
+      {
+        "personaje": "RADE",
+        "texto": "Estabas junto a mi computadora. Se apagó todo y cuando volvió la luz ya no había nada."
+      },
+      {
+        "personaje": "DARS",
+        "texto": "¿Cómo que nada?"
+      },
+      {
+        "personaje": "RADE",
+        "texto": "Ni tú, ni el escritorio, ni los muebles."
+      },
+      {
+        "personaje": "DARS",
+        "texto": "Rade, ¿de qué estás hablando?"
+      },
+      {
+        "personaje": "RADE",
+        "texto": "Había alguien parado en el cuarto."
+      },
+      {
+        "personaje": "DARS",
+        "texto": "¿Quién?"
+      },
+      {
+        "personaje": "RADE",
+        "texto": "No sé."
+      },
+      {
+        "personaje": "DARS",
+        "texto": "¿Cómo que no sabes?"
+      },
+      {
+        "personaje": "RADE",
+        "texto": "¡No sé, Dars!"
+      },
+      {
+        "personaje": "DARS",
+        "texto": "No me grites."
+      },
+      {
+        "personaje": "RADE",
+        "texto": "..."
+      },
+      {
+        "personaje": "DARS",
+        "texto": "Yo te hablé cuando estabas enfrente de la computadora. Ni me volteaste a ver."
+      },
+      {
+        "personaje": "RADE",
+        "texto": "Nunca me hablaste."
+      },
+      {
+        "personaje": "DARS",
+        "texto": "Ah, bueno. Entonces me lo inventé."
+      },
+      {
+        "personaje": "RADE",
+        "texto": "¿Qué programa ejecutaste?"
+      },
+      {
+        "personaje": "DARS",
+        "texto": "El tuyo. Ya te lo dije."
+      },
+      {
+        "personaje": "RADE",
+        "texto": "¿Y qué más le moviste?"
+      },
+      {
+        "personaje": "DARS",
+        "texto": "Nada."
+      },
+      {
+        "personaje": "RADE",
+        "texto": "Dars."
+      },
+      {
+        "personaje": "DARS",
+        "texto": "¿Qué?"
+      },
+      {
+        "personaje": "RADE",
+        "texto": "No me estés mintiendo."
+      },
+      {
+        "personaje": "DARS",
+        "texto": "Vete a la chingada, Rade."
+      },
+      {
+        "personaje": "RADE",
+        "texto": "Yo solamente quiero saber qué pasó."
+      },
+      {
+        "personaje": "DARS",
+        "texto": "No. Quieres echarme la culpa de algo que ni siquiera entiendo."
+      },
+      {
+        "personaje": "RADE",
+        "texto": "No estoy diciendo eso."
+      },
+      {
+        "personaje": "DARS",
+        "texto": "Me estás tratando como si fuera una pendeja."
+      },
+      {
+        "personaje": "RADE",
+        "texto": "No dije eso."
+      },
+      {
+        "personaje": "DARS",
+        "texto": "No hace falta que lo digas."
+      },
+      {
+        "personaje": "DARS",
+        "texto": "Ven. Vamos a ver tu pinche computadora."
+      }
+    ]
+  },
+  {
+    "escena": 12,
+    "mapa": "cuartoFondo",
+    "etapa": 8,
+    "dialogo": [
+      {
+        "personaje": "DARS",
+        "texto": "Ahí está."
+      },
+      {
+        "personaje": "RADE",
+        "texto": "..."
+      },
+      {
+        "personaje": "DARS",
+        "texto": "¿Qué?"
+      },
+      {
+        "personaje": "RADE",
+        "texto": "No estaba así."
+      },
+      {
+        "personaje": "DARS",
+        "texto": "Pues yo lo veo igual."
+      },
+      {
+        "personaje": "RADE",
+        "texto": "Te juro que estaba vacío."
+      },
+      {
+        "personaje": "DARS",
+        "texto": "No sé qué quieres que te diga."
+      },
+      {
+        "personaje": "RADE",
+        "texto": "Vi a alguien aquí."
+      },
+      {
+        "personaje": "DARS",
+        "texto": "¿A quién?"
+      },
+      {
+        "personaje": "RADE",
+        "texto": "A alguien que conocí hace tiempo."
+      },
+      {
+        "personaje": "DARS",
+        "texto": "¿Y qué hacía en tu cuarto?"
+      },
+      {
+        "personaje": "RADE",
+        "texto": "No lo sé."
+      },
+      {
+        "personaje": "DARS",
+        "texto": "¿Por qué no me lo dijiste desde el principio?"
+      },
+      {
+        "personaje": "RADE",
+        "texto": "Porque pensé que te había hecho algo."
+      },
+      {
+        "personaje": "DARS",
+        "texto": "¿Y por eso me empezaste a reclamar?"
+      },
+      {
+        "personaje": "RADE",
+        "texto": "Me asusté, ¿sí?"
+      },
+      {
+        "personaje": "DARS",
+        "texto": "Yo también me hubiera asustado."
+      },
+      {
+        "personaje": "RADE",
+        "texto": "Entonces..."
+      },
+      {
+        "personaje": "DARS",
+        "texto": "Eso no significa que puedas hablarme como quieras."
+      },
+      {
+        "personaje": "DARS",
+        "texto": "Llegas de malas, discutes con todos y ahora también conmigo."
+      },
+      {
+        "personaje": "RADE",
+        "texto": "No fue por eso."
+      },
+      {
+        "personaje": "DARS",
+        "texto": "Pues así se sintió."
+      },
+      {
+        "personaje": "RADE",
+        "texto": "No sé qué pasó, Dars."
+      },
+      {
+        "personaje": "DARS",
+        "texto": "Yo tampoco."
+      },
+      {
+        "personaje": "RADE",
+        "texto": "..."
+      },
+      {
+        "personaje": "DARS",
+        "texto": "Ya me voy. Estoy cansada."
+      },
+      {
+        "personaje": "RADE",
+        "texto": "¿Me puedes ayudar a revisar una última cosa?"
+      },
+      {
+        "personaje": "DARS",
+        "texto": "No."
+      },
+      {
+        "personaje": "RADE",
+        "texto": "Dars..."
+      },
+      {
+        "personaje": "DARS",
+        "texto": "Te dije que no."
+      },
+      {
+        "personaje": "DARS",
+        "texto": "Y no vuelvas a gritarme así."
+      }
+    ]
+  },
+  {
+    "escena": 13,
+    "mapa": "cuartoFondo",
+    "etapa": 9,
+    "dialogo": [
+      {
+        "personaje": "RADE",
+        "texto": "Ni siquiera sé qué estaba corriendo."
+      },
+      {
+        "personaje": "CONSOLA JAVA",
+        "texto": "> Tú fuiste quien encendió la pantalla."
+      },
+      {
+        "personaje": "RADE",
+        "texto": "..."
+      },
+      {
+        "personaje": "RADE",
+        "texto": "Eso fue lo que dijo."
+      },
+      {
+        "personaje": "RADE",
+        "texto": "No voy a tocar esta madre otra vez."
+      }
+    ]
+  },
+  {
+    "escena": 14,
+    "mapa": "pasilloDesfase",
+    "etapa": 10,
+    "dialogo": [
+      {
+        "personaje": "RADE",
+        "texto": "¿Qué...?"
+      },
+      {
+        "personaje": "RADE",
+        "texto": "Este pasillo no estaba aquí."
+      },
+      {
+        "personaje": "RADE",
+        "texto": "No. No otra vez."
+      }
+    ]
+  },
+  {
+    "escena": 14,
+    "mapa": "pasilloDesfase",
+    "etapa": 11,
+    "dialogo": [
+      {
+        "personaje": "RADE",
+        "texto": "No tiene manija."
+      },
+      {
+        "personaje": "DARS",
+        "texto": "¿Rade?"
+      },
+      {
+        "personaje": "RADE",
+        "texto": "¿Dars?"
+      },
+      {
+        "personaje": "DARS",
+        "texto": "¿Qué haces ahí? Abre."
+      },
+      {
+        "personaje": "RADE",
+        "texto": "No puedo."
+      },
+      {
+        "personaje": "DARS",
+        "texto": "¿Cómo que no puedes?"
+      },
+      {
+        "personaje": "RADE",
+        "texto": "La puerta no tiene manija."
+      },
+      {
+        "personaje": "DARS",
+        "texto": "Ya, Rade. No tengo ganas."
+      },
+      {
+        "personaje": "RADE",
+        "texto": "¡Que no es una broma!"
+      },
+      {
+        "personaje": "DARS",
+        "texto": "..."
+      },
+      {
+        "personaje": "DARS",
+        "texto": "¿Rade?"
+      }
+    ]
+  }
+]

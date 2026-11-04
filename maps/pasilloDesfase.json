@@ -1,0 +1,191 @@
+{
+  "name": "pasilloDesfase",
+  "spawn": [
+    0,
+    2.64,
+    -10
+  ],
+  "arrival": {},
+  "portals": [],
+  "colliders": [
+    {
+      "name": "pasilloDesfase_obj_0",
+      "position": [
+        0,
+        -0.12,
+        0
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        5.3,
+        0.24,
+        25.0
+      ],
+      "cutaway": false
+    },
+    {
+      "name": "pasilloDesfase_obj_1",
+      "position": [
+        -2.72,
+        3.2,
+        0
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.22,
+        6.4,
+        25.0
+      ],
+      "cutaway": true
+    },
+    {
+      "name": "pasilloDesfase_obj_6",
+      "position": [
+        2.72,
+        3.2,
+        0
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.22,
+        6.4,
+        25.0
+      ],
+      "cutaway": true
+    },
+    {
+      "name": "pasilloDesfase_obj_11",
+      "position": [
+        0,
+        3.2,
+        -12.5
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        5.4,
+        6.4,
+        0.22
+      ],
+      "cutaway": true
+    },
+    {
+      "name": "pasilloDesfase_obj_12",
+      "position": [
+        0,
+        3.2,
+        12.5
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        5.4,
+        6.4,
+        0.22
+      ],
+      "cutaway": true
+    },
+    {
+      "name": "pasilloDesfase_obj_13",
+      "position": [
+        0,
+        1.9,
+        -12.32
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.96,
+        3.8,
+        0.12
+      ],
+      "cutaway": true
+    },
+    {
+      "name": "pasilloDesfase_obj_14",
+      "position": [
+        0,
+        1.9,
+        12.32
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.96,
+        3.8,
+        0.12
+      ],
+      "cutaway": true
+    }
+  ],
+  "lights": [
+    {
+      "position": [
+        0,
+        5.9,
+        1.4
+      ],
+      "type": 2,
+      "color": [
+        0.84,
+        0.8,
+        0.6
+      ],
+      "intensity": 1.2,
+      "range": 12,
+      "enabled": true
+    }
+  ],
+  "markers": [],
+  "ambient": [
+    0.17,
+    0.16,
+    0.21
+  ],
+  "events": [
+    {
+      "stage": 10,
+      "pos": [
+        0,
+        2.64,
+        -5.4
+      ],
+      "radius": 2.1
+    },
+    {
+      "stage": 11,
+      "pos": [
+        0,
+        2.64,
+        -11.1
+      ],
+      "radius": 1.48,
+      "interact": true,
+      "second_press": true
+    }
+  ]
+}
