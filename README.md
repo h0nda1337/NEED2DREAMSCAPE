@@ -18,6 +18,6 @@ Exterior → sala → dormitorio → cuarto de la computadora → dormitorio →
 Los ocho escenarios de `maps/` se construyeron para NEED2DREAMSCAPE con geometría procedural y colores planos. Las posiciones y los identificadores de las puertas conservan la continuidad de la historia. Esta entrega contiene recursos editables para el proyecto. El ejecutable, los recursos extraídos, los mapas de Roblox, las fuentes de terceros y el código relacionado con la reconstrucción del juego anterior quedan fuera del contenido de esta rama.
 
 
-## Inicio del capítulo 2
+## Capítulo 2 — Los cuartos que no caben
 
-Los cuartos que no caben continúa desde el cierre del capítulo 1. El primer tramo llega hasta el cuarto de los abrigos. En `maps/` están el pasillo de la segunda parte, el cuarto prestado, la sala incompleta y el cuarto de los abrigos. El diálogo de este tramo está en `story/capitulo-2-inicio.json` y los efectos sintetizados llevan el prefijo `cap2_`.
+Rade busca una salida del pasillo, vuelve a casa y se reúne con Dars. El capítulo termina en el cuarto de Dars. En `maps/` están los mapas propios y las variantes de la casa, con sus puertas y eventos. `story/capitulo-2.json` contiene el recorrido, el diálogo y sus variantes. Los efectos de audio sintetizados llevan el prefijo `cap2_`.

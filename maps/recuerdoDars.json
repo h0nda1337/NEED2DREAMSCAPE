@@ -1,0 +1,216 @@
+{
+  "name": "recuerdoDars",
+  "spawn": [
+    0,
+    2.64,
+    -2.2
+  ],
+  "arrival": {},
+  "portals": [],
+  "colliders": [
+    {
+      "name": "recuerdoDars_c2_9",
+      "position": [
+        0,
+        -0.1,
+        0
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        8.0,
+        0.2,
+        8.0
+      ],
+      "cutaway": false
+    },
+    {
+      "name": "recuerdoDars_c2_10",
+      "position": [
+        -4.0,
+        2.7,
+        0
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.2,
+        5.4,
+        8.0
+      ],
+      "cutaway": true
+    },
+    {
+      "name": "recuerdoDars_c2_11",
+      "position": [
+        4.0,
+        2.7,
+        0
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.2,
+        5.4,
+        8.0
+      ],
+      "cutaway": true
+    },
+    {
+      "name": "recuerdoDars_c2_12",
+      "position": [
+        0,
+        2.7,
+        4.0
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        8.0,
+        5.4,
+        0.22
+      ],
+      "cutaway": true
+    },
+    {
+      "name": "recuerdoDars_c2_13",
+      "position": [
+        0,
+        2.7,
+        -4.0
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        8.0,
+        5.4,
+        0.22
+      ],
+      "cutaway": false
+    }
+  ],
+  "lights": [
+    {
+      "position": [
+        0,
+        4.4,
+        0.52
+      ],
+      "type": 2,
+      "color": [
+        0.67,
+        0.7,
+        1
+      ],
+      "intensity": 0.72,
+      "range": 7,
+      "enabled": true
+    }
+  ],
+  "markers": [],
+  "objects": [
+    {
+      "id": "recuerdoDars_c2_9",
+      "label": "Piso",
+      "position": [
+        0,
+        -0.1,
+        0
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "recuerdoDars_c2_10",
+      "label": "Pared izquierda",
+      "position": [
+        -4.0,
+        2.7,
+        0
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "recuerdoDars_c2_11",
+      "label": "Pared derecha",
+      "position": [
+        4.0,
+        2.7,
+        0
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "recuerdoDars_c2_12",
+      "label": "Pared de fondo",
+      "position": [
+        0,
+        2.7,
+        4.0
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "recuerdoDars_c2_13",
+      "label": "Pared de entrada",
+      "position": [
+        0,
+        2.7,
+        -4.0
+      ],
+      "camera_hidden": true,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "recuerdoDars_c2_14",
+      "label": "Marco de salida",
+      "position": [
+        0,
+        1.8,
+        -3.87
+      ],
+      "camera_hidden": true,
+      "vanishes": false,
+      "movable": false
+    }
+  ],
+  "ambient": [
+    0.19,
+    0.19,
+    0.24
+  ],
+  "inspections": [],
+  "events": [
+    {
+      "stage": 427,
+      "delay": 1.8,
+      "next": 433
+    }
+  ],
+  "fades": {
+    "433": "dormitorioRadeC2"
+  }
+}

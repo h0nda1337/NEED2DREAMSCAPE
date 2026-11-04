@@ -1,0 +1,463 @@
+{
+  "name": "cuartoDars",
+  "spawn": [
+    0,
+    2.64,
+    -4.2
+  ],
+  "arrival": {},
+  "portals": [],
+  "colliders": [
+    {
+      "name": "cuartoDars_c2_9",
+      "position": [
+        0,
+        -0.1,
+        0
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        13.0,
+        0.2,
+        12.0
+      ],
+      "cutaway": false
+    },
+    {
+      "name": "cuartoDars_c2_10",
+      "position": [
+        -6.5,
+        2.7,
+        0
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.2,
+        5.4,
+        12.0
+      ],
+      "cutaway": true
+    },
+    {
+      "name": "cuartoDars_c2_11",
+      "position": [
+        6.5,
+        2.7,
+        0
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.2,
+        5.4,
+        12.0
+      ],
+      "cutaway": true
+    },
+    {
+      "name": "cuartoDars_c2_12",
+      "position": [
+        0,
+        2.7,
+        6.0
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        13.0,
+        5.4,
+        0.22
+      ],
+      "cutaway": true
+    },
+    {
+      "name": "cuartoDars_c2_13",
+      "position": [
+        0,
+        2.7,
+        -6.0
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        13.0,
+        5.4,
+        0.22
+      ],
+      "cutaway": false
+    },
+    {
+      "name": "cuartoDars_c2_15",
+      "position": [
+        -3.56,
+        0.57,
+        2.11
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        3.2,
+        1.14,
+        4.66
+      ],
+      "cutaway": false
+    },
+    {
+      "name": "cuartoDars_c2_18",
+      "position": [
+        3.39,
+        1.06,
+        3.45
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        3.16,
+        2.12,
+        1.41
+      ],
+      "cutaway": false
+    },
+    {
+      "name": "cuartoDars_c2_22",
+      "position": [
+        -4.46,
+        2.38,
+        -3.93
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        2.43,
+        4.76,
+        1.4
+      ],
+      "cutaway": false
+    }
+  ],
+  "lights": [
+    {
+      "position": [
+        4.55,
+        3.31,
+        3.27
+      ],
+      "type": 2,
+      "color": [
+        1,
+        0.79,
+        0.57
+      ],
+      "intensity": 1.68,
+      "range": 9,
+      "enabled": true
+    },
+    {
+      "position": [
+        4.51,
+        2.5,
+        -4.95
+      ],
+      "type": 2,
+      "color": [
+        0.8,
+        0.85,
+        1
+      ],
+      "intensity": 0.64,
+      "range": 7,
+      "enabled": true
+    }
+  ],
+  "markers": [],
+  "objects": [
+    {
+      "id": "cuartoDars_c2_9",
+      "label": "Piso",
+      "position": [
+        0,
+        -0.1,
+        0
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cuartoDars_c2_10",
+      "label": "Pared izquierda",
+      "position": [
+        -6.5,
+        2.7,
+        0
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cuartoDars_c2_11",
+      "label": "Pared derecha",
+      "position": [
+        6.5,
+        2.7,
+        0
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cuartoDars_c2_12",
+      "label": "Pared de fondo",
+      "position": [
+        0,
+        2.7,
+        6.0
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cuartoDars_c2_13",
+      "label": "Pared de entrada",
+      "position": [
+        0,
+        2.7,
+        -6.0
+      ],
+      "camera_hidden": true,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cuartoDars_c2_14",
+      "label": "Marco de salida",
+      "position": [
+        0,
+        1.8,
+        -5.87
+      ],
+      "camera_hidden": true,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cuartoDars_c2_15",
+      "label": "Cama",
+      "position": [
+        -3.56,
+        0.57,
+        2.11
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cuartoDars_c2_16",
+      "label": "Cobija",
+      "position": [
+        -3.56,
+        1.19,
+        1.61
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cuartoDars_c2_17",
+      "label": "Almohada",
+      "position": [
+        -3.56,
+        1.28,
+        3.69
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cuartoDars_c2_18",
+      "label": "Escritorio",
+      "position": [
+        3.39,
+        1.06,
+        3.45
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cuartoDars_c2_19",
+      "label": "Portátil",
+      "position": [
+        3.9,
+        2.2,
+        3.77
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cuartoDars_c2_20",
+      "label": "Cuaderno",
+      "position": [
+        2.66,
+        2.19,
+        3.16
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cuartoDars_c2_21",
+      "label": "Lámpara del escritorio",
+      "position": [
+        4.6,
+        2.89,
+        3.53
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cuartoDars_c2_22",
+      "label": "Armario",
+      "position": [
+        -4.46,
+        2.38,
+        -3.93
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cuartoDars_c2_23",
+      "label": "Tirador",
+      "position": [
+        -4.85,
+        2.12,
+        -3.18
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cuartoDars_c2_24",
+      "label": "Tirador",
+      "position": [
+        -4.08,
+        2.12,
+        -3.18
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cuartoDars_c2_25",
+      "label": "Marco ",
+      "position": [
+        4.41,
+        1.99,
+        -5.84
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cuartoDars_c2_26",
+      "label": "Hoja ",
+      "position": [
+        4.41,
+        1.9,
+        -5.84
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cuartoDars_c2_27",
+      "label": "Manija ",
+      "position": [
+        4.99,
+        1.96,
+        -5.96
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    }
+  ],
+  "ambient": [
+    0.15,
+    0.17,
+    0.22
+  ],
+  "inspections": [],
+  "events": [
+    {
+      "stage": 625,
+      "delay": 1.8,
+      "next": 631
+    },
+    {
+      "stage": 631,
+      "delay": 1.8,
+      "next": 637
+    },
+    {
+      "stage": 637,
+      "delay": 1.8,
+      "next": 643
+    },
+    {
+      "stage": 643,
+      "delay": 3.5,
+      "next": 649
+    },
+    {
+      "stage": 649,
+      "delay": 2.2,
+      "next": 655
+    }
+  ],
+  "fades": {}
+}

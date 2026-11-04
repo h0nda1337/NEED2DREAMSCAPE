@@ -1,0 +1,727 @@
+{
+  "name": "cocinaC2",
+  "spawn": [
+    0,
+    2.64,
+    -5.6
+  ],
+  "arrival": {
+    "salaC2": [
+      0,
+      2.64,
+      -5.6
+    ]
+  },
+  "portals": [
+    {
+      "target": "salaC2",
+      "pos": [
+        0,
+        2.64,
+        -7
+      ],
+      "radius": 1.15,
+      "min_stage": 277,
+      "max_stage": 277
+    },
+    {
+      "target": "salaC2",
+      "pos": [
+        0,
+        2.64,
+        -7
+      ],
+      "radius": 1.15,
+      "min_stage": 373,
+      "max_stage": 373
+    },
+    {
+      "target": "salaC2",
+      "pos": [
+        0,
+        2.64,
+        -7
+      ],
+      "radius": 1.15,
+      "min_stage": 463,
+      "max_stage": 463
+    }
+  ],
+  "colliders": [
+    {
+      "name": "cocinaCustom_obj_0",
+      "position": [
+        0,
+        -0.12,
+        0
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        17.0,
+        0.24,
+        16.0
+      ],
+      "cutaway": false
+    },
+    {
+      "name": "cocinaCustom_obj_256",
+      "position": [
+        -8.55,
+        3.6,
+        0
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.24,
+        7.2,
+        16.0
+      ],
+      "cutaway": true
+    },
+    {
+      "name": "cocinaCustom_obj_257",
+      "position": [
+        8.55,
+        3.6,
+        0
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.24,
+        7.2,
+        16.0
+      ],
+      "cutaway": true
+    },
+    {
+      "name": "cocinaCustom_obj_258",
+      "position": [
+        -5,
+        3.6,
+        -8
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        7.0,
+        7.2,
+        0.24
+      ],
+      "cutaway": true
+    },
+    {
+      "name": "cocinaCustom_obj_259",
+      "position": [
+        5,
+        3.6,
+        -8
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        7.0,
+        7.2,
+        0.24
+      ],
+      "cutaway": true
+    },
+    {
+      "name": "cocinaCustom_obj_260",
+      "position": [
+        0,
+        5.8,
+        -8
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        3.0,
+        2.8,
+        0.24
+      ],
+      "cutaway": true
+    },
+    {
+      "name": "cocinaCustom_obj_263",
+      "position": [
+        -5,
+        3.6,
+        8
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        7.0,
+        7.2,
+        0.24
+      ],
+      "cutaway": true
+    },
+    {
+      "name": "cocinaCustom_obj_264",
+      "position": [
+        5,
+        3.6,
+        8
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        7.0,
+        7.2,
+        0.24
+      ],
+      "cutaway": true
+    },
+    {
+      "name": "cocinaCustom_obj_265",
+      "position": [
+        0,
+        5.8,
+        8
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        3.0,
+        2.8,
+        0.24
+      ],
+      "cutaway": true
+    },
+    {
+      "name": "cocinaCustom_obj_268",
+      "position": [
+        -3.45,
+        1.36,
+        -1.4
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        4.5,
+        2.72,
+        2.5
+      ],
+      "cutaway": false
+    },
+    {
+      "name": "cocinaCustom_obj_279",
+      "position": [
+        -4.65,
+        0.98,
+        -3.42
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.02,
+        0.22,
+        1.02
+      ],
+      "cutaway": false
+    },
+    {
+      "name": "cocinaCustom_obj_285",
+      "position": [
+        -4.65,
+        0.98,
+        0.6200000000000001
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.02,
+        0.22,
+        1.02
+      ],
+      "cutaway": false
+    },
+    {
+      "name": "cocinaCustom_obj_291",
+      "position": [
+        -2.25,
+        0.98,
+        -3.42
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.02,
+        0.22,
+        1.02
+      ],
+      "cutaway": false
+    },
+    {
+      "name": "cocinaCustom_obj_297",
+      "position": [
+        -2.25,
+        0.98,
+        0.6200000000000001
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.02,
+        0.22,
+        1.02
+      ],
+      "cutaway": false
+    },
+    {
+      "name": "cocinaCustom_obj_303",
+      "position": [
+        6.27,
+        2.27,
+        5.83
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        2.36,
+        4.54,
+        2.6
+      ],
+      "cutaway": false
+    },
+    {
+      "name": "cocinaCustom_obj_308",
+      "position": [
+        -5.1,
+        1.17,
+        5.9
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        5.6,
+        2.34,
+        2.05
+      ],
+      "cutaway": false
+    }
+  ],
+  "lights": [
+    {
+      "position": [
+        0,
+        6.1,
+        0
+      ],
+      "type": 2,
+      "color": [
+        1,
+        0.78,
+        0.53
+      ],
+      "intensity": 1.25,
+      "range": 14,
+      "enabled": true
+    },
+    {
+      "position": [
+        1,
+        5.5,
+        1
+      ],
+      "type": 2,
+      "color": [
+        0.95,
+        0.91,
+        0.83
+      ],
+      "intensity": 1.16,
+      "range": 15,
+      "enabled": true
+    }
+  ],
+  "markers": [
+    {
+      "name": "Dars con un vaso",
+      "position": [
+        -4.5,
+        2.64,
+        3.15
+      ]
+    },
+    {
+      "name": "Vaso de Dars",
+      "position": [
+        -4.16,
+        1.25,
+        3.08
+      ]
+    },
+    {
+      "name": "Dars",
+      "position": [
+        -4.5,
+        2.64,
+        3.15
+      ],
+      "stage": 265
+    }
+  ],
+  "objects": [
+    {
+      "id": "cocinaCustom_obj_0",
+      "label": "cocinaCustom 0",
+      "position": [
+        0,
+        -0.12,
+        0
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cocinaCustom_obj_256",
+      "label": "cocinaCustom 256",
+      "position": [
+        -8.55,
+        3.6,
+        0
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cocinaCustom_obj_257",
+      "label": "cocinaCustom 257",
+      "position": [
+        8.55,
+        3.6,
+        0
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cocinaCustom_obj_258",
+      "label": "cocinaCustom 258",
+      "position": [
+        -5,
+        3.6,
+        -8
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cocinaCustom_obj_259",
+      "label": "cocinaCustom 259",
+      "position": [
+        5,
+        3.6,
+        -8
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cocinaCustom_obj_260",
+      "label": "cocinaCustom 260",
+      "position": [
+        0,
+        5.8,
+        -8
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cocinaCustom_obj_263",
+      "label": "cocinaCustom 263",
+      "position": [
+        -5,
+        3.6,
+        8
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cocinaCustom_obj_264",
+      "label": "cocinaCustom 264",
+      "position": [
+        5,
+        3.6,
+        8
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cocinaCustom_obj_265",
+      "label": "cocinaCustom 265",
+      "position": [
+        0,
+        5.8,
+        8
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cocinaCustom_obj_268",
+      "label": "cocinaCustom 268",
+      "position": [
+        -3.45,
+        1.36,
+        -1.4
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cocinaCustom_obj_279",
+      "label": "cocinaCustom 279",
+      "position": [
+        -4.65,
+        0.98,
+        -3.42
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cocinaCustom_obj_285",
+      "label": "cocinaCustom 285",
+      "position": [
+        -4.65,
+        0.98,
+        0.6200000000000001
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cocinaCustom_obj_291",
+      "label": "cocinaCustom 291",
+      "position": [
+        -2.25,
+        0.98,
+        -3.42
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cocinaCustom_obj_297",
+      "label": "cocinaCustom 297",
+      "position": [
+        -2.25,
+        0.98,
+        0.6200000000000001
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cocinaCustom_obj_303",
+      "label": "cocinaCustom 303",
+      "position": [
+        6.27,
+        2.27,
+        5.83
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cocinaCustom_obj_308",
+      "label": "cocinaCustom 308",
+      "position": [
+        -5.1,
+        1.17,
+        5.9
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cocinaCustom_decor",
+      "label": "Decoración",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    }
+  ],
+  "ambient": [
+    0.24,
+    0.23,
+    0.25
+  ],
+  "inspections": [],
+  "events": [
+    {
+      "stage": 265,
+      "pos": [
+        -3.0,
+        2.64,
+        3.5
+      ],
+      "radius": 1.24,
+      "interact": true,
+      "next": 271
+    },
+    {
+      "stage": 271,
+      "pos": [
+        -3.0,
+        2.64,
+        3.5
+      ],
+      "radius": 1.24,
+      "interact": true,
+      "next": 277
+    },
+    {
+      "stage": 369,
+      "pos": [
+        -4.5,
+        2.64,
+        4.23
+      ],
+      "radius": 1.3,
+      "interact": true,
+      "next": 373,
+      "presses": 3,
+      "min_gap": 0.18,
+      "set_flags": 512
+    },
+    {
+      "stage": 445,
+      "pos": [
+        -3.0,
+        2.64,
+        3.8
+      ],
+      "radius": 1.24,
+      "interact": true,
+      "next": 451
+    },
+    {
+      "stage": 451,
+      "pos": [
+        0,
+        2.64,
+        2.1
+      ],
+      "radius": 1.24,
+      "interact": true,
+      "next": 452
+    },
+    {
+      "stage": 452,
+      "next": 457,
+      "choices": [
+        {
+          "next": 453,
+          "set_flags": 0,
+          "clear_flags": 0
+        },
+        {
+          "next": 454,
+          "set_flags": 0,
+          "clear_flags": 0
+        }
+      ]
+    },
+    {
+      "stage": 453,
+      "delay": 0.55,
+      "next": 457
+    },
+    {
+      "stage": 454,
+      "delay": 0.55,
+      "next": 457
+    },
+    {
+      "stage": 457,
+      "pos": [
+        0,
+        2.64,
+        2.1
+      ],
+      "radius": 1.24,
+      "interact": true,
+      "next": 463
+    }
+  ],
+  "fades": {}
+}

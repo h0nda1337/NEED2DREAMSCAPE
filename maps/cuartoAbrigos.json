@@ -653,7 +653,8 @@
   ],
   "events": [
     {
-      "stage": 27
+      "stage": 27,
+      "next": 29
     },
     {
       "stage": 29,
@@ -675,5 +676,6 @@
       "radius": 1.53,
       "interact": true
     }
-  ]
+  ],
+  "fades": {}
 }

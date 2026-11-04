@@ -1,0 +1,397 @@
+{
+  "name": "banoNormalC2",
+  "spawn": [
+    -44.14,
+    2.64,
+    32.25
+  ],
+  "arrival": {
+    "salaC2": [
+      -44.14,
+      2.64,
+      32.25
+    ]
+  },
+  "portals": [
+    {
+      "target": "salaC2",
+      "pos": [
+        -44.14,
+        2.64,
+        35.1
+      ],
+      "radius": 1.23,
+      "min_stage": 259,
+      "max_stage": 259
+    },
+    {
+      "target": "salaC2",
+      "pos": [
+        -44.14,
+        2.64,
+        35.1
+      ],
+      "radius": 1.23,
+      "min_stage": 553,
+      "max_stage": 553
+    }
+  ],
+  "colliders": [
+    {
+      "name": "bathroom_original_9",
+      "position": [
+        -44.3,
+        -0.14,
+        30.6
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        10.600000000000001,
+        0.28,
+        11.200000000000003
+      ],
+      "cutaway": false
+    },
+    {
+      "name": "bathroom_original_10",
+      "position": [
+        -49.6,
+        2.95,
+        30.6
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.22,
+        5.9,
+        11.200000000000003
+      ],
+      "cutaway": true
+    },
+    {
+      "name": "bathroom_original_11",
+      "position": [
+        -39.0,
+        2.95,
+        30.6
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.22,
+        5.9,
+        11.200000000000003
+      ],
+      "cutaway": true
+    },
+    {
+      "name": "bathroom_original_12",
+      "position": [
+        -44.3,
+        2.95,
+        25.0
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        10.600000000000001,
+        5.9,
+        0.22
+      ],
+      "cutaway": true
+    },
+    {
+      "name": "bathroom_original_13",
+      "position": [
+        -47.49,
+        2.95,
+        36.2
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        4.219999999999999,
+        5.9,
+        0.22
+      ],
+      "cutaway": true
+    },
+    {
+      "name": "bathroom_original_14",
+      "position": [
+        -40.955,
+        2.95,
+        36.2
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        3.9099999999999966,
+        5.9,
+        0.22
+      ],
+      "cutaway": true
+    },
+    {
+      "name": "bathroom_original_15",
+      "position": [
+        -44.42,
+        0.95,
+        25.88
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        2.12,
+        1.9,
+        1.15
+      ],
+      "cutaway": false
+    },
+    {
+      "name": "bathroom_original_16",
+      "position": [
+        -48.45,
+        0.2,
+        27.13
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.99,
+        0.4,
+        3.55
+      ],
+      "cutaway": false
+    },
+    {
+      "name": "bathroom_original_17",
+      "position": [
+        -40.3,
+        1.37,
+        25.86
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.01,
+        1.46,
+        0.67
+      ],
+      "cutaway": false
+    }
+  ],
+  "lights": [
+    {
+      "position": [
+        -44.4,
+        5.35,
+        28.1
+      ],
+      "type": 2,
+      "color": [
+        0.76,
+        0.91,
+        1
+      ],
+      "intensity": 1.1,
+      "range": 11,
+      "enabled": true
+    }
+  ],
+  "markers": [],
+  "objects": [
+    {
+      "id": "bathroom_original_9",
+      "label": "Piso del baño",
+      "position": [
+        -44.3,
+        -0.14,
+        30.6
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "bathroom_original_10",
+      "label": "Pared de azulejos oeste",
+      "position": [
+        -49.6,
+        2.95,
+        30.6
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "bathroom_original_11",
+      "label": "Pared de azulejos este",
+      "position": [
+        -39.0,
+        2.95,
+        30.6
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "bathroom_original_12",
+      "label": "Pared de azulejos sur",
+      "position": [
+        -44.3,
+        2.95,
+        25.0
+      ],
+      "camera_hidden": true,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "bathroom_original_13",
+      "label": "Retorno izquierdo",
+      "position": [
+        -47.49,
+        2.95,
+        36.2
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "bathroom_original_14",
+      "label": "Retorno derecho",
+      "position": [
+        -40.955,
+        2.95,
+        36.2
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "bathroom_original_15",
+      "label": "Mueble del lavabo",
+      "position": [
+        -44.42,
+        0.95,
+        25.88
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "bathroom_original_16",
+      "label": "Plato de ducha",
+      "position": [
+        -48.45,
+        0.2,
+        27.13
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "bathroom_original_17",
+      "label": "Tanque del inodoro",
+      "position": [
+        -40.3,
+        1.37,
+        25.86
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "bathroom_original_decor_000",
+      "label": "Decoración original",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "bathroom_original_decor_010",
+      "label": "Decoración original",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    }
+  ],
+  "ambient": [
+    0.3,
+    0.32,
+    0.34
+  ],
+  "inspections": [],
+  "events": [
+    {
+      "stage": 253,
+      "pos": [
+        -44.0,
+        2.64,
+        31.4
+      ],
+      "radius": 1.24,
+      "interact": true,
+      "next": 259
+    },
+    {
+      "stage": 547,
+      "pos": [
+        -44.2,
+        2.64,
+        27.7
+      ],
+      "radius": 1.24,
+      "interact": true,
+      "next": 553,
+      "set_flags": 131072
+    }
+  ],
+  "fades": {}
+}

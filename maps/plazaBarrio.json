@@ -1,0 +1,671 @@
+{
+  "name": "plazaBarrio",
+  "spawn": [
+    0,
+    2.64,
+    -7.2
+  ],
+  "arrival": {
+    "exteriorC2": [
+      0,
+      2.64,
+      -7.1
+    ]
+  },
+  "portals": [
+    {
+      "target": "exteriorC2",
+      "pos": [
+        0,
+        2.64,
+        -8.05
+      ],
+      "radius": 0.95,
+      "min_stage": 517,
+      "max_stage": 517
+    }
+  ],
+  "colliders": [
+    {
+      "name": "plazaBarrio_c2_9",
+      "position": [
+        0,
+        -0.12,
+        0
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        19.0,
+        0.24,
+        18.0
+      ],
+      "cutaway": false
+    },
+    {
+      "name": "plazaBarrio_c2_10",
+      "position": [
+        -9.5,
+        0.55,
+        0
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.2,
+        1.1,
+        18.0
+      ],
+      "cutaway": false
+    },
+    {
+      "name": "plazaBarrio_c2_11",
+      "position": [
+        0,
+        0.55,
+        -9.0
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        19.0,
+        1.1,
+        0.2
+      ],
+      "cutaway": false
+    },
+    {
+      "name": "plazaBarrio_c2_12",
+      "position": [
+        9.5,
+        0.55,
+        0
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.2,
+        1.1,
+        18.0
+      ],
+      "cutaway": false
+    },
+    {
+      "name": "plazaBarrio_c2_13",
+      "position": [
+        0,
+        0.55,
+        9.0
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        19.0,
+        1.1,
+        0.2
+      ],
+      "cutaway": false
+    },
+    {
+      "name": "plazaBarrio_c2_15",
+      "position": [
+        0,
+        0.83,
+        -0.2
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        2.5,
+        0.18,
+        0.88
+      ],
+      "cutaway": false
+    },
+    {
+      "name": "plazaBarrio_c2_19",
+      "position": [
+        -5.65,
+        0.83,
+        3.9
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        2.5,
+        0.18,
+        0.88
+      ],
+      "cutaway": false
+    },
+    {
+      "name": "plazaBarrio_c2_23",
+      "position": [
+        -7.4,
+        1.83,
+        -5.1
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.62,
+        3.66,
+        0.63
+      ],
+      "cutaway": false
+    },
+    {
+      "name": "plazaBarrio_c2_25",
+      "position": [
+        -7.0,
+        1.83,
+        6.9
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.62,
+        3.66,
+        0.63
+      ],
+      "cutaway": false
+    },
+    {
+      "name": "plazaBarrio_c2_27",
+      "position": [
+        7.2,
+        1.83,
+        -5.1
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.62,
+        3.66,
+        0.63
+      ],
+      "cutaway": false
+    },
+    {
+      "name": "plazaBarrio_c2_29",
+      "position": [
+        7.5,
+        1.83,
+        6.4
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.62,
+        3.66,
+        0.63
+      ],
+      "cutaway": false
+    }
+  ],
+  "lights": [
+    {
+      "position": [
+        -1,
+        9,
+        1
+      ],
+      "type": 2,
+      "color": [
+        1,
+        0.97,
+        0.86
+      ],
+      "intensity": 1.7,
+      "range": 26,
+      "enabled": true
+    }
+  ],
+  "markers": [],
+  "objects": [
+    {
+      "id": "plazaBarrio_c2_9",
+      "label": "Suelo",
+      "position": [
+        0,
+        -0.12,
+        0
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "plazaBarrio_c2_10",
+      "label": "Borde",
+      "position": [
+        -9.5,
+        0.55,
+        0
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "plazaBarrio_c2_11",
+      "label": "Borde",
+      "position": [
+        0,
+        0.55,
+        -9.0
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "plazaBarrio_c2_12",
+      "label": "Borde",
+      "position": [
+        9.5,
+        0.55,
+        0
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "plazaBarrio_c2_13",
+      "label": "Borde",
+      "position": [
+        0,
+        0.55,
+        9.0
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "plazaBarrio_c2_14",
+      "label": "Sendero",
+      "position": [
+        0,
+        0.015,
+        0
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "plazaBarrio_c2_15",
+      "label": "Banca",
+      "position": [
+        0,
+        0.83,
+        -0.2
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "plazaBarrio_c2_16",
+      "label": "Respaldo",
+      "position": [
+        0,
+        1.23,
+        0.20999999999999996
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "plazaBarrio_c2_17",
+      "label": "Apoyo de la banca",
+      "position": [
+        -0.98,
+        0.38,
+        -0.2
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "plazaBarrio_c2_18",
+      "label": "Apoyo de la banca",
+      "position": [
+        0.98,
+        0.38,
+        -0.2
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "plazaBarrio_c2_19",
+      "label": "Banca",
+      "position": [
+        -5.65,
+        0.83,
+        3.9
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "plazaBarrio_c2_20",
+      "label": "Respaldo",
+      "position": [
+        -5.65,
+        1.23,
+        4.31
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "plazaBarrio_c2_21",
+      "label": "Apoyo de la banca",
+      "position": [
+        -6.630000000000001,
+        0.38,
+        3.9
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "plazaBarrio_c2_22",
+      "label": "Apoyo de la banca",
+      "position": [
+        -4.67,
+        0.38,
+        3.9
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "plazaBarrio_c2_23",
+      "label": "Tronco",
+      "position": [
+        -7.4,
+        1.83,
+        -5.1
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "plazaBarrio_c2_24",
+      "label": "Copa",
+      "position": [
+        -7.4,
+        4.38,
+        -5.1
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "plazaBarrio_c2_25",
+      "label": "Tronco",
+      "position": [
+        -7.0,
+        1.83,
+        6.9
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "plazaBarrio_c2_26",
+      "label": "Copa",
+      "position": [
+        -7.0,
+        4.38,
+        6.9
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "plazaBarrio_c2_27",
+      "label": "Tronco",
+      "position": [
+        7.2,
+        1.83,
+        -5.1
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "plazaBarrio_c2_28",
+      "label": "Copa",
+      "position": [
+        7.2,
+        4.38,
+        -5.1
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "plazaBarrio_c2_29",
+      "label": "Tronco",
+      "position": [
+        7.5,
+        1.83,
+        6.4
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "plazaBarrio_c2_30",
+      "label": "Copa",
+      "position": [
+        7.5,
+        4.38,
+        6.4
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "plazaBarrio_c2_31",
+      "label": "Cancha",
+      "position": [
+        5.7,
+        0.015,
+        1.0
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "plazaBarrio_c2_32",
+      "label": "Columpio",
+      "position": [
+        -6.6,
+        1.86,
+        2.64
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "plazaBarrio_c2_33",
+      "label": "Columpio",
+      "position": [
+        -4.8,
+        1.86,
+        2.64
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "plazaBarrio_c2_34",
+      "label": "Travesaño",
+      "position": [
+        -5.7,
+        3.72,
+        2.64
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    }
+  ],
+  "ambient": [
+    0.46,
+    0.49,
+    0.42
+  ],
+  "inspections": [],
+  "events": [
+    {
+      "stage": 469,
+      "pos": [
+        0,
+        2.64,
+        -1.8
+      ],
+      "radius": 1.24,
+      "interact": true,
+      "next": 475
+    },
+    {
+      "stage": 475,
+      "pos": [
+        0,
+        2.64,
+        -1.8
+      ],
+      "radius": 1.24,
+      "interact": true,
+      "next": 481
+    },
+    {
+      "stage": 481,
+      "pos": [
+        0,
+        2.64,
+        -1.8
+      ],
+      "radius": 1.24,
+      "interact": true,
+      "next": 487
+    },
+    {
+      "stage": 487,
+      "pos": [
+        0,
+        2.64,
+        -1.8
+      ],
+      "radius": 1.24,
+      "interact": true,
+      "next": 493
+    },
+    {
+      "stage": 493,
+      "pos": [
+        0,
+        2.64,
+        -1.8
+      ],
+      "radius": 1.24,
+      "interact": true,
+      "next": 499,
+      "clear_flags": 128
+    },
+    {
+      "stage": 499,
+      "pos": [
+        0,
+        2.64,
+        1.5
+      ],
+      "radius": 1.24,
+      "interact": true,
+      "next": 505
+    },
+    {
+      "stage": 505,
+      "pos": [
+        0,
+        2.64,
+        1.5
+      ],
+      "radius": 1.24,
+      "interact": true,
+      "next": 511,
+      "set_flags": 65536
+    },
+    {
+      "stage": 511,
+      "pos": [
+        0,
+        2.64,
+        1.5
+      ],
+      "radius": 1.24,
+      "interact": true,
+      "next": 517
+    }
+  ],
+  "fades": {}
+}

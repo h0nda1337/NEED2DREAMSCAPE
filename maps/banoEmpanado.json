@@ -1,0 +1,487 @@
+{
+  "name": "banoEmpanado",
+  "spawn": [
+    -44.14,
+    2.64,
+    32.25
+  ],
+  "arrival": {
+    "pasilloDesfaseC2": [
+      -44.14,
+      2.64,
+      32.25
+    ]
+  },
+  "portals": [
+    {
+      "target": "pasilloDesfaseC2",
+      "pos": [
+        -44.14,
+        2.64,
+        34.88
+      ],
+      "radius": 0.76,
+      "min_stage": 49,
+      "max_stage": 49
+    }
+  ],
+  "colliders": [
+    {
+      "name": "bathroom_original_9",
+      "position": [
+        -44.3,
+        -0.14,
+        30.6
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        10.600000000000001,
+        0.28,
+        11.200000000000003
+      ],
+      "cutaway": false
+    },
+    {
+      "name": "bathroom_original_10",
+      "position": [
+        -49.6,
+        2.95,
+        30.6
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.22,
+        5.9,
+        11.200000000000003
+      ],
+      "cutaway": true
+    },
+    {
+      "name": "bathroom_original_11",
+      "position": [
+        -39.0,
+        2.95,
+        30.6
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.22,
+        5.9,
+        11.200000000000003
+      ],
+      "cutaway": true
+    },
+    {
+      "name": "bathroom_original_12",
+      "position": [
+        -44.3,
+        2.95,
+        25.0
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        10.600000000000001,
+        5.9,
+        0.22
+      ],
+      "cutaway": true
+    },
+    {
+      "name": "bathroom_original_13",
+      "position": [
+        -47.49,
+        2.95,
+        36.2
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        4.219999999999999,
+        5.9,
+        0.22
+      ],
+      "cutaway": true
+    },
+    {
+      "name": "bathroom_original_14",
+      "position": [
+        -40.955,
+        2.95,
+        36.2
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        3.9099999999999966,
+        5.9,
+        0.22
+      ],
+      "cutaway": true
+    },
+    {
+      "name": "bathroom_original_15",
+      "position": [
+        -44.42,
+        0.95,
+        25.88
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        2.12,
+        1.9,
+        1.15
+      ],
+      "cutaway": false
+    },
+    {
+      "name": "bathroom_original_16",
+      "position": [
+        -48.45,
+        0.2,
+        27.13
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.99,
+        0.4,
+        3.55
+      ],
+      "cutaway": false
+    },
+    {
+      "name": "bathroom_original_17",
+      "position": [
+        -40.3,
+        1.37,
+        25.86
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.01,
+        1.46,
+        0.67
+      ],
+      "cutaway": false
+    }
+  ],
+  "lights": [
+    {
+      "position": [
+        -44.4,
+        5.35,
+        28.1
+      ],
+      "type": 2,
+      "color": [
+        0.76,
+        0.91,
+        1
+      ],
+      "intensity": 1.1,
+      "range": 11,
+      "enabled": true
+    },
+    {
+      "position": [
+        -44.3,
+        4.28,
+        31
+      ],
+      "type": 2,
+      "color": [
+        0.51,
+        0.83,
+        1
+      ],
+      "intensity": 0.88,
+      "range": 9,
+      "enabled": true
+    }
+  ],
+  "markers": [],
+  "objects": [
+    {
+      "id": "bathroom_original_9",
+      "label": "Piso del baño",
+      "position": [
+        -44.3,
+        -0.14,
+        30.6
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "bathroom_original_10",
+      "label": "Pared de azulejos oeste",
+      "position": [
+        -49.6,
+        2.95,
+        30.6
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "bathroom_original_11",
+      "label": "Pared de azulejos este",
+      "position": [
+        -39.0,
+        2.95,
+        30.6
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "bathroom_original_12",
+      "label": "Pared de azulejos sur",
+      "position": [
+        -44.3,
+        2.95,
+        25.0
+      ],
+      "camera_hidden": true,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "bathroom_original_13",
+      "label": "Retorno izquierdo",
+      "position": [
+        -47.49,
+        2.95,
+        36.2
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "bathroom_original_14",
+      "label": "Retorno derecho",
+      "position": [
+        -40.955,
+        2.95,
+        36.2
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "bathroom_original_15",
+      "label": "Mueble del lavabo",
+      "position": [
+        -44.42,
+        0.95,
+        25.88
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "bathroom_original_16",
+      "label": "Plato de ducha",
+      "position": [
+        -48.45,
+        0.2,
+        27.13
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "bathroom_original_17",
+      "label": "Tanque del inodoro",
+      "position": [
+        -40.3,
+        1.37,
+        25.86
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "bathroom_original_decor_000",
+      "label": "Decoración original",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "bathroom_original_decor_010",
+      "label": "Decoración original",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "banoEmpanado_c2_21",
+      "label": "Espejo empañado",
+      "position": [
+        -44.4,
+        3.49,
+        25.43
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "banoEmpanado_c2_22",
+      "label": "Charco",
+      "position": [
+        -46.2,
+        0.011,
+        29.1
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "banoEmpanado_c2_23",
+      "label": "Charco",
+      "position": [
+        -45.690000000000005,
+        0.011,
+        29.41
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "banoEmpanado_c2_24",
+      "label": "Charco",
+      "position": [
+        -45.18,
+        0.011,
+        29.720000000000002
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "banoEmpanado_c2_25",
+      "label": "Charco",
+      "position": [
+        -44.67,
+        0.011,
+        30.03
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "banoEmpanado_c2_26",
+      "label": "Charco",
+      "position": [
+        -44.160000000000004,
+        0.011,
+        30.34
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "banoEmpanado_c2_27",
+      "label": "Charco",
+      "position": [
+        -43.650000000000006,
+        0.011,
+        30.650000000000002
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    }
+  ],
+  "ambient": [
+    0.14,
+    0.21,
+    0.23
+  ],
+  "inspections": [],
+  "events": [
+    {
+      "stage": 43,
+      "pos": [
+        -44.1,
+        2.64,
+        34.25
+      ],
+      "radius": 1.24,
+      "interact": true,
+      "next": 44
+    },
+    {
+      "stage": 44,
+      "pos": [
+        -44.1,
+        2.64,
+        34.25
+      ],
+      "radius": 1.24,
+      "interact": true,
+      "next": 49,
+      "presses": 3,
+      "min_gap": 0.18
+    }
+  ],
+  "fades": {}
+}

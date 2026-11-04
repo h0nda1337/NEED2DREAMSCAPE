@@ -1,0 +1,953 @@
+{
+  "name": "computadoraC2",
+  "spawn": [
+    -55.5,
+    2.64,
+    39.6
+  ],
+  "arrival": {
+    "dormitorioRadeC2": [
+      -55.5,
+      2.64,
+      39.6
+    ]
+  },
+  "portals": [
+    {
+      "target": "dormitorioRadeC2",
+      "pos": [
+        -55.5,
+        2.64,
+        41.4
+      ],
+      "radius": 1.43,
+      "min_stage": 301,
+      "max_stage": 301
+    },
+    {
+      "target": "dormitorioRadeC2",
+      "pos": [
+        -55.5,
+        2.64,
+        41.4
+      ],
+      "radius": 1.43,
+      "min_stage": 421,
+      "max_stage": 421
+    },
+    {
+      "target": "dormitorioRadeC2",
+      "pos": [
+        -55.5,
+        2.64,
+        41.4
+      ],
+      "radius": 1.43,
+      "min_stage": 541,
+      "max_stage": 541
+    },
+    {
+      "target": "dormitorioRadeC2",
+      "pos": [
+        -55.5,
+        2.64,
+        41.4
+      ],
+      "radius": 1.43,
+      "min_stage": 565,
+      "max_stage": 565
+    },
+    {
+      "target": "dormitorioRadeC2",
+      "pos": [
+        -55.5,
+        2.64,
+        41.4
+      ],
+      "radius": 1.43,
+      "min_stage": 583,
+      "max_stage": 583
+    },
+    {
+      "target": "dormitorioRadeC2",
+      "pos": [
+        -55.5,
+        2.64,
+        41.4
+      ],
+      "radius": 1.43,
+      "min_stage": 619,
+      "max_stage": 619
+    }
+  ],
+  "colliders": [
+    {
+      "name": "cuartoFondo_original_9",
+      "position": [
+        -49.8,
+        -0.14,
+        34.275
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        24.6,
+        0.28,
+        14.549999999999997
+      ],
+      "cutaway": false
+    },
+    {
+      "name": "cuartoFondo_original_10",
+      "position": [
+        -55.5,
+        -0.14,
+        42.775
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        2.6400000000000006,
+        0.28,
+        2.450000000000003
+      ],
+      "cutaway": false
+    },
+    {
+      "name": "cuartoFondo_original_11",
+      "position": [
+        -49.8,
+        3.15,
+        27.0
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        24.6,
+        6.3,
+        0.22
+      ],
+      "cutaway": true
+    },
+    {
+      "name": "cuartoFondo_original_12",
+      "position": [
+        -62.1,
+        3.15,
+        34.275
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.22,
+        6.3,
+        14.549999999999997
+      ],
+      "cutaway": true
+    },
+    {
+      "name": "cuartoFondo_original_13",
+      "position": [
+        -37.5,
+        3.15,
+        34.275
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.22,
+        6.3,
+        14.549999999999997
+      ],
+      "cutaway": true
+    },
+    {
+      "name": "cuartoFondo_original_14",
+      "position": [
+        -59.46,
+        3.15,
+        41.55
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        5.280000000000001,
+        6.3,
+        0.22
+      ],
+      "cutaway": true
+    },
+    {
+      "name": "cuartoFondo_original_15",
+      "position": [
+        -45.84,
+        3.15,
+        41.55
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        16.68,
+        6.3,
+        0.22
+      ],
+      "cutaway": true
+    },
+    {
+      "name": "cuartoFondo_original_16",
+      "position": [
+        -56.82,
+        2.35,
+        42.775
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.22,
+        4.7,
+        2.450000000000003
+      ],
+      "cutaway": true
+    },
+    {
+      "name": "cuartoFondo_original_17",
+      "position": [
+        -54.18,
+        2.35,
+        42.775
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.22,
+        4.7,
+        2.450000000000003
+      ],
+      "cutaway": true
+    },
+    {
+      "name": "cuartoFondo_original_18",
+      "position": [
+        -40.46,
+        0.97,
+        39.79
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        4.65,
+        1.94,
+        1.65
+      ],
+      "cutaway": false
+    },
+    {
+      "name": "cuartoFondo_original_19",
+      "position": [
+        -59.85,
+        2.16,
+        38.5
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.82,
+        4.32,
+        1.15
+      ],
+      "cutaway": false
+    },
+    {
+      "name": "cuartoFondo_original_20",
+      "position": [
+        -58.42,
+        0.64,
+        30.0
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        2.65,
+        1.28,
+        2.04
+      ],
+      "cutaway": false
+    },
+    {
+      "name": "cuartoFondo_original_21",
+      "position": [
+        -38.67,
+        1.36,
+        29.88
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.7,
+        2.72,
+        1.25
+      ],
+      "cutaway": false
+    }
+  ],
+  "lights": [
+    {
+      "position": [
+        -48.6,
+        5.52,
+        36.52
+      ],
+      "type": 2,
+      "color": [
+        0.82,
+        0.8,
+        1
+      ],
+      "intensity": 0.72,
+      "range": 13,
+      "enabled": true
+    },
+    {
+      "position": [
+        -40.75,
+        2.7,
+        39.5
+      ],
+      "type": 2,
+      "color": [
+        0.39,
+        0.62,
+        1
+      ],
+      "intensity": 0.68,
+      "range": 5,
+      "enabled": true
+    },
+    {
+      "position": [
+        -41.1,
+        0.76,
+        39.15
+      ],
+      "type": 2,
+      "color": [
+        0.18,
+        1,
+        0.4
+      ],
+      "intensity": 0.46,
+      "range": 1.7,
+      "enabled": true
+    },
+    {
+      "position": [
+        -40.75,
+        2.7,
+        39.5
+      ],
+      "type": 2,
+      "color": [
+        0.39,
+        0.62,
+        1
+      ],
+      "intensity": 0.68,
+      "range": 5,
+      "enabled": true
+    },
+    {
+      "position": [
+        -51,
+        5.7,
+        34
+      ],
+      "type": 2,
+      "color": [
+        0.95,
+        0.91,
+        0.83
+      ],
+      "intensity": 1.16,
+      "range": 21,
+      "enabled": true
+    }
+  ],
+  "markers": [
+    {
+      "name": "Dars",
+      "position": [
+        -45.3,
+        2.64,
+        36.25
+      ]
+    },
+    {
+      "name": "Figura",
+      "position": [
+        -52.0,
+        2.64,
+        32.5
+      ]
+    },
+    {
+      "name": "Figura",
+      "position": [
+        -52.0,
+        2.64,
+        32.5
+      ],
+      "stage": 601
+    }
+  ],
+  "objects": [
+    {
+      "id": "cuartoFondo_original_9",
+      "label": "Piso del estudio",
+      "position": [
+        -49.8,
+        -0.14,
+        34.275
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cuartoFondo_original_10",
+      "label": "Umbral del estudio",
+      "position": [
+        -55.5,
+        -0.14,
+        42.775
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cuartoFondo_original_11",
+      "label": "Pared sur",
+      "position": [
+        -49.8,
+        3.15,
+        27.0
+      ],
+      "camera_hidden": true,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cuartoFondo_original_12",
+      "label": "Pared oeste",
+      "position": [
+        -62.1,
+        3.15,
+        34.275
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cuartoFondo_original_13",
+      "label": "Pared este",
+      "position": [
+        -37.5,
+        3.15,
+        34.275
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cuartoFondo_original_14",
+      "label": "Pared norte izquierda",
+      "position": [
+        -59.46,
+        3.15,
+        41.55
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cuartoFondo_original_15",
+      "label": "Pared norte derecha",
+      "position": [
+        -45.84,
+        3.15,
+        41.55
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cuartoFondo_original_16",
+      "label": "Pasillo del estudio",
+      "position": [
+        -56.82,
+        2.35,
+        42.775
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cuartoFondo_original_17",
+      "label": "Pasillo del estudio",
+      "position": [
+        -54.18,
+        2.35,
+        42.775
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cuartoFondo_original_18",
+      "label": "Escritorio",
+      "position": [
+        -40.46,
+        0.97,
+        39.79
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cuartoFondo_original_19",
+      "label": "Librero",
+      "position": [
+        -59.85,
+        2.16,
+        38.5
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cuartoFondo_original_20",
+      "label": "Sillón de lectura",
+      "position": [
+        -58.42,
+        0.64,
+        30.0
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cuartoFondo_original_21",
+      "label": "Archivador",
+      "position": [
+        -38.67,
+        1.36,
+        29.88
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cuartoFondo_original_decor_000",
+      "label": "Decoración original",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cuartoFondo_original_decor_100",
+      "label": "Decoración original",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cuartoFondo_original_decor_101",
+      "label": "Decoración original",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    }
+  ],
+  "ambient": [
+    0.29,
+    0.27,
+    0.25
+  ],
+  "inspections": [
+    {
+      "pos": [
+        -46.1,
+        2.64,
+        33.7
+      ],
+      "radius": 1.15,
+      "stage": 523,
+      "max_stage": 577
+    }
+  ],
+  "events": [
+    {
+      "stage": 289,
+      "pos": [
+        -42.0,
+        2.64,
+        38.0
+      ],
+      "radius": 1.24,
+      "interact": true,
+      "next": 290
+    },
+    {
+      "stage": 290,
+      "next": 295,
+      "choices": [
+        {
+          "next": 291,
+          "set_flags": 0,
+          "clear_flags": 0
+        },
+        {
+          "next": 292,
+          "set_flags": 0,
+          "clear_flags": 0
+        },
+        {
+          "next": 293,
+          "set_flags": 0,
+          "clear_flags": 0
+        },
+        {
+          "next": 294,
+          "set_flags": 0,
+          "clear_flags": 0
+        }
+      ]
+    },
+    {
+      "stage": 291,
+      "delay": 0.55,
+      "next": 290
+    },
+    {
+      "stage": 292,
+      "delay": 0.55,
+      "next": 290
+    },
+    {
+      "stage": 293,
+      "delay": 0.55,
+      "next": 290
+    },
+    {
+      "stage": 294,
+      "delay": 0.55,
+      "next": 295
+    },
+    {
+      "stage": 295,
+      "pos": [
+        -42.0,
+        2.64,
+        38.0
+      ],
+      "radius": 1.24,
+      "interact": true,
+      "next": 301,
+      "set_flags": 128
+    },
+    {
+      "stage": 385,
+      "pos": [
+        -42.0,
+        2.64,
+        38.0
+      ],
+      "radius": 1.24,
+      "interact": true,
+      "next": 391
+    },
+    {
+      "stage": 391,
+      "pos": [
+        -42.0,
+        2.64,
+        38.0
+      ],
+      "radius": 1.24,
+      "interact": true,
+      "next": 392
+    },
+    {
+      "stage": 392,
+      "next": 397,
+      "choices": [
+        {
+          "next": 393,
+          "set_flags": 0,
+          "clear_flags": 0
+        },
+        {
+          "next": 394,
+          "set_flags": 256,
+          "clear_flags": 0
+        }
+      ]
+    },
+    {
+      "stage": 393,
+      "delay": 0.55,
+      "next": 397
+    },
+    {
+      "stage": 394,
+      "delay": 0.55,
+      "next": 397
+    },
+    {
+      "stage": 397,
+      "pos": [
+        -42.0,
+        2.64,
+        38.0
+      ],
+      "radius": 1.24,
+      "interact": true,
+      "next": 403,
+      "set_flags": 4096
+    },
+    {
+      "stage": 403,
+      "pos": [
+        -42.0,
+        2.64,
+        38.0
+      ],
+      "radius": 1.24,
+      "interact": true,
+      "next": 409
+    },
+    {
+      "stage": 409,
+      "pos": [
+        -42.0,
+        2.64,
+        38.0
+      ],
+      "radius": 1.24,
+      "interact": true,
+      "next": 415
+    },
+    {
+      "stage": 415,
+      "pos": [
+        -47.6,
+        2.64,
+        35.3
+      ],
+      "radius": 1.24,
+      "interact": true,
+      "next": 421
+    },
+    {
+      "stage": 517,
+      "pos": [
+        -46.1,
+        2.64,
+        33.7
+      ],
+      "radius": 1.24,
+      "interact": true,
+      "next": 523
+    },
+    {
+      "stage": 523,
+      "pos": [
+        -55.5,
+        2.64,
+        39.7
+      ],
+      "radius": 1.24,
+      "interact": true,
+      "next": 529
+    },
+    {
+      "stage": 529,
+      "pos": [
+        -42.0,
+        2.64,
+        38.0
+      ],
+      "radius": 1.24,
+      "interact": true,
+      "next": 535
+    },
+    {
+      "stage": 535,
+      "pos": [
+        -42.0,
+        2.64,
+        38.0
+      ],
+      "radius": 1.24,
+      "interact": true,
+      "next": 541
+    },
+    {
+      "stage": 559,
+      "pos": [
+        -42.0,
+        2.64,
+        38.0
+      ],
+      "radius": 1.24,
+      "interact": true,
+      "next": 565
+    },
+    {
+      "stage": 577,
+      "pos": [
+        -42.0,
+        2.64,
+        38.0
+      ],
+      "radius": 1.24,
+      "interact": true,
+      "next": 578
+    },
+    {
+      "stage": 578,
+      "next": 583,
+      "choices": [
+        {
+          "next": 579,
+          "set_flags": 12288,
+          "clear_flags": 0
+        },
+        {
+          "next": 580,
+          "set_flags": 0,
+          "clear_flags": 12288
+        }
+      ]
+    },
+    {
+      "stage": 579,
+      "delay": 0.55,
+      "next": 583
+    },
+    {
+      "stage": 580,
+      "delay": 0.55,
+      "next": 583
+    },
+    {
+      "stage": 595,
+      "pos": [
+        -55.5,
+        2.64,
+        38.3
+      ],
+      "radius": 1.24,
+      "interact": true,
+      "next": 601
+    },
+    {
+      "stage": 601,
+      "pos": [
+        -52.1,
+        2.64,
+        34.3
+      ],
+      "radius": 1.24,
+      "interact": true,
+      "next": 607
+    },
+    {
+      "stage": 607,
+      "pos": [
+        -52.1,
+        2.64,
+        34.3
+      ],
+      "radius": 1.24,
+      "interact": true,
+      "next": 613
+    },
+    {
+      "stage": 613,
+      "pos": [
+        -52.1,
+        2.64,
+        34.3
+      ],
+      "radius": 1.24,
+      "interact": true,
+      "next": 619
+    }
+  ],
+  "fades": {}
+}

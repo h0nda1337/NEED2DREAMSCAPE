@@ -1,0 +1,858 @@
+{
+  "name": "tiendaNocturna",
+  "spawn": [
+    0,
+    2.64,
+    -4.2
+  ],
+  "arrival": {
+    "exteriorC2": [
+      0,
+      2.64,
+      -4.05
+    ]
+  },
+  "portals": [
+    {
+      "target": "exteriorC2",
+      "pos": [
+        0,
+        2.64,
+        -5.03
+      ],
+      "radius": 0.95,
+      "min_stage": 337,
+      "max_stage": 337
+    }
+  ],
+  "colliders": [
+    {
+      "name": "tiendaNocturna_c2_9",
+      "position": [
+        0,
+        -0.1,
+        0
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        13.0,
+        0.2,
+        12.0
+      ],
+      "cutaway": false
+    },
+    {
+      "name": "tiendaNocturna_c2_10",
+      "position": [
+        -6.5,
+        2.7,
+        0
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.2,
+        5.4,
+        12.0
+      ],
+      "cutaway": true
+    },
+    {
+      "name": "tiendaNocturna_c2_11",
+      "position": [
+        6.5,
+        2.7,
+        0
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.2,
+        5.4,
+        12.0
+      ],
+      "cutaway": true
+    },
+    {
+      "name": "tiendaNocturna_c2_12",
+      "position": [
+        0,
+        2.7,
+        6.0
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        13.0,
+        5.4,
+        0.22
+      ],
+      "cutaway": true
+    },
+    {
+      "name": "tiendaNocturna_c2_13",
+      "position": [
+        0,
+        2.7,
+        -6.0
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        13.0,
+        5.4,
+        0.22
+      ],
+      "cutaway": false
+    },
+    {
+      "name": "tiendaNocturna_c2_19",
+      "position": [
+        3.1,
+        1.09,
+        2.5
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        3.7,
+        2.18,
+        1.36
+      ],
+      "cutaway": false
+    },
+    {
+      "name": "tiendaNocturna_c2_20",
+      "position": [
+        -4.68,
+        0.63,
+        2.0
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.45,
+        0.13,
+        5.68
+      ],
+      "cutaway": false
+    },
+    {
+      "name": "tiendaNocturna_c2_41",
+      "position": [
+        -2.25,
+        0.63,
+        2.0
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.45,
+        0.13,
+        5.68
+      ],
+      "cutaway": false
+    }
+  ],
+  "lights": [
+    {
+      "position": [
+        0,
+        5.02,
+        1
+      ],
+      "type": 2,
+      "color": [
+        0.9,
+        0.96,
+        0.79
+      ],
+      "intensity": 1.48,
+      "range": 12,
+      "enabled": true
+    }
+  ],
+  "markers": [],
+  "objects": [
+    {
+      "id": "tiendaNocturna_c2_9",
+      "label": "Piso",
+      "position": [
+        0,
+        -0.1,
+        0
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "tiendaNocturna_c2_10",
+      "label": "Pared izquierda",
+      "position": [
+        -6.5,
+        2.7,
+        0
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "tiendaNocturna_c2_11",
+      "label": "Pared derecha",
+      "position": [
+        6.5,
+        2.7,
+        0
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "tiendaNocturna_c2_12",
+      "label": "Pared de fondo",
+      "position": [
+        0,
+        2.7,
+        6.0
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "tiendaNocturna_c2_13",
+      "label": "Pared de entrada",
+      "position": [
+        0,
+        2.7,
+        -6.0
+      ],
+      "camera_hidden": true,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "tiendaNocturna_c2_14",
+      "label": "Marco de salida",
+      "position": [
+        0,
+        1.8,
+        -5.87
+      ],
+      "camera_hidden": true,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "tiendaNocturna_c2_15",
+      "label": "Marco ABIERTO",
+      "position": [
+        0,
+        1.99,
+        -5.85
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "tiendaNocturna_c2_16",
+      "label": "Hoja ABIERTO",
+      "position": [
+        0,
+        1.9,
+        -5.85
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "tiendaNocturna_c2_17",
+      "label": "Manija ABIERTO",
+      "position": [
+        0.58,
+        1.96,
+        -5.97
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "tiendaNocturna_c2_19",
+      "label": "Mostrador",
+      "position": [
+        3.1,
+        1.09,
+        2.5
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "tiendaNocturna_c2_20",
+      "label": "Estante",
+      "position": [
+        -4.68,
+        0.63,
+        2.0
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "tiendaNocturna_c2_21",
+      "label": "Producto",
+      "position": [
+        -4.68,
+        0.9,
+        0.0
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "tiendaNocturna_c2_22",
+      "label": "Producto",
+      "position": [
+        -4.68,
+        0.9,
+        0.68
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "tiendaNocturna_c2_23",
+      "label": "Producto",
+      "position": [
+        -4.68,
+        0.9,
+        1.36
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "tiendaNocturna_c2_24",
+      "label": "Producto",
+      "position": [
+        -4.68,
+        0.9,
+        2.04
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "tiendaNocturna_c2_25",
+      "label": "Producto",
+      "position": [
+        -4.68,
+        0.9,
+        2.72
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "tiendaNocturna_c2_26",
+      "label": "Producto",
+      "position": [
+        -4.68,
+        0.9,
+        3.4
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "tiendaNocturna_c2_27",
+      "label": "Estante",
+      "position": [
+        -4.68,
+        1.49,
+        2.0
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "tiendaNocturna_c2_28",
+      "label": "Producto",
+      "position": [
+        -4.68,
+        1.76,
+        0.0
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "tiendaNocturna_c2_29",
+      "label": "Producto",
+      "position": [
+        -4.68,
+        1.76,
+        0.68
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "tiendaNocturna_c2_30",
+      "label": "Producto",
+      "position": [
+        -4.68,
+        1.76,
+        1.36
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "tiendaNocturna_c2_31",
+      "label": "Producto",
+      "position": [
+        -4.68,
+        1.76,
+        2.04
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "tiendaNocturna_c2_32",
+      "label": "Producto",
+      "position": [
+        -4.68,
+        1.76,
+        2.72
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "tiendaNocturna_c2_33",
+      "label": "Producto",
+      "position": [
+        -4.68,
+        1.76,
+        3.4
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "tiendaNocturna_c2_34",
+      "label": "Estante",
+      "position": [
+        -4.68,
+        2.35,
+        2.0
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "tiendaNocturna_c2_35",
+      "label": "Producto",
+      "position": [
+        -4.68,
+        2.62,
+        0.0
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "tiendaNocturna_c2_36",
+      "label": "Producto",
+      "position": [
+        -4.68,
+        2.62,
+        0.68
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "tiendaNocturna_c2_37",
+      "label": "Producto",
+      "position": [
+        -4.68,
+        2.62,
+        1.36
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "tiendaNocturna_c2_38",
+      "label": "Producto",
+      "position": [
+        -4.68,
+        2.62,
+        2.04
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "tiendaNocturna_c2_39",
+      "label": "Producto",
+      "position": [
+        -4.68,
+        2.62,
+        2.72
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "tiendaNocturna_c2_40",
+      "label": "Producto",
+      "position": [
+        -4.68,
+        2.62,
+        3.4
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "tiendaNocturna_c2_41",
+      "label": "Estante",
+      "position": [
+        -2.25,
+        0.63,
+        2.0
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "tiendaNocturna_c2_42",
+      "label": "Producto",
+      "position": [
+        -2.25,
+        0.9,
+        0.0
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "tiendaNocturna_c2_43",
+      "label": "Producto",
+      "position": [
+        -2.25,
+        0.9,
+        0.68
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "tiendaNocturna_c2_44",
+      "label": "Producto",
+      "position": [
+        -2.25,
+        0.9,
+        1.36
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "tiendaNocturna_c2_45",
+      "label": "Producto",
+      "position": [
+        -2.25,
+        0.9,
+        2.04
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "tiendaNocturna_c2_46",
+      "label": "Producto",
+      "position": [
+        -2.25,
+        0.9,
+        2.72
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "tiendaNocturna_c2_47",
+      "label": "Producto",
+      "position": [
+        -2.25,
+        0.9,
+        3.4
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "tiendaNocturna_c2_48",
+      "label": "Estante",
+      "position": [
+        -2.25,
+        1.49,
+        2.0
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "tiendaNocturna_c2_49",
+      "label": "Producto",
+      "position": [
+        -2.25,
+        1.76,
+        0.0
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "tiendaNocturna_c2_50",
+      "label": "Producto",
+      "position": [
+        -2.25,
+        1.76,
+        0.68
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "tiendaNocturna_c2_51",
+      "label": "Producto",
+      "position": [
+        -2.25,
+        1.76,
+        1.36
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "tiendaNocturna_c2_52",
+      "label": "Producto",
+      "position": [
+        -2.25,
+        1.76,
+        2.04
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "tiendaNocturna_c2_53",
+      "label": "Producto",
+      "position": [
+        -2.25,
+        1.76,
+        2.72
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "tiendaNocturna_c2_54",
+      "label": "Producto",
+      "position": [
+        -2.25,
+        1.76,
+        3.4
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "tiendaNocturna_c2_55",
+      "label": "Estante",
+      "position": [
+        -2.25,
+        2.35,
+        2.0
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "tiendaNocturna_c2_56",
+      "label": "Producto",
+      "position": [
+        -2.25,
+        2.62,
+        0.0
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "tiendaNocturna_c2_57",
+      "label": "Producto",
+      "position": [
+        -2.25,
+        2.62,
+        0.68
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "tiendaNocturna_c2_58",
+      "label": "Producto",
+      "position": [
+        -2.25,
+        2.62,
+        1.36
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "tiendaNocturna_c2_59",
+      "label": "Producto",
+      "position": [
+        -2.25,
+        2.62,
+        2.04
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "tiendaNocturna_c2_60",
+      "label": "Producto",
+      "position": [
+        -2.25,
+        2.62,
+        2.72
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "tiendaNocturna_c2_61",
+      "label": "Producto",
+      "position": [
+        -2.25,
+        2.62,
+        3.4
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    }
+  ],
+  "ambient": [
+    0.3,
+    0.32,
+    0.28
+  ],
+  "inspections": [],
+  "events": [
+    {
+      "stage": 325,
+      "pos": [
+        2.5,
+        2.64,
+        1.1
+      ],
+      "radius": 1.24,
+      "interact": true,
+      "next": 331
+    },
+    {
+      "stage": 331,
+      "pos": [
+        2.5,
+        2.64,
+        1.1
+      ],
+      "radius": 1.24,
+      "interact": true,
+      "next": 337
+    }
+  ],
+  "fades": {}
+}

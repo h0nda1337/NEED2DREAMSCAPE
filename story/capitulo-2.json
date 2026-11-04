@@ -1,0 +1,9186 @@
+{
+  "titulo": "Los cuartos que no caben",
+  "inicio": {
+    "alcance": "Acto I, escenas 1–9",
+    "eleccion": [
+      "No sé. Pero esto no es una puerta normal.",
+      "Haz lo que quieras. Igual nunca escuchas."
+    ],
+    "eventos": [
+      {
+        "mapa": "pasilloDesfaseC2",
+        "etapa": 13,
+        "dialogo": [
+          {
+            "personaje": "DARS",
+            "texto": "¿Rade?"
+          },
+          {
+            "personaje": "DARS",
+            "texto": "Rade, te estoy hablando."
+          },
+          {
+            "personaje": "RADE",
+            "texto": "Estoy aquí."
+          },
+          {
+            "personaje": "DARS",
+            "texto": "¿Entonces por qué no abres?"
+          },
+          {
+            "personaje": "RADE",
+            "texto": "Ya te dije que no puedo."
+          },
+          {
+            "personaje": "DARS",
+            "texto": "Pues hazte a un lado. Voy a intentarlo."
+          },
+          {
+            "personaje": "DARS",
+            "texto": "Está atorada."
+          },
+          {
+            "personaje": "RADE",
+            "texto": "De este lado no tiene manija."
+          },
+          {
+            "personaje": "DARS",
+            "texto": "¿Cómo que no tiene?"
+          },
+          {
+            "personaje": "RADE",
+            "texto": "No tiene, Dars. Hay puro metal donde debería estar."
+          },
+          {
+            "personaje": "DARS",
+            "texto": "¿Y cómo chingados la cerraste?"
+          },
+          {
+            "personaje": "RADE",
+            "texto": "¡Yo no cerré nada!"
+          },
+          {
+            "personaje": "DARS",
+            "texto": "Baja la voz."
+          },
+          {
+            "personaje": "RADE",
+            "texto": "Estoy encerrado en un pasillo que no existe. Discúlpame si no estoy hablando bonito."
+          },
+          {
+            "personaje": "DARS",
+            "texto": "¿Me escuchas bien?"
+          },
+          {
+            "personaje": "RADE",
+            "texto": "Sí."
+          },
+          {
+            "personaje": "DARS",
+            "texto": "Bueno. No te muevas de ahí."
+          },
+          {
+            "personaje": "RADE",
+            "texto": "¿Qué vas a hacer?"
+          },
+          {
+            "personaje": "DARS",
+            "texto": "Buscar algo para abrirla."
+          },
+          {
+            "personaje": "RADE",
+            "texto": "No me dejes aquí."
+          },
+          {
+            "personaje": "DARS",
+            "texto": "No he dicho que vaya a dejarte."
+          }
+        ]
+      },
+      {
+        "mapa": "pasilloDesfaseC2",
+        "etapa": 14,
+        "dialogo": [
+          {
+            "personaje": "RADE",
+            "texto": "¿Qué pedo con esto?"
+          },
+          {
+            "personaje": "RADE",
+            "texto": "Caminé como cinco metros."
+          },
+          {
+            "personaje": "RADE",
+            "texto": "..."
+          },
+          {
+            "personaje": "RADE",
+            "texto": "No puede ser tan largo."
+          }
+        ]
+      },
+      {
+        "mapa": "pasilloDesfaseC2",
+        "etapa": 15,
+        "dialogo": [
+          {
+            "personaje": "DARS",
+            "texto": "¿Rade?"
+          },
+          {
+            "personaje": "RADE",
+            "texto": "Aquí."
+          },
+          {
+            "personaje": "DARS",
+            "texto": "Encontré un desarmador."
+          },
+          {
+            "personaje": "RADE",
+            "texto": "¿Y?"
+          },
+          {
+            "personaje": "DARS",
+            "texto": "Déjame trabajar, ¿quieres?"
+          }
+        ]
+      },
+      {
+        "mapa": "pasilloDesfaseC2",
+        "etapa": 16,
+        "dialogo": [
+          {
+            "personaje": "RADE",
+            "texto": "Cayó un tornillo de este lado."
+          },
+          {
+            "personaje": "DARS",
+            "texto": "¿Cuál?"
+          },
+          {
+            "personaje": "RADE",
+            "texto": "No sé. Uno."
+          },
+          {
+            "personaje": "DARS",
+            "texto": "Pues guárdalo."
+          },
+          {
+            "personaje": "RADE",
+            "texto": "¿Para qué?"
+          },
+          {
+            "personaje": "DARS",
+            "texto": "Porque no quiero que se pierda, Rade."
+          },
+          {
+            "personaje": "RADE",
+            "texto": "Bueno, bueno."
+          },
+          {
+            "personaje": "DARS",
+            "texto": "Está raro esto."
+          },
+          {
+            "personaje": "RADE",
+            "texto": "¿Qué?"
+          },
+          {
+            "personaje": "DARS",
+            "texto": "Los tornillos están flojos, pero la pieza no sale."
+          },
+          {
+            "personaje": "RADE",
+            "texto": "De mi lado ni siquiera hay pieza."
+          },
+          {
+            "personaje": "DARS",
+            "texto": "Ya entendí eso."
+          },
+          {
+            "personaje": "DARS",
+            "texto": "¡Ay, chingada madre!"
+          },
+          {
+            "personaje": "RADE",
+            "texto": "¿Qué pasó?"
+          },
+          {
+            "personaje": "DARS",
+            "texto": "Me pegué en el dedo."
+          },
+          {
+            "personaje": "RADE",
+            "texto": "¿Estás bien?"
+          },
+          {
+            "personaje": "DARS",
+            "texto": "Sí. Dame un segundo."
+          },
+          {
+            "personaje": "DARS",
+            "texto": "Rade."
+          },
+          {
+            "personaje": "RADE",
+            "texto": "¿Qué?"
+          },
+          {
+            "personaje": "DARS",
+            "texto": "Hazme un favor."
+          },
+          {
+            "personaje": "RADE",
+            "texto": "Dime."
+          },
+          {
+            "personaje": "DARS",
+            "texto": "Golpea la puerta tres veces."
+          }
+        ]
+      },
+      {
+        "mapa": "pasilloDesfaseC2",
+        "etapa": 17,
+        "dialogo": [
+          {
+            "personaje": "DARS",
+            "texto": "Otra vez."
+          }
+        ]
+      },
+      {
+        "mapa": "pasilloDesfaseC2",
+        "etapa": 18,
+        "dialogo": [
+          {
+            "personaje": "DARS",
+            "texto": "..."
+          },
+          {
+            "personaje": "RADE",
+            "texto": "¿Qué?"
+          },
+          {
+            "personaje": "DARS",
+            "texto": "Nada."
+          },
+          {
+            "personaje": "RADE",
+            "texto": "Dime."
+          },
+          {
+            "personaje": "DARS",
+            "texto": "Escuché seis."
+          },
+          {
+            "personaje": "RADE",
+            "texto": "Yo golpeé tres."
+          },
+          {
+            "personaje": "DARS",
+            "texto": "Pues yo escuché seis."
+          },
+          {
+            "personaje": "RADE",
+            "texto": "A lo mejor hay eco."
+          },
+          {
+            "personaje": "DARS",
+            "texto": "Sí. A lo mejor."
+          },
+          {
+            "personaje": "RADE",
+            "texto": "Dars."
+          },
+          {
+            "personaje": "DARS",
+            "texto": "¿Qué?"
+          },
+          {
+            "personaje": "RADE",
+            "texto": "Yo también escuché el doble."
+          },
+          {
+            "personaje": "DARS",
+            "texto": "No te muevas."
+          }
+        ]
+      },
+      {
+        "mapa": "pasilloDesfaseC2",
+        "etapa": 19,
+        "dialogo": [
+          {
+            "personaje": "DARS",
+            "texto": "¡Rade!"
+          },
+          {
+            "personaje": "RADE",
+            "texto": "¿Qué pasó?"
+          },
+          {
+            "personaje": "DARS",
+            "texto": "Voy a buscar a alguien."
+          },
+          {
+            "personaje": "RADE",
+            "texto": "¿A quién?"
+          },
+          {
+            "personaje": "DARS",
+            "texto": "A quien encuentre despierto."
+          },
+          {
+            "personaje": "RADE",
+            "texto": "¿Para qué?"
+          },
+          {
+            "personaje": "DARS",
+            "texto": "Para abrir la puerta, obviamente."
+          },
+          {
+            "personaje": "RADE",
+            "texto": "No creo que eso sirva."
+          },
+          {
+            "personaje": "DARS",
+            "texto": "¿Y qué propones?"
+          }
+        ]
+      },
+      {
+        "mapa": "pasilloDesfaseC2",
+        "etapa": 21,
+        "dialogo": [
+          {
+            "personaje": "DARS",
+            "texto": "Ya me di cuenta de que no es normal."
+          },
+          {
+            "personaje": "RADE",
+            "texto": "No era eso lo que quería decir."
+          },
+          {
+            "personaje": "DARS",
+            "texto": "Entonces explícate mejor."
+          }
+        ]
+      },
+      {
+        "mapa": "cuartoPrestado",
+        "etapa": 22,
+        "dialogo": [
+          {
+            "personaje": "RADE",
+            "texto": "¿Y esto?"
+          },
+          {
+            "personaje": "RADE",
+            "texto": "No tenemos un cuarto así."
+          }
+        ]
+      },
+      {
+        "mapa": "cuartoPrestado",
+        "etapa": 23,
+        "dialogo": [
+          {
+            "personaje": "RADE",
+            "texto": "No son míos."
+          },
+          {
+            "personaje": "RADE",
+            "texto": "Tampoco es mía."
+          },
+          {
+            "personaje": "RADE",
+            "texto": "..."
+          },
+          {
+            "personaje": "RADE",
+            "texto": "¿Dars?"
+          },
+          {
+            "personaje": "INVENTARIO",
+            "texto": "Cinta con cabello blanco."
+          }
+        ]
+      },
+      {
+        "mapa": "salaIncompleta",
+        "etapa": 24,
+        "dialogo": [
+          {
+            "personaje": "RADE",
+            "texto": "¿Qué chingados?"
+          },
+          {
+            "personaje": "RADE",
+            "texto": "Esta es la sala."
+          },
+          {
+            "personaje": "RADE",
+            "texto": "No... no es."
+          },
+          {
+            "personaje": "GWEN · TELEVISIÓN",
+            "texto": "—¿Dónde chingados estabas? Es Navidad y tú llegando a la hora que se te da la gana."
+          },
+          {
+            "personaje": "GWEN · TELEVISIÓN",
+            "texto": "—Pudiste avisar. Pero claro, a ti te vale madre quién se queda despierto esperándote."
+          },
+          {
+            "personaje": "RADE · TELEVISIÓN",
+            "texto": "—¿Puedo pasar a mi cuarto?"
+          },
+          {
+            "personaje": "GWEN · TELEVISIÓN",
+            "texto": "—Vete. Y cierra la puerta. Ya nos arruinaste bastante la noche."
+          },
+          {
+            "personaje": "RADE",
+            "texto": "..."
+          },
+          {
+            "personaje": "RADE",
+            "texto": "Ya escuché eso."
+          },
+          {
+            "personaje": "RADE",
+            "texto": "¿Están grabando las conversaciones o qué?"
+          },
+          {
+            "personaje": "RADE",
+            "texto": "No me gusta esto."
+          }
+        ]
+      },
+      {
+        "mapa": "pasilloDesfaseC2",
+        "etapa": 25,
+        "dialogo": [
+          {
+            "personaje": "RADE",
+            "texto": "¿Quién anda ahí?"
+          },
+          {
+            "personaje": "RADE",
+            "texto": "Dars, si eres tú, deja de hacerte pendeja."
+          }
+        ]
+      },
+      {
+        "mapa": "pasilloDesfaseC2",
+        "etapa": 26,
+        "dialogo": [
+          {
+            "personaje": "VOZ DESCONOCIDA",
+            "texto": "¿Ya acabaste?"
+          },
+          {
+            "personaje": "RADE",
+            "texto": "¿Quién eres?"
+          },
+          {
+            "personaje": "VOZ DESCONOCIDA",
+            "texto": "¿Ya acabaste?"
+          },
+          {
+            "personaje": "RADE",
+            "texto": "¿Con qué?"
+          }
+        ]
+      },
+      {
+        "mapa": "cuartoAbrigos",
+        "etapa": 27,
+        "dialogo": [
+          {
+            "personaje": "RADE",
+            "texto": "¿Hola?"
+          },
+          {
+            "personaje": "RADE",
+            "texto": "..."
+          }
+        ]
+      },
+      {
+        "mapa": "cuartoAbrigos",
+        "etapa": 29,
+        "dialogo": [
+          {
+            "personaje": "RADE",
+            "texto": "Está haciendo un ruido de la chingada."
+          },
+          {
+            "personaje": "RADE",
+            "texto": "..."
+          },
+          {
+            "personaje": "RADE",
+            "texto": "Sal."
+          },
+          {
+            "personaje": "RADE",
+            "texto": "Te estoy viendo."
+          }
+        ]
+      },
+      {
+        "mapa": "cuartoAbrigos",
+        "etapa": 30,
+        "dialogo": [
+          {
+            "personaje": "RADE",
+            "texto": "No."
+          },
+          {
+            "personaje": "RADE",
+            "texto": "No me voy a quedar a averiguar."
+          }
+        ]
+      }
+    ]
+  },
+  "escenas": [
+    {
+      "etapa": 31,
+      "escena": 10,
+      "titulo": "La conversación desde el otro lado",
+      "mapa": "pasilloDesfaseC2",
+      "objetivo": "Escucha detrás de la puerta inicial.",
+      "dialogo": [
+        [
+          "GWEN",
+          "¿Y ahora qué hizo?"
+        ],
+        [
+          "DARS",
+          "Se metió al cuarto y la puerta no abre."
+        ],
+        [
+          "GWEN",
+          "¿Cómo que no abre?"
+        ],
+        [
+          "DARS",
+          "Está atorada."
+        ],
+        [
+          "GWEN",
+          "¿No puede abrirla él?"
+        ],
+        [
+          "DARS",
+          "No, por eso te estoy diciendo."
+        ],
+        [
+          "GWEN",
+          "Pues que se espere."
+        ],
+        [
+          "DARS",
+          "Lleva rato encerrado."
+        ],
+        [
+          "GWEN",
+          "¿Y quieres que haga qué?"
+        ],
+        [
+          "DARS",
+          "No sé. Ayudarme a abrirla."
+        ],
+        [
+          "GWEN",
+          "Son horas de estar haciendo pendejadas."
+        ],
+        [
+          "RADE",
+          "¡Estoy aquí!"
+        ],
+        [
+          "DARS",
+          "Rade."
+        ],
+        [
+          "RADE",
+          "¿Me escuchan?"
+        ],
+        [
+          "DARS",
+          "Sí."
+        ],
+        [
+          "RADE",
+          "No puedo salir."
+        ],
+        [
+          "GWEN",
+          "¿Pues qué le hiciste a la puerta?"
+        ],
+        [
+          "RADE",
+          "Nada."
+        ],
+        [
+          "GWEN",
+          "Siempre es lo mismo contigo."
+        ],
+        [
+          "RADE",
+          "No le hice nada."
+        ],
+        [
+          "GWEN",
+          "La puerta estaba bien."
+        ],
+        [
+          "RADE",
+          "¡Pues ahora no está bien!"
+        ],
+        [
+          "DARS",
+          "Ya, los dos. Cállense un segundo."
+        ],
+        [
+          "DARS",
+          "Voy a intentar algo."
+        ],
+        [
+          "DARS",
+          "¿Se movió?"
+        ],
+        [
+          "RADE",
+          "No."
+        ],
+        [
+          "RADE",
+          "¡No!"
+        ],
+        [
+          "GWEN",
+          "Pues quién sabe qué hizo."
+        ],
+        [
+          "DARS",
+          "¿A dónde vas?"
+        ],
+        [
+          "GWEN",
+          "A dormir. Mañana se ve."
+        ],
+        [
+          "DARS",
+          "¿Estás hablando en serio?"
+        ],
+        [
+          "DARS",
+          "Qué pinche gente."
+        ],
+        [
+          "RADE",
+          "Dars."
+        ],
+        [
+          "DARS",
+          "Qué."
+        ],
+        [
+          "RADE",
+          "¿De verdad no puedes abrir?"
+        ],
+        [
+          "DARS",
+          "¿Tú qué crees?"
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "DARS",
+          "Voy a buscar otra cosa."
+        ],
+        [
+          "RADE",
+          "No te vayas todavía."
+        ],
+        [
+          "DARS",
+          "Rade, necesito moverme si quieres que haga algo."
+        ],
+        [
+          "RADE",
+          "Sí, ya sé."
+        ],
+        [
+          "DARS",
+          "Entonces déjame."
+        ]
+      ]
+    },
+    {
+      "etapa": 37,
+      "escena": 11,
+      "titulo": "Las cosas que caben",
+      "mapa": "pasilloDesfaseC2",
+      "objetivo": "Encuentra otra salida al fondo del pasillo.",
+      "dialogo": [
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "Ese es mi teclado."
+        ],
+        [
+          "RADE",
+          "Ábrete."
+        ],
+        [
+          "RADE",
+          "Chingada madre."
+        ],
+        [
+          "RADE",
+          "¡Ey!"
+        ],
+        [
+          "RADE",
+          "¡Oye!"
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "No quiero saber quién anda ahí."
+        ],
+        [
+          "RADE",
+          "Qué útil, cabrón."
+        ],
+        [
+          "RADE",
+          "Eso ya lo había notado."
+        ],
+        [
+          "PAPEL DOBLADO",
+          "NO TODAS LAS PUERTAS DAN AL MISMO LADO."
+        ]
+      ]
+    },
+    {
+      "etapa": 43,
+      "escena": 12,
+      "titulo": "La puerta que conduce al baño",
+      "mapa": "banoEmpanado",
+      "objetivo": "Prueba la puerta del baño.",
+      "dialogo": [
+        [
+          "RADE",
+          "¿El baño?"
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "Entonces la sala debe estar del otro lado."
+        ],
+        [
+          "RADE",
+          "Claro."
+        ],
+        [
+          "RADE",
+          "Todavía tiene agua."
+        ],
+        [
+          "RADE",
+          "No sé por qué me esperaba algo peor."
+        ],
+        [
+          "RADE",
+          "..."
+        ]
+      ]
+    },
+    {
+      "etapa": 44,
+      "escena": 12,
+      "titulo": "La puerta que conduce al baño",
+      "mapa": "banoEmpanado",
+      "objetivo": "Da tres golpes en la puerta del baño.",
+      "dialogo": [
+        [
+          "RADE",
+          "¿Dars?"
+        ],
+        [
+          "RADE",
+          "¿Eres tú?"
+        ],
+        [
+          "RADE",
+          "¿Dars?"
+        ],
+        [
+          "VOZ DEL BAÑO",
+          "¿Qué quieres?"
+        ],
+        [
+          "RADE",
+          "Estoy en el baño."
+        ],
+        [
+          "VOZ DEL BAÑO",
+          "¿Cuál baño?"
+        ],
+        [
+          "RADE",
+          "El de la casa."
+        ],
+        [
+          "VOZ DEL BAÑO",
+          "Yo estoy afuera del cuarto."
+        ],
+        [
+          "RADE",
+          "Ya sé, pero encontré otra puerta."
+        ],
+        [
+          "VOZ DEL BAÑO",
+          "¿Qué otra puerta?"
+        ],
+        [
+          "RADE",
+          "En el pasillo."
+        ],
+        [
+          "VOZ DEL BAÑO",
+          "Rade, no entiendo nada."
+        ],
+        [
+          "RADE",
+          "Yo menos."
+        ],
+        [
+          "VOZ DEL BAÑO",
+          "¿Puedes salir por donde entraste?"
+        ],
+        [
+          "RADE",
+          "Sí."
+        ],
+        [
+          "VOZ DEL BAÑO",
+          "Entonces sal de ahí."
+        ],
+        [
+          "RADE",
+          "¿Y luego qué?"
+        ],
+        [
+          "VOZ DEL BAÑO",
+          "No sé. Pero deja de meterte en otros cuartos."
+        ],
+        [
+          "RADE",
+          "Estoy tratando de buscar una salida."
+        ],
+        [
+          "VOZ DEL BAÑO",
+          "Pues no parece que te esté funcionando."
+        ],
+        [
+          "RADE",
+          "Gracias por el apoyo."
+        ],
+        [
+          "VOZ DEL BAÑO",
+          "De nada."
+        ],
+        [
+          "RADE",
+          "..."
+        ]
+      ]
+    },
+    {
+      "etapa": 49,
+      "escena": 13,
+      "titulo": "Dars no estaba en el baño",
+      "mapa": "pasilloDesfaseC2",
+      "objetivo": "Usa el teléfono junto a la puerta original.",
+      "dialogo": [
+        [
+          "RADE",
+          "¡Dars!"
+        ],
+        [
+          "DARS",
+          "¿Ahora qué?"
+        ],
+        [
+          "RADE",
+          "¿Estabas en el baño?"
+        ],
+        [
+          "DARS",
+          "No."
+        ],
+        [
+          "RADE",
+          "¿Hace cuánto saliste?"
+        ],
+        [
+          "DARS",
+          "No he entrado al baño."
+        ],
+        [
+          "RADE",
+          "¿Segura?"
+        ],
+        [
+          "DARS",
+          "Rade."
+        ],
+        [
+          "RADE",
+          "Qué."
+        ],
+        [
+          "DARS",
+          "¿Me estás preguntando en serio si sé dónde he estado?"
+        ],
+        [
+          "RADE",
+          "Escuché tu voz."
+        ],
+        [
+          "DARS",
+          "Pues aquí estoy."
+        ],
+        [
+          "RADE",
+          "Me hablaste desde el baño."
+        ],
+        [
+          "DARS",
+          "No he ido al baño."
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "DARS",
+          "¿Qué te dijo?"
+        ],
+        [
+          "RADE",
+          "Que saliera de ahí."
+        ],
+        [
+          "DARS",
+          "Bueno, pues hazle caso."
+        ],
+        [
+          "RADE",
+          "No tiene gracia."
+        ],
+        [
+          "DARS",
+          "No estoy bromeando."
+        ],
+        [
+          "DARS",
+          "Oye."
+        ],
+        [
+          "RADE",
+          "Qué."
+        ],
+        [
+          "DARS",
+          "¿Tienes tu teléfono?"
+        ],
+        [
+          "RADE",
+          "Sí."
+        ],
+        [
+          "DARS",
+          "¿Funciona?"
+        ],
+        [
+          "RADE",
+          "No tengo señal."
+        ],
+        [
+          "DARS",
+          "Intenta llamarme."
+        ],
+        [
+          "RADE",
+          "Te estoy diciendo que no tengo señal."
+        ],
+        [
+          "DARS",
+          "Inténtalo de todos modos."
+        ],
+        [
+          "GRABACIÓN",
+          "El número que usted marcó..."
+        ],
+        [
+          "RADE",
+          "No funciona."
+        ],
+        [
+          "DARS",
+          "Bueno."
+        ],
+        [
+          "RADE",
+          "¿Bueno qué?"
+        ],
+        [
+          "DARS",
+          "Estoy pensando."
+        ],
+        [
+          "RADE",
+          "Pues piensa rápido."
+        ],
+        [
+          "DARS",
+          "A mí también me gustaría terminar con esto, Rade."
+        ],
+        [
+          "TELÉFONO",
+          "Sin señal. Llamada finalizada."
+        ]
+      ]
+    },
+    {
+      "etapa": 55,
+      "escena": 14,
+      "titulo": "Una diferencia pequeña",
+      "mapa": "pasilloDesfaseC2",
+      "objetivo": "Habla con Dars y mide el pasillo.",
+      "dialogo": [
+        [
+          "DARS",
+          "¿Qué ves frente a ti?"
+        ],
+        [
+          "RADE",
+          "Una puerta."
+        ],
+        [
+          "DARS",
+          "Qué gracioso."
+        ],
+        [
+          "RADE",
+          "Me preguntaste."
+        ],
+        [
+          "DARS",
+          "Aparte de la puerta."
+        ],
+        [
+          "RADE",
+          "Hay seis puertas más."
+        ],
+        [
+          "DARS",
+          "¿Seis?"
+        ],
+        [
+          "RADE",
+          "Sí."
+        ],
+        [
+          "DARS",
+          "¿Y dónde están?"
+        ],
+        [
+          "RADE",
+          "A los lados de un pasillo."
+        ],
+        [
+          "DARS",
+          "Pero tu cuarto no tiene ningún pasillo de ese lado."
+        ],
+        [
+          "RADE",
+          "Ya sé."
+        ],
+        [
+          "DARS",
+          "Hay una pared."
+        ],
+        [
+          "RADE",
+          "Ya sé, Dars."
+        ],
+        [
+          "DARS",
+          "Déjame terminar."
+        ],
+        [
+          "DARS",
+          "Del lado donde estás parado debería estar tu dormitorio."
+        ],
+        [
+          "RADE",
+          "No estoy en el dormitorio."
+        ],
+        [
+          "DARS",
+          "Pues eso es lo que te estoy diciendo. No hay espacio para un pasillo ahí."
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "DARS",
+          "¿Cuánto mide?"
+        ],
+        [
+          "RADE",
+          "No sé. Bastante."
+        ],
+        [
+          "DARS",
+          "Dame una medida, aunque sea aproximada."
+        ]
+      ]
+    },
+    {
+      "etapa": 56,
+      "escena": 14,
+      "titulo": "Una diferencia pequeña",
+      "mapa": "pasilloDesfaseC2",
+      "objetivo": "Camina al otro extremo para contar las 48 baldosas.",
+      "dialogo": [
+        [
+          "RADE",
+          "Cuarenta y ocho baldosas."
+        ],
+        [
+          "DARS",
+          "¿De qué tamaño?"
+        ],
+        [
+          "RADE",
+          "Como de treinta centímetros."
+        ],
+        [
+          "DARS",
+          "Entonces son más de catorce metros."
+        ],
+        [
+          "RADE",
+          "Sí, supongo."
+        ],
+        [
+          "DARS",
+          "Rade."
+        ],
+        [
+          "RADE",
+          "Qué."
+        ],
+        [
+          "DARS",
+          "Esa parte de la casa ni siquiera mide catorce metros."
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "DARS",
+          "¿Me estás entendiendo?"
+        ],
+        [
+          "RADE",
+          "Sí."
+        ],
+        [
+          "DARS",
+          "No hay dónde meter ese pasillo."
+        ]
+      ]
+    },
+    {
+      "etapa": 61,
+      "escena": 15,
+      "titulo": "La mancha del suelo",
+      "mapa": "pasilloDesfaseC2",
+      "objetivo": "Sigue la mancha y usa el tornillo en la puerta 0.",
+      "dialogo": [
+        [
+          "RADE",
+          "Otra fuga."
+        ],
+        [
+          "RADE",
+          "¿Hola?"
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "Pues para algo sirvió."
+        ]
+      ]
+    },
+    {
+      "etapa": 67,
+      "escena": 16,
+      "titulo": "El cuarto de lavado",
+      "mapa": "lavaderoDesfase",
+      "objetivo": "Examina la lavadora desenchufada.",
+      "dialogo": [
+        [
+          "RADE",
+          "No recuerdo que tuviéramos otro lavadero."
+        ],
+        [
+          "RADE",
+          "Ni siquiera está conectada."
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "No."
+        ]
+      ]
+    },
+    {
+      "etapa": 68,
+      "escena": 16,
+      "titulo": "El cuarto de lavado",
+      "mapa": "lavaderoDesfase",
+      "objetivo": "Examina la lavadora desenchufada.",
+      "dialogo": [],
+      "opciones": [
+        "Abrir la tapa",
+        "Dejarla cerrada"
+      ]
+    },
+    {
+      "etapa": 69,
+      "escena": 16,
+      "titulo": "El cuarto de lavado",
+      "mapa": "lavaderoDesfase",
+      "objetivo": "Examina la lavadora desenchufada.",
+      "dialogo": [
+        [
+          "HOJA MOJADA",
+          "…después de apagarlo / …no significa que termine / …esperar hasta que…"
+        ],
+        [
+          "RADE",
+          "No se entiende ni madres."
+        ]
+      ]
+    },
+    {
+      "etapa": 73,
+      "escena": 17,
+      "titulo": "No toda voz es compañía",
+      "mapa": "lavaderoDesfase",
+      "objetivo": "Acércate a la voz que sale de la pared.",
+      "dialogo": [
+        [
+          "DARS",
+          "Rade."
+        ],
+        [
+          "RADE",
+          "¿Dars?"
+        ],
+        [
+          "DARS",
+          "Ven."
+        ],
+        [
+          "RADE",
+          "¿Dónde estás?"
+        ],
+        [
+          "DARS",
+          "Aquí."
+        ],
+        [
+          "RADE",
+          "No te veo."
+        ],
+        [
+          "DARS",
+          "Ven, Rade."
+        ],
+        [
+          "DARS",
+          "Ven, Rade."
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "Tú no hablas así."
+        ]
+      ]
+    },
+    {
+      "etapa": 79,
+      "escena": 18,
+      "titulo": "El otro lado del agujero",
+      "mapa": "pasilloDesfaseC2",
+      "objetivo": "Escucha las voces por la abertura de la pared.",
+      "dialogo": [
+        [
+          "DARS",
+          "¿Lo escuchas?"
+        ],
+        [
+          "GWEN",
+          "¿Qué?"
+        ],
+        [
+          "DARS",
+          "Eso."
+        ],
+        [
+          "GWEN",
+          "¿El aire acondicionado?"
+        ],
+        [
+          "DARS",
+          "No. Los golpes."
+        ],
+        [
+          "GWEN",
+          "No escucho nada."
+        ],
+        [
+          "DARS",
+          "Lleva rato haciendo ruido."
+        ],
+        [
+          "GWEN",
+          "Pues apágale el aire."
+        ],
+        [
+          "DARS",
+          "..."
+        ],
+        [
+          "GWEN",
+          "Ya te dije que mañana vemos la puerta."
+        ],
+        [
+          "DARS",
+          "Está encerrado."
+        ],
+        [
+          "GWEN",
+          "Pues no se va a morir por pasar una noche en su cuarto."
+        ],
+        [
+          "RADE",
+          "¡No estoy en mi cuarto!"
+        ],
+        [
+          "RADE",
+          "¡Dars!"
+        ],
+        [
+          "DARS",
+          "Espera."
+        ],
+        [
+          "RADE",
+          "¡Estoy aquí!"
+        ],
+        [
+          "DARS",
+          "¿Rade?"
+        ],
+        [
+          "RADE",
+          "Sí."
+        ],
+        [
+          "DARS",
+          "¿Por dónde estás hablando?"
+        ],
+        [
+          "RADE",
+          "Por un hoyo en la pared."
+        ],
+        [
+          "DARS",
+          "¿Cuál pared?"
+        ],
+        [
+          "RADE",
+          "¡No sé!"
+        ],
+        [
+          "DARS",
+          "No me grites."
+        ],
+        [
+          "RADE",
+          "Estoy tratando de que me escuches."
+        ],
+        [
+          "DARS",
+          "Ya te escuché."
+        ],
+        [
+          "DARS",
+          "Voy a golpear la pared. Dime si lo escuchas."
+        ],
+        [
+          "RADE",
+          "Sí."
+        ],
+        [
+          "DARS",
+          "¿Cuántos?"
+        ],
+        [
+          "RADE",
+          "Tres."
+        ],
+        [
+          "DARS",
+          "Bien."
+        ],
+        [
+          "RADE",
+          "¿Qué significa?"
+        ],
+        [
+          "DARS",
+          "No sé."
+        ],
+        [
+          "RADE",
+          "Entonces..."
+        ],
+        [
+          "DARS",
+          "Significa que al menos estamos escuchando lo mismo por aquí."
+        ],
+        [
+          "RADE",
+          "Hay una tubería."
+        ],
+        [
+          "DARS",
+          "Yo estoy junto al aire acondicionado."
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "DARS",
+          "¿Rade?"
+        ],
+        [
+          "RADE",
+          "Creo que te escucho por la ventilación."
+        ],
+        [
+          "DARS",
+          "Eso sí tiene sentido."
+        ],
+        [
+          "RADE",
+          "¿Cómo?"
+        ],
+        [
+          "DARS",
+          "El ruido viaja por los tubos."
+        ],
+        [
+          "RADE",
+          "Sí, pero no hay tubos aquí."
+        ],
+        [
+          "DARS",
+          "..."
+        ],
+        [
+          "RADE",
+          "Solamente es un agujero."
+        ],
+        [
+          "DARS",
+          "No sé, Rade."
+        ]
+      ]
+    },
+    {
+      "etapa": 85,
+      "escena": 19,
+      "titulo": "El papel",
+      "mapa": "pasilloDesfaseC2",
+      "objetivo": "Recoge el papel que pasa Dars.",
+      "dialogo": [
+        [
+          "DARS",
+          "Voy a escribirte algo."
+        ],
+        [
+          "RADE",
+          "¿Qué cosa?"
+        ],
+        [
+          "DARS",
+          "Una pregunta."
+        ],
+        [
+          "RADE",
+          "Te estoy escuchando."
+        ],
+        [
+          "NOTA DE DARS",
+          "¿QUÉ TRAES PUESTO?"
+        ],
+        [
+          "DARS",
+          "Quiero comprobar algo."
+        ],
+        [
+          "DARS",
+          "A ver si cabe."
+        ],
+        [
+          "RADE",
+          "¿Qué clase de pregunta es esa?"
+        ],
+        [
+          "DARS",
+          "Contéstame."
+        ],
+        [
+          "RADE",
+          "Ropa negra."
+        ],
+        [
+          "DARS",
+          "¿Y?"
+        ],
+        [
+          "RADE",
+          "Una chamarra. Un pantalón."
+        ],
+        [
+          "DARS",
+          "¿Tienes el cigarro?"
+        ],
+        [
+          "RADE",
+          "Sí."
+        ],
+        [
+          "DARS",
+          "¿Prendido?"
+        ],
+        [
+          "RADE",
+          "No."
+        ],
+        [
+          "DARS",
+          "Bien."
+        ],
+        [
+          "RADE",
+          "¿Para qué preguntas?"
+        ],
+        [
+          "DARS",
+          "Porque quería saber si eras tú."
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "¿Y quién más iba a ser?"
+        ],
+        [
+          "DARS",
+          "No sé."
+        ],
+        [
+          "RADE",
+          "Dars."
+        ],
+        [
+          "DARS",
+          "Qué."
+        ],
+        [
+          "RADE",
+          "¿Me estás viendo?"
+        ],
+        [
+          "DARS",
+          "No."
+        ],
+        [
+          "RADE",
+          "¿Entonces cómo sabías lo del cigarro?"
+        ],
+        [
+          "DARS",
+          "Siempre traes uno."
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "DARS",
+          "Además, te vi hace un rato."
+        ],
+        [
+          "RADE",
+          "Ah."
+        ],
+        [
+          "DARS",
+          "¿Tienes algo para escribir?"
+        ],
+        [
+          "RADE",
+          "No."
+        ],
+        [
+          "DARS",
+          "Voy a buscar un lápiz."
+        ],
+        [
+          "RADE",
+          "Se atoró."
+        ],
+        [
+          "DARS",
+          "Déjalo."
+        ],
+        [
+          "RADE",
+          "¿Por?"
+        ],
+        [
+          "DARS",
+          "Porque no quiero que rompas nada."
+        ],
+        [
+          "RADE",
+          "Ya está roto."
+        ],
+        [
+          "DARS",
+          "Entonces no rompas más."
+        ]
+      ]
+    },
+    {
+      "etapa": 91,
+      "escena": 20,
+      "titulo": "La primera explicación que nadie cree",
+      "mapa": "pasilloDesfaseC2",
+      "objetivo": "Describe el pasillo a Dars.",
+      "dialogo": [
+        [
+          "DARS",
+          "Ya."
+        ],
+        [
+          "RADE",
+          "Aquí sigo."
+        ],
+        [
+          "DARS",
+          "¿Puedes describirme ese lugar?"
+        ],
+        [
+          "RADE",
+          "Ya te dije que es un pasillo."
+        ],
+        [
+          "DARS",
+          "Más detalles."
+        ],
+        [
+          "RADE",
+          "Tiene un montón de puertas. Algunas llevan a cuartos."
+        ],
+        [
+          "DARS",
+          "¿Qué cuartos?"
+        ],
+        [
+          "RADE",
+          "Una sala, un baño, un lavadero."
+        ],
+        [
+          "DARS",
+          "¿Y qué tiene de raro?"
+        ],
+        [
+          "RADE",
+          "Que no deberían estar ahí."
+        ],
+        [
+          "DARS",
+          "Aparte de eso."
+        ],
+        [
+          "RADE",
+          "La sala tiene una televisión que repitió lo que me dijeron cuando llegué."
+        ],
+        [
+          "DARS",
+          "¿Quién?"
+        ],
+        [
+          "RADE",
+          "La persona que estaba en la sala."
+        ],
+        [
+          "DARS",
+          "¿La televisión repitió una conversación?"
+        ],
+        [
+          "RADE",
+          "Sí."
+        ],
+        [
+          "DARS",
+          "¿Una grabación?"
+        ],
+        [
+          "RADE",
+          "Supongo."
+        ],
+        [
+          "DARS",
+          "¿Quién la grabó?"
+        ],
+        [
+          "RADE",
+          "No sé."
+        ],
+        [
+          "DARS",
+          "Rade, es que lo que me dices no tiene sentido."
+        ],
+        [
+          "RADE",
+          "Ya sé que no tiene sentido."
+        ],
+        [
+          "DARS",
+          "Entonces entiéndeme un poco."
+        ],
+        [
+          "RADE",
+          "No me estás creyendo."
+        ],
+        [
+          "DARS",
+          "No dije eso."
+        ],
+        [
+          "RADE",
+          "Lo estás pensando."
+        ],
+        [
+          "DARS",
+          "Estoy pensando que llevas un buen rato encerrado, que no sé dónde estás y que todo esto está de la chingada."
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "DARS",
+          "Y sí, también estoy pensando que a veces exageras las cosas."
+        ],
+        [
+          "RADE",
+          "No estoy exagerando."
+        ],
+        [
+          "DARS",
+          "Ojalá."
+        ],
+        [
+          "DARS",
+          "Rade, dime algo."
+        ],
+        [
+          "RADE",
+          "Qué."
+        ],
+        [
+          "DARS",
+          "¿Quién era esa persona que dijiste haber visto en tu cuarto?"
+        ],
+        [
+          "RADE",
+          "No quiero hablar de eso."
+        ],
+        [
+          "DARS",
+          "¿Por qué?"
+        ],
+        [
+          "RADE",
+          "Porque no."
+        ],
+        [
+          "DARS",
+          "¿Te hizo algo?"
+        ],
+        [
+          "RADE",
+          "No."
+        ],
+        [
+          "DARS",
+          "¿Le hizo algo a alguien?"
+        ],
+        [
+          "RADE",
+          "No sé."
+        ],
+        [
+          "DARS",
+          "¿Lo conocías?"
+        ],
+        [
+          "RADE",
+          "Sí."
+        ],
+        [
+          "DARS",
+          "¿Desde cuándo?"
+        ],
+        [
+          "RADE",
+          "Hace tiempo."
+        ],
+        [
+          "DARS",
+          "Qué específico."
+        ],
+        [
+          "RADE",
+          "Dars, por favor."
+        ],
+        [
+          "DARS",
+          "Está bien."
+        ],
+        [
+          "DARS",
+          "Pero si estás escondiéndome algo que pueda servirme para sacarte de ahí, me estás poniendo las cosas más difíciles."
+        ],
+        [
+          "RADE",
+          "No es tan fácil."
+        ],
+        [
+          "DARS",
+          "Nunca dije que fuera fácil."
+        ]
+      ]
+    },
+    {
+      "etapa": 97,
+      "escena": 21,
+      "titulo": "El sonido que viene primero",
+      "mapa": "cuartoVaso",
+      "objetivo": "Acércate al vaso antes de que caiga.",
+      "dialogo": [
+        [
+          "RADE",
+          "¿Qué fue eso?"
+        ],
+        [
+          "RADE",
+          "..."
+        ]
+      ]
+    },
+    {
+      "etapa": 98,
+      "escena": 21,
+      "titulo": "El sonido que viene primero",
+      "mapa": "cuartoVaso",
+      "objetivo": "¡Pulsa E para detener el vaso!",
+      "dialogo": []
+    },
+    {
+      "etapa": 99,
+      "escena": 21,
+      "titulo": "El sonido que viene primero",
+      "mapa": "cuartoVaso",
+      "objetivo": "Acércate al vaso antes de que caiga.",
+      "dialogo": [
+        [
+          "RADE",
+          "No lo voy a tocar."
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "Ni siquiera pasó."
+        ]
+      ]
+    },
+    {
+      "etapa": 100,
+      "escena": 21,
+      "titulo": "El sonido que viene primero",
+      "mapa": "cuartoVaso",
+      "objetivo": "Acércate al vaso antes de que caiga.",
+      "dialogo": [
+        [
+          "RADE",
+          "Ya había escuchado eso."
+        ]
+      ]
+    },
+    {
+      "etapa": 103,
+      "escena": 22,
+      "titulo": "Un favor que no era un favor",
+      "mapa": "pasilloDesfaseC2",
+      "objetivo": "Vuelve al hueco y habla con Dars.",
+      "dialogo": [
+        [
+          "RADE",
+          "Dars."
+        ],
+        [
+          "RADE",
+          "Dars."
+        ],
+        [
+          "RADE",
+          "¿Estás ahí?"
+        ],
+        [
+          "DARS",
+          "Sí."
+        ],
+        [
+          "RADE",
+          "Necesito que hagas algo."
+        ],
+        [
+          "DARS",
+          "¿Qué?"
+        ],
+        [
+          "RADE",
+          "Ve a la computadora."
+        ],
+        [
+          "DARS",
+          "¿Para qué?"
+        ],
+        [
+          "RADE",
+          "Quiero que apagues el programa."
+        ],
+        [
+          "DARS",
+          "Ya lo cerré."
+        ],
+        [
+          "RADE",
+          "¿Cuándo?"
+        ],
+        [
+          "DARS",
+          "Hace rato."
+        ],
+        [
+          "RADE",
+          "¿Cómo lo cerraste?"
+        ],
+        [
+          "DARS",
+          "Cerré la consola."
+        ],
+        [
+          "RADE",
+          "¿Nada más?"
+        ],
+        [
+          "DARS",
+          "Sí."
+        ],
+        [
+          "RADE",
+          "¿Terminaste el proceso?"
+        ],
+        [
+          "DARS",
+          "Cerré la ventana, Rade."
+        ],
+        [
+          "RADE",
+          "Eso no siempre termina todo."
+        ],
+        [
+          "DARS",
+          "Bueno, pues ven y hazlo tú."
+        ],
+        [
+          "DARS",
+          "..."
+        ],
+        [
+          "DARS",
+          "No quise decir eso."
+        ],
+        [
+          "DARS",
+          "¿Rade?"
+        ],
+        [
+          "RADE",
+          "Qué."
+        ],
+        [
+          "DARS",
+          "Voy a revisar."
+        ],
+        [
+          "RADE",
+          "¿Qué ves?"
+        ],
+        [
+          "DARS",
+          "El escritorio."
+        ],
+        [
+          "RADE",
+          "¿Está abierto el programa?"
+        ],
+        [
+          "DARS",
+          "No."
+        ],
+        [
+          "RADE",
+          "Busca el proceso de Java."
+        ],
+        [
+          "DARS",
+          "¿Dónde?"
+        ],
+        [
+          "DARS",
+          "No veo nada que diga Java."
+        ],
+        [
+          "RADE",
+          "¿Segura?"
+        ],
+        [
+          "DARS",
+          "Rade."
+        ],
+        [
+          "RADE",
+          "Bueno."
+        ],
+        [
+          "DARS",
+          "Hay un montón de procesos. Ninguno dice Java."
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "DARS",
+          "¿Entonces?"
+        ],
+        [
+          "RADE",
+          "No sé."
+        ],
+        [
+          "DARS",
+          "Otra vez."
+        ],
+        [
+          "RADE",
+          "¿Qué quieres que te diga?"
+        ],
+        [
+          "DARS",
+          "Algo que sirva."
+        ]
+      ]
+    },
+    {
+      "etapa": 109,
+      "escena": 23,
+      "titulo": "La puerta al final",
+      "mapa": "pasilloDesfaseC2",
+      "objetivo": "Gira la manija de la puerta de SERVICIO.",
+      "dialogo": [
+        [
+          "RADE",
+          "¿Servicio?"
+        ],
+        [
+          "RADE",
+          "¿Servicio de qué?"
+        ],
+        [
+          "RADE",
+          "¿Hola?"
+        ]
+      ]
+    },
+    {
+      "etapa": 115,
+      "escena": 24,
+      "titulo": "El primer descanso",
+      "mapa": "escaleraServicio",
+      "objetivo": "Mira por la primera ventana del descanso.",
+      "dialogo": [
+        [
+          "RADE",
+          "Esa es la calle."
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "¿Estoy afuera de la casa?"
+        ],
+        [
+          "RADE",
+          "¡Ey!"
+        ],
+        [
+          "RADE",
+          "¡Oye!"
+        ],
+        [
+          "RADE",
+          "Chingada madre."
+        ],
+        [
+          "RADE",
+          "¿Quién abrió eso?"
+        ]
+      ]
+    },
+    {
+      "etapa": 121,
+      "escena": 25,
+      "titulo": "Alguien llama desde arriba",
+      "mapa": "escaleraServicio",
+      "objetivo": "Baja al siguiente descanso.",
+      "dialogo": [
+        [
+          "RADE",
+          "¿Hola?"
+        ],
+        [
+          "RADE",
+          "¿Hay alguien?"
+        ],
+        [
+          "RADE",
+          "No."
+        ],
+        [
+          "RADE",
+          "No, no, no."
+        ],
+        [
+          "RADE",
+          "Por favor."
+        ]
+      ]
+    },
+    {
+      "etapa": 127,
+      "escena": 26,
+      "titulo": "Una salida demasiado pequeña",
+      "mapa": "cuartoSalida",
+      "objetivo": "Prueba la segunda puerta que dice SALIDA.",
+      "dialogo": [
+        [
+          "RADE",
+          "¿En serio?"
+        ],
+        [
+          "RADE",
+          "¿Esto es la salida?"
+        ]
+      ]
+    },
+    {
+      "etapa": 128,
+      "escena": 26,
+      "titulo": "Una salida demasiado pequeña",
+      "mapa": "cuartoSalida",
+      "objetivo": "Prueba la segunda puerta que dice SALIDA.",
+      "dialogo": [
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "No."
+        ],
+        [
+          "RADE",
+          "Ya entendí."
+        ]
+      ]
+    },
+    {
+      "etapa": 129,
+      "escena": 26,
+      "titulo": "Una salida demasiado pequeña",
+      "mapa": "cuartoSalida",
+      "objetivo": "Revisa el bote de basura.",
+      "dialogo": [
+        [
+          "RADE",
+          "Alguien estuvo aquí."
+        ],
+        [
+          "RADE",
+          "Ni siquiera está llena de polvo."
+        ],
+        [
+          "INVENTARIO",
+          "Boleto de autobús arrugado. El destino es ilegible."
+        ]
+      ]
+    },
+    {
+      "etapa": 133,
+      "escena": 27,
+      "titulo": "La llamada que no salió",
+      "mapa": "escaleraServicio",
+      "objetivo": "El teléfono está vibrando.",
+      "dialogo": [
+        [
+          "TELÉFONO",
+          "Llamada entrante · Número desconocido"
+        ]
+      ]
+    },
+    {
+      "etapa": 134,
+      "escena": 27,
+      "titulo": "La llamada que no salió",
+      "mapa": "escaleraServicio",
+      "objetivo": "El teléfono está vibrando.",
+      "dialogo": [],
+      "opciones": [
+        "Contestar",
+        "Ignorar"
+      ]
+    },
+    {
+      "etapa": 135,
+      "escena": 27,
+      "titulo": "La llamada que no salió",
+      "mapa": "escaleraServicio",
+      "objetivo": "El teléfono está vibrando.",
+      "dialogo": [
+        [
+          "RADE",
+          "¿Bueno?"
+        ],
+        [
+          "RADE",
+          "¿Quién habla?"
+        ],
+        [
+          "VOZ DESCONOCIDA",
+          "..."
+        ],
+        [
+          "RADE",
+          "No te escucho."
+        ],
+        [
+          "VOZ DESCONOCIDA",
+          "¿Ya saliste?"
+        ],
+        [
+          "RADE",
+          "¿Quién eres?"
+        ],
+        [
+          "VOZ DESCONOCIDA",
+          "¿Ya saliste?"
+        ],
+        [
+          "RADE",
+          "No."
+        ],
+        [
+          "VOZ DESCONOCIDA",
+          "Entonces no era para ti."
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "Pinche teléfono."
+        ]
+      ]
+    },
+    {
+      "etapa": 136,
+      "escena": 27,
+      "titulo": "La llamada que no salió",
+      "mapa": "escaleraServicio",
+      "objetivo": "El teléfono está vibrando.",
+      "dialogo": [
+        [
+          "TELÉFONO",
+          "Llamada perdida · Número desconocido"
+        ]
+      ]
+    },
+    {
+      "etapa": 139,
+      "escena": 28,
+      "titulo": "El reloj de Dars",
+      "mapa": "escaleraServicio",
+      "objetivo": "Busca los golpes cerca de la rejilla.",
+      "dialogo": [
+        [
+          "RADE",
+          "¿Dars?"
+        ],
+        [
+          "DARS",
+          "¿Rade?"
+        ],
+        [
+          "RADE",
+          "Sí."
+        ],
+        [
+          "DARS",
+          "¿Dónde te metiste?"
+        ],
+        [
+          "RADE",
+          "Encontré unas escaleras."
+        ],
+        [
+          "DARS",
+          "¿Escaleras?"
+        ],
+        [
+          "RADE",
+          "Sí."
+        ],
+        [
+          "DARS",
+          "No sigas bajando."
+        ],
+        [
+          "RADE",
+          "No sé si hay otra salida."
+        ],
+        [
+          "DARS",
+          "Rade, por favor, escúchame."
+        ],
+        [
+          "DARS",
+          "Acabo de revisar la computadora otra vez."
+        ],
+        [
+          "RADE",
+          "¿Y?"
+        ],
+        [
+          "DARS",
+          "No hay nada abierto."
+        ],
+        [
+          "RADE",
+          "Ya me dijiste."
+        ],
+        [
+          "DARS",
+          "Pero el reloj está raro."
+        ],
+        [
+          "RADE",
+          "¿Qué tiene?"
+        ],
+        [
+          "DARS",
+          "Marca una hora distinta."
+        ],
+        [
+          "RADE",
+          "¿Cuánto?"
+        ],
+        [
+          "DARS",
+          "Las once cuarenta y siete."
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "DARS",
+          "¿Qué pasa?"
+        ],
+        [
+          "RADE",
+          "Encontré un reloj que marcaba eso."
+        ],
+        [
+          "DARS",
+          "¿Dónde?"
+        ],
+        [
+          "RADE",
+          "En uno de los cuartos."
+        ],
+        [
+          "DARS",
+          "Bueno, pues qué casualidad."
+        ],
+        [
+          "RADE",
+          "No sé si sea casualidad."
+        ],
+        [
+          "DARS",
+          "Yo tampoco."
+        ],
+        [
+          "RADE",
+          "¿Qué hora es de verdad?"
+        ],
+        [
+          "DARS",
+          "Doce treinta y ocho."
+        ],
+        [
+          "RADE",
+          "¿De la madrugada?"
+        ],
+        [
+          "DARS",
+          "Sí, Rade. De la madrugada."
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "DARS",
+          "Pasó Navidad."
+        ],
+        [
+          "RADE",
+          "Ya."
+        ],
+        [
+          "DARS",
+          "¿Qué marca tu teléfono?"
+        ],
+        [
+          "RADE",
+          "Once cuarenta y siete."
+        ],
+        [
+          "DARS",
+          "..."
+        ],
+        [
+          "RADE",
+          "No se ha movido."
+        ],
+        [
+          "DARS",
+          "¿Desde cuándo?"
+        ],
+        [
+          "RADE",
+          "No sé."
+        ],
+        [
+          "DARS",
+          "Pues fíjate."
+        ],
+        [
+          "RADE",
+          "¿Qué hago?"
+        ],
+        [
+          "DARS",
+          "Busca una forma de regresar a la primera puerta."
+        ],
+        [
+          "RADE",
+          "Ya estoy lejos."
+        ],
+        [
+          "DARS",
+          "¿Cuánto?"
+        ],
+        [
+          "RADE",
+          "No sé. Bajé varios pisos."
+        ],
+        [
+          "DARS",
+          "No tenemos varios pisos."
+        ],
+        [
+          "RADE",
+          "¡Ya sé que no tenemos varios pisos!"
+        ],
+        [
+          "DARS",
+          "No tienes que hablarme como si fuera yo la que hizo eso."
+        ],
+        [
+          "DARS",
+          "Si vuelves a gritarme, dejo de hablarte un rato."
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "DARS",
+          "Lo digo en serio."
+        ],
+        [
+          "RADE",
+          "Bueno."
+        ],
+        [
+          "DARS",
+          "Está bien."
+        ]
+      ]
+    },
+    {
+      "etapa": 145,
+      "escena": 29,
+      "titulo": "Algo parecido a una disculpa",
+      "mapa": "escaleraServicio",
+      "objetivo": "Escucha lo que Dars quiere decir.",
+      "dialogo": [
+        [
+          "RADE",
+          "Oye."
+        ],
+        [
+          "DARS",
+          "Qué."
+        ],
+        [
+          "RADE",
+          "Lo de hace rato..."
+        ],
+        [
+          "DARS",
+          "¿Cuál de todas las cosas?"
+        ],
+        [
+          "RADE",
+          "Cuando te grité en la cocina."
+        ],
+        [
+          "RADE",
+          "Me desesperé."
+        ],
+        [
+          "DARS",
+          "Ya sé."
+        ],
+        [
+          "RADE",
+          "No quería..."
+        ],
+        [
+          "DARS",
+          "Pues lo hiciste."
+        ],
+        [
+          "RADE",
+          "Sí."
+        ],
+        [
+          "DARS",
+          "..."
+        ],
+        [
+          "RADE",
+          "Perdón."
+        ],
+        [
+          "DARS",
+          "Está bien."
+        ],
+        [
+          "RADE",
+          "¿Ya?"
+        ],
+        [
+          "DARS",
+          "¿Qué quieres que te diga?"
+        ],
+        [
+          "RADE",
+          "Nada."
+        ],
+        [
+          "DARS",
+          "Entonces ya."
+        ]
+      ]
+    },
+    {
+      "etapa": 151,
+      "escena": 30,
+      "titulo": "La escalera termina",
+      "mapa": "escaleraServicio",
+      "objetivo": "Recoge el espejo roto al pie de la escalera.",
+      "dialogo": [
+        [
+          "INVENTARIO",
+          "Fragmento de espejo."
+        ],
+        [
+          "RADE",
+          "¿Aquí no qué?"
+        ],
+        [
+          "RADE",
+          "No dejaron ni un desarmador."
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "Esa no estaba."
+        ],
+        [
+          "FIGURA",
+          "Rade."
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "No."
+        ],
+        [
+          "FIGURA",
+          "Sigues buscando puertas."
+        ],
+        [
+          "RADE",
+          "Déjame en paz."
+        ],
+        [
+          "FIGURA",
+          "No te obligué a bajar."
+        ],
+        [
+          "RADE",
+          "No te pedí tu opinión."
+        ],
+        [
+          "FIGURA",
+          "Tampoco te obligué a entrar."
+        ],
+        [
+          "RADE",
+          "¿Dónde está Dars?"
+        ],
+        [
+          "RADE",
+          "Te hice una pregunta."
+        ]
+      ]
+    },
+    {
+      "etapa": 157,
+      "escena": 31,
+      "titulo": "La llamada de verdad",
+      "mapa": "escaleraServicio",
+      "objetivo": "Contesta la llamada de Dars.",
+      "dialogo": [
+        [
+          "RADE",
+          "¿Bueno?"
+        ],
+        [
+          "DARS",
+          "¿Rade?"
+        ],
+        [
+          "RADE",
+          "Sí."
+        ],
+        [
+          "DARS",
+          "¿Me escuchas?"
+        ],
+        [
+          "RADE",
+          "Sí."
+        ],
+        [
+          "DARS",
+          "Ah, qué bueno."
+        ],
+        [
+          "RADE",
+          "¿Cómo me llamaste?"
+        ],
+        [
+          "DARS",
+          "Pues con el teléfono, pendejo."
+        ],
+        [
+          "RADE",
+          "No tenía señal."
+        ],
+        [
+          "DARS",
+          "Aquí sí hay."
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "DARS",
+          "¿Dónde estás?"
+        ],
+        [
+          "RADE",
+          "En la escalera."
+        ],
+        [
+          "DARS",
+          "¿Sigues ahí?"
+        ],
+        [
+          "RADE",
+          "Sí."
+        ],
+        [
+          "DARS",
+          "¿No puedes subir?"
+        ],
+        [
+          "RADE",
+          "Sí puedo, pero..."
+        ],
+        [
+          "DARS",
+          "Entonces sube."
+        ],
+        [
+          "RADE",
+          "Hay una puerta."
+        ],
+        [
+          "DARS",
+          "Rade."
+        ],
+        [
+          "RADE",
+          "Qué."
+        ],
+        [
+          "DARS",
+          "Deja de abrir puertas."
+        ],
+        [
+          "RADE",
+          "Estoy tratando de encontrar una salida."
+        ],
+        [
+          "DARS",
+          "Y cada vez te metes más lejos."
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "DARS",
+          "Regresa."
+        ],
+        [
+          "RADE",
+          "Bueno."
+        ],
+        [
+          "DARS",
+          "Avísame cuando llegues."
+        ],
+        [
+          "RADE",
+          "Sí."
+        ],
+        [
+          "RADE",
+          "¿Dars?"
+        ],
+        [
+          "DARS",
+          "Qué."
+        ],
+        [
+          "RADE",
+          "¿Sigues molesta?"
+        ],
+        [
+          "DARS",
+          "Sí."
+        ],
+        [
+          "RADE",
+          "Ah."
+        ],
+        [
+          "DARS",
+          "¿Querías que te mintiera?"
+        ],
+        [
+          "RADE",
+          "No."
+        ],
+        [
+          "DARS",
+          "Entonces sube."
+        ]
+      ]
+    },
+    {
+      "etapa": 163,
+      "escena": 32,
+      "titulo": "Las escaleras contadas",
+      "mapa": "escaleraServicio",
+      "objetivo": "Sube un tramo. Usa la botella para reconocer el descanso.",
+      "dialogo": [
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "No estaba aquí."
+        ]
+      ]
+    },
+    {
+      "etapa": 164,
+      "escena": 32,
+      "titulo": "Las escaleras contadas",
+      "mapa": "escaleraServicio",
+      "objetivo": "Mira la ventana. La puerta del vehículo está abierta.",
+      "dialogo": [
+        [
+          "RADE",
+          "Ahí está otra vez."
+        ]
+      ]
+    },
+    {
+      "etapa": 165,
+      "escena": 32,
+      "titulo": "Las escaleras contadas",
+      "mapa": "escaleraServicio",
+      "objetivo": "Cruza la puerta lateral junto a ese descanso.",
+      "dialogo": []
+    },
+    {
+      "etapa": 169,
+      "escena": 33,
+      "titulo": "La azotea de una casa equivocada",
+      "mapa": "azoteaDesfase",
+      "objetivo": "Asómate desde la azotea.",
+      "dialogo": [
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "¿Dónde estoy?"
+        ],
+        [
+          "RADE",
+          "Esa es mi casa."
+        ],
+        [
+          "RADE",
+          "Estoy enfrente."
+        ],
+        [
+          "RADE",
+          "¿Cómo llegué aquí?"
+        ],
+        [
+          "RADE",
+          "¿Dars?"
+        ],
+        [
+          "RADE",
+          "¡Dars!"
+        ],
+        [
+          "RADE",
+          "¡Oigan!"
+        ]
+      ]
+    },
+    {
+      "etapa": 175,
+      "escena": 34,
+      "titulo": "El tinaco",
+      "mapa": "azoteaDesfase",
+      "objetivo": "Gira la llave del tinaco.",
+      "dialogo": [
+        [
+          "RADE",
+          "Está goteando."
+        ],
+        [
+          "DARS",
+          "No sé dónde está."
+        ],
+        [
+          "GWEN",
+          "¿Y ahora qué quieres que haga?"
+        ],
+        [
+          "DARS",
+          "Ya te dije que no puedo abrir."
+        ],
+        [
+          "GWEN",
+          "Pues llama a alguien."
+        ],
+        [
+          "DARS",
+          "Eso estoy intentando."
+        ],
+        [
+          "GWEN",
+          "Entonces deja de estar preguntándome."
+        ],
+        [
+          "RADE",
+          "¿Dars?"
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "No entiendo nada."
+        ]
+      ]
+    },
+    {
+      "etapa": 181,
+      "escena": 35,
+      "titulo": "La orilla",
+      "mapa": "azoteaDesfase",
+      "objetivo": "Prueba la escalera del borde.",
+      "dialogo": [
+        [
+          "RADE",
+          "Por aquí puedo bajar."
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "Está demasiado lejos."
+        ],
+        [
+          "RADE",
+          "No voy a romperme una pierna por esto."
+        ]
+      ]
+    },
+    {
+      "etapa": 187,
+      "escena": 36,
+      "titulo": "No te puedo ver",
+      "mapa": "azoteaDesfase",
+      "objetivo": "Llama a Dars desde la orilla.",
+      "dialogo": [
+        [
+          "RADE",
+          "¿Bueno?"
+        ],
+        [
+          "DARS",
+          "¿Dónde estás?"
+        ],
+        [
+          "RADE",
+          "En una azotea."
+        ],
+        [
+          "DARS",
+          "..."
+        ],
+        [
+          "DARS",
+          "¿En cuál azotea?"
+        ],
+        [
+          "RADE",
+          "Creo que en la casa de enfrente."
+        ],
+        [
+          "DARS",
+          "¿Cómo llegaste?"
+        ],
+        [
+          "RADE",
+          "Por las escaleras."
+        ],
+        [
+          "DARS",
+          "¿Las mismas?"
+        ],
+        [
+          "RADE",
+          "Sí."
+        ],
+        [
+          "DARS",
+          "Rade, te dije que regresaras."
+        ],
+        [
+          "RADE",
+          "Estoy tratando."
+        ],
+        [
+          "DARS",
+          "Pues no parece."
+        ],
+        [
+          "RADE",
+          "No voy a empezar otra discusión."
+        ],
+        [
+          "DARS",
+          "Yo tampoco quiero."
+        ],
+        [
+          "RADE",
+          "Puedo ver la casa."
+        ],
+        [
+          "DARS",
+          "¿Desde dónde?"
+        ],
+        [
+          "RADE",
+          "Desde arriba. Creo que estoy enfrente."
+        ],
+        [
+          "DARS",
+          "Voy a salir."
+        ],
+        [
+          "RADE",
+          "¿A la calle?"
+        ],
+        [
+          "DARS",
+          "Sí."
+        ],
+        [
+          "RADE",
+          "Te veo."
+        ],
+        [
+          "DARS",
+          "¿Dónde estás?"
+        ],
+        [
+          "RADE",
+          "Aquí arriba."
+        ],
+        [
+          "DARS",
+          "¿Dónde?"
+        ],
+        [
+          "RADE",
+          "¡Enfrente!"
+        ],
+        [
+          "DARS",
+          "No te veo."
+        ],
+        [
+          "RADE",
+          "Estoy en la azotea."
+        ],
+        [
+          "DARS",
+          "¿De cuál?"
+        ],
+        [
+          "RADE",
+          "¡La de enfrente!"
+        ],
+        [
+          "DARS",
+          "Rade, esa casa no tiene azotea."
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "¿Qué?"
+        ],
+        [
+          "DARS",
+          "Es de una planta."
+        ],
+        [
+          "RADE",
+          "Estoy parado encima."
+        ],
+        [
+          "DARS",
+          "¿Encima de qué?"
+        ],
+        [
+          "RADE",
+          "De la casa."
+        ],
+        [
+          "DARS",
+          "No hay nada encima."
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "Dars, tengo miedo."
+        ],
+        [
+          "DARS",
+          "Ya sé."
+        ],
+        [
+          "RADE",
+          "No creo poder salir."
+        ],
+        [
+          "DARS",
+          "Todavía no sabemos eso."
+        ],
+        [
+          "RADE",
+          "No me ves."
+        ],
+        [
+          "DARS",
+          "No."
+        ],
+        [
+          "RADE",
+          "Estoy enfrente de ti."
+        ],
+        [
+          "DARS",
+          "Ya lo sé."
+        ],
+        [
+          "DARS",
+          "Rade."
+        ],
+        [
+          "RADE",
+          "Qué."
+        ],
+        [
+          "DARS",
+          "No te acerques mucho a donde estés parado."
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "DARS",
+          "Si de verdad estás arriba de algo, no quiero que te caigas."
+        ],
+        [
+          "RADE",
+          "Está bien."
+        ]
+      ]
+    },
+    {
+      "etapa": 193,
+      "escena": 37,
+      "titulo": "Lo que Dars no dijo",
+      "mapa": "azoteaDesfase",
+      "objetivo": "Regresa a la marca junto a la puerta.",
+      "dialogo": [
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "Está hablando con alguien."
+        ],
+        [
+          "RADE",
+          "¿Quién está escribiendo estas cosas?"
+        ],
+        [
+          "MARCA DE TIZA",
+          "NO BAJES POR FUERA."
+        ]
+      ]
+    },
+    {
+      "etapa": 199,
+      "escena": 38,
+      "titulo": "La escalera de regreso",
+      "mapa": "escaleraServicio",
+      "objetivo": "Cruza el primer descanso de regreso.",
+      "dialogo": [
+        [
+          "RADE",
+          "Por favor, que sea la misma."
+        ]
+      ]
+    },
+    {
+      "etapa": 200,
+      "escena": 38,
+      "titulo": "La escalera de regreso",
+      "mapa": "escaleraServicio",
+      "objetivo": "Cruza el segundo descanso y busca la caja.",
+      "dialogo": [
+        [
+          "RADE",
+          "Ya vi esto."
+        ]
+      ]
+    },
+    {
+      "etapa": 201,
+      "escena": 38,
+      "titulo": "La escalera de regreso",
+      "mapa": "escaleraServicio",
+      "objetivo": "Recorre los descansos y recoge el desarmador.",
+      "dialogo": [
+        [
+          "RADE",
+          "Por fin algo útil."
+        ],
+        [
+          "INVENTARIO",
+          "Desarmador viejo."
+        ]
+      ]
+    },
+    {
+      "etapa": 205,
+      "escena": 39,
+      "titulo": "El hilo",
+      "mapa": "pasilloDesfaseC2",
+      "objetivo": "Toma el cable que Dars pasa por el hueco.",
+      "dialogo": [
+        [
+          "RADE",
+          "Ya regresé."
+        ],
+        [
+          "DARS",
+          "¿A dónde?"
+        ],
+        [
+          "RADE",
+          "Al pasillo."
+        ],
+        [
+          "DARS",
+          "Ah."
+        ],
+        [
+          "RADE",
+          "¿Sigues ahí?"
+        ],
+        [
+          "DARS",
+          "Sí."
+        ],
+        [
+          "RADE",
+          "¿Qué estás haciendo?"
+        ],
+        [
+          "DARS",
+          "Encontré una extensión eléctrica."
+        ],
+        [
+          "RADE",
+          "¿Para qué?"
+        ],
+        [
+          "DARS",
+          "Quiero pasarla por donde te escuché en la pared."
+        ],
+        [
+          "RADE",
+          "¿La vas a conectar?"
+        ],
+        [
+          "DARS",
+          "No, Rade. No soy idiota."
+        ],
+        [
+          "DARS",
+          "Está desconectada."
+        ],
+        [
+          "RADE",
+          "Bueno."
+        ],
+        [
+          "DARS",
+          "Necesito que regreses al agujero."
+        ],
+        [
+          "RADE",
+          "Ya la tengo."
+        ],
+        [
+          "DARS",
+          "Jala poquito."
+        ],
+        [
+          "DARS",
+          "Sí."
+        ],
+        [
+          "RADE",
+          "¿Lo sentiste?"
+        ],
+        [
+          "DARS",
+          "Sí."
+        ],
+        [
+          "RADE",
+          "Entonces estamos conectados."
+        ],
+        [
+          "DARS",
+          "Por un cable, Rade."
+        ],
+        [
+          "RADE",
+          "Ya sé."
+        ],
+        [
+          "DARS",
+          "Voy a intentar seguirlo."
+        ],
+        [
+          "RADE",
+          "¿Cómo?"
+        ],
+        [
+          "DARS",
+          "Si el cable pasa por un hueco, tiene que haber algo del otro lado."
+        ],
+        [
+          "RADE",
+          "Estoy junto a una pared."
+        ],
+        [
+          "DARS",
+          "Yo también."
+        ],
+        [
+          "RADE",
+          "¿La del aire acondicionado?"
+        ],
+        [
+          "DARS",
+          "Sí."
+        ],
+        [
+          "RADE",
+          "Bueno."
+        ],
+        [
+          "DARS",
+          "No lo sueltes."
+        ],
+        [
+          "RADE",
+          "No lo estoy soltando."
+        ]
+      ]
+    },
+    {
+      "etapa": 211,
+      "escena": 40,
+      "titulo": "Una medida imposible",
+      "mapa": "pasilloDesfaseC2",
+      "objetivo": "Aléjate del hueco sin soltar el cable.",
+      "dialogo": [
+        [
+          "DARS",
+          "¿Cuánto llevas?"
+        ],
+        [
+          "RADE",
+          "No sé. Como tres metros."
+        ],
+        [
+          "DARS",
+          "Imposible."
+        ],
+        [
+          "RADE",
+          "¿Por qué?"
+        ],
+        [
+          "DARS",
+          "La extensión mide dos."
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "¿Estás segura?"
+        ],
+        [
+          "DARS",
+          "La compré hace unos meses. Mide dos metros."
+        ],
+        [
+          "RADE",
+          "Pues aquí hay más."
+        ],
+        [
+          "DARS",
+          "Jala otro poquito."
+        ],
+        [
+          "RADE",
+          "Ya van como cinco."
+        ],
+        [
+          "DARS",
+          "No puede ser."
+        ],
+        [
+          "RADE",
+          "¿Se te está moviendo?"
+        ],
+        [
+          "DARS",
+          "No."
+        ],
+        [
+          "RADE",
+          "¿Cómo que no?"
+        ],
+        [
+          "DARS",
+          "Estoy agarrando el extremo. No se está moviendo."
+        ],
+        [
+          "RADE",
+          "Dars."
+        ],
+        [
+          "DARS",
+          "Qué."
+        ],
+        [
+          "RADE",
+          "Creo que estamos agarrando cosas diferentes."
+        ],
+        [
+          "DARS",
+          "¡Ay!"
+        ],
+        [
+          "RADE",
+          "¿Estás bien?"
+        ],
+        [
+          "DARS",
+          "Sí, me resbalé."
+        ],
+        [
+          "RADE",
+          "Se rompió."
+        ],
+        [
+          "DARS",
+          "Ya vi."
+        ],
+        [
+          "RADE",
+          "No lo jalé tan fuerte."
+        ],
+        [
+          "DARS",
+          "Ya déjalo."
+        ],
+        [
+          "RADE",
+          "Pero..."
+        ],
+        [
+          "DARS",
+          "Ya, Rade."
+        ],
+        [
+          "INVENTARIO",
+          "Cable roto. Los hilos internos se estiraron antes de romperse."
+        ]
+      ]
+    },
+    {
+      "etapa": 217,
+      "escena": 41,
+      "titulo": "El problema de escuchar",
+      "mapa": "pasilloDesfaseC2",
+      "objetivo": "Averigua quién te llama desde la puerta.",
+      "dialogo": [
+        [
+          "RADE",
+          "Oye."
+        ],
+        [
+          "DARS",
+          "¿Qué?"
+        ],
+        [
+          "RADE",
+          "¿Te lastimaste?"
+        ],
+        [
+          "DARS",
+          "Me pegué en la rodilla."
+        ],
+        [
+          "RADE",
+          "¿Mucho?"
+        ],
+        [
+          "DARS",
+          "No."
+        ],
+        [
+          "RADE",
+          "Perdón."
+        ],
+        [
+          "DARS",
+          "No fue culpa tuya."
+        ],
+        [
+          "DARS",
+          "Bueno. No toda."
+        ],
+        [
+          "RADE",
+          "¿Te estás burlando?"
+        ],
+        [
+          "DARS",
+          "Un poquito."
+        ],
+        [
+          "DARS",
+          "Rade."
+        ],
+        [
+          "RADE",
+          "¿Qué?"
+        ],
+        [
+          "DARS · LEJOS",
+          "Ven."
+        ],
+        [
+          "DARS · PARED",
+          "¿Qué pasó?"
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "DARS · LEJOS",
+          "Rade."
+        ],
+        [
+          "DARS · PARED",
+          "¿Con quién estás hablando?"
+        ],
+        [
+          "RADE",
+          "Hay otra voz."
+        ],
+        [
+          "DARS · PARED",
+          "¿Qué voz?"
+        ],
+        [
+          "RADE",
+          "La tuya."
+        ],
+        [
+          "DARS · LEJOS",
+          "Ven."
+        ],
+        [
+          "DARS · PARED",
+          "Rade, no te acerques."
+        ],
+        [
+          "RADE",
+          "No me estoy acercando."
+        ],
+        [
+          "DARS · LEJOS",
+          "Estoy aquí."
+        ],
+        [
+          "DARS · PARED",
+          "No soy yo."
+        ],
+        [
+          "RADE",
+          "Ya sé."
+        ],
+        [
+          "DARS · PARED",
+          "¿Sigue ahí?"
+        ],
+        [
+          "RADE",
+          "No sé."
+        ],
+        [
+          "DARS",
+          "No le contestes."
+        ],
+        [
+          "RADE",
+          "Está bien."
+        ]
+      ]
+    },
+    {
+      "etapa": 223,
+      "escena": 42,
+      "titulo": "Una nota que sí llegó",
+      "mapa": "pasilloDesfaseC2",
+      "objetivo": "Regresa con Dars y lee su segunda nota.",
+      "dialogo": [
+        [
+          "NOTA DE DARS",
+          "¿PUEDES RESPIRAR BIEN? ¿TIENES AGUA?"
+        ],
+        [
+          "NOTA DE DARS",
+          "¿TE DUELE ALGO? ¿SIGUES VIENDO LAS PUERTAS?"
+        ],
+        [
+          "DARS",
+          "Rade."
+        ],
+        [
+          "RADE",
+          "Aquí."
+        ],
+        [
+          "DARS",
+          "Voy a intentar pasar otro papel."
+        ],
+        [
+          "RADE",
+          "Está bien."
+        ],
+        [
+          "DARS",
+          "Esta vez no lo saques de golpe."
+        ],
+        [
+          "RADE",
+          "Sí puedo respirar. No tengo agua. No me duele nada."
+        ],
+        [
+          "RADE",
+          "Y sí, sigo viendo las puertas."
+        ],
+        [
+          "DARS",
+          "Bueno."
+        ],
+        [
+          "RADE",
+          "¿Por qué lo escribiste?"
+        ],
+        [
+          "DARS",
+          "Quiero tenerlo anotado."
+        ],
+        [
+          "RADE",
+          "¿Para qué?"
+        ],
+        [
+          "DARS",
+          "Por si necesitamos explicárselo a alguien."
+        ],
+        [
+          "RADE",
+          "¿A quién?"
+        ],
+        [
+          "DARS",
+          "A quien pueda ayudarnos."
+        ],
+        [
+          "RADE",
+          "¿Le vas a contar esto a alguien?"
+        ],
+        [
+          "DARS",
+          "¿Qué tiene?"
+        ],
+        [
+          "RADE",
+          "Van a pensar que estamos locos."
+        ],
+        [
+          "DARS",
+          "A estas alturas me vale madre lo que piensen."
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "DARS",
+          "Además, una persona encerrada detrás de una puerta no es algo que se deba ocultar."
+        ],
+        [
+          "RADE",
+          "No quiero que venga la policía."
+        ],
+        [
+          "DARS",
+          "No estoy llamando a la policía."
+        ],
+        [
+          "RADE",
+          "Bueno."
+        ],
+        [
+          "DARS",
+          "Todavía."
+        ],
+        [
+          "DARS",
+          "¿Puedes devolverla?"
+        ],
+        [
+          "DARS",
+          "Ya la tengo."
+        ],
+        [
+          "RADE",
+          "Bien."
+        ],
+        [
+          "DARS",
+          "Rade."
+        ],
+        [
+          "RADE",
+          "Qué."
+        ],
+        [
+          "DARS",
+          "La hoja está mojada."
+        ],
+        [
+          "RADE",
+          "¿Qué?"
+        ],
+        [
+          "DARS",
+          "Está empapada."
+        ],
+        [
+          "RADE",
+          "Aquí no hay agua."
+        ],
+        [
+          "DARS",
+          "Pues de mi lado sí está mojada."
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "DARS",
+          "Voy a guardarla de todos modos."
+        ]
+      ]
+    },
+    {
+      "etapa": 224,
+      "escena": 42,
+      "titulo": "Una nota que sí llegó",
+      "mapa": "pasilloDesfaseC2",
+      "objetivo": "Usa el desarmador para retirar la placa de mantenimiento.",
+      "dialogo": [
+        [
+          "RADE",
+          "Ya salió la placa. Debajo hay un pestillo."
+        ]
+      ]
+    },
+    {
+      "etapa": 229,
+      "escena": 43,
+      "titulo": "La habitación del interruptor",
+      "mapa": "cuartoInterruptor",
+      "objetivo": "Examina el tablero de mantenimiento.",
+      "dialogo": [
+        [
+          "RADE",
+          "A ver."
+        ],
+        [
+          "RADE",
+          "Si esto controla las luces..."
+        ],
+        [
+          "RADE",
+          "¿Por qué dice cocina?"
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "¿Esto está conectado a la casa?"
+        ]
+      ]
+    },
+    {
+      "etapa": 230,
+      "escena": 43,
+      "titulo": "La habitación del interruptor",
+      "mapa": "cuartoInterruptor",
+      "objetivo": "Activa PASILLO y CUARTO en el tablero.",
+      "dialogo": [
+        [
+          "RADE",
+          "Ah."
+        ],
+        [
+          "RADE",
+          "Eso sí sirvió."
+        ]
+      ]
+    },
+    {
+      "etapa": 235,
+      "escena": 44,
+      "titulo": "Detrás de los interruptores",
+      "mapa": "conductoMantenimiento",
+      "objetivo": "Quita los tornillos de la rejilla con E.",
+      "dialogo": [
+        [
+          "RADE",
+          "Qué asco."
+        ],
+        [
+          "RADE",
+          "Ese ruido..."
+        ],
+        [
+          "RADE",
+          "Dars."
+        ],
+        [
+          "RADE",
+          "Dars."
+        ],
+        [
+          "DARS",
+          "¿Rade?"
+        ],
+        [
+          "RADE",
+          "Aquí."
+        ],
+        [
+          "DARS",
+          "¿Dónde?"
+        ],
+        [
+          "RADE",
+          "En la pared."
+        ],
+        [
+          "DARS",
+          "No te veo."
+        ],
+        [
+          "RADE",
+          "¿Hay una rejilla frente a ti?"
+        ],
+        [
+          "DARS",
+          "No."
+        ],
+        [
+          "RADE",
+          "Estoy detrás."
+        ],
+        [
+          "DARS",
+          "Aquí solamente hay una pared."
+        ],
+        [
+          "DARS",
+          "Escuché eso."
+        ],
+        [
+          "RADE",
+          "Estoy aquí."
+        ],
+        [
+          "DARS",
+          "¿Puedes salir?"
+        ],
+        [
+          "RADE",
+          "No sé."
+        ],
+        [
+          "RADE",
+          "Vamos."
+        ],
+        [
+          "DARS",
+          "¿Qué estás haciendo?"
+        ],
+        [
+          "RADE",
+          "Quitando una rejilla."
+        ],
+        [
+          "DARS",
+          "Aquí no veo ninguna."
+        ],
+        [
+          "RADE",
+          "Ya sé."
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "No, no, no."
+        ],
+        [
+          "RADE",
+          "¡Dars!"
+        ],
+        [
+          "DARS",
+          "¿Qué pasó?"
+        ],
+        [
+          "RADE",
+          "Te estaba viendo."
+        ],
+        [
+          "DARS",
+          "¿Desde dónde?"
+        ],
+        [
+          "RADE",
+          "Desde la rejilla."
+        ],
+        [
+          "DARS",
+          "Yo no te vi."
+        ],
+        [
+          "RADE",
+          "Ya sé."
+        ],
+        [
+          "DARS",
+          "¿Ahí?"
+        ],
+        [
+          "RADE",
+          "Sí."
+        ],
+        [
+          "DARS",
+          "Entonces estamos cerca."
+        ],
+        [
+          "RADE",
+          "Sí."
+        ],
+        [
+          "DARS",
+          "No te rindas todavía."
+        ],
+        [
+          "RADE",
+          "Está bien."
+        ]
+      ]
+    },
+    {
+      "etapa": 241,
+      "escena": 45,
+      "titulo": "La Figura en el conducto",
+      "mapa": "conductoMantenimiento",
+      "objetivo": "Retrocede por el conducto.",
+      "dialogo": [
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "¿Otra vez tú?"
+        ],
+        [
+          "RADE",
+          "¿Qué quieres?"
+        ],
+        [
+          "RADE",
+          "No voy a ir contigo."
+        ],
+        [
+          "FIGURA",
+          "No te llamé."
+        ],
+        [
+          "RADE",
+          "Entonces quítate."
+        ],
+        [
+          "RADE",
+          "¡Quítate de ahí!"
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "Hijo de tu puta madre."
+        ]
+      ]
+    },
+    {
+      "etapa": 247,
+      "escena": 46,
+      "titulo": "El registro de aire",
+      "mapa": "conductoMantenimiento",
+      "objetivo": "Suelta la tapa del registro. Pulsa E tres veces.",
+      "dialogo": [
+        [
+          "RADE",
+          "¿Otro cuarto?"
+        ],
+        [
+          "RADE",
+          "¿Otra vez el baño?"
+        ],
+        [
+          "RADE",
+          "¿Hola?"
+        ],
+        [
+          "RADE",
+          "¿Hay alguien ahí?"
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "¿Salí?"
+        ],
+        [
+          "GWEN",
+          "¡¿Qué chingados fue eso?!"
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "Creo que sí."
+        ]
+      ]
+    },
+    {
+      "etapa": 253,
+      "escena": 47,
+      "titulo": "El baño de siempre",
+      "mapa": "banoNormalC2",
+      "objetivo": "Revisa la pared de azulejos detrás de ti.",
+      "dialogo": [
+        [
+          "RADE",
+          "No."
+        ],
+        [
+          "RADE",
+          "Aquí estaba."
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "No puede ser."
+        ],
+        [
+          "RADE",
+          "Esto sí salió conmigo."
+        ],
+        [
+          "DARS",
+          "¿Rade?"
+        ]
+      ]
+    },
+    {
+      "etapa": 259,
+      "escena": 48,
+      "titulo": "No estabas aquí",
+      "mapa": "salaC2",
+      "objetivo": "Habla con Dars junto al baño.",
+      "dialogo": [
+        [
+          "DARS",
+          "..."
+        ],
+        [
+          "RADE",
+          "Dars."
+        ],
+        [
+          "DARS",
+          "¿Qué haces ahí?"
+        ],
+        [
+          "RADE",
+          "Salí por el baño."
+        ],
+        [
+          "DARS",
+          "¿Cómo?"
+        ],
+        [
+          "RADE",
+          "Había un conducto."
+        ],
+        [
+          "DARS",
+          "¿Cuál conducto?"
+        ],
+        [
+          "RADE",
+          "Uno que llegaba hasta acá."
+        ],
+        [
+          "DARS",
+          "No hay ningún conducto."
+        ],
+        [
+          "RADE",
+          "Ya sé."
+        ],
+        [
+          "DARS",
+          "¿Cómo que ya sabes?"
+        ],
+        [
+          "RADE",
+          "Desapareció."
+        ],
+        [
+          "DARS",
+          "..."
+        ],
+        [
+          "DARS",
+          "¿Te caíste?"
+        ],
+        [
+          "RADE",
+          "Sí."
+        ],
+        [
+          "DARS",
+          "Estás lleno de polvo."
+        ],
+        [
+          "RADE",
+          "Me pegué al salir."
+        ],
+        [
+          "DARS",
+          "Yo estaba frente a la puerta de tu cuarto."
+        ],
+        [
+          "RADE",
+          "Ya sé."
+        ],
+        [
+          "DARS",
+          "Te escuchaba por la pared."
+        ],
+        [
+          "RADE",
+          "Sí."
+        ],
+        [
+          "DARS",
+          "Después dejé de escucharte."
+        ],
+        [
+          "RADE",
+          "Encontré un conducto."
+        ],
+        [
+          "DARS",
+          "Y apareciste aquí."
+        ],
+        [
+          "RADE",
+          "Sí."
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "¿Me crees ahora?"
+        ],
+        [
+          "DARS",
+          "No sé qué pasó."
+        ],
+        [
+          "RADE",
+          "Pero me viste salir."
+        ],
+        [
+          "DARS",
+          "Te vi salir del baño."
+        ],
+        [
+          "RADE",
+          "¿Y?"
+        ],
+        [
+          "DARS",
+          "Eso es lo que vi, Rade."
+        ],
+        [
+          "RADE",
+          "Ah, bueno."
+        ],
+        [
+          "DARS",
+          "No empieces."
+        ],
+        [
+          "RADE",
+          "No estoy empezando nada."
+        ],
+        [
+          "DARS",
+          "Entonces deja de poner esa cara."
+        ],
+        [
+          "DARS",
+          "¿Te duele?"
+        ],
+        [
+          "RADE",
+          "Un poco."
+        ],
+        [
+          "DARS",
+          "Pues siéntate antes de que te caigas otra vez."
+        ],
+        [
+          "DARS",
+          "O no. Haz lo que quieras."
+        ]
+      ]
+    },
+    {
+      "etapa": 265,
+      "escena": 49,
+      "titulo": "El vaso de agua",
+      "mapa": "cocinaC2",
+      "objetivo": "Toma el vaso de agua que te ofrece Dars.",
+      "dialogo": [
+        [
+          "DARS",
+          "Toma."
+        ],
+        [
+          "RADE",
+          "Gracias."
+        ],
+        [
+          "DARS",
+          "De nada."
+        ],
+        [
+          "RADE",
+          "¿Cuánto tiempo estuve ahí?"
+        ],
+        [
+          "DARS",
+          "Como una hora."
+        ],
+        [
+          "RADE",
+          "¿Nada más?"
+        ],
+        [
+          "DARS",
+          "Casi una hora y media, creo."
+        ],
+        [
+          "RADE",
+          "Sentí que fueron muchas más."
+        ],
+        [
+          "DARS",
+          "No sé."
+        ],
+        [
+          "RADE",
+          "Ya funciona."
+        ],
+        [
+          "DARS",
+          "Qué bueno."
+        ],
+        [
+          "RADE",
+          "¿Por qué estás tan tranquila?"
+        ],
+        [
+          "DARS",
+          "¿Tranquila?"
+        ],
+        [
+          "RADE",
+          "Sí."
+        ],
+        [
+          "DARS",
+          "Rade, llevo una hora intentando abrir una puerta, me lastimé un dedo, casi me caigo por tu culpa y escuché cosas rarísimas detrás de una pared."
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "DARS",
+          "No estoy tranquila."
+        ],
+        [
+          "RADE",
+          "No parece."
+        ],
+        [
+          "DARS",
+          "Pues perdón por no ponerme a gritar."
+        ],
+        [
+          "RADE",
+          "No quería decir eso."
+        ],
+        [
+          "DARS",
+          "Ya."
+        ],
+        [
+          "DARS",
+          "¿Quieres algo para la rodilla?"
+        ],
+        [
+          "RADE",
+          "No."
+        ],
+        [
+          "DARS",
+          "Bueno."
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "¿Tú estás bien?"
+        ],
+        [
+          "DARS",
+          "Me corté con el desarmador."
+        ],
+        [
+          "RADE",
+          "¿Mucho?"
+        ],
+        [
+          "DARS",
+          "No."
+        ],
+        [
+          "RADE",
+          "Hay curitas en el baño."
+        ],
+        [
+          "DARS",
+          "Ya me puse una."
+        ]
+      ]
+    },
+    {
+      "etapa": 271,
+      "escena": 50,
+      "titulo": "No estamos de acuerdo",
+      "mapa": "cocinaC2",
+      "objetivo": "Habla con Dars sobre el pasillo.",
+      "dialogo": [
+        [
+          "DARS",
+          "Oye."
+        ],
+        [
+          "RADE",
+          "Qué."
+        ],
+        [
+          "DARS",
+          "Necesito saber algo."
+        ],
+        [
+          "DARS",
+          "¿De verdad viste a alguien antes de quedarte encerrado?"
+        ],
+        [
+          "RADE",
+          "Sí."
+        ],
+        [
+          "DARS",
+          "¿A una persona?"
+        ],
+        [
+          "RADE",
+          "No sé si llamarlo así."
+        ],
+        [
+          "DARS",
+          "¿Cómo que no sabes?"
+        ],
+        [
+          "RADE",
+          "Era una silueta."
+        ],
+        [
+          "DARS",
+          "¿Negra?"
+        ],
+        [
+          "RADE",
+          "Sí."
+        ],
+        [
+          "DARS",
+          "¿Con forma humana?"
+        ],
+        [
+          "RADE",
+          "Más o menos."
+        ],
+        [
+          "DARS",
+          "¿Y la reconociste?"
+        ],
+        [
+          "RADE",
+          "Sí."
+        ],
+        [
+          "DARS",
+          "Entonces sabes quién era."
+        ],
+        [
+          "RADE",
+          "No exactamente."
+        ],
+        [
+          "DARS",
+          "Rade."
+        ],
+        [
+          "RADE",
+          "Qué."
+        ],
+        [
+          "DARS",
+          "¿Me estás ocultando algo?"
+        ],
+        [
+          "RADE",
+          "No."
+        ],
+        [
+          "DARS",
+          "No te creo."
+        ],
+        [
+          "RADE",
+          "Pues es tu problema."
+        ],
+        [
+          "DARS",
+          "¿Sabes qué?"
+        ],
+        [
+          "RADE",
+          "Qué."
+        ],
+        [
+          "DARS",
+          "Estoy harta."
+        ],
+        [
+          "RADE",
+          "¿De qué?"
+        ],
+        [
+          "DARS",
+          "De hablar contigo así."
+        ],
+        [
+          "RADE",
+          "Yo también estoy cansado."
+        ],
+        [
+          "DARS",
+          "No. No es eso."
+        ],
+        [
+          "DARS",
+          "Todo el tiempo haces lo mismo."
+        ],
+        [
+          "RADE",
+          "¿Qué cosa?"
+        ],
+        [
+          "DARS",
+          "Preguntas, reclamas, te enojas. Pero cuando alguien te pregunta algo, no contestas."
+        ],
+        [
+          "RADE",
+          "No te puedo contar algo que ni yo entiendo."
+        ],
+        [
+          "DARS",
+          "Entonces di eso."
+        ],
+        [
+          "RADE",
+          "¡Es lo que te estoy diciendo!"
+        ],
+        [
+          "DARS",
+          "No. Me estás diciendo que no sabes quién es alguien que acabas de admitir que reconociste."
+        ],
+        [
+          "DARS",
+          "Mira, ni siquiera quiero que me cuentes todo."
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "DARS",
+          "Pero deja de tratarme como si fuera estúpida."
+        ],
+        [
+          "RADE",
+          "No te estoy tratando así."
+        ],
+        [
+          "DARS",
+          "Pues a mí me parece que sí."
+        ],
+        [
+          "RADE",
+          "¿Ya terminaste?"
+        ],
+        [
+          "DARS",
+          "Sí."
+        ],
+        [
+          "RADE",
+          "Bueno."
+        ],
+        [
+          "DARS",
+          "Y no voy a seguir revisando tu computadora."
+        ],
+        [
+          "RADE",
+          "Nadie te pidió que..."
+        ],
+        [
+          "DARS",
+          "Me pediste ayuda hace una hora."
+        ],
+        [
+          "DARS",
+          "Ya no quiero."
+        ]
+      ]
+    },
+    {
+      "etapa": 277,
+      "escena": 51,
+      "titulo": "La persona de la sala",
+      "mapa": "salaC2",
+      "objetivo": "Pregunta a Gwen qué pasó mientras estabas encerrado.",
+      "dialogo": [
+        [
+          "GWEN",
+          "¿Ya acabaron?"
+        ],
+        [
+          "RADE",
+          "¿Qué?"
+        ],
+        [
+          "GWEN",
+          "De hacer ruido."
+        ],
+        [
+          "RADE",
+          "Sí."
+        ],
+        [
+          "GWEN",
+          "¿Y la puerta?"
+        ],
+        [
+          "RADE",
+          "Ya está bien."
+        ],
+        [
+          "GWEN",
+          "¿Ves? Tanto escándalo para nada."
+        ],
+        [
+          "RADE",
+          "No fue para nada."
+        ],
+        [
+          "GWEN",
+          "¿Entonces?"
+        ],
+        [
+          "RADE",
+          "Me quedé encerrado."
+        ],
+        [
+          "GWEN",
+          "Pues ya saliste."
+        ],
+        [
+          "RADE",
+          "Sí."
+        ],
+        [
+          "GWEN",
+          "Entonces ya. Mañana tienen que recoger todo lo de la cena."
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "GWEN",
+          "¿Me escuchaste?"
+        ],
+        [
+          "RADE",
+          "Sí."
+        ],
+        [
+          "GWEN",
+          "Y no dejen la luz prendida toda la noche."
+        ],
+        [
+          "RADE",
+          "Bueno."
+        ],
+        [
+          "GWEN",
+          "Ya vete a dormir."
+        ]
+      ]
+    },
+    {
+      "etapa": 283,
+      "escena": 52,
+      "titulo": "La pared de siempre",
+      "mapa": "dormitorioRadeC2",
+      "objetivo": "Examina la rejilla del aire acondicionado.",
+      "dialogo": [
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "Aquí estaba."
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "No hay nada."
+        ],
+        [
+          "RADE",
+          "Apenas cabe una mano."
+        ],
+        [
+          "RADE",
+          "Al menos esto no desapareció."
+        ],
+        [
+          "RADE",
+          "La dejó aquí."
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "Sí pasó."
+        ]
+      ]
+    },
+    {
+      "etapa": 289,
+      "escena": 53,
+      "titulo": "La misma computadora",
+      "mapa": "computadoraC2",
+      "objetivo": "Usa la computadora de Rade.",
+      "dialogo": [
+        [
+          "RADE",
+          "Qué pinche cosa."
+        ]
+      ]
+    },
+    {
+      "etapa": 290,
+      "escena": 53,
+      "titulo": "La misma computadora",
+      "mapa": "computadoraC2",
+      "objetivo": "Usa la computadora de Rade.",
+      "dialogo": [],
+      "opciones": [
+        "Archivos del proyecto",
+        "Consola",
+        "Fecha y hora",
+        "Apagar"
+      ]
+    },
+    {
+      "etapa": 291,
+      "escena": 53,
+      "titulo": "La misma computadora",
+      "mapa": "computadoraC2",
+      "objetivo": "Usa la computadora de Rade.",
+      "dialogo": [
+        [
+          "RADE",
+          "Aquí está todo."
+        ],
+        [
+          "RADE",
+          "No falta nada."
+        ]
+      ]
+    },
+    {
+      "etapa": 292,
+      "escena": 53,
+      "titulo": "La misma computadora",
+      "mapa": "computadoraC2",
+      "objetivo": "Usa la computadora de Rade.",
+      "dialogo": [
+        [
+          "RADE",
+          "No pienso ejecutarlo otra vez."
+        ]
+      ]
+    },
+    {
+      "etapa": 293,
+      "escena": 53,
+      "titulo": "La misma computadora",
+      "mapa": "computadoraC2",
+      "objetivo": "Usa la computadora de Rade.",
+      "dialogo": [
+        [
+          "FECHA Y HORA",
+          "25 de diciembre · 11:47 p. m."
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "Otra vez."
+        ],
+        [
+          "RADE",
+          "¿Por qué sigues ahí?"
+        ],
+        [
+          "RADE",
+          "No."
+        ],
+        [
+          "RADE",
+          "No voy a pelearme contigo."
+        ]
+      ]
+    },
+    {
+      "etapa": 294,
+      "escena": 53,
+      "titulo": "La misma computadora",
+      "mapa": "computadoraC2",
+      "objetivo": "Usa la computadora de Rade.",
+      "dialogo": [
+        [
+          "COMPUTADORA",
+          "Apagando…"
+        ]
+      ]
+    },
+    {
+      "etapa": 295,
+      "escena": 54,
+      "titulo": "La pantalla apagada",
+      "mapa": "computadoraC2",
+      "objetivo": "Revisa la luz verde debajo del escritorio.",
+      "dialogo": [
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "Ya está."
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "Está apagado."
+        ],
+        [
+          "RADE",
+          "¿Y esto?"
+        ],
+        [
+          "RADE",
+          "No recuerdo dejarla aquí."
+        ],
+        [
+          "INVENTARIO",
+          "Memoria USB sin etiqueta."
+        ]
+      ]
+    },
+    {
+      "etapa": 301,
+      "escena": 55,
+      "titulo": "No revises mis cosas",
+      "mapa": "dormitorioRadeC2",
+      "objetivo": "Habla con Dars antes de salir.",
+      "dialogo": [
+        [
+          "RADE",
+          "¿Qué haces?"
+        ],
+        [
+          "DARS",
+          "Guardando mis cosas."
+        ],
+        [
+          "RADE",
+          "Ya veo."
+        ],
+        [
+          "DARS",
+          "Entonces para qué preguntas."
+        ],
+        [
+          "RADE",
+          "¿Te vas?"
+        ],
+        [
+          "DARS",
+          "Sí."
+        ],
+        [
+          "RADE",
+          "¿A estas horas?"
+        ],
+        [
+          "DARS",
+          "Sí."
+        ],
+        [
+          "RADE",
+          "¿Por qué?"
+        ],
+        [
+          "DARS",
+          "¿En serio me estás preguntando?"
+        ],
+        [
+          "DARS",
+          "No me quiero quedar aquí."
+        ],
+        [
+          "RADE",
+          "Ya no está pasando nada."
+        ],
+        [
+          "DARS",
+          "Tú no sabes eso."
+        ],
+        [
+          "RADE",
+          "Apagué la computadora."
+        ],
+        [
+          "DARS",
+          "Qué bueno."
+        ],
+        [
+          "RADE",
+          "¿Qué estabas escribiendo?"
+        ],
+        [
+          "DARS",
+          "Cosas."
+        ],
+        [
+          "RADE",
+          "¿Sobre el pasillo?"
+        ],
+        [
+          "DARS",
+          "Sí."
+        ],
+        [
+          "RADE",
+          "¿Me lo prestas?"
+        ],
+        [
+          "DARS",
+          "No."
+        ],
+        [
+          "RADE",
+          "Quiero ver si..."
+        ],
+        [
+          "DARS",
+          "Es mi cuaderno."
+        ],
+        [
+          "RADE",
+          "Solamente quiero..."
+        ],
+        [
+          "DARS",
+          "Te dije que no."
+        ],
+        [
+          "RADE",
+          "Bueno."
+        ],
+        [
+          "DARS",
+          "Voy a pedir que vengan por mí."
+        ],
+        [
+          "RADE",
+          "Puedo acompañarte."
+        ],
+        [
+          "DARS",
+          "No hace falta."
+        ],
+        [
+          "RADE",
+          "Es de madrugada."
+        ],
+        [
+          "DARS",
+          "Ya sé qué hora es."
+        ],
+        [
+          "RADE",
+          "Está bien."
+        ],
+        [
+          "DARS",
+          "Rade."
+        ],
+        [
+          "RADE",
+          "Qué."
+        ],
+        [
+          "DARS",
+          "No vuelvas a tocar mis cosas sin preguntarme."
+        ],
+        [
+          "RADE",
+          "No las toqué."
+        ],
+        [
+          "DARS",
+          "Te vi viendo mi mochila."
+        ],
+        [
+          "RADE",
+          "Mirar no es tocar."
+        ],
+        [
+          "DARS",
+          "Qué bueno que sabes la diferencia."
+        ]
+      ]
+    },
+    {
+      "etapa": 307,
+      "escena": 56,
+      "titulo": "La puerta principal",
+      "mapa": "salaC2",
+      "objetivo": "Ve a la entrada principal.",
+      "dialogo": [
+        [
+          "RADE",
+          "Oye."
+        ],
+        [
+          "DARS",
+          "Qué."
+        ],
+        [
+          "RADE",
+          "Gracias por ayudarme."
+        ],
+        [
+          "DARS",
+          "..."
+        ],
+        [
+          "DARS",
+          "Está bien."
+        ],
+        [
+          "RADE",
+          "No sé qué hubiera hecho si..."
+        ],
+        [
+          "DARS",
+          "Rade."
+        ],
+        [
+          "RADE",
+          "Qué."
+        ],
+        [
+          "DARS",
+          "Estoy muy cansada."
+        ],
+        [
+          "RADE",
+          "Sí."
+        ],
+        [
+          "DARS",
+          "No quiero hablar de esto ahorita."
+        ],
+        [
+          "RADE",
+          "Bueno."
+        ]
+      ]
+    },
+    {
+      "etapa": 313,
+      "escena": 57,
+      "titulo": "Afuera sí pasa el tiempo",
+      "mapa": "exteriorC2",
+      "objetivo": "Sal hasta el sendero y mira la calle.",
+      "dialogo": [
+        [
+          "RADE",
+          "¿Ya vienen por ti?"
+        ],
+        [
+          "DARS",
+          "Estoy esperando que me contesten."
+        ],
+        [
+          "RADE",
+          "Ah."
+        ],
+        [
+          "RADE",
+          "Hace frío."
+        ],
+        [
+          "DARS",
+          "Sí."
+        ],
+        [
+          "RADE",
+          "Oye."
+        ],
+        [
+          "DARS",
+          "Qué."
+        ],
+        [
+          "RADE",
+          "¿Vas a contar lo que pasó?"
+        ],
+        [
+          "DARS",
+          "No sé."
+        ],
+        [
+          "RADE",
+          "No quiero que..."
+        ],
+        [
+          "DARS",
+          "Rade, no me digas qué puedo contar."
+        ],
+        [
+          "DARS",
+          "No pienso ir por ahí diciendo que vi un monstruo."
+        ],
+        [
+          "RADE",
+          "No era un monstruo."
+        ],
+        [
+          "DARS",
+          "Entonces ¿qué era?"
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "DARS",
+          "Exactamente."
+        ],
+        [
+          "RADE",
+          "Ya."
+        ],
+        [
+          "DARS",
+          "Me van a recoger más adelante."
+        ],
+        [
+          "RADE",
+          "Te acompaño."
+        ],
+        [
+          "DARS",
+          "No hace falta."
+        ],
+        [
+          "RADE",
+          "Es una cuadra."
+        ],
+        [
+          "DARS",
+          "No quiero que vengas."
+        ],
+        [
+          "RADE",
+          "Bueno."
+        ],
+        [
+          "DARS",
+          "Nos vemos."
+        ],
+        [
+          "RADE",
+          "Sí."
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "Chingada madre."
+        ]
+      ]
+    },
+    {
+      "etapa": 319,
+      "escena": 58,
+      "titulo": "La calle sigue ahí",
+      "mapa": "exteriorC2",
+      "objetivo": "Busca un sitio donde sentarte y despejarte.",
+      "dialogo": [
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "Necesito salir un rato de aquí."
+        ]
+      ]
+    },
+    {
+      "etapa": 325,
+      "escena": 59,
+      "titulo": "La tienda de la esquina",
+      "mapa": "tiendaNocturna",
+      "objetivo": "Pide una botella de agua al empleado.",
+      "dialogo": [
+        [
+          "EMPLEADO",
+          "Buenas noches."
+        ],
+        [
+          "RADE",
+          "Buenas."
+        ],
+        [
+          "EMPLEADO",
+          "¿Todo bien?"
+        ],
+        [
+          "RADE",
+          "Sí."
+        ],
+        [
+          "EMPLEADO",
+          "Ah, bueno."
+        ],
+        [
+          "EMPLEADO",
+          "Te falta dinero."
+        ],
+        [
+          "RADE",
+          "Ah."
+        ],
+        [
+          "EMPLEADO",
+          "¿Vas a llevar algo más?"
+        ],
+        [
+          "RADE",
+          "No."
+        ],
+        [
+          "EMPLEADO",
+          "¿Bolsa?"
+        ],
+        [
+          "RADE",
+          "No, gracias."
+        ],
+        [
+          "EMPLEADO",
+          "¿Necesitas ticket?"
+        ],
+        [
+          "RADE",
+          "Sí."
+        ],
+        [
+          "RADE",
+          "Por lo menos aquí sí funciona el reloj."
+        ]
+      ]
+    },
+    {
+      "etapa": 331,
+      "escena": 60,
+      "titulo": "Una conversación incómoda",
+      "mapa": "tiendaNocturna",
+      "objetivo": "Habla con el empleado antes de irte.",
+      "dialogo": [
+        [
+          "EMPLEADO",
+          "¿Necesitabas algo?"
+        ],
+        [
+          "RADE",
+          "¿Has tenido problemas con la luz?"
+        ],
+        [
+          "EMPLEADO",
+          "¿Aquí?"
+        ],
+        [
+          "RADE",
+          "Sí."
+        ],
+        [
+          "EMPLEADO",
+          "No. ¿Por?"
+        ],
+        [
+          "RADE",
+          "Se fue en mi casa."
+        ],
+        [
+          "EMPLEADO",
+          "Ah."
+        ],
+        [
+          "RADE",
+          "Y la computadora empezó a fallar."
+        ],
+        [
+          "EMPLEADO",
+          "Pues puede ser por eso."
+        ],
+        [
+          "RADE",
+          "Sí."
+        ],
+        [
+          "EMPLEADO",
+          "¿Ya volvió?"
+        ],
+        [
+          "RADE",
+          "Sí."
+        ],
+        [
+          "EMPLEADO",
+          "Entonces qué bueno."
+        ],
+        [
+          "EMPLEADO",
+          "¿Algo más?"
+        ],
+        [
+          "RADE",
+          "No."
+        ],
+        [
+          "EMPLEADO",
+          "Bueno."
+        ],
+        [
+          "RADE",
+          "¿No se te ha cambiado la hora de la caja?"
+        ],
+        [
+          "EMPLEADO",
+          "No."
+        ],
+        [
+          "RADE",
+          "¿Ni de la computadora?"
+        ],
+        [
+          "EMPLEADO",
+          "No tenemos computadora."
+        ],
+        [
+          "RADE",
+          "Ah."
+        ],
+        [
+          "EMPLEADO",
+          "¿Por qué?"
+        ],
+        [
+          "RADE",
+          "Nada."
+        ],
+        [
+          "EMPLEADO",
+          "Bueno."
+        ]
+      ]
+    },
+    {
+      "etapa": 337,
+      "escena": 61,
+      "titulo": "La parada",
+      "mapa": "paradaNocturna",
+      "objetivo": "Siéntate en la parada.",
+      "dialogo": [
+        [
+          "DESCONOCIDO",
+          "¿Está pasando el camión?"
+        ],
+        [
+          "RADE",
+          "No sé."
+        ],
+        [
+          "DESCONOCIDO",
+          "Ya llevo un rato aquí."
+        ],
+        [
+          "RADE",
+          "Ah."
+        ],
+        [
+          "DESCONOCIDO",
+          "¿Qué hora es?"
+        ],
+        [
+          "RADE",
+          "Una y media."
+        ],
+        [
+          "DESCONOCIDO",
+          "Está cabrón."
+        ],
+        [
+          "RADE",
+          "Sí."
+        ],
+        [
+          "DESCONOCIDO",
+          "¿Te caíste?"
+        ],
+        [
+          "RADE",
+          "Sí."
+        ],
+        [
+          "DESCONOCIDO",
+          "Se ve feo."
+        ],
+        [
+          "RADE",
+          "No es para tanto."
+        ],
+        [
+          "DESCONOCIDO",
+          "Bueno."
+        ],
+        [
+          "DESCONOCIDO",
+          "¿Vienes de una fiesta?"
+        ],
+        [
+          "RADE",
+          "No."
+        ],
+        [
+          "DESCONOCIDO",
+          "Ah."
+        ],
+        [
+          "RADE",
+          "De mi casa."
+        ],
+        [
+          "DESCONOCIDO",
+          "¿Y qué haces aquí?"
+        ],
+        [
+          "RADE",
+          "Necesitaba salir."
+        ],
+        [
+          "RADE",
+          "¿Alguna vez te ha pasado algo que no puedes explicar?"
+        ],
+        [
+          "DESCONOCIDO",
+          "¿Cómo qué?"
+        ],
+        [
+          "RADE",
+          "Algo raro."
+        ],
+        [
+          "DESCONOCIDO",
+          "Pues depende."
+        ],
+        [
+          "RADE",
+          "Algo que viste y nadie más vio."
+        ],
+        [
+          "DESCONOCIDO",
+          "¿Andas bien?"
+        ],
+        [
+          "RADE",
+          "Sí."
+        ],
+        [
+          "DESCONOCIDO",
+          "Ah, bueno."
+        ],
+        [
+          "DESCONOCIDO",
+          "Voy a caminar. Está muy frío."
+        ],
+        [
+          "RADE",
+          "Está bien."
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "Me escucho como un pinche loco."
+        ]
+      ]
+    },
+    {
+      "etapa": 343,
+      "escena": 62,
+      "titulo": "Una llamada que sí se puede hacer",
+      "mapa": "paradaNocturna",
+      "objetivo": "Abre el contacto de Dars en el teléfono.",
+      "dialogo": [
+        [
+          "TELÉFONO",
+          "Dars · Señal completa"
+        ]
+      ]
+    },
+    {
+      "etapa": 344,
+      "escena": 62,
+      "titulo": "Una llamada que sí se puede hacer",
+      "mapa": "paradaNocturna",
+      "objetivo": "Abre el contacto de Dars en el teléfono.",
+      "dialogo": [],
+      "opciones": [
+        "Gracias. Ya estoy afuera.",
+        "Necesito hablar contigo.",
+        "¿Por qué te fuiste así?",
+        "No enviar nada."
+      ]
+    },
+    {
+      "etapa": 349,
+      "escena": 63,
+      "titulo": "La calle lateral",
+      "mapa": "calleLateral",
+      "objetivo": "Camina hasta la ventana de la calle lateral.",
+      "dialogo": [
+        [
+          "VOZ LEJANA",
+          "Ya apaga eso."
+        ],
+        [
+          "OTRA VOZ",
+          "Ahorita."
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "Todo el mundo está en su casa."
+        ],
+        [
+          "RADE",
+          "Qué bonito."
+        ],
+        [
+          "RADE",
+          "Ya, cabrón."
+        ]
+      ]
+    },
+    {
+      "etapa": 355,
+      "escena": 64,
+      "titulo": "El teléfono se equivoca",
+      "mapa": "calleLateral",
+      "objetivo": "Revisa la hora del teléfono bajo la farola.",
+      "dialogo": [
+        [
+          "TELÉFONO",
+          "11:47 p. m."
+        ],
+        [
+          "TELÉFONO",
+          "12:31 a. m. La hora vuelve a la normalidad."
+        ],
+        [
+          "RADE",
+          "Otra vez esa hora."
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "Uno sí. El otro no."
+        ]
+      ]
+    },
+    {
+      "etapa": 361,
+      "escena": 65,
+      "titulo": "El camino de vuelta",
+      "mapa": "exteriorC2",
+      "objetivo": "Vuelve al sendero frente a casa.",
+      "dialogo": [
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "La dejé apagada."
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "Todavía ni amanece."
+        ],
+        [
+          "RADE",
+          "Gira despacio."
+        ]
+      ]
+    },
+    {
+      "etapa": 367,
+      "escena": 66,
+      "titulo": "Nadie esperó despierto",
+      "mapa": "salaC2",
+      "objetivo": "Entra a la sala y deja los zapatos.",
+      "dialogo": [
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "Ya ni sé para qué hago esto."
+        ]
+      ]
+    },
+    {
+      "etapa": 368,
+      "escena": 66,
+      "titulo": "Nadie esperó despierto",
+      "mapa": "salaC2",
+      "objetivo": "Entra a la sala y deja los zapatos.",
+      "dialogo": [],
+      "opciones": [
+        "Ir a lavar los platos",
+        "Dejarlos para mañana"
+      ]
+    },
+    {
+      "etapa": 373,
+      "escena": 67,
+      "titulo": "La luz que no apagué",
+      "mapa": "dormitorioRadeC2",
+      "objetivo": "Examina el reloj y siéntate en la cama.",
+      "dialogo": [
+        [
+          "RADE",
+          "La había apagado."
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "Tal vez la dejé prendida."
+        ],
+        [
+          "RADE",
+          "¿La cerré?"
+        ],
+        [
+          "RADE",
+          "Bueno."
+        ],
+        [
+          "RADE",
+          "Tengo que revisar lo que traigo."
+        ]
+      ]
+    },
+    {
+      "etapa": 379,
+      "escena": 68,
+      "titulo": "Las pruebas",
+      "mapa": "dormitorioRadeC2",
+      "objetivo": "Ordena los objetos encontrados sobre la cama.",
+      "dialogo": [
+        [
+          "SOBRE LA CAMA",
+          "Cinta con cabello blanco. Cable roto. Nota de Dars. Memoria USB."
+        ],
+        [
+          "RADE",
+          "Esto estaba en el cuarto de los muebles."
+        ],
+        [
+          "RADE",
+          "Podría ser de Dars."
+        ],
+        [
+          "RADE",
+          "O de cualquiera."
+        ],
+        [
+          "RADE",
+          "Esto sí lo agarramos los dos."
+        ],
+        [
+          "RADE",
+          "Dos metros."
+        ],
+        [
+          "RADE",
+          "Y yo saqué como cinco."
+        ],
+        [
+          "RADE",
+          "Ella escribió esto."
+        ],
+        [
+          "RADE",
+          "¿Puedes respirar bien?"
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "Sí estaba intentando ayudar."
+        ],
+        [
+          "RADE",
+          "No recuerdo haberla conectado."
+        ],
+        [
+          "RADE",
+          "¿Será de Dars?"
+        ]
+      ],
+      "variantes": [
+        {
+          "flags": 4,
+          "dialogo": [
+            [
+              "SOBRE LA CAMA",
+              "Cinta con cabello blanco. Cable roto. Nota mojada. Memoria USB sin etiqueta."
+            ],
+            [
+              "RADE",
+              "Esto estaba en el cuarto de los muebles."
+            ],
+            [
+              "RADE",
+              "Podría ser de Dars."
+            ],
+            [
+              "RADE",
+              "O de cualquiera."
+            ],
+            [
+              "RADE",
+              "Esto sí lo agarramos los dos."
+            ],
+            [
+              "RADE",
+              "Dos metros."
+            ],
+            [
+              "RADE",
+              "Y yo saqué como cinco."
+            ],
+            [
+              "RADE",
+              "Ella escribió esto."
+            ],
+            [
+              "RADE",
+              "¿Puedes respirar bien?"
+            ],
+            [
+              "RADE",
+              "..."
+            ],
+            [
+              "RADE",
+              "Sí estaba intentando ayudar."
+            ],
+            [
+              "RADE",
+              "No recuerdo haberla conectado."
+            ],
+            [
+              "RADE",
+              "¿Será de Dars?"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "etapa": 385,
+      "escena": 69,
+      "titulo": "Una computadora normal",
+      "mapa": "computadoraC2",
+      "objetivo": "Enciende la computadora y conecta la USB.",
+      "dialogo": [
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "Solamente voy a revisar la memoria."
+        ],
+        [
+          "RADE",
+          "Bien."
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "Es de ella."
+        ],
+        [
+          "RADE",
+          "La dejó conectada."
+        ]
+      ]
+    },
+    {
+      "etapa": 391,
+      "escena": 70,
+      "titulo": "Las cosas de Dars",
+      "mapa": "computadoraC2",
+      "objetivo": "Decide qué carpetas abrir.",
+      "dialogo": [
+        [
+          "MEMORIA USB",
+          "Carpetas: Java, Escuela, Fotos, Trabajo"
+        ]
+      ]
+    },
+    {
+      "etapa": 392,
+      "escena": 70,
+      "titulo": "Las cosas de Dars",
+      "mapa": "computadoraC2",
+      "objetivo": "Decide qué carpetas abrir.",
+      "dialogo": [],
+      "opciones": [
+        "Abrir solamente Java",
+        "Revisar todas las carpetas"
+      ]
+    },
+    {
+      "etapa": 393,
+      "escena": 70,
+      "titulo": "Las cosas de Dars",
+      "mapa": "computadoraC2",
+      "objetivo": "Decide qué carpetas abrir.",
+      "dialogo": [
+        [
+          "RADE",
+          "No tengo por qué meterme en sus cosas."
+        ],
+        [
+          "RADE",
+          "Solamente necesito encontrar el programa."
+        ]
+      ]
+    },
+    {
+      "etapa": 394,
+      "escena": 70,
+      "titulo": "Las cosas de Dars",
+      "mapa": "computadoraC2",
+      "objetivo": "Decide qué carpetas abrir.",
+      "dialogo": [
+        [
+          "MEMORIA USB",
+          "Documentos de escuela, fotos y trabajos personales de Dars."
+        ]
+      ]
+    },
+    {
+      "etapa": 397,
+      "escena": 71,
+      "titulo": "El archivo que sí ejecutaron",
+      "mapa": "computadoraC2",
+      "objetivo": "Abre la carpeta Java y respalda el registro.",
+      "dialogo": [
+        [
+          "RADE",
+          "Esta es la versión que estaba usando."
+        ],
+        [
+          "RADE",
+          "Otra vez las once cuarenta y siete."
+        ],
+        [
+          "RADE",
+          "Se quedó esperando una entrada."
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "Ni siquiera se cerró bien."
+        ],
+        [
+          "RADE",
+          "No voy a encender esa cosa otra vez."
+        ],
+        [
+          "REGISTRO DE EJECUCIÓN",
+          "23:47:08 · Inicialización completa. Último registro disponible."
+        ]
+      ]
+    },
+    {
+      "etapa": 403,
+      "escena": 72,
+      "titulo": "La línea de código",
+      "mapa": "computadoraC2",
+      "objetivo": "Lee la rutina del reloj en el código.",
+      "dialogo": [
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "Esto lo escribí yo."
+        ],
+        [
+          "FRAGMENTO JAVA",
+          "// TODO: revisar el salto de tiempo"
+        ],
+        [
+          "FRAGMENTO JAVA",
+          "// a veces la ventana no responde"
+        ],
+        [
+          "RADE",
+          "Ah."
+        ],
+        [
+          "RADE",
+          "Ya estaba fallando."
+        ],
+        [
+          "RADE",
+          "Era un problema del reloj."
+        ],
+        [
+          "RADE",
+          "No de..."
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "No sé de qué era."
+        ]
+      ]
+    },
+    {
+      "etapa": 409,
+      "escena": 73,
+      "titulo": "El registro que no escribió",
+      "mapa": "computadoraC2",
+      "objetivo": "Abre el archivo temporal que apareció.",
+      "dialogo": [
+        [
+          "RADE",
+          "¿Y este?"
+        ],
+        [
+          "RADE",
+          "Bueno."
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "Qué raro."
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "Esto no es normal."
+        ],
+        [
+          "RADE",
+          "No."
+        ],
+        [
+          "PROPIEDADES DEL ARCHIVO",
+          "Fecha de modificación: 25/12, 23:47. Tamaño: —"
+        ]
+      ]
+    },
+    {
+      "etapa": 415,
+      "escena": 74,
+      "titulo": "El ruido detrás de la silla",
+      "mapa": "computadoraC2",
+      "objetivo": "Mira detrás de la silla.",
+      "dialogo": [
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "No voy a voltear cada vez que escucho algo."
+        ],
+        [
+          "RADE",
+          "¿Hay alguien ahí?"
+        ],
+        [
+          "RADE",
+          "Bien."
+        ]
+      ]
+    },
+    {
+      "etapa": 421,
+      "escena": 75,
+      "titulo": "Lo que no debería importarle",
+      "mapa": "dormitorioRadeC2",
+      "objetivo": "Mira el teléfono y acuéstate.",
+      "dialogo": [
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "Mañana."
+        ]
+      ],
+      "variantes": [
+        {
+          "flags": 1024,
+          "dialogo": [
+            [
+              "DARS · RESPUESTA POSTERIOR",
+              "Está bien. Descansa."
+            ],
+            [
+              "RADE",
+              "..."
+            ],
+            [
+              "RADE",
+              "..."
+            ],
+            [
+              "RADE",
+              "Mañana."
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "etapa": 427,
+      "escena": 76,
+      "titulo": "Un recuerdo que no aclara nada",
+      "mapa": "recuerdoDars",
+      "objetivo": "Un recuerdo.",
+      "dialogo": [
+        [
+          "VOZ DESCONOCIDA",
+          "No te vayas todavía."
+        ]
+      ]
+    },
+    {
+      "etapa": 433,
+      "escena": 77,
+      "titulo": "Despertar",
+      "mapa": "dormitorioRadeC2",
+      "objetivo": "Ya es de mañana.",
+      "dialogo": [
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "Qué sueño tan de la chingada."
+        ]
+      ]
+    },
+    {
+      "etapa": 439,
+      "escena": 78,
+      "titulo": "Buenos días",
+      "mapa": "salaC2",
+      "objetivo": "Habla con Gwen antes de desayunar.",
+      "dialogo": [
+        [
+          "GWEN",
+          "¿Ya te levantaste?"
+        ],
+        [
+          "RADE",
+          "Sí."
+        ],
+        [
+          "GWEN",
+          "Ya era hora."
+        ],
+        [
+          "RADE",
+          "¿Qué hora es?"
+        ],
+        [
+          "GWEN",
+          "La que marca el reloj."
+        ],
+        [
+          "RADE",
+          "Bueno."
+        ],
+        [
+          "GWEN",
+          "¿Ya se fue Dars?"
+        ],
+        [
+          "RADE",
+          "Sí."
+        ],
+        [
+          "GWEN",
+          "¿Desde cuándo?"
+        ],
+        [
+          "RADE",
+          "Anoche."
+        ],
+        [
+          "GWEN",
+          "¿Y por qué no avisaron?"
+        ],
+        [
+          "RADE",
+          "No sé."
+        ],
+        [
+          "GWEN",
+          "Siempre hacen lo que quieren."
+        ],
+        [
+          "GWEN",
+          "¿Qué van a hacer hoy?"
+        ],
+        [
+          "RADE",
+          "No sé."
+        ],
+        [
+          "GWEN",
+          "Todavía tienes los platos de anoche."
+        ],
+        [
+          "GWEN",
+          "Pues tienes cosas que recoger."
+        ],
+        [
+          "RADE",
+          "Sí."
+        ],
+        [
+          "GWEN",
+          "Y el baño quedó hecho un desastre."
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "Ahorita lo limpio."
+        ],
+        [
+          "GWEN",
+          "Más te vale."
+        ]
+      ],
+      "variantes": [
+        {
+          "flags": 512,
+          "dialogo": [
+            [
+              "GWEN",
+              "¿Ya te levantaste?"
+            ],
+            [
+              "RADE",
+              "Sí."
+            ],
+            [
+              "GWEN",
+              "Ya era hora."
+            ],
+            [
+              "RADE",
+              "¿Qué hora es?"
+            ],
+            [
+              "GWEN",
+              "La que marca el reloj."
+            ],
+            [
+              "RADE",
+              "Bueno."
+            ],
+            [
+              "GWEN",
+              "¿Ya se fue Dars?"
+            ],
+            [
+              "RADE",
+              "Sí."
+            ],
+            [
+              "GWEN",
+              "¿Desde cuándo?"
+            ],
+            [
+              "RADE",
+              "Anoche."
+            ],
+            [
+              "GWEN",
+              "¿Y por qué no avisaron?"
+            ],
+            [
+              "RADE",
+              "No sé."
+            ],
+            [
+              "GWEN",
+              "Siempre hacen lo que quieren."
+            ],
+            [
+              "GWEN",
+              "¿Qué van a hacer hoy?"
+            ],
+            [
+              "RADE",
+              "No sé."
+            ],
+            [
+              "GWEN",
+              "Vi que lavaste los platos."
+            ],
+            [
+              "GWEN",
+              "Y el baño quedó hecho un desastre."
+            ],
+            [
+              "RADE",
+              "..."
+            ],
+            [
+              "RADE",
+              "Ahorita lo limpio."
+            ],
+            [
+              "GWEN",
+              "Más te vale."
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "etapa": 445,
+      "escena": 79,
+      "titulo": "La cocina de día",
+      "mapa": "cocinaC2",
+      "objetivo": "Prepara algo de desayunar.",
+      "dialogo": [
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "Ayer estaba sentada aquí."
+        ],
+        [
+          "DARS · RECUERDO",
+          "No me grites."
+        ]
+      ]
+    },
+    {
+      "etapa": 451,
+      "escena": 80,
+      "titulo": "La memoria es mía",
+      "mapa": "cocinaC2",
+      "objetivo": "Responde los mensajes de Dars sobre la USB.",
+      "dialogo": [
+        [
+          "DARS",
+          "Oye."
+        ],
+        [
+          "DARS",
+          "¿Has visto una memoria USB negra?"
+        ],
+        [
+          "DARS",
+          "Creo que la dejé conectada en tu computadora."
+        ],
+        [
+          "RADE",
+          "..."
+        ]
+      ]
+    },
+    {
+      "etapa": 452,
+      "escena": 80,
+      "titulo": "La memoria es mía",
+      "mapa": "cocinaC2",
+      "objetivo": "Responde los mensajes de Dars sobre la USB.",
+      "dialogo": [],
+      "opciones": [
+        "Admitir que tienes la memoria",
+        "Evitar la pregunta"
+      ]
+    },
+    {
+      "etapa": 453,
+      "escena": 80,
+      "titulo": "La memoria es mía",
+      "mapa": "cocinaC2",
+      "objetivo": "Responde los mensajes de Dars sobre la USB.",
+      "dialogo": [
+        [
+          "RADE",
+          "Sí. La tengo."
+        ],
+        [
+          "DARS",
+          "Bueno."
+        ],
+        [
+          "DARS",
+          "¿Me la puedes devolver hoy?"
+        ],
+        [
+          "RADE",
+          "Sí."
+        ],
+        [
+          "DARS",
+          "Tiene trabajos que necesito."
+        ],
+        [
+          "RADE",
+          "Está bien."
+        ],
+        [
+          "DARS",
+          "No la vayas a perder."
+        ],
+        [
+          "RADE",
+          "No la voy a perder."
+        ],
+        [
+          "DARS",
+          "Gracias."
+        ],
+        [
+          "RADE",
+          "Revisé lo del programa."
+        ],
+        [
+          "DARS",
+          "¿Y?"
+        ],
+        [
+          "RADE",
+          "No encontré nada."
+        ],
+        [
+          "DARS",
+          "Ah."
+        ],
+        [
+          "RADE",
+          "Pero hay algo raro con el reloj."
+        ],
+        [
+          "DARS",
+          "Ya sé lo del reloj."
+        ],
+        [
+          "RADE",
+          "No, encontré otra cosa."
+        ],
+        [
+          "DARS",
+          "Rade, necesito mi memoria. No quiero hablar del programa."
+        ],
+        [
+          "RADE",
+          "Bueno."
+        ],
+        [
+          "DARS",
+          "¿Dónde podemos vernos?"
+        ]
+      ]
+    },
+    {
+      "etapa": 454,
+      "escena": 80,
+      "titulo": "La memoria es mía",
+      "mapa": "cocinaC2",
+      "objetivo": "Responde los mensajes de Dars sobre la USB.",
+      "dialogo": [
+        [
+          "DARS",
+          "Te estoy preguntando si tú la tienes."
+        ],
+        [
+          "RADE",
+          "Sí. La tengo."
+        ],
+        [
+          "DARS",
+          "Bueno."
+        ],
+        [
+          "DARS",
+          "¿Me la puedes devolver hoy?"
+        ],
+        [
+          "RADE",
+          "Sí."
+        ],
+        [
+          "DARS",
+          "Tiene trabajos que necesito."
+        ],
+        [
+          "RADE",
+          "Está bien."
+        ],
+        [
+          "DARS",
+          "No la vayas a perder."
+        ],
+        [
+          "RADE",
+          "No la voy a perder."
+        ],
+        [
+          "DARS",
+          "Gracias."
+        ],
+        [
+          "RADE",
+          "Revisé lo del programa."
+        ],
+        [
+          "DARS",
+          "¿Y?"
+        ],
+        [
+          "RADE",
+          "No encontré nada."
+        ],
+        [
+          "DARS",
+          "Ah."
+        ],
+        [
+          "RADE",
+          "Pero hay algo raro con el reloj."
+        ],
+        [
+          "DARS",
+          "Ya sé lo del reloj."
+        ],
+        [
+          "RADE",
+          "No, encontré otra cosa."
+        ],
+        [
+          "DARS",
+          "Rade, necesito mi memoria. No quiero hablar del programa."
+        ],
+        [
+          "RADE",
+          "Bueno."
+        ],
+        [
+          "DARS",
+          "¿Dónde podemos vernos?"
+        ]
+      ]
+    },
+    {
+      "etapa": 457,
+      "escena": 81,
+      "titulo": "Ni en tu casa ni en la mía",
+      "mapa": "cocinaC2",
+      "objetivo": "Acuerda con Dars dónde verse.",
+      "dialogo": [
+        [
+          "DARS",
+          "¿Bueno?"
+        ],
+        [
+          "RADE",
+          "Soy yo."
+        ],
+        [
+          "DARS",
+          "Ya sé."
+        ],
+        [
+          "RADE",
+          "¿Vienes por la memoria?"
+        ],
+        [
+          "DARS",
+          "No quiero entrar otra vez a esa casa."
+        ],
+        [
+          "RADE",
+          "Ya no está pasando nada."
+        ],
+        [
+          "DARS",
+          "No me importa."
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "DARS",
+          "¿Puedes salir?"
+        ],
+        [
+          "RADE",
+          "Sí."
+        ],
+        [
+          "DARS",
+          "Entonces nos vemos afuera."
+        ],
+        [
+          "RADE",
+          "¿En la esquina?"
+        ],
+        [
+          "DARS",
+          "Prefiero en la plaza."
+        ],
+        [
+          "RADE",
+          "¿Cuál plaza?"
+        ],
+        [
+          "DARS",
+          "La del parque."
+        ],
+        [
+          "RADE",
+          "Ah."
+        ],
+        [
+          "DARS",
+          "¿Puedes a las doce?"
+        ],
+        [
+          "RADE",
+          "Sí."
+        ],
+        [
+          "DARS",
+          "Bueno."
+        ],
+        [
+          "RADE",
+          "Oye."
+        ],
+        [
+          "DARS",
+          "Qué."
+        ],
+        [
+          "RADE",
+          "¿Dormiste bien?"
+        ],
+        [
+          "DARS",
+          "No mucho."
+        ],
+        [
+          "RADE",
+          "Ah."
+        ],
+        [
+          "DARS",
+          "¿Tú?"
+        ],
+        [
+          "RADE",
+          "Tampoco."
+        ],
+        [
+          "DARS",
+          "Bueno."
+        ],
+        [
+          "DARS",
+          "Tengo que irme."
+        ],
+        [
+          "RADE",
+          "Sí."
+        ],
+        [
+          "DARS",
+          "No se te olvide la memoria."
+        ],
+        [
+          "RADE",
+          "Ya."
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "Ni siquiera quiso venir."
+        ]
+      ]
+    },
+    {
+      "etapa": 463,
+      "escena": 82,
+      "titulo": "La decisión que no se puede deshacer",
+      "mapa": "dormitorioRadeC2",
+      "objetivo": "Recoge la memoria y el teléfono antes de salir.",
+      "dialogo": [
+        [
+          "RADE",
+          "Ella también lo vio."
+        ],
+        [
+          "RADE",
+          "No me lo inventé."
+        ]
+      ]
+    },
+    {
+      "etapa": 464,
+      "escena": 82,
+      "titulo": "La decisión que no se puede deshacer",
+      "mapa": "dormitorioRadeC2",
+      "objetivo": "Recoge la memoria y el teléfono antes de salir.",
+      "dialogo": [
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "No tenía que meterme en sus cosas."
+        ]
+      ]
+    },
+    {
+      "etapa": 465,
+      "escena": 82,
+      "titulo": "La decisión que no se puede deshacer",
+      "mapa": "dormitorioRadeC2",
+      "objetivo": "Recoge la memoria y el teléfono antes de salir.",
+      "dialogo": [],
+      "opciones": [
+        "Contárselo a Dars",
+        "Callárselo"
+      ]
+    },
+    {
+      "etapa": 469,
+      "escena": 83,
+      "titulo": "El parque",
+      "mapa": "plazaBarrio",
+      "objetivo": "Espera a Dars en la banca del parque.",
+      "dialogo": [
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "Aquí está bien."
+        ],
+        [
+          "RADE",
+          "Siempre tarda."
+        ],
+        [
+          "RADE",
+          "Está caliente por el sol."
+        ],
+        [
+          "RADE",
+          "No he venido aquí en meses."
+        ],
+        [
+          "RADE",
+          "Huele de la chingada."
+        ],
+        [
+          "RADE",
+          "Todavía funcionan."
+        ],
+        [
+          "DARS",
+          "Voy tarde."
+        ],
+        [
+          "RADE",
+          "Ya vi."
+        ],
+        [
+          "DARS",
+          "Dame unos minutos."
+        ],
+        [
+          "RADE",
+          "Bueno."
+        ]
+      ]
+    },
+    {
+      "etapa": 475,
+      "escena": 84,
+      "titulo": "Veinte minutos",
+      "mapa": "plazaBarrio",
+      "objetivo": "Acércate cuando llegue Dars.",
+      "dialogo": [
+        [
+          "DARS",
+          "Hola."
+        ],
+        [
+          "RADE",
+          "Hola."
+        ],
+        [
+          "DARS",
+          "Perdón por llegar tarde."
+        ],
+        [
+          "RADE",
+          "No pasa nada."
+        ],
+        [
+          "DARS",
+          "Sí parece que pasa."
+        ],
+        [
+          "RADE",
+          "Te tardaste."
+        ],
+        [
+          "DARS",
+          "Ya sé."
+        ],
+        [
+          "RADE",
+          "Veinte minutos."
+        ],
+        [
+          "DARS",
+          "Tuve que hacer unas cosas."
+        ],
+        [
+          "RADE",
+          "Bueno."
+        ],
+        [
+          "DARS",
+          "¿Trajiste la memoria?"
+        ],
+        [
+          "RADE",
+          "Sí."
+        ],
+        [
+          "DARS",
+          "..."
+        ],
+        [
+          "DARS",
+          "Rade."
+        ],
+        [
+          "RADE",
+          "Qué."
+        ],
+        [
+          "DARS",
+          "Dámela."
+        ],
+        [
+          "DARS",
+          "Sí, es esta."
+        ],
+        [
+          "DARS",
+          "Gracias."
+        ],
+        [
+          "RADE",
+          "¿Ya te vas?"
+        ],
+        [
+          "DARS",
+          "Sí."
+        ],
+        [
+          "RADE",
+          "Pensé que íbamos a hablar."
+        ],
+        [
+          "DARS",
+          "Yo vine por mi memoria."
+        ],
+        [
+          "RADE",
+          "Sí, pero..."
+        ],
+        [
+          "DARS",
+          "No quedamos en hablar."
+        ],
+        [
+          "RADE",
+          "Bueno."
+        ]
+      ]
+    },
+    {
+      "etapa": 481,
+      "escena": 85,
+      "titulo": "El problema no era solamente la puerta",
+      "mapa": "plazaBarrio",
+      "objetivo": "Habla con Dars sobre lo de anoche.",
+      "dialogo": [
+        [
+          "DARS",
+          "A ver."
+        ],
+        [
+          "RADE",
+          "Qué."
+        ],
+        [
+          "DARS",
+          "¿Qué quieres hablar?"
+        ],
+        [
+          "RADE",
+          "De ayer."
+        ],
+        [
+          "DARS",
+          "No sé qué más quieres que te diga."
+        ],
+        [
+          "RADE",
+          "Quiero saber qué pasó de tu lado."
+        ],
+        [
+          "DARS",
+          "Estabas en tu cuarto."
+        ],
+        [
+          "RADE",
+          "Sí."
+        ],
+        [
+          "DARS",
+          "Después escuché que me llamabas."
+        ],
+        [
+          "RADE",
+          "¿Desde el pasillo?"
+        ],
+        [
+          "DARS",
+          "Yo no veía ningún pasillo."
+        ],
+        [
+          "RADE",
+          "Ya sé."
+        ],
+        [
+          "DARS",
+          "La puerta estaba cerrada. No pude abrirla."
+        ],
+        [
+          "RADE",
+          "¿Y después?"
+        ],
+        [
+          "DARS",
+          "Después te escuché por la pared. Te pedí que golpearas. Fui por herramientas. Todo lo que ya sabes."
+        ],
+        [
+          "RADE",
+          "¿Nunca me viste?"
+        ],
+        [
+          "DARS",
+          "No."
+        ],
+        [
+          "RADE",
+          "¿Ni cuando estaba en la azotea?"
+        ],
+        [
+          "DARS",
+          "No."
+        ],
+        [
+          "RADE",
+          "Pero yo sí te vi."
+        ],
+        [
+          "DARS",
+          "Eso dijiste."
+        ],
+        [
+          "RADE",
+          "No estoy mintiendo."
+        ],
+        [
+          "DARS",
+          "Rade, ya entendí que viste algo."
+        ],
+        [
+          "RADE",
+          "¿Entonces?"
+        ],
+        [
+          "DARS",
+          "No sé qué viste."
+        ],
+        [
+          "RADE",
+          "Me estás diciendo lo mismo de ayer."
+        ],
+        [
+          "DARS",
+          "Porque sigo sin saber."
+        ],
+        [
+          "DARS",
+          "No puedo inventarme una explicación para que estés contento."
+        ],
+        [
+          "RADE",
+          "No quiero que inventes nada."
+        ],
+        [
+          "DARS",
+          "Entonces deja de exigirme respuestas que no tengo."
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "Está bien."
+        ],
+        [
+          "DARS",
+          "¿Terminamos?"
+        ],
+        [
+          "RADE",
+          "Todavía no."
+        ],
+        [
+          "DARS",
+          "Bueno. Sigue."
+        ]
+      ]
+    },
+    {
+      "etapa": 487,
+      "escena": 86,
+      "titulo": "La primera mentira",
+      "mapa": "plazaBarrio",
+      "objetivo": "Escucha a Dars.",
+      "dialogo": [
+        [
+          "DARS",
+          "¿Qué?"
+        ],
+        [
+          "RADE",
+          "No sé cómo decirlo."
+        ],
+        [
+          "DARS",
+          "Pues inténtalo."
+        ],
+        [
+          "RADE",
+          "La Figura..."
+        ],
+        [
+          "RADE",
+          "No fue la primera vez que la vi."
+        ],
+        [
+          "RADE",
+          "La había visto antes."
+        ],
+        [
+          "DARS",
+          "Ya me habías dicho."
+        ],
+        [
+          "RADE",
+          "No te dije que fue hace años."
+        ],
+        [
+          "DARS",
+          "¿Cuántos?"
+        ],
+        [
+          "RADE",
+          "No recuerdo bien."
+        ],
+        [
+          "DARS",
+          "¿Dónde?"
+        ],
+        [
+          "RADE",
+          "En otro lugar."
+        ],
+        [
+          "DARS",
+          "Otra vez."
+        ],
+        [
+          "RADE",
+          "¿Qué?"
+        ],
+        [
+          "DARS",
+          "Estás haciendo exactamente lo mismo."
+        ],
+        [
+          "RADE",
+          "Estoy intentando contarte."
+        ],
+        [
+          "DARS",
+          "Me dices que la conocías, que la viste hace años y que fue en otro lugar. No me estás contando nada."
+        ],
+        [
+          "RADE",
+          "No es algo que quiera recordar."
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "Hay cosas que pasaron antes de que nos conociéramos."
+        ],
+        [
+          "DARS",
+          "Eso es obvio."
+        ],
+        [
+          "RADE",
+          "Cosas malas."
+        ],
+        [
+          "DARS",
+          "¿Te hizo daño?"
+        ],
+        [
+          "DARS",
+          "Rade."
+        ],
+        [
+          "RADE",
+          "No sé cómo explicarlo."
+        ],
+        [
+          "DARS",
+          "Entonces no lo expliques."
+        ],
+        [
+          "RADE",
+          "¿Qué?"
+        ],
+        [
+          "DARS",
+          "No tienes que contarme todo ahorita."
+        ],
+        [
+          "DARS",
+          "Pero no me digas que no conoces a alguien si sabes perfectamente de quién estás hablando."
+        ],
+        [
+          "RADE",
+          "No sé quién es."
+        ],
+        [
+          "DARS",
+          "Sabes algo."
+        ],
+        [
+          "RADE",
+          "Sí."
+        ],
+        [
+          "DARS",
+          "Eso es diferente."
+        ],
+        [
+          "RADE",
+          "Supongo."
+        ],
+        [
+          "DARS",
+          "¿Tiene algo que ver conmigo?"
+        ],
+        [
+          "RADE",
+          "No lo sé."
+        ],
+        [
+          "DARS",
+          "¿Tiene algo que ver con que yo estuviera en tu cuarto?"
+        ],
+        [
+          "RADE",
+          "Tampoco lo sé."
+        ],
+        [
+          "DARS",
+          "¿Y con el programa?"
+        ],
+        [
+          "RADE",
+          "No sé."
+        ],
+        [
+          "DARS",
+          "Pues estamos bien jodidos."
+        ],
+        [
+          "RADE",
+          "Sí."
+        ]
+      ]
+    },
+    {
+      "etapa": 493,
+      "escena": 87,
+      "titulo": "La culpa que nadie quiere",
+      "mapa": "plazaBarrio",
+      "objetivo": "Devuelve la memoria y escucha a Dars.",
+      "dialogo": [
+        [
+          "DARS",
+          "¿Qué encontraste en el programa?"
+        ],
+        [
+          "RADE",
+          "Un registro de ejecución."
+        ],
+        [
+          "DARS",
+          "¿Y?"
+        ],
+        [
+          "RADE",
+          "Se quedó esperando una entrada."
+        ],
+        [
+          "DARS",
+          "¿Qué entrada?"
+        ],
+        [
+          "RADE",
+          "No sé."
+        ],
+        [
+          "DARS",
+          "¿La del teclado?"
+        ],
+        [
+          "RADE",
+          "Probablemente."
+        ],
+        [
+          "DARS",
+          "¿Y eso qué tiene que ver conmigo?"
+        ],
+        [
+          "RADE",
+          "Tú lo ejecutaste primero."
+        ],
+        [
+          "DARS",
+          "..."
+        ],
+        [
+          "DARS",
+          "¿Perdón?"
+        ],
+        [
+          "RADE",
+          "No estoy diciendo que..."
+        ],
+        [
+          "DARS",
+          "Sí lo estás diciendo."
+        ],
+        [
+          "RADE",
+          "Solamente estoy intentando saber qué hiciste."
+        ],
+        [
+          "DARS",
+          "Abrí tu programa. No funcionó. Te dije que lo revisaras."
+        ],
+        [
+          "RADE",
+          "¿No cambiaste nada?"
+        ],
+        [
+          "DARS",
+          "No."
+        ],
+        [
+          "RADE",
+          "¿Ni un archivo?"
+        ],
+        [
+          "DARS",
+          "No."
+        ],
+        [
+          "RADE",
+          "¿Ni la configuración?"
+        ],
+        [
+          "DARS",
+          "Rade, si quieres echarme la culpa, hazlo de una vez."
+        ],
+        [
+          "RADE",
+          "No estoy echándote la culpa."
+        ],
+        [
+          "DARS",
+          "Entonces deja de interrogarme."
+        ],
+        [
+          "RADE",
+          "Algo pasó cuando lo abrimos."
+        ],
+        [
+          "DARS",
+          "Ya lo sé."
+        ],
+        [
+          "RADE",
+          "Y tú estabas ahí."
+        ],
+        [
+          "DARS",
+          "Tú también."
+        ],
+        [
+          "RADE",
+          "Pero lo habías ejecutado antes."
+        ],
+        [
+          "DARS",
+          "¿Sabes qué? Ya estuvo."
+        ],
+        [
+          "RADE",
+          "Dars..."
+        ],
+        [
+          "DARS",
+          "No voy a seguir escuchando esto."
+        ],
+        [
+          "RADE",
+          "Espera."
+        ],
+        [
+          "DARS",
+          "No."
+        ],
+        [
+          "RADE",
+          "Solamente quiero saber qué pasó."
+        ],
+        [
+          "DARS",
+          "¡Pues investígalo tú!"
+        ],
+        [
+          "DARS",
+          "Yo no voy a cargar con tus problemas solamente porque estaba usando tu computadora."
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "DARS",
+          "¿Entendiste?"
+        ],
+        [
+          "RADE",
+          "Sí."
+        ],
+        [
+          "DARS",
+          "Bien."
+        ]
+      ]
+    },
+    {
+      "etapa": 499,
+      "escena": 88,
+      "titulo": "Las carpetas",
+      "mapa": "plazaBarrio",
+      "objetivo": "Alcanza a Dars antes de que se vaya.",
+      "dialogo": [
+        [
+          "RADE",
+          "Dars."
+        ],
+        [
+          "DARS",
+          "Qué."
+        ],
+        [
+          "RADE",
+          "Solamente revisé la carpeta del programa."
+        ],
+        [
+          "DARS",
+          "Bueno."
+        ],
+        [
+          "RADE",
+          "No abrí tus demás archivos."
+        ],
+        [
+          "DARS",
+          "Gracias."
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "DARS",
+          "Eso era lo mínimo."
+        ]
+      ],
+      "variantes": [
+        {
+          "flags": 2304,
+          "dialogo": [
+            [
+              "RADE",
+              "Dars."
+            ],
+            [
+              "DARS",
+              "Qué."
+            ],
+            [
+              "RADE",
+              "Hay otra cosa."
+            ],
+            [
+              "DARS",
+              "¿Ahora qué?"
+            ],
+            [
+              "RADE",
+              "Revisé tu memoria."
+            ],
+            [
+              "DARS",
+              "Ya sé que la conectaste."
+            ],
+            [
+              "RADE",
+              "No solamente la carpeta del programa."
+            ],
+            [
+              "DARS",
+              "..."
+            ],
+            [
+              "DARS",
+              "¿Qué revisaste?"
+            ],
+            [
+              "RADE",
+              "Unas carpetas."
+            ],
+            [
+              "DARS",
+              "¿Cuáles?"
+            ],
+            [
+              "RADE",
+              "Las de escuela. Algunas imágenes."
+            ],
+            [
+              "DARS",
+              "¿Para qué?"
+            ],
+            [
+              "RADE",
+              "Estaba buscando algo."
+            ],
+            [
+              "DARS",
+              "¿Qué cosa?"
+            ],
+            [
+              "RADE",
+              "No sabía si había otro archivo relacionado con el programa."
+            ],
+            [
+              "DARS",
+              "Qué conveniente."
+            ],
+            [
+              "RADE",
+              "No fue por..."
+            ],
+            [
+              "DARS",
+              "Te pedí que no revisaras mis cosas."
+            ],
+            [
+              "RADE",
+              "Fue antes de que me lo pidieras."
+            ],
+            [
+              "DARS",
+              "¿Y eso lo hace mejor?"
+            ],
+            [
+              "DARS",
+              "No vuelvas a tocar mis archivos."
+            ],
+            [
+              "RADE",
+              "Está bien."
+            ],
+            [
+              "DARS",
+              "No, Rade. No está bien."
+            ]
+          ]
+        },
+        {
+          "flags": 256,
+          "dialogo": [
+            [
+              "RADE",
+              "Dars."
+            ],
+            [
+              "DARS",
+              "¿Qué?"
+            ],
+            [
+              "RADE",
+              "…Nada."
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "etapa": 505,
+      "escena": 89,
+      "titulo": "Un archivo que no estaba en la memoria",
+      "mapa": "plazaBarrio",
+      "objetivo": "Mira el archivo que Dars quiere enviarte.",
+      "dialogo": [
+        [
+          "DARS",
+          "Oye."
+        ],
+        [
+          "RADE",
+          "Qué."
+        ],
+        [
+          "DARS",
+          "Hay una cosa que no te dije ayer."
+        ],
+        [
+          "DARS",
+          "Grabé un video."
+        ],
+        [
+          "RADE",
+          "¿De qué?"
+        ],
+        [
+          "DARS",
+          "De la puerta."
+        ],
+        [
+          "RADE",
+          "¿Cuándo?"
+        ],
+        [
+          "DARS",
+          "Cuando estaba intentando abrirla."
+        ],
+        [
+          "RADE",
+          "¿Salgo yo?"
+        ],
+        [
+          "DARS",
+          "No."
+        ],
+        [
+          "RADE",
+          "¿Se escucha mi voz?"
+        ],
+        [
+          "DARS",
+          "Sí."
+        ],
+        [
+          "RADE",
+          "¿Y el pasillo?"
+        ],
+        [
+          "DARS",
+          "No se ve ningún pasillo."
+        ],
+        [
+          "DARS",
+          "Lo grabé porque pensé que después no me iban a creer que la puerta estaba atorada."
+        ],
+        [
+          "RADE · GRABACIÓN",
+          "¡Estoy aquí!"
+        ],
+        [
+          "DARS · GRABACIÓN",
+          "Ya te escuché."
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "Eso fue lo que escuchaste."
+        ],
+        [
+          "DARS",
+          "Sí."
+        ],
+        [
+          "RADE",
+          "¿Me lo puedes pasar?"
+        ],
+        [
+          "RADE",
+          "Por favor."
+        ],
+        [
+          "DARS",
+          "¿Para qué?"
+        ],
+        [
+          "RADE",
+          "Quiero revisar el sonido."
+        ],
+        [
+          "DARS",
+          "No quiero que lo publiques."
+        ],
+        [
+          "RADE",
+          "No voy a publicarlo."
+        ],
+        [
+          "DARS",
+          "Ni que se lo mandes a cualquiera."
+        ],
+        [
+          "RADE",
+          "Está bien."
+        ],
+        [
+          "DARS",
+          "Ahí está."
+        ],
+        [
+          "RADE",
+          "Gracias."
+        ],
+        [
+          "DARS",
+          "No prueba todo lo que dices."
+        ],
+        [
+          "RADE",
+          "Ya sé."
+        ],
+        [
+          "DARS",
+          "Pero sí prueba que algo raro pasó con esa puerta."
+        ],
+        [
+          "RADE",
+          "Sí."
+        ],
+        [
+          "DARS",
+          "Y no quiero volver a escuchar esos golpes."
+        ],
+        [
+          "TELÉFONO",
+          "Dars te envió el video de la puerta."
+        ]
+      ]
+    },
+    {
+      "etapa": 511,
+      "escena": 90,
+      "titulo": "No es una promesa",
+      "mapa": "plazaBarrio",
+      "objetivo": "Despídete de Dars.",
+      "dialogo": [
+        [
+          "RADE",
+          "Oye."
+        ],
+        [
+          "DARS",
+          "Qué."
+        ],
+        [
+          "RADE",
+          "¿Todavía podemos hablar después?"
+        ],
+        [
+          "DARS",
+          "No sé."
+        ],
+        [
+          "RADE",
+          "Bueno."
+        ],
+        [
+          "DARS",
+          "No quiero volver a discutir por esto."
+        ],
+        [
+          "RADE",
+          "Yo tampoco."
+        ],
+        [
+          "DARS",
+          "Pues ayer tampoco querías."
+        ],
+        [
+          "DARS",
+          "..."
+        ],
+        [
+          "DARS",
+          "Mira, Rade."
+        ],
+        [
+          "RADE",
+          "Qué."
+        ],
+        [
+          "DARS",
+          "No sé qué te pasó antes de conocerme. Ni sé qué era esa cosa que viste."
+        ],
+        [
+          "DARS",
+          "Pero si vuelve a pasar algo, no hagas una estupidez solamente para demostrar que tienes razón."
+        ],
+        [
+          "RADE",
+          "No voy a hacer ninguna estupidez."
+        ],
+        [
+          "DARS",
+          "Ajá."
+        ],
+        [
+          "RADE",
+          "Bueno, lo voy a intentar."
+        ],
+        [
+          "DARS",
+          "Eso suena más creíble."
+        ],
+        [
+          "RADE",
+          "Cuídate."
+        ],
+        [
+          "DARS",
+          "Tú también."
+        ]
+      ]
+    },
+    {
+      "etapa": 517,
+      "escena": 91,
+      "titulo": "La grabación de Dars",
+      "mapa": "computadoraC2",
+      "objetivo": "Reproduce la grabación de Dars.",
+      "dialogo": [
+        [
+          "DARS · GRABACIÓN",
+          "Está atorada."
+        ],
+        [
+          "RADE · GRABACIÓN",
+          "¡Estoy aquí!"
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "Sí era yo."
+        ],
+        [
+          "DARS · GRABACIÓN",
+          "¿Me escuchas bien?"
+        ],
+        [
+          "RADE · GRABACIÓN",
+          "Sí."
+        ],
+        [
+          "DARS · GRABACIÓN",
+          "Otra vez."
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "No era un eco."
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "Entonces sí me escuchó."
+        ]
+      ]
+    },
+    {
+      "etapa": 523,
+      "escena": 92,
+      "titulo": "Una cosa detrás de otra",
+      "mapa": "computadoraC2",
+      "objetivo": "Prueba la puerta y mira el reflejo en el fragmento.",
+      "dialogo": [
+        [
+          "RADE",
+          "De este lado sí tiene."
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "Yo estaba detrás de esto."
+        ],
+        [
+          "RADE",
+          "Aquí terminaba la casa."
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "¿Dónde estaba parado?"
+        ],
+        [
+          "RADE",
+          "Bueno."
+        ],
+        [
+          "RADE",
+          "Tampoco esperaba que funcionara."
+        ]
+      ]
+    },
+    {
+      "etapa": 529,
+      "escena": 93,
+      "titulo": "El audio separado",
+      "mapa": "computadoraC2",
+      "objetivo": "Separa el audio y escucha los seis golpes.",
+      "dialogo": [
+        [
+          "RADE",
+          "A ver."
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "Había alguien golpeando también."
+        ],
+        [
+          "RADE",
+          "¿Quién?"
+        ],
+        [
+          "EVIDENCIA ARCHIVADA",
+          "Audio de la puerta. Los dos grupos de golpes tienen formas de onda distintas."
+        ]
+      ]
+    },
+    {
+      "etapa": 535,
+      "escena": 94,
+      "titulo": "Lo que se escucha al final",
+      "mapa": "computadoraC2",
+      "objetivo": "Sube el volumen al final de la grabación.",
+      "dialogo": [
+        [
+          "RADE",
+          "Eso..."
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "Podría ser."
+        ]
+      ]
+    },
+    {
+      "etapa": 541,
+      "escena": 95,
+      "titulo": "Una prueba que no convence a nadie",
+      "mapa": "salaC2",
+      "objetivo": "Enséñale la grabación a Gwen.",
+      "dialogo": [
+        [
+          "RADE",
+          "Oye."
+        ],
+        [
+          "GWEN",
+          "¿Qué?"
+        ],
+        [
+          "RADE",
+          "¿Puedes ver algo?"
+        ],
+        [
+          "GWEN",
+          "¿Qué cosa?"
+        ],
+        [
+          "RADE",
+          "Un video."
+        ],
+        [
+          "GWEN",
+          "A ver."
+        ],
+        [
+          "RADE · GRABACIÓN",
+          "¡Estoy aquí!"
+        ],
+        [
+          "GWEN",
+          "¿Y?"
+        ],
+        [
+          "RADE",
+          "¿Escuchaste los golpes?"
+        ],
+        [
+          "GWEN",
+          "Sí."
+        ],
+        [
+          "RADE",
+          "Son seis."
+        ],
+        [
+          "GWEN",
+          "¿Y?"
+        ],
+        [
+          "RADE",
+          "Yo solamente golpeé tres veces."
+        ],
+        [
+          "GWEN",
+          "Pues no sé."
+        ],
+        [
+          "RADE",
+          "¿No te parece raro?"
+        ],
+        [
+          "GWEN",
+          "Estabas encerrado. La puerta estaba atorada. Ya saliste."
+        ],
+        [
+          "RADE",
+          "No fue solamente eso."
+        ],
+        [
+          "GWEN",
+          "Rade, tengo cosas que hacer."
+        ],
+        [
+          "RADE",
+          "Pero..."
+        ],
+        [
+          "GWEN",
+          "Ya, por favor."
+        ],
+        [
+          "RADE",
+          "Bueno."
+        ]
+      ]
+    },
+    {
+      "etapa": 547,
+      "escena": 96,
+      "titulo": "El baño que sí hay que arreglar",
+      "mapa": "banoNormalC2",
+      "objetivo": "Revisa el lavabo y recoge la tapa de plástico.",
+      "dialogo": [
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "Esta sí es."
+        ],
+        [
+          "RADE",
+          "¿Entonces de dónde salió?"
+        ],
+        [
+          "RADE",
+          "La voy a guardar."
+        ],
+        [
+          "INVENTARIO",
+          "Tapa de plástico del registro."
+        ]
+      ]
+    },
+    {
+      "etapa": 553,
+      "escena": 97,
+      "titulo": "Una conversación con nadie",
+      "mapa": "dormitorioRadeC2",
+      "objetivo": "Siéntate un momento en la cama.",
+      "dialogo": [
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "Si se lo enseño a alguien, va a pensar que junté basura."
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "¿Qué querías de mí?"
+        ],
+        [
+          "RADE",
+          "¿Por qué volviste?"
+        ],
+        [
+          "RADE",
+          "¿Por qué aquí?"
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "Ya estoy oyendo cosas donde no hay nada."
+        ],
+        [
+          "RADE",
+          "Ah, chingada madre."
+        ],
+        [
+          "RADE",
+          "También tenía que hacer eso."
+        ]
+      ]
+    },
+    {
+      "etapa": 559,
+      "escena": 98,
+      "titulo": "El trabajo que no terminó",
+      "mapa": "computadoraC2",
+      "objetivo": "Abre la lista de tareas del proyecto.",
+      "dialogo": [
+        [
+          "TAREAS DEL PROYECTO",
+          "Corregir el reloj. Ventana sin respuesta. Recursos que no cargan."
+        ],
+        [
+          "RADE",
+          "No pienso correrlo."
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "No puedo pensar."
+        ],
+        [
+          "RADE",
+          "Lo hago después."
+        ]
+      ]
+    },
+    {
+      "etapa": 565,
+      "escena": 99,
+      "titulo": "La discusión que no acaba",
+      "mapa": "dormitorioRadeC2",
+      "objetivo": "Lee el nuevo mensaje de Dars.",
+      "dialogo": [
+        [
+          "DARS",
+          "Encontré los archivos que necesitaba."
+        ],
+        [
+          "DARS",
+          "Gracias por devolver la memoria."
+        ]
+      ]
+    },
+    {
+      "etapa": 566,
+      "escena": 99,
+      "titulo": "La discusión que no acaba",
+      "mapa": "dormitorioRadeC2",
+      "objetivo": "Lee el nuevo mensaje de Dars.",
+      "dialogo": [],
+      "opciones": [
+        "Responder",
+        "Guardar el teléfono"
+      ]
+    },
+    {
+      "etapa": 567,
+      "escena": 99,
+      "titulo": "La discusión que no acaba",
+      "mapa": "dormitorioRadeC2",
+      "objetivo": "Lee el nuevo mensaje de Dars.",
+      "dialogo": [
+        [
+          "RADE",
+          "De nada."
+        ],
+        [
+          "RADE",
+          "Revisé el audio del video."
+        ],
+        [
+          "DARS",
+          "¿Y?"
+        ],
+        [
+          "RADE",
+          "Los golpes no son iguales."
+        ],
+        [
+          "DARS",
+          "Ya sé."
+        ],
+        [
+          "RADE",
+          "Parece que había alguien más."
+        ],
+        [
+          "DARS",
+          "No puedes saber eso solamente por el sonido."
+        ],
+        [
+          "RADE",
+          "Bueno, pero..."
+        ],
+        [
+          "DARS",
+          "Rade, no quiero volver a discutir."
+        ],
+        [
+          "RADE",
+          "No estamos discutiendo."
+        ],
+        [
+          "DARS",
+          "Entonces no empieces."
+        ]
+      ]
+    },
+    {
+      "etapa": 571,
+      "escena": 100,
+      "titulo": "Antes de la noche",
+      "mapa": "exteriorC2",
+      "objetivo": "Examina la entrada al atardecer.",
+      "dialogo": [
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "Ayer estaba llegando."
+        ],
+        [
+          "RADE",
+          "Solamente quería dormir."
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "Ni siquiera sé dónde quedó esa llave."
+        ],
+        [
+          "VECINO",
+          "Buenas tardes."
+        ],
+        [
+          "RADE",
+          "Buenas."
+        ]
+      ]
+    },
+    {
+      "etapa": 577,
+      "escena": 101,
+      "titulo": "Guardar o borrar",
+      "mapa": "computadoraC2",
+      "objetivo": "Decide qué hacer con los registros locales.",
+      "dialogo": [
+        [
+          "COMPUTADORA",
+          "Copias locales del proyecto y registros de ejecución."
+        ]
+      ]
+    },
+    {
+      "etapa": 578,
+      "escena": 101,
+      "titulo": "Guardar o borrar",
+      "mapa": "computadoraC2",
+      "objetivo": "Decide qué hacer con los registros locales.",
+      "dialogo": [],
+      "opciones": [
+        "Conservar una copia",
+        "Eliminar los registros locales"
+      ]
+    },
+    {
+      "etapa": 579,
+      "escena": 101,
+      "titulo": "Guardar o borrar",
+      "mapa": "computadoraC2",
+      "objetivo": "Decide qué hacer con los registros locales.",
+      "dialogo": [
+        [
+          "RADE",
+          "No sé qué pasó, pero no quiero olvidarlo."
+        ],
+        [
+          "RADE",
+          "Lo voy a guardar. Nada más."
+        ]
+      ]
+    },
+    {
+      "etapa": 580,
+      "escena": 101,
+      "titulo": "Guardar o borrar",
+      "mapa": "computadoraC2",
+      "objetivo": "Decide qué hacer con los registros locales.",
+      "dialogo": [
+        [
+          "COMPUTADORA",
+          "Registros locales eliminados."
+        ],
+        [
+          "RADE",
+          "El video sigue en el teléfono."
+        ]
+      ]
+    },
+    {
+      "etapa": 583,
+      "escena": 102,
+      "titulo": "El sobre",
+      "mapa": "dormitorioRadeC2",
+      "objetivo": "Prepara el sobre con los objetos de Navidad.",
+      "dialogo": [
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "Parece una pinche caja de recuerdos."
+        ],
+        [
+          "SOBRE",
+          "NAVIDAD. NO TIRAR."
+        ]
+      ]
+    },
+    {
+      "etapa": 584,
+      "escena": 102,
+      "titulo": "El sobre",
+      "mapa": "dormitorioRadeC2",
+      "objetivo": "Prepara el sobre con los objetos de Navidad.",
+      "dialogo": [],
+      "opciones": [
+        "En el cajón",
+        "Debajo de la cama"
+      ]
+    },
+    {
+      "etapa": 589,
+      "escena": 103,
+      "titulo": "La última hora normal",
+      "mapa": "dormitorioRadeC2",
+      "objetivo": "Revisa el reloj antes de dormir.",
+      "dialogo": [
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "Mañana tengo que seguir con el programa."
+        ],
+        [
+          "RADE",
+          "O hacer otro desde cero."
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "No quiero volver a abrir ese."
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "No."
+        ]
+      ]
+    },
+    {
+      "etapa": 595,
+      "escena": 104,
+      "titulo": "La puerta está abierta",
+      "mapa": "computadoraC2",
+      "objetivo": "Mira dentro del cuarto de la computadora.",
+      "dialogo": [
+        [
+          "RADE",
+          "¿Hola?"
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "Ya no voy a hacer esto."
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "FIGURA",
+          "No cerraste."
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "¿Qué?"
+        ],
+        [
+          "FIGURA",
+          "La puerta."
+        ],
+        [
+          "RADE",
+          "Está abierta."
+        ],
+        [
+          "FIGURA",
+          "Lo sé."
+        ],
+        [
+          "RADE",
+          "¿Dónde estás?"
+        ],
+        [
+          "RADE",
+          "Sal."
+        ]
+      ]
+    },
+    {
+      "etapa": 601,
+      "escena": 105,
+      "titulo": "La segunda conversación",
+      "mapa": "computadoraC2",
+      "objetivo": "Acércate a la Figura.",
+      "dialogo": [
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "Te dije que me dejaras en paz."
+        ],
+        [
+          "FIGURA",
+          "Te escuché."
+        ],
+        [
+          "RADE",
+          "¿Entonces?"
+        ],
+        [
+          "FIGURA",
+          "Aquí estás."
+        ],
+        [
+          "RADE",
+          "Es mi cuarto."
+        ],
+        [
+          "FIGURA",
+          "Lo sé."
+        ],
+        [
+          "RADE",
+          "¿Qué quieres?"
+        ],
+        [
+          "FIGURA",
+          "No vine a pedirte nada."
+        ],
+        [
+          "RADE",
+          "Pues vete."
+        ],
+        [
+          "RADE",
+          "¿Por qué apareces aquí?"
+        ],
+        [
+          "FIGURA",
+          "Tú abriste."
+        ],
+        [
+          "RADE",
+          "Yo no abrí ninguna puerta."
+        ],
+        [
+          "FIGURA",
+          "Entraste."
+        ],
+        [
+          "RADE",
+          "Porque escuché golpes."
+        ],
+        [
+          "FIGURA",
+          "Los escuchaste."
+        ],
+        [
+          "RADE",
+          "Sí."
+        ],
+        [
+          "FIGURA",
+          "Y viniste."
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "¿Tú hiciste lo del pasillo?"
+        ],
+        [
+          "RADE",
+          "Respóndeme."
+        ],
+        [
+          "FIGURA",
+          "Estuviste ahí."
+        ],
+        [
+          "RADE",
+          "Ya sé dónde estuve."
+        ],
+        [
+          "FIGURA",
+          "Entonces sabes más que antes."
+        ],
+        [
+          "RADE",
+          "No sé una chingada."
+        ],
+        [
+          "FIGURA",
+          "Sigues enojado."
+        ],
+        [
+          "RADE",
+          "No hables como si me conocieras."
+        ],
+        [
+          "FIGURA",
+          "Me reconociste."
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "Eso no significa nada."
+        ],
+        [
+          "FIGURA",
+          "Para ti, tal vez."
+        ],
+        [
+          "RADE",
+          "¿Dónde estabas todo este tiempo?"
+        ],
+        [
+          "RADE",
+          "¿Por qué volviste?"
+        ],
+        [
+          "RADE",
+          "¿Qué le hiciste a Dars?"
+        ],
+        [
+          "FIGURA",
+          "No la toqué."
+        ],
+        [
+          "RADE",
+          "Siempre dices lo mismo."
+        ],
+        [
+          "FIGURA",
+          "Tú también."
+        ]
+      ]
+    },
+    {
+      "etapa": 607,
+      "escena": 106,
+      "titulo": "Lo que Rade no quiere recordar",
+      "mapa": "computadoraC2",
+      "objetivo": "Escucha lo que la Figura recuerda.",
+      "dialogo": [
+        [
+          "RADE",
+          "¿Quieres que te diga algo?"
+        ],
+        [
+          "RADE",
+          "No sé qué hice para volver a verte."
+        ],
+        [
+          "RADE",
+          "Pensé que eso ya se había terminado."
+        ],
+        [
+          "FIGURA",
+          "Te fuiste."
+        ],
+        [
+          "RADE",
+          "Ya me lo dijiste."
+        ],
+        [
+          "FIGURA",
+          "Y no miraste atrás."
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "No sabes por qué me fui."
+        ],
+        [
+          "FIGURA",
+          "¿No?"
+        ],
+        [
+          "RADE",
+          "No."
+        ],
+        [
+          "RADE",
+          "Había cosas que no podía arreglar."
+        ],
+        [
+          "FIGURA",
+          "Lo sé."
+        ],
+        [
+          "RADE",
+          "No, no lo sabes."
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "No voy a volver."
+        ],
+        [
+          "FIGURA",
+          "Ya volviste."
+        ],
+        [
+          "RADE",
+          "¿Qué?"
+        ],
+        [
+          "RADE",
+          "¿A dónde?"
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "Esto no es aquel lugar."
+        ],
+        [
+          "FIGURA",
+          "Para ti."
+        ]
+      ]
+    },
+    {
+      "etapa": 613,
+      "escena": 107,
+      "titulo": "No es por ella",
+      "mapa": "computadoraC2",
+      "objetivo": "Enfrenta a la Figura por última vez.",
+      "dialogo": [
+        [
+          "RADE",
+          "Escúchame."
+        ],
+        [
+          "RADE",
+          "Si quieres algo conmigo, habla conmigo."
+        ],
+        [
+          "RADE",
+          "No metas a Dars en esto."
+        ],
+        [
+          "FIGURA",
+          "Ella vino."
+        ],
+        [
+          "RADE",
+          "No sabía nada."
+        ],
+        [
+          "FIGURA",
+          "Lo sé."
+        ],
+        [
+          "RADE",
+          "Entonces déjala fuera."
+        ],
+        [
+          "FIGURA",
+          "No decides por ella."
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "¿Qué significa eso?"
+        ],
+        [
+          "RADE",
+          "¿Le vas a hacer algo?"
+        ],
+        [
+          "FIGURA",
+          "Me estás preguntando lo mismo."
+        ],
+        [
+          "RADE",
+          "¡Porque no contestas!"
+        ],
+        [
+          "FIGURA",
+          "No toda la gente vuelve por ti."
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "¿Qué?"
+        ],
+        [
+          "RADE",
+          "¿Estás hablando de Dars?"
+        ],
+        [
+          "RADE",
+          "Contesta."
+        ],
+        [
+          "RADE",
+          "No te vayas."
+        ],
+        [
+          "FIGURA",
+          "Tú también dijiste eso."
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "¿Cuándo?"
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "¿Cuándo?"
+        ]
+      ]
+    },
+    {
+      "etapa": 619,
+      "escena": 108,
+      "titulo": "Esta vez sí sale",
+      "mapa": "dormitorioRadeC2",
+      "objetivo": "Vuelve al dormitorio y cierra la puerta.",
+      "dialogo": [
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "No voy a seguirte."
+        ],
+        [
+          "RADE",
+          "Qué pendejada."
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "Pero algo es algo."
+        ],
+        [
+          "BORRADOR · NO ENVIADO",
+          "Vi otra vez a esa persona."
+        ],
+        [
+          "BORRADOR · NO ENVIADO",
+          "Creo que hay algo que nunca te conté."
+        ],
+        [
+          "RADE",
+          "..."
+        ],
+        [
+          "RADE",
+          "No."
+        ],
+        [
+          "RADE",
+          "Esta vez no."
+        ]
+      ]
+    },
+    {
+      "etapa": 625,
+      "escena": 109,
+      "titulo": "La habitación de Dars",
+      "mapa": "cuartoDars",
+      "objetivo": "La habitación de Dars.",
+      "dialogo": [
+        [
+          "CUADERNO DE DARS",
+          "25 de diciembre. Rade desapareció detrás de una puerta."
+        ],
+        [
+          "CUADERNO DE DARS",
+          "No sé cuánto tiempo estuvo encerrado. La puerta no tenía ningún problema antes."
+        ],
+        [
+          "CUADERNO DE DARS",
+          "Escuché golpes repetidos. Le pasé papel por la pared. El papel volvió mojado."
+        ],
+        [
+          "CUADERNO DE DARS",
+          "Después salió del baño. No sé cómo hizo eso."
+        ],
+        [
+          "DARS",
+          "..."
+        ],
+        [
+          "DARS",
+          "Qué pinche estupidez."
+        ],
+        [
+          "DARS",
+          "..."
+        ]
+      ]
+    },
+    {
+      "etapa": 631,
+      "escena": 110,
+      "titulo": "Lo que Dars recuerda",
+      "mapa": "cuartoDars",
+      "objetivo": "El plano de la casa.",
+      "dialogo": [
+        [
+          "CUADERNO DE DARS",
+          "Rade dijo que podía verme desde una azotea. Yo no lo vi."
+        ],
+        [
+          "CUADERNO DE DARS",
+          "No sé si él estaba viendo lo mismo que yo."
+        ],
+        [
+          "DARS",
+          "No tiene sentido."
+        ],
+        [
+          "DARS",
+          "..."
+        ],
+        [
+          "DARS",
+          "No cabe."
+        ],
+        [
+          "DARS",
+          "Ni aunque quitaras la pared."
+        ]
+      ]
+    },
+    {
+      "etapa": 637,
+      "escena": 111,
+      "titulo": "No me toca arreglarlo",
+      "mapa": "cuartoDars",
+      "objetivo": "Dars se prepara para dormir.",
+      "dialogo": [
+        [
+          "DARS",
+          "..."
+        ],
+        [
+          "DARS",
+          "No puedo seguir metiéndome en sus problemas."
+        ],
+        [
+          "DARS",
+          "Siempre termina igual."
+        ],
+        [
+          "DARS",
+          "..."
+        ],
+        [
+          "DARS",
+          "Pero tampoco se lo inventó todo."
+        ],
+        [
+          "DARS",
+          "Chingada madre."
+        ]
+      ]
+    },
+    {
+      "etapa": 643,
+      "escena": 112,
+      "titulo": "Los golpes",
+      "mapa": "cuartoDars",
+      "objetivo": "Los golpes.",
+      "dialogo": [
+        [
+          "DARS",
+          "..."
+        ],
+        [
+          "DARS",
+          "..."
+        ],
+        [
+          "DARS",
+          "No."
+        ],
+        [
+          "DARS",
+          "..."
+        ],
+        [
+          "DARS",
+          "No me voy a acercar."
+        ]
+      ]
+    },
+    {
+      "etapa": 649,
+      "escena": 113,
+      "titulo": "El registro de Dars",
+      "mapa": "cuartoDars",
+      "objetivo": "El registro de Dars.",
+      "dialogo": [
+        [
+          "CUADERNO DE DARS · 26 DE DICIEMBRE",
+          "Escuché los mismos golpes. Rade no estaba aquí."
+        ]
+      ]
+    }
+  ],
+  "final": 655
+}

@@ -20,6 +20,31 @@
       -0.98,
       2.64,
       2.5
+    ],
+    "banoEmpanado": [
+      0,
+      2.64,
+      -10.6
+    ],
+    "lavaderoDesfase": [
+      1.0,
+      2.64,
+      2.5
+    ],
+    "cuartoVaso": [
+      -0.95,
+      2.64,
+      2.5
+    ],
+    "escaleraServicio": [
+      0,
+      2.64,
+      10.25
+    ],
+    "cuartoInterruptor": [
+      1.0,
+      2.64,
+      8.5
     ]
   },
   "portals": [
@@ -55,6 +80,61 @@
       "radius": 0.55,
       "min_stage": 27,
       "max_stage": 30
+    },
+    {
+      "target": "banoEmpanado",
+      "pos": [
+        1.86,
+        2.64,
+        -3.5
+      ],
+      "radius": 0.76,
+      "min_stage": 43,
+      "max_stage": 43
+    },
+    {
+      "target": "lavaderoDesfase",
+      "pos": [
+        1.86,
+        2.64,
+        2.5
+      ],
+      "radius": 0.76,
+      "min_stage": 67,
+      "max_stage": 67
+    },
+    {
+      "target": "cuartoVaso",
+      "pos": [
+        -1.84,
+        2.64,
+        2.5
+      ],
+      "radius": 0.75,
+      "min_stage": 97,
+      "max_stage": 97
+    },
+    {
+      "target": "escaleraServicio",
+      "pos": [
+        0,
+        2.64,
+        12.42
+      ],
+      "radius": 0.95,
+      "min_stage": 115,
+      "max_stage": 115
+    },
+    {
+      "target": "cuartoInterruptor",
+      "pos": [
+        1.86,
+        2.64,
+        8.5
+      ],
+      "radius": 0.76,
+      "min_stage": 229,
+      "max_stage": 229
     }
   ],
   "colliders": [
@@ -747,7 +827,7 @@
       "vanishes": false,
       "movable": false,
       "chapter_min": 27,
-      "chapter_max": 99
+      "chapter_max": 102
     },
     {
       "id": "pasilloDesfaseC2_c2_48",
@@ -761,7 +841,7 @@
       "vanishes": false,
       "movable": false,
       "chapter_min": 27,
-      "chapter_max": 99
+      "chapter_max": 102
     },
     {
       "id": "pasilloDesfaseC2_c2_50",
@@ -895,7 +975,7 @@
       "vanishes": false,
       "movable": false,
       "chapter_min": 15,
-      "chapter_max": 99
+      "chapter_max": 655
     },
     {
       "id": "pasilloDesfaseC2_c2_65",
@@ -909,7 +989,7 @@
       "vanishes": false,
       "movable": false,
       "chapter_min": 15,
-      "chapter_max": 99
+      "chapter_max": 655
     },
     {
       "id": "pasilloDesfaseC2_c2_67",
@@ -923,7 +1003,7 @@
       "vanishes": false,
       "movable": false,
       "chapter_min": 15,
-      "chapter_max": 99
+      "chapter_max": 655
     },
     {
       "id": "pasilloDesfaseC2_c2_69",
@@ -937,7 +1017,7 @@
       "vanishes": false,
       "movable": false,
       "chapter_min": 15,
-      "chapter_max": 99
+      "chapter_max": 655
     },
     {
       "id": "pasilloDesfaseC2_c2_73",
@@ -952,6 +1032,88 @@
       "movable": false,
       "chapter_min": 16,
       "chapter_max": 16
+    },
+    {
+      "id": "pasilloDesfaseC2_c2_85",
+      "label": "Puerta 1 cerrada",
+      "position": [
+        -2.395,
+        1.88,
+        2.5
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false,
+      "chapter_min": 103,
+      "chapter_max": 655
+    },
+    {
+      "id": "pasilloDesfaseC2_c2_86",
+      "label": "Puerta 0 entreabierta",
+      "position": [
+        2.29,
+        1.88,
+        2.94
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false,
+      "chapter_min": 67,
+      "chapter_max": 78
+    },
+    {
+      "id": "pasilloDesfaseC2_c2_88",
+      "label": "Cristal rectangular",
+      "position": [
+        0,
+        2.83,
+        13.19
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "pasilloDesfaseC2_c2_89",
+      "label": "Mancha de humedad",
+      "position": [
+        1.25,
+        0.013,
+        2.62
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false,
+      "chapter_min": 61,
+      "chapter_max": 655
+    },
+    {
+      "id": "pasilloDesfaseC2_c2_90",
+      "label": "Abertura de la pared",
+      "position": [
+        2.48,
+        0.28,
+        -9.0
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false,
+      "chapter_min": 79,
+      "chapter_max": 655
+    },
+    {
+      "id": "pasilloDesfaseC2_c2_91",
+      "label": "Cable de Dars",
+      "position": [
+        1.25,
+        0.029,
+        -9.0
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false,
+      "chapter_min": 205,
+      "chapter_max": 213
     }
   ],
   "ambient": [
@@ -1034,7 +1196,8 @@
         -7.34
       ],
       "radius": 1.45,
-      "interact": true
+      "interact": true,
+      "presses": 3
     },
     {
       "stage": 15,
@@ -1063,7 +1226,9 @@
         -11.35
       ],
       "radius": 1.42,
-      "interact": true
+      "interact": true,
+      "presses": 3,
+      "min_gap": 0.26
     },
     {
       "stage": 18,
@@ -1073,7 +1238,9 @@
         -11.35
       ],
       "radius": 1.42,
-      "interact": true
+      "interact": true,
+      "presses": 3,
+      "min_gap": 0.26
     },
     {
       "stage": 19,
@@ -1096,6 +1263,192 @@
       ],
       "radius": 1.0,
       "interact": true
+    },
+    {
+      "stage": 31,
+      "pos": [
+        0,
+        2.64,
+        -11.5
+      ],
+      "radius": 1.24,
+      "interact": true,
+      "next": 37,
+      "set_flags": 4194304
+    },
+    {
+      "stage": 37,
+      "pos": [
+        0,
+        2.64,
+        11.8
+      ],
+      "radius": 1.24,
+      "interact": true,
+      "next": 43,
+      "set_flags": 2
+    },
+    {
+      "stage": 49,
+      "pos": [
+        0,
+        2.64,
+        -11.4
+      ],
+      "radius": 1.24,
+      "interact": true,
+      "next": 55
+    },
+    {
+      "stage": 55,
+      "pos": [
+        0,
+        2.64,
+        -11.0
+      ],
+      "radius": 1.24,
+      "interact": true,
+      "next": 56
+    },
+    {
+      "stage": 56,
+      "pos": [
+        0,
+        2.64,
+        11.0
+      ],
+      "radius": 1.24,
+      "interact": false,
+      "next": 61
+    },
+    {
+      "stage": 61,
+      "pos": [
+        1.5,
+        2.64,
+        2.5
+      ],
+      "radius": 1.24,
+      "interact": true,
+      "next": 67,
+      "presses": 2,
+      "min_gap": 0.17
+    },
+    {
+      "stage": 79,
+      "pos": [
+        1.5,
+        2.64,
+        -9.0
+      ],
+      "radius": 1.24,
+      "interact": true,
+      "next": 85
+    },
+    {
+      "stage": 85,
+      "pos": [
+        1.5,
+        2.64,
+        -9.0
+      ],
+      "radius": 1.24,
+      "interact": true,
+      "next": 91
+    },
+    {
+      "stage": 91,
+      "pos": [
+        1.5,
+        2.64,
+        -9.0
+      ],
+      "radius": 1.24,
+      "interact": true,
+      "next": 97
+    },
+    {
+      "stage": 103,
+      "pos": [
+        1.5,
+        2.64,
+        -9.0
+      ],
+      "radius": 1.24,
+      "interact": true,
+      "next": 109
+    },
+    {
+      "stage": 109,
+      "pos": [
+        0,
+        2.64,
+        11.8
+      ],
+      "radius": 1.24,
+      "interact": true,
+      "next": 115
+    },
+    {
+      "stage": 205,
+      "pos": [
+        1.5,
+        2.64,
+        -9.0
+      ],
+      "radius": 1.24,
+      "interact": true,
+      "next": 211
+    },
+    {
+      "stage": 211,
+      "pos": [
+        0,
+        2.64,
+        -1.8
+      ],
+      "radius": 1.24,
+      "interact": true,
+      "next": 217,
+      "presses": 2,
+      "min_gap": 0.16,
+      "set_flags": 64
+    },
+    {
+      "stage": 217,
+      "pos": [
+        1.3,
+        2.64,
+        8.3
+      ],
+      "radius": 1.24,
+      "interact": true,
+      "next": 223
+    },
+    {
+      "stage": 223,
+      "pos": [
+        1.5,
+        2.64,
+        -9.0
+      ],
+      "radius": 1.24,
+      "interact": true,
+      "next": 224,
+      "set_flags": 32768
+    },
+    {
+      "stage": 224,
+      "pos": [
+        1.42,
+        2.64,
+        8.45
+      ],
+      "radius": 1.24,
+      "interact": true,
+      "next": 229,
+      "presses": 2
     }
-  ]
+  ],
+  "fades": {}
 }

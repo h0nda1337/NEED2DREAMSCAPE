@@ -1,0 +1,397 @@
+{
+  "name": "calleLateral",
+  "spawn": [
+    0,
+    2.64,
+    -5.7
+  ],
+  "arrival": {
+    "exteriorC2": [
+      0,
+      2.64,
+      -5.65
+    ]
+  },
+  "portals": [
+    {
+      "target": "exteriorC2",
+      "pos": [
+        0,
+        2.64,
+        -6.55
+      ],
+      "radius": 0.95,
+      "min_stage": 361,
+      "max_stage": 361
+    }
+  ],
+  "colliders": [
+    {
+      "name": "calleLateral_c2_9",
+      "position": [
+        0,
+        -0.12,
+        0
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        12.0,
+        0.24,
+        15.0
+      ],
+      "cutaway": false
+    },
+    {
+      "name": "calleLateral_c2_10",
+      "position": [
+        -6.0,
+        0.55,
+        0
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.2,
+        1.1,
+        15.0
+      ],
+      "cutaway": false
+    },
+    {
+      "name": "calleLateral_c2_11",
+      "position": [
+        0,
+        0.55,
+        -7.5
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        12.0,
+        1.1,
+        0.2
+      ],
+      "cutaway": false
+    },
+    {
+      "name": "calleLateral_c2_12",
+      "position": [
+        6.0,
+        0.55,
+        0
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.2,
+        1.1,
+        15.0
+      ],
+      "cutaway": false
+    },
+    {
+      "name": "calleLateral_c2_13",
+      "position": [
+        0,
+        0.55,
+        7.5
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        12.0,
+        1.1,
+        0.2
+      ],
+      "cutaway": false
+    },
+    {
+      "name": "calleLateral_c2_14",
+      "position": [
+        5.45,
+        2.1,
+        -4.3
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.15,
+        4.2,
+        4.6
+      ],
+      "cutaway": false
+    },
+    {
+      "name": "calleLateral_c2_16",
+      "position": [
+        5.45,
+        2.1,
+        0.8
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.15,
+        4.2,
+        4.6
+      ],
+      "cutaway": false
+    },
+    {
+      "name": "calleLateral_c2_18",
+      "position": [
+        5.45,
+        2.1,
+        5.9
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.15,
+        4.2,
+        4.6
+      ],
+      "cutaway": false
+    },
+    {
+      "name": "calleLateral_c2_20",
+      "position": [
+        -2.9,
+        2.34,
+        3.6
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.18,
+        4.68,
+        0.18
+      ],
+      "cutaway": false
+    }
+  ],
+  "lights": [
+    {
+      "position": [
+        -2.8,
+        4.56,
+        3.6
+      ],
+      "type": 2,
+      "color": [
+        0.86,
+        0.82,
+        0.56
+      ],
+      "intensity": 1.24,
+      "range": 12,
+      "enabled": true
+    }
+  ],
+  "markers": [],
+  "objects": [
+    {
+      "id": "calleLateral_c2_9",
+      "label": "Suelo",
+      "position": [
+        0,
+        -0.12,
+        0
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "calleLateral_c2_10",
+      "label": "Borde",
+      "position": [
+        -6.0,
+        0.55,
+        0
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "calleLateral_c2_11",
+      "label": "Borde",
+      "position": [
+        0,
+        0.55,
+        -7.5
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "calleLateral_c2_12",
+      "label": "Borde",
+      "position": [
+        6.0,
+        0.55,
+        0
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "calleLateral_c2_13",
+      "label": "Borde",
+      "position": [
+        0,
+        0.55,
+        7.5
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "calleLateral_c2_14",
+      "label": "Casa",
+      "position": [
+        5.45,
+        2.1,
+        -4.3
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "calleLateral_c2_15",
+      "label": "Ventana iluminada",
+      "position": [
+        4.84,
+        2.62,
+        -3.44
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "calleLateral_c2_16",
+      "label": "Casa",
+      "position": [
+        5.45,
+        2.1,
+        0.8
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "calleLateral_c2_17",
+      "label": "Ventana iluminada",
+      "position": [
+        4.84,
+        2.62,
+        1.6600000000000001
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "calleLateral_c2_18",
+      "label": "Casa",
+      "position": [
+        5.45,
+        2.1,
+        5.9
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "calleLateral_c2_19",
+      "label": "Ventana iluminada",
+      "position": [
+        4.84,
+        2.62,
+        6.760000000000001
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "calleLateral_c2_20",
+      "label": "Poste",
+      "position": [
+        -2.9,
+        2.34,
+        3.6
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    }
+  ],
+  "ambient": [
+    0.22,
+    0.25,
+    0.34
+  ],
+  "inspections": [],
+  "events": [
+    {
+      "stage": 349,
+      "pos": [
+        3.3,
+        2.64,
+        1.9
+      ],
+      "radius": 1.24,
+      "interact": true,
+      "next": 355
+    },
+    {
+      "stage": 355,
+      "pos": [
+        0,
+        2.64,
+        3.5
+      ],
+      "radius": 1.24,
+      "interact": true,
+      "next": 361
+    }
+  ],
+  "fades": {}
+}

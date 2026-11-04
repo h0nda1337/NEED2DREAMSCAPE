@@ -1,0 +1,465 @@
+{
+  "name": "lavaderoDesfase",
+  "spawn": [
+    0,
+    2.64,
+    -4.2
+  ],
+  "arrival": {
+    "pasilloDesfaseC2": [
+      0,
+      2.64,
+      -4.05
+    ]
+  },
+  "portals": [
+    {
+      "target": "pasilloDesfaseC2",
+      "pos": [
+        0,
+        2.64,
+        -5.04
+      ],
+      "radius": 0.76,
+      "min_stage": 79,
+      "max_stage": 79
+    }
+  ],
+  "colliders": [
+    {
+      "name": "lavaderoDesfase_c2_9",
+      "position": [
+        0,
+        -0.1,
+        0
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        10.0,
+        0.2,
+        12.0
+      ],
+      "cutaway": false
+    },
+    {
+      "name": "lavaderoDesfase_c2_10",
+      "position": [
+        -5.0,
+        2.7,
+        0
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.2,
+        5.4,
+        12.0
+      ],
+      "cutaway": true
+    },
+    {
+      "name": "lavaderoDesfase_c2_11",
+      "position": [
+        5.0,
+        2.7,
+        0
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.2,
+        5.4,
+        12.0
+      ],
+      "cutaway": true
+    },
+    {
+      "name": "lavaderoDesfase_c2_12",
+      "position": [
+        0,
+        2.7,
+        6.0
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        10.0,
+        5.4,
+        0.22
+      ],
+      "cutaway": true
+    },
+    {
+      "name": "lavaderoDesfase_c2_13",
+      "position": [
+        0,
+        2.7,
+        -6.0
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        10.0,
+        5.4,
+        0.22
+      ],
+      "cutaway": false
+    },
+    {
+      "name": "lavaderoDesfase_c2_18",
+      "position": [
+        -2.8,
+        1.06,
+        3.5
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        2.0,
+        2.12,
+        1.9
+      ],
+      "cutaway": false
+    },
+    {
+      "name": "lavaderoDesfase_c2_21",
+      "position": [
+        2.86,
+        1.02,
+        3.8
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        2.25,
+        2.04,
+        1.68
+      ],
+      "cutaway": false
+    }
+  ],
+  "lights": [
+    {
+      "position": [
+        0,
+        4.86,
+        1.5
+      ],
+      "type": 2,
+      "color": [
+        0.75,
+        0.9,
+        0.79
+      ],
+      "intensity": 1.45,
+      "range": 10,
+      "enabled": true
+    }
+  ],
+  "markers": [],
+  "objects": [
+    {
+      "id": "lavaderoDesfase_c2_9",
+      "label": "Piso",
+      "position": [
+        0,
+        -0.1,
+        0
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "lavaderoDesfase_c2_10",
+      "label": "Pared izquierda",
+      "position": [
+        -5.0,
+        2.7,
+        0
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "lavaderoDesfase_c2_11",
+      "label": "Pared derecha",
+      "position": [
+        5.0,
+        2.7,
+        0
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "lavaderoDesfase_c2_12",
+      "label": "Pared de fondo",
+      "position": [
+        0,
+        2.7,
+        6.0
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "lavaderoDesfase_c2_13",
+      "label": "Pared de entrada",
+      "position": [
+        0,
+        2.7,
+        -6.0
+      ],
+      "camera_hidden": true,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "lavaderoDesfase_c2_14",
+      "label": "Marco de salida",
+      "position": [
+        0,
+        1.8,
+        -5.87
+      ],
+      "camera_hidden": true,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "lavaderoDesfase_c2_15",
+      "label": "Marco ",
+      "position": [
+        0,
+        1.99,
+        -5.86
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "lavaderoDesfase_c2_16",
+      "label": "Hoja ",
+      "position": [
+        0,
+        1.9,
+        -5.86
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "lavaderoDesfase_c2_17",
+      "label": "Manija ",
+      "position": [
+        0.58,
+        1.96,
+        -5.98
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "lavaderoDesfase_c2_18",
+      "label": "Lavadora",
+      "position": [
+        -2.8,
+        1.06,
+        3.5
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "lavaderoDesfase_c2_19",
+      "label": "Tapa de la lavadora",
+      "position": [
+        -2.8,
+        2.16,
+        3.5
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "lavaderoDesfase_c2_20",
+      "label": "Cable enrollado",
+      "position": [
+        -2.86,
+        2.25,
+        3.48
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "lavaderoDesfase_c2_21",
+      "label": "Lavadero",
+      "position": [
+        2.86,
+        1.02,
+        3.8
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "lavaderoDesfase_c2_22",
+      "label": "Agua",
+      "position": [
+        2.86,
+        2.04,
+        3.8
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "lavaderoDesfase_c2_23",
+      "label": "Cuerda de ropa",
+      "position": [
+        0,
+        4.3,
+        1.35
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "lavaderoDesfase_c2_24",
+      "label": "Ropa húmeda",
+      "position": [
+        -3.5,
+        3.6999999999999997,
+        1.35
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "lavaderoDesfase_c2_25",
+      "label": "Ropa húmeda",
+      "position": [
+        -1.5,
+        3.9099999999999997,
+        1.35
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "lavaderoDesfase_c2_26",
+      "label": "Ropa húmeda",
+      "position": [
+        1.2,
+        3.86,
+        1.35
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "lavaderoDesfase_c2_27",
+      "label": "Ropa húmeda",
+      "position": [
+        3.2,
+        3.7249999999999996,
+        1.35
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    }
+  ],
+  "ambient": [
+    0.18,
+    0.23,
+    0.2
+  ],
+  "inspections": [],
+  "events": [
+    {
+      "stage": 67,
+      "pos": [
+        -2.5,
+        2.64,
+        2.1
+      ],
+      "radius": 1.24,
+      "interact": true,
+      "next": 68
+    },
+    {
+      "stage": 68,
+      "next": 73,
+      "choices": [
+        {
+          "next": 69,
+          "set_flags": 0,
+          "clear_flags": 0
+        },
+        {
+          "next": 73,
+          "set_flags": 0,
+          "clear_flags": 0
+        }
+      ]
+    },
+    {
+      "stage": 69,
+      "delay": 0.55,
+      "next": 73,
+      "set_flags": 4
+    },
+    {
+      "stage": 73,
+      "pos": [
+        2.8,
+        2.64,
+        0.5
+      ],
+      "radius": 1.24,
+      "interact": true,
+      "next": 79
+    }
+  ],
+  "fades": {}
+}

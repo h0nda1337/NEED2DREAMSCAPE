@@ -1,0 +1,490 @@
+{
+  "name": "conductoMantenimiento",
+  "spawn": [
+    0,
+    2.64,
+    -6.0
+  ],
+  "arrival": {
+    "cuartoInterruptor": [
+      0,
+      2.64,
+      -5.36
+    ]
+  },
+  "portals": [],
+  "colliders": [
+    {
+      "name": "conductoMantenimiento_c2_9",
+      "position": [
+        0,
+        -0.1,
+        0
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        4.6,
+        0.2,
+        15.6
+      ],
+      "cutaway": false
+    },
+    {
+      "name": "conductoMantenimiento_c2_10",
+      "position": [
+        -2.3,
+        2.7,
+        0
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.2,
+        5.4,
+        15.6
+      ],
+      "cutaway": true
+    },
+    {
+      "name": "conductoMantenimiento_c2_11",
+      "position": [
+        2.3,
+        2.7,
+        0
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.2,
+        5.4,
+        15.6
+      ],
+      "cutaway": true
+    },
+    {
+      "name": "conductoMantenimiento_c2_12",
+      "position": [
+        0,
+        2.7,
+        7.8
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        4.6,
+        5.4,
+        0.22
+      ],
+      "cutaway": true
+    },
+    {
+      "name": "conductoMantenimiento_c2_13",
+      "position": [
+        0,
+        2.7,
+        -7.8
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        4.6,
+        5.4,
+        0.22
+      ],
+      "cutaway": false
+    }
+  ],
+  "lights": [
+    {
+      "position": [
+        0,
+        2.94,
+        6.67
+      ],
+      "type": 2,
+      "color": [
+        0.72,
+        0.73,
+        1
+      ],
+      "intensity": 1.17,
+      "range": 7,
+      "enabled": true
+    },
+    {
+      "position": [
+        0,
+        1.7,
+        -5.88
+      ],
+      "type": 2,
+      "color": [
+        0.61,
+        0.79,
+        0.83
+      ],
+      "intensity": 0.95,
+      "range": 7,
+      "enabled": true
+    }
+  ],
+  "markers": [],
+  "objects": [
+    {
+      "id": "conductoMantenimiento_c2_9",
+      "label": "Piso",
+      "position": [
+        0,
+        -0.1,
+        0
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "conductoMantenimiento_c2_10",
+      "label": "Pared izquierda",
+      "position": [
+        -2.3,
+        2.7,
+        0
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "conductoMantenimiento_c2_11",
+      "label": "Pared derecha",
+      "position": [
+        2.3,
+        2.7,
+        0
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "conductoMantenimiento_c2_12",
+      "label": "Pared de fondo",
+      "position": [
+        0,
+        2.7,
+        7.8
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "conductoMantenimiento_c2_13",
+      "label": "Pared de entrada",
+      "position": [
+        0,
+        2.7,
+        -7.8
+      ],
+      "camera_hidden": true,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "conductoMantenimiento_c2_14",
+      "label": "Marco de salida",
+      "position": [
+        0,
+        1.8,
+        -7.67
+      ],
+      "camera_hidden": true,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "conductoMantenimiento_c2_15",
+      "label": "Tubería larga",
+      "position": [
+        -1.83,
+        0.72,
+        0
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "conductoMantenimiento_c2_16",
+      "label": "Conducto eléctrico",
+      "position": [
+        -1.83,
+        2.23,
+        0
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "conductoMantenimiento_c2_17",
+      "label": "Tubería larga",
+      "position": [
+        1.83,
+        0.72,
+        0
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "conductoMantenimiento_c2_18",
+      "label": "Conducto eléctrico",
+      "position": [
+        1.83,
+        2.23,
+        0
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "conductoMantenimiento_c2_19",
+      "label": "Soporte",
+      "position": [
+        0,
+        0.021,
+        -6
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "conductoMantenimiento_c2_20",
+      "label": "Soporte",
+      "position": [
+        0,
+        0.021,
+        -3
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "conductoMantenimiento_c2_21",
+      "label": "Soporte",
+      "position": [
+        0,
+        0.021,
+        0
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "conductoMantenimiento_c2_22",
+      "label": "Soporte",
+      "position": [
+        0,
+        0.021,
+        3
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "conductoMantenimiento_c2_23",
+      "label": "Soporte",
+      "position": [
+        0,
+        0.021,
+        6
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "conductoMantenimiento_c2_24",
+      "label": "Barra de rejilla",
+      "position": [
+        -1.17,
+        1.6,
+        7.45
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false,
+      "chapter_min": 31,
+      "chapter_max": 235
+    },
+    {
+      "id": "conductoMantenimiento_c2_25",
+      "label": "Barra de rejilla",
+      "position": [
+        -0.78,
+        1.6,
+        7.45
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false,
+      "chapter_min": 31,
+      "chapter_max": 235
+    },
+    {
+      "id": "conductoMantenimiento_c2_26",
+      "label": "Barra de rejilla",
+      "position": [
+        -0.39,
+        1.6,
+        7.45
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false,
+      "chapter_min": 31,
+      "chapter_max": 235
+    },
+    {
+      "id": "conductoMantenimiento_c2_27",
+      "label": "Barra de rejilla",
+      "position": [
+        0.0,
+        1.6,
+        7.45
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false,
+      "chapter_min": 31,
+      "chapter_max": 235
+    },
+    {
+      "id": "conductoMantenimiento_c2_28",
+      "label": "Barra de rejilla",
+      "position": [
+        0.39,
+        1.6,
+        7.45
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false,
+      "chapter_min": 31,
+      "chapter_max": 235
+    },
+    {
+      "id": "conductoMantenimiento_c2_29",
+      "label": "Barra de rejilla",
+      "position": [
+        0.78,
+        1.6,
+        7.45
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false,
+      "chapter_min": 31,
+      "chapter_max": 235
+    },
+    {
+      "id": "conductoMantenimiento_c2_30",
+      "label": "Barra de rejilla",
+      "position": [
+        1.17,
+        1.6,
+        7.45
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false,
+      "chapter_min": 31,
+      "chapter_max": 235
+    },
+    {
+      "id": "conductoMantenimiento_c2_32",
+      "label": "Tapa del registro",
+      "position": [
+        0,
+        0.4,
+        -5.2
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false,
+      "chapter_min": 247,
+      "chapter_max": 247
+    }
+  ],
+  "ambient": [
+    0.13,
+    0.14,
+    0.16
+  ],
+  "inspections": [],
+  "events": [
+    {
+      "stage": 235,
+      "pos": [
+        0,
+        2.64,
+        6.1
+      ],
+      "radius": 1.24,
+      "interact": true,
+      "next": 241,
+      "presses": 3,
+      "min_gap": 0.22
+    },
+    {
+      "stage": 241,
+      "pos": [
+        0,
+        2.64,
+        1.7
+      ],
+      "radius": 1.24,
+      "interact": true,
+      "next": 247
+    },
+    {
+      "stage": 247,
+      "pos": [
+        0,
+        2.64,
+        -4.4
+      ],
+      "radius": 1.24,
+      "interact": true,
+      "next": 253,
+      "presses": 3,
+      "min_gap": 0.22
+    }
+  ],
+  "fades": {
+    "253": "banoNormalC2"
+  }
+}

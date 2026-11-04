@@ -1358,5 +1358,6 @@
       "radius": 1.52,
       "interact": true
     }
-  ]
+  ],
+  "fades": {}
 }

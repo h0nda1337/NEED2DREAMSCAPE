@@ -1,0 +1,441 @@
+{
+  "name": "cuartoSalida",
+  "spawn": [
+    0,
+    2.64,
+    -3.7
+  ],
+  "arrival": {
+    "escaleraServicio": [
+      0,
+      2.64,
+      -3.65
+    ]
+  },
+  "portals": [
+    {
+      "target": "escaleraServicio",
+      "pos": [
+        0,
+        2.64,
+        -4.53
+      ],
+      "radius": 0.95,
+      "min_stage": 133,
+      "max_stage": 133
+    }
+  ],
+  "colliders": [
+    {
+      "name": "cuartoSalida_c2_9",
+      "position": [
+        0,
+        -0.1,
+        0
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        5.6,
+        0.2,
+        11.0
+      ],
+      "cutaway": false
+    },
+    {
+      "name": "cuartoSalida_c2_10",
+      "position": [
+        -2.8,
+        2.7,
+        0
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.2,
+        5.4,
+        11.0
+      ],
+      "cutaway": true
+    },
+    {
+      "name": "cuartoSalida_c2_11",
+      "position": [
+        2.8,
+        2.7,
+        0
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.2,
+        5.4,
+        11.0
+      ],
+      "cutaway": true
+    },
+    {
+      "name": "cuartoSalida_c2_12",
+      "position": [
+        0,
+        2.7,
+        5.5
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        5.6,
+        5.4,
+        0.22
+      ],
+      "cutaway": true
+    },
+    {
+      "name": "cuartoSalida_c2_13",
+      "position": [
+        0,
+        2.7,
+        -5.5
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        5.6,
+        5.4,
+        0.22
+      ],
+      "cutaway": false
+    },
+    {
+      "name": "cuartoSalida_c2_23",
+      "position": [
+        -1.35,
+        0.83,
+        0.9
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        2.5,
+        0.18,
+        0.88
+      ],
+      "cutaway": false
+    },
+    {
+      "name": "cuartoSalida_c2_27",
+      "position": [
+        1.83,
+        0.55,
+        1.1
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.7,
+        1.1,
+        0.72
+      ],
+      "cutaway": false
+    }
+  ],
+  "lights": [
+    {
+      "position": [
+        0,
+        4.93,
+        0
+      ],
+      "type": 2,
+      "color": [
+        1,
+        0.92,
+        0.77
+      ],
+      "intensity": 1.23,
+      "range": 9,
+      "enabled": true
+    }
+  ],
+  "markers": [],
+  "objects": [
+    {
+      "id": "cuartoSalida_c2_9",
+      "label": "Piso",
+      "position": [
+        0,
+        -0.1,
+        0
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cuartoSalida_c2_10",
+      "label": "Pared izquierda",
+      "position": [
+        -2.8,
+        2.7,
+        0
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cuartoSalida_c2_11",
+      "label": "Pared derecha",
+      "position": [
+        2.8,
+        2.7,
+        0
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cuartoSalida_c2_12",
+      "label": "Pared de fondo",
+      "position": [
+        0,
+        2.7,
+        5.5
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cuartoSalida_c2_13",
+      "label": "Pared de entrada",
+      "position": [
+        0,
+        2.7,
+        -5.5
+      ],
+      "camera_hidden": true,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cuartoSalida_c2_14",
+      "label": "Marco de salida",
+      "position": [
+        0,
+        1.8,
+        -5.37
+      ],
+      "camera_hidden": true,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cuartoSalida_c2_15",
+      "label": "Marco SALIDA",
+      "position": [
+        0,
+        1.99,
+        -5.38
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cuartoSalida_c2_16",
+      "label": "Hoja SALIDA",
+      "position": [
+        0,
+        1.9,
+        -5.38
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cuartoSalida_c2_17",
+      "label": "Manija SALIDA",
+      "position": [
+        0.58,
+        1.96,
+        -5.5
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cuartoSalida_c2_19",
+      "label": "Marco SALIDA",
+      "position": [
+        0,
+        1.99,
+        5.38
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cuartoSalida_c2_20",
+      "label": "Hoja SALIDA",
+      "position": [
+        0,
+        1.9,
+        5.38
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cuartoSalida_c2_21",
+      "label": "Manija SALIDA",
+      "position": [
+        0.58,
+        1.96,
+        5.26
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cuartoSalida_c2_23",
+      "label": "Banca",
+      "position": [
+        -1.35,
+        0.83,
+        0.9
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cuartoSalida_c2_24",
+      "label": "Respaldo",
+      "position": [
+        -1.35,
+        1.23,
+        1.31
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cuartoSalida_c2_25",
+      "label": "Apoyo de la banca",
+      "position": [
+        -2.33,
+        0.38,
+        0.9
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cuartoSalida_c2_26",
+      "label": "Apoyo de la banca",
+      "position": [
+        -0.3700000000000001,
+        0.38,
+        0.9
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cuartoSalida_c2_27",
+      "label": "Bote de basura",
+      "position": [
+        1.83,
+        0.55,
+        1.1
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    }
+  ],
+  "ambient": [
+    0.24,
+    0.22,
+    0.2
+  ],
+  "inspections": [],
+  "events": [
+    {
+      "stage": 127,
+      "pos": [
+        0,
+        2.64,
+        3.9
+      ],
+      "radius": 1.24,
+      "interact": false,
+      "next": 128,
+      "warp": [
+        0,
+        2.64,
+        -3.55
+      ]
+    },
+    {
+      "stage": 128,
+      "pos": [
+        0,
+        2.64,
+        3.9
+      ],
+      "radius": 1.24,
+      "interact": false,
+      "next": 129,
+      "warp": [
+        0,
+        2.64,
+        -3.55
+      ]
+    },
+    {
+      "stage": 129,
+      "pos": [
+        0.9,
+        2.64,
+        1.1
+      ],
+      "radius": 1.24,
+      "interact": true,
+      "next": 133,
+      "set_flags": 8
+    }
+  ],
+  "fades": {}
+}
