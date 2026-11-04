@@ -52,3 +52,13 @@ newmtl color_388
 Kd 0.4350 0.5220 0.5140
 d 1.0000
 illum 1
+
+newmtl color_389
+Kd 0.6780 0.6310 0.4940
+d 1.0000
+illum 1
+
+newmtl color_390
+Kd 0.3020 0.3140 0.2900
+d 1.0000
+illum 1

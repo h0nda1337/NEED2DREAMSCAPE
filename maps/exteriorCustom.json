@@ -47,7 +47,7 @@
     {
       "name": "exteriorCustom_original_10",
       "position": [
-        -45.3,
+        -45.185,
         2.85,
         12.0
       ],
@@ -57,7 +57,7 @@
         0
       ],
       "size": [
-        12.600000000000001,
+        12.829999999999998,
         5.7,
         0.22
       ],
@@ -66,8 +66,8 @@
     {
       "name": "exteriorCustom_original_11",
       "position": [
-        -31.95,
-        2.5,
+        -32.05,
+        2.85,
         12.0
       ],
       "center": [
@@ -76,8 +76,8 @@
         0
       ],
       "size": [
-        8.100000000000001,
-        5.0,
+        8.300000000000004,
+        5.7,
         0.22
       ],
       "cutaway": true
@@ -105,7 +105,7 @@
       "name": "exteriorCustom_original_13",
       "position": [
         -27.9,
-        2.5,
+        2.85,
         17.5
       ],
       "center": [
@@ -115,7 +115,7 @@
       ],
       "size": [
         0.22,
-        5.0,
+        5.7,
         11.0
       ],
       "cutaway": true
@@ -142,8 +142,8 @@
     {
       "name": "exteriorCustom_original_15",
       "position": [
-        -44.8,
-        5.72,
+        -39.75,
+        5.78,
         17.5
       ],
       "center": [
@@ -152,7 +152,7 @@
         0
       ],
       "size": [
-        14.5,
+        24.8,
         0.28,
         11.9
       ],
@@ -161,9 +161,9 @@
     {
       "name": "exteriorCustom_original_16",
       "position": [
-        -33.0,
-        5.02,
-        17.3
+        -37.485,
+        5.2,
+        12.0
       ],
       "center": [
         0,
@@ -171,9 +171,9 @@
         0
       ],
       "size": [
-        10.7,
-        0.25,
-        11.55
+        2.57,
+        1.0,
+        0.22
       ],
       "cutaway": false
     },
@@ -743,7 +743,7 @@
       "id": "exteriorCustom_original_10",
       "label": "Fachada de madera",
       "position": [
-        -45.3,
+        -45.185,
         2.85,
         12.0
       ],
@@ -755,8 +755,8 @@
       "id": "exteriorCustom_original_11",
       "label": "Fachada del estudio",
       "position": [
-        -31.95,
-        2.5,
+        -32.05,
+        2.85,
         12.0
       ],
       "camera_hidden": false,
@@ -780,7 +780,7 @@
       "label": "Muro derecho",
       "position": [
         -27.9,
-        2.5,
+        2.85,
         17.5
       ],
       "camera_hidden": false,
@@ -801,10 +801,10 @@
     },
     {
       "id": "exteriorCustom_original_15",
-      "label": "Azotea principal",
+      "label": "Azotea continua",
       "position": [
-        -44.8,
-        5.72,
+        -39.75,
+        5.78,
         17.5
       ],
       "camera_hidden": false,
@@ -813,11 +813,11 @@
     },
     {
       "id": "exteriorCustom_original_16",
-      "label": "Azotea baja",
+      "label": "Dintel del porche",
       "position": [
-        -33.0,
-        5.02,
-        17.3
+        -37.485,
+        5.2,
+        12.0
       ],
       "camera_hidden": false,
       "vanishes": false,

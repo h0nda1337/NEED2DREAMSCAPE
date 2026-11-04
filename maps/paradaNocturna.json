@@ -159,7 +159,17 @@
       "enabled": true
     }
   ],
-  "markers": [],
+  "markers": [
+    {
+      "name": "Desconocido",
+      "position": [
+        0.85,
+        2.64,
+        2.33
+      ],
+      "stage": 337
+    }
+  ],
   "objects": [
     {
       "id": "paradaNocturna_c2_9",
