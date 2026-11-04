@@ -1,0 +1,1 @@
+{"name":"loader","index":3,"nodes":[{"name":"Loader","parent":-1,"pos":[0,0,0],"colliders":[],"sounds":[],"scripts":[{"class":"Loader","fields":{"m_Enabled":1}}]}]}

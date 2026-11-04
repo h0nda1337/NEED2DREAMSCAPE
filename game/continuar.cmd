@@ -1,0 +1,3 @@
+@echo off
+cd /d "%~dp0"
+petscop_c89.exe --scene loader %*

@@ -10,3 +10,8 @@
 *.p89z
 *.ttf
 *.otf
+
+!/game/SDL2.dll
+!/game/petscop_c89.exe
+!/game/assets/custom/**/*.p89z
+/game/build/

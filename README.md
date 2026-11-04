@@ -4,8 +4,19 @@
 
 Rade vuelve a casa en Navidad y encuentra a Dars junto a su computadora. Al encender la pantalla, la habitación cambia y empieza la búsqueda de Dars.
 
+## Jugar en Windows
+
+Descarga y extrae el ZIP de la v14. Abre `compile_and_playnow.cmd` para jugar. Si tienes GCC para Windows con SDL2 y zlib, el acceso compila el código C89 y lo ejecuta. En el resto de las instalaciones abre el ejecutable incluido. El mismo acceso funciona en una copia completa del repositorio. [Descargar NEED2DREAMSCAPE v14 para Windows](https://github.com/h0nda1337/NEED2DREAMSCAPE/releases/latest)
+
+- `game/jugar.cmd` abre el ejecutable incluido.
+- `game/capitulo_2.cmd` abre directamente el segundo capítulo.
+- Para continuar desde una versión anterior, copia el archivo `.save` a `game/`. En el menú selecciona **Cargar partida**, o abre `capitulo_2.cmd` si usabas su guardado separado.
+
+Usa WASD o las flechas para moverte, E para interactuar, clic o Enter para avanzar los diálogos e I para abrir el inventario del capítulo 2.
+
 ## Contenido de esta rama
 
+- `game/` incluye el código C89, los recursos que necesita el juego y la compilación para Windows. Las dependencias y tipografías se acreditan en [`game/third_party/`](game/third_party/).
 - `maps/` reúne los ocho mapas del capítulo. El exterior, la sala, el dormitorio, el cuarto de la computadora y el baño se rediseñaron con geometría propia. También están la cocina, el patio trasero y el pasillo equivocado. Cada mapa incluye geometría OBJ, materiales MTL y un JSON con coordenadas, colisiones, iluminación, puertas y puntos de evento. Los OBJ se pueden importar con su MTL en un editor 3D.
 - `story/capitulo-1.json` contiene el diálogo del capítulo 1, desde la llegada de Rade hasta el cierre del pasillo.
 - `art/figura.png` contiene los sprites dibujados para el juego de la Figura, Gwen, Hugh y Erik, en 40 × 60 píxeles con transparencia.
@@ -15,7 +26,7 @@ Rade vuelve a casa en Navidad y encuentra a Dars junto a su computadora. Al ence
 
 Exterior → sala → dormitorio → cuarto de la computadora → dormitorio → sala → cocina → patio → cocina → dormitorio → cuarto de la computadora → pasillo equivocado.
 
-Los ocho escenarios de `maps/` se construyeron para NEED2DREAMSCAPE con geometría procedural y colores planos. Las posiciones y los identificadores de las puertas conservan la continuidad de la historia. Esta entrega contiene recursos editables para el proyecto. El ejecutable, los recursos extraídos, los mapas de Roblox, las fuentes de terceros y el código relacionado con la reconstrucción del juego anterior quedan fuera del contenido de esta rama.
+Los ocho escenarios del primer capítulo se construyeron para NEED2DREAMSCAPE con geometría procedural y colores planos. La edición pública de la v14 usa gráficos de control propios y tipografías con licencia SIL OFL. Conserva el recorrido y los puntos de guardado de la v14.
 
 
 ## Capítulo 2 — Los cuartos que no caben
