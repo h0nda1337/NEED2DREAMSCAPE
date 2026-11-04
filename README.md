@@ -8,8 +8,8 @@ Rade vuelve a casa en Navidad y encuentra a Dars junto a su computadora. Al ence
 
 - `maps/` reúne los ocho mapas del capítulo. El exterior, la sala, el dormitorio, el cuarto de la computadora y el baño se rediseñaron con geometría propia. También están la cocina, el patio trasero y el pasillo equivocado. Cada mapa incluye geometría OBJ, materiales MTL y un JSON con coordenadas, colisiones, iluminación, puertas y puntos de evento. Los OBJ se pueden importar con su MTL en un editor 3D.
 - `story/capitulo-1.json` contiene el diálogo del capítulo 1, desde la llegada de Rade hasta el cierre del pasillo.
-- `art/figura.png` contiene el sprite humanoide dibujado para el juego, en 40 × 60 píxeles con transparencia.
-- `audio/` contiene efectos y ambientes sintetizados para estas escenas.
+- `art/figura.png` contiene los sprites dibujados para el juego de la Figura, Gwen, Hugh y Erik, en 40 × 60 píxeles con transparencia.
+- `audio/` contiene efectos propios y grabaciones CC0. Las fuentes están en [Créditos de audio](CREDITOS_AUDIO.md).
 
 ## Recorrido del capítulo
 

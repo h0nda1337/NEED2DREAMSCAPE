@@ -26,11 +26,11 @@
     "mapa": "casaCustom",
     "dialogo": [
       {
-        "personaje": "Voz de la casa",
+        "personaje": "Gwen",
         "texto": "¿Dónde chingados estabas? Es Navidad y tú llegando a la hora que se te da la gana."
       },
       {
-        "personaje": "Voz de la casa",
+        "personaje": "Gwen",
         "texto": "Pudiste avisar. Pero claro, a ti te vale madre quién se queda despierto esperándote."
       },
       {
@@ -38,7 +38,7 @@
         "texto": "¿Puedo pasar a mi cuarto?"
       },
       {
-        "personaje": "Voz de la casa",
+        "personaje": "Gwen",
         "texto": "Vete. Y cierra la puerta. Ya nos arruinaste bastante la noche."
       }
     ]
@@ -89,19 +89,19 @@
     "dialogo": [
       {
         "personaje": "RADE",
-        "texto": "Esa silueta… Creí que te había dejado atrás."
+        "texto": "Te reconozco. Lo que no sé es de cuándo."
       },
       {
         "personaje": "FIGURA",
-        "texto": "Te fuiste tú."
+        "texto": "¿Y a ti? ¿Desde cuándo te reconoces?"
       },
       {
         "personaje": "RADE",
-        "texto": "¿Vienes por mí o por ella?"
+        "texto": "Me acuerdo de haber entrado. Eso tiene que contar."
       },
       {
         "personaje": "FIGURA",
-        "texto": "Tú fuiste quien encendió la pantalla."
+        "texto": "Yo también me acuerdo de que entraste. Tú fuiste quien encendió la pantalla."
       }
     ]
   },
@@ -119,35 +119,35 @@
       },
       {
         "personaje": "RADE",
-        "texto": "Estaba aquí hace un minuto."
+        "texto": "Ella estaba aquí. Si no, ¿con quién hablé?"
       },
       {
         "personaje": "FIGURA",
-        "texto": "Lo sé."
+        "texto": "¿Por qué te urge que haya sido ella?"
       },
       {
         "personaje": "RADE",
-        "texto": "Entonces dime dónde chingados está."
+        "texto": "Porque si tampoco estaba, ¿qué más me inventé?"
       },
       {
         "personaje": "FIGURA",
-        "texto": "No sé qué viste."
+        "texto": "Te acuerdas de sentir miedo. Eso sí pasó."
       },
       {
         "personaje": "RADE",
-        "texto": "No te hagas pendejo."
+        "texto": "¿Y si ni siquiera soy el que recuerda?"
       },
       {
         "personaje": "FIGURA",
-        "texto": "Sigues hablando igual."
+        "texto": "Dijiste «soy» antes de pensarlo."
       },
       {
         "personaje": "RADE",
-        "texto": "¿Por qué apareciste aquí?"
+        "texto": "¿Qué quieres que haga con eso?"
       },
       {
         "personaje": "FIGURA",
-        "texto": "Eso deberías preguntártelo tú."
+        "texto": "Nada. La puerta sigue en su sitio."
       }
     ]
   },
@@ -178,7 +178,7 @@
     "mapa": "casaCustom",
     "dialogo": [
       {
-        "personaje": "VOZ DE LA CASA",
+        "personaje": "GWEN",
         "texto": "¿Qué estás haciendo ahora?"
       },
       {
@@ -186,7 +186,7 @@
         "texto": "¿Viste a Dars salir?"
       },
       {
-        "personaje": "VOZ DE LA CASA",
+        "personaje": "GWEN",
         "texto": "No. ¿Por?"
       },
       {
@@ -194,7 +194,7 @@
         "texto": "Estaba en mi cuarto. Ahora no sé dónde está."
       },
       {
-        "personaje": "VOZ DE LA CASA",
+        "personaje": "GWEN",
         "texto": "Pues búscala."
       },
       {
@@ -202,7 +202,7 @@
         "texto": "Eso estoy haciendo."
       },
       {
-        "personaje": "VOZ DE LA CASA",
+        "personaje": "GWEN",
         "texto": "Entonces deja de hacer tanto ruido."
       },
       {
@@ -210,7 +210,7 @@
         "texto": "Te estoy preguntando si la viste. Nada más."
       },
       {
-        "personaje": "VOZ DE LA CASA",
+        "personaje": "GWEN",
         "texto": "Y ya te contesté."
       },
       {
@@ -218,7 +218,7 @@
         "texto": "Bueno, chingada madre."
       },
       {
-        "personaje": "VOZ DE LA CASA",
+        "personaje": "GWEN",
         "texto": "¿Qué dijiste?"
       },
       {

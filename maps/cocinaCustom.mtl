@@ -1,119 +1,124 @@
-newmtl color_176
+newmtl color_216
 Kd 0.5610 0.4710 0.3610
 d 1.0000
 illum 1
 
-newmtl color_179
+newmtl color_219
 Kd 0.4040 0.4000 0.3410
 d 1.0000
 illum 1
 
-newmtl color_180
+newmtl color_220
 Kd 0.4080 0.4000 0.3530
 d 1.0000
 illum 1
 
-newmtl color_182
+newmtl color_222
 Kd 0.3220 0.2510 0.2040
 d 1.0000
 illum 1
 
-newmtl color_187
-Kd 0.3250 0.2470 0.2080
+newmtl color_227
+Kd 0.3800 0.2860 0.2270
 d 1.0000
 illum 1
 
-newmtl color_189
+newmtl color_230
 Kd 0.6900 0.6980 0.6430
 d 1.0000
 illum 1
 
-newmtl color_192
+newmtl color_233
 Kd 0.3180 0.2630 0.2240
 d 1.0000
 illum 1
 
-newmtl color_177
+newmtl color_217
 Kd 0.6670 0.5730 0.4470
 d 1.0000
 illum 1
 
-newmtl color_178
+newmtl color_218
 Kd 0.5450 0.4670 0.3690
 d 1.0000
 illum 1
 
-newmtl color_181
+newmtl color_221
 Kd 0.2860 0.2310 0.1880
 d 1.0000
 illum 1
 
-newmtl color_183
+newmtl color_223
 Kd 0.4590 0.3250 0.2550
 d 1.0000
 illum 1
 
-newmtl color_184
+newmtl color_224
 Kd 0.4710 0.2670 0.2780
 d 1.0000
 illum 1
 
-newmtl color_185
+newmtl color_225
 Kd 0.7840 0.7610 0.6670
 d 1.0000
 illum 1
 
-newmtl color_186
+newmtl color_226
 Kd 0.4750 0.3880 0.2710
 d 1.0000
 illum 1
 
-newmtl color_188
+newmtl color_228
 Kd 0.4750 0.3450 0.2670
 d 1.0000
 illum 1
 
-newmtl color_190
+newmtl color_229
+Kd 0.3140 0.2430 0.2040
+d 1.0000
+illum 1
+
+newmtl color_231
 Kd 0.7690 0.7690 0.7100
 d 1.0000
 illum 1
 
-newmtl color_191
+newmtl color_232
 Kd 0.4200 0.4270 0.3920
 d 1.0000
 illum 1
 
-newmtl color_193
+newmtl color_234
 Kd 0.6590 0.6000 0.4940
 d 1.0000
 illum 1
 
-newmtl color_194
+newmtl color_235
 Kd 0.3410 0.3650 0.3690
 d 1.0000
 illum 1
 
-newmtl color_195
+newmtl color_236
 Kd 0.6310 0.6590 0.6470
 d 1.0000
 illum 1
 
-newmtl color_196
+newmtl color_237
 Kd 0.6780 0.6940 0.6550
 d 1.0000
 illum 1
 
-newmtl color_197
+newmtl color_238
 Kd 0.5880 0.5800 0.5060
 d 1.0000
 illum 1
 
-newmtl color_198
+newmtl color_239
 Kd 0.8240 0.7760 0.6510
 d 1.0000
 illum 1
 
-newmtl color_199
+newmtl color_240
 Kd 0.3250 0.2750 0.2310
 d 1.0000
 illum 1

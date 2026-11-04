@@ -250,9 +250,9 @@
     {
       "name": "cuartoCustom_original_20",
       "position": [
-        -57.18,
+        -52.4,
         1.22,
-        34.3
+        40.28
       ],
       "center": [
         0,
@@ -260,7 +260,7 @@
         0
       ],
       "size": [
-        2.13,
+        1.61,
         2.44,
         1.2
       ],
@@ -423,9 +423,9 @@
       "id": "cuartoCustom_original_20",
       "label": "Cómoda",
       "position": [
-        -57.18,
+        -52.4,
         1.22,
-        34.3
+        40.28
       ],
       "camera_hidden": false,
       "vanishes": false,

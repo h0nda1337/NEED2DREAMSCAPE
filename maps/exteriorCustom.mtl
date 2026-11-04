@@ -53,26 +53,6 @@ Kd 0.3250 0.3290 0.2860
 d 1.0000
 illum 1
 
-newmtl color_116
-Kd 0.4510 0.7410 0.4670
-d 1.0000
-illum 1
-
-newmtl color_117
-Kd 0.2670 0.5450 0.3180
-d 1.0000
-illum 1
-
-newmtl color_118
-Kd 0.3840 0.6820 0.3920
-d 1.0000
-illum 1
-
-newmtl color_119
-Kd 0.3650 0.6510 0.3610
-d 1.0000
-illum 1
-
 newmtl color_92
 Kd 0.1570 0.1730 0.2080
 d 1.0000

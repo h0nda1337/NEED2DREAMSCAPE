@@ -725,16 +725,7 @@
       "enabled": true
     }
   ],
-  "markers": [
-    {
-      "name": "CustomGreenKey",
-      "position": [
-        -36.16,
-        4.46,
-        -11.16
-      ]
-    }
-  ],
+  "markers": [],
   "objects": [
     {
       "id": "exteriorCustom_original_9",
@@ -1155,18 +1146,6 @@
       "camera_hidden": false,
       "vanishes": false,
       "movable": false
-    },
-    {
-      "id": "exteriorCustom_original_key",
-      "label": "CustomGreenKey",
-      "position": [
-        -36.16,
-        4.46,
-        -11.16
-      ],
-      "camera_hidden": false,
-      "vanishes": false,
-      "movable": true
     },
     {
       "id": "exteriorCustom_original_decor_000",
