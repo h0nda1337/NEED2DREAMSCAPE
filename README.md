@@ -26,7 +26,7 @@ Usa WASD o las flechas para moverte, E para interactuar, clic o Enter para avanz
 
 Exterior → sala → dormitorio → cuarto de la computadora → dormitorio → sala → cocina → patio → cocina → dormitorio → cuarto de la computadora → pasillo equivocado.
 
-Los ocho escenarios del primer capítulo se construyeron para NEED2DREAMSCAPE con geometría procedural y colores planos. La edición pública de la v14 usa gráficos de control propios y tipografías con licencia SIL OFL. Conserva el recorrido y los puntos de guardado de la v14.
+Los ocho escenarios del primer capítulo se construyeron para NEED2DREAMSCAPE con geometría procedural y colores planos. La edición pública usa gráficos de control propios y Perfect DOS VGA en el título 3D del menú. [Créditos de las tipografías](game/third_party/TIPOGRAFIAS.md)
 
 
 ## Capítulo 2 — Los cuartos que no caben
