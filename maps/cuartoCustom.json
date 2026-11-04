@@ -1,0 +1,491 @@
+{
+  "name": "cuartoCustom",
+  "spawn": [
+    -44.2,
+    2.64,
+    37.0
+  ],
+  "arrival": {
+    "cuartoFondo": [
+      -54.8,
+      2.64,
+      39.8
+    ],
+    "cocinaCustom": [
+      -44.2,
+      2.64,
+      37.0
+    ]
+  },
+  "portals": [
+    {
+      "target": "casaCustom",
+      "pos": [
+        -42.15,
+        2.64,
+        37.0
+      ],
+      "radius": 1.7
+    },
+    {
+      "target": "cuartoFondo",
+      "pos": [
+        -54.8,
+        2.64,
+        41.75
+      ],
+      "radius": 1.9
+    }
+  ],
+  "colliders": [
+    {
+      "name": "cuartoCustom_original_9",
+      "position": [
+        -50.0,
+        -0.14,
+        36.575
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        18.0,
+        0.28,
+        9.149999999999999
+      ],
+      "cutaway": false
+    },
+    {
+      "name": "cuartoCustom_original_10",
+      "position": [
+        -54.8,
+        -0.14,
+        42.775
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        2.559999999999995,
+        0.28,
+        3.25
+      ],
+      "cutaway": false
+    },
+    {
+      "name": "cuartoCustom_original_11",
+      "position": [
+        -50.0,
+        3.0,
+        32.0
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        18.0,
+        6.0,
+        0.22
+      ],
+      "cutaway": true
+    },
+    {
+      "name": "cuartoCustom_original_12",
+      "position": [
+        -59.0,
+        3.0,
+        36.575
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.22,
+        6.0,
+        9.149999999999999
+      ],
+      "cutaway": true
+    },
+    {
+      "name": "cuartoCustom_original_13",
+      "position": [
+        -57.54,
+        3.0,
+        41.15
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        2.9200000000000017,
+        6.0,
+        0.22
+      ],
+      "cutaway": true
+    },
+    {
+      "name": "cuartoCustom_original_14",
+      "position": [
+        -47.260000000000005,
+        3.0,
+        41.15
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        12.520000000000003,
+        6.0,
+        0.22
+      ],
+      "cutaway": true
+    },
+    {
+      "name": "cuartoCustom_original_15",
+      "position": [
+        -41.0,
+        3.0,
+        33.85
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.22,
+        6.0,
+        3.700000000000003
+      ],
+      "cutaway": true
+    },
+    {
+      "name": "cuartoCustom_original_16",
+      "position": [
+        -41.0,
+        3.0,
+        39.724999999999994
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.22,
+        6.0,
+        2.8500000000000014
+      ],
+      "cutaway": true
+    },
+    {
+      "name": "cuartoCustom_original_17",
+      "position": [
+        -56.08,
+        2.25,
+        42.775
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.22,
+        4.5,
+        3.25
+      ],
+      "cutaway": true
+    },
+    {
+      "name": "cuartoCustom_original_18",
+      "position": [
+        -53.52,
+        2.25,
+        42.775
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.22,
+        4.5,
+        3.25
+      ],
+      "cutaway": true
+    },
+    {
+      "name": "cuartoCustom_original_19",
+      "position": [
+        -50,
+        0.53,
+        37.7
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        2.42,
+        1.06,
+        3.64
+      ],
+      "cutaway": false
+    },
+    {
+      "name": "cuartoCustom_original_20",
+      "position": [
+        -57.18,
+        1.22,
+        34.3
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        2.13,
+        2.44,
+        1.2
+      ],
+      "cutaway": false
+    }
+  ],
+  "lights": [
+    {
+      "position": [
+        -47.3,
+        4.5,
+        36.1
+      ],
+      "type": 2,
+      "color": [
+        0.95,
+        0.74,
+        0.64
+      ],
+      "intensity": 0.64,
+      "range": 11,
+      "enabled": true
+    }
+  ],
+  "markers": [],
+  "objects": [
+    {
+      "id": "cuartoCustom_original_9",
+      "label": "Piso del dormitorio",
+      "position": [
+        -50.0,
+        -0.14,
+        36.575
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cuartoCustom_original_10",
+      "label": "Paso al cuarto de la computadora",
+      "position": [
+        -54.8,
+        -0.14,
+        42.775
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cuartoCustom_original_11",
+      "label": "Pared sur",
+      "position": [
+        -50.0,
+        3.0,
+        32.0
+      ],
+      "camera_hidden": true,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cuartoCustom_original_12",
+      "label": "Pared oeste",
+      "position": [
+        -59.0,
+        3.0,
+        36.575
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cuartoCustom_original_13",
+      "label": "Pared norte izquierda",
+      "position": [
+        -57.54,
+        3.0,
+        41.15
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cuartoCustom_original_14",
+      "label": "Pared norte derecha",
+      "position": [
+        -47.260000000000005,
+        3.0,
+        41.15
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cuartoCustom_original_15",
+      "label": "Pared este inferior",
+      "position": [
+        -41.0,
+        3.0,
+        33.85
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cuartoCustom_original_16",
+      "label": "Pared este superior",
+      "position": [
+        -41.0,
+        3.0,
+        39.724999999999994
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cuartoCustom_original_17",
+      "label": "Paso estrecho",
+      "position": [
+        -56.08,
+        2.25,
+        42.775
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cuartoCustom_original_18",
+      "label": "Paso estrecho",
+      "position": [
+        -53.52,
+        2.25,
+        42.775
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cuartoCustom_original_19",
+      "label": "Base de cama",
+      "position": [
+        -50,
+        0.53,
+        37.7
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cuartoCustom_original_20",
+      "label": "Cómoda",
+      "position": [
+        -57.18,
+        1.22,
+        34.3
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    },
+    {
+      "id": "cuartoCustom_original_decor_000",
+      "label": "Decoración original",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "camera_hidden": false,
+      "vanishes": false,
+      "movable": false
+    }
+  ],
+  "ambient": [
+    0.25,
+    0.23,
+    0.27
+  ],
+  "inspections": [
+    {
+      "pos": [
+        -50.0,
+        2.64,
+        37.725
+      ],
+      "radius": 2.9,
+      "stage": 2
+    },
+    {
+      "pos": [
+        -54.8,
+        2.64,
+        38.55
+      ],
+      "radius": 1.45,
+      "stage": 2
+    },
+    {
+      "pos": [
+        -50.0,
+        2.64,
+        39.9
+      ],
+      "radius": 1.55,
+      "stage": 2
+    },
+    {
+      "pos": [
+        -54.8,
+        2.64,
+        40.3
+      ],
+      "radius": 1.1,
+      "stage": 2
+    }
+  ],
+  "events": []
+}
