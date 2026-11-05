@@ -79,6 +79,9 @@ struct Node {
     int pressed;
     double move[4];
     int last_move;
+    double footstep_distance;
+    double footstep_motion_time;
+    unsigned int footstep_index;
     int collisions;
     int *script_enabled;
     int *script_started;
@@ -188,6 +191,7 @@ void world_update(void);
 double distance_nodes(int a, int b);
 void animation_play(int node, const char *state);
 void audio_play(int node, int channel);
+void player_footstep(double distance);
 void audio_stop(int node);
 void engine_fade(const char *scene, double rate, int white);
 int engine_scene_index(const char *name);

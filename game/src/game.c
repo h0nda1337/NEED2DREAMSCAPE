@@ -229,6 +229,7 @@ void movement_step(int direction, double amount)
     if (block) memcpy(p->p, old, sizeof(old));
     p->collisions = collisions;
     world_update();
+    if (!block) player_footstep(fabs(p->p[0]-old[0])+fabs(p->p[2]-old[2]));
 }
 void scripts_update(double dt)
 {

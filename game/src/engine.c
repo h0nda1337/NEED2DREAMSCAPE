@@ -456,15 +456,12 @@ static int sound_load_path(Sound *sound, const char *relative)
     sound->data=cvt.buf;sound->bytes=(unsigned long)cvt.len_cvt;
     return 1;
 }
-void audio_play(int node, int channel)
+static void audio_play_clip(int node, int channel, int clip, double pitch, int loop)
 {
-    Json *s;
-    int clip;
     int i;
     int chosen;
     Voice *v;
     if(!node_active(node)||!E.nodes[node].audio_enabled||scene_loading)return;
-    s=ja(jg(E.nodes[node].data,"sounds"),channel);clip=ji(jg(s,"clip"),-1);
     if(clip<0||clip>=E.sound_count)return;
     if(!sound_load_path(E.sounds+clip,js(jg(ja(jg(E.game,"audio"),clip),"path"))))return;
     if(E.audio_device)SDL_LockAudioDevice(E.audio_device);
@@ -473,9 +470,54 @@ void audio_play(int node, int channel)
     if(chosen<0)for(i=0;i<MAX_VOICES;++i)if(!E.voices[i].active){chosen=i;break;}
     if(chosen>=0){
         v=E.voices+chosen;memset(v,0,sizeof(*v));v->active=1;v->clip=clip;v->node=node;v->channel=channel;
-        v->volume=E.nodes[node].audio_muted?0:E.nodes[node].audio_volume;v->pitch=jn(jg(s,"pitch"),1);v->loop=ji(jg(s,"loop"),0);
+        v->volume=E.nodes[node].audio_muted?0:E.nodes[node].audio_volume;v->pitch=pitch;v->loop=loop;
     }
     if(E.audio_device)SDL_UnlockAudioDevice(E.audio_device);
+}
+void audio_play(int node, int channel)
+{
+    Json *sound;
+    if(!node_valid(node))return;
+    sound=ja(jg(E.nodes[node].data,"sounds"),channel);
+    audio_play_clip(node,channel,ji(jg(sound,"clip"),-1),jn(jg(sound,"pitch"),1),ji(jg(sound,"loop"),0));
+}
+void player_footstep(double distance)
+{
+    static const double stride=1.98;
+    const char *surface;
+    Json *zones;
+    Json *zone;
+    Json *rect;
+    Json *clips;
+    Node *player;
+    double bounds[4];
+    double x,z;
+    int i;
+    int count;
+    int variant;
+    surface=js(jg(E.scene,"footstep_surface"));
+    if(!*surface||distance<=0||E.fading||E.pending_scene>=0)return;
+    player=E.nodes+E.player;
+    if(player->rigidbody&&player->use_gravity&&!player->kinematic&&!player->grounded)return;
+    if(E.elapsed-player->footstep_motion_time>.20)player->footstep_distance=1.25;
+    player->footstep_motion_time=E.elapsed;
+    player->footstep_distance+=distance;
+    if(player->footstep_distance<stride)return;
+    player->footstep_distance=fmod(player->footstep_distance,stride);
+    x=player->world[12];z=player->world[14];
+    zones=jg(E.scene,"footstep_zones");
+    for(i=0;i<jc(zones);++i){
+        zone=ja(zones,i);
+        rect=jg(zone,"bounds");if(jc(rect)!=4)continue;
+        jvec(rect,bounds,4);
+        if(x>=bounds[0]&&z>=bounds[1]&&x<=bounds[2]&&z<=bounds[3]){
+            surface=js(jg(zone,"surface"));break;
+        }
+    }
+    clips=jg(jg(E.game,"footsteps"),surface);count=jc(clips);
+    if(count<=0)return;
+    variant=(int)(player->footstep_index++%(unsigned int)count);
+    audio_play_clip(ji(jg(E.scene,"footstep_node"),-1),0,ji(ja(clips,variant),-1),1,0);
 }
 void audio_stop(int node)
 {
@@ -1420,7 +1462,7 @@ void engine_load_scene(int index)
         n->audio_enabled=n->audio_default_enabled;n->audio_muted=n->audio_default_muted;n->audio_volume=n->audio_default_volume;
     }
     physics_init_scene();world_update();
-    for(i=0;i<E.count;++i)if(script_fields(i,"Movement")&&node_active(i)){E.player=i;break;}
+    for(i=0;i<E.count;++i)if(script_fields(i,"Movement")&&node_active(i)){E.player=i;E.nodes[i].footstep_motion_time=-1;break;}
     arrival=jg(jg(E.scene,"arrival"),previous);
     if(node_valid(E.player)){
         if(restore&&pending_progress.has_position)memcpy(E.nodes[E.player].p,pending_progress.position,sizeof(pending_progress.position));
