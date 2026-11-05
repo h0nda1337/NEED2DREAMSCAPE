@@ -63,6 +63,7 @@ static DialogueCue dialogue_drawn;
 static DialogueCue dialogue_played;
 static DialogueCue dialogue_revealed;
 static double dialogue_reveal_time;
+static int dialogue_sounding;
 static time_t room_clock_second=(time_t)-1;
 static int room_clock_local_seconds;
 static int click_hit(double x, double y);
@@ -423,6 +424,9 @@ static void audio_callback(void *userdata, Uint8 *stream, int length)
     int channel;
     int sum;
     int sample;
+    double volume;
+    double remaining;
+    double fade;
     unsigned long at;
     Voice *v;
     Sound *s;
@@ -435,11 +439,18 @@ static void audio_callback(void *userdata, Uint8 *stream, int length)
             v=E.voices+i;if(!v->active)continue;
             s=v->clip<0?&E.video_sound:E.sounds+v->clip;
             if(!s->data||s->bytes<4){v->active=0;continue;}
+            volume=v->volume;
+            if(v->end_cursor>0){
+                remaining=v->end_cursor-v->cursor;
+                if(remaining<=0){v->active=0;continue;}
+                fade=44100*.015*v->pitch;
+                if(remaining<fade)volume*=remaining/fade;
+            }
             at=(unsigned long)v->cursor*4;
             if(at>=s->bytes){if(v->loop){v->cursor=fmod(v->cursor,(double)(s->bytes/4));at=(unsigned long)v->cursor*4;}else{v->active=0;continue;}}
             p=s->data+at+(unsigned long)channel*2;
             sample=(int)p[0]+((int)p[1]<<8);if(sample>=32768)sample-=65536;
-            sum+=(int)(sample*v->volume);
+            sum+=(int)(sample*volume);
             if(channel==1)v->cursor+=v->pitch;
         }
         if(sum>32767)sum=32767;
@@ -464,7 +475,7 @@ static int sound_load_path(Sound *sound, const char *relative)
     sound->data=cvt.buf;sound->bytes=(unsigned long)cvt.len_cvt;
     return 1;
 }
-static void audio_play_clip(int node, int channel, int clip, double pitch, int loop)
+static void audio_play_clip(int node, int channel, int clip, double pitch, int loop, double duration)
 {
     int i;
     int chosen;
@@ -479,6 +490,7 @@ static void audio_play_clip(int node, int channel, int clip, double pitch, int l
     if(chosen>=0){
         v=E.voices+chosen;memset(v,0,sizeof(*v));v->active=1;v->clip=clip;v->node=node;v->channel=channel;
         v->volume=E.nodes[node].audio_muted?0:E.nodes[node].audio_volume;v->pitch=pitch;v->loop=loop;
+        v->end_cursor=duration*44100*pitch;
     }
     if(E.audio_device)SDL_UnlockAudioDevice(E.audio_device);
 }
@@ -487,7 +499,7 @@ void audio_play(int node, int channel)
     Json *sound;
     if(!node_valid(node))return;
     sound=ja(jg(E.nodes[node].data,"sounds"),channel);
-    audio_play_clip(node,channel,ji(jg(sound,"clip"),-1),jn(jg(sound,"pitch"),1),ji(jg(sound,"loop"),0));
+    audio_play_clip(node,channel,ji(jg(sound,"clip"),-1),jn(jg(sound,"pitch"),1),ji(jg(sound,"loop"),0),0);
 }
 static int campaign_audio_node(void)
 {
@@ -504,7 +516,7 @@ static void room_clock_update(time_t now)
     room_clock_second=now;
     room_clock_local_seconds=local->tm_hour*3600+local->tm_min*60+local->tm_sec;
     if(ticking)
-        audio_play_clip(campaign_audio_node(),2,ji(ja(jg(E.game,"room_clock_ticks"),local->tm_sec%2),-1),1,0);
+        audio_play_clip(campaign_audio_node(),2,ji(ja(jg(E.game,"room_clock_ticks"),local->tm_sec%2),-1),1,0,0);
 }
 static int room_clock_time(void)
 {
@@ -550,7 +562,7 @@ void player_footstep(double distance)
     clips=jg(jg(E.game,"footsteps"),surface);count=jc(clips);
     if(count<=0)return;
     variant=(int)(player->footstep_index++%(unsigned int)count);
-    audio_play_clip(campaign_audio_node(),0,ji(ja(clips,variant),-1),1,0);
+    audio_play_clip(campaign_audio_node(),0,ji(ja(clips,variant),-1),1,0,0);
 }
 static void audio_stop_channel(int node,int channel)
 {
@@ -568,20 +580,62 @@ static int same_dialogue(DialogueCue a,DialogueCue b)
 {
     return a.texture==b.texture&&a.page==b.page&&a.stage==b.stage;
 }
+static Json *dialogue_typing(DialogueCue cue)
+{
+    return jg(ja(jg(E.game,"textures"),cue.texture),"typing");
+}
+static double dialogue_writing_seconds(DialogueCue cue)
+{
+    Json *typing;
+    double rate;
+    int chars;
+    typing=dialogue_typing(cue);
+    rate=jn(jg(typing,"rate"),0);chars=ji(jg(typing,"chars"),0);
+    return chars>0&&rate>0?(chars-1)/rate:-1;
+}
+static int dialogue_clip_for(double seconds)
+{
+    Json *audio;
+    Json *stretched;
+    int clip;
+    int i;
+    audio=jg(E.game,"audio");
+    stretched=jg(E.game,"dialogue_stretched_audio");
+    clip=ji(jg(E.game,"dialogue_audio"),-1);
+    for(i=0;i<jc(stretched)&&jn(jg(ja(audio,clip),"length"),0)<seconds;++i)
+        clip=ji(ja(stretched,i),clip);
+    return clip;
+}
 static void dialogue_audio_presented(void)
 {
     Json *texture;
+    double duration;
+    double remaining;
     double speed;
     int node;
-    if(save_menu==SAVE_MENU_PAUSE||same_dialogue(dialogue_drawn,dialogue_played))return;
-    dialogue_played=dialogue_drawn;
+    if(save_menu==SAVE_MENU_PAUSE)return;
     node=campaign_audio_node();
+    duration=dialogue_writing_seconds(dialogue_drawn);
+    remaining=duration;
+    if(duration>0&&same_dialogue(dialogue_drawn,dialogue_revealed))remaining-=dialogue_reveal_time;
+    if(same_dialogue(dialogue_drawn,dialogue_played)){
+        if(dialogue_sounding&&remaining<=0){
+            if(node_valid(node))audio_stop_channel(node,1);
+            dialogue_sounding=0;
+        }
+        return;
+    }
+    dialogue_played=dialogue_drawn;dialogue_sounding=0;
     if(!node_valid(node))return;
-    if(dialogue_drawn.texture<0){audio_stop_channel(node,1);return;}
+    if(dialogue_drawn.texture<0||(duration>0&&remaining<=0)){
+        audio_stop_channel(node,1);return;
+    }
     texture=ja(jg(E.game,"textures"),dialogue_drawn.texture);
     speed=jn(jg(texture,"dialogue_speed"),1);
     if(speed<.5||speed>2)speed=1;
-    audio_play_clip(node,1,ji(jg(E.game,"dialogue_audio"),-1),speed,0);
+    if(duration<=0)remaining=duration==0?.045:0;
+    audio_play_clip(node,1,dialogue_clip_for(remaining*speed),speed,0,remaining);
+    dialogue_sounding=duration>0;
 }
 static void audio_set_enabled(int node,int enabled)
 {
@@ -1084,21 +1138,14 @@ static DialogueCue current_dialogue(void)
         cue.texture=ji(jg(ja(jg(E.game,"house_walk_story"),E.custom_story_page),"texture"),-1);
     return cue;
 }
-static Json *dialogue_typing(DialogueCue cue)
-{
-    return jg(ja(jg(E.game,"textures"),cue.texture),"typing");
-}
 static int dialogue_waiting(double hold)
 {
     DialogueCue cue;
-    Json *typing;
-    int chars;
-    double rate;
+    double duration;
     cue=current_dialogue();
-    typing=dialogue_typing(cue);
-    chars=ji(jg(typing,"chars"),0);rate=jn(jg(typing,"rate"),0);
-    if(chars<=0||rate<=0)return 0;
-    return !same_dialogue(cue,dialogue_revealed)||dialogue_reveal_time<(chars-1)/rate+hold;
+    duration=dialogue_writing_seconds(cue);
+    if(duration<0)return 0;
+    return !same_dialogue(cue,dialogue_revealed)||dialogue_reveal_time<duration+hold;
 }
 static void dialogue_reveal_update(double dt)
 {
@@ -1528,7 +1575,7 @@ void engine_load_scene(int index)
     progress_pending=0;
     if(restore)apply_progress(&pending_progress);
     if(E.search_progress==12&&ji(jg(E.scene,"chapter2_entry"),0))E.search_progress=13;
-    E.npc_dialog_page=-1;E.computer_time=0;dialogue_played=no_dialogue;
+    E.npc_dialog_page=-1;E.computer_time=0;dialogue_played=no_dialogue;dialogue_sounding=0;
     room_clock_second=(time_t)-1;
     E.chapter_press_count=0;E.chapter_last_press=-1;
     E.search_page=-1;E.search_inspection=-1;E.search_exit_time=0;E.chapter_time=0;E.chapter_door_tried=0;

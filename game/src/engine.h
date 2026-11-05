@@ -14,7 +14,7 @@ typedef struct {
 } Sound;
 typedef struct {
     int clip;
-    unsigned long offset;
+    double end_cursor;
     double volume;
     double pitch;
     double cursor;
