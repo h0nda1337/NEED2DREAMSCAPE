@@ -16,7 +16,7 @@ void json_free(Json *j);
 Json *jg(const Json *j, const char *key);
 Json *ja(const Json *j, int i);
 int ji(const Json *j, int fallback);
-double jn(const Json *j, double fallback);
+double json_number(const Json *j, double fallback);
 const char *js(const Json *j);
 int jc(const Json *j);
 void jvec(const Json *j, double *v, int n);

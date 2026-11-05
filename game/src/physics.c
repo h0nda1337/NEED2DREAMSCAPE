@@ -38,7 +38,7 @@ void physics_init_scene(void)
     double gravity[3];
     int i;
     accumulator=0;body_count=0;
-    fixed_step=jn(jg(E.scene,"fixed_timestep"),jn(jg(E.physics,"fixed_timestep"),.02));
+    fixed_step=json_number(jg(E.scene,"fixed_timestep"),json_number(jg(E.physics,"fixed_timestep"),.02));
     if(fixed_step<.001||fixed_step>.05)fixed_step=.02;
     gravity[0]=gravity[2]=0;gravity[1]=-9.81;
     jvec(jg(E.physics,"gravity"),gravity,3);jvec(jg(E.scene,"gravity"),gravity,3);gravity_y=gravity[1];
@@ -48,7 +48,7 @@ void physics_init_scene(void)
         if(!body)continue;
         ++body_count;
         n->use_gravity=ji(jg(body,"use_gravity"),1);n->kinematic=ji(jg(body,"kinematic"),0);
-        n->body_constraints=ji(jg(body,"constraints"),0);n->body_drag=jn(jg(body,"drag"),0);
+        n->body_constraints=ji(jg(body,"constraints"),0);n->body_drag=json_number(jg(body,"drag"),0);
         n->physics_contacts=(unsigned char*)calloc((size_t)E.count,1);
         n->physics_touched=(unsigned char*)calloc((size_t)E.count,1);
         n->physics_hit_times=(double*)calloc((size_t)E.count,sizeof(double));
@@ -142,7 +142,7 @@ static void vertical_step(int node,double h)
     n=E.nodes+node;
     if(!n->rigidbody||!node_active(node))return;
     if(n->kinematic||(n->body_constraints&4)){n->velocity_y=0;n->grounded=0;n->ground_node=-1;return;}
-    gravity_scale=jn(jg(n->rigidbody,"gravity_scale"),1);
+    gravity_scale=json_number(jg(n->rigidbody,"gravity_scale"),1);
     if(n->use_gravity)n->velocity_y+=gravity_y*gravity_scale*h;
     if(n->body_drag>0)n->velocity_y/=1+n->body_drag*h;
     delta[0]=delta[2]=0;delta[1]=n->velocity_y*h;

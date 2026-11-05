@@ -135,7 +135,7 @@ Json *jg(const Json *j, const char *key)
 }
 Json *ja(const Json *j, int i) { return j && i >= 0 && i < j->count ? j->items[i] : NULL; }
 int ji(const Json *j, int fallback) { return j ? (int)j->number : fallback; }
-double jn(const Json *j, double fallback) { return j ? j->number : fallback; }
+double json_number(const Json *j, double fallback) { return j ? j->number : fallback; }
 const char *js(const Json *j) { return j && j->text ? j->text : ""; }
 int jc(const Json *j) { return j ? j->count : 0; }
-void jvec(const Json *j, double *v, int n) { int i; for (i = 0; i < n; ++i) if (ja(j, i)) v[i] = jn(ja(j, i), v[i]); }
+void jvec(const Json *j, double *v, int n) { int i; for (i = 0; i < n; ++i) if (ja(j, i)) v[i] = json_number(ja(j, i), v[i]); }

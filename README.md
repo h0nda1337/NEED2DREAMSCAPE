@@ -16,6 +16,12 @@ Descarga y extrae el ZIP. Abre `compile_and_playnow.cmd` para jugar. Si tienes G
 
 Usa WASD o las flechas para moverte, E para interactuar, clic o Enter para avanzar los diálogos e I para abrir el inventario del capítulo 2.
 
+## Android
+
+La compilación de prueba para Android incluye los mapas y recursos del juego, controles táctiles y guardado en el almacenamiento privado de la aplicación. Se adapta a la resolución del teléfono en horizontal. Las instrucciones para generar el APK están en [android/README.md](android/README.md).
+
+En pantalla, mantén una flecha para caminar y desliza el dedo entre flechas para cambiar de dirección. PAUSA o el botón Atrás de Android abren el menú de guardado. OBJETOS abre el inventario del capítulo 2.
+
 En el capítulo 2, la señal que cambia de amarillo a azul marca el próximo punto del recorrido.
 
 ## Contenido de esta rama

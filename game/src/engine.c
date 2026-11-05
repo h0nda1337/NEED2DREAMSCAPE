@@ -11,6 +11,9 @@
 #include <sys/stat.h>
 #include <time.h>
 #include <zlib.h>
+#ifdef __ANDROID__
+#include <gl4esinit.h>
+#endif
 #ifdef _WIN32
 #include <windows.h>
 #include <shlobj.h>
@@ -257,7 +260,7 @@ int custom_position_supported(void)
     int i,j,k,covered;
     if(!node_valid(E.player)||!ji(jg(E.scene,"custom_camera"),0))return 1;
     collider_bounds(E.player,ja(jg(E.nodes[E.player].data,"colliders"),0),player_min,player_max);
-    tolerance=jn(jg(E.scene,"collision_step_height"),.15);
+    tolerance=json_number(jg(E.scene,"collision_step_height"),.15);
     covered=0;
     for(i=0;i<E.count;++i){
         if(i==E.player||!node_active(i)||!E.nodes[i].collider_enabled)continue;
@@ -301,20 +304,20 @@ static double curve_value(Json *curve, double t)
     double d;
     key=NULL;
     for(i=0;i<jc(curve);++i) {
-        if(jn(ja(ja(curve,i),0),0)>t+.0000001)break;
+        if(json_number(ja(ja(curve,i),0),0)>t+.0000001)break;
         key=ja(curve,i);
     }
     if(!key)key=ja(curve,0);
     if(!key)return 0;
-    d=t-jn(ja(key,0),0);if(d<0)d=0;
-    return ((jn(ja(key,1),0)*d+jn(ja(key,2),0))*d+jn(ja(key,3),0))*d+jn(ja(key,4),0);
+    d=t-json_number(ja(key,0),0);if(d<0)d=0;
+    return ((json_number(ja(key,1),0)*d+json_number(ja(key,2),0))*d+json_number(ja(key,3),0))*d+json_number(ja(key,4),0);
 }
 static int anim_target(int owner, double hash)
 {
     Json *paths;
     int i;
     paths=jg(jg(E.nodes[owner].data,"animator"),"paths");
-    for(i=0;i<jc(paths);++i)if(jn(ja(ja(paths,i),0),-1)==hash)return ji(ja(ja(paths,i),1),-1);
+    for(i=0;i<jc(paths);++i)if(json_number(ja(ja(paths,i),0),-1)==hash)return ji(ja(ja(paths,i),1),-1);
     return -1;
 }
 static int audio_binding_in_clip(Json *clip,Json *binding)
@@ -325,7 +328,7 @@ static int audio_binding_in_clip(Json *clip,Json *binding)
     bindings=jg(clip,"bindings");
     for(i=0;i<jc(bindings);++i){
         other=ja(bindings,i);
-        if(ji(jg(other,"type"),0)==82 && jn(jg(other,"path"),0)==jn(jg(binding,"path"),0) &&
+        if(ji(jg(other,"type"),0)==82 && json_number(jg(other,"path"),0)==json_number(jg(binding,"path"),0) &&
            !strcmp(js(jg(other,"attr")),js(jg(binding,"attr"))))return 1;
     }
     return 0;
@@ -351,7 +354,7 @@ static void animation_audio_defaults(int owner,Json *next)
         for(j=0;j<jc(bindings);++j){
             binding=ja(bindings,j);
             if(ji(jg(binding,"type"),0)!=82 || audio_binding_in_clip(next_clip,binding))continue;
-            target=anim_target(owner,jn(jg(binding,"path"),0));if(!node_valid(target))continue;
+            target=anim_target(owner,json_number(jg(binding,"path"),0));if(!node_valid(target))continue;
             n=E.nodes+target;attr=js(jg(binding,"attr"));
             if(!strcmp(attr,"m_Enabled"))audio_set_enabled(target,n->audio_default_enabled);
             else if(!strcmp(attr,"m_Volume"))n->audio_volume=n->audio_default_volume;
@@ -383,12 +386,12 @@ static void animation_apply(int owner)
     if(!node_valid(owner)||!E.nodes[owner].anim_enabled)return;
     state=state_data(owner);clip=ja(jg(E.game,"clips"),ji(jg(state,"clip"),-1));
     if(!clip)return;
-    length=jn(jg(clip,"length"),0);t=E.nodes[owner].anim_time;
+    length=json_number(jg(clip,"length"),0);t=E.nodes[owner].anim_time;
     if(length>0 && ji(jg(state,"loop"),0)) t=fmod(t,length);
     else if(t>length)t=length;
     bindings=jg(clip,"bindings");curves=jg(clip,"curves");
     for(i=0;i<jc(bindings);++i){
-        b=ja(bindings,i);target=anim_target(owner,jn(jg(b,"path"),0));
+        b=ja(bindings,i);target=anim_target(owner,json_number(jg(b,"path"),0));
         if(!node_valid(target))continue;
         n=E.nodes+target;type=ji(jg(b,"type"),0);attr=js(jg(b,"attr"));
         off=ji(jg(b,"offset"),0);count=ji(jg(b,"count"),1);
@@ -397,7 +400,7 @@ static void animation_apply(int owner)
             if(!strcmp(attr,"1")){
                 memcpy(n->p,v,3*sizeof(double));
                 if(jg(n->data,"rect")){
-                    for(j=0;j<2;++j)n->anchor[j]=v[j]-jn(ja(jg(n->data,"pos"),j),0)+jn(ja(jg(jg(n->data,"rect"),"position"),j),0);
+                    for(j=0;j<2;++j)n->anchor[j]=v[j]-json_number(ja(jg(n->data,"pos"),j),0)+json_number(ja(jg(jg(n->data,"rect"),"position"),j),0);
                 }
             }
             if(!strcmp(attr,"2")){memcpy(n->q,v,4*sizeof(double));n->using_euler=0;}
@@ -435,7 +438,7 @@ static void animations_update(double dt)
     int i;
     double speed;
     for(i=0;i<E.count;++i) if(node_active(i)&&E.nodes[i].controller>=0){
-        speed=jn(jg(state_data(i),"speed"),1);E.nodes[i].anim_time+=dt*speed;animation_apply(i);
+        speed=json_number(jg(state_data(i),"speed"),1);E.nodes[i].anim_time+=dt*speed;animation_apply(i);
     }
 }
 static void audio_refresh(void)
@@ -534,7 +537,7 @@ void audio_play(int node, int channel)
     Json *sound;
     if(!node_valid(node))return;
     sound=ja(jg(E.nodes[node].data,"sounds"),channel);
-    audio_play_clip(node,channel,ji(jg(sound,"clip"),-1),jn(jg(sound,"pitch"),1),ji(jg(sound,"loop"),0),0);
+    audio_play_clip(node,channel,ji(jg(sound,"clip"),-1),json_number(jg(sound,"pitch"),1),ji(jg(sound,"loop"),0),0);
 }
 static int campaign_audio_node(void)
 {
@@ -581,8 +584,8 @@ static void campaign_clock_sync(int animate)
     if(!latest)return;
     stage=ji(jg(latest,"stage"),-1);
     if(E.story_clock_seconds>=0&&E.story_clock_anchor>=stage)return;
-    if(E.story_clock_seconds<jn(jg(latest,"seconds"),0))
-        E.story_clock_seconds=jn(jg(latest,"seconds"),0);
+    if(E.story_clock_seconds<json_number(jg(latest,"seconds"),0))
+        E.story_clock_seconds=json_number(jg(latest,"seconds"),0);
     E.story_clock_anchor=stage;
     if(animate&&ji(jg(latest,"animate"),0))E.story_clock_jump=.001;
 }
@@ -658,7 +661,7 @@ static double dialogue_writing_seconds(DialogueCue cue)
     double rate;
     int chars;
     typing=dialogue_typing(cue);
-    rate=jn(jg(typing,"rate"),0);chars=ji(jg(typing,"chars"),0);
+    rate=json_number(jg(typing,"rate"),0);chars=ji(jg(typing,"chars"),0);
     return chars>0&&rate>0?(chars-1)/rate:-1;
 }
 static int dialogue_clip_for(double seconds)
@@ -670,7 +673,7 @@ static int dialogue_clip_for(double seconds)
     audio=jg(E.game,"audio");
     stretched=jg(E.game,"dialogue_stretched_audio");
     clip=ji(jg(E.game,"dialogue_audio"),-1);
-    for(i=0;i<jc(stretched)&&jn(jg(ja(audio,clip),"length"),0)<seconds;++i)
+    for(i=0;i<jc(stretched)&&json_number(jg(ja(audio,clip),"length"),0)<seconds;++i)
         clip=ji(ja(stretched,i),clip);
     return clip;
 }
@@ -699,7 +702,7 @@ static void dialogue_audio_presented(void)
         audio_stop_channel(node,1);return;
     }
     texture=ja(jg(E.game,"textures"),dialogue_drawn.texture);
-    speed=jn(jg(texture,"dialogue_speed"),1);
+    speed=json_number(jg(texture,"dialogue_speed"),1);
     if(speed<.5||speed>2)speed=1;
     if(duration<=0)remaining=duration==0?.045:0;
     audio_play_clip(node,1,dialogue_clip_for(remaining*speed),speed,0,remaining);
@@ -803,7 +806,7 @@ static Json *nearby_portal(void)
         jvec(jg(portal,"pos"),position,3);
         dx=E.nodes[E.player].p[0]-position[0];
         dz=E.nodes[E.player].p[2]-position[2];
-        radius=jn(jg(portal,"radius"),1.7);
+        radius=json_number(jg(portal,"radius"),1.7);
         distance=dx*dx+dz*dz;
         if(jg(portal,"half_size")){
             jvec(jg(portal,"half_size"),half,2);
@@ -829,7 +832,7 @@ static int npc_in_range(void)
     talk=current_npc_talk();
     actor=ji(jg(talk,"actor"),-1);
     return node_active(actor)&&node_valid(E.player)&&
-        distance_nodes(actor,E.player)<jn(jg(talk,"radius"),2.45);
+        distance_nodes(actor,E.player)<json_number(jg(talk,"radius"),2.45);
 }
 static void npc_marker_update(void)
 {
@@ -850,7 +853,7 @@ static int computer_in_range(void)
     jvec(jg(computer,"pos"),pos,3);
     dx=E.nodes[E.player].p[0]-pos[0];
     dz=E.nodes[E.player].p[2]-pos[2];
-    radius=jn(jg(computer,"radius"),2.4);
+    radius=json_number(jg(computer,"radius"),2.4);
     return dx*dx+dz*dz<radius*radius;
 }
 static void computer_empty_room(void)
@@ -947,13 +950,13 @@ static int chapter_event_ready(int interact)
     if(!event||E.fading||E.search_page>=0||E.search_inspection>=0||!node_valid(E.player))return 0;
     flags=ji(jg(event,"required_flags"),0);
     if((E.chapter2_flags&flags)!=flags||jg(event,"choice_texture"))return 0;
-    delay=jn(jg(event,"delay"),0);
-    if(E.chapter2_choice==2)delay=jn(jg(event,"hostile_delay"),delay);
+    delay=json_number(jg(event,"delay"),0);
+    if(E.chapter2_choice==2)delay=json_number(jg(event,"hostile_delay"),delay);
     if(ji(jg(event,"interact"),0)!=interact||E.chapter_time<delay)return 0;
     if(!jg(event,"pos"))return 1;
     jvec(jg(event,"pos"),p,3);
     dx=E.nodes[E.player].p[0]-p[0];dz=E.nodes[E.player].p[2]-p[2];
-    radius=jn(jg(event,"radius"),2);
+    radius=json_number(jg(event,"radius"),2);
     return dx*dx+dz*dz<radius*radius;
 }
 static int chapter_aux_action(int apply)
@@ -1031,8 +1034,8 @@ static int chapter_start_event(int interact)
     presses=ji(jg(event,"presses"),1);
     if(interact&&presses>1){
         gap=E.elapsed-E.chapter_last_press;
-        if(E.chapter_press_count>0&&gap<jn(jg(event,"min_gap"),.16))return 1;
-        if(gap>jn(jg(event,"max_gap"),1e10))E.chapter_press_count=0;
+        if(E.chapter_press_count>0&&gap<json_number(jg(event,"min_gap"),.16))return 1;
+        if(gap>json_number(jg(event,"max_gap"),1e10))E.chapter_press_count=0;
         E.chapter_last_press=E.elapsed;
         ++E.chapter_press_count;
         sound=ji(ja(jg(event,"press_sounds"),E.chapter_press_count-1),-1);
@@ -1117,7 +1120,7 @@ static Json *search_near_item(void)
         if(E.search_progress<ji(jg(item,"stage"),1)||E.search_progress>ji(jg(item,"max_stage"),99))continue;
         jvec(jg(item,"pos"),pos,3);
         dx=E.nodes[E.player].p[0]-pos[0];dz=E.nodes[E.player].p[2]-pos[2];
-        distance=dx*dx+dz*dz;radius=jn(jg(item,"radius"),2);
+        distance=dx*dx+dz*dz;radius=json_number(jg(item,"radius"),2);
         if(distance<radius*radius&&distance<best){
             best=distance;
             nearest=item;
@@ -1338,8 +1341,8 @@ static void custom_story_update(double dt)
     }
     line=ja(jg(E.game,"house_walk_story"),E.custom_story_page);
     next=ja(jg(E.game,"house_walk_story"),E.custom_story_page+1);
-    if(E.custom_story_time<jn(jg(line,"duration"),2)||dialogue_waiting(.35))return;
-    if(next&&ji(jg(E.scene,"walk_story"),0)&&E.custom_story_depth>jn(jg(next,"at_z"),0))return;
+    if(E.custom_story_time<json_number(jg(line,"duration"),2)||dialogue_waiting(.35))return;
+    if(next&&ji(jg(E.scene,"walk_story"),0)&&E.custom_story_depth>json_number(jg(next,"at_z"),0))return;
     custom_story_advance();
 }
 static void custom_portal_update(double dt)
@@ -1399,6 +1402,12 @@ static void desktop_save_init(void)
         wcscat(desktop_save,SAVE_NAME);
     }
     CoTaskMemFree(folder);
+#elif defined(__ANDROID__)
+    const char *folder;
+    folder=SDL_AndroidGetInternalStoragePath();
+    if(folder&&strlen(folder)+sizeof("/history-progress.n2d")<=sizeof(desktop_save)){
+        strcpy(desktop_save,folder);strcat(desktop_save,"/history-progress.n2d");
+    }
 #else
     const char *home;
     const char *suffix;
@@ -1691,14 +1700,14 @@ void engine_load_scene(int index)
         a=jg(n->data,"scripts");n->script_enabled=(int*)calloc((size_t)jc(a)+1,sizeof(int));n->script_started=(int*)calloc((size_t)jc(a)+1,sizeof(int));
         if(!n->script_enabled||!n->script_started){E.quitting=1;return;}
         for(j=0;j<jc(a);++j)n->script_enabled[j]=ji(jg(jg(ja(a,j),"fields"),"m_Enabled"),1);
-        n->light_range=jn(jg(jg(n->data,"light"),"range"),10);n->light_intensity=jn(jg(jg(n->data,"light"),"intensity"),1);
+        n->light_range=json_number(jg(jg(n->data,"light"),"range"),10);n->light_intensity=json_number(jg(jg(n->data,"light"),"intensity"),1);
         n->light_enabled=ji(jg(jg(n->data,"light"),"enabled"),1);
     }
     for(i=0;i<E.count;++i){
         n=E.nodes+i;a=ja(jg(n->data,"sounds"),0);c=audio_source_profile(i);
         n->audio_default_enabled=ji(jg(a,"enabled"),ji(jg(c,"enabled"),1));
         n->audio_default_muted=ji(jg(a,"muted"),ji(jg(c,"muted"),0));
-        n->audio_default_volume=jn(jg(a,"volume"),1);
+        n->audio_default_volume=json_number(jg(a,"volume"),1);
         n->audio_enabled=n->audio_default_enabled;n->audio_muted=n->audio_default_muted;n->audio_volume=n->audio_default_volume;
     }
     physics_init_scene();world_update();
@@ -1776,7 +1785,7 @@ static void video_update(double dt)
     int height;
     int rate;
     if(E.video<0)return;
-    v=ja(jg(E.game,"videos"),E.video);E.video_time+=dt;duration=jn(jg(v,"length"),1);
+    v=ja(jg(E.game,"videos"),E.video);E.video_time+=dt;duration=json_number(jg(v,"length"),1);
     if(E.video_time>=duration){
         if(!E.video_loop){if(E.video_next_scene>=0)E.pending_scene=E.video_next_scene;return;}
         E.video_time=fmod(E.video_time,duration);
@@ -2236,10 +2245,10 @@ static void camera_view(void)
     int r;
     int k;
     if(!node_valid(E.camera))return;
-    c=E.nodes+E.camera;settings=jg(c->data,"camera");nearp=jn(jg(settings,"near"),.3);farp=jn(jg(settings,"far"),1000);aspect=(double)E.width/E.height;
+    c=E.nodes+E.camera;settings=jg(c->data,"camera");nearp=json_number(jg(settings,"near"),.3);farp=json_number(jg(settings,"far"),1000);aspect=(double)E.width/E.height;
     glMatrixMode(GL_PROJECTION);glLoadIdentity();
-    if(ji(jg(settings,"ortho"),0)){size=jn(jg(settings,"size"),5);glOrtho(-size*aspect,size*aspect,-size,size,nearp,farp);}
-    else{fov=jn(jg(settings,"fov"),35);size=tan(fov*.008726646259971648)*nearp;glFrustum(-size*aspect,size*aspect,-size,size,nearp,farp);}
+    if(ji(jg(settings,"ortho"),0)){size=json_number(jg(settings,"size"),5);glOrtho(-size*aspect,size*aspect,-size,size,nearp,farp);}
+    else{fov=json_number(jg(settings,"fov"),35);size=tan(fov*.008726646259971648)*nearp;glFrustum(-size*aspect,size*aspect,-size,size,nearp,farp);}
     identity(view);
     for(r=0;r<3;++r){norm[r]=sqrt(c->world[r*4]*c->world[r*4]+c->world[r*4+1]*c->world[r*4+1]+c->world[r*4+2]*c->world[r*4+2]);if(norm[r]<.000001)norm[r]=1;}
     for(r=0;r<3;++r)for(k=0;k<3;++k)view[k*4+r]=c->world[r*4+k]/norm[r];
@@ -2441,7 +2450,7 @@ static void lights_setup(void)
     int slot;
     int type;
     ambient[0]=ambient[1]=ambient[2]=0;ambient[3]=1;jvec(jg(E.scene,"ambient"),ambient,4);
-    ambient_intensity=jn(jg(E.scene,"ambient_intensity"),1);
+    ambient_intensity=json_number(jg(E.scene,"ambient_intensity"),1);
     for(j=0;j<3;++j)base[j]=(GLfloat)(ambient[j]*ambient_intensity);
     memset(positions,0,sizeof(positions));memset(colors,0,sizeof(colors));memset(ranges,0,sizeof(ranges));
     glGetDoublev(GL_MODELVIEW_MATRIX,view);
@@ -2539,7 +2548,7 @@ static void render_room_clock(void)
     int hour,minute,second,shown,i;
     config=jg(E.scene,"room_clock");
     if(jc(jg(config,"pos"))!=3)return;
-    jvec(jg(config,"pos"),pos,3);radius=jn(jg(config,"radius"),.77);
+    jvec(jg(config,"pos"),pos,3);radius=json_number(jg(config,"radius"),.77);
     shown=room_clock_time();
     hour=shown/3600;minute=shown/60%60;second=shown%60;
     glDisable(GL_TEXTURE_2D);lighting_material(0,0);
@@ -2639,9 +2648,9 @@ static void draw_dialogue_clock(DialogueCue cue,int visible)
     glColor4d(.961,.906,.875,1);glBegin(GL_QUADS);
     for(i=0;i<jc(fields);++i){
         field=ja(fields,i);offsets=jg(field,"offsets");start=ji(jg(field,"start"),0);
-        y=220-(jn(jg(field,"y"),0)+32)/height*170;
+        y=220-(json_number(jg(field,"y"),0)+32)/height*170;
         for(j=0;text[j]&&j<visible-start;++j){
-            x=70+(jn(jg(field,"x"),0)+jn(ja(offsets,j),0))/width*1250;
+            x=70+(json_number(jg(field,"x"),0)+json_number(ja(offsets,j),0))/width*1250;
             u=((unsigned char)text[j]%16)/16.0;v=1-((unsigned char)text[j]/16)/8.0;
             glTexCoord2d(u,v-.125);glVertex2d(x,y);
             glTexCoord2d(u+.0625,v-.125);glVertex2d(x+24/width*1250,y);
@@ -2660,7 +2669,7 @@ static void draw_dialogue_panel(DialogueCue cue)
     double width,height,border,sample,edge,top,bottom,right,x,rate,progress;
     int i,visible,count,chars;
     typing=dialogue_typing(cue);rows=jg(typing,"rows");
-    chars=ji(jg(typing,"chars"),0);rate=jn(jg(typing,"rate"),0);
+    chars=ji(jg(typing,"chars"),0);rate=json_number(jg(typing,"rate"),0);
     progress=same_dialogue(cue,dialogue_revealed)?dialogue_reveal_time*rate:0;
     if(chars<=0||rate<=0||jc(rows)==0||progress>=chars-1){
         draw_quad(70,50,1250,170,0,0);
@@ -2673,15 +2682,15 @@ static void draw_dialogue_panel(DialogueCue cue)
     }
     visible=1+(int)progress;
     width=E.textures[cue.texture].width;height=E.textures[cue.texture].height;
-    border=jn(jg(typing,"border"),2);x=jn(jg(typing,"x"),17);
+    border=json_number(jg(typing,"border"),2);x=json_number(jg(typing,"x"),17);
     edge=1-border/width;sample=(border+.5)/width;
     glBegin(GL_QUADS);
-    dialogue_slice(0,0,1,jn(ja(ja(rows,0),0),0)/height,-1);
+    dialogue_slice(0,0,1,json_number(ja(ja(rows,0),0),0)/height,-1);
     for(i=0;i<jc(rows);++i){
         row=ja(rows,i);cuts=ja(row,1);count=jc(cuts);
-        top=jn(ja(row,0),0)/height;
-        bottom=jn(ja(ja(rows,i+1),0),height-border)/height;
-        right=jn(ja(cuts,(visible<count?visible:count)-1),x)/width;
+        top=json_number(ja(row,0),0)/height;
+        bottom=json_number(ja(ja(rows,i+1),0),height-border)/height;
+        right=json_number(ja(cuts,(visible<count?visible:count)-1),x)/width;
         dialogue_slice(0,top,right,bottom,-1);
         dialogue_slice(right,top,edge,bottom,sample);
         dialogue_slice(edge,top,1,bottom,-1);
@@ -2974,6 +2983,17 @@ static void render_frame(void)
 {
     dialogue_drawn=no_dialogue;
     render_scene();
+#ifdef __ANDROID__
+    if(node_valid(E.player)&&!save_menu){
+        overlay_begin();
+        save_box(1650,866,230,68,0);
+        glColor4d(.82,.88,1,1);menu_text("PAUSA",1684,885,1.5);
+        if(E.search_progress>=31){
+            save_box(1350,866,280,68,0);
+            glColor4d(.82,.88,1,1);menu_text("OBJETOS",1374,885,1.5);
+        }
+    }
+#endif
     render_save_menu();
 }
 static void input_events(void)
@@ -2987,8 +3007,21 @@ static void input_events(void)
     double y;
     title_menu=ji(jg(E.scene,"title_menu"),0);
     while(SDL_PollEvent(&e)){
+#ifdef __ANDROID__
+        if(e.type==SDL_KEYDOWN&&e.key.keysym.sym==SDLK_AC_BACK)e.key.keysym.sym=SDLK_ESCAPE;
+        if(e.type==SDL_APP_WILLENTERBACKGROUND&&node_valid(E.player)){
+            engine_save();engine_open_save_menu(1);
+        }
+#endif
         if(e.type==SDL_QUIT)E.quitting=1;
-        if(e.type==SDL_WINDOWEVENT&&e.window.event==SDL_WINDOWEVENT_SIZE_CHANGED){E.width=e.window.data1;E.height=e.window.data2;if(E.height<1)E.height=1;}
+        if(e.type==SDL_WINDOWEVENT&&(e.window.event==SDL_WINDOWEVENT_SIZE_CHANGED||e.window.event==SDL_WINDOWEVENT_RESIZED)){
+#ifdef __ANDROID__
+            SDL_GL_GetDrawableSize(E.window,&E.width,&E.height);
+#else
+            E.width=e.window.data1;E.height=e.window.data2;
+#endif
+            if(E.height<1)E.height=1;
+        }
         if(save_menu){
             if(e.type==SDL_KEYDOWN&&!e.key.repeat)save_menu_key(e.key.keysym.sym);
             if(e.type==SDL_MOUSEBUTTONUP&&e.button.button==SDL_BUTTON_LEFT){
@@ -3038,10 +3071,33 @@ static void input_events(void)
             SDL_GetWindowSize(E.window,&width,&height);x=e.button.x*1920.0/width;y=960-e.button.y*960.0/height;node=click_hit(x,y);E.mouse_node=node;
             if(node>=0)event_trigger(node,2);
         }
+#ifdef __ANDROID__
+        if(e.type==SDL_MOUSEMOTION&&(e.motion.state&SDL_BUTTON_LMASK)){
+            SDL_GetWindowSize(E.window,&width,&height);
+            x=e.motion.x*1920.0/width;y=960-e.motion.y*960.0/height;
+            node=click_hit(x,y);
+            if(node!=E.mouse_node){
+                if(node_valid(E.mouse_node))event_trigger(E.mouse_node,3);
+                E.mouse_node=node;
+                if(node_valid(node))event_trigger(node,2);
+            }
+        }
+#endif
         if(e.type==SDL_MOUSEBUTTONUP&&e.button.button==SDL_BUTTON_LEFT){
             node=E.mouse_node;
             SDL_GetWindowSize(E.window,&width,&height);
             x=e.button.x*1920.0/width;y=960-e.button.y*960.0/height;
+#ifdef __ANDROID__
+            if(node_valid(E.player)&&y>=866&&y<=934&&x>=1350&&x<=1880){
+                if(node_valid(node))event_trigger(node,3);
+                E.mouse_node=-1;
+                if(x>=1650)engine_open_save_menu(1);
+                else if(x<=1630&&E.search_progress>=31&&!E.fading&&!chapter_two_complete()&&
+                        !chapter_choice_pending()&&!ji(jg(E.scene,"chapter_cutscene"),0)&&E.search_page<0)
+                    E.chapter_inventory_open=!E.chapter_inventory_open;
+                continue;
+            }
+#endif
             if(chapter_two_complete()){custom_interact();E.mouse_node=-1;continue;}
             if(chapter_choice_pending()&&x>=70&&x<=1320&&y>=55&&y<=207){
                 int option;
@@ -3074,13 +3130,13 @@ static void chapter_animate_props(double dt)
     double origin[3];
     for(i=0;i<E.count;++i){
         if(!node_active(i))continue;
-        speed=jn(jg(E.nodes[i].data,"chapter_slide"),0);
+        speed=json_number(jg(E.nodes[i].data,"chapter_slide"),0);
         if(speed!=0&&E.search_progress==ji(jg(E.nodes[i].data,"slide_stage"),-1)){
             jvec(jg(E.nodes[i].data,"pos"),origin,3);
             amount=E.chapter_time*speed;
             E.nodes[i].p[2]=origin[2]+amount;
         }
-        speed=jn(jg(E.nodes[i].data,"chapter_spin"),0);
+        speed=json_number(jg(E.nodes[i].data,"chapter_spin"),0);
         if(speed==0||E.search_progress==30)continue;
         angle=atan2(E.nodes[i].q[1],E.nodes[i].q[3])+speed*dt;
         E.nodes[i].q[1]=sin(angle);
@@ -3107,7 +3163,7 @@ static void tick(double dt)
         if(node_valid(gift)){
             Json *data;
             data=E.nodes[gift].data;
-            E.nodes[gift].p[1]=jn(ja(jg(data,"pos"),1),0)+jn(jg(data,"float_height"),0)*sin(E.elapsed*1.7);
+            E.nodes[gift].p[1]=json_number(ja(jg(data,"pos"),1),0)+json_number(jg(data,"float_height"),0)*sin(E.elapsed*1.7);
         }
     }
     custom_key_update(dt);
@@ -3135,10 +3191,10 @@ static void tick(double dt)
         event=chapter_event();
         if(E.search_page>=0){
             page=ja(search_pages(),E.search_page);
-            seconds=jn(jg(page,"seconds"),0);
+            seconds=json_number(jg(page,"seconds"),0);
             E.chapter_page_time+=dt;
             if(seconds>0&&E.chapter_page_time>=seconds&&!dialogue_waiting(.45))chapter_advance();
-        }else if(event&&jg(event,"timeout")&&E.chapter_time>=jn(jg(event,"timeout"),0)){
+        }else if(event&&jg(event,"timeout")&&E.chapter_time>=json_number(jg(event,"timeout"),0)){
             chapter_enter_stage(ji(jg(event,"timeout_next"),E.search_progress+1));
         }else chapter_start_event(0);
     }
@@ -3566,6 +3622,7 @@ int main(int argc,char **argv)
     FILE *physics_file;
     Uint64 before;
     Uint64 after;
+    Uint32 window_flags;
     double frequency;
     double dt;
     double spent;
@@ -3575,6 +3632,17 @@ int main(int argc,char **argv)
     int status;
     int scene_index;
     memset(&E,0,sizeof(E));strcpy(E.root,"assets");E.width=1280;E.height=640;E.fps_target=60;E.pending_scene=-1;E.video=-1;
+#ifdef __ANDROID__
+    SDL_SetHint(SDL_HINT_ORIENTATIONS,"LandscapeLeft LandscapeRight");
+    SDL_SetHint(SDL_HINT_ANDROID_TRAP_BACK_BUTTON,"1");
+    SDL_SetHint(SDL_HINT_TOUCH_MOUSE_EVENTS,"1");
+    SDL_SetHint(SDL_HINT_MOUSE_TOUCH_EVENTS,"0");
+    if(SDL_AndroidGetInternalStoragePath())chdir(SDL_AndroidGetInternalStoragePath());
+    if(freopen("engine.log","w",stderr)){
+        dup2(fileno(stderr),STDOUT_FILENO);
+        setvbuf(stderr,NULL,_IOLBF,0);setvbuf(stdout,NULL,_IOLBF,0);
+    }
+#endif
     scene="mainmenu2";language="es";bathroom_test=NULL;audio_test=NULL;render_test=NULL;capture=NULL;light_test=NULL;physics_test=NULL;selftest=0;preview_chapter=0;frame_limit=0;
     for(i=1;i<argc;++i){
         if(!strcmp(argv[i],"--assets")&&i+1<argc){if(strlen(argv[++i])<MAX_PATH_SIZE)strcpy(E.root,argv[i]);}
@@ -3616,10 +3684,28 @@ int main(int argc,char **argv)
     }
     if(selftest){status=engine_selftest();cleanup();return status;}
     if(audio_test){status=audio_selftest(audio_test);cleanup();return status;}
-    SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION,2);SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION,1);SDL_GL_SetAttribute(SDL_GL_DOUBLEBUFFER,1);SDL_GL_SetAttribute(SDL_GL_DEPTH_SIZE,24);
-    E.window=SDL_CreateWindow("NEED2DREAMSCAPE",SDL_WINDOWPOS_CENTERED,SDL_WINDOWPOS_CENTERED,E.width,E.height,SDL_WINDOW_OPENGL|SDL_WINDOW_RESIZABLE|((render_test||light_test||physics_test||bathroom_test)?SDL_WINDOW_HIDDEN:0));
+    SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION,2);
+#ifdef __ANDROID__
+    SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK,SDL_GL_CONTEXT_PROFILE_ES);
+    SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION,0);
+#else
+    SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION,1);
+#endif
+    SDL_GL_SetAttribute(SDL_GL_DOUBLEBUFFER,1);SDL_GL_SetAttribute(SDL_GL_DEPTH_SIZE,24);
+    window_flags=SDL_WINDOW_OPENGL|SDL_WINDOW_RESIZABLE|((render_test||light_test||physics_test||bathroom_test)?SDL_WINDOW_HIDDEN:0);
+#ifdef __ANDROID__
+    window_flags|=SDL_WINDOW_FULLSCREEN_DESKTOP;
+#endif
+    E.window=SDL_CreateWindow("NEED2DREAMSCAPE",SDL_WINDOWPOS_CENTERED,SDL_WINDOWPOS_CENTERED,E.width,E.height,window_flags);
     if(!E.window){fprintf(stderr,"Window: %s\n",SDL_GetError());cleanup();return 1;}
     E.context=SDL_GL_CreateContext(E.window);if(!E.context){fprintf(stderr,"OpenGL: %s\n",SDL_GetError());cleanup();return 1;}
+#ifdef __ANDROID__
+    initialize_gl4es();
+    SDL_GL_MakeCurrent(E.window,NULL);
+    if(SDL_GL_MakeCurrent(E.window,E.context)!=0){fprintf(stderr,"OpenGL: %s\n",SDL_GetError());cleanup();return 1;}
+    SDL_GL_GetDrawableSize(E.window,&E.width,&E.height);
+    fprintf(stderr,"Android viewport %d x %d\n",E.width,E.height);
+#endif
     if(!lighting_init()){fprintf(stderr,"Per-pixel lighting requires working OpenGL 2.1 shaders.\n");cleanup();return 1;}
     SDL_GL_SetSwapInterval((render_test||light_test||physics_test||bathroom_test)?0:1);glPixelStorei(GL_UNPACK_ALIGNMENT,1);
     memset(&desired,0,sizeof(desired));desired.freq=44100;desired.format=AUDIO_S16LSB;desired.channels=2;desired.samples=1024;desired.callback=audio_callback;
@@ -3639,6 +3725,9 @@ int main(int argc,char **argv)
             E.fps_smoothed+=(dt-E.fps_smoothed)*.1;sprintf(title,"NEED2DREAMSCAPE | %s | %.0f fps | %lu frames",js(jg(E.scene,"name")),E.fps_smoothed>0?1/E.fps_smoothed:0,E.frames);SDL_SetWindowTitle(E.window,title);
         }
         if(frame_limit>0&&(double)E.frames>=frame_limit){if(capture)screenshot(capture);E.quitting=1;}
+#ifdef __ANDROID__
+        glFlush();
+#endif
         SDL_GL_SwapWindow(E.window);dialogue_audio_presented();
         spent=(double)(SDL_GetPerformanceCounter()-before)/frequency;
         if(E.fps_target>0&&spent<1.0/E.fps_target)SDL_Delay((Uint32)((1.0/E.fps_target-spent)*1000));

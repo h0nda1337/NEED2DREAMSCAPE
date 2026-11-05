@@ -197,7 +197,7 @@ void movement_step(int direction, double amount)
     }
     pc = ja(jg(p->data, "colliders"), 0);
     collider_bounds(E.player, pc, pmin, pmax);
-    foot_tolerance=jn(jg(E.scene,"collision_step_height"),.15);
+    foot_tolerance=json_number(jg(E.scene,"collision_step_height"),.15);
     if(foot_tolerance<0)foot_tolerance=0;
     collisions = 0; block = 0;
     for (i = 0; i < E.count; ++i) {
@@ -351,7 +351,14 @@ void scripts_method(int node, const char *kind, const char *method, const char *
     }
     direction = -1;
     for (i = 0; i < 4; ++i) {
-        if (!strcmp(method, move[i])) { n->move[i] = 10; direction = i; }
+        if (!strcmp(method, move[i])) {
+#ifdef __ANDROID__
+            n->move[i] = 10.0 / 1.67;
+#else
+            n->move[i] = 10;
+#endif
+            direction = i;
+        }
         if (!strcmp(method, release[i])) { n->move[i] *= .7; direction = i; }
     }
     if (direction >= 0) movement_step(direction, n->move[direction] * E.dt);

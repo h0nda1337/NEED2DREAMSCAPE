@@ -1,0 +1,37 @@
+plugins {
+    id 'com.android.application'
+}
+
+def sdlSource = providers.gradleProperty('sdl2Source')
+    .orElse(rootProject.file('.deps/SDL2').absolutePath).get()
+def targetAbi = providers.gradleProperty('targetAbi').orNull
+
+android {
+    namespace 'com.need2dreamscape.game'
+    compileSdk 35
+    buildToolsVersion '35.0.0'
+
+    defaultConfig {
+        applicationId 'com.need2dreamscape.game'
+        minSdk 23
+        targetSdk 35
+        versionCode 1508002
+        versionName '15.8-android-prueba2'
+        if (targetAbi != null) {
+            ndk { abiFilters targetAbi }
+        }
+    }
+    sourceSets {
+        main {
+            java.srcDir "${sdlSource}/android-project/app/src/main/java"
+            assets.srcDir rootProject.file('.build/assets')
+            jniLibs.srcDir rootProject.file('.build/jniLibs')
+        }
+    }
+    packaging {
+        jniLibs.useLegacyPackaging = false
+    }
+    androidResources {
+        noCompress += ['zip']
+    }
+}

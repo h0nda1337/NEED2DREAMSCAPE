@@ -40,7 +40,7 @@ int localization_init(const char *root,const char *language)
     if(!compressed||!font_pixels){free(compressed);fclose(f);return 0;}
     if(fread(compressed,1,(size_t)bytes,f)!=(size_t)bytes){free(compressed);fclose(f);return 0;}fclose(f);
     i=uncompress(font_pixels,&size,compressed,(uLong)bytes)==Z_OK&&size==(uLongf)font_width*(uLongf)font_height;free(compressed);if(!i)return 0;
-    for(i=0;i<256;++i)advances[i]=jn(ja(jg(catalog,"advance"),i),18);
+    for(i=0;i<256;++i)advances[i]=json_number(ja(jg(catalog,"advance"),i),18);
     return 1;
 }
 static unsigned int next_char(const char **text)

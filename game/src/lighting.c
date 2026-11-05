@@ -2,6 +2,9 @@
 #include "lighting.h"
 #include <SDL2/SDL.h>
 #include <GL/glext.h>
+#ifdef __ANDROID__
+#include <gl4esinit.h>
+#endif
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -90,7 +93,11 @@ static const char *fragment_source[] = {
 static int load_function(void *destination, size_t size, const char *name)
 {
     void *address;
+#ifdef __ANDROID__
+    address = gl4es_GetProcAddress(name);
+#else
     address = SDL_GL_GetProcAddress(name);
+#endif
     if (!address || size != sizeof(address)) {
         fprintf(stderr, "OpenGL 2.1 function unavailable: %s\n", name);
         return 0;
