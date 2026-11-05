@@ -61,6 +61,8 @@ typedef struct { int texture, page, stage; } DialogueCue;
 static const DialogueCue no_dialogue={-1,-1,-1};
 static DialogueCue dialogue_drawn;
 static DialogueCue dialogue_played;
+static time_t room_clock_second=(time_t)-1;
+static int room_clock_local_seconds;
 static int click_hit(double x, double y);
 static void mesh_data_load(int index);
 static void custom_camera_update(void);
@@ -488,6 +490,27 @@ void audio_play(int node, int channel)
 static int campaign_audio_node(void)
 {
     return ji(jg(E.scene,"campaign_audio_node"),ji(jg(E.scene,"footstep_node"),-1));
+}
+static void room_clock_update(time_t now)
+{
+    const struct tm *local;
+    int ticking;
+    if(now==(time_t)-1||now==room_clock_second)return;
+    local=localtime(&now);
+    if(!local)return;
+    ticking=room_clock_second!=(time_t)-1&&now>room_clock_second&&!E.fading;
+    room_clock_second=now;
+    room_clock_local_seconds=local->tm_hour*3600+local->tm_min*60+local->tm_sec;
+    if(ticking)
+        audio_play_clip(campaign_audio_node(),2,ji(ja(jg(E.game,"room_clock_ticks"),local->tm_sec%2),-1),1,0);
+}
+static int room_clock_time(void)
+{
+    Json *story;
+    story=jg(jg(E.scene,"room_clock"),"story");
+    if(story&&E.search_progress>=ji(jg(story,"start"),0)&&E.search_progress<ji(jg(story,"end"),0))
+        return ji(jg(story,"seconds"),room_clock_local_seconds);
+    return room_clock_local_seconds;
 }
 void player_footstep(double distance)
 {
@@ -1367,7 +1390,10 @@ void engine_open_save_menu(int pause)
     save_selected=SAVE_AUTO;confirm_slot=-1;save_notice=NULL;
     E.mouse_node=-1;
     for(i=0;i<E.count;++i)E.nodes[i].pressed=0;
-    if(pause&&E.audio_device)SDL_PauseAudioDevice(E.audio_device,1);
+    if(pause){
+        room_clock_second=(time_t)-1;
+        if(E.audio_device)SDL_PauseAudioDevice(E.audio_device,1);
+    }
 }
 static void load_save_slot(int slot)
 {
@@ -1447,6 +1473,7 @@ void engine_load_scene(int index)
     if(restore)apply_progress(&pending_progress);
     if(E.search_progress==12&&ji(jg(E.scene,"chapter2_entry"),0))E.search_progress=13;
     E.npc_dialog_page=-1;E.computer_time=0;dialogue_played=no_dialogue;
+    room_clock_second=(time_t)-1;
     E.chapter_press_count=0;E.chapter_last_press=-1;
     E.search_page=-1;E.search_inspection=-1;E.search_exit_time=0;E.chapter_time=0;E.chapter_door_tried=0;
     E.chapter_inventory_open=0;E.chapter_page_time=0;
@@ -2296,10 +2323,62 @@ static void clock_hand(double angle,double length,double width)
     double y;
     x=sin(angle);y=cos(angle);
     glBegin(GL_TRIANGLES);
-    glVertex2d(960-y*width,480+x*width);
-    glVertex2d(960+y*width,480-x*width);
-    glVertex2d(960+x*length,480+y*length);
+    glVertex2d(-y*width,x*width);
+    glVertex2d(y*width,-x*width);
+    glVertex2d(x*length,y*length);
     glEnd();
+}
+static void clock_disk(double radius,double z)
+{
+    int i;
+    double angle;
+    glBegin(GL_TRIANGLE_FAN);glVertex3d(0,0,z);
+    for(i=0;i<=32;++i){
+        angle=i*.196349540849;
+        glVertex3d(radius*sin(angle),radius*cos(angle),z);
+    }
+    glEnd();
+}
+static void render_room_clock(void)
+{
+    Json *config;
+    double pos[3];
+    double radius,angle,x,y;
+    int hour,minute,second,shown,i;
+    config=jg(E.scene,"room_clock");
+    if(jc(jg(config,"pos"))!=3)return;
+    jvec(jg(config,"pos"),pos,3);radius=jn(jg(config,"radius"),.77);
+    shown=room_clock_time();
+    hour=shown/3600;minute=shown/60%60;second=shown%60;
+    glDisable(GL_TEXTURE_2D);lighting_material(0,0);
+    glPushMatrix();glTranslated(pos[0],pos[1],pos[2]);glScaled(radius,radius,radius);
+    glColor4d(.26,.19,.16,1);
+    glBegin(GL_QUAD_STRIP);
+    for(i=0;i<=32;++i){
+        angle=i*.196349540849;x=sin(angle);y=cos(angle);
+        glVertex3d(x,y,.33);glVertex3d(x,y,.03);
+    }
+    glEnd();
+    clock_disk(1,.03);
+    /* The dial details overlap on the same narrow depth range. */
+    glDepthMask(GL_FALSE);glDepthFunc(GL_LEQUAL);
+    glColor4d(.34,.26,.22,1);clock_disk(.92,.02);
+    glColor4d(.61,.54,.43,1);clock_disk(.82,.01);
+    glColor4d(.25,.20,.17,1);
+    for(i=0;i<12;++i){
+        glPushMatrix();glRotated(-30.0*i,0,0,1);
+        draw_quad(i%3==0?-.027:-.015,i%3==0?.64:.71,i%3==0?.054:.03,i%3==0?.12:.05,0,0);
+        glPopMatrix();
+    }
+    glTranslated(0,0,-.009);
+    glColor4d(.12,.10,.10,1);
+    clock_hand((hour%12+minute/60.0)*.5235987756,.49,.058);
+    clock_hand((minute+second/60.0)*.1047197551,.70,.035);
+    glTranslated(0,0,-.009);
+    glColor4d(.45,.20,.15,1);clock_hand(second*.1047197551,.73,.019);
+    clock_disk(.061,-.008);
+    glDepthFunc(GL_LESS);glDepthMask(GL_TRUE);
+    glPopMatrix();
 }
 static void render_computer_clock(double time)
 {
@@ -2334,9 +2413,11 @@ static void render_computer_clock(double time)
     }
     glEnd();
     glLineWidth(1);
+    glPushMatrix();glTranslated(960,480,0);
     glColor4d(.76,.73,.83,1);clock_hand(time*2.5+.9,127,12);
     glColor4d(.95,.91,.99,1);clock_hand(time*8.2-.8,183,8);
     glColor4d(.85,.31,.39,1);clock_hand(time*16.5+1.2,214,4);
+    glPopMatrix();
     draw_quad(953,473,14,14,0,0);
 }
 static void render_custom_overlay(void)
@@ -2612,6 +2693,7 @@ static void render_scene(void)
     if(ji(jg(E.scene,"night_road"),0))render_night_road();
     glEnable(GL_DEPTH_TEST);glDepthMask(GL_TRUE);glDisable(GL_LIGHTING);camera_view();lights_setup();
     for(i=0;i<E.count;++i)if(node_active(i))draw_mesh_node(i);
+    render_room_clock();
     for(i=0;i<E.count;++i)if(node_active(i))draw_sprite_node(i);
     if(E.video<0)render_chapter_waypoint();
     if(E.video>=0&&E.video_texture){overlay_begin();glEnable(GL_TEXTURE_2D);glBindTexture(GL_TEXTURE_2D,E.video_texture);glColor4d(1,1,1,1);draw_quad(0,0,1920,960,0,1);}
@@ -2795,6 +2877,7 @@ static void tick(double dt)
     npc_marker_update();
     cast_labels_update();
     custom_camera_update();
+    if(jg(E.scene,"room_clock"))room_clock_update(time(NULL));
     ++E.frames;
 }
 static int screenshot(const char *path)
