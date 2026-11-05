@@ -197,6 +197,7 @@ int custom_interact(void);
 int custom_movement_locked(void);
 void engine_load_scene(int index);
 void engine_save(void);
+void engine_open_save_menu(int pause);
 void engine_settings(int width, int fps, int aa);
 void engine_dispatch(int node, const char *kind, const char *method, const char *arg, int flag);
 void engine_calls(Json *event);

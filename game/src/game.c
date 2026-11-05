@@ -312,7 +312,10 @@ void scripts_method(int node, const char *kind, const char *method, const char *
     else if (!strcmp(method, "Return")) engine_fade("twn", 2, 0);
     else if (!strcmp(method, "Settings")) engine_fade("settings", 2, 1);
     else if (!strcmp(method, "MainMenu")) engine_fade("mainmenu2", .5, 0);
-    else if (!strcmp(method, "Continue")) engine_fade("loader", .67, 0);
+    else if (!strcmp(method, "Continue")) {
+        if(ji(jg(E.scene,"title_menu"),0))engine_open_save_menu(0);
+        else engine_fade("loader", .67, 0);
+    }
     else if (!strcmp(method, "NewGame")) {
         campaign_reset();
         engine_fade(campaign_start_scene(), .67, 0);

@@ -9,6 +9,7 @@
 #include <limits.h>
 #include <errno.h>
 #include <sys/stat.h>
+#include <time.h>
 #include <zlib.h>
 #ifdef _WIN32
 #include <windows.h>
@@ -30,6 +31,22 @@ typedef char SaveChar;
 Engine E;
 static int no_save;
 static SaveChar desktop_save[MAX_PATH_SIZE];
+enum { SAVE_AUTO, SAVE_FIRST, SAVE_SECOND, SAVE_THIRD, SAVE_COUNT };
+enum { SAVE_MENU_CLOSED, SAVE_MENU_LOAD, SAVE_MENU_PAUSE };
+typedef struct {
+    int level, story, key, computer, stage, choice, flags;
+    int has_position;
+    double position[3];
+    char date[32];
+} Progress;
+static Progress save_slots[SAVE_COUNT];
+static Progress pending_progress;
+static int progress_pending;
+static int suppress_entry_save;
+static int save_menu;
+static int save_selected;
+static int confirm_slot=-1;
+static const char *save_notice;
 static double frame_limit;
 static int scene_loading;
 static int billboard_pass;
@@ -1141,74 +1158,169 @@ static int progress_path(SaveChar path[MAX_PATH_SIZE])
     memcpy(path,desktop_save,sizeof(desktop_save));
     return 1;
 }
-void engine_save(void)
+static int slot_path(int slot,SaveChar path[MAX_PATH_SIZE])
+{
+    size_t length;
+    if(!progress_path(path))return 0;
+    if(slot==SAVE_AUTO)return 1;
+#ifdef _WIN32
+    length=wcslen(path);
+#else
+    length=strlen(path);
+#endif
+    if(!E.save_path[0]&&length>=4)length-=4;
+    if(length+7>=MAX_PATH_SIZE)return 0;
+#ifdef _WIN32
+    wsprintfW(path+length,L"-%d.n2d",slot);
+#else
+    sprintf(path+length,"-%d.n2d",slot);
+#endif
+    return 1;
+}
+static int save_current(int slot)
 {
     FILE *f;
     SaveChar path[MAX_PATH_SIZE];
     SaveChar pending[MAX_PATH_SIZE+32];
+    SaveChar suffix[32];
+    const double *p;
+    char stamp[32];
+    time_t now;
+    struct tm *local;
     int written;
     int closed;
-    if(no_save)return;
-    if(!progress_path(path)){fprintf(stderr,"No se encontro el Escritorio para guardar la partida.\n");return;}
+    if(no_save||suppress_entry_save||!slot_path(slot,path))return 0;
 #ifdef _WIN32
-    wsprintfW(pending,L"%ls.%lu.tmp",path,(unsigned long)GetCurrentProcessId());
+    wsprintfW(suffix,L".%lu.tmp",(unsigned long)GetCurrentProcessId());
+    wcscpy(pending,path);wcscat(pending,suffix);
 #else
-    sprintf(pending,"%s.%lu.tmp",path,(unsigned long)getpid());
+    sprintf(suffix,".%lu.tmp",(unsigned long)getpid());
+    strcpy(pending,path);strcat(pending,suffix);
 #endif
     f=SAVE_OPEN(pending,SAVE_WRITE_MODE);
-    if(!f){perror("No se pudo guardar la partida");return;}
+    if(!f){perror("No se pudo guardar la partida");return 0;}
     written=fprintf(f,"PETSCOP_C89_SAVE_1\n%d\n%d\n%d\n%d\n%d\n%d\n%d\n",E.scene_index,
         E.custom_story_seen,E.custom_key_unlocked,E.computer_progress,E.search_progress,E.chapter2_choice,E.chapter2_flags);
+    now=time(NULL);local=localtime(&now);
+    if(written>=0&&local&&strftime(stamp,sizeof(stamp),"%d/%m/%Y %H:%M",local))
+        written=fprintf(f,"DATE %s\n",stamp);
+    if(written>=0&&slot!=SAVE_AUTO&&node_valid(E.player)&&!custom_movement_locked()&&E.custom_story_page<0){
+        p=E.nodes[E.player].p;
+        written=fprintf(f,"POSITION %.17g %.17g %.17g\n",p[0],p[1],p[2]);
+    }
     closed=fclose(f);
 #ifdef _WIN32
     if(written>=0&&closed==0&&MoveFileExW(pending,path,MOVEFILE_REPLACE_EXISTING|MOVEFILE_WRITE_THROUGH)){
-        E.saved_level=E.scene_index;return;
+        if(slot==SAVE_AUTO)E.saved_level=E.scene_index;
+        return 1;
     }
     DeleteFileW(pending);
 #else
-    if(written>=0&&closed==0&&rename(pending,path)==0){E.saved_level=E.scene_index;return;}
+    if(written>=0&&closed==0&&rename(pending,path)==0){
+        if(slot==SAVE_AUTO)E.saved_level=E.scene_index;
+        return 1;
+    }
     remove(pending);
 #endif
     fprintf(stderr,"No se pudo actualizar la partida guardada.\n");
+    return 0;
 }
-static int read_progress(FILE *f)
+void engine_save(void)
 {
-    char magic[64];
+    save_current(SAVE_AUTO);
+}
+static int read_progress(FILE *f,Progress *record)
+{
+    char line[128];
+    double x,y,z;
     int level;
     if(!f)return 0;
-    if(!fgets(magic,sizeof(magic),f)||strcmp(magic,"PETSCOP_C89_SAVE_1\n")||
+    if(!fgets(line,sizeof(line),f)||strcmp(line,"PETSCOP_C89_SAVE_1\n")||
        fscanf(f,"%d",&level)!=1||level<0||level>=jc(jg(E.game,"scenes"))){
         fclose(f);return 0;
     }
-    E.saved_level=level;
-    if(fscanf(f,"%d",&E.custom_story_seen)!=1)E.custom_story_seen=0;
-    if(fscanf(f,"%d",&E.custom_key_unlocked)!=1)
-        E.custom_key_unlocked=E.custom_story_seen||E.saved_level==9||E.saved_level>=engine_scene_index("casaCustom");
-    if(fscanf(f,"%d",&E.computer_progress)!=1||E.computer_progress<COMPUTER_LOCKED||E.computer_progress>COMPUTER_EMPTY)
-        E.computer_progress=COMPUTER_LOCKED;
-    if(fscanf(f,"%d",&E.search_progress)!=1||E.search_progress<0||E.search_progress>ji(jg(E.game,"chapter_two_complete"),31))
-        E.search_progress=0;
-    if(fscanf(f,"%d",&E.chapter2_choice)!=1||E.chapter2_choice<0||E.chapter2_choice>2)
-        E.chapter2_choice=0;
-    if(fscanf(f,"%d",&E.chapter2_flags)!=1||E.chapter2_flags<0)E.chapter2_flags=0;
+    memset(record,0,sizeof(*record));record->level=level;
+    if(fscanf(f,"%d",&record->story)!=1)record->story=0;
+    if(fscanf(f,"%d",&record->key)!=1)
+        record->key=record->story||level==9||level>=engine_scene_index("casaCustom");
+    if(fscanf(f,"%d",&record->computer)!=1||record->computer<COMPUTER_LOCKED||record->computer>COMPUTER_EMPTY)
+        record->computer=COMPUTER_LOCKED;
+    if(fscanf(f,"%d",&record->stage)!=1||record->stage<0||record->stage>ji(jg(E.game,"chapter_two_complete"),31))record->stage=0;
+    if(fscanf(f,"%d",&record->choice)!=1||record->choice<0||record->choice>2)record->choice=0;
+    if(fscanf(f,"%d",&record->flags)!=1||record->flags<0)record->flags=0;
+    while(fgets(line,sizeof(line),f)){
+        if(sscanf(line,"POSITION %lf %lf %lf",&x,&y,&z)==3&&fabs(x)<10000&&fabs(y)<10000&&fabs(z)<10000){
+            record->has_position=1;record->position[0]=x;record->position[1]=y;record->position[2]=z;
+        }else if(!strncmp(line,"DATE ",5))sscanf(line+5,"%31[0123456789/: ]",record->date);
+    }
     fclose(f);
     return 1;
 }
-static void save_read(void)
+static int read_save_slot(int slot,Progress *record)
 {
     SaveChar path[MAX_PATH_SIZE];
     struct stat main_save;
     struct stat chapter_save;
     const char *first;
     const char *second;
-    campaign_reset();E.saved_level=-1;
-    if(progress_path(path)&&read_progress(SAVE_OPEN(path,SAVE_READ_MODE)))return;
-    if(E.save_path[0])return;
+    memset(record,0,sizeof(*record));record->level=-1;
+    if(slot_path(slot,path)&&read_progress(SAVE_OPEN(path,SAVE_READ_MODE),record))return 1;
+    if(E.save_path[0]||slot!=SAVE_AUTO)return 0;
     first="petscop.save";second="capitulo2.save";
     if(stat(second,&chapter_save)==0&&(stat(first,&main_save)!=0||chapter_save.st_mtime>=main_save.st_mtime)){
         first="capitulo2.save";second="petscop.save";
     }
-    if(!read_progress(fopen(first,"rb")))read_progress(fopen(second,"rb"));
+    return read_progress(fopen(first,"rb"),record)||read_progress(fopen(second,"rb"),record);
+}
+static void apply_progress(const Progress *record)
+{
+    E.custom_story_seen=record->story;E.custom_key_unlocked=record->key;
+    E.computer_progress=record->computer;E.search_progress=record->stage;
+    E.chapter2_choice=record->choice;E.chapter2_flags=record->flags;
+}
+static void save_read(void)
+{
+    Progress record;
+    campaign_reset();E.saved_level=-1;
+    if(read_save_slot(SAVE_AUTO,&record)){
+        apply_progress(&record);E.saved_level=record.level;
+    }
+}
+static void close_save_menu(void)
+{
+    if(save_menu==SAVE_MENU_PAUSE&&E.audio_device)SDL_PauseAudioDevice(E.audio_device,0);
+    save_menu=SAVE_MENU_CLOSED;
+}
+void engine_open_save_menu(int pause)
+{
+    int i;
+    if(E.fading||E.pending_scene>=0)return;
+    for(i=0;i<SAVE_COUNT;++i)read_save_slot(i,save_slots+i);
+    save_menu=pause?SAVE_MENU_PAUSE:SAVE_MENU_LOAD;
+    save_selected=SAVE_AUTO;confirm_slot=-1;save_notice=NULL;
+    E.mouse_node=-1;
+    for(i=0;i<E.count;++i)E.nodes[i].pressed=0;
+    if(pause&&E.audio_device)SDL_PauseAudioDevice(E.audio_device,1);
+}
+static void load_save_slot(int slot)
+{
+    const char *name;
+    if(!read_save_slot(slot,&pending_progress)){save_notice="ESPACIO VACÍO";return;}
+    name=js(jg(ja(jg(E.game,"scenes"),pending_progress.level),"name"));
+    close_save_menu();
+    engine_fade(name,2.6,0);
+    progress_pending=E.fading;
+}
+static void write_manual_slot(int slot)
+{
+    if(slot==SAVE_AUTO){save_notice="EL AUTOGUARDADO SE ACTUALIZA AL AVANZAR";return;}
+    if(read_save_slot(slot,save_slots+slot)&&confirm_slot!=slot){
+        confirm_slot=slot;save_notice="PULSA GUARDAR DE NUEVO PARA REEMPLAZAR LA PARTIDA";return;
+    }
+    confirm_slot=-1;
+    if(save_current(slot)){
+        read_save_slot(slot,save_slots+slot);save_notice="PARTIDA GUARDADA";
+    }else save_notice="NO SE PUDO GUARDAR LA PARTIDA";
 }
 void engine_settings(int width, int fps, int aa)
 {
@@ -1251,6 +1363,7 @@ void engine_load_scene(int index)
     int j;
     int video;
     int loop;
+    int restore;
     const char *next_scene;
     const char *previous;
     Json *arrival;
@@ -1262,6 +1375,9 @@ void engine_load_scene(int index)
     free(E.nodes);E.nodes=NULL;json_free(E.scene);E.scene=NULL;
     entry=ja(jg(E.game,"scenes"),index);path_join(path,js(jg(entry,"path")));E.scene=json_load(path);
     if(!E.scene){E.quitting=1;return;}
+    restore=progress_pending&&pending_progress.level==index;
+    progress_pending=0;
+    if(restore)apply_progress(&pending_progress);
     if(E.search_progress==12&&ji(jg(E.scene,"chapter2_entry"),0))E.search_progress=13;
     E.npc_dialog_page=-1;E.computer_time=0;
     E.chapter_press_count=0;E.chapter_last_press=-1;
@@ -1306,7 +1422,10 @@ void engine_load_scene(int index)
     physics_init_scene();world_update();
     for(i=0;i<E.count;++i)if(script_fields(i,"Movement")&&node_active(i)){E.player=i;break;}
     arrival=jg(jg(E.scene,"arrival"),previous);
-    if(arrival&&node_valid(E.player))jvec(arrival,E.nodes[E.player].p,3);
+    if(node_valid(E.player)){
+        if(restore&&pending_progress.has_position)memcpy(E.nodes[E.player].p,pending_progress.position,sizeof(pending_progress.position));
+        else if(!restore&&arrival)jvec(arrival,E.nodes[E.player].p,3);
+    }
     for(i=0;i<E.count;++i)animation_apply(i);
     world_update();
     custom_camera_update();
@@ -1318,7 +1437,9 @@ void engine_load_scene(int index)
         a=jg(E.nodes[i].data,"sounds");for(j=0;j<jc(a);++j){s=ja(a,j);if(ji(jg(s,"autoplay"),0)&&E.nodes[i].audio_enabled)audio_play(i,j);}
     }
     E.pending_scene=-1;
+    suppress_entry_save=restore;
     scripts_start();
+    suppress_entry_save=0;
     video=-1;loop=0;next_scene="";
     for(i=0;i<E.count;++i)if(node_active(i)){
         if(script_enabled(i,"TWN")){video=0;loop=0;next_scene="mainmenu";}
@@ -1905,6 +2026,67 @@ static void overlay_begin(void)
 {
     lighting_end();glDisable(GL_LIGHTING);glDisable(GL_DEPTH_TEST);glMatrixMode(GL_PROJECTION);glLoadIdentity();glOrtho(0,1920,0,960,-10,10);glMatrixMode(GL_MODELVIEW);glLoadIdentity();
 }
+static void road_glow(double x,double y,double width,double height,double alpha)
+{
+    double angle;
+    int i;
+    glBegin(GL_TRIANGLE_FAN);
+    glColor4d(1,.70,.34,alpha);glVertex2d(x,y);
+    glColor4d(.95,.50,.18,0);
+    for(i=0;i<=20;++i){
+        angle=i*.3141592654;
+        glVertex2d(x+width*cos(angle),y+height*sin(angle));
+    }
+    glEnd();
+}
+static void road_mark(double x,double half_width,double front_scale,double back_scale,double opacity)
+{
+    glColor4d(.56,.51,.37,opacity);
+    glBegin(GL_QUADS);
+    glVertex2d(960+(x-half_width)*front_scale,520-2.4*front_scale);
+    glVertex2d(960+(x+half_width)*front_scale,520-2.4*front_scale);
+    glVertex2d(960+(x+half_width)*back_scale,520-2.4*back_scale);
+    glVertex2d(960+(x-half_width)*back_scale,520-2.4*back_scale);
+    glEnd();
+}
+static void render_night_road(void)
+{
+    double travel,z,scale,side,x,y,head,fog;
+    int i;
+    overlay_begin();glDisable(GL_TEXTURE_2D);
+    glBegin(GL_QUADS);
+    glColor4d(.017,.022,.031,1);glVertex2d(0,0);glVertex2d(1920,0);
+    glColor4d(.063,.079,.112,1);glVertex2d(1920,520);glVertex2d(0,520);
+    glColor4d(.063,.079,.112,1);glVertex2d(0,520);glVertex2d(1920,520);
+    glColor4d(.009,.014,.027,1);glVertex2d(1920,960);glVertex2d(0,960);
+    glColor4d(.075,.080,.091,1);glVertex2d(212,0);glVertex2d(1708,0);
+    glColor4d(.045,.052,.070,1);glVertex2d(961,520);glVertex2d(959,520);
+    glEnd();
+    road_mark(-3.27,.036,520/2.4,2,.22);
+    road_mark(3.27,.036,520/2.4,2,.22);
+    travel=fmod(E.elapsed*9,32);
+    for(i=36;i>=1;--i){
+        z=i*8-travel;
+        if(z+2.6<=5.3)continue;
+        scale=1150/(z<5.3?5.3:z);
+        road_mark(0,.065,scale,1150/(z+2.6),.32*(1-z/305));
+    }
+    for(i=18;i>=1;--i){
+        z=i*16-travel;
+        if(z<4.3)continue;
+        scale=1150/z;
+        side=(i%2==0)?1:-1;
+        x=960+side*4.6*scale;y=520-2.4*scale;head=y+4.5*scale;
+        fog=(1-z/304);
+        road_glow(x-side*2.1*scale,y,3.2*scale,.46*scale,.18*fog);
+        glColor4d(.16,.17,.19,.70*fog);draw_quad(x-.036*scale,y,.072*scale,head-y,0,0);
+        if(side>0)draw_quad(x-.54*scale,head,.56*scale,.06*scale,0,0);
+        else draw_quad(x,head,.56*scale,.06*scale,0,0);
+        x-=side*.52*scale;
+        road_glow(x,head,.92*scale,.81*scale,.68*fog);
+        glColor4d(1,.88,.60,.92*fog);draw_quad(x-.12*scale,head-.028*scale,.24*scale,.056*scale,0,0);
+    }
+}
 static void waypoint_arrow(double x,double y,double dx,double dy,double size)
 {
     glBegin(GL_TRIANGLE_FAN);
@@ -2196,7 +2378,124 @@ static void render_custom_overlay(void)
         draw_quad(70,50,1250,170,0,0);
     }
 }
-static void render_frame(void)
+enum { SLOT_X=370, SLOT_Y=650, SLOT_GAP=112, SLOT_HEIGHT=94, SLOT_WIDTH=1180,
+       LOAD_X=1158, WRITE_X=1340, ACTION_W=174, ACTION_H=56, ACTION_Y=19,
+       FOOTER_Y=148, FOOTER_H=54, FOOTER_W=258 };
+
+static void menu_text(const char *value,double x,double y,double scale)
+{
+    unsigned int glyph;
+    unsigned int next;
+    double u,v,w,h;
+    if(!bind_texture(ji(jg(E.game,"save_menu_font"),-1)))return;
+    w=16*scale;h=24*scale;
+    glBegin(GL_QUADS);
+    while(*value){
+        glyph=(unsigned char)*value++;
+        next=(unsigned char)*value;
+        if((glyph==194||glyph==195)&&next>=128&&next<192){
+            glyph=((glyph&3)<<6)|(next&63);++value;
+        }
+        u=(glyph%16)/16.0;v=1-(glyph/16)/16.0;
+        glTexCoord2d(u,v-.0625);glVertex2d(x,y);
+        glTexCoord2d(u+.0625,v-.0625);glVertex2d(x+w,y);
+        glTexCoord2d(u+.0625,v);glVertex2d(x+w,y+h);
+        glTexCoord2d(u,v);glVertex2d(x,y+h);
+        x+=12.5*scale;
+    }
+    glEnd();
+}
+static void save_box(double x,double y,double w,double h,int selected)
+{
+    glDisable(GL_TEXTURE_2D);
+    if(selected)glColor4d(.39,.67,.90,1);
+    else glColor4d(.17,.26,.39,1);
+    draw_quad(x,y,w,h,0,0);
+    if(selected)glColor4d(.085,.15,.25,1);
+    else glColor4d(.044,.071,.12,1);
+    draw_quad(x+2,y+2,w-4,h-4,0,0);
+}
+static void save_button(const char *label,double x,double y,double width,int enabled,int highlighted)
+{
+    save_box(x,y,width,ACTION_H,highlighted);
+    if(enabled)glColor4d(.85,.93,1,1);
+    else glColor4d(.40,.49,.59,1);
+    menu_text(label,x+14,y+13,1.15);
+}
+static void render_save_menu(void)
+{
+    static const char *labels[SAVE_COUNT]={"AUTOGUARDADO","MANUAL 1","MANUAL 2","MANUAL 3"};
+    Progress *record;
+    const char *name;
+    char detail[96];
+    int i;
+    int pause;
+    double y;
+    if(!save_menu)return;
+    pause=save_menu==SAVE_MENU_PAUSE;
+    overlay_begin();glDisable(GL_TEXTURE_2D);glEnable(GL_BLEND);glBlendFunc(GL_SRC_ALPHA,GL_ONE_MINUS_SRC_ALPHA);
+    glColor4d(.008,.014,.036,.77);draw_quad(0,0,1920,960,0,0);
+    save_box(334,111,1252,738,0);
+    glColor4d(.78,.90,1,1);menu_text(pause?"PAUSA":"CARGAR PARTIDA",370,773,2);
+    glColor4d(.56,.70,.86,1);
+    menu_text(pause?"EL AUTOGUARDADO SE ACTUALIZA EN LOS PUNTOS DE CONTROL.":"ELIGE UNA PARTIDA PARA CONTINUAR.",370,747,1.05);
+    for(i=0;i<SAVE_COUNT;++i){
+        y=SLOT_Y-SLOT_GAP*i;record=save_slots+i;
+        save_box(SLOT_X,y,SLOT_WIDTH,SLOT_HEIGHT,i==save_selected);
+        if(i==SAVE_AUTO)glColor4d(.99,.81,.46,1);
+        else glColor4d(.72,.86,1,1);
+        menu_text(labels[i],394,y+53,1.30);
+        if(record->level>=0){
+            name=js(ja(jg(E.game,"save_map_names"),record->level));
+            if(!*name)name=js(jg(ja(jg(E.game,"scenes"),record->level),"name"));
+            sprintf(detail,"CAP. %d  |  %.26s  |  %.16s",record->stage>=13?2:1,name,record->date[0]?record->date:"SIN FECHA");
+            glColor4d(.69,.78,.88,1);menu_text(detail,394,y+19,1.08);
+        }else{
+            glColor4d(.48,.57,.69,1);menu_text("ESPACIO VACÍO",394,y+19,1.08);
+        }
+        save_button("CARGAR",LOAD_X,y+ACTION_Y,ACTION_W,record->level>=0,0);
+        if(pause&&i!=SAVE_AUTO)save_button("GUARDAR",WRITE_X,y+ACTION_Y,ACTION_W,!no_save,confirm_slot==i);
+    }
+    if(save_notice){glColor4d(1,.82,.48,1);menu_text(save_notice,375,218,1.06);}
+    save_button(pause?"REANUDAR [ESC]":"VOLVER [ESC]",SLOT_X,FOOTER_Y,FOOTER_W,1,0);
+    if(pause)save_button("MENÚ PRINCIPAL",SLOT_X+SLOT_WIDTH-FOOTER_W,FOOTER_Y,FOOTER_W,1,0);
+    glColor4d(.53,.66,.82,1);
+    menu_text(pause?"FLECHAS  /  ENTER CARGA  /  G GUARDA":"FLECHAS  /  ENTER CARGA",655,161,1.01);
+}
+static void save_menu_key(SDL_Keycode key)
+{
+    if(key==SDLK_ESCAPE){close_save_menu();return;}
+    if(key==SDLK_UP||key==SDLK_DOWN){
+        save_selected=(save_selected+(key==SDLK_UP?SAVE_COUNT-1:1))%SAVE_COUNT;
+        save_notice=NULL;confirm_slot=-1;
+    }else if(key==SDLK_RETURN)load_save_slot(save_selected);
+    else if(key==SDLK_g&&save_menu==SAVE_MENU_PAUSE)write_manual_slot(save_selected);
+}
+static void save_menu_click(double x,double y)
+{
+    int slot;
+    double row;
+    if(y>=FOOTER_Y&&y<=FOOTER_Y+FOOTER_H){
+        if(x>=SLOT_X&&x<=SLOT_X+FOOTER_W)close_save_menu();
+        else if(save_menu==SAVE_MENU_PAUSE&&x>=SLOT_X+SLOT_WIDTH-FOOTER_W&&x<=SLOT_X+SLOT_WIDTH){
+            close_save_menu();engine_fade("mainmenu2",2.6,0);
+        }
+        return;
+    }
+    if(x<SLOT_X||x>SLOT_X+SLOT_WIDTH)return;
+    for(slot=0;slot<SAVE_COUNT;++slot){
+        row=SLOT_Y-SLOT_GAP*slot;
+        if(y<row||y>row+SLOT_HEIGHT)continue;
+        if(save_selected!=slot){confirm_slot=-1;save_notice=NULL;}
+        save_selected=slot;
+        if(save_menu==SAVE_MENU_LOAD||(x>=LOAD_X&&x<=LOAD_X+ACTION_W&&y>=row+ACTION_Y&&y<=row+ACTION_Y+ACTION_H))
+            load_save_slot(slot);
+        else if(x>=WRITE_X&&x<=WRITE_X+ACTION_W&&y>=row+ACTION_Y&&y<=row+ACTION_Y+ACTION_H&&slot!=SAVE_AUTO)
+            write_manual_slot(slot);
+        return;
+    }
+}
+static void render_scene(void)
 {
     Json *c;
     double bg[4];
@@ -2235,6 +2534,7 @@ static void render_frame(void)
     }
     glClearColor((GLfloat)bg[0],(GLfloat)bg[1],(GLfloat)bg[2],1);glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
     glEnable(GL_BLEND);glBlendFunc(GL_SRC_ALPHA,GL_ONE_MINUS_SRC_ALPHA);glEnable(GL_ALPHA_TEST);glAlphaFunc(GL_GREATER,.01f);glDisable(GL_CULL_FACE);
+    if(ji(jg(E.scene,"night_road"),0))render_night_road();
     glEnable(GL_DEPTH_TEST);glDepthMask(GL_TRUE);glDisable(GL_LIGHTING);camera_view();lights_setup();
     for(i=0;i<E.count;++i)if(node_active(i))draw_mesh_node(i);
     for(i=0;i<E.count;++i)if(node_active(i))draw_sprite_node(i);
@@ -2251,6 +2551,11 @@ static void render_frame(void)
     }
     if(E.fading){overlay_begin();glDisable(GL_TEXTURE_2D);glColor4d(E.fade_color[0],E.fade_color[1],E.fade_color[2],E.fade_alpha);draw_quad(0,0,1920,960,0,0);}
 }
+static void render_frame(void)
+{
+    render_scene();
+    render_save_menu();
+}
 static void input_events(void)
 {
     SDL_Event e;
@@ -2264,9 +2569,19 @@ static void input_events(void)
     while(SDL_PollEvent(&e)){
         if(e.type==SDL_QUIT)E.quitting=1;
         if(e.type==SDL_WINDOWEVENT&&e.window.event==SDL_WINDOWEVENT_SIZE_CHANGED){E.width=e.window.data1;E.height=e.window.data2;if(E.height<1)E.height=1;}
+        if(save_menu){
+            if(e.type==SDL_KEYDOWN&&!e.key.repeat)save_menu_key(e.key.keysym.sym);
+            if(e.type==SDL_MOUSEBUTTONUP&&e.button.button==SDL_BUTTON_LEFT){
+                SDL_GetWindowSize(E.window,&width,&height);
+                if(width>0&&height>0)save_menu_click(e.button.x*1920.0/width,960-e.button.y*960.0/height);
+            }
+            continue;
+        }
         if(e.type==SDL_KEYDOWN&&!e.key.repeat){
             if(title_menu&&!E.fading&&(e.key.keysym.sym==SDLK_RETURN||e.key.keysym.sym==SDLK_SPACE)){
-                node=node_find(E.saved_level>=0?"ButtonContinue":"ButtonStart");
+                Progress available;
+                for(node=0;node<SAVE_COUNT;++node)if(read_save_slot(node,&available))break;
+                node=node_find(node<SAVE_COUNT?"ButtonContinue":"ButtonStart");
                 engine_calls(jg(script_fields(node,"Button"),"m_OnClick"));
                 continue;
             }
@@ -2281,10 +2596,14 @@ static void input_events(void)
             }
             if((e.key.keysym.sym==SDLK_e||e.key.keysym.sym==SDLK_SPACE)&&E.custom_story_page<0&&E.custom_key_page<0)scripts_interact(1);
             if(e.key.keysym.sym==SDLK_RETURN&&(chapter_two_complete()||chapter_continue_ready()||E.search_page>=0||E.search_inspection>=0||E.computer_time>=COMPUTER_FINAL_LINE||E.npc_dialog_page>=0||E.custom_story_page>=0||E.custom_key_page>=0||custom_key_at_door()))custom_interact();
-            if(e.key.keysym.sym==SDLK_ESCAPE)scripts_escape();
+            if(e.key.keysym.sym==SDLK_ESCAPE){
+                if(node_valid(E.player)&&ji(jg(E.scene,"custom_camera"),0))engine_open_save_menu(1);
+                else scripts_escape();
+                continue;
+            }
             if(e.key.keysym.sym==SDLK_F1)E.show_info=!E.show_info;
-            if(e.key.keysym.sym==SDLK_F5)engine_save();
-            if(e.key.keysym.sym==SDLK_F9)engine_fade("loader",2,0);
+            if(e.key.keysym.sym==SDLK_F5&&node_valid(E.player)&&!E.fading)engine_save();
+            if(e.key.keysym.sym==SDLK_F9&&(title_menu||node_valid(E.player)))engine_open_save_menu(!title_menu);
             if(e.key.keysym.sym==SDLK_F10)engine_fade("mainmenu2",2,0);
             if(e.key.keysym.sym==SDLK_RETURN&&E.video==0)E.pending_scene=engine_scene_index("mainmenu");
             if(e.key.keysym.sym==SDLK_RETURN&&E.video==1)engine_fade(campaign_start_scene(),.67,0);
@@ -2293,7 +2612,7 @@ static void input_events(void)
                 campaign_reset();
                 engine_fade(campaign_start_scene(),.67,0);
             }
-            if(e.key.keysym.sym==SDLK_c&&(E.scene_index==2||E.scene_index==19))engine_fade("loader",.67,0);
+            if(e.key.keysym.sym==SDLK_c&&title_menu)engine_open_save_menu(0);
         }
         if(e.type==SDL_MOUSEBUTTONDOWN&&e.button.button==SDL_BUTTON_LEFT){
             SDL_GetWindowSize(E.window,&width,&height);x=e.button.x*1920.0/width;y=960-e.button.y*960.0/height;node=click_hit(x,y);E.mouse_node=node;
@@ -2352,8 +2671,9 @@ static void tick(double dt)
 {
     int pending;
     int gift;
-    E.dt=dt;E.elapsed+=dt;
     if(!E.headless)input_events();
+    if(save_menu==SAVE_MENU_PAUSE){++E.frames;return;}
+    E.dt=dt;E.elapsed+=dt;
     scripts_start();scripts_update(dt);animations_update(dt);
     if(ji(jg(E.scene,"title_menu"),0)){
         gift=node_find("gift");
@@ -2845,7 +3165,7 @@ int main(int argc,char **argv)
         else if(!strcmp(argv[i],"--frames")&&i+1<argc)frame_limit=atof(argv[++i]);
         else if(!strcmp(argv[i],"--help")){
             puts("NEED2DREAMSCAPE C89\n--chapter2 --scene NAME --assets DIRECTORY --save FILE --no-save\n--self-test --render-test DIRECTORY --lighting-test DIRECTORY\n--physics-test DIRECTORY --bathroom-test DIRECTORY --frames N --screenshot FILE.ppm");
-            puts("--lang es|en --audio-test DIRECTORY\nWASD/flechas: mover; E/Espacio: interactuar; raton: botones; Escape: cerrar nota/calendario\nN: nueva partida; C: continuar; Enter: comenzar/saltar intro; F5: guardar; F9: cargar; F10: menu; F11: pantalla completa; F1: datos");return 0;
+            puts("--lang es|en --audio-test DIRECTORY\nWASD/flechas: mover; E/Espacio: interactuar; raton: botones; Esc: pausa\nN: nueva partida; C: cargar partida; Enter: comenzar/saltar intro; F5: autoguardado; F9: partidas; F10: menu; F11: pantalla completa; F1: datos");return 0;
         }else{fprintf(stderr,"Unknown option: %s\n",argv[i]);return 1;}
     }
     path_join(path,"game.json");E.game=json_load(path);if(!E.game)return 1;

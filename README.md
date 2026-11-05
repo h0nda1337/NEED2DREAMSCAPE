@@ -10,7 +10,9 @@ Descarga y extrae el ZIP. Abre `compile_and_playnow.cmd` para jugar. Si tienes G
 
 - `game/jugar.cmd` abre el ejecutable incluido.
 - `game/capitulo_2.cmd` abre el segundo capítulo si aún no hay una partida y retoma el progreso si ya existe.
-- El progreso se guarda en `history-progress.n2d` en el Escritorio de Windows. Para recuperar una partida anterior, deja su `.save` en `game/` y elige **Cargar partida**. El primer arranque usa el `.save` más reciente si todavía no hay guardado en el Escritorio.
+- **Cargar partida** muestra el autoguardado y los tres espacios manuales, con capítulo, mapa y fecha si está disponible.
+- Pulsa **Esc** para pausar el juego, revisar el autoguardado y guardar o cargar partidas. Si el espacio ya está ocupado, pulsa **Guardar** otra vez para reemplazarlo.
+- En el Escritorio de Windows quedan `history-progress.n2d` para el autoguardado y `history-progress-1.n2d`, `history-progress-2.n2d` y `history-progress-3.n2d` para los manuales. Si aún no hay autoguardado en el Escritorio, el juego puede recuperar el `.save` más reciente de `game/`.
 
 Usa WASD o las flechas para moverte, E para interactuar, clic o Enter para avanzar los diálogos e I para abrir el inventario del capítulo 2.
 
