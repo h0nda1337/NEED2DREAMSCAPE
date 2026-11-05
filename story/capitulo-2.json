@@ -2522,15 +2522,15 @@
         ],
         [
           "DARS",
-          "Doce treinta y ocho."
+          "Son las {hora}"
         ],
         [
           "RADE",
-          "¿De la madrugada?"
+          "¿La hora de tu teléfono?"
         ],
         [
           "DARS",
-          "Sí, Rade. De la madrugada."
+          "Sí. El teléfono sigue avanzando. La computadora no."
         ],
         [
           "RADE",
@@ -2538,7 +2538,7 @@
         ],
         [
           "DARS",
-          "Pasó Navidad."
+          "Y seguimos aquí, en plena noche."
         ],
         [
           "RADE",
@@ -5172,7 +5172,7 @@
         ],
         [
           "RADE",
-          "Es de madrugada."
+          "Ya es de noche."
         ],
         [
           "DARS",
@@ -5602,7 +5602,7 @@
         ],
         [
           "RADE",
-          "Una y media."
+          "Son las {hora}"
         ],
         [
           "DESCONOCIDO",
@@ -5775,11 +5775,11 @@
       "dialogo": [
         [
           "TELÉFONO",
-          "11:47 p. m."
+          "11:47 p. m. El reloj vuelve a quedarse inmóvil."
         ],
         [
           "TELÉFONO",
-          "12:31 a. m. La hora vuelve a la normalidad."
+          "{hora} La hora vuelve a avanzar."
         ],
         [
           "RADE",
@@ -6345,7 +6345,7 @@
         ],
         [
           "GWEN",
-          "La que marca el reloj."
+          "Son las {hora} La que marca el reloj, Rade."
         ],
         [
           "RADE",
@@ -6438,7 +6438,7 @@
             ],
             [
               "GWEN",
-              "La que marca el reloj."
+              "Son las {hora} La que marca el reloj, Rade."
             ],
             [
               "RADE",
@@ -6809,7 +6809,7 @@
         ],
         [
           "DARS",
-          "¿Puedes a las doce?"
+          "¿Puedes a las doce del mediodía?"
         ],
         [
           "RADE",
@@ -7818,7 +7818,15 @@
         ],
         [
           "DARS · GRABACIÓN",
-          "Ya te escuché."
+          "Rade."
+        ],
+        [
+          "RADE · GRABACIÓN",
+          "¿Me escuchan?"
+        ],
+        [
+          "DARS · GRABACIÓN",
+          "Sí."
         ],
         [
           "RADE",
@@ -7992,22 +8000,6 @@
       "dialogo": [
         [
           "DARS · GRABACIÓN",
-          "Está atorada."
-        ],
-        [
-          "RADE · GRABACIÓN",
-          "¡Estoy aquí!"
-        ],
-        [
-          "RADE",
-          "..."
-        ],
-        [
-          "RADE",
-          "Sí era yo."
-        ],
-        [
-          "DARS · GRABACIÓN",
           "¿Me escuchas bien?"
         ],
         [
@@ -8016,19 +8008,47 @@
         ],
         [
           "DARS · GRABACIÓN",
-          "Otra vez."
+          "Bueno. No te muevas de ahí."
         ],
         [
           "RADE",
+          "Sí era yo."
+        ],
+        [
+          "DARS · GRABACIÓN",
+          "Otra vez."
+        ],
+        [
+          "DARS · GRABACIÓN",
           "..."
+        ],
+        [
+          "RADE · GRABACIÓN",
+          "¿Qué?"
+        ],
+        [
+          "DARS · GRABACIÓN",
+          "Nada."
+        ],
+        [
+          "RADE · GRABACIÓN",
+          "Dime."
+        ],
+        [
+          "DARS · GRABACIÓN",
+          "Escuché seis."
+        ],
+        [
+          "RADE · GRABACIÓN",
+          "Yo golpeé tres."
+        ],
+        [
+          "DARS · GRABACIÓN",
+          "Pues yo escuché seis."
         ],
         [
           "RADE",
           "No era un eco."
-        ],
-        [
-          "RADE",
-          "..."
         ],
         [
           "RADE",
@@ -8161,6 +8181,18 @@
         [
           "RADE · GRABACIÓN",
           "¡Estoy aquí!"
+        ],
+        [
+          "DARS · GRABACIÓN",
+          "Rade."
+        ],
+        [
+          "RADE · GRABACIÓN",
+          "¿Me escuchan?"
+        ],
+        [
+          "DARS · GRABACIÓN",
+          "Sí."
         ],
         [
           "GWEN",
@@ -9182,5 +9214,43 @@
       ]
     }
   ],
-  "final": 655
+  "final": 655,
+  "reloj": {
+    "day_stage": 433,
+    "schedule": [
+      {
+        "stage": 463,
+        "seconds": 42900,
+        "animate": true
+      },
+      {
+        "stage": 469,
+        "seconds": 43080
+      },
+      {
+        "stage": 475,
+        "seconds": 43380
+      },
+      {
+        "stage": 517,
+        "seconds": 47400
+      },
+      {
+        "stage": 571,
+        "seconds": 66600
+      },
+      {
+        "stage": 577,
+        "seconds": 76200
+      },
+      {
+        "stage": 589,
+        "seconds": 85200
+      },
+      {
+        "stage": 625,
+        "seconds": 85620
+      }
+    ]
+  }
 }

@@ -140,6 +140,9 @@ typedef struct {
     int chapter_inventory_open;
     double chapter_last_press;
     double chapter_page_time;
+    double story_clock_seconds;
+    int story_clock_anchor;
+    double story_clock_jump;
     double computer_time;
     int custom_story_page;
     int custom_story_seen;

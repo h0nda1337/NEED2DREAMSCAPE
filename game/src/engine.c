@@ -36,6 +36,8 @@ enum { SAVE_MENU_CLOSED, SAVE_MENU_LOAD, SAVE_MENU_PAUSE };
 typedef struct {
     int level, story, key, computer, stage, choice, flags;
     int has_position;
+    double clock_seconds;
+    int clock_anchor;
     double position[3];
     char date[32];
 } Progress;
@@ -66,6 +68,7 @@ static double dialogue_reveal_time;
 static int dialogue_sounding;
 static time_t room_clock_second=(time_t)-1;
 static int room_clock_local_seconds;
+static int dialogue_clock_seconds;
 static int click_hit(double x, double y);
 static void mesh_data_load(int index);
 static void custom_camera_update(void);
@@ -515,16 +518,49 @@ static void room_clock_update(time_t now)
     ticking=room_clock_second!=(time_t)-1&&now>room_clock_second&&!E.fading;
     room_clock_second=now;
     room_clock_local_seconds=local->tm_hour*3600+local->tm_min*60+local->tm_sec;
-    if(ticking)
+    if(ticking&&jg(E.scene,"room_clock"))
         audio_play_clip(campaign_audio_node(),2,ji(ja(jg(E.game,"room_clock_ticks"),local->tm_sec%2),-1),1,0,0);
+}
+static int campaign_clock_time(void)
+{
+    Json *clock;
+    int seconds;
+    int day;
+    clock=jg(E.game,"story_clock");
+    if(!clock)return room_clock_local_seconds;
+    if(E.story_clock_seconds>=0)return (int)fmod(E.story_clock_seconds,86400);
+    seconds=room_clock_local_seconds;
+    day=E.search_progress>=ji(jg(clock,"day_stage"),99999);
+    if((seconds>=21600&&seconds<64800)!=day)seconds=(seconds+43200)%86400;
+    return seconds;
+}
+static void campaign_clock_sync(int animate)
+{
+    Json *schedule;
+    Json *entry;
+    Json *latest;
+    int stage;
+    int i;
+    schedule=jg(jg(E.game,"story_clock"),"schedule");latest=NULL;
+    for(i=0;i<jc(schedule);++i){
+        entry=ja(schedule,i);
+        if(E.search_progress>=ji(jg(entry,"stage"),99999))latest=entry;
+    }
+    if(!latest)return;
+    stage=ji(jg(latest,"stage"),-1);
+    if(E.story_clock_seconds>=0&&E.story_clock_anchor>=stage)return;
+    if(E.story_clock_seconds<jn(jg(latest,"seconds"),0))
+        E.story_clock_seconds=jn(jg(latest,"seconds"),0);
+    E.story_clock_anchor=stage;
+    if(animate&&ji(jg(latest,"animate"),0))E.story_clock_jump=.001;
 }
 static int room_clock_time(void)
 {
     Json *story;
     story=jg(jg(E.scene,"room_clock"),"story");
     if(story&&E.search_progress>=ji(jg(story,"start"),0)&&E.search_progress<ji(jg(story,"end"),0))
-        return ji(jg(story,"seconds"),room_clock_local_seconds);
-    return room_clock_local_seconds;
+        return ji(jg(story,"seconds"),campaign_clock_time());
+    return campaign_clock_time();
 }
 void player_footstep(double distance)
 {
@@ -706,6 +742,7 @@ void campaign_reset(void)
     E.computer_progress=COMPUTER_LOCKED;
     E.search_progress=0;
     E.chapter2_choice=0;E.chapter2_flags=0;
+    E.story_clock_seconds=-1;E.story_clock_anchor=-1;E.story_clock_jump=0;
 }
 static int portal_at_stage(Json *portal)
 {
@@ -913,6 +950,7 @@ static int chapter_aux_action(int apply)
 static void chapter_enter_stage(int stage)
 {
     E.search_progress=stage;
+    campaign_clock_sync(1);
     E.chapter_time=0;
     E.chapter_press_count=0;
     E.chapter_last_press=-1;
@@ -1061,7 +1099,7 @@ static int search_modal(void)
 }
 int custom_movement_locked(void)
 {
-    return E.chapter_inventory_open||chapter_two_complete()||ji(jg(E.scene,"chapter_cutscene"),0)||(E.search_progress==12&&jg(E.scene,"chapter_end"))||
+    return E.story_clock_jump>0||E.chapter_inventory_open||chapter_two_complete()||ji(jg(E.scene,"chapter_cutscene"),0)||(E.search_progress==12&&jg(E.scene,"chapter_end"))||
         (E.search_progress==13&&ji(jg(E.scene,"chapter2_entry"),0))||chapter_choice_pending()||search_modal()||E.computer_time>0||E.npc_dialog_page>=0||E.custom_key_page>=0||E.custom_key_insert>0||E.custom_door_time>0||(E.fading&&jc(jg(E.scene,"portals"))>0);
 }
 static Json *chapter_waypoint(void)
@@ -1153,13 +1191,14 @@ static void dialogue_reveal_update(double dt)
     if(E.fading)return;
     cue=current_dialogue();
     if(!same_dialogue(cue,dialogue_revealed)){
-        dialogue_revealed=cue;dialogue_reveal_time=0;
+        dialogue_revealed=cue;dialogue_reveal_time=0;dialogue_clock_seconds=campaign_clock_time();
     }else if(cue.texture>=0)dialogue_reveal_time+=dt;
 }
 int custom_interact(void)
 {
     Json *item;
     int sound;
+    if(E.story_clock_jump>0)return 1;
     if(E.fading)return jc(jg(E.scene,"portals"))>0;
     if(E.chapter_inventory_open){E.chapter_inventory_open=0;return 1;}
     if(chapter_two_complete()){engine_fade("mainmenu2",2.1,0);return 1;}
@@ -1397,6 +1436,8 @@ static int save_current(int slot)
     now=time(NULL);local=localtime(&now);
     if(written>=0&&local&&strftime(stamp,sizeof(stamp),"%d/%m/%Y %H:%M",local))
         written=fprintf(f,"DATE %s\n",stamp);
+    if(written>=0&&E.story_clock_seconds>=0)
+        written=fprintf(f,"CLOCK %.17g %d\n",E.story_clock_seconds,E.story_clock_anchor);
     if(written>=0&&slot!=SAVE_AUTO&&node_valid(E.player)&&!custom_movement_locked()&&E.custom_story_page<0){
         p=E.nodes[E.player].p;
         written=fprintf(f,"POSITION %.17g %.17g %.17g\n",p[0],p[1],p[2]);
@@ -1426,6 +1467,8 @@ static int read_progress(FILE *f,Progress *record)
 {
     char line[128];
     double x,y,z;
+    double clock_seconds;
+    int clock_anchor;
     int level;
     if(!f)return 0;
     if(!fgets(line,sizeof(line),f)||strcmp(line,"PETSCOP_C89_SAVE_1\n")||
@@ -1433,6 +1476,7 @@ static int read_progress(FILE *f,Progress *record)
         fclose(f);return 0;
     }
     memset(record,0,sizeof(*record));record->level=level;
+    record->clock_seconds=-1;record->clock_anchor=-1;
     if(fscanf(f,"%d",&record->story)!=1)record->story=0;
     if(fscanf(f,"%d",&record->key)!=1)
         record->key=record->story||level==9||level>=engine_scene_index("casaCustom");
@@ -1445,6 +1489,10 @@ static int read_progress(FILE *f,Progress *record)
         if(sscanf(line,"POSITION %lf %lf %lf",&x,&y,&z)==3&&fabs(x)<10000&&fabs(y)<10000&&fabs(z)<10000){
             record->has_position=1;record->position[0]=x;record->position[1]=y;record->position[2]=z;
         }else if(!strncmp(line,"DATE ",5))sscanf(line+5,"%31[0123456789/: ]",record->date);
+        else if(sscanf(line,"CLOCK %lf %d",&clock_seconds,&clock_anchor)==2&&
+                clock_seconds>=0&&clock_seconds<1e9&&clock_anchor>=0&&clock_anchor<=record->stage){
+            record->clock_seconds=clock_seconds;record->clock_anchor=clock_anchor;
+        }
     }
     fclose(f);
     return 1;
@@ -1470,6 +1518,8 @@ static void apply_progress(const Progress *record)
     E.custom_story_seen=record->story;E.custom_key_unlocked=record->key;
     E.computer_progress=record->computer;E.search_progress=record->stage;
     E.chapter2_choice=record->choice;E.chapter2_flags=record->flags;
+    E.story_clock_seconds=record->clock_seconds;E.story_clock_anchor=record->clock_anchor;E.story_clock_jump=0;
+    campaign_clock_sync(0);
 }
 static void save_read(void)
 {
@@ -2536,6 +2586,35 @@ static void dialogue_slice(double left,double top,double right,double bottom,dou
     glTexCoord2d(u1,1-bottom);glVertex2d(70+1250*right,220-170*bottom);
     glTexCoord2d(u0,1-bottom);glVertex2d(70+1250*left,220-170*bottom);
 }
+static void draw_dialogue_clock(DialogueCue cue,int visible)
+{
+    Json *fields;
+    Json *field;
+    Json *offsets;
+    char text[16];
+    double width,height,x,y,u,v;
+    int seconds,hour,i,j,start;
+    fields=jg(ja(jg(E.game,"textures"),cue.texture),"clock_fields");
+    if(jc(fields)==0||!bind_texture(ji(jg(E.game,"clock_font"),-1)))return;
+    width=E.textures[cue.texture].width;height=E.textures[cue.texture].height;
+    seconds=same_dialogue(cue,dialogue_revealed)?dialogue_clock_seconds:campaign_clock_time();
+    hour=seconds/3600%12;
+    sprintf(text,"%02d:%02d %c. m.",hour?hour:12,seconds/60%60,seconds>=43200?'p':'a');
+    glColor4d(.961,.906,.875,1);glBegin(GL_QUADS);
+    for(i=0;i<jc(fields);++i){
+        field=ja(fields,i);offsets=jg(field,"offsets");start=ji(jg(field,"start"),0);
+        y=220-(jn(jg(field,"y"),0)+32)/height*170;
+        for(j=0;text[j]&&j<visible-start;++j){
+            x=70+(jn(jg(field,"x"),0)+jn(ja(offsets,j),0))/width*1250;
+            u=((unsigned char)text[j]%16)/16.0;v=1-((unsigned char)text[j]/16)/8.0;
+            glTexCoord2d(u,v-.125);glVertex2d(x,y);
+            glTexCoord2d(u+.0625,v-.125);glVertex2d(x+24/width*1250,y);
+            glTexCoord2d(u+.0625,v);glVertex2d(x+24/width*1250,y+32/height*170);
+            glTexCoord2d(u,v);glVertex2d(x,y+32/height*170);
+        }
+    }
+    glEnd();
+}
 static void draw_dialogue_panel(DialogueCue cue)
 {
     Json *typing;
@@ -2553,6 +2632,7 @@ static void draw_dialogue_panel(DialogueCue cue)
             glDisable(GL_TEXTURE_2D);glColor4d(.96,.91,.87,1);
             glBegin(GL_TRIANGLES);glVertex2d(1257,109);glVertex2d(1257,74);glVertex2d(1287,92);glEnd();
         }
+        draw_dialogue_clock(cue,chars);
         return;
     }
     visible=1+(int)progress;
@@ -2573,6 +2653,7 @@ static void draw_dialogue_panel(DialogueCue cue)
     }
     dialogue_slice(0,1-border/height,1,1,-1);
     glEnd();
+    draw_dialogue_clock(cue,1+(int)progress);
 }
 static void render_custom_overlay(void)
 {
@@ -2590,6 +2671,7 @@ static void render_custom_overlay(void)
     }
     previous_panel=texture;
     if(E.fading)return;
+    if(E.story_clock_jump>0){render_computer_clock(E.story_clock_jump);return;}
     if(E.chapter_inventory_open){
         Json *inventory;
         Json *item;
@@ -2663,7 +2745,8 @@ static void render_custom_overlay(void)
     displays=jg(chapter_event(),"display_frames");
     if(E.search_inspection>=0&&E.search_inspection_screen>=0){
         glColor4d(1,1,1,1);bind_texture(E.search_inspection_screen);draw_quad(589,334,742,430,0,0);
-    }else if(E.search_page>=0&&jc(displays)>0){
+    }else if(E.search_page>=ji(jg(chapter_event(),"display_start"),0)&&
+             E.search_page<ji(jg(chapter_event(),"display_end"),100000)&&jc(displays)>0){
         i=(int)(E.chapter_page_time*3)%jc(displays);
         glColor4d(1,1,1,1);bind_texture(ji(ja(displays,i),-1));draw_quad(589,334,742,430,0,0);
     }
@@ -2975,6 +3058,13 @@ static void tick(double dt)
     if(!E.headless)input_events();
     if(save_menu==SAVE_MENU_PAUSE){++E.frames;return;}
     E.dt=dt;E.elapsed+=dt;
+    room_clock_update(time(NULL));
+    if(E.story_clock_jump>0){
+        E.story_clock_jump+=dt;
+        if(E.story_clock_jump>=2.4){E.story_clock_jump=0;E.chapter_time=0;}
+        audio_refresh();++E.frames;return;
+    }
+    if(E.story_clock_seconds>=0&&!ji(jg(E.scene,"title_menu"),0))E.story_clock_seconds+=dt;
     scripts_start();scripts_update(dt);animations_update(dt);
     if(ji(jg(E.scene,"title_menu"),0)){
         gift=node_find("gift");
@@ -3020,7 +3110,6 @@ static void tick(double dt)
     npc_marker_update();
     cast_labels_update();
     custom_camera_update();
-    if(jg(E.scene,"room_clock"))room_clock_update(time(NULL));
     dialogue_reveal_update(dt);
     ++E.frames;
 }
