@@ -61,6 +61,8 @@ typedef struct { int texture, page, stage; } DialogueCue;
 static const DialogueCue no_dialogue={-1,-1,-1};
 static DialogueCue dialogue_drawn;
 static DialogueCue dialogue_played;
+static DialogueCue dialogue_revealed;
+static double dialogue_reveal_time;
 static time_t room_clock_second=(time_t)-1;
 static int room_clock_local_seconds;
 static int click_hit(double x, double y);
@@ -562,14 +564,16 @@ void audio_stop(int node)
 {
     audio_stop_channel(node,-1);
 }
+static int same_dialogue(DialogueCue a,DialogueCue b)
+{
+    return a.texture==b.texture&&a.page==b.page&&a.stage==b.stage;
+}
 static void dialogue_audio_presented(void)
 {
     Json *texture;
     double speed;
     int node;
-    if(save_menu==SAVE_MENU_PAUSE||
-       (dialogue_drawn.texture==dialogue_played.texture&&dialogue_drawn.page==dialogue_played.page&&
-        dialogue_drawn.stage==dialogue_played.stage))return;
+    if(save_menu==SAVE_MENU_PAUSE||same_dialogue(dialogue_drawn,dialogue_played))return;
     dialogue_played=dialogue_drawn;
     node=campaign_audio_node();
     if(!node_valid(node))return;
@@ -1059,6 +1063,52 @@ static int custom_key_at_door(void)
 {
     return !E.custom_key_unlocked&&ji(jg(nearby_portal(),"key"),0);
 }
+static DialogueCue current_dialogue(void)
+{
+    DialogueCue cue;
+    Json *page;
+    cue=no_dialogue;
+    if(E.fading||E.chapter_inventory_open||chapter_choice_pending()||chapter_two_complete()||
+       (E.search_progress==12&&jg(E.scene,"chapter_end"))||
+       (E.computer_time>0&&E.computer_time<COMPUTER_FINAL_LINE)||
+       (E.search_exit_time>0&&E.search_exit_time<.12))return cue;
+    if(E.search_page>=0){
+        page=ja(search_pages(),E.search_page);
+        cue.texture=ji(jg(page,"transient_texture"),ji(page,-1));
+        cue.page=E.search_page;cue.stage=E.search_progress;
+    }else if(E.search_inspection>=0)cue.texture=E.search_inspection;
+    else if(E.computer_time>=COMPUTER_FINAL_LINE)cue.texture=ji(jg(jg(E.scene,"computer"),"final"),-1);
+    else if(E.npc_dialog_page>=0)cue.texture=ji(ja(jg(current_npc_talk(),"pages"),E.npc_dialog_page),-1);
+    else if(E.custom_key_page>=0)cue.texture=ji(ja(jg(E.game,"key_dialog"),E.custom_key_page),-1);
+    else if(E.custom_story_page>=0&&(!custom_key_at_door()||E.custom_key_insert>0))
+        cue.texture=ji(jg(ja(jg(E.game,"house_walk_story"),E.custom_story_page),"texture"),-1);
+    return cue;
+}
+static Json *dialogue_typing(DialogueCue cue)
+{
+    return jg(ja(jg(E.game,"textures"),cue.texture),"typing");
+}
+static int dialogue_waiting(double hold)
+{
+    DialogueCue cue;
+    Json *typing;
+    int chars;
+    double rate;
+    cue=current_dialogue();
+    typing=dialogue_typing(cue);
+    chars=ji(jg(typing,"chars"),0);rate=jn(jg(typing,"rate"),0);
+    if(chars<=0||rate<=0)return 0;
+    return !same_dialogue(cue,dialogue_revealed)||dialogue_reveal_time<(chars-1)/rate+hold;
+}
+static void dialogue_reveal_update(double dt)
+{
+    DialogueCue cue;
+    if(E.fading)return;
+    cue=current_dialogue();
+    if(!same_dialogue(cue,dialogue_revealed)){
+        dialogue_revealed=cue;dialogue_reveal_time=0;
+    }else if(cue.texture>=0)dialogue_reveal_time+=dt;
+}
 int custom_interact(void)
 {
     Json *item;
@@ -1066,6 +1116,7 @@ int custom_interact(void)
     if(E.fading)return jc(jg(E.scene,"portals"))>0;
     if(E.chapter_inventory_open){E.chapter_inventory_open=0;return 1;}
     if(chapter_two_complete()){engine_fade("mainmenu2",2.1,0);return 1;}
+    if(dialogue_waiting(0))return 1;
     if(E.computer_time>0){
         if(E.computer_time>=COMPUTER_FINAL_LINE)E.computer_time=0;
         return 1;
@@ -1169,7 +1220,7 @@ static void custom_story_update(double dt)
     }
     line=ja(jg(E.game,"house_walk_story"),E.custom_story_page);
     next=ja(jg(E.game,"house_walk_story"),E.custom_story_page+1);
-    if(E.custom_story_time<jn(jg(line,"duration"),2))return;
+    if(E.custom_story_time<jn(jg(line,"duration"),2)||dialogue_waiting(.35))return;
     if(next&&ji(jg(E.scene,"walk_story"),0)&&E.custom_story_depth>jn(jg(next,"at_z"),0))return;
     custom_story_advance();
 }
@@ -1192,7 +1243,7 @@ static void custom_portal_update(double dt)
     }
     portal=nearby_portal();
     if(!portal){E.custom_portal_armed=1;return;}
-    if(!E.custom_portal_armed||(ji(jg(portal,"key"),0)&&!E.custom_key_unlocked))return;
+    if(!E.custom_portal_armed||(ji(jg(portal,"key"),0)&&!E.custom_key_unlocked)||dialogue_waiting(0))return;
     if(ji(jg(E.scene,"search_exit"),0)&&E.computer_progress==COMPUTER_EMPTY){
         if(E.search_progress==1){E.search_exit_time=.001;return;}
     }
@@ -1490,6 +1541,9 @@ void engine_load_scene(int index)
         E.custom_story_page=0;E.custom_story_time=0;E.custom_story_depth=1e30;
     }else if(!ji(jg(E.scene,"carry_story"),0)||strcmp(previous,"casaCustom")){
         E.custom_story_page=-1;
+    }
+    if(restore||!ji(jg(E.scene,"carry_story"),0)||strcmp(previous,"casaCustom")||E.custom_story_page<0){
+        dialogue_revealed=no_dialogue;dialogue_reveal_time=0;
     }
     data=jg(E.scene,"nodes");E.count=jc(data);E.nodes=(Node*)calloc((size_t)E.count,sizeof(Node));
     if(!E.nodes){E.quitting=1;return;}
@@ -2425,10 +2479,58 @@ static void render_computer_clock(double time)
     glPopMatrix();
     draw_quad(953,473,14,14,0,0);
 }
+static void dialogue_slice(double left,double top,double right,double bottom,double sample)
+{
+    double u0,u1;
+    if(left>=right||top>=bottom)return;
+    u0=sample>=0?sample:left;u1=sample>=0?sample:right;
+    glTexCoord2d(u0,1-top);glVertex2d(70+1250*left,220-170*top);
+    glTexCoord2d(u1,1-top);glVertex2d(70+1250*right,220-170*top);
+    glTexCoord2d(u1,1-bottom);glVertex2d(70+1250*right,220-170*bottom);
+    glTexCoord2d(u0,1-bottom);glVertex2d(70+1250*left,220-170*bottom);
+}
+static void draw_dialogue_panel(DialogueCue cue)
+{
+    Json *typing;
+    Json *rows;
+    Json *row;
+    Json *cuts;
+    double width,height,border,sample,edge,top,bottom,right,x,rate,progress;
+    int i,visible,count,chars;
+    typing=dialogue_typing(cue);rows=jg(typing,"rows");
+    chars=ji(jg(typing,"chars"),0);rate=jn(jg(typing,"rate"),0);
+    progress=same_dialogue(cue,dialogue_revealed)?dialogue_reveal_time*rate:0;
+    if(chars<=0||rate<=0||jc(rows)==0||progress>=chars-1){
+        draw_quad(70,50,1250,170,0,0);
+        if(ji(jg(typing,"arrow"),0)){
+            glDisable(GL_TEXTURE_2D);glColor4d(.96,.91,.87,1);
+            glBegin(GL_TRIANGLES);glVertex2d(1257,109);glVertex2d(1257,74);glVertex2d(1287,92);glEnd();
+        }
+        return;
+    }
+    visible=1+(int)progress;
+    width=E.textures[cue.texture].width;height=E.textures[cue.texture].height;
+    border=jn(jg(typing,"border"),2);x=jn(jg(typing,"x"),17);
+    edge=1-border/width;sample=(border+.5)/width;
+    glBegin(GL_QUADS);
+    dialogue_slice(0,0,1,jn(ja(ja(rows,0),0),0)/height,-1);
+    for(i=0;i<jc(rows);++i){
+        row=ja(rows,i);cuts=ja(row,1);count=jc(cuts);
+        top=jn(ja(row,0),0)/height;
+        bottom=jn(ja(ja(rows,i+1),0),height-border)/height;
+        right=jn(ja(cuts,(visible<count?visible:count)-1),x)/width;
+        dialogue_slice(0,top,right,bottom,-1);
+        dialogue_slice(right,top,edge,bottom,sample);
+        dialogue_slice(edge,top,1,bottom,-1);
+        visible=visible>count?visible-count:0;
+    }
+    dialogue_slice(0,1-border/height,1,1,-1);
+    glEnd();
+}
 static void render_custom_overlay(void)
 {
     static int previous_panel=-1;
-    int speaking;
+    DialogueCue cue;
     int texture;
     int i;
     Json *page;
@@ -2518,24 +2620,13 @@ static void render_custom_overlay(void)
         i=(int)(E.chapter_page_time*3)%jc(displays);
         glColor4d(1,1,1,1);bind_texture(ji(ja(displays,i),-1));draw_quad(589,334,742,430,0,0);
     }
-    speaking=1;
-    if(E.search_page>=0)texture=previous_panel>=0?previous_panel:ji(page,-1);
-    else if(E.search_inspection>=0)texture=E.search_inspection;
-    else if(E.computer_time>=COMPUTER_FINAL_LINE)texture=ji(jg(jg(E.scene,"computer"),"final"),-1);
-    else if(E.npc_dialog_page>=0)
-        texture=ji(ja(jg(current_npc_talk(),"pages"),E.npc_dialog_page),-1);
-    else if(E.custom_key_page>=0)texture=ji(ja(jg(E.game,"key_dialog"),E.custom_key_page),-1);
-    else if(custom_key_at_door()&&E.custom_key_insert<=0){
-        speaking=0;texture=ji(jg(E.game,"key_hint"),-1);
-    }
-    else texture=ji(jg(ja(jg(E.game,"house_walk_story"),E.custom_story_page),"texture"),-1);
-    if(texture>=0){
-        glColor4d(1,1,1,1);
-        if(bind_texture(texture)&&speaking){
-            dialogue_drawn.texture=texture;
-            dialogue_drawn.page=E.search_page;
-            dialogue_drawn.stage=E.search_page>=0?E.search_progress:-1;
-        }
+    cue=current_dialogue();
+    glColor4d(1,1,1,1);
+    if(cue.texture>=0&&bind_texture(cue.texture)){
+        dialogue_drawn=cue;
+        draw_dialogue_panel(cue);
+    }else if(custom_key_at_door()&&E.custom_key_insert<=0&&
+             bind_texture(ji(jg(E.game,"key_hint"),-1))){
         draw_quad(70,50,1250,170,0,0);
     }
 }
@@ -2873,7 +2964,7 @@ static void tick(double dt)
             page=ja(search_pages(),E.search_page);
             seconds=jn(jg(page,"seconds"),0);
             E.chapter_page_time+=dt;
-            if(seconds>0&&E.chapter_page_time>=seconds)chapter_advance();
+            if(seconds>0&&E.chapter_page_time>=seconds&&!dialogue_waiting(.45))chapter_advance();
         }else if(event&&jg(event,"timeout")&&E.chapter_time>=jn(jg(event,"timeout"),0)){
             chapter_enter_stage(ji(jg(event,"timeout_next"),E.search_progress+1));
         }else chapter_start_event(0);
@@ -2883,6 +2974,7 @@ static void tick(double dt)
     cast_labels_update();
     custom_camera_update();
     if(jg(E.scene,"room_clock"))room_clock_update(time(NULL));
+    dialogue_reveal_update(dt);
     ++E.frames;
 }
 static int screenshot(const char *path)
