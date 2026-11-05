@@ -564,6 +564,8 @@ void audio_stop(int node)
 }
 static void dialogue_audio_presented(void)
 {
+    Json *texture;
+    double speed;
     int node;
     if(save_menu==SAVE_MENU_PAUSE||
        (dialogue_drawn.texture==dialogue_played.texture&&dialogue_drawn.page==dialogue_played.page&&
@@ -571,8 +573,11 @@ static void dialogue_audio_presented(void)
     dialogue_played=dialogue_drawn;
     node=campaign_audio_node();
     if(!node_valid(node))return;
-    if(dialogue_drawn.texture<0)audio_stop_channel(node,1);
-    else audio_play_clip(node,1,ji(jg(E.game,"dialogue_audio"),-1),1,0);
+    if(dialogue_drawn.texture<0){audio_stop_channel(node,1);return;}
+    texture=ja(jg(E.game,"textures"),dialogue_drawn.texture);
+    speed=jn(jg(texture,"dialogue_speed"),1);
+    if(speed<.5||speed>2)speed=1;
+    audio_play_clip(node,1,ji(jg(E.game,"dialogue_audio"),-1),speed,0);
 }
 static void audio_set_enabled(int node,int enabled)
 {
