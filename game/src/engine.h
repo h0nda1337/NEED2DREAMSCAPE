@@ -202,6 +202,7 @@ const char *campaign_start_scene(void);
 void campaign_reset(void);
 int custom_interact(void);
 int custom_movement_locked(void);
+int custom_position_supported(void);
 void engine_load_scene(int index);
 void engine_save(void);
 void engine_open_save_menu(int pause);

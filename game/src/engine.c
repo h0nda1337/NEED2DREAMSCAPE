@@ -248,6 +248,38 @@ void collider_bounds(int node, Json *collider, double *minimum, double *maximum)
         for (j=0;j<3;++j) { if(out[j]<minimum[j])minimum[j]=out[j]; if(out[j]>maximum[j])maximum[j]=out[j]; }
     }
 }
+int custom_position_supported(void)
+{
+    Json *colliders;
+    Json *col;
+    double player_min[3],player_max[3],low[3],high[3];
+    double x,z,tolerance;
+    int i,j,k,covered;
+    if(!node_valid(E.player)||!ji(jg(E.scene,"custom_camera"),0))return 1;
+    collider_bounds(E.player,ja(jg(E.nodes[E.player].data,"colliders"),0),player_min,player_max);
+    tolerance=jn(jg(E.scene,"collision_step_height"),.15);
+    covered=0;
+    for(i=0;i<E.count;++i){
+        if(i==E.player||!node_active(i)||!E.nodes[i].collider_enabled)continue;
+        colliders=jg(E.nodes[i].data,"colliders");
+        for(j=0;j<jc(colliders);++j){
+            col=ja(colliders,j);
+            if(!ji(jg(col,"enabled"),1)||ji(jg(col,"trigger"),0)||
+               strcmp(js(jg(col,"type")),"BoxCollider"))continue;
+            collider_bounds(i,col,low,high);
+            if(high[1]>player_min[1]+tolerance||high[1]<player_min[1]-.65)continue;
+            /* Support the whole footprint, including seams between floor pieces. */
+            for(k=0;k<5;++k){
+                x=k==4?(player_min[0]+player_max[0])*.5:(k&1?player_max[0]:player_min[0]);
+                z=k==4?(player_min[2]+player_max[2])*.5:(k&2?player_max[2]:player_min[2]);
+                if(x>=low[0]-1e-6&&x<=high[0]+1e-6&&z>=low[2]-1e-6&&z<=high[2]+1e-6)
+                    covered|=1<<k;
+            }
+            if(covered==31)return 1;
+        }
+    }
+    return 0;
+}
 static Json *controller(int node) { return node_valid(node) ? ja(jg(E.game,"controllers"),E.nodes[node].controller) : NULL; }
 static Json *state_data(int node) { return ja(jg(controller(node),"states"),E.nodes[node].state); }
 void animation_play(int node, const char *state)
@@ -1678,8 +1710,12 @@ void engine_load_scene(int index)
     }
     for(i=0;i<E.count;++i)animation_apply(i);
     world_update();
-    custom_camera_update();
     chapter_visibility();
+    if(restore&&pending_progress.has_position&&!custom_position_supported()){
+        jvec(jg(E.nodes[E.player].data,"pos"),E.nodes[E.player].p,3);
+        world_update();
+    }
+    custom_camera_update();
     E.custom_portal_armed=nearby_portal()==NULL;
     scene_loading=0;
     for(i=0;i<E.count;++i){

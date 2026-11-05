@@ -190,6 +190,11 @@ void movement_step(int direction, double amount)
     if (direction == 2) p->p[2] -= amount;
     if (direction == 3) p->p[0] += amount;
     world_update();
+    if (!custom_position_supported()) {
+        memcpy(p->p, old, sizeof(old));
+        world_update();
+        return;
+    }
     pc = ja(jg(p->data, "colliders"), 0);
     collider_bounds(E.player, pc, pmin, pmax);
     foot_tolerance=jn(jg(E.scene,"collision_step_height"),.15);
