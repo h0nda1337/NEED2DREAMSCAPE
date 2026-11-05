@@ -57,6 +57,10 @@ static void video_close(void);
 static void video_start(int video,int loop,const char *next_scene);
 static void render_frame(void);
 static void audio_scene_stop(void);
+typedef struct { int texture, page, stage; } DialogueCue;
+static const DialogueCue no_dialogue={-1,-1,-1};
+static DialogueCue dialogue_drawn;
+static DialogueCue dialogue_played;
 static int click_hit(double x, double y);
 static void mesh_data_load(int index);
 static void custom_camera_update(void);
@@ -481,6 +485,10 @@ void audio_play(int node, int channel)
     sound=ja(jg(E.nodes[node].data,"sounds"),channel);
     audio_play_clip(node,channel,ji(jg(sound,"clip"),-1),jn(jg(sound,"pitch"),1),ji(jg(sound,"loop"),0));
 }
+static int campaign_audio_node(void)
+{
+    return ji(jg(E.scene,"campaign_audio_node"),ji(jg(E.scene,"footstep_node"),-1));
+}
 void player_footstep(double distance)
 {
     static const double stride=1.98;
@@ -517,14 +525,31 @@ void player_footstep(double distance)
     clips=jg(jg(E.game,"footsteps"),surface);count=jc(clips);
     if(count<=0)return;
     variant=(int)(player->footstep_index++%(unsigned int)count);
-    audio_play_clip(ji(jg(E.scene,"footstep_node"),-1),0,ji(ja(clips,variant),-1),1,0);
+    audio_play_clip(campaign_audio_node(),0,ji(ja(clips,variant),-1),1,0);
 }
-void audio_stop(int node)
+static void audio_stop_channel(int node,int channel)
 {
     int i;
     if(E.audio_device)SDL_LockAudioDevice(E.audio_device);
-    for(i=0;i<MAX_VOICES;++i)if(E.voices[i].node==node)E.voices[i].active=0;
+    for(i=0;i<MAX_VOICES;++i)
+        if(E.voices[i].node==node&&(channel<0||E.voices[i].channel==channel))E.voices[i].active=0;
     if(E.audio_device)SDL_UnlockAudioDevice(E.audio_device);
+}
+void audio_stop(int node)
+{
+    audio_stop_channel(node,-1);
+}
+static void dialogue_audio_presented(void)
+{
+    int node;
+    if(save_menu==SAVE_MENU_PAUSE||
+       (dialogue_drawn.texture==dialogue_played.texture&&dialogue_drawn.page==dialogue_played.page&&
+        dialogue_drawn.stage==dialogue_played.stage))return;
+    dialogue_played=dialogue_drawn;
+    node=campaign_audio_node();
+    if(!node_valid(node))return;
+    if(dialogue_drawn.texture<0)audio_stop_channel(node,1);
+    else audio_play_clip(node,1,ji(jg(E.game,"dialogue_audio"),-1),1,0);
 }
 static void audio_set_enabled(int node,int enabled)
 {
@@ -1421,7 +1446,7 @@ void engine_load_scene(int index)
     progress_pending=0;
     if(restore)apply_progress(&pending_progress);
     if(E.search_progress==12&&ji(jg(E.scene,"chapter2_entry"),0))E.search_progress=13;
-    E.npc_dialog_page=-1;E.computer_time=0;
+    E.npc_dialog_page=-1;E.computer_time=0;dialogue_played=no_dialogue;
     E.chapter_press_count=0;E.chapter_last_press=-1;
     E.search_page=-1;E.search_inspection=-1;E.search_exit_time=0;E.chapter_time=0;E.chapter_door_tried=0;
     E.chapter_inventory_open=0;E.chapter_page_time=0;
@@ -2317,6 +2342,7 @@ static void render_computer_clock(double time)
 static void render_custom_overlay(void)
 {
     static int previous_panel=-1;
+    int speaking;
     int texture;
     int i;
     Json *page;
@@ -2406,17 +2432,24 @@ static void render_custom_overlay(void)
         i=(int)(E.chapter_page_time*3)%jc(displays);
         glColor4d(1,1,1,1);bind_texture(ji(ja(displays,i),-1));draw_quad(589,334,742,430,0,0);
     }
+    speaking=1;
     if(E.search_page>=0)texture=previous_panel>=0?previous_panel:ji(page,-1);
     else if(E.search_inspection>=0)texture=E.search_inspection;
     else if(E.computer_time>=COMPUTER_FINAL_LINE)texture=ji(jg(jg(E.scene,"computer"),"final"),-1);
     else if(E.npc_dialog_page>=0)
         texture=ji(ja(jg(current_npc_talk(),"pages"),E.npc_dialog_page),-1);
     else if(E.custom_key_page>=0)texture=ji(ja(jg(E.game,"key_dialog"),E.custom_key_page),-1);
-    else if(custom_key_at_door()&&E.custom_key_insert<=0)texture=ji(jg(E.game,"key_hint"),-1);
+    else if(custom_key_at_door()&&E.custom_key_insert<=0){
+        speaking=0;texture=ji(jg(E.game,"key_hint"),-1);
+    }
     else texture=ji(jg(ja(jg(E.game,"house_walk_story"),E.custom_story_page),"texture"),-1);
     if(texture>=0){
         glColor4d(1,1,1,1);
-        bind_texture(texture);
+        if(bind_texture(texture)&&speaking){
+            dialogue_drawn.texture=texture;
+            dialogue_drawn.page=E.search_page;
+            dialogue_drawn.stage=E.search_page>=0?E.search_progress:-1;
+        }
         draw_quad(70,50,1250,170,0,0);
     }
 }
@@ -2595,6 +2628,7 @@ static void render_scene(void)
 }
 static void render_frame(void)
 {
+    dialogue_drawn=no_dialogue;
     render_scene();
     render_save_menu();
 }
@@ -3253,7 +3287,8 @@ int main(int argc,char **argv)
             E.fps_smoothed+=(dt-E.fps_smoothed)*.1;sprintf(title,"NEED2DREAMSCAPE | %s | %.0f fps | %lu frames",js(jg(E.scene,"name")),E.fps_smoothed>0?1/E.fps_smoothed:0,E.frames);SDL_SetWindowTitle(E.window,title);
         }
         if(frame_limit>0&&(double)E.frames>=frame_limit){if(capture)screenshot(capture);E.quitting=1;}
-        SDL_GL_SwapWindow(E.window);spent=(double)(SDL_GetPerformanceCounter()-before)/frequency;
+        SDL_GL_SwapWindow(E.window);dialogue_audio_presented();
+        spent=(double)(SDL_GetPerformanceCounter()-before)/frequency;
         if(E.fps_target>0&&spent<1.0/E.fps_target)SDL_Delay((Uint32)((1.0/E.fps_target-spent)*1000));
     }
     cleanup();return 0;
