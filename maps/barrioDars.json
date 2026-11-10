@@ -1,0 +1,5440 @@
+{
+  "name": "barrioDars",
+  "nodes": [
+    {
+      "name": "Camera",
+      "active": true,
+      "layer": 0,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        0,
+        13.64,
+        -20.6
+      ],
+      "rot": [
+        0.31730465640509214,
+        0,
+        0,
+        0.9483236552061993
+      ],
+      "scale": [
+        0.43535417318344116,
+        2.2742371559143066,
+        0.6497822999954224
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "rect": {
+        "min": [
+          0.5,
+          0.5
+        ],
+        "max": [
+          0.5,
+          0.5
+        ],
+        "position": [
+          -49.97999954223633,
+          9.399999618530273
+        ],
+        "size": [
+          100.0,
+          100.0
+        ],
+        "pivot": [
+          0.5,
+          0.5
+        ]
+      },
+      "camera": {
+        "fov": 46,
+        "near": 0.30000001192092896,
+        "far": 1000.0,
+        "ortho": false,
+        "size": 5.0,
+        "background": [
+          0.035,
+          0.048,
+          0.084,
+          1
+        ],
+        "viewport": {
+          "x": 0.0,
+          "y": 0.0,
+          "width": 1.0,
+          "height": 1.0
+        }
+      },
+      "order": 0
+    },
+    {
+      "name": "down_idle",
+      "active": true,
+      "layer": 0,
+      "parent": -1,
+      "children": [
+        8
+      ],
+      "pos": [
+        -21,
+        2.64,
+        4.9
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "scripts": [
+        {
+          "class": "Movement",
+          "fields": {
+            "m_Enabled": 1,
+            "_move1": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "_move2": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "_move3": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "_move4": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "newmaker": {
+              "node": -1,
+              "type": "",
+              "sprite": -1,
+              "audio": -1,
+              "video": -1
+            },
+            "calendar1997Main": {
+              "node": -1,
+              "type": "",
+              "sprite": -1,
+              "audio": -1,
+              "video": -1
+            },
+            "calendar1997Arrow": {
+              "node": -1,
+              "type": "",
+              "sprite": -1,
+              "audio": -1,
+              "video": -1
+            }
+          }
+        },
+        {
+          "class": "Save",
+          "fields": {
+            "m_Enabled": 1
+          }
+        }
+      ],
+      "colliders": [
+        {
+          "type": "BoxCollider",
+          "center": [
+            0,
+            -4.4,
+            0
+          ],
+          "size": [
+            3.4,
+            8.8,
+            2.4
+          ],
+          "enabled": true,
+          "trigger": false
+        }
+      ],
+      "sounds": [],
+      "sprite": {
+        "enabled": true,
+        "sprite": 240,
+        "color": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "flipx": false,
+        "flipy": false
+      },
+      "animator": {
+        "controller": 58,
+        "enabled": 1,
+        "paths": [
+          [
+            0,
+            1
+          ]
+        ]
+      },
+      "order": 1
+    },
+    {
+      "name": "Canvas",
+      "active": true,
+      "layer": 5,
+      "parent": -1,
+      "children": [
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "pos": [
+        321.5,
+        386.5,
+        0.0
+      ],
+      "rot": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "scripts": [
+        {
+          "class": "CanvasScaler",
+          "fields": {
+            "m_Enabled": 1,
+            "m_UiScaleMode": 1,
+            "m_ReferencePixelsPerUnit": 100.0,
+            "m_ScaleFactor": 1.0,
+            "m_ReferenceResolution": {
+              "x": 1920.0,
+              "y": 960.0
+            },
+            "m_ScreenMatchMode": 0,
+            "m_MatchWidthOrHeight": 0.0,
+            "m_PhysicalUnit": 3,
+            "m_FallbackScreenDPI": 96.0,
+            "m_DefaultSpriteDPI": 96.0,
+            "m_DynamicPixelsPerUnit": 1.0
+          }
+        },
+        {
+          "class": "GraphicRaycaster",
+          "fields": {
+            "m_Enabled": 1,
+            "m_IgnoreReversedGraphics": 1,
+            "m_BlockingObjects": 0,
+            "m_BlockingMask": {
+              "m_Bits": 4294967295
+            }
+          }
+        }
+      ],
+      "colliders": [],
+      "sounds": [],
+      "rect": {
+        "min": [
+          0.0,
+          0.0
+        ],
+        "max": [
+          0.0,
+          0.0
+        ],
+        "position": [
+          321.5,
+          386.5
+        ],
+        "size": [
+          643.0,
+          773.0
+        ],
+        "pivot": [
+          0.5,
+          0.5
+        ]
+      },
+      "canvas": {
+        "mode": 0,
+        "order": 0
+      },
+      "order": 2
+    },
+    {
+      "name": "ButtonInteract",
+      "active": true,
+      "layer": 5,
+      "parent": 2,
+      "children": [],
+      "pos": [
+        697.599853515625,
+        -220.8999786376953,
+        0.0
+      ],
+      "rot": [
+        -0.0,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "scale": [
+        0.8424676656723022,
+        4.54666805267334,
+        1.3372455835342407
+      ],
+      "scripts": [
+        {
+          "class": "Image",
+          "fields": {
+            "m_Enabled": 1,
+            "m_Material": {
+              "node": -1,
+              "type": "",
+              "sprite": -1,
+              "audio": -1,
+              "video": -1
+            },
+            "m_Color": {
+              "r": 0.7630919814109802,
+              "g": 0.7630919814109802,
+              "b": 0.8459999561309814,
+              "a": 1.0
+            },
+            "m_RaycastTarget": 1,
+            "m_OnCullStateChanged": {
+              "m_PersistentCalls": {
+                "m_Calls": []
+              },
+              "m_TypeName": "UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+            },
+            "m_Sprite": {
+              "node": -1,
+              "type": "Sprite",
+              "sprite": 22,
+              "audio": -1,
+              "video": -1
+            },
+            "m_Type": 0,
+            "m_PreserveAspect": 0,
+            "m_FillCenter": 1,
+            "m_FillMethod": 4,
+            "m_FillAmount": 1.0,
+            "m_FillClockwise": 1,
+            "m_FillOrigin": 0,
+            "m_UseSpriteMesh": 0
+          }
+        },
+        {
+          "class": "Button",
+          "fields": {
+            "m_Enabled": 1,
+            "m_Navigation": {
+              "m_Mode": 3,
+              "m_SelectOnUp": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              },
+              "m_SelectOnDown": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              },
+              "m_SelectOnLeft": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              },
+              "m_SelectOnRight": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              }
+            },
+            "m_Transition": 1,
+            "m_Colors": {
+              "m_NormalColor": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+              },
+              "m_HighlightedColor": {
+                "r": 0.9607843160629272,
+                "g": 0.9607843160629272,
+                "b": 0.9607843160629272,
+                "a": 1.0
+              },
+              "m_PressedColor": {
+                "r": 0.7843137383460999,
+                "g": 0.7843137383460999,
+                "b": 0.7843137383460999,
+                "a": 1.0
+              },
+              "m_DisabledColor": {
+                "r": 0.7843137383460999,
+                "g": 0.7843137383460999,
+                "b": 0.7843137383460999,
+                "a": 0.501960813999176
+              },
+              "m_ColorMultiplier": 1.0,
+              "m_FadeDuration": 0.10000000149011612
+            },
+            "m_SpriteState": {
+              "m_HighlightedSprite": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              },
+              "m_PressedSprite": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              },
+              "m_DisabledSprite": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              }
+            },
+            "m_AnimationTriggers": {
+              "m_NormalTrigger": "Normal",
+              "m_HighlightedTrigger": "Highlighted",
+              "m_PressedTrigger": "Pressed",
+              "m_DisabledTrigger": "Disabled"
+            },
+            "m_Interactable": 1,
+            "m_TargetGraphic": {
+              "node": 3,
+              "type": "Image",
+              "sprite": -1,
+              "audio": -1,
+              "video": -1
+            },
+            "m_OnClick": {
+              "m_PersistentCalls": {
+                "m_Calls": [
+                  {
+                    "m_Target": {
+                      "node": 3,
+                      "type": "Interacter",
+                      "sprite": -1,
+                      "audio": -1,
+                      "video": -1
+                    },
+                    "m_MethodName": "Click",
+                    "m_Mode": 1,
+                    "m_Arguments": {
+                      "m_ObjectArgument": {
+                        "node": -1,
+                        "type": "",
+                        "sprite": -1,
+                        "audio": -1,
+                        "video": -1
+                      },
+                      "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                      "m_IntArgument": 0,
+                      "m_FloatArgument": 0.0,
+                      "m_StringArgument": "",
+                      "m_BoolArgument": 0
+                    },
+                    "m_CallState": 2
+                  }
+                ]
+              },
+              "m_TypeName": "UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+            }
+          }
+        },
+        {
+          "class": "Interacter",
+          "fields": {
+            "m_Enabled": 1,
+            "newmaker": {
+              "node": -1,
+              "type": "",
+              "sprite": -1,
+              "audio": -1,
+              "video": -1
+            },
+            "sign": {
+              "node": -1,
+              "type": "",
+              "sprite": -1,
+              "audio": -1,
+              "video": -1
+            },
+            "keyinteracter": {
+              "node": -1,
+              "type": "",
+              "sprite": -1,
+              "audio": -1,
+              "video": -1
+            },
+            "usekey": {
+              "node": -1,
+              "type": "",
+              "sprite": -1,
+              "audio": -1,
+              "video": -1
+            },
+            "door": {
+              "node": -1,
+              "type": "",
+              "sprite": -1,
+              "audio": -1,
+              "video": -1
+            },
+            "calendar1997Main": {
+              "node": -1,
+              "type": "",
+              "sprite": -1,
+              "audio": -1,
+              "video": -1
+            },
+            "calendar1997": {
+              "node": -1,
+              "type": "",
+              "sprite": -1,
+              "audio": -1,
+              "video": -1
+            },
+            "calendar2000Main": {
+              "node": -1,
+              "type": "",
+              "sprite": -1,
+              "audio": -1,
+              "video": -1
+            },
+            "calendar2000": {
+              "node": -1,
+              "type": "",
+              "sprite": -1,
+              "audio": -1,
+              "video": -1
+            },
+            "noteTrigger": {
+              "node": -1,
+              "type": "",
+              "sprite": -1,
+              "audio": -1,
+              "video": -1
+            },
+            "ladder": {
+              "node": -1,
+              "type": "",
+              "sprite": -1,
+              "audio": -1,
+              "video": -1
+            },
+            "dialogFrozenHouse": {
+              "node": -1,
+              "type": "",
+              "sprite": -1,
+              "audio": -1,
+              "video": -1
+            },
+            "dialogKey": {
+              "node": -1,
+              "type": "",
+              "sprite": -1,
+              "audio": -1,
+              "video": -1
+            },
+            "note": {
+              "node": -1,
+              "type": "",
+              "sprite": -1,
+              "audio": -1,
+              "video": -1
+            },
+            "arrowDoor": {
+              "node": -1,
+              "type": "",
+              "sprite": -1,
+              "audio": -1,
+              "video": -1
+            }
+          }
+        }
+      ],
+      "colliders": [],
+      "sounds": [],
+      "rect": {
+        "min": [
+          0.5,
+          0.5
+        ],
+        "max": [
+          0.5,
+          0.5
+        ],
+        "position": [
+          697.599853515625,
+          -220.8999786376953
+        ],
+        "size": [
+          160.0,
+          30.0
+        ],
+        "pivot": [
+          0.5,
+          0.5
+        ]
+      },
+      "image": {
+        "sprite": 22,
+        "color": [
+          0.7630919814109802,
+          0.7630919814109802,
+          0.8459999561309814,
+          1.0
+        ],
+        "enabled": 1,
+        "raycast": 1
+      },
+      "order": 3
+    },
+    {
+      "name": "ButtonLeft",
+      "active": true,
+      "layer": 5,
+      "parent": 2,
+      "children": [],
+      "pos": [
+        558.4000244140625,
+        -220.3000030517578,
+        0.0
+      ],
+      "rot": [
+        -0.0,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "scale": [
+        0.7829084992408752,
+        4.190824508666992,
+        1.1540898084640503
+      ],
+      "scripts": [
+        {
+          "class": "Image",
+          "fields": {
+            "m_Enabled": 1,
+            "m_Material": {
+              "node": -1,
+              "type": "",
+              "sprite": -1,
+              "audio": -1,
+              "video": -1
+            },
+            "m_Color": {
+              "r": 0.7630919814109802,
+              "g": 0.7630919814109802,
+              "b": 0.8459999561309814,
+              "a": 1.0
+            },
+            "m_RaycastTarget": 1,
+            "m_OnCullStateChanged": {
+              "m_PersistentCalls": {
+                "m_Calls": []
+              },
+              "m_TypeName": "UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+            },
+            "m_Sprite": {
+              "node": -1,
+              "type": "Sprite",
+              "sprite": 17,
+              "audio": -1,
+              "video": -1
+            },
+            "m_Type": 0,
+            "m_PreserveAspect": 0,
+            "m_FillCenter": 1,
+            "m_FillMethod": 4,
+            "m_FillAmount": 1.0,
+            "m_FillClockwise": 1,
+            "m_FillOrigin": 0,
+            "m_UseSpriteMesh": 0
+          }
+        },
+        {
+          "class": "Button",
+          "fields": {
+            "m_Enabled": 1,
+            "m_Navigation": {
+              "m_Mode": 3,
+              "m_SelectOnUp": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              },
+              "m_SelectOnDown": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              },
+              "m_SelectOnLeft": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              },
+              "m_SelectOnRight": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              }
+            },
+            "m_Transition": 1,
+            "m_Colors": {
+              "m_NormalColor": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+              },
+              "m_HighlightedColor": {
+                "r": 0.9607843160629272,
+                "g": 0.9607843160629272,
+                "b": 0.9607843160629272,
+                "a": 1.0
+              },
+              "m_PressedColor": {
+                "r": 0.7843137383460999,
+                "g": 0.7843137383460999,
+                "b": 0.7843137383460999,
+                "a": 1.0
+              },
+              "m_DisabledColor": {
+                "r": 0.7843137383460999,
+                "g": 0.7843137383460999,
+                "b": 0.7843137383460999,
+                "a": 0.501960813999176
+              },
+              "m_ColorMultiplier": 1.0,
+              "m_FadeDuration": 0.10000000149011612
+            },
+            "m_SpriteState": {
+              "m_HighlightedSprite": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              },
+              "m_PressedSprite": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              },
+              "m_DisabledSprite": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              }
+            },
+            "m_AnimationTriggers": {
+              "m_NormalTrigger": "Normal",
+              "m_HighlightedTrigger": "Highlighted",
+              "m_PressedTrigger": "Pressed",
+              "m_DisabledTrigger": "Disabled"
+            },
+            "m_Interactable": 1,
+            "m_TargetGraphic": {
+              "node": 4,
+              "type": "Image",
+              "sprite": -1,
+              "audio": -1,
+              "video": -1
+            },
+            "m_OnClick": {
+              "m_PersistentCalls": {
+                "m_Calls": []
+              },
+              "m_TypeName": "UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+            }
+          }
+        },
+        {
+          "class": "EventTrigger",
+          "fields": {
+            "m_Enabled": 1,
+            "m_Delegates": [
+              {
+                "eventID": 2,
+                "callback": {
+                  "m_PersistentCalls": {
+                    "m_Calls": [
+                      {
+                        "m_Target": {
+                          "node": 4,
+                          "type": "HoldButtonEventHandlerLeft",
+                          "sprite": -1,
+                          "audio": -1,
+                          "video": -1
+                        },
+                        "m_MethodName": "SetPressed",
+                        "m_Mode": 6,
+                        "m_Arguments": {
+                          "m_ObjectArgument": {
+                            "node": -1,
+                            "type": "",
+                            "sprite": -1,
+                            "audio": -1,
+                            "video": -1
+                          },
+                          "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                          "m_IntArgument": 0,
+                          "m_FloatArgument": 0.0,
+                          "m_StringArgument": "down",
+                          "m_BoolArgument": 1
+                        },
+                        "m_CallState": 2
+                      },
+                      {
+                        "m_Target": {
+                          "node": 1,
+                          "type": "Animator",
+                          "sprite": -1,
+                          "audio": -1,
+                          "video": -1
+                        },
+                        "m_MethodName": "Play",
+                        "m_Mode": 5,
+                        "m_Arguments": {
+                          "m_ObjectArgument": {
+                            "node": -1,
+                            "type": "",
+                            "sprite": -1,
+                            "audio": -1,
+                            "video": -1
+                          },
+                          "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                          "m_IntArgument": 0,
+                          "m_FloatArgument": 0.0,
+                          "m_StringArgument": "left",
+                          "m_BoolArgument": 1
+                        },
+                        "m_CallState": 2
+                      }
+                    ]
+                  },
+                  "m_TypeName": "UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+                }
+              },
+              {
+                "eventID": 3,
+                "callback": {
+                  "m_PersistentCalls": {
+                    "m_Calls": [
+                      {
+                        "m_Target": {
+                          "node": 4,
+                          "type": "HoldButtonEventHandlerLeft",
+                          "sprite": -1,
+                          "audio": -1,
+                          "video": -1
+                        },
+                        "m_MethodName": "SetPressed",
+                        "m_Mode": 6,
+                        "m_Arguments": {
+                          "m_ObjectArgument": {
+                            "node": -1,
+                            "type": "",
+                            "sprite": -1,
+                            "audio": -1,
+                            "video": -1
+                          },
+                          "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                          "m_IntArgument": 0,
+                          "m_FloatArgument": 0.0,
+                          "m_StringArgument": "down_idle",
+                          "m_BoolArgument": 0
+                        },
+                        "m_CallState": 2
+                      },
+                      {
+                        "m_Target": {
+                          "node": 1,
+                          "type": "Animator",
+                          "sprite": -1,
+                          "audio": -1,
+                          "video": -1
+                        },
+                        "m_MethodName": "Play",
+                        "m_Mode": 5,
+                        "m_Arguments": {
+                          "m_ObjectArgument": {
+                            "node": -1,
+                            "type": "",
+                            "sprite": -1,
+                            "audio": -1,
+                            "video": -1
+                          },
+                          "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                          "m_IntArgument": 0,
+                          "m_FloatArgument": 0.0,
+                          "m_StringArgument": "left_idle",
+                          "m_BoolArgument": 0
+                        },
+                        "m_CallState": 2
+                      }
+                    ]
+                  },
+                  "m_TypeName": "UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+                }
+              }
+            ],
+            "delegates": []
+          }
+        },
+        {
+          "class": "HoldButtonEventHandlerLeft",
+          "fields": {
+            "m_Enabled": 1,
+            "OnButtonHeldLeft": {
+              "m_PersistentCalls": {
+                "m_Calls": [
+                  {
+                    "m_Target": {
+                      "node": 1,
+                      "type": "Movement",
+                      "sprite": -1,
+                      "audio": -1,
+                      "video": -1
+                    },
+                    "m_MethodName": "MoveLeft",
+                    "m_Mode": 1,
+                    "m_Arguments": {
+                      "m_ObjectArgument": {
+                        "node": -1,
+                        "type": "",
+                        "sprite": -1,
+                        "audio": -1,
+                        "video": -1
+                      },
+                      "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                      "m_IntArgument": 0,
+                      "m_FloatArgument": 0.0,
+                      "m_StringArgument": "",
+                      "m_BoolArgument": 0
+                    },
+                    "m_CallState": 2
+                  }
+                ]
+              },
+              "m_TypeName": "UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            },
+            "OnButtonHeldLeft1": {
+              "m_PersistentCalls": {
+                "m_Calls": [
+                  {
+                    "m_Target": {
+                      "node": 1,
+                      "type": "Movement",
+                      "sprite": -1,
+                      "audio": -1,
+                      "video": -1
+                    },
+                    "m_MethodName": "MoveLeftRelease",
+                    "m_Mode": 1,
+                    "m_Arguments": {
+                      "m_ObjectArgument": {
+                        "node": -1,
+                        "type": "",
+                        "sprite": -1,
+                        "audio": -1,
+                        "video": -1
+                      },
+                      "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                      "m_IntArgument": 0,
+                      "m_FloatArgument": 0.0,
+                      "m_StringArgument": "",
+                      "m_BoolArgument": 0
+                    },
+                    "m_CallState": 2
+                  }
+                ]
+              },
+              "m_TypeName": "UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            }
+          }
+        }
+      ],
+      "colliders": [],
+      "sounds": [],
+      "rect": {
+        "min": [
+          0.5,
+          0.5
+        ],
+        "max": [
+          0.5,
+          0.5
+        ],
+        "position": [
+          558.4000244140625,
+          -220.3000030517578
+        ],
+        "size": [
+          160.0,
+          30.0
+        ],
+        "pivot": [
+          0.5,
+          0.5
+        ]
+      },
+      "image": {
+        "sprite": 17,
+        "color": [
+          0.7630919814109802,
+          0.7630919814109802,
+          0.8459999561309814,
+          1.0
+        ],
+        "enabled": 1,
+        "raycast": 1
+      },
+      "order": 4
+    },
+    {
+      "name": "ButtonUp",
+      "active": true,
+      "layer": 5,
+      "parent": 2,
+      "children": [],
+      "pos": [
+        696.9999389648438,
+        -82.29998779296875,
+        0.0
+      ],
+      "rot": [
+        -0.0,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "scale": [
+        0.7732617855072021,
+        4.039351940155029,
+        1.1540898084640503
+      ],
+      "scripts": [
+        {
+          "class": "Image",
+          "fields": {
+            "m_Enabled": 1,
+            "m_Material": {
+              "node": -1,
+              "type": "",
+              "sprite": -1,
+              "audio": -1,
+              "video": -1
+            },
+            "m_Color": {
+              "r": 0.7630919814109802,
+              "g": 0.7630919814109802,
+              "b": 0.8459999561309814,
+              "a": 1.0
+            },
+            "m_RaycastTarget": 1,
+            "m_OnCullStateChanged": {
+              "m_PersistentCalls": {
+                "m_Calls": []
+              },
+              "m_TypeName": "UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+            },
+            "m_Sprite": {
+              "node": -1,
+              "type": "Sprite",
+              "sprite": 18,
+              "audio": -1,
+              "video": -1
+            },
+            "m_Type": 0,
+            "m_PreserveAspect": 0,
+            "m_FillCenter": 1,
+            "m_FillMethod": 4,
+            "m_FillAmount": 1.0,
+            "m_FillClockwise": 1,
+            "m_FillOrigin": 0,
+            "m_UseSpriteMesh": 0
+          }
+        },
+        {
+          "class": "Button",
+          "fields": {
+            "m_Enabled": 1,
+            "m_Navigation": {
+              "m_Mode": 3,
+              "m_SelectOnUp": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              },
+              "m_SelectOnDown": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              },
+              "m_SelectOnLeft": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              },
+              "m_SelectOnRight": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              }
+            },
+            "m_Transition": 1,
+            "m_Colors": {
+              "m_NormalColor": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+              },
+              "m_HighlightedColor": {
+                "r": 0.9607843160629272,
+                "g": 0.9607843160629272,
+                "b": 0.9607843160629272,
+                "a": 1.0
+              },
+              "m_PressedColor": {
+                "r": 0.7843137383460999,
+                "g": 0.7843137383460999,
+                "b": 0.7843137383460999,
+                "a": 1.0
+              },
+              "m_DisabledColor": {
+                "r": 0.7843137383460999,
+                "g": 0.7843137383460999,
+                "b": 0.7843137383460999,
+                "a": 0.501960813999176
+              },
+              "m_ColorMultiplier": 1.0,
+              "m_FadeDuration": 0.10000000149011612
+            },
+            "m_SpriteState": {
+              "m_HighlightedSprite": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              },
+              "m_PressedSprite": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              },
+              "m_DisabledSprite": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              }
+            },
+            "m_AnimationTriggers": {
+              "m_NormalTrigger": "Normal",
+              "m_HighlightedTrigger": "Highlighted",
+              "m_PressedTrigger": "Pressed",
+              "m_DisabledTrigger": "Disabled"
+            },
+            "m_Interactable": 1,
+            "m_TargetGraphic": {
+              "node": 5,
+              "type": "Image",
+              "sprite": -1,
+              "audio": -1,
+              "video": -1
+            },
+            "m_OnClick": {
+              "m_PersistentCalls": {
+                "m_Calls": []
+              },
+              "m_TypeName": "UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+            }
+          }
+        },
+        {
+          "class": "EventTrigger",
+          "fields": {
+            "m_Enabled": 1,
+            "m_Delegates": [
+              {
+                "eventID": 2,
+                "callback": {
+                  "m_PersistentCalls": {
+                    "m_Calls": [
+                      {
+                        "m_Target": {
+                          "node": 5,
+                          "type": "HoldButtonEventHandlerUp",
+                          "sprite": -1,
+                          "audio": -1,
+                          "video": -1
+                        },
+                        "m_MethodName": "SetPressed",
+                        "m_Mode": 6,
+                        "m_Arguments": {
+                          "m_ObjectArgument": {
+                            "node": -1,
+                            "type": "",
+                            "sprite": -1,
+                            "audio": -1,
+                            "video": -1
+                          },
+                          "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                          "m_IntArgument": 0,
+                          "m_FloatArgument": 0.0,
+                          "m_StringArgument": "down",
+                          "m_BoolArgument": 1
+                        },
+                        "m_CallState": 2
+                      },
+                      {
+                        "m_Target": {
+                          "node": 1,
+                          "type": "Animator",
+                          "sprite": -1,
+                          "audio": -1,
+                          "video": -1
+                        },
+                        "m_MethodName": "Play",
+                        "m_Mode": 5,
+                        "m_Arguments": {
+                          "m_ObjectArgument": {
+                            "node": -1,
+                            "type": "",
+                            "sprite": -1,
+                            "audio": -1,
+                            "video": -1
+                          },
+                          "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                          "m_IntArgument": 0,
+                          "m_FloatArgument": 0.0,
+                          "m_StringArgument": "up",
+                          "m_BoolArgument": 1
+                        },
+                        "m_CallState": 2
+                      }
+                    ]
+                  },
+                  "m_TypeName": "UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+                }
+              },
+              {
+                "eventID": 3,
+                "callback": {
+                  "m_PersistentCalls": {
+                    "m_Calls": [
+                      {
+                        "m_Target": {
+                          "node": 5,
+                          "type": "HoldButtonEventHandlerUp",
+                          "sprite": -1,
+                          "audio": -1,
+                          "video": -1
+                        },
+                        "m_MethodName": "SetPressed",
+                        "m_Mode": 6,
+                        "m_Arguments": {
+                          "m_ObjectArgument": {
+                            "node": -1,
+                            "type": "",
+                            "sprite": -1,
+                            "audio": -1,
+                            "video": -1
+                          },
+                          "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                          "m_IntArgument": 0,
+                          "m_FloatArgument": 0.0,
+                          "m_StringArgument": "down_idle",
+                          "m_BoolArgument": 0
+                        },
+                        "m_CallState": 2
+                      },
+                      {
+                        "m_Target": {
+                          "node": 1,
+                          "type": "Animator",
+                          "sprite": -1,
+                          "audio": -1,
+                          "video": -1
+                        },
+                        "m_MethodName": "Play",
+                        "m_Mode": 5,
+                        "m_Arguments": {
+                          "m_ObjectArgument": {
+                            "node": -1,
+                            "type": "",
+                            "sprite": -1,
+                            "audio": -1,
+                            "video": -1
+                          },
+                          "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                          "m_IntArgument": 0,
+                          "m_FloatArgument": 0.0,
+                          "m_StringArgument": "up_idle",
+                          "m_BoolArgument": 0
+                        },
+                        "m_CallState": 2
+                      }
+                    ]
+                  },
+                  "m_TypeName": "UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+                }
+              }
+            ],
+            "delegates": []
+          }
+        },
+        {
+          "class": "HoldButtonEventHandlerUp",
+          "fields": {
+            "m_Enabled": 1,
+            "OnButtonHeldUp": {
+              "m_PersistentCalls": {
+                "m_Calls": [
+                  {
+                    "m_Target": {
+                      "node": 1,
+                      "type": "Movement",
+                      "sprite": -1,
+                      "audio": -1,
+                      "video": -1
+                    },
+                    "m_MethodName": "MoveUp",
+                    "m_Mode": 1,
+                    "m_Arguments": {
+                      "m_ObjectArgument": {
+                        "node": -1,
+                        "type": "",
+                        "sprite": -1,
+                        "audio": -1,
+                        "video": -1
+                      },
+                      "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                      "m_IntArgument": 0,
+                      "m_FloatArgument": 0.0,
+                      "m_StringArgument": "",
+                      "m_BoolArgument": 0
+                    },
+                    "m_CallState": 2
+                  }
+                ]
+              },
+              "m_TypeName": "UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            },
+            "OnButtonHeldUp1": {
+              "m_PersistentCalls": {
+                "m_Calls": [
+                  {
+                    "m_Target": {
+                      "node": 1,
+                      "type": "Movement",
+                      "sprite": -1,
+                      "audio": -1,
+                      "video": -1
+                    },
+                    "m_MethodName": "MoveUpRelease",
+                    "m_Mode": 1,
+                    "m_Arguments": {
+                      "m_ObjectArgument": {
+                        "node": -1,
+                        "type": "",
+                        "sprite": -1,
+                        "audio": -1,
+                        "video": -1
+                      },
+                      "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                      "m_IntArgument": 0,
+                      "m_FloatArgument": 0.0,
+                      "m_StringArgument": "",
+                      "m_BoolArgument": 0
+                    },
+                    "m_CallState": 2
+                  }
+                ]
+              },
+              "m_TypeName": "UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            }
+          }
+        }
+      ],
+      "colliders": [],
+      "sounds": [],
+      "rect": {
+        "min": [
+          0.5,
+          0.5
+        ],
+        "max": [
+          0.5,
+          0.5
+        ],
+        "position": [
+          696.9999389648438,
+          -82.29998779296875
+        ],
+        "size": [
+          160.0,
+          30.0
+        ],
+        "pivot": [
+          0.5,
+          0.5
+        ]
+      },
+      "image": {
+        "sprite": 18,
+        "color": [
+          0.7630919814109802,
+          0.7630919814109802,
+          0.8459999561309814,
+          1.0
+        ],
+        "enabled": 1,
+        "raycast": 1
+      },
+      "order": 5
+    },
+    {
+      "name": "ButtonDown",
+      "active": true,
+      "layer": 5,
+      "parent": 2,
+      "children": [],
+      "pos": [
+        696.9999389648438,
+        -359.5999755859375,
+        0.0
+      ],
+      "rot": [
+        -0.0,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "scale": [
+        0.7732617855072021,
+        4.039351940155029,
+        1.1540898084640503
+      ],
+      "scripts": [
+        {
+          "class": "Image",
+          "fields": {
+            "m_Enabled": 1,
+            "m_Material": {
+              "node": -1,
+              "type": "",
+              "sprite": -1,
+              "audio": -1,
+              "video": -1
+            },
+            "m_Color": {
+              "r": 0.7630919814109802,
+              "g": 0.7630919814109802,
+              "b": 0.8459999561309814,
+              "a": 1.0
+            },
+            "m_RaycastTarget": 1,
+            "m_OnCullStateChanged": {
+              "m_PersistentCalls": {
+                "m_Calls": []
+              },
+              "m_TypeName": "UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+            },
+            "m_Sprite": {
+              "node": -1,
+              "type": "Sprite",
+              "sprite": 21,
+              "audio": -1,
+              "video": -1
+            },
+            "m_Type": 0,
+            "m_PreserveAspect": 0,
+            "m_FillCenter": 1,
+            "m_FillMethod": 4,
+            "m_FillAmount": 1.0,
+            "m_FillClockwise": 1,
+            "m_FillOrigin": 0,
+            "m_UseSpriteMesh": 0
+          }
+        },
+        {
+          "class": "Button",
+          "fields": {
+            "m_Enabled": 1,
+            "m_Navigation": {
+              "m_Mode": 3,
+              "m_SelectOnUp": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              },
+              "m_SelectOnDown": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              },
+              "m_SelectOnLeft": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              },
+              "m_SelectOnRight": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              }
+            },
+            "m_Transition": 1,
+            "m_Colors": {
+              "m_NormalColor": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+              },
+              "m_HighlightedColor": {
+                "r": 0.9607843160629272,
+                "g": 0.9607843160629272,
+                "b": 0.9607843160629272,
+                "a": 1.0
+              },
+              "m_PressedColor": {
+                "r": 0.7843137383460999,
+                "g": 0.7843137383460999,
+                "b": 0.7843137383460999,
+                "a": 1.0
+              },
+              "m_DisabledColor": {
+                "r": 0.7843137383460999,
+                "g": 0.7843137383460999,
+                "b": 0.7843137383460999,
+                "a": 0.501960813999176
+              },
+              "m_ColorMultiplier": 1.0,
+              "m_FadeDuration": 0.10000000149011612
+            },
+            "m_SpriteState": {
+              "m_HighlightedSprite": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              },
+              "m_PressedSprite": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              },
+              "m_DisabledSprite": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              }
+            },
+            "m_AnimationTriggers": {
+              "m_NormalTrigger": "Normal",
+              "m_HighlightedTrigger": "Highlighted",
+              "m_PressedTrigger": "Pressed",
+              "m_DisabledTrigger": "Disabled"
+            },
+            "m_Interactable": 1,
+            "m_TargetGraphic": {
+              "node": 6,
+              "type": "Image",
+              "sprite": -1,
+              "audio": -1,
+              "video": -1
+            },
+            "m_OnClick": {
+              "m_PersistentCalls": {
+                "m_Calls": []
+              },
+              "m_TypeName": "UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+            }
+          }
+        },
+        {
+          "class": "EventTrigger",
+          "fields": {
+            "m_Enabled": 1,
+            "m_Delegates": [
+              {
+                "eventID": 2,
+                "callback": {
+                  "m_PersistentCalls": {
+                    "m_Calls": [
+                      {
+                        "m_Target": {
+                          "node": 6,
+                          "type": "HoldButtonEventHandlerDown",
+                          "sprite": -1,
+                          "audio": -1,
+                          "video": -1
+                        },
+                        "m_MethodName": "SetPressed",
+                        "m_Mode": 6,
+                        "m_Arguments": {
+                          "m_ObjectArgument": {
+                            "node": -1,
+                            "type": "",
+                            "sprite": -1,
+                            "audio": -1,
+                            "video": -1
+                          },
+                          "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                          "m_IntArgument": 0,
+                          "m_FloatArgument": 0.0,
+                          "m_StringArgument": "down",
+                          "m_BoolArgument": 1
+                        },
+                        "m_CallState": 2
+                      },
+                      {
+                        "m_Target": {
+                          "node": 1,
+                          "type": "Animator",
+                          "sprite": -1,
+                          "audio": -1,
+                          "video": -1
+                        },
+                        "m_MethodName": "Play",
+                        "m_Mode": 5,
+                        "m_Arguments": {
+                          "m_ObjectArgument": {
+                            "node": -1,
+                            "type": "",
+                            "sprite": -1,
+                            "audio": -1,
+                            "video": -1
+                          },
+                          "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                          "m_IntArgument": 0,
+                          "m_FloatArgument": 0.0,
+                          "m_StringArgument": "down",
+                          "m_BoolArgument": 1
+                        },
+                        "m_CallState": 2
+                      }
+                    ]
+                  },
+                  "m_TypeName": "UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+                }
+              },
+              {
+                "eventID": 3,
+                "callback": {
+                  "m_PersistentCalls": {
+                    "m_Calls": [
+                      {
+                        "m_Target": {
+                          "node": 6,
+                          "type": "HoldButtonEventHandlerDown",
+                          "sprite": -1,
+                          "audio": -1,
+                          "video": -1
+                        },
+                        "m_MethodName": "SetPressed",
+                        "m_Mode": 6,
+                        "m_Arguments": {
+                          "m_ObjectArgument": {
+                            "node": -1,
+                            "type": "",
+                            "sprite": -1,
+                            "audio": -1,
+                            "video": -1
+                          },
+                          "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                          "m_IntArgument": 0,
+                          "m_FloatArgument": 0.0,
+                          "m_StringArgument": "down_idle",
+                          "m_BoolArgument": 0
+                        },
+                        "m_CallState": 2
+                      },
+                      {
+                        "m_Target": {
+                          "node": 1,
+                          "type": "Animator",
+                          "sprite": -1,
+                          "audio": -1,
+                          "video": -1
+                        },
+                        "m_MethodName": "Play",
+                        "m_Mode": 5,
+                        "m_Arguments": {
+                          "m_ObjectArgument": {
+                            "node": -1,
+                            "type": "",
+                            "sprite": -1,
+                            "audio": -1,
+                            "video": -1
+                          },
+                          "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                          "m_IntArgument": 0,
+                          "m_FloatArgument": 0.0,
+                          "m_StringArgument": "down_idle",
+                          "m_BoolArgument": 0
+                        },
+                        "m_CallState": 2
+                      }
+                    ]
+                  },
+                  "m_TypeName": "UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+                }
+              }
+            ],
+            "delegates": []
+          }
+        },
+        {
+          "class": "HoldButtonEventHandlerDown",
+          "fields": {
+            "m_Enabled": 1,
+            "OnButtonHeldDown": {
+              "m_PersistentCalls": {
+                "m_Calls": [
+                  {
+                    "m_Target": {
+                      "node": 1,
+                      "type": "Movement",
+                      "sprite": -1,
+                      "audio": -1,
+                      "video": -1
+                    },
+                    "m_MethodName": "MoveDown",
+                    "m_Mode": 1,
+                    "m_Arguments": {
+                      "m_ObjectArgument": {
+                        "node": -1,
+                        "type": "",
+                        "sprite": -1,
+                        "audio": -1,
+                        "video": -1
+                      },
+                      "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                      "m_IntArgument": 0,
+                      "m_FloatArgument": 0.0,
+                      "m_StringArgument": "",
+                      "m_BoolArgument": 0
+                    },
+                    "m_CallState": 2
+                  }
+                ]
+              },
+              "m_TypeName": "UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            },
+            "OnButtonHeldDown1": {
+              "m_PersistentCalls": {
+                "m_Calls": [
+                  {
+                    "m_Target": {
+                      "node": 1,
+                      "type": "Movement",
+                      "sprite": -1,
+                      "audio": -1,
+                      "video": -1
+                    },
+                    "m_MethodName": "MoveDownRelease",
+                    "m_Mode": 1,
+                    "m_Arguments": {
+                      "m_ObjectArgument": {
+                        "node": -1,
+                        "type": "",
+                        "sprite": -1,
+                        "audio": -1,
+                        "video": -1
+                      },
+                      "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                      "m_IntArgument": 0,
+                      "m_FloatArgument": 0.0,
+                      "m_StringArgument": "",
+                      "m_BoolArgument": 0
+                    },
+                    "m_CallState": 2
+                  }
+                ]
+              },
+              "m_TypeName": "UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            }
+          }
+        }
+      ],
+      "colliders": [],
+      "sounds": [],
+      "rect": {
+        "min": [
+          0.5,
+          0.5
+        ],
+        "max": [
+          0.5,
+          0.5
+        ],
+        "position": [
+          696.9999389648438,
+          -359.5999755859375
+        ],
+        "size": [
+          160.0,
+          30.0
+        ],
+        "pivot": [
+          0.5,
+          0.5
+        ]
+      },
+      "image": {
+        "sprite": 21,
+        "color": [
+          0.7630919814109802,
+          0.7630919814109802,
+          0.8459999561309814,
+          1.0
+        ],
+        "enabled": 1,
+        "raycast": 1
+      },
+      "order": 6
+    },
+    {
+      "name": "ButtonRight",
+      "active": true,
+      "layer": 5,
+      "parent": 2,
+      "children": [],
+      "pos": [
+        837.2999267578125,
+        -220.29998779296875,
+        0.0
+      ],
+      "rot": [
+        -0.0,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "scale": [
+        0.7829084992408752,
+        4.190824508666992,
+        1.1540898084640503
+      ],
+      "scripts": [
+        {
+          "class": "Image",
+          "fields": {
+            "m_Enabled": 1,
+            "m_Material": {
+              "node": -1,
+              "type": "",
+              "sprite": -1,
+              "audio": -1,
+              "video": -1
+            },
+            "m_Color": {
+              "r": 0.7630919814109802,
+              "g": 0.7630919814109802,
+              "b": 0.8459999561309814,
+              "a": 1.0
+            },
+            "m_RaycastTarget": 1,
+            "m_OnCullStateChanged": {
+              "m_PersistentCalls": {
+                "m_Calls": []
+              },
+              "m_TypeName": "UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+            },
+            "m_Sprite": {
+              "node": -1,
+              "type": "Sprite",
+              "sprite": 16,
+              "audio": -1,
+              "video": -1
+            },
+            "m_Type": 0,
+            "m_PreserveAspect": 0,
+            "m_FillCenter": 1,
+            "m_FillMethod": 4,
+            "m_FillAmount": 1.0,
+            "m_FillClockwise": 1,
+            "m_FillOrigin": 0,
+            "m_UseSpriteMesh": 0
+          }
+        },
+        {
+          "class": "Button",
+          "fields": {
+            "m_Enabled": 1,
+            "m_Navigation": {
+              "m_Mode": 3,
+              "m_SelectOnUp": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              },
+              "m_SelectOnDown": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              },
+              "m_SelectOnLeft": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              },
+              "m_SelectOnRight": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              }
+            },
+            "m_Transition": 1,
+            "m_Colors": {
+              "m_NormalColor": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+              },
+              "m_HighlightedColor": {
+                "r": 0.9607843160629272,
+                "g": 0.9607843160629272,
+                "b": 0.9607843160629272,
+                "a": 1.0
+              },
+              "m_PressedColor": {
+                "r": 0.7843137383460999,
+                "g": 0.7843137383460999,
+                "b": 0.7843137383460999,
+                "a": 1.0
+              },
+              "m_DisabledColor": {
+                "r": 0.7843137383460999,
+                "g": 0.7843137383460999,
+                "b": 0.7843137383460999,
+                "a": 0.501960813999176
+              },
+              "m_ColorMultiplier": 1.0,
+              "m_FadeDuration": 0.10000000149011612
+            },
+            "m_SpriteState": {
+              "m_HighlightedSprite": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              },
+              "m_PressedSprite": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              },
+              "m_DisabledSprite": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              }
+            },
+            "m_AnimationTriggers": {
+              "m_NormalTrigger": "Normal",
+              "m_HighlightedTrigger": "Highlighted",
+              "m_PressedTrigger": "Pressed",
+              "m_DisabledTrigger": "Disabled"
+            },
+            "m_Interactable": 1,
+            "m_TargetGraphic": {
+              "node": 7,
+              "type": "Image",
+              "sprite": -1,
+              "audio": -1,
+              "video": -1
+            },
+            "m_OnClick": {
+              "m_PersistentCalls": {
+                "m_Calls": []
+              },
+              "m_TypeName": "UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+            }
+          }
+        },
+        {
+          "class": "EventTrigger",
+          "fields": {
+            "m_Enabled": 1,
+            "m_Delegates": [
+              {
+                "eventID": 2,
+                "callback": {
+                  "m_PersistentCalls": {
+                    "m_Calls": [
+                      {
+                        "m_Target": {
+                          "node": 7,
+                          "type": "HoldButtonEventHandlerRight",
+                          "sprite": -1,
+                          "audio": -1,
+                          "video": -1
+                        },
+                        "m_MethodName": "SetPressed",
+                        "m_Mode": 6,
+                        "m_Arguments": {
+                          "m_ObjectArgument": {
+                            "node": -1,
+                            "type": "",
+                            "sprite": -1,
+                            "audio": -1,
+                            "video": -1
+                          },
+                          "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                          "m_IntArgument": 0,
+                          "m_FloatArgument": 0.0,
+                          "m_StringArgument": "down",
+                          "m_BoolArgument": 1
+                        },
+                        "m_CallState": 2
+                      },
+                      {
+                        "m_Target": {
+                          "node": 1,
+                          "type": "Animator",
+                          "sprite": -1,
+                          "audio": -1,
+                          "video": -1
+                        },
+                        "m_MethodName": "Play",
+                        "m_Mode": 5,
+                        "m_Arguments": {
+                          "m_ObjectArgument": {
+                            "node": -1,
+                            "type": "",
+                            "sprite": -1,
+                            "audio": -1,
+                            "video": -1
+                          },
+                          "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                          "m_IntArgument": 0,
+                          "m_FloatArgument": 0.0,
+                          "m_StringArgument": "right",
+                          "m_BoolArgument": 1
+                        },
+                        "m_CallState": 2
+                      }
+                    ]
+                  },
+                  "m_TypeName": "UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+                }
+              },
+              {
+                "eventID": 3,
+                "callback": {
+                  "m_PersistentCalls": {
+                    "m_Calls": [
+                      {
+                        "m_Target": {
+                          "node": 7,
+                          "type": "HoldButtonEventHandlerRight",
+                          "sprite": -1,
+                          "audio": -1,
+                          "video": -1
+                        },
+                        "m_MethodName": "SetPressed",
+                        "m_Mode": 6,
+                        "m_Arguments": {
+                          "m_ObjectArgument": {
+                            "node": -1,
+                            "type": "",
+                            "sprite": -1,
+                            "audio": -1,
+                            "video": -1
+                          },
+                          "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                          "m_IntArgument": 0,
+                          "m_FloatArgument": 0.0,
+                          "m_StringArgument": "down_idle",
+                          "m_BoolArgument": 0
+                        },
+                        "m_CallState": 2
+                      },
+                      {
+                        "m_Target": {
+                          "node": 1,
+                          "type": "Animator",
+                          "sprite": -1,
+                          "audio": -1,
+                          "video": -1
+                        },
+                        "m_MethodName": "Play",
+                        "m_Mode": 5,
+                        "m_Arguments": {
+                          "m_ObjectArgument": {
+                            "node": -1,
+                            "type": "",
+                            "sprite": -1,
+                            "audio": -1,
+                            "video": -1
+                          },
+                          "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                          "m_IntArgument": 0,
+                          "m_FloatArgument": 0.0,
+                          "m_StringArgument": "right_idle",
+                          "m_BoolArgument": 0
+                        },
+                        "m_CallState": 2
+                      }
+                    ]
+                  },
+                  "m_TypeName": "UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+                }
+              }
+            ],
+            "delegates": []
+          }
+        },
+        {
+          "class": "HoldButtonEventHandlerRight",
+          "fields": {
+            "m_Enabled": 1,
+            "OnButtonHeldRight": {
+              "m_PersistentCalls": {
+                "m_Calls": [
+                  {
+                    "m_Target": {
+                      "node": 1,
+                      "type": "Movement",
+                      "sprite": -1,
+                      "audio": -1,
+                      "video": -1
+                    },
+                    "m_MethodName": "MoveRight",
+                    "m_Mode": 1,
+                    "m_Arguments": {
+                      "m_ObjectArgument": {
+                        "node": -1,
+                        "type": "",
+                        "sprite": -1,
+                        "audio": -1,
+                        "video": -1
+                      },
+                      "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                      "m_IntArgument": 0,
+                      "m_FloatArgument": 0.0,
+                      "m_StringArgument": "",
+                      "m_BoolArgument": 0
+                    },
+                    "m_CallState": 2
+                  }
+                ]
+              },
+              "m_TypeName": "UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            },
+            "OnButtonHeldRight1": {
+              "m_PersistentCalls": {
+                "m_Calls": [
+                  {
+                    "m_Target": {
+                      "node": 1,
+                      "type": "Movement",
+                      "sprite": -1,
+                      "audio": -1,
+                      "video": -1
+                    },
+                    "m_MethodName": "MoveRightRelease",
+                    "m_Mode": 1,
+                    "m_Arguments": {
+                      "m_ObjectArgument": {
+                        "node": -1,
+                        "type": "",
+                        "sprite": -1,
+                        "audio": -1,
+                        "video": -1
+                      },
+                      "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                      "m_IntArgument": 0,
+                      "m_FloatArgument": 0.0,
+                      "m_StringArgument": "",
+                      "m_BoolArgument": 0
+                    },
+                    "m_CallState": 2
+                  }
+                ]
+              },
+              "m_TypeName": "UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            }
+          }
+        }
+      ],
+      "colliders": [],
+      "sounds": [],
+      "rect": {
+        "min": [
+          0.5,
+          0.5
+        ],
+        "max": [
+          0.5,
+          0.5
+        ],
+        "position": [
+          837.2999267578125,
+          -220.29998779296875
+        ],
+        "size": [
+          160.0,
+          30.0
+        ],
+        "pivot": [
+          0.5,
+          0.5
+        ]
+      },
+      "image": {
+        "sprite": 16,
+        "color": [
+          0.7630919814109802,
+          0.7630919814109802,
+          0.8459999561309814,
+          1.0
+        ],
+        "enabled": 1,
+        "raycast": 1
+      },
+      "order": 7
+    },
+    {
+      "name": "Luz del protagonista",
+      "active": true,
+      "parent": 1,
+      "children": [],
+      "pos": [
+        0,
+        1,
+        -3
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "light": {
+        "type": 2,
+        "color": [
+          1,
+          0.88,
+          0.76
+        ],
+        "range": 9,
+        "intensity": 0.27,
+        "enabled": true
+      },
+      "order": 8
+    },
+    {
+      "name": "Suelo continuo",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        0,
+        -0.12,
+        0
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [
+        {
+          "type": "BoxCollider",
+          "center": [
+            0,
+            0,
+            0
+          ],
+          "size": [
+            62.0,
+            0.24,
+            32.0
+          ],
+          "enabled": true,
+          "trigger": false
+        }
+      ],
+      "sounds": [],
+      "mesh": 1395,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          548
+        ],
+        "cutaway": false
+      },
+      "order": 9
+    },
+    {
+      "name": "Asfalto",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        0,
+        0.013,
+        -4
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "mesh": 1396,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          609
+        ],
+        "cutaway": false
+      },
+      "order": 10
+    },
+    {
+      "name": "Banqueta",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        0,
+        0.039,
+        -8.7
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "mesh": 1397,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          610
+        ],
+        "cutaway": false
+      },
+      "order": 11
+    },
+    {
+      "name": "Banqueta",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        0,
+        0.039,
+        0.74
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "mesh": 1398,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          610
+        ],
+        "cutaway": false
+      },
+      "order": 12
+    },
+    {
+      "name": "Pintura vial",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "mesh": 1399,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          611,
+          612
+        ],
+        "lighting": true
+      },
+      "order": 13
+    },
+    {
+      "name": "Fachada CASA DE DARS",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        -23,
+        2.5,
+        10.9
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [
+        {
+          "type": "BoxCollider",
+          "center": [
+            0,
+            0,
+            0
+          ],
+          "size": [
+            8.4,
+            5.0,
+            4.1
+          ],
+          "enabled": true,
+          "trigger": false
+        }
+      ],
+      "sounds": [],
+      "mesh": 1400,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          613
+        ],
+        "cutaway": false
+      },
+      "order": 14
+    },
+    {
+      "name": "Alero",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        -23,
+        4.87,
+        8.83
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "mesh": 1401,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          614
+        ],
+        "cutaway": false
+      },
+      "order": 15
+    },
+    {
+      "name": "Cristal de local",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        -25.016,
+        2.64,
+        8.82
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "mesh": 1402,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          615
+        ],
+        "cutaway": false
+      },
+      "order": 16
+    },
+    {
+      "name": "Marco de acceso",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        -21.236,
+        1.49,
+        8.81
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "mesh": 1403,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          616
+        ],
+        "cutaway": false
+      },
+      "order": 17
+    },
+    {
+      "name": "CASA DE DARS",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        -23,
+        4.22,
+        8.67
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [
+        {
+          "class": "Billboard",
+          "fields": {
+            "m_Enabled": 1
+          }
+        }
+      ],
+      "colliders": [],
+      "sounds": [],
+      "sprite": {
+        "sprite": 268,
+        "enabled": true,
+        "color": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "order": 18
+    },
+    {
+      "name": "Fachada PAPELERÍA",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        -13,
+        2.5,
+        10.9
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [
+        {
+          "type": "BoxCollider",
+          "center": [
+            0,
+            0,
+            0
+          ],
+          "size": [
+            8.4,
+            5.0,
+            4.1
+          ],
+          "enabled": true,
+          "trigger": false
+        }
+      ],
+      "sounds": [],
+      "mesh": 1404,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          617
+        ],
+        "cutaway": false
+      },
+      "order": 19
+    },
+    {
+      "name": "Alero",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        -13,
+        4.87,
+        8.83
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "mesh": 1405,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          614
+        ],
+        "cutaway": false
+      },
+      "order": 20
+    },
+    {
+      "name": "Cristal de local",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        -15.016,
+        2.64,
+        8.82
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "mesh": 1406,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          615
+        ],
+        "cutaway": false
+      },
+      "order": 21
+    },
+    {
+      "name": "Marco de acceso",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        -11.236,
+        1.49,
+        8.81
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "mesh": 1407,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          616
+        ],
+        "cutaway": false
+      },
+      "order": 22
+    },
+    {
+      "name": "PAPELERÍA",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        -13,
+        4.22,
+        8.67
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [
+        {
+          "class": "Billboard",
+          "fields": {
+            "m_Enabled": 1
+          }
+        }
+      ],
+      "colliders": [],
+      "sounds": [],
+      "sprite": {
+        "sprite": 269,
+        "enabled": true,
+        "color": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "order": 23
+    },
+    {
+      "name": "Fachada ABARROTES",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        -3,
+        2.5,
+        10.9
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [
+        {
+          "type": "BoxCollider",
+          "center": [
+            0,
+            0,
+            0
+          ],
+          "size": [
+            8.4,
+            5.0,
+            4.1
+          ],
+          "enabled": true,
+          "trigger": false
+        }
+      ],
+      "sounds": [],
+      "mesh": 1408,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          618
+        ],
+        "cutaway": false
+      },
+      "order": 24
+    },
+    {
+      "name": "Alero",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        -3,
+        4.87,
+        8.83
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "mesh": 1409,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          614
+        ],
+        "cutaway": false
+      },
+      "order": 25
+    },
+    {
+      "name": "Cristal de local",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        -5.016,
+        2.64,
+        8.82
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "mesh": 1410,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          615
+        ],
+        "cutaway": false
+      },
+      "order": 26
+    },
+    {
+      "name": "Marco de acceso",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        -1.236,
+        1.49,
+        8.81
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "mesh": 1411,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          616
+        ],
+        "cutaway": false
+      },
+      "order": 27
+    },
+    {
+      "name": "ABARROTES",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        -3,
+        4.22,
+        8.67
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [
+        {
+          "class": "Billboard",
+          "fields": {
+            "m_Enabled": 1
+          }
+        }
+      ],
+      "colliders": [],
+      "sounds": [],
+      "sprite": {
+        "sprite": 270,
+        "enabled": true,
+        "color": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "order": 28
+    },
+    {
+      "name": "Fachada CASA FAMILIAR",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        21,
+        2.5,
+        10.9
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [
+        {
+          "type": "BoxCollider",
+          "center": [
+            0,
+            0,
+            0
+          ],
+          "size": [
+            8.4,
+            5.0,
+            4.1
+          ],
+          "enabled": true,
+          "trigger": false
+        }
+      ],
+      "sounds": [],
+      "mesh": 1412,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          619
+        ],
+        "cutaway": false
+      },
+      "order": 29
+    },
+    {
+      "name": "Alero",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        21,
+        4.87,
+        8.83
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "mesh": 1413,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          614
+        ],
+        "cutaway": false
+      },
+      "order": 30
+    },
+    {
+      "name": "Cristal de local",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        18.984,
+        2.64,
+        8.82
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "mesh": 1414,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          615
+        ],
+        "cutaway": false
+      },
+      "order": 31
+    },
+    {
+      "name": "Marco de acceso",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        22.764,
+        1.49,
+        8.81
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "mesh": 1415,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          616
+        ],
+        "cutaway": false
+      },
+      "order": 32
+    },
+    {
+      "name": "CASA FAMILIAR",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        21,
+        4.22,
+        8.67
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [
+        {
+          "class": "Billboard",
+          "fields": {
+            "m_Enabled": 1
+          }
+        }
+      ],
+      "colliders": [],
+      "sounds": [],
+      "sprite": {
+        "sprite": 271,
+        "enabled": true,
+        "color": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "order": 33
+    },
+    {
+      "name": "Parque",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        9,
+        0.03,
+        9.2
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "mesh": 1416,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          620
+        ],
+        "cutaway": false
+      },
+      "order": 34
+    },
+    {
+      "name": "Tronco",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        4.7,
+        1.35,
+        11.9
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "mesh": 1417,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          621
+        ],
+        "cutaway": false
+      },
+      "order": 35
+    },
+    {
+      "name": "Copa de árbol",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        4.7,
+        0,
+        11.9
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "mesh": 1418,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          622
+        ],
+        "lighting": true
+      },
+      "order": 36
+    },
+    {
+      "name": "Tronco",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        12.8,
+        1.35,
+        11.5
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "mesh": 1419,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          621
+        ],
+        "cutaway": false
+      },
+      "order": 37
+    },
+    {
+      "name": "Copa de árbol",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        12.8,
+        0,
+        11.5
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "mesh": 1420,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          622
+        ],
+        "lighting": true
+      },
+      "order": 38
+    },
+    {
+      "name": "Tronco",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        6.5,
+        1.35,
+        6.9
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "mesh": 1421,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          621
+        ],
+        "cutaway": false
+      },
+      "order": 39
+    },
+    {
+      "name": "Copa de árbol",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        6.5,
+        0,
+        6.9
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "mesh": 1422,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          622
+        ],
+        "lighting": true
+      },
+      "order": 40
+    },
+    {
+      "name": "Tronco",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        15.0,
+        1.35,
+        6.2
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "mesh": 1423,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          621
+        ],
+        "cutaway": false
+      },
+      "order": 41
+    },
+    {
+      "name": "Copa de árbol",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        15.0,
+        0,
+        6.2
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "mesh": 1424,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          622
+        ],
+        "lighting": true
+      },
+      "order": 42
+    },
+    {
+      "name": "Banca",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        9.8,
+        0,
+        7.2
+      ],
+      "rot": [
+        0,
+        0.0,
+        0,
+        1.0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [
+        {
+          "type": "BoxCollider",
+          "center": [
+            0,
+            0.8,
+            0
+          ],
+          "size": [
+            1.05,
+            1.6,
+            1.05
+          ],
+          "enabled": true,
+          "trigger": false
+        }
+      ],
+      "sounds": [],
+      "mesh": 1425,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          574,
+          575,
+          576
+        ]
+      },
+      "order": 43
+    },
+    {
+      "name": "Banca",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        11.02,
+        0,
+        7.2
+      ],
+      "rot": [
+        0,
+        0.0,
+        0,
+        1.0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [
+        {
+          "type": "BoxCollider",
+          "center": [
+            0,
+            0.8,
+            0
+          ],
+          "size": [
+            1.05,
+            1.6,
+            1.05
+          ],
+          "enabled": true,
+          "trigger": false
+        }
+      ],
+      "sounds": [],
+      "mesh": 1426,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          574,
+          575,
+          576
+        ]
+      },
+      "order": 44
+    },
+    {
+      "name": "Poste de parada",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        -16,
+        1.56,
+        -11.5
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "mesh": 1427,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          623
+        ],
+        "cutaway": false
+      },
+      "order": 45
+    },
+    {
+      "name": "Poste de parada",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        -11,
+        1.56,
+        -11.5
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "mesh": 1428,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          623
+        ],
+        "cutaway": false
+      },
+      "order": 46
+    },
+    {
+      "name": "Techo de parada",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        -13.5,
+        3.19,
+        -11.5
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "mesh": 1429,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          624
+        ],
+        "cutaway": false
+      },
+      "order": 47
+    },
+    {
+      "name": "PARADA",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        -13.5,
+        2.69,
+        -11.7
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [
+        {
+          "class": "Billboard",
+          "fields": {
+            "m_Enabled": 1
+          }
+        }
+      ],
+      "colliders": [],
+      "sounds": [],
+      "sprite": {
+        "sprite": 272,
+        "enabled": true,
+        "color": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "order": 48
+    },
+    {
+      "name": "Poste de luz",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        -25,
+        2.8,
+        -9.0
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "mesh": 1430,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          625
+        ],
+        "cutaway": false
+      },
+      "order": 49
+    },
+    {
+      "name": "Luz",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        -25,
+        5.1,
+        -8.7
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "light": {
+        "type": 2,
+        "color": [
+          1,
+          0.84,
+          0.59
+        ],
+        "intensity": 1.62,
+        "range": 14,
+        "enabled": true
+      },
+      "chapter_min": 2037,
+      "chapter_max": 2048,
+      "order": 50
+    },
+    {
+      "name": "Poste de luz",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        -11,
+        2.8,
+        -9.0
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "mesh": 1431,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          625
+        ],
+        "cutaway": false
+      },
+      "order": 51
+    },
+    {
+      "name": "Luz",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        -11,
+        5.1,
+        -8.7
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "light": {
+        "type": 2,
+        "color": [
+          1,
+          0.84,
+          0.59
+        ],
+        "intensity": 1.62,
+        "range": 14,
+        "enabled": true
+      },
+      "chapter_min": 2037,
+      "chapter_max": 2048,
+      "order": 52
+    },
+    {
+      "name": "Poste de luz",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        8,
+        2.8,
+        -9.0
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "mesh": 1432,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          625
+        ],
+        "cutaway": false
+      },
+      "order": 53
+    },
+    {
+      "name": "Luz",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        8,
+        5.1,
+        -8.7
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "light": {
+        "type": 2,
+        "color": [
+          1,
+          0.84,
+          0.59
+        ],
+        "intensity": 1.62,
+        "range": 14,
+        "enabled": true
+      },
+      "chapter_min": 2037,
+      "chapter_max": 2048,
+      "order": 54
+    },
+    {
+      "name": "Poste de luz",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        24,
+        2.8,
+        -9.0
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "mesh": 1433,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          625
+        ],
+        "cutaway": false
+      },
+      "order": 55
+    },
+    {
+      "name": "Luz",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        24,
+        5.1,
+        -8.7
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "light": {
+        "type": 2,
+        "color": [
+          1,
+          0.84,
+          0.59
+        ],
+        "intensity": 1.62,
+        "range": 14,
+        "enabled": true
+      },
+      "chapter_min": 2037,
+      "chapter_max": 2048,
+      "order": 56
+    },
+    {
+      "name": "Luz",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        1,
+        12,
+        -2
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "light": {
+        "type": 2,
+        "color": [
+          1,
+          0.94,
+          0.84
+        ],
+        "intensity": 1.6,
+        "range": 66,
+        "enabled": true
+      },
+      "chapter_min": 1701,
+      "chapter_max": 1808,
+      "order": 57
+    },
+    {
+      "name": "Dependiente",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        -3.2,
+        2.85,
+        7.3
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [
+        {
+          "class": "Billboard",
+          "fields": {
+            "m_Enabled": 1
+          }
+        }
+      ],
+      "colliders": [],
+      "sounds": [],
+      "sprite": {
+        "sprite": 273,
+        "enabled": true,
+        "color": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "chapter_min": 2037,
+      "chapter_max": 2048,
+      "order": 58
+    },
+    {
+      "name": "Vecina",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        9.65,
+        2.85,
+        7.92
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [
+        {
+          "class": "Billboard",
+          "fields": {
+            "m_Enabled": 1
+          }
+        }
+      ],
+      "colliders": [],
+      "sounds": [],
+      "sprite": {
+        "sprite": 274,
+        "enabled": true,
+        "color": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "chapter_min": 2037,
+      "chapter_max": 2048,
+      "order": 59
+    },
+    {
+      "name": "Vecino",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        11.2,
+        2.85,
+        7.94
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [
+        {
+          "class": "Billboard",
+          "fields": {
+            "m_Enabled": 1
+          }
+        }
+      ],
+      "colliders": [],
+      "sounds": [],
+      "sprite": {
+        "sprite": 275,
+        "enabled": true,
+        "color": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "chapter_min": 2037,
+      "chapter_max": 2048,
+      "order": 60
+    },
+    {
+      "name": "Vehículos en la avenida",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        3,
+        0.8,
+        -4
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [
+        {
+          "clip": 97,
+          "volume": 0.48,
+          "pitch": 1,
+          "loop": true,
+          "autoplay": true
+        }
+      ],
+      "sound_radius": 32,
+      "order": 61
+    },
+    {
+      "name": "Audio local",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "order": 62
+    }
+  ],
+  "ambient": [
+    0.24,
+    0.25,
+    0.29
+  ],
+  "ambient_intensity": 1,
+  "custom_camera": true,
+  "dars_player": true,
+  "walk_rate": 0.91,
+  "chapter_events": [
+    {
+      "stage": 1701,
+      "next": 1702,
+      "interact": 1,
+      "delay": 0.18,
+      "pages": [
+        {
+          "transient_texture": 4803
+        },
+        {
+          "transient_texture": 4804
+        },
+        {
+          "transient_texture": 4805
+        }
+      ],
+      "pos": [
+        -12.8,
+        2.64,
+        6.7
+      ],
+      "radius": 1.52
+    },
+    {
+      "stage": 1702,
+      "next": 1713,
+      "interact": 0,
+      "delay": 0.18,
+      "pages": [],
+      "choice_texture": 4806,
+      "choices": [
+        {
+          "next": 1713
+        },
+        {
+          "next": 1703,
+          "clock_add": 420
+        }
+      ]
+    },
+    {
+      "stage": 1703,
+      "next": 1713,
+      "interact": 1,
+      "delay": 0.18,
+      "pages": [
+        {
+          "transient_texture": 4807
+        }
+      ],
+      "pos": [
+        -13.5,
+        2.64,
+        -10.15
+      ],
+      "radius": 1.52,
+      "warp": [
+        22.7,
+        2.64,
+        5.7
+      ]
+    },
+    {
+      "stage": 2037,
+      "next": 2038,
+      "interact": 1,
+      "delay": 0.18,
+      "pages": [
+        {
+          "transient_texture": 4747
+        },
+        {
+          "transient_texture": 5042
+        }
+      ],
+      "pos": [
+        -3.2,
+        2.64,
+        -1.1
+      ],
+      "radius": 1.52
+    },
+    {
+      "stage": 2038,
+      "next": 2049,
+      "interact": 0,
+      "delay": 0.18,
+      "pages": [],
+      "choice_texture": 5043,
+      "choices": [
+        {
+          "next": 2039,
+          "set_flags": 64
+        },
+        {
+          "next": 2040
+        }
+      ]
+    },
+    {
+      "stage": 2039,
+      "next": 2040,
+      "interact": 1,
+      "delay": 0.18,
+      "pages": [
+        {
+          "transient_texture": 5044
+        },
+        {
+          "transient_texture": 4874
+        }
+      ],
+      "pos": [
+        -2.9,
+        2.64,
+        7.25
+      ],
+      "radius": 1.52
+    },
+    {
+      "stage": 2040,
+      "next": 2049,
+      "interact": 1,
+      "delay": 0.18,
+      "pages": [
+        {
+          "transient_texture": 4747
+        },
+        {
+          "transient_texture": 5045
+        }
+      ],
+      "pos": [
+        -21.2,
+        2.64,
+        6.11
+      ],
+      "radius": 1.52
+    }
+  ],
+  "search_inspections": [],
+  "portals": [
+    {
+      "target": "casaDars",
+      "pos": [
+        -21.2,
+        2.64,
+        7.4
+      ],
+      "radius": 1.24,
+      "min_stage": 1617,
+      "max_stage": 1617
+    },
+    {
+      "target": "casaDars",
+      "pos": [
+        -21.2,
+        2.64,
+        7.4
+      ],
+      "radius": 1.24,
+      "min_stage": 1618,
+      "max_stage": 1618
+    },
+    {
+      "target": "casaDars",
+      "pos": [
+        -21.2,
+        2.64,
+        7.4
+      ],
+      "radius": 1.24,
+      "min_stage": 1629,
+      "max_stage": 1629
+    },
+    {
+      "target": "casaDars",
+      "pos": [
+        -21.2,
+        2.64,
+        7.4
+      ],
+      "radius": 1.24,
+      "min_stage": 1641,
+      "max_stage": 1641
+    },
+    {
+      "target": "casaDars",
+      "pos": [
+        -21.2,
+        2.64,
+        7.4
+      ],
+      "radius": 1.24,
+      "min_stage": 1642,
+      "max_stage": 1642
+    },
+    {
+      "target": "casaDars",
+      "pos": [
+        -21.2,
+        2.64,
+        7.4
+      ],
+      "radius": 1.24,
+      "min_stage": 1653,
+      "max_stage": 1653
+    },
+    {
+      "target": "casaDars",
+      "pos": [
+        -21.2,
+        2.64,
+        7.4
+      ],
+      "radius": 1.24,
+      "min_stage": 1654,
+      "max_stage": 1654
+    },
+    {
+      "target": "casaDars",
+      "pos": [
+        -21.2,
+        2.64,
+        7.4
+      ],
+      "radius": 1.24,
+      "min_stage": 1655,
+      "max_stage": 1655
+    },
+    {
+      "target": "casaDars",
+      "pos": [
+        -21.2,
+        2.64,
+        7.4
+      ],
+      "radius": 1.24,
+      "min_stage": 1665,
+      "max_stage": 1665
+    },
+    {
+      "target": "casaDars",
+      "pos": [
+        -21.2,
+        2.64,
+        7.4
+      ],
+      "radius": 1.24,
+      "min_stage": 1666,
+      "max_stage": 1666
+    },
+    {
+      "target": "casaDars",
+      "pos": [
+        -21.2,
+        2.64,
+        7.4
+      ],
+      "radius": 1.24,
+      "min_stage": 1667,
+      "max_stage": 1667
+    },
+    {
+      "target": "casaDars",
+      "pos": [
+        -21.2,
+        2.64,
+        7.4
+      ],
+      "radius": 1.24,
+      "min_stage": 1677,
+      "max_stage": 1677
+    },
+    {
+      "target": "casaDars",
+      "pos": [
+        -21.2,
+        2.64,
+        7.4
+      ],
+      "radius": 1.24,
+      "min_stage": 1689,
+      "max_stage": 1689
+    },
+    {
+      "target": "casaDars",
+      "pos": [
+        -21.2,
+        2.64,
+        7.4
+      ],
+      "radius": 1.24,
+      "min_stage": 1690,
+      "max_stage": 1690
+    },
+    {
+      "target": "casaFamiliarDars",
+      "pos": [
+        22.7,
+        2.64,
+        7.4
+      ],
+      "radius": 1.23,
+      "min_stage": 1713,
+      "max_stage": 1713
+    },
+    {
+      "target": "casaFamiliarDars",
+      "pos": [
+        22.7,
+        2.64,
+        7.4
+      ],
+      "radius": 1.23,
+      "min_stage": 1725,
+      "max_stage": 1725
+    },
+    {
+      "target": "casaFamiliarDars",
+      "pos": [
+        22.7,
+        2.64,
+        7.4
+      ],
+      "radius": 1.23,
+      "min_stage": 1726,
+      "max_stage": 1726
+    },
+    {
+      "target": "casaFamiliarDars",
+      "pos": [
+        22.7,
+        2.64,
+        7.4
+      ],
+      "radius": 1.23,
+      "min_stage": 1727,
+      "max_stage": 1727
+    },
+    {
+      "target": "casaFamiliarDars",
+      "pos": [
+        22.7,
+        2.64,
+        7.4
+      ],
+      "radius": 1.23,
+      "min_stage": 1728,
+      "max_stage": 1728
+    },
+    {
+      "target": "casaFamiliarDars",
+      "pos": [
+        22.7,
+        2.64,
+        7.4
+      ],
+      "radius": 1.23,
+      "min_stage": 1737,
+      "max_stage": 1737
+    },
+    {
+      "target": "casaFamiliarDars",
+      "pos": [
+        22.7,
+        2.64,
+        7.4
+      ],
+      "radius": 1.23,
+      "min_stage": 1749,
+      "max_stage": 1749
+    },
+    {
+      "target": "casaFamiliarDars",
+      "pos": [
+        22.7,
+        2.64,
+        7.4
+      ],
+      "radius": 1.23,
+      "min_stage": 1761,
+      "max_stage": 1761
+    },
+    {
+      "target": "casaFamiliarDars",
+      "pos": [
+        22.7,
+        2.64,
+        7.4
+      ],
+      "radius": 1.23,
+      "min_stage": 1773,
+      "max_stage": 1773
+    },
+    {
+      "target": "casaDars",
+      "pos": [
+        -21.2,
+        2.64,
+        7.4
+      ],
+      "radius": 1.24,
+      "min_stage": 1785,
+      "max_stage": 1785
+    },
+    {
+      "target": "casaDars",
+      "pos": [
+        -21.2,
+        2.64,
+        7.4
+      ],
+      "radius": 1.24,
+      "min_stage": 1797,
+      "max_stage": 1797
+    },
+    {
+      "target": "casaDars",
+      "pos": [
+        -21.2,
+        2.64,
+        7.4
+      ],
+      "radius": 1.24,
+      "min_stage": 1798,
+      "max_stage": 1798
+    },
+    {
+      "target": "tiendaDarsExterior",
+      "pos": [
+        28,
+        2.64,
+        -4
+      ],
+      "radius": 1.15,
+      "min_stage": 1809,
+      "max_stage": 1809
+    },
+    {
+      "target": "tiendaDarsExterior",
+      "pos": [
+        28,
+        2.64,
+        -4
+      ],
+      "radius": 1.15,
+      "min_stage": 1821,
+      "max_stage": 1821
+    },
+    {
+      "target": "tiendaDarsExterior",
+      "pos": [
+        28,
+        2.64,
+        -4
+      ],
+      "radius": 1.15,
+      "min_stage": 1833,
+      "max_stage": 1833
+    },
+    {
+      "target": "tiendaDarsExterior",
+      "pos": [
+        28,
+        2.64,
+        -4
+      ],
+      "radius": 1.15,
+      "min_stage": 1845,
+      "max_stage": 1845
+    },
+    {
+      "target": "tiendaDarsExterior",
+      "pos": [
+        28,
+        2.64,
+        -4
+      ],
+      "radius": 1.15,
+      "min_stage": 1846,
+      "max_stage": 1846
+    },
+    {
+      "target": "tiendaDarsExterior",
+      "pos": [
+        28,
+        2.64,
+        -4
+      ],
+      "radius": 1.15,
+      "min_stage": 1857,
+      "max_stage": 1857
+    },
+    {
+      "target": "tiendaDarsExterior",
+      "pos": [
+        28,
+        2.64,
+        -4
+      ],
+      "radius": 1.15,
+      "min_stage": 1858,
+      "max_stage": 1858
+    },
+    {
+      "target": "tiendaDarsExterior",
+      "pos": [
+        28,
+        2.64,
+        -4
+      ],
+      "radius": 1.15,
+      "min_stage": 1869,
+      "max_stage": 1869
+    },
+    {
+      "target": "tiendaDarsExterior",
+      "pos": [
+        28,
+        2.64,
+        -4
+      ],
+      "radius": 1.15,
+      "min_stage": 1870,
+      "max_stage": 1870
+    },
+    {
+      "target": "tiendaDarsExterior",
+      "pos": [
+        28,
+        2.64,
+        -4
+      ],
+      "radius": 1.15,
+      "min_stage": 1881,
+      "max_stage": 1881
+    },
+    {
+      "target": "tiendaDarsExterior",
+      "pos": [
+        28,
+        2.64,
+        -4
+      ],
+      "radius": 1.15,
+      "min_stage": 1882,
+      "max_stage": 1882
+    },
+    {
+      "target": "tiendaDarsExterior",
+      "pos": [
+        28,
+        2.64,
+        -4
+      ],
+      "radius": 1.15,
+      "min_stage": 1883,
+      "max_stage": 1883
+    },
+    {
+      "target": "tiendaDarsExterior",
+      "pos": [
+        28,
+        2.64,
+        -4
+      ],
+      "radius": 1.15,
+      "min_stage": 1884,
+      "max_stage": 1884
+    },
+    {
+      "target": "tiendaDarsExterior",
+      "pos": [
+        28,
+        2.64,
+        -4
+      ],
+      "radius": 1.15,
+      "min_stage": 1893,
+      "max_stage": 1893
+    },
+    {
+      "target": "tiendaDarsExterior",
+      "pos": [
+        28,
+        2.64,
+        -4
+      ],
+      "radius": 1.15,
+      "min_stage": 1894,
+      "max_stage": 1894
+    },
+    {
+      "target": "tiendaDarsExterior",
+      "pos": [
+        28,
+        2.64,
+        -4
+      ],
+      "radius": 1.15,
+      "min_stage": 1895,
+      "max_stage": 1895
+    },
+    {
+      "target": "tiendaDarsExterior",
+      "pos": [
+        28,
+        2.64,
+        -4
+      ],
+      "radius": 1.15,
+      "min_stage": 1896,
+      "max_stage": 1896
+    },
+    {
+      "target": "tiendaDarsExterior",
+      "pos": [
+        28,
+        2.64,
+        -4
+      ],
+      "radius": 1.15,
+      "min_stage": 1905,
+      "max_stage": 1905
+    },
+    {
+      "target": "tiendaDarsExterior",
+      "pos": [
+        28,
+        2.64,
+        -4
+      ],
+      "radius": 1.15,
+      "min_stage": 1906,
+      "max_stage": 1906
+    },
+    {
+      "target": "tiendaDarsExterior",
+      "pos": [
+        28,
+        2.64,
+        -4
+      ],
+      "radius": 1.15,
+      "min_stage": 1917,
+      "max_stage": 1917
+    },
+    {
+      "target": "tiendaDarsExterior",
+      "pos": [
+        28,
+        2.64,
+        -4
+      ],
+      "radius": 1.15,
+      "min_stage": 1929,
+      "max_stage": 1929
+    },
+    {
+      "target": "tiendaDarsExterior",
+      "pos": [
+        28,
+        2.64,
+        -4
+      ],
+      "radius": 1.15,
+      "min_stage": 1930,
+      "max_stage": 1930
+    },
+    {
+      "target": "tiendaDarsExterior",
+      "pos": [
+        28,
+        2.64,
+        -4
+      ],
+      "radius": 1.15,
+      "min_stage": 1931,
+      "max_stage": 1931
+    },
+    {
+      "target": "tiendaDarsExterior",
+      "pos": [
+        28,
+        2.64,
+        -4
+      ],
+      "radius": 1.15,
+      "min_stage": 1941,
+      "max_stage": 1941
+    },
+    {
+      "target": "tiendaDarsExterior",
+      "pos": [
+        28,
+        2.64,
+        -4
+      ],
+      "radius": 1.15,
+      "min_stage": 1953,
+      "max_stage": 1953
+    },
+    {
+      "target": "tiendaDarsExterior",
+      "pos": [
+        28,
+        2.64,
+        -4
+      ],
+      "radius": 1.15,
+      "min_stage": 1965,
+      "max_stage": 1965
+    },
+    {
+      "target": "tiendaDarsExterior",
+      "pos": [
+        28,
+        2.64,
+        -4
+      ],
+      "radius": 1.15,
+      "min_stage": 1966,
+      "max_stage": 1966
+    },
+    {
+      "target": "tiendaDarsExterior",
+      "pos": [
+        28,
+        2.64,
+        -4
+      ],
+      "radius": 1.15,
+      "min_stage": 1977,
+      "max_stage": 1977
+    },
+    {
+      "target": "tiendaDarsExterior",
+      "pos": [
+        28,
+        2.64,
+        -4
+      ],
+      "radius": 1.15,
+      "min_stage": 1978,
+      "max_stage": 1978
+    },
+    {
+      "target": "tiendaDarsExterior",
+      "pos": [
+        28,
+        2.64,
+        -4
+      ],
+      "radius": 1.15,
+      "min_stage": 1979,
+      "max_stage": 1979
+    },
+    {
+      "target": "tiendaDarsExterior",
+      "pos": [
+        28,
+        2.64,
+        -4
+      ],
+      "radius": 1.15,
+      "min_stage": 1989,
+      "max_stage": 1989
+    },
+    {
+      "target": "tiendaDarsExterior",
+      "pos": [
+        28,
+        2.64,
+        -4
+      ],
+      "radius": 1.15,
+      "min_stage": 2001,
+      "max_stage": 2001
+    },
+    {
+      "target": "tiendaDarsExterior",
+      "pos": [
+        28,
+        2.64,
+        -4
+      ],
+      "radius": 1.15,
+      "min_stage": 2002,
+      "max_stage": 2002
+    },
+    {
+      "target": "tiendaDarsExterior",
+      "pos": [
+        28,
+        2.64,
+        -4
+      ],
+      "radius": 1.15,
+      "min_stage": 2003,
+      "max_stage": 2003
+    },
+    {
+      "target": "tiendaDarsExterior",
+      "pos": [
+        28,
+        2.64,
+        -4
+      ],
+      "radius": 1.15,
+      "min_stage": 2013,
+      "max_stage": 2013
+    },
+    {
+      "target": "tiendaDarsExterior",
+      "pos": [
+        28,
+        2.64,
+        -4
+      ],
+      "radius": 1.15,
+      "min_stage": 2025,
+      "max_stage": 2025
+    },
+    {
+      "target": "casaDars",
+      "pos": [
+        -21.2,
+        2.64,
+        7.4
+      ],
+      "radius": 1.24,
+      "min_stage": 2049,
+      "max_stage": 2049
+    },
+    {
+      "target": "casaDars",
+      "pos": [
+        -21.2,
+        2.64,
+        7.4
+      ],
+      "radius": 1.24,
+      "min_stage": 2050,
+      "max_stage": 2050
+    },
+    {
+      "target": "casaDars",
+      "pos": [
+        -21.2,
+        2.64,
+        7.4
+      ],
+      "radius": 1.24,
+      "min_stage": 2061,
+      "max_stage": 2061
+    },
+    {
+      "target": "casaDars",
+      "pos": [
+        -21.2,
+        2.64,
+        7.4
+      ],
+      "radius": 1.24,
+      "min_stage": 2073,
+      "max_stage": 2073
+    },
+    {
+      "target": "casaDars",
+      "pos": [
+        -21.2,
+        2.64,
+        7.4
+      ],
+      "radius": 1.24,
+      "min_stage": 2085,
+      "max_stage": 2085
+    },
+    {
+      "target": "casaDars",
+      "pos": [
+        -21.2,
+        2.64,
+        7.4
+      ],
+      "radius": 1.24,
+      "min_stage": 2086,
+      "max_stage": 2086
+    },
+    {
+      "target": "casaDars",
+      "pos": [
+        -21.2,
+        2.64,
+        7.4
+      ],
+      "radius": 1.24,
+      "min_stage": 2541,
+      "max_stage": 2541
+    },
+    {
+      "target": "casaDars",
+      "pos": [
+        -21.2,
+        2.64,
+        7.4
+      ],
+      "radius": 1.24,
+      "min_stage": 2542,
+      "max_stage": 2542
+    },
+    {
+      "target": "casaDars",
+      "pos": [
+        -21.2,
+        2.64,
+        7.4
+      ],
+      "radius": 1.24,
+      "min_stage": 2553,
+      "max_stage": 2553
+    },
+    {
+      "target": "casaDars",
+      "pos": [
+        -21.2,
+        2.64,
+        7.4
+      ],
+      "radius": 1.24,
+      "min_stage": 2565,
+      "max_stage": 2565
+    },
+    {
+      "target": "casaDars",
+      "pos": [
+        -21.2,
+        2.64,
+        7.4
+      ],
+      "radius": 1.24,
+      "min_stage": 2566,
+      "max_stage": 2566
+    }
+  ],
+  "arrival": {
+    "casaDars": [
+      -21.2,
+      2.64,
+      5.85
+    ],
+    "casaFamiliarDars": [
+      22.7,
+      2.64,
+      5.86
+    ],
+    "tiendaDarsExterior": [
+      26.55,
+      2.64,
+      -4
+    ]
+  },
+  "footstep_surface": "concreto",
+  "day_background": [
+    0.35,
+    0.41,
+    0.49,
+    1
+  ],
+  "day_from": 1701,
+  "day_to": 1808,
+  "route_objectives": {
+    "1617": 5282,
+    "1618": 5282,
+    "1629": 5288,
+    "1641": 5295,
+    "1642": 5295,
+    "1653": 5300,
+    "1654": 5300,
+    "1655": 5300,
+    "1665": 5307,
+    "1666": 5307,
+    "1667": 5307,
+    "1677": 5314,
+    "1689": 5319,
+    "1690": 5319,
+    "1713": 5334,
+    "1725": 5340,
+    "1726": 5340,
+    "1727": 5340,
+    "1728": 5340,
+    "1737": 5349,
+    "1749": 5355,
+    "1761": 5361,
+    "1773": 5367,
+    "1785": 5371,
+    "1797": 5376,
+    "1798": 5376,
+    "1809": 5384,
+    "1821": 5389,
+    "1833": 5394,
+    "1845": 5399,
+    "1846": 5399,
+    "1857": 5405,
+    "1858": 5405,
+    "1869": 5411,
+    "1870": 5411,
+    "1881": 5417,
+    "1882": 5417,
+    "1883": 5417,
+    "1884": 5417,
+    "1893": 5425,
+    "1894": 5425,
+    "1895": 5425,
+    "1896": 5425,
+    "1905": 5433,
+    "1906": 5433,
+    "1917": 5439,
+    "1929": 5444,
+    "1930": 5444,
+    "1931": 5444,
+    "1941": 5451,
+    "1953": 5457,
+    "1965": 5463,
+    "1966": 5463,
+    "1977": 5469,
+    "1978": 5469,
+    "1979": 5469,
+    "1989": 5476,
+    "2001": 5481,
+    "2002": 5481,
+    "2003": 5481,
+    "2013": 5488,
+    "2025": 5493,
+    "2049": 5504,
+    "2050": 5504,
+    "2061": 5510,
+    "2073": 5515,
+    "2085": 5520,
+    "2086": 5520,
+    "2541": 5575,
+    "2542": 5575,
+    "2553": 5581,
+    "2565": 5586,
+    "2566": 5586
+  },
+  "index": 72,
+  "campaign_audio_node": 62
+}

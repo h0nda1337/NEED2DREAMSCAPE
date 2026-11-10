@@ -156,6 +156,263 @@ static int overlap(const double *amin, const double *amax, const double *bmin, c
 {
     return amin[0] < bmax[0] && amax[0] > bmin[0] && amin[1] < bmax[1] && amax[1] > bmin[1] && amin[2] < bmax[2] && amax[2] > bmin[2];
 }
+int terrain_height(double x,double z,double *height)
+{
+    Json *terrain;
+    Json *heights;
+    double origin[2];
+    double step;
+    double u;
+    double v;
+    double a,b,c,d;
+    int columns,rows,i,j,index;
+    terrain=jg(E.scene,"terrain");
+    if(!terrain)return 0;
+    jvec(jg(terrain,"origin"),origin,2);
+    columns=ji(jg(terrain,"columns"),0);rows=ji(jg(terrain,"rows"),0);
+    step=json_number(jg(terrain,"step"),0);
+    if(step<=0||columns<2||rows<2)return 0;
+    u=(x-origin[0])/step;v=(z-origin[1])/step;
+    if(u<0||v<0||u>=columns-1||v>=rows-1)return 0;
+    i=(int)u;j=(int)v;u-=i;v-=j;
+    heights=jg(terrain,"heights");index=j*columns+i;
+    a=json_number(ja(heights,index),0);b=json_number(ja(heights,index+1),0);
+    c=json_number(ja(heights,index+columns),0);d=json_number(ja(heights,index+columns+1),0);
+    if(u+v<=1)*height=a+(b-a)*u+(c-a)*v;
+    else *height=d+(c-d)*(1-u)+(b-d)*(1-v);
+    return 1;
+}
+
+/* A positive place identifies a shelf, zero the receiving tray, and the two
+ * negative places are Dars's hands and the cart. A saved item has one place. */
+enum { SHOP_HANDS=-1, SHOP_CART=-2, SHOP_TRAY=0 };
+
+static Json *shop_data(void) { return jg(E.scene,"stock"); }
+static Json *shop_items(void) { return jg(shop_data(),"items"); }
+static Json *shop_shelves(void) { return jg(shop_data(),"shelves"); }
+static int shop_item_count(void)
+{
+    int count;
+    count=jc(shop_items());return count<SHOP_ITEMS?count:SHOP_ITEMS;
+}
+static int shop_available(int item)
+{
+    return E.search_progress>=ji(jg(ja(shop_items(),item),"stage"),2147483647);
+}
+static int shop_near(double x,double z,double radius)
+{
+    double dx,dz;
+    if(!node_valid(E.player))return 0;
+    dx=E.nodes[E.player].p[0]-x;dz=E.nodes[E.player].p[2]-z;
+    return dx*dx+dz*dz<radius*radius;
+}
+static int shop_correct(int item)
+{
+    Json *data;
+    data=ja(shop_items(),item);
+    return E.shop_place[item]==ji(jg(data,"shelf"),-3)+1&&E.shop_tier[item]==ji(jg(data,"tier"),0)&&
+        (!ji(jg(data,"must_inspect"),0)||(E.shop_inspected&(1UL<<item)));
+}
+int shop_errors(void)
+{
+    int i,errors;
+    errors=0;
+    for(i=0;i<shop_item_count();++i)
+        if(shop_available(i)&&!ji(jg(ja(shop_items(),i),"optional"),0)&&!shop_correct(i))++errors;
+    return errors;
+}
+int shop_placed(Json *event)
+{
+    int i,placed;
+    placed=0;
+    for(i=0;i<shop_item_count();++i)
+        if(i>=ji(jg(event,"stock_from"),0)&&i<=ji(jg(event,"stock_to"),SHOP_ITEMS-1)&&E.shop_place[i]>0)++placed;
+    return placed;
+}
+int shop_ready(Json *event)
+{
+    const char *check;
+    int i;
+    check=js(jg(event,"stock_check"));
+    if(!*check)return 1;
+    for(i=0;i<shop_item_count();++i){
+        if(i<ji(jg(event,"stock_from"),0)||i>ji(jg(event,"stock_to"),SHOP_ITEMS-1))continue;
+        if(!strcmp(check,"correct")){if(!shop_correct(i))return 0;}
+        else if(E.shop_place[i]<=0)return 0;
+    }
+    return 1;
+}
+static int shop_nearest_item(void)
+{
+    int i,node,nearest;
+    double dx,dz,distance,best;
+    if(!node_valid(E.player))return -1;
+    nearest=-1;best=1.65*1.65;
+    for(i=0;i<shop_item_count();++i){
+        if(!shop_available(i)||E.shop_place[i]<0)continue;
+        node=ji(jg(ja(shop_items(),i),"node"),-1);
+        if(!node_valid(node))continue;
+        dx=E.nodes[node].p[0]-E.nodes[E.player].p[0];dz=E.nodes[node].p[2]-E.nodes[E.player].p[2];
+        distance=dx*dx+dz*dz;
+        if(distance<best){best=distance;nearest=i;}
+    }
+    return nearest;
+}
+int shop_carried(void)
+{
+    int i;
+    if(E.shop_selected>=0&&E.shop_selected<shop_item_count()&&E.shop_place[E.shop_selected]==SHOP_HANDS)return E.shop_selected;
+    for(i=0;i<shop_item_count();++i)if(E.shop_place[i]==SHOP_HANDS)return i;
+    for(i=0;i<shop_item_count();++i)if(E.shop_place[i]==SHOP_CART)return i;
+    return -1;
+}
+static void shop_note(const char *message)
+{
+    E.shop_notice=message;E.shop_notice_until=E.elapsed+3.5;
+}
+void shop_swap(void)
+{
+    int i,held;
+    held=shop_carried();
+    if(held<0)return;
+    for(i=1;i<shop_item_count();++i)
+        if(E.shop_place[(held+i)%shop_item_count()]==SHOP_HANDS){E.shop_selected=(held+i)%shop_item_count();return;}
+}
+int shop_inspect(void)
+{
+    int item;
+    if(!shop_data())return 0;
+    item=shop_carried();
+    if(item<0||E.shop_place[item]!=SHOP_HANDS)item=shop_nearest_item();
+    if(item<0)item=shop_carried();
+    if(item<0)return 0;
+    E.shop_inspected|=1UL<<item;E.shop_label=item;
+    E.shop_notice_until=E.elapsed+5;
+    engine_save();
+    return 1;
+}
+void shop_update(void)
+{
+    Json *data;
+    Json *shelf;
+    double pos[3];
+    int i,node,cart,place;
+    if(!shop_data()||!node_valid(E.player))return;
+    cart=ji(jg(shop_data(),"cart"),-1);
+    if(node_valid(cart)){
+        if(E.shop_push_cart){
+            E.shop_cart_position[0]=E.nodes[E.player].p[0];
+            E.shop_cart_position[1]=E.nodes[E.player].p[2]-.85;
+            E.shop_cart_saved=1;
+        }
+        if(E.shop_cart_saved){E.nodes[cart].p[0]=E.shop_cart_position[0];E.nodes[cart].p[2]=E.shop_cart_position[1];}
+    }
+    for(i=0;i<shop_item_count();++i){
+        data=ja(shop_items(),i);node=ji(jg(data,"node"),-1);
+        if(!node_valid(node))continue;
+        E.nodes[node].active=shop_available(i);
+        place=E.shop_place[i];
+        if(place==SHOP_HANDS){
+            memcpy(pos,E.nodes[E.player].p,sizeof(pos));pos[0]+=(i==shop_carried()?-.54:.54);pos[1]-=1.48;pos[2]-=.28;
+        }else if(place==SHOP_CART&&node_valid(cart)){
+            memcpy(pos,E.nodes[cart].p,sizeof(pos));pos[0]+=.33*((i%3)-1);pos[1]+=.54;pos[2]+=.25*((i%2)-1);
+        }else if(place>0&&(shelf=ja(shop_shelves(),place-1))!=NULL){
+            jvec(jg(shelf,"display"),pos,3);pos[0]+=.27*((i%5)-2);pos[1]+=.83*E.shop_tier[i];
+        }else jvec(jg(E.nodes[node].data,"pos"),pos,3);
+        memcpy(E.nodes[node].p,pos,sizeof(pos));
+    }
+    world_update();
+}
+int shop_interact(void)
+{
+    Json *data;
+    Json *shelf;
+    double pos[3];
+    int i,shelf_index,held,item,cart,weight,load,hands,oversized,cart_items;
+    if(!shop_data()||!node_valid(E.player))return 0;
+    cart=ji(jg(shop_data(),"cart"),-1);
+    held=shop_carried();shelf_index=-1;
+    for(i=0;i<jc(shop_shelves());++i){
+        jvec(jg(ja(shop_shelves(),i),"pos"),pos,3);
+        if(shop_near(pos[0],pos[2],1.30)){shelf_index=i;break;}
+    }
+    if(held>=0&&shelf_index>=0&&(E.shop_place[held]!=SHOP_CART||
+       (node_valid(cart)&&shop_near(E.nodes[cart].p[0],E.nodes[cart].p[2],2)))){
+        data=ja(shop_items(),held);shelf=ja(shop_shelves(),shelf_index);
+        weight=ji(jg(data,"grams"),0);
+        load=weight;
+        for(i=0;i<shop_item_count();++i)if(E.shop_place[i]==shelf_index+1&&E.shop_tier[i]==E.shop_level)
+            load+=ji(jg(ja(shop_items(),i),"grams"),0);
+        if(load>ji(jg(shelf,E.shop_level?"medium_limit":"low_limit"),10000)||(weight>=4000&&E.shop_level)){
+            shop_note("Demasiado peso para este nivel. Usa el nivel bajo.");return 1;
+        }
+        E.shop_place[held]=shelf_index+1;E.shop_tier[held]=E.shop_level;
+        if(shop_correct(held))shop_note("Artículo registrado.");
+        else{if(E.shop_incidents<999)++E.shop_incidents;shop_note("Ubicación incorrecta. Puedes recolocar el artículo.");}
+        E.shop_label=held;E.shop_selected=-1;shop_update();engine_save();return 1;
+    }
+    item=shop_nearest_item();
+    if(item>=0){
+        data=ja(shop_items(),item);weight=ji(jg(data,"grams"),0);
+        hands=0;oversized=0;cart_items=0;
+        for(i=0;i<shop_item_count();++i){
+            if(E.shop_place[i]==SHOP_HANDS){++hands;if(ji(jg(ja(shop_items(),i),"grams"),0)>=1600)oversized=1;}
+            if(E.shop_place[i]==SHOP_CART)++cart_items;
+        }
+        if(weight>=4000){
+            if(!node_valid(cart)||!shop_near(E.nodes[cart].p[0],E.nodes[cart].p[2],2.1)){
+                shop_note("Necesitas traer el carrito a esta caja.");return 1;
+            }
+            if(cart_items>=3){shop_note("El carrito está lleno. Descarga primero.");return 1;}
+            E.shop_place[item]=SHOP_CART;shop_note("Caja asentada en la plataforma del carrito.");
+        }else{
+            if(oversized||hands>=2||(hands&&weight>=1600)){
+                shop_note("Tienes las manos ocupadas.");return 1;
+            }
+            E.shop_place[item]=SHOP_HANDS;E.shop_selected=item;
+            shop_note(ji(jg(data,"fragile"),0)?"Frágil. Dars camina más despacio.":"Artículo en mano. Llévalo al estante.");
+        }
+        E.shop_label=item;shop_update();engine_save();return 1;
+    }
+    if(node_valid(cart)&&(E.shop_push_cart||shop_near(E.nodes[cart].p[0],E.nodes[cart].p[2],1.75))){
+        E.shop_push_cart=!E.shop_push_cart;
+        shop_note(E.shop_push_cart?"Carrito sujeto. Camina y pulsa E para soltar.":"Carrito estacionado.");
+        shop_update();engine_save();return 1;
+    }
+    return 0;
+}
+Json *shop_waypoint(Json *event)
+{
+    Json *data;
+    int item,held,node;
+    held=shop_carried();
+    if(held>=0&&E.shop_place[held]!=SHOP_CART){
+        data=ja(shop_items(),held);return jg(ja(shop_shelves(),ji(jg(data,"shelf"),-1)),"pos");
+    }
+    for(item=0;item<shop_item_count();++item){
+        if(item<ji(jg(event,"stock_from"),0)||item>ji(jg(event,"stock_to"),SHOP_ITEMS-1)||shop_correct(item))continue;
+        data=ja(shop_items(),item);
+        if(E.shop_place[item]>0)return jg(ja(shop_shelves(),E.shop_place[item]-1),"pos");
+        if(E.shop_place[item]==SHOP_CART)return jg(ja(shop_shelves(),ji(jg(data,"shelf"),-1)),"pos");
+        node=ji(jg(data,"node"),-1);
+        return node_valid(node)?jg(E.nodes[node].data,"pos"):NULL;
+    }
+    return NULL;
+}
+
+double player_walk_rate(void)
+{
+    double rate;
+    int carried;
+    rate=json_number(jg(E.scene,"walk_rate"),1);
+    if(ji(jg(E.scene,"dars_home"),0)&&E.search_progress<ji(jg(E.game,"chapter_four_start"),0)+24)
+        rate*=.82;
+    carried=shop_carried();
+    if(E.shop_push_cart)rate*=.68;
+    else if(carried>=0&&E.shop_place[carried]==SHOP_HANDS&&ji(jg(ja(shop_items(),carried),"fragile"),0))rate*=.76;
+    return rate;
+}
+
 void movement_step(int direction, double amount)
 {
     Node *p;
@@ -173,6 +430,7 @@ void movement_step(int direction, double amount)
     double penetration;
     double separating_motion;
     double foot_tolerance;
+    double ground;
     int i;
     int j;
     int hit;
@@ -182,6 +440,7 @@ void movement_step(int direction, double amount)
     int blocking_contact;
     if (!node_valid(E.player) || custom_movement_locked()) return;
     if (ji(jg(E.scene, "custom_camera"),0) && amount <= 0) return;
+    amount*=player_walk_rate();
     p = E.nodes + E.player;
     stationary[0]=stationary[1]=stationary[2]=0;
     memcpy(old, p->p, sizeof(old));
@@ -189,6 +448,10 @@ void movement_step(int direction, double amount)
     if (direction == 1) p->p[0] -= amount;
     if (direction == 2) p->p[2] -= amount;
     if (direction == 3) p->p[0] += amount;
+    if(jg(E.scene,"terrain")){
+        if(!terrain_height(p->p[0],p->p[2],&ground)){memcpy(p->p,old,sizeof(old));return;}
+        p->p[1]=ground+json_number(jg(E.scene,"player_height"),2.64);
+    }
     world_update();
     if (!custom_position_supported()) {
         memcpy(p->p, old, sizeof(old));

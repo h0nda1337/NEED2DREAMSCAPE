@@ -39,6 +39,10 @@ enum { SAVE_MENU_CLOSED, SAVE_MENU_LOAD, SAVE_MENU_PAUSE };
 typedef struct {
     int level, story, key, computer, stage, choice, flags;
     int third_flags, relationship;
+    int fourth_flags, shop_incidents, cart_saved;
+    int shop_place[SHOP_ITEMS], shop_tier[SHOP_ITEMS];
+    unsigned long shop_inspected;
+    double cart_position[2];
     unsigned long categories;
     int has_position;
     double clock_seconds;
@@ -81,6 +85,7 @@ static int chapter_complete(void);
 static void render_investigation(void);
 static int investigation_input(SDL_Event *event);
 static void render_chapter_documents(void);
+static void render_shop(void);
 static void menu_text(const char *value,double x,double y,double scale);
 static void save_box(double x,double y,double w,double h,int selected);
 static void chapter_drag_release(void);
@@ -269,6 +274,14 @@ int custom_position_supported(void)
     int i,j,k,covered;
     if(!node_valid(E.player)||!ji(jg(E.scene,"custom_camera"),0))return 1;
     collider_bounds(E.player,ja(jg(E.nodes[E.player].data,"colliders"),0),player_min,player_max);
+    if(jg(E.scene,"terrain")){
+        double height;
+        for(k=0;k<4;++k){
+            x=k&1?player_max[0]:player_min[0];z=k&2?player_max[2]:player_min[2];
+            if(!terrain_height(x,z,&height)||fabs(height-player_min[1])>.70)return 0;
+        }
+        return 1;
+    }
     tolerance=json_number(jg(E.scene,"collision_step_height"),.15);
     covered=0;
     for(i=0;i<E.count;++i){
@@ -454,6 +467,8 @@ static void audio_refresh(void)
 {
     Voice *v;
     Node *n;
+    double radius;
+    double distance;
     int i;
     if(E.audio_device)SDL_LockAudioDevice(E.audio_device);
     for(i=0;i<MAX_VOICES;++i){
@@ -461,6 +476,14 @@ static void audio_refresh(void)
         if(!node_active(v->node)||!E.nodes[v->node].audio_enabled){v->active=0;continue;}
         n=E.nodes+v->node;
         v->volume=n->audio_muted?0:n->audio_volume;
+        radius=json_number(jg(n->data,"sound_radius"),0);
+        if(radius>0&&node_valid(E.player)){
+            distance=distance_nodes(v->node,E.player);
+            v->volume*=distance<radius?1-distance/radius:0;
+            v->pan=(n->world[12]-E.nodes[E.player].world[12])/radius;
+            if(v->pan<-.8)v->pan=-.8;
+            if(v->pan>.8)v->pan=.8;
+        }
     }
     if(E.audio_device)SDL_UnlockAudioDevice(E.audio_device);
 }
@@ -487,6 +510,8 @@ static void audio_callback(void *userdata, Uint8 *stream, int length)
             s=v->clip<0?&E.video_sound:E.sounds+v->clip;
             if(!s->data||s->bytes<4){v->active=0;continue;}
             volume=v->volume;
+            if(channel==0&&v->pan>0)volume*=1-v->pan;
+            if(channel==1&&v->pan<0)volume*=1+v->pan;
             if(v->end_cursor>0){
                 remaining=v->end_cursor-v->cursor;
                 if(remaining<=0){v->active=0;continue;}
@@ -593,7 +618,7 @@ static void campaign_clock_sync(int animate)
     if(!latest)return;
     stage=ji(jg(latest,"stage"),-1);
     if(E.story_clock_seconds>=0&&E.story_clock_anchor>=stage)return;
-    if(E.story_clock_seconds<json_number(jg(latest,"seconds"),0))
+    if(ji(jg(latest,"exact"),0)||E.story_clock_seconds<json_number(jg(latest,"seconds"),0))
         E.story_clock_seconds=json_number(jg(latest,"seconds"),0);
     E.story_clock_anchor=stage;
     if(animate&&ji(jg(latest,"animate"),0))E.story_clock_jump=.001;
@@ -787,6 +812,8 @@ void campaign_reset(void)
     E.search_progress=0;
     E.chapter2_choice=0;E.chapter2_flags=0;
     E.chapter3_flags=0;E.chapter3_relationship=0;E.evidence_categories=0;
+    E.chapter4_flags=0;E.shop_inspected=0;E.shop_incidents=0;E.shop_cart_saved=0;
+    memset(E.shop_place,0,sizeof(E.shop_place));memset(E.shop_tier,0,sizeof(E.shop_tier));
     E.story_clock_seconds=-1;E.story_clock_anchor=-1;E.story_clock_jump=0;
 }
 static int portal_at_stage(Json *portal)
@@ -907,7 +934,14 @@ static Json *chapter_event(void)
 }
 static int *chapter_flags(void)
 {
+    if(E.search_progress>=ji(jg(E.game,"chapter_four_start"),INT_MAX))return &E.chapter4_flags;
     return E.search_progress>=ji(jg(E.game,"chapter_three_start"),INT_MAX)?&E.chapter3_flags:&E.chapter2_flags;
+}
+static int chapter_number(int stage)
+{
+    if(stage>=ji(jg(E.game,"chapter_four_start"),INT_MAX))return 4;
+    if(stage>=ji(jg(E.game,"chapter_three_start"),INT_MAX))return 3;
+    return stage>=13?2:1;
 }
 static Json *search_pages(void)
 {
@@ -922,6 +956,8 @@ static Json *search_pages(void)
         variant=ja(variants,i);flags=ji(jg(variant,"flags"),0);
         if((*chapter_flags()&flags)==flags&&
            (E.chapter2_flags&ji(jg(variant,"legacy_flags"),0))==ji(jg(variant,"legacy_flags"),0)&&
+           (!jg(variant,"stock_errors_min")||shop_errors()>=ji(jg(variant,"stock_errors_min"),0))&&
+           (!jg(variant,"stock_errors_max")||shop_errors()<=ji(jg(variant,"stock_errors_max"),0))&&
            E.chapter3_relationship>=ji(jg(variant,"relationship_min"),-9)&&
            E.chapter3_relationship<=ji(jg(variant,"relationship_max"),9))return jg(variant,"pages");
     }
@@ -967,6 +1003,7 @@ static int chapter_event_ready(int interact)
     if(!event||E.fading||E.search_page>=0||E.search_inspection>=0||!node_valid(E.player))return 0;
     flags=ji(jg(event,"required_flags"),0);
     if((*chapter_flags()&flags)!=flags||jg(event,"choice_texture"))return 0;
+    if(!shop_ready(event))return 0;
     if(jg(event,"measure_points")&&!E.measure_complete)return 0;
     if(jg(event,"drag_nodes")&&E.chapter_press_count<jc(jg(event,"drag_nodes")))return 0;
     delay=json_number(jg(event,"delay"),0);
@@ -985,18 +1022,26 @@ static int chapter_aux_action(int apply)
     double pos[3];
     double dx;
     double dz;
+    double radius;
     int i;
     int sound;
+    int flag;
     if(!node_valid(E.player))return 0;
     actions=jg(chapter_event(),"actions");
     for(i=0;i<jc(actions);++i){
         action=ja(actions,i);jvec(jg(action,"pos"),pos,3);
+        flag=ji(jg(action,"toggle"),0);
+        if(ji(jg(action,"once"),0)&&(*chapter_flags()&flag)==flag)continue;
         dx=pos[0]-E.nodes[E.player].p[0];dz=pos[2]-E.nodes[E.player].p[2];
-        if(dx*dx+dz*dz>=.58*.58)continue;
+        radius=json_number(jg(action,"radius"),.58);
+        if(dx*dx+dz*dz>=radius*radius)continue;
         if(!apply)return 1;
-        *chapter_flags()^=ji(jg(action,"toggle"),0);
+        *chapter_flags()^=flag;
         sound=ji(jg(action,"sound"),-1);
         if(node_valid(sound))audio_play(sound,0);
+        if(jg(action,"texture")){
+            E.search_inspection=ji(jg(action,"texture"),-1);E.search_inspection_screen=-1;
+        }
         chapter_visibility();engine_save();return 1;
     }
     return 0;
@@ -1011,6 +1056,7 @@ static void chapter_enter_stage(int stage)
     E.chapter_last_press=-1;
     E.measure_first=-1;E.measure_complete=0;E.drag_node=-1;E.drag_moved=0;
     E.document_index=0;E.document_zoom=1;E.choice_notice_time=0;
+    E.vista_yaw=0;
     if(stage>=8)chapter_visibility();
     engine_save();
 }
@@ -1122,14 +1168,15 @@ static int chapter_two_complete(void)
 static int chapter_complete(void)
 {
     return chapter_two_complete()||
-        (E.search_progress==ji(jg(E.game,"chapter_three_complete"),-1)&&jg(E.scene,"chapter_three_end"));
+        (E.search_progress==ji(jg(E.game,"chapter_three_complete"),-1)&&jg(E.scene,"chapter_three_end"))||
+        (E.search_progress==ji(jg(E.game,"chapter_four_complete"),-1)&&jg(E.scene,"chapter_four_end"));
 }
 static void chapter_next(void)
 {
     const char *next;
     next=js(jg(E.scene,"chapter_next"));
     if(!*next){engine_fade("mainmenu2",2.1,0);return;}
-    E.chapter3_relationship=E.chapter2_choice==2||(E.chapter2_flags&256)?-1:0;
+    if(chapter_two_complete())E.chapter3_relationship=E.chapter2_choice==2||(E.chapter2_flags&256)?-1:0;
     E.search_progress=ji(jg(E.scene,"chapter_next_stage"),E.search_progress+1);
     campaign_clock_sync(0);
     engine_fade(next,1.35,0);
@@ -1178,12 +1225,13 @@ static int search_modal(void)
 }
 int custom_movement_locked(void)
 {
-    return E.story_clock_jump>0||E.chapter_inventory_open||chapter_complete()||ji(jg(E.scene,"chapter_cutscene"),0)||(E.search_progress==12&&jg(E.scene,"chapter_end"))||
+    return E.story_clock_jump>0||E.chapter_inventory_open||chapter_complete()||ji(jg(chapter_event(),"rest"),0)||ji(jg(E.scene,"chapter_cutscene"),0)||(E.search_progress==12&&jg(E.scene,"chapter_end"))||
         (E.search_progress==13&&ji(jg(E.scene,"chapter2_entry"),0))||chapter_choice_pending()||search_modal()||E.computer_time>0||E.npc_dialog_page>=0||E.custom_key_page>=0||E.custom_key_insert>0||E.custom_door_time>0||(E.fading&&jc(jg(E.scene,"portals"))>0);
 }
 static void chapter_drag_release(void)
 {
     Json *objects;
+    Json *target;
     double origin[3];
     double dx;
     double dz;
@@ -1194,9 +1242,15 @@ static void chapter_drag_release(void)
     jvec(jg(E.nodes[E.drag_node].data,"pos"),origin,3);
     dx=E.nodes[E.drag_node].p[0]-origin[0];dz=E.nodes[E.drag_node].p[2]-origin[2];
     minimum=json_number(jg(chapter_event(),"drag_distance"),1);
-    for(i=0;i<jc(objects)&&i<30;++i)
-        if(ji(ja(objects,i),-1)==E.drag_node&&dx*dx+dz*dz>=minimum*minimum)
-            E.drag_moved|=1U<<i;
+    for(i=0;i<jc(objects)&&i<30;++i){
+        if(ji(ja(objects,i),-1)!=E.drag_node)continue;
+        target=ja(jg(chapter_event(),"drag_targets"),i);
+        if(target){
+            jvec(target,origin,3);
+            dx=E.nodes[E.drag_node].p[0]-origin[0];dz=E.nodes[E.drag_node].p[2]-origin[2];
+            if(dx*dx+dz*dz<.92*.92)E.drag_moved|=1U<<i;
+        }else if(dx*dx+dz*dz>=minimum*minimum)E.drag_moved|=1U<<i;
+    }
     E.chapter_press_count=0;
     for(i=0;i<jc(objects)&&i<30;++i)if(E.drag_moved&(1U<<i))++E.chapter_press_count;
     E.nodes[E.drag_node].collider_enabled=1;E.drag_node=-1;
@@ -1250,11 +1304,25 @@ static void chapter_tools_update(double dt)
 {
     Json *zone;
     Json *event;
+    Json *visit;
+    double point[3];
     double lo;
     double hi;
     int axis;
+    int flag;
     if(E.choice_notice_time>0)E.choice_notice_time-=dt;
     event=chapter_event();
+    zone=jg(event,"visit_points");
+    if(!E.fading&&!custom_movement_locked()&&node_valid(E.player)){
+        for(axis=0;axis<jc(zone);++axis){
+            visit=ja(zone,axis);flag=ji(jg(visit,"toggle"),0);
+            if(!flag||(*chapter_flags()&flag))continue;
+            jvec(jg(visit,"pos"),point,3);
+            lo=point[0]-E.nodes[E.player].p[0];hi=point[2]-E.nodes[E.player].p[2];
+            if(lo*lo+hi*hi<6.25){*chapter_flags()|=flag;engine_save();}
+        }
+    }
+    shop_update();
     if(node_valid(E.drag_node)&&node_valid(E.player)&&!custom_movement_locked()){
         zone=jg(event,"drag_zone");
         for(axis=0;axis<3;axis+=2){
@@ -1292,12 +1360,16 @@ static Json *chapter_waypoint(void)
     if(E.search_progress<13||E.fading||E.pending_scene>=0||!node_valid(E.player)||custom_movement_locked())return NULL;
     event=chapter_event();
     if(event){
+        if(ji(jg(event,"no_waypoint"),0))return NULL;
+        if(!shop_ready(event))return shop_waypoint(event);
         items=jg(event,"measure_points");
         if(items&&!E.measure_complete)return ja(items,E.measure_first==0?1:0);
         items=jg(event,"drag_nodes");
         if(items&&E.chapter_press_count<jc(items)){
             for(i=0;i<jc(items)&&i<30;++i)if(!(E.drag_moved&(1U<<i))){
                 start=ji(ja(items,i),-1);
+                item=ja(jg(event,"drag_targets"),i);
+                if(item&&E.drag_node==start)return item;
                 if(node_valid(start))return jg(E.nodes[start].data,"pos");
             }
         }
@@ -1417,6 +1489,7 @@ int custom_interact(void)
     if(chapter_tools_interact())return 1;
     if(chapter_start_event(1))return 1;
     if(chapter_aux_action(1))return 1;
+    if(shop_interact())return 1;
     item=search_near_item();
     if(item){
         E.search_inspection=ji(jg(item,"texture"),-1);
@@ -1609,6 +1682,7 @@ static int save_current(int slot)
     struct tm *local;
     int written;
     int closed;
+    int item;
     if(no_save||suppress_entry_save||!slot_path(slot,path))return 0;
 #ifdef _WIN32
     wsprintfW(suffix,L".%lu.tmp",(unsigned long)GetCurrentProcessId());
@@ -1628,6 +1702,13 @@ static int save_current(int slot)
         written=fprintf(f,"CLOCK %.17g %d\n",E.story_clock_seconds,E.story_clock_anchor);
     if(written>=0)
         written=fprintf(f,"CHAPTER3 %d %d %lu\n",E.chapter3_flags,E.chapter3_relationship,E.evidence_categories);
+    if(written>=0&&chapter_number(E.search_progress)>=4){
+        written=fprintf(f,"CHAPTER4 %d %lu %d\n",E.chapter4_flags,E.shop_inspected,E.shop_incidents);
+        for(item=0;written>=0&&item<SHOP_ITEMS;++item)
+            if(E.shop_place[item])written=fprintf(f,"STOCK %d %d %d\n",item,E.shop_place[item],E.shop_tier[item]);
+        if(written>=0&&E.shop_cart_saved)
+            written=fprintf(f,"CART %.17g %.17g\n",E.shop_cart_position[0],E.shop_cart_position[1]);
+    }
     if(written>=0&&slot!=SAVE_AUTO&&node_valid(E.player)&&!custom_movement_locked()&&E.custom_story_page<0){
         p=E.nodes[E.player].p;
         written=fprintf(f,"POSITION %.17g %.17g %.17g\n",p[0],p[1],p[2]);
@@ -1660,6 +1741,7 @@ static int read_progress(FILE *f,Progress *record)
     double clock_seconds;
     int clock_anchor;
     int third_flags,relationship;
+    int item,place,tier;
     unsigned long categories;
     int level;
     if(!f)return 0;
@@ -1689,6 +1771,14 @@ static int read_progress(FILE *f,Progress *record)
         else if(sscanf(line,"CHAPTER3 %d %d %lu",&third_flags,&relationship,&categories)==3&&
                 third_flags>=0&&relationship>=-9&&relationship<=9&&categories<=0xFFFFFFFFUL){
             record->third_flags=third_flags;record->relationship=relationship;record->categories=categories;
+        }else if(sscanf(line,"CHAPTER4 %d %lu %d",&third_flags,&categories,&relationship)==3&&
+                 third_flags>=0&&categories<(1UL<<SHOP_ITEMS)&&relationship>=0&&relationship<=999){
+            record->fourth_flags=third_flags;record->shop_inspected=categories;record->shop_incidents=relationship;
+        }else if(sscanf(line,"STOCK %d %d %d",&item,&place,&tier)==3&&
+                 item>=0&&item<SHOP_ITEMS&&place>=-2&&place<=32&&(tier==0||tier==1)){
+            record->shop_place[item]=place;record->shop_tier[item]=tier;
+        }else if(sscanf(line,"CART %lf %lf",&x,&z)==2&&fabs(x)<18&&fabs(z)<18){
+            record->cart_saved=1;record->cart_position[0]=x;record->cart_position[1]=z;
         }
     }
     fclose(f);
@@ -1716,6 +1806,9 @@ static void apply_progress(const Progress *record)
     E.computer_progress=record->computer;E.search_progress=record->stage;
     E.chapter2_choice=record->choice;E.chapter2_flags=record->flags;
     E.chapter3_flags=record->third_flags;E.chapter3_relationship=record->relationship;E.evidence_categories=record->categories;
+    E.chapter4_flags=record->fourth_flags;E.shop_inspected=record->shop_inspected;E.shop_incidents=record->shop_incidents;
+    memcpy(E.shop_place,record->shop_place,sizeof(E.shop_place));memcpy(E.shop_tier,record->shop_tier,sizeof(E.shop_tier));
+    E.shop_cart_saved=record->cart_saved;memcpy(E.shop_cart_position,record->cart_position,sizeof(E.shop_cart_position));
     E.story_clock_seconds=record->clock_seconds;E.story_clock_anchor=record->clock_anchor;E.story_clock_jump=0;
     campaign_clock_sync(0);
 }
@@ -1830,6 +1923,7 @@ void engine_load_scene(int index)
     E.chapter_inventory_open=0;E.chapter_page_time=0;
     E.measure_first=-1;E.measure_complete=0;E.drag_node=-1;E.drag_moved=0;E.phone_light=1;
     E.evidence_selected=0;E.document_index=0;E.document_zoom=1;E.choice_notice_time=0;
+    E.shop_push_cart=0;E.shop_selected=-1;E.shop_label=-1;E.shop_level=1;E.shop_notice=NULL;E.shop_notice_until=0;E.vista_yaw=0;
     if(E.search_progress>0&&E.search_progress==ji(jg(E.scene,"search_stage"),-1))
         E.search_page=0;
     E.custom_key_insert=0;E.custom_key_page=-1;E.custom_door_time=0;
@@ -1879,6 +1973,7 @@ void engine_load_scene(int index)
     for(i=0;i<E.count;++i)animation_apply(i);
     world_update();
     chapter_visibility();
+    shop_update();
     if(restore&&pending_progress.has_position&&!custom_position_supported()){
         jvec(jg(E.nodes[E.player].data,"pos"),E.nodes[E.player].p,3);
         world_update();
@@ -2351,6 +2446,15 @@ static void custom_camera_update(void)
     if(!ji(jg(E.scene,"custom_camera"),0)||!node_valid(E.camera)||!node_valid(E.player))return;
     camera=E.nodes+E.camera;
     player=E.nodes+E.player;
+    first=(E.search_page>=0||ji(jg(chapter_event(),"rest"),0))?jg(chapter_event(),"view"):NULL;
+    if(!first)first=chapter_stage_entry("route_views");
+    if(first){
+        jvec(jg(first,"eye"),camera->p,3);jvec(jg(first,"target"),target,3);
+        x=target[0]-camera->p[0];y=camera->p[1]-target[1];z=target[2]-camera->p[2];
+        camera->using_euler=1;camera->euler[0]=atan2(y,sqrt(x*x+z*z))*57.29577951308232;
+        camera->euler[1]=atan2(x,z)*57.29577951308232+E.vista_yaw;camera->euler[2]=0;
+        world_update();return;
+    }
     keys=jg(E.scene,"cinematic");
     if(jc(keys)>0){
         first=second=ja(keys,0);
@@ -2372,7 +2476,9 @@ static void custom_camera_update(void)
         camera->euler[1]=atan2(x,z)*57.29577951308232;camera->euler[2]=0;
         world_update();return;
     }
-    x=player->p[0];y=player->p[1]+11;z=player->p[2]-15;
+    if(ji(jg(E.scene,"dars_player"),0))camera->using_euler=0;
+    x=player->p[0];y=player->p[1]+json_number(jg(E.scene,"camera_height"),11);
+    z=player->p[2]-json_number(jg(E.scene,"camera_distance"),15);
     if(jg(E.scene,"chapter_camera")){
         jvec(jg(E.scene,"chapter_camera"),target,3);
         x=target[0];y=target[1];z=target[2];
@@ -2959,6 +3065,7 @@ static void render_custom_overlay(void)
         if(E.choice_notice_time>0){glColor4d(1,.77,.4,1);menu_text("Revisa los documentos y elige otra opción.",85,275,1.0);}
         return;
     }
+    if(jg(E.scene,"stock")&&E.search_page<0&&E.search_inspection<0)render_shop();
     if(E.search_progress>0&&(jg(E.scene,"search_pages")||jg(E.scene,"chapter_events"))&&E.search_page<0&&E.search_exit_time<=0){
         texture=ji(ja(jg(E.game,"search_objectives"),E.search_progress),-1);
         texture=ji(chapter_stage_entry("route_objectives"),texture);
@@ -3057,6 +3164,78 @@ static void save_button(const char *label,double x,double y,double width,int ena
     else glColor4d(.40,.49,.59,1);
     menu_text(label,x+14,y+13,1.15);
 }
+static void render_shop(void)
+{
+    Json *stock;
+    Json *item;
+    Json *shelf;
+    Json *event;
+    char text[124];
+    const char *description;
+    const char *sku;
+    int id,inspected;
+    stock=jg(E.scene,"stock");event=chapter_event();
+    save_box(814,724,732,140,0);
+    glColor4d(.9,.91,1,1);
+    if(jg(event,"stock_check")){
+        sprintf(text,"LOTE   %d / %d colocados",shop_placed(event),ji(jg(event,"stock_to"),0)-ji(jg(event,"stock_from"),0)+1);
+        menu_text(text,830,833,1);
+    }else menu_text("INVENTARIO DE LA TIENDA",830,833,1);
+    id=E.elapsed<E.shop_notice_until&&E.shop_label>=0?E.shop_label:shop_carried();
+    if(id>=0&&id<SHOP_ITEMS){
+        item=ja(jg(stock,"items"),id);inspected=(E.shop_inspected&(1UL<<id))!=0;
+        description=js(jg(item,"name"));sku=js(jg(item,"sku"));
+        if(!inspected&&jg(item,"printed"))description=js(jg(item,"printed"));
+        if(!inspected&&jg(item,"printed_sku"))sku=js(jg(item,"printed_sku"));
+        sprintf(text,"%.12s  %.33s  x%d  %.1f kg",sku,description,ji(jg(item,"quantity"),1),json_number(jg(item,"grams"),0)/1000);
+        menu_text(text,830,804,.91);
+        shelf=ja(jg(stock,"shelves"),ji(jg(item,"shelf"),0));
+        if(!inspected&&ji(jg(item,"must_inspect"),0))menu_text("Inspecciona el contenido para verificar la etiqueta.",830,776,.87);
+        else{
+            sprintf(text,"Destino %.10s %s  |  %.27s",js(jg(shelf,"code")),ji(jg(item,"tier"),0)?"medio":"bajo",js(jg(item,"condition")));
+            menu_text(text,830,776,.87);
+        }
+    }else menu_text("E toma, coloca o mueve el carrito",830,804,.96);
+    if(E.shop_notice&&E.elapsed<E.shop_notice_until){
+        glColor4d(1,.83,.56,1);menu_text(E.shop_notice,830,745,.86);
+    }
+    save_button("FICHA [I]",814,660,206,1,0);
+    save_button("MANO [Q]",1030,660,194,1,0);
+    save_button(E.shop_level?"MEDIO [R]":"BAJO [R]",1234,660,230,1,0);
+}
+static int shop_or_view_input(SDL_Event *event)
+{
+    int shop;
+    int panorama;
+    int width,height;
+    double x,y;
+    SDL_Keycode key;
+    if(E.fading||chapter_choice_pending())return 0;
+    shop=jg(E.scene,"stock")!=NULL&&E.search_page<0&&E.search_inspection<0;
+    panorama=E.search_page>=0&&ji(jg(jg(chapter_event(),"view"),"rotate"),0);
+    if(!shop&&!panorama)return 0;
+    if(event->type==SDL_KEYDOWN&&!event->key.repeat){
+        key=event->key.keysym.sym;
+        if(shop&&key==SDLK_i){shop_inspect();return 1;}
+        if(shop&&key==SDLK_q){shop_swap();return 1;}
+        if(shop&&key==SDLK_r){E.shop_level=!E.shop_level;return 1;}
+        if(panorama&&(key==SDLK_LEFT||key==SDLK_RIGHT)){
+            E.vista_yaw+=key==SDLK_LEFT?-12:12;return 1;
+        }
+    }
+    if(event->type!=SDL_MOUSEBUTTONUP||event->button.button!=SDL_BUTTON_LEFT)return 0;
+    SDL_GetWindowSize(E.window,&width,&height);
+    if(width<1||height<1)return 0;
+    x=event->button.x*1920.0/width;y=960-event->button.y*960.0/height;
+    if(shop&&x>=814&&x<=1464&&y>=660&&y<=716){
+        if(x<1020)shop_inspect();else if(x<1224)shop_swap();else E.shop_level=!E.shop_level;
+        E.mouse_node=-1;return 1;
+    }
+    if(panorama&&x>=80&&x<=500&&y>=775&&y<=833){
+        E.vista_yaw+=x<280?-12:12;E.mouse_node=-1;return 1;
+    }
+    return 0;
+}
 static int evidence_list(int *indices)
 {
     Json *items;
@@ -3116,7 +3295,19 @@ static void render_chapter_documents(void)
     char detail[120];
     int count;
     int i;
+    Json *visits;
     frames=jg(chapter_event(),"display_frames");count=jc(frames);
+    if(E.search_page>=0&&ji(jg(jg(chapter_event(),"view"),"rotate"),0)){
+        save_button("< GIRAR",80,775,194,1,0);save_button("GIRAR >",290,775,194,1,0);
+    }
+    visits=jg(chapter_event(),"visit_points");
+    if(E.search_page<0&&jc(visits)>0){
+        glColor4d(.86,.84,.74,1);
+        for(i=0;i<jc(visits);++i){
+            sprintf(detail,"[%c] %.60s",(*chapter_flags()&ji(jg(ja(visits,i),"toggle"),0))?'X':' ',js(jg(ja(visits,i),"name")));
+            menu_text(detail,90,790-28*i,1);
+        }
+    }
     if(ji(jg(chapter_event(),"display_tools"),0)&&count>0&&(E.search_page>=0||chapter_choice_pending())){
         if(E.document_index>=count)E.document_index=0;
         zoom=E.document_zoom>0?E.document_zoom:1;
@@ -3228,7 +3419,7 @@ static void render_save_menu(void)
             name=js(ja(jg(E.game,"save_map_names"),record->level));
             if(!*name)name=js(jg(ja(jg(E.game,"scenes"),record->level),"name"));
             sprintf(detail,"CAP. %d  |  %.26s  |  %.16s",
-                record->stage>=ji(jg(E.game,"chapter_three_start"),INT_MAX)?3:record->stage>=13?2:1,
+                chapter_number(record->stage),
                 name,record->date[0]?record->date:"SIN FECHA");
             glColor4d(.69,.78,.88,1);menu_text(detail,394,y+19,1.08);
         }else{
@@ -3284,12 +3475,14 @@ static void render_scene(void)
     int i;
     int dark_intro;
     bg[0]=bg[1]=bg[2]=0;bg[3]=1;c=node_valid(E.camera)?jg(E.nodes[E.camera].data,"camera"):NULL;jvec(jg(c,"background"),bg,4);
+    if(jg(E.scene,"day_background")&&E.search_progress>=ji(jg(E.scene,"day_from"),0)&&
+       E.search_progress<=ji(jg(E.scene,"day_to"),0))jvec(jg(E.scene,"day_background"),bg,4);
     glViewport(0,0,E.width,E.height);
     dark_intro=E.search_progress==13&&ji(jg(E.scene,"chapter2_entry"),0);
     if(chapter_complete()&&!E.fading){
         glClearColor(0,0,0,1);glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
         overlay_begin();glColor4d(1,1,1,1);
-        bind_texture(ji(jg(E.scene,"chapter_three_end"),ji(jg(E.scene,"chapter_two_end"),-1)));
+        bind_texture(ji(jg(E.scene,"chapter_four_end"),ji(jg(E.scene,"chapter_three_end"),ji(jg(E.scene,"chapter_two_end"),-1))));
         draw_quad(335,378,1250,204,0,0);
         return;
     }
@@ -3343,7 +3536,7 @@ static void render_frame(void)
         overlay_begin();
         save_box(1650,866,230,68,0);
         glColor4d(.82,.88,1,1);menu_text("PAUSA",1684,885,1.5);
-        if(E.search_progress>=31){
+        if(E.search_progress>=31&&chapter_number(E.search_progress)<4){
             save_box(1350,866,280,68,0);
             glColor4d(.82,.88,1,1);menu_text("OBJETOS",1374,885,1.5);
         }
@@ -3385,7 +3578,7 @@ static void input_events(void)
             }
             continue;
         }
-        if(investigation_input(&e))continue;
+        if(shop_or_view_input(&e)||investigation_input(&e))continue;
 #ifndef __ANDROID__
         if(e.type==SDL_KEYUP&&e.key.keysym.sym==SDLK_e&&node_valid(E.drag_node)){
             double original[3];
@@ -3409,7 +3602,7 @@ static void input_events(void)
                 if(E.search_progress!=20||node<=2)chapter_choose(node);
                 continue;
             }
-            if(e.key.keysym.sym==SDLK_i&&E.search_progress>=31&&!title_menu&&!E.fading&&!chapter_complete()&&
+            if(e.key.keysym.sym==SDLK_i&&E.search_progress>=31&&chapter_number(E.search_progress)<4&&!title_menu&&!E.fading&&!chapter_complete()&&
                !chapter_choice_pending()&&!ji(jg(E.scene,"chapter_cutscene"),0)&&E.search_page<0){
                 E.chapter_inventory_open=!E.chapter_inventory_open;continue;
             }
@@ -3458,7 +3651,7 @@ static void input_events(void)
                 if(node_valid(node))event_trigger(node,3);
                 E.mouse_node=-1;
                 if(x>=1650)engine_open_save_menu(1);
-                else if(x<=1630&&E.search_progress>=31&&!E.fading&&!chapter_complete()&&
+                else if(x<=1630&&E.search_progress>=31&&chapter_number(E.search_progress)<4&&!E.fading&&!chapter_complete()&&
                         !chapter_choice_pending()&&!ji(jg(E.scene,"chapter_cutscene"),0)&&E.search_page<0)
                     E.chapter_inventory_open=!E.chapter_inventory_open;
                 continue;
@@ -3495,8 +3688,20 @@ static void chapter_animate_props(double dt)
     double amount;
     double origin[3];
     Json *flash;
+    Json *destination;
+    double target[3];
+    int axis;
     for(i=0;i<E.count;++i){
         if(!node_active(i))continue;
+        speed=json_number(jg(E.nodes[i].data,"sky_drift"),0);
+        if(speed)E.nodes[i].p[0]=json_number(ja(jg(E.nodes[i].data,"pos"),0),0)+speed*E.elapsed;
+        destination=jg(E.nodes[i].data,"walk_target");
+        if(destination&&E.search_progress==ji(jg(E.nodes[i].data,"walk_stage"),-1)){
+            jvec(jg(E.nodes[i].data,"pos"),origin,3);jvec(destination,target,3);
+            amount=E.chapter_time/json_number(jg(E.nodes[i].data,"walk_seconds"),1);
+            if(amount>1)amount=1;
+            for(axis=0;axis<3;++axis)E.nodes[i].p[axis]=origin[axis]+(target[axis]-origin[axis])*amount;
+        }
         flash=jg(E.nodes[i].data,"cinematic_flash");
         if(flash){
             amount=(E.chapter_time-json_number(jg(flash,"start"),0))/json_number(jg(flash,"duration"),1);
@@ -3555,7 +3760,7 @@ static void tick(double dt)
     if(!E.fading&&E.chapter_time>1&&jg(E.scene,"chapter_routes")){
         Json *route;
         route=chapter_stage_entry("chapter_routes");
-        if(route)engine_fade(js(route),1.85,0);
+        if(route)engine_fade(jg(route,"scene")?js(jg(route,"scene")):js(route),json_number(jg(route,"rate"),1.85),0);
     }
     if(!E.fading&&!E.chapter_inventory_open){
         Json *event;
@@ -4024,6 +4229,7 @@ int main(int argc,char **argv)
         else if(!strcmp(argv[i],"--save")&&i+1<argc){if(strlen(argv[++i])<MAX_PATH_SIZE)strcpy(E.save_path,argv[i]);}
         else if(!strcmp(argv[i],"--chapter2"))preview_chapter=1;
         else if(!strcmp(argv[i],"--chapter3"))preview_chapter=2;
+        else if(!strcmp(argv[i],"--chapter4"))preview_chapter=3;
         else if(!strcmp(argv[i],"--self-test")){selftest=1;E.headless=1;no_save=1;}
         else if(!strcmp(argv[i],"--audio-test")&&i+1<argc){audio_test=argv[++i];E.headless=1;no_save=1;}
         else if(!strcmp(argv[i],"--no-save"))no_save=1;
@@ -4034,7 +4240,7 @@ int main(int argc,char **argv)
         else if(!strcmp(argv[i],"--screenshot")&&i+1<argc)capture=argv[++i];
         else if(!strcmp(argv[i],"--frames")&&i+1<argc)frame_limit=atof(argv[++i]);
         else if(!strcmp(argv[i],"--help")){
-            puts("NEED2DREAMSCAPE C89\n--chapter2 --scene NAME --assets DIRECTORY --save FILE --no-save\n--self-test --render-test DIRECTORY --lighting-test DIRECTORY\n--physics-test DIRECTORY --bathroom-test DIRECTORY --frames N --screenshot FILE.ppm");
+            puts("NEED2DREAMSCAPE C89\n--chapter2 --chapter3 --chapter4 --scene NAME --assets DIRECTORY --save FILE --no-save\n--self-test --render-test DIRECTORY --lighting-test DIRECTORY\n--physics-test DIRECTORY --bathroom-test DIRECTORY --frames N --screenshot FILE.ppm");
             puts("--lang es|en --audio-test DIRECTORY\nWASD/flechas: mover; E/Espacio: interactuar; raton: botones; Esc: pausa\nN: nueva partida; C: cargar partida; Enter: comenzar/saltar intro; F5: autoguardado; F9: partidas; F10: menu; F11: pantalla completa; F1: datos");return 0;
         }else{fprintf(stderr,"Unknown option: %s\n",argv[i]);return 1;}
     }
@@ -4048,7 +4254,11 @@ int main(int argc,char **argv)
     if(SDL_Init(E.headless?SDL_INIT_TIMER:SDL_INIT_VIDEO|SDL_INIT_AUDIO|SDL_INIT_TIMER)!=0){fprintf(stderr,"SDL: %s\n",SDL_GetError());cleanup();return 1;}
     if(!E.save_path[0])desktop_save_init();
     save_read();
-    if(preview_chapter==2){
+    if(preview_chapter==3){
+        E.search_progress=ji(jg(E.game,"chapter_four_start"),1617);E.computer_progress=COMPUTER_EMPTY;
+        E.custom_story_seen=1;E.custom_key_unlocked=1;scene="casaDars";
+        progress_pending=0;campaign_clock_sync(0);
+    }else if(preview_chapter==2){
         E.search_progress=ji(jg(E.game,"chapter_three_start"),656);E.computer_progress=COMPUTER_EMPTY;
         E.custom_story_seen=1;E.custom_key_unlocked=1;scene="dormitorioRadeC3";
         progress_pending=0;campaign_clock_sync(0);

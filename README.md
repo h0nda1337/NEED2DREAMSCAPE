@@ -56,3 +56,13 @@ Las elecciones con Dars, los documentos recogidos y las solicitudes al archivo s
 El guion y los eventos están en `story/capitulo-3.json`, las variantes de los mapas en `maps/` y los efectos originales nuevos usan el prefijo `c3_`. Los diálogos se muestran como texto animado con el sonido por personaje del juego. Las llamadas usan esa misma representación sonora.
 
 `tests/run-chapter3.ps1` compila y ejecuta dos recorridos completos con movimiento y colisiones. Usa archivos temporales propios para probar el guardado.
+
+## Capítulo 4 — Donde todavía quedan muros
+
+Dars es la protagonista jugable de las 80 escenas. Su jornada pasa por su casa, el baño, el barrio, una visita familiar y su turno en la tienda. La segunda mitad transcurre en un Fortín de los Americanos explorable, con senderos, miradores y encuentros con la Figura. Continúa desde el cierre del capítulo 3. `game/capitulo_4.cmd` permite probar el capítulo con el guardado desactivado.
+
+En la tienda, E toma o coloca mercancía, I lee la ficha, Q cambia de mano y R alterna el nivel bajo y medio. Los botones de la pantalla también permiten estas acciones. Cada SKU conserva cantidad, peso, estado y destino. El guardado registra dónde quedó cada artículo y permite retomar la clasificación. El carrito transporta las cajas pesadas y los estantes tienen límites de carga.
+
+Los ocho mapas usan geometría original. La loma, los paredones de adobe y el cañón del sueño se inspiran en las postales de *Saltillo, imagen y memoria*, pp. 143–145. La distribución de los senderos y la ciudad del fondo son una interpretación artística. El epílogo utiliza ilustraciones propias basadas en las referencias. [Archivo Municipal de Saltillo](https://www.archivomunicipaldesaltillo.info/_files/ugd/e91b2b_8b37c46d77ba4966b58b1c3b2b16fe3c.pdf)
+
+El guion está en `story/capitulo-4.json`. `tests/run-chapter4.ps1` prueba la continuación de una partida anterior y dos rutas de las 80 escenas, incluida la corrección de mercancía y el uso del carrito.

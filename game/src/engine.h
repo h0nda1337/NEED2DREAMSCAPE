@@ -8,6 +8,8 @@
 
 #define MAX_PATH_SIZE 1024
 #define MAX_VOICES 128
+#define SHOP_ITEMS 24
+
 typedef struct {
     unsigned char *data;
     unsigned long bytes;
@@ -16,6 +18,7 @@ typedef struct {
     int clip;
     double end_cursor;
     double volume;
+    double pan;
     double pitch;
     double cursor;
     int loop;
@@ -139,6 +142,20 @@ typedef struct {
     int chapter2_flags;
     int chapter3_flags;
     int chapter3_relationship;
+    int chapter4_flags;
+    int shop_place[SHOP_ITEMS];
+    int shop_tier[SHOP_ITEMS];
+    unsigned long shop_inspected;
+    int shop_incidents;
+    int shop_cart_saved;
+    double shop_cart_position[2];
+    int shop_push_cart;
+    int shop_selected;
+    int shop_level;
+    int shop_label;
+    const char *shop_notice;
+    double shop_notice_until;
+    double vista_yaw;
     unsigned long evidence_categories;
     int evidence_selected;
     int document_index;
@@ -216,6 +233,17 @@ void campaign_reset(void);
 int custom_interact(void);
 int custom_movement_locked(void);
 int custom_position_supported(void);
+int terrain_height(double x,double z,double *height);
+double player_walk_rate(void);
+int shop_ready(Json *event);
+int shop_interact(void);
+int shop_inspect(void);
+void shop_update(void);
+void shop_swap(void);
+int shop_carried(void);
+int shop_errors(void);
+int shop_placed(Json *event);
+Json *shop_waypoint(Json *event);
 void engine_load_scene(int index);
 void engine_save(void);
 void engine_open_save_menu(int pause);

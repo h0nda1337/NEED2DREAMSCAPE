@@ -1,0 +1,1270 @@
+{
+  "chapter": 4,
+  "title": "Donde todavía quedan muros",
+  "player": "Dars",
+  "scenes": [
+    {
+      "number": 1,
+      "title": "Siete y doce",
+      "script": "Mapa nuevo: `casaDars` · Dormitorio · 30 de diciembre\n\nLa imagen aparece lentamente.\n\nEs de mañana.\n\nUna persiana deja pasar una franja de luz sobre una cama desordenada.\n\nDars está acostada de lado, con el cabello blanco cubriéndole parcialmente el rostro.\n\nTiene ojeras.\n\nEl teléfono comienza a vibrar.\n\nNo suena ninguna melodía. Solamente vibra contra una mesa de madera.\n\nDars estira un brazo.\n\nNo lo alcanza.\n\nVuelve a intentarlo.\n\nFinalmente lo recoge.\n\nDars: ...\n\nDars: Siete y doce.\n\nMira la alarma.\n\nDars: ¿Quién chingados pone una alarma a las siete y doce?\n\nSe queda pensando.\n\nDars: ...\n\nDars: Ah. Yo.\n\nLa apaga.\n\nPermanece acostada unos segundos.\n\nDespués aparece una interacción.\n\nObjetivo: Levántate de la cama.\n\nEl jugador recupera el control de Dars por primera vez.\n\nSu movimiento es ligeramente diferente al de Rade. Camina más despacio al despertarse y puede interactuar con más objetos pequeños de su habitación.\n\nLa cama no se arregla automáticamente.\n\nSi el jugador vuelve a acostarse:\n\nDars: No.\n\nDars: Si me duermo otra vez, no llego.",
+      "map": "casaDars"
+    },
+    {
+      "number": 2,
+      "title": "Su propia casa",
+      "script": "Mapa: `casaDars` · Exploración libre\n\nLa vivienda de Dars es pequeña.\n\nTiene un dormitorio, baño, cocina, sala y una habitación utilizada como espacio de trabajo y almacenamiento.\n\nNo es una casa abandonada ni misteriosa.\n\nHay objetos donde deberían estar y otros que Dars ha dejado fuera de lugar.\n\nSu escritorio tiene un monitor, una libreta, cables y varias tazas utilizadas.\n\nLa cocina está relativamente limpia.\n\nEn la sala hay una cobija doblada sobre un sofá.\n\nEl jugador puede inspeccionar.\n\nEscritorio:\n\nDars: Luego ordeno esto.\n\nTazas:\n\nDars: ...\n\nDars: Son cuatro.\n\nDars: Pensé que eran tres.\n\nArmario:\n\nDars observa el mueble durante unos segundos.\n\nRecuerda los golpes que escuchó días antes.\n\nDars: ...\n\nDars: No voy a empezar otra vez.\n\nVentana:\n\nDars: Hace frío.\n\nTeléfono:\n\nHay mensajes sin contestar, algunos relacionados con el trabajo y otros familiares.\n\nNinguno es urgente.\n\nObjetivo: Prepárate para salir.",
+      "map": "casaDars"
+    },
+    {
+      "number": 3,
+      "title": "El baño",
+      "script": "Mapa nuevo: `banoDars`\n\nDars entra al baño.\n\nEnciende la luz.\n\nLa lámpara parpadea apenas un instante antes de estabilizarse.\n\nNo hay ninguna anomalía.\n\nSe acerca al espejo.\n\nSus ojos cian están algo enrojecidos por el cansancio.\n\nDars: ...\n\nDars: Parezco cadáver.\n\nAbre la llave del lavabo.\n\nSe lava la cara.\n\nEl jugador puede realizar una pequeña secuencia de interacciones: abrir el agua, utilizar una toalla y guardar los productos.\n\nDars vuelve a mirarse.\n\nDars: ...\n\nDars: Bueno.\n\nDars: Cadáver limpio.\n\nApaga la luz.\n\nAntes de salir, vuelve a mirar el espejo.\n\nNo hay ninguna Figura.\n\nSu reflejo coincide perfectamente.\n\nDars: ...\n\nDars: Ya deja de buscar cosas.\n\nSale.",
+      "map": "banoDars"
+    },
+    {
+      "number": 4,
+      "title": "Café sin desayuno",
+      "script": "Mapa: `casaDars` · Cocina\n\nDars enciende una lámpara sobre la mesa.\n\nLa cocina recibe algo de luz por una ventana.\n\nAbre el refrigerador.\n\nHay leche, unos recipientes con comida y verduras.\n\nDars observa.\n\nDars: ...\n\nDars: No tengo nada rápido.\n\nCierra.\n\nSe acerca a la cafetera.\n\nEl jugador debe colocar agua, café y una taza.\n\nSi intenta encenderla sin agua:\n\nDars: Ah, no.\n\nDars: Otra vez no.\n\nUna vez preparada, puede beber el café o dejarlo sobre la mesa.\n\nMientras espera, revisa el teléfono.\n\nTiene un mensaje familiar.\n\nMadre: Buenos días.\n\nMadre: ¿Vas a venir hoy?\n\nDars observa la pantalla.\n\nDars: ...\n\nEscribe:\n\nDars: Sí. Antes de entrar al trabajo.\n\nLa respuesta llega poco después.\n\nMadre: Bueno. Hay unas cosas que necesito que me ayudes a acomodar.\n\nDars se frota la cara.\n\nDars: ...\n\nDars: Todo el mundo quiere que acomode cosas.",
+      "map": "casaDars"
+    },
+    {
+      "number": 5,
+      "title": "La lista",
+      "script": "Mapa: `casaDars` · Mesa de cocina\n\nDars coloca una libreta sobre la mesa.\n\nTiene varios pendientes.\n\nAlgunos son del trabajo.\n\nOtros de su propia casa.\n\nTambién anotó que debía visitar a su familia.\n\nEl jugador puede ordenar los pendientes por prioridad.\n\nLa lista contiene:\n\n- Pagar un servicio de la casa.\n- Pasar a ver a su madre.\n- Recoger una prenda de ropa.\n- Llegar al trabajo a tiempo.\n- Comprar algo para cenar.\n- Terminar una actividad personal.\n\nDars observa las tareas.\n\nDars: ...\n\nDars: No me va a alcanzar el día.\n\nEl jugador puede marcar una como prioritaria.\n\nEso modifica algunos diálogos, pero no obliga a completar todo.\n\nDars mira la hora.\n\nDars: Mejor me apuro.\n\nRecoge las llaves.\n\nAntes de salir, observa una libreta sobre el escritorio.\n\nEs la misma donde registró los acontecimientos de Navidad.\n\nSe queda mirándola.\n\nDars: ...\n\nDars: Hoy no.\n\nLa deja.",
+      "map": "casaDars"
+    },
+    {
+      "number": 6,
+      "title": "La llamada familiar",
+      "script": "Mapa: `casaDars` · Sala\n\nCuando Dars está por salir, recibe una llamada de su madre.\n\nContesta.\n\nDars: Bueno.\n\nMadre: ¿Ya despertaste?\n\nDars: Sí.\n\nMadre: ¿Ya desayunaste?\n\nDars mira la taza.\n\nDars: Café.\n\nMadre: Eso no es desayuno.\n\nDars: Ya sé.\n\nMadre: Aquí hay comida.\n\nDars: Voy en un rato.\n\nMadre: ¿A qué hora entras?\n\nDars: En la tarde.\n\nMadre: Entonces sí alcanzas a ayudarme.\n\nDars suspira.\n\nDars: ¿Con qué?\n\nMadre: Unas cajas que dejé en el cuarto.\n\nDars: ¿Pesadas?\n\nMadre: No tanto.\n\nDars: La última vez también dijiste eso.\n\nMadre: Pues no las cargues sola.\n\nDars observa la puerta.\n\nDars: Bueno.\n\nMadre: Y no vengas sin comer.\n\nDars: Sí.\n\nLa llamada termina.\n\nDars: ...\n\nDars: Ah, qué bonito.",
+      "map": "casaDars"
+    },
+    {
+      "number": 7,
+      "title": "Las llaves",
+      "script": "Mapa: `casaDars` · Entrada\n\nDars busca sus llaves.\n\nNo están donde las dejó habitualmente.\n\nEl jugador debe revisar tres lugares.\n\nEl escritorio.\n\nLa mesa de la cocina.\n\nEl sofá.\n\nFinalmente las encuentra dentro de una bolsa.\n\nDars: ...\n\nDars: Aquí estaban.\n\nLas recoge.\n\nAntes de salir, verifica que el teléfono tenga batería.\n\nTiene suficiente para el día.\n\nDars abre la puerta.\n\nLa calle está iluminada.\n\nSe escuchan vehículos y conversaciones lejanas.\n\nDars: ...\n\nDars: Bueno.\n\nCierra con llave.\n\nObjetivo: Visita a tu familia antes del trabajo.",
+      "map": "casaDars"
+    },
+    {
+      "number": 8,
+      "title": "Una calle cualquiera",
+      "script": "Mapa nuevo: `barrioDars`\n\nEl jugador puede caminar por el barrio de Dars.\n\nNo es la misma calle donde vive Rade.\n\nHay algunas casas, una papelería, un pequeño parque y una parada de transporte.\n\nEl sol todavía está relativamente bajo.\n\nSe escucha el ruido de motores y personas empezando sus actividades.\n\nDars camina.\n\nAl pasar por una tienda:\n\nDependiente: Buenos días.\n\nDars: Buenos.\n\nAl cruzar frente a una vivienda, un perro ladra.\n\nDars voltea.\n\nDars: Ni te estoy viendo.\n\nEl perro continúa.\n\nDars sigue caminando.\n\nPuede tomar transporte o continuar a pie hasta la casa familiar.\n\nLa ruta no contiene ninguna aparición sobrenatural.",
+      "map": "barrioDars"
+    },
+    {
+      "number": 9,
+      "title": "Llegar sin avisar",
+      "script": "Mapa nuevo: `casaFamiliarDars` · Entrada\n\nDars llega a una casa distinta de la suya.\n\nLlama a la puerta.\n\nEspera.\n\nVuelve a llamar.\n\nDars: ...\n\nDars: Me dijeron que viniera.\n\nDespués de unos segundos escucha pasos.\n\nSu madre abre.\n\nMadre: Ya llegaste.\n\nDars: Sí.\n\nMadre: Pásale.\n\nDars entra.\n\nLa casa está habitada y algo desordenada.\n\nHay muebles antiguos, fotografías familiares y objetos colocados sobre las mesas.\n\nNo se examinan recuerdos de la infancia de Dars.\n\nEl jugador solamente observa su situación familiar presente.\n\nMadre: ¿Quieres comer?\n\nDars: Sí.\n\nMadre: Pues primero deja tu bolsa.\n\nDars mira hacia el sofá.\n\nDars: ¿Dónde?\n\nHay varias prendas encima.\n\nMadre: En la silla.\n\nDars coloca la bolsa.\n\nDars: Bueno.",
+      "map": "casaFamiliarDars"
+    },
+    {
+      "number": 10,
+      "title": "Las cajas",
+      "script": "Mapa: `casaFamiliarDars` · Cuarto de almacenamiento\n\nSu madre conduce a Dars hacia un pequeño cuarto.\n\nHay cuatro cajas apiladas.\n\nAlgunas contienen utensilios.\n\nOtras, artículos de limpieza y adornos.\n\nMadre: Quiero despejar aquí.\n\nDars: ¿Todo?\n\nMadre: Lo que se pueda.\n\nDars: ¿Y dónde lo vas a poner?\n\nMadre: Unas cosas en el armario. Otras en la cocina.\n\nDars observa las cajas.\n\nDars: ...\n\nDars: Me hubieras dicho que venía a trabajar gratis.\n\nMadre: No empieces.\n\nDars deja escapar una pequeña sonrisa.\n\nDars: Está bien.\n\nEl jugador puede mover las cajas.\n\nNo debe arrojar objetos ni colocarlos frente a puertas.\n\nSi intenta levantar una demasiado pesada:\n\nDars: No.\n\nDars: Ésta mejor entre dos.\n\nSu madre se acerca y ayuda.\n\nLa tarea se completa cuando el acceso queda despejado.",
+      "map": "casaFamiliarDars"
+    },
+    {
+      "number": 11,
+      "title": "Algo que no se tira",
+      "script": "Mapa: `casaFamiliarDars` · Almacén\n\nEntre las cajas aparece un aparato viejo que ya no funciona.\n\nDars lo recoge.\n\nDars: ¿Todavía tienen esto?\n\nMadre: Sí.\n\nDars: Está descompuesto.\n\nMadre: Ya sé.\n\nDars: ¿Entonces por qué lo guardas?\n\nMadre: Porque no me ha estorbado.\n\nDars mira las cajas que acaba de mover.\n\nDars: ...\n\nDars: Pues un poquito sí.\n\nSu madre la observa.\n\nMadre: No lo vayas a tirar.\n\nDars: No lo estoy tirando.\n\nMadre: Bueno.\n\nDars coloca el aparato nuevamente en la caja.\n\nDars: Cada quien guarda sus porquerías.\n\nMadre: Tú también guardas cosas que no usas.\n\nDars se queda callada.\n\nDars: ...\n\nDars: Sí.\n\nLa conversación no da paso a recuerdos infantiles.",
+      "map": "casaFamiliarDars"
+    },
+    {
+      "number": 12,
+      "title": "Una mesa para dos",
+      "script": "Mapa: `casaFamiliarDars` · Cocina\n\nDars se sienta a comer con su madre.\n\nNo hay música.\n\nSe escucha un programa de televisión desde la sala.\n\nSobre la mesa hay comida sencilla y un vaso con agua.\n\nMadre: ¿Cómo te ha ido en el trabajo?\n\nDars: Bien.\n\nMadre: ¿Mucho movimiento?\n\nDars: Bastante.\n\nMadre: ¿Y el encargado?\n\nDars: Sigue siendo el encargado.\n\nSu madre levanta la mirada.\n\nMadre: Te estoy preguntando si te trata bien.\n\nDars deja el tenedor.\n\nDars: Sí. Nada más se desespera por cualquier cosa.\n\nMadre: Pues no te dejes.\n\nDars: Tampoco me voy a pelear por todo.\n\nPausa.\n\nMadre: ¿Y la casa?\n\nDars: Bien.\n\nMadre: ¿No tienes problemas?\n\nDars: Ninguno importante.\n\nSu madre la observa.\n\nMadre: Te ves cansada.\n\nDars: Porque estoy cansada.\n\nMadre: ¿Estás durmiendo bien?\n\nDars tarda en responder.\n\nDars: Más o menos.\n\nSu madre continúa comiendo.\n\nNo insiste.",
+      "map": "casaFamiliarDars"
+    },
+    {
+      "number": 13,
+      "title": "Una discusión pequeña",
+      "script": "Mapa: `casaFamiliarDars` · Cocina\n\nLa conversación continúa.\n\nMadre: Podrías venir más seguido.\n\nDars: Vine hoy.\n\nMadre: Ya sé.\n\nDars: Entonces...\n\nMadre: No todo tiene que ser cuando necesito algo.\n\nDars observa su plato.\n\nDars: Tú me llamaste para mover cajas.\n\nSu madre guarda silencio.\n\nMadre: También quería verte.\n\nDars: Bueno.\n\nPasan unos segundos.\n\nMadre: No te cuesta nada venir a comer.\n\nDars: A veces sí me cuesta. Tengo trabajo y cosas que hacer.\n\nMadre: Yo también tengo cosas que hacer.\n\nDars: No dije que no.\n\nLa conversación empieza a ponerse incómoda.\n\nDars deja el tenedor.\n\nDars: Mira, no quiero discutir.\n\nMadre: Nadie está discutiendo.\n\nDars: Bueno.\n\nContinúan comiendo.\n\nNo se abrazan ni se disculpan automáticamente.\n\nLa escena termina con una conversación inconclusa.",
+      "map": "casaFamiliarDars"
+    },
+    {
+      "number": 14,
+      "title": "Antes de salir",
+      "script": "Mapa: `casaFamiliarDars` · Sala\n\nDars recoge su bolsa.\n\nMira la hora.\n\nYa debería regresar a su casa a preparar sus cosas para el turno.\n\nDars: Ya me voy.\n\nMadre: ¿Tan pronto?\n\nDars: Tengo que trabajar.\n\nMadre: Bueno.\n\nDars se acerca a la puerta.\n\nSu madre vuelve a llamarla.\n\nMadre: Oye.\n\nDars: Qué.\n\nMadre: Te puse comida en un recipiente.\n\nDars observa la bolsa que le entrega.\n\nDars: ...\n\nDars: Gracias.\n\nMadre: Para que no andes comprando cualquier cosa.\n\nDars toma el recipiente.\n\nDars: Está bien.\n\nPausa.\n\nMadre: Y duerme bien.\n\nDars: Voy a intentar.\n\nSu madre asiente.\n\nDars sale.\n\nNo hay una gran reconciliación, pero tampoco una ruptura.",
+      "map": "casaFamiliarDars"
+    },
+    {
+      "number": 15,
+      "title": "El regreso a su casa",
+      "script": "Mapa: `barrioDars` → `casaDars`\n\nDars vuelve a caminar por las calles del barrio.\n\nEl tráfico ha aumentado.\n\nEl sol está más alto.\n\nLleva el recipiente de comida dentro de su bolsa.\n\nAl llegar a su vivienda, abre con llave.\n\nEntra.\n\nColoca el recipiente en el refrigerador.\n\nDeja la bolsa sobre una silla.\n\nDars: ...\n\nDars: Qué silencio.\n\nMira alrededor.\n\nLa vivienda continúa exactamente como la dejó.\n\nNo hay nadie esperándola.\n\nNo tiene que dar explicaciones.\n\nDars se sienta en el sofá durante unos segundos.\n\nDars: ...\n\nDars: Por eso me gusta estar aquí.\n\nEl teléfono emite una notificación del trabajo.\n\nEl descanso termina.",
+      "map": "casaDars"
+    },
+    {
+      "number": 16,
+      "title": "Te toca inventario",
+      "script": "Mapa: `casaDars` · Preparación del turno\n\nEl encargado del trabajo escribió en el grupo laboral.\n\nJefe: Buenas tardes.\n\nJefe: Hoy necesitamos acomodar lo que llegó ayer.\n\nJefe: Revisen bien las etiquetas de los estantes.\n\nJefe: No quiero mercancía mezclada.\n\nDars lee.\n\nDars: ...\n\nDars: Claro.\n\nDars: Justo hoy.\n\nSe dirige al dormitorio.\n\nRecoge su ropa de trabajo y se cambia.\n\nGuarda el teléfono, las llaves y algo de dinero.\n\nEl jugador puede comprobar los objetos antes de salir.\n\nSi olvida el teléfono:\n\nDars: Me falta algo.\n\nSi olvida las llaves:\n\nDars: No voy a quedarme afuera de mi propia casa.\n\nUna vez preparada, Dars sale hacia el trabajo.\n\n## ACTO II — TURNO DE TARDE",
+      "map": "casaDars"
+    },
+    {
+      "number": 17,
+      "title": "La tienda",
+      "script": "Mapa nuevo: `tiendaDarsExterior` · 2:10 p. m.\n\nDars llega a una tienda de artículos para el hogar.\n\nNo es grande, pero tiene muchos productos diferentes.\n\nEn la fachada hay anuncios de descuentos y algunos adornos navideños que todavía no han retirado.\n\nUna camioneta descarga cajas junto a la entrada lateral.\n\nDars observa.\n\nDars: ...\n\nDars: Qué bonito.\n\nDars: Llegó más mercancía.\n\nEntra por la puerta de empleados.\n\nHay un pequeño reloj checador.\n\nEl jugador debe registrar su entrada.\n\nLa máquina imprime un comprobante.\n\nTurno iniciado: 2:12 p. m.\n\nDars guarda su bolsa en un casillero.\n\nEscucha al encargado llamarla.\n\nJefe: ¡Dars!\n\nDars: ¿Qué pasó?\n\nJefe: Ven tantito.\n\nDars suspira.\n\nDars: Ya empezó.",
+      "map": "tiendaDarsExterior"
+    },
+    {
+      "number": 18,
+      "title": "El jefe",
+      "script": "Mapa nuevo: `tiendaDars` · Área de almacenamiento\n\nEl encargado está junto a una montaña de cajas.\n\nTiene una libreta y un lector de códigos de barras.\n\nDars se aproxima.\n\nJefe: ¿Ya registraste la entrada?\n\nDars: Sí.\n\nJefe: Bueno. Necesito que acomodes esto.\n\nDars observa las cajas.\n\nDars: ¿Todo?\n\nJefe: Lo de hoy, sí.\n\nDars: ¿Y dónde está el resto del personal?\n\nJefe: Atendiendo.\n\nDars: Ah.\n\nEl encargado le entrega una hoja.\n\nJefe: Los estantes están separados por categorías.\n\nDars: Ya sé.\n\nJefe: Pues fíjate bien. Ayer encontramos cosas mezcladas.\n\nDars: No fui yo.\n\nJefe: No dije que fueras tú.\n\nDars: Bueno.\n\nPausa.\n\nJefe: Primero acomoda las cajas de la zona A y B. Después revisamos el resto.\n\nDars: Está bien.\n\nJefe: Y no pongas cosas pesadas arriba.\n\nDars observa un paquete grande.\n\nDars: No tenía pensado suicidarme con una caja.\n\nEl encargado la mira.\n\nJefe: Nada más ten cuidado.",
+      "map": "tiendaDars"
+    },
+    {
+      "number": 19,
+      "title": "Los estantes",
+      "script": "Mapa: `tiendaDars` · Tutorial jugable\n\nEl jugador recibe el control completo.\n\nEl almacén contiene cinco zonas, cada una con varios estantes.\n\nLas etiquetas están impresas y tienen códigos legibles.\n\n| Zona | Categoría    | Ejemplos                                 |\n| ---- | ------------ | ---------------------------------------- |\n| A    | Papelería    | Cuadernos, lápices, carpetas             |\n| B    | Cocina       | Recipientes, utensilios, servilletas     |\n| C    | Limpieza     | Jabones, detergentes, esponjas           |\n| D    | Eléctricos   | Focos, extensiones, pilas                |\n| E    | Frágiles     | Vasos, jarrones, tazas de cerámica       |\n| R    | Devoluciones | Mercancía dañada o pendiente de revisión |\n\nLas cajas tienen códigos de producto, cantidades y nombres.\n\nEl jugador debe tomar objetos físicamente y colocarlos en el estante correcto.\n\nNo basta con acercarse a una caja y pulsar una tecla para que todo se acomode automáticamente.\n\nDars puede cargar un objeto pequeño en cada mano, o una caja mediana entre ambos brazos.\n\nLos productos frágiles requieren movimiento cuidadoso.\n\nLos pesados deben permanecer en estantes bajos.\n\nObjetivo: Clasifica los primeros 12 artículos.",
+      "map": "tiendaDars"
+    },
+    {
+      "number": 20,
+      "title": "El primer artículo",
+      "script": "Mapa: `tiendaDars` · Tutorial\n\nDars abre una caja.\n\nContiene cuadernos, carpetas y un paquete de lápices.\n\nDars: Bueno.\n\nDars: Esto está fácil.\n\nEl jugador puede seleccionar un artículo.\n\nAl observarlo aparece su etiqueta.\n\nCuaderno profesional\n\nSKU A-014\n\nCantidad recibida: 6\n\nDestino: Zona A · Estante 2 · Nivel medio\n\nDars camina hasta la zona A.\n\nColoca el cuaderno.\n\nUna pequeña confirmación visual indica que el artículo quedó registrado.\n\nDars: Uno.\n\nEl jugador debe acomodar los demás.\n\nSi coloca un cuaderno en la zona de limpieza:\n\nDars: No.\n\nDars: Ahí no va.\n\nLa interfaz no bloquea la acción por completo, pero registra el producto como mal colocado.\n\nEl jugador puede corregirlo antes de finalizar la tarea.",
+      "map": "tiendaDars"
+    },
+    {
+      "number": 21,
+      "title": "No todo lo que parece igual va junto",
+      "script": "Mapa: `tiendaDars` · Clasificación\n\nLa siguiente caja contiene recipientes de plástico, vasos de vidrio y servilletas.\n\nA simple vista todos podrían parecer productos de cocina.\n\nPero los vasos tienen una etiqueta de almacenamiento frágil.\n\nDars revisa.\n\nDars: ...\n\nDars: Éstos van separados.\n\nEl jugador debe colocar:\n\n- Recipientes plásticos en B1.\n- Servilletas en B2.\n- Vasos de vidrio en E1.\n\nAl colocar los vasos, Dars sostiene cada uno con cuidado.\n\nSi intenta correr mientras carga varios:\n\nDars: Mejor despacio.\n\nUna compañera pasa junto a ella.\n\nCompañera: ¿Te dejaron todo eso?\n\nDars: Sí.\n\nCompañera: Qué bonito.\n\nDars: Ya sé.\n\nLa compañera observa los vasos.\n\nCompañera: Esos se rompen con mirarlos.\n\nDars: No me digas.\n\nAmbas continúan trabajando.",
+      "map": "tiendaDars"
+    },
+    {
+      "number": 22,
+      "title": "La revisión del jefe",
+      "script": "Mapa: `tiendaDars` · Primer control de calidad\n\nCuando el jugador termina la primera tanda, el encargado regresa.\n\nJefe: ¿Ya quedó?\n\nDars: La primera parte.\n\nJefe: A ver.\n\nRevisa las etiquetas.\n\nEl resultado depende de la clasificación.\n\nSi todo está correcto:\n\nJefe: Bien.\n\nDars: Qué emoción.\n\nJefe: No empieces.\n\nSi existen errores:\n\nJefe: Aquí hay dos cosas mal acomodadas.\n\nDars: ¿Cuáles?\n\nEl encargado señala los artículos.\n\nJefe: Esto va en la otra sección.\n\nDars revisa.\n\nDars: Ah.\n\nDars: Sí, cierto.\n\nJefe: Corrígelos.\n\nDars: Está bien.\n\nEl jugador debe corregir los productos antes de continuar.\n\nNo hay un fracaso irreversible por equivocarse.\n\nEl desempeño queda registrado, pero la historia no termina.",
+      "map": "tiendaDars"
+    },
+    {
+      "number": 23,
+      "title": "Un cliente y una escalera",
+      "script": "Mapa: `tiendaDars` · Área de ventas\n\nMientras acomoda una caja, Dars escucha una voz.\n\nCliente: Disculpa.\n\nDars se vuelve.\n\nDars: Dígame.\n\nCliente: ¿Dónde tienen los focos?\n\nDars: En el pasillo cuatro.\n\nCliente: ¿Y las extensiones?\n\nDars: Ahí mismo. Del lado derecho.\n\nCliente: ¿Me puedes mostrar?\n\nDars deja la caja.\n\nDars: Sí.\n\nAcompaña al cliente.\n\nEl hombre señala un producto colocado en un estante alto.\n\nCliente: Ése.\n\nDars observa la altura.\n\nHay una escalera de trabajo disponible para empleados.\n\nDebe colocarla correctamente antes de alcanzar la caja.\n\nEl jugador no puede trepar directamente por los estantes.\n\nDars toma el artículo.\n\nDars: ¿Es éste?\n\nCliente: Sí.\n\nDars: Aquí tiene.\n\nCliente: Gracias.\n\nDars: De nada.\n\nEl cliente se aleja.\n\nDars guarda la escalera y regresa al almacén.",
+      "map": "tiendaDars"
+    },
+    {
+      "number": 24,
+      "title": "Una etiqueta equivocada",
+      "script": "Mapa: `tiendaDars` · Segundo lote\n\nLa siguiente caja contiene artículos de limpieza.\n\nPero uno de los productos tiene una etiqueta incorrecta.\n\nLa descripción impresa dice «recipiente plástico».\n\nEl contenido es detergente líquido.\n\nDars observa.\n\nDars: ...\n\nDars: ¿Quién etiquetó esto?\n\nEl jugador puede elegir entre confiar en el código o inspeccionar el producto.\n\nSi lo examina, descubre la discrepancia.\n\nDars: Va en limpieza.\n\nPuede separar el artículo y reportarlo.\n\nAl hacerlo, aparece un registro.\n\nIncidencia: etiqueta no coincide con producto.\n\nUna compañera se acerca.\n\nCompañera: ¿Qué pasó?\n\nDars: Pusieron detergente como si fuera un recipiente.\n\nCompañera: Otra vez.\n\nDars: ¿Ya había pasado?\n\nCompañera: La semana pasada.\n\nDars levanta el producto.\n\nDars: Pues qué bonito inventario.\n\nLa compañera sonríe.\n\nCompañera: Bienvenida.",
+      "map": "tiendaDars"
+    },
+    {
+      "number": 25,
+      "title": "Las devoluciones",
+      "script": "Mapa: `tiendaDars` · Zona R\n\nDars encuentra una caja marcada como devoluciones.\n\nContiene un jarrón con una pequeña grieta, una lámpara con el empaque dañado y varios productos sin etiqueta.\n\nEl encargado se aproxima.\n\nJefe: Esos no los pongas a la venta todavía.\n\nDars: Ya vi.\n\nJefe: Déjalos en revisión.\n\nDars: ¿Todos?\n\nJefe: Los que estén dañados.\n\nEl jugador debe inspeccionar cada artículo.\n\nNo todos los productos tienen problemas reales.\n\nUna caja golpeada puede contener un artículo intacto.\n\nUn producto aparentemente normal puede tener una pieza rota.\n\nDars separa los artículos.\n\nDars: Éste sí sirve.\n\nDeja otro sobre la mesa.\n\nDars: Éste no.\n\nLa misión exige observar, no solamente memorizar códigos.",
+      "map": "tiendaDars"
+    },
+    {
+      "number": 26,
+      "title": "No me cambies las cosas",
+      "script": "Mapa: `tiendaDars` · Conversación laboral\n\nMientras Dars acomoda una sección, una compañera mueve varios productos para dejar espacio.\n\nDars vuelve con una caja y descubre que el estante cambió.\n\nDars: ¿Quién movió esto?\n\nCompañera: Yo.\n\nDars: Lo estaba acomodando por código.\n\nCompañera: Necesitaba espacio.\n\nDars: Pudiste avisarme.\n\nLa compañera se detiene.\n\nCompañera: Perdón. No sabía que estabas trabajando ahí.\n\nDars observa el estante.\n\nDars: ...\n\nDars: Bueno.\n\nCompañera: ¿Quieres que lo regrese?\n\nDars piensa.\n\nDars: Ayúdame a separar los productos.\n\nCompañera: Está bien.\n\nAmbas trabajan unos minutos.\n\nNo se convierten de repente en mejores amigas.\n\nTampoco necesitan pelear.\n\nLa escena presenta un conflicto laboral ordinario que puede resolverse con cooperación.",
+      "map": "tiendaDars"
+    },
+    {
+      "number": 27,
+      "title": "La caja que falta",
+      "script": "Mapa: `tiendaDars` · Inventario\n\nAl contar los artículos, Dars descubre una diferencia.\n\nLa hoja indica 18 paquetes de servilletas.\n\nEn el estante solamente hay 16.\n\nDars cuenta nuevamente.\n\nDars: Dieciséis.\n\nRevisa la caja vacía.\n\nNo hay nada.\n\nVuelve al documento.\n\nDars: ...\n\nDars: Faltan dos.\n\nEl jugador puede investigar:\n\n- La zona de ventas.\n- Las cajas pendientes.\n- El carrito de reposición.\n- La mesa de devoluciones.\n\nFinalmente encuentra dos paquetes colocados detrás de otros artículos en el carrito.\n\nDars los recoge.\n\nDars: Ahí estaban.\n\nLos registra.\n\nDars: No faltaban.\n\nDars: Los escondieron sin querer.\n\nLa incidencia queda resuelta.",
+      "map": "tiendaDars"
+    },
+    {
+      "number": 28,
+      "title": "Descanso de quince minutos",
+      "script": "Mapa nuevo: `descansoTienda`\n\nDars termina la primera parte importante del inventario.\n\nEl encargado le autoriza un descanso.\n\nHay un cuarto pequeño con mesa, sillas, microondas y refrigerador.\n\nDars se sienta.\n\nSaca el recipiente que le entregó su madre.\n\nLo abre.\n\nDars: ...\n\nDars: Ah, mira.\n\nDars: Todavía está bien.\n\nCalienta la comida.\n\nMientras espera, revisa su teléfono.\n\nNo hay mensajes de Rade.\n\nDars abre la conversación por costumbre.\n\nObserva las últimas líneas.\n\nDespués bloquea la pantalla.\n\nDars: ...\n\nDars: Hoy no tengo ganas.\n\nUna compañera entra.\n\nCompañera: ¿Qué trajiste?\n\nDars: Comida.\n\nCompañera: Qué descriptiva.\n\nDars: Gracias.\n\nAmbas se ríen brevemente.\n\nDars continúa comiendo.",
+      "map": "descansoTienda"
+    },
+    {
+      "number": 29,
+      "title": "El problema de tener tiempo libre",
+      "script": "Mapa: `descansoTienda` · Descanso\n\nDars mira el reloj.\n\nTodavía le quedan unos minutos.\n\nLa compañera está revisando su teléfono.\n\nCompañera: ¿Ya acabaste las cajas?\n\nDars: No.\n\nCompañera: ¿Cuántas faltan?\n\nDars: Como seis.\n\nCompañera: Qué flojera.\n\nDars: Sí.\n\nPausa.\n\nCompañera: ¿Y cómo estuvo tu Navidad?\n\nDars observa el recipiente.\n\nDars: Rara.\n\nCompañera: ¿Rara bien o rara mal?\n\nDars: Mal.\n\nLa compañera levanta la mirada.\n\nCompañera: Ah.\n\nDars: Pero ya pasó.\n\nCompañera: Bueno.\n\nLa compañera no insiste.\n\nDars termina de comer.\n\nGuarda el recipiente.\n\nEl descanso concluye cuando vuelve a registrar su entrada al área de trabajo.",
+      "map": "descansoTienda"
+    },
+    {
+      "number": 30,
+      "title": "La mercancía pesada",
+      "script": "Mapa: `tiendaDars` · Tercer lote\n\nEl encargado señala varias cajas grandes.\n\nContienen productos para el hogar.\n\nAlgunas pesan demasiado para que Dars las levante sola.\n\nJefe: Ésas van al estante de abajo.\n\nDars: Sí.\n\nJefe: Usa el carrito.\n\nDars: Ya lo voy a traer.\n\nEl jugador debe utilizar un carrito de carga.\n\nLa mecánica permite transportar varias cajas.\n\nSi coloca productos pesados encima de mercancía frágil, aparece una advertencia de estabilidad.\n\nLos artículos mal asegurados pueden deslizarse.\n\nDars debe acomodarlos correctamente antes de mover el carrito.\n\nAl llegar al estante, los descarga.\n\nDars: Una.\n\nCarga otra.\n\nDars: Dos.\n\nLa tarea continúa hasta completar el lote.\n\nEl objetivo no requiere jugar contra un cronómetro estricto.\n\nLa dificultad consiste en organizar el espacio y los productos.",
+      "map": "tiendaDars"
+    },
+    {
+      "number": 31,
+      "title": "El estante equivocado",
+      "script": "Mapa: `tiendaDars` · Error heredado\n\nDars observa que un estante contiene artículos que no corresponden a su categoría.\n\nHay focos mezclados con utensilios de cocina.\n\nSe acerca al encargado.\n\nDars: Oiga.\n\nJefe: Dime.\n\nDars: Aquí hay cosas de eléctricos en cocina.\n\nEl encargado observa.\n\nJefe: ¿Quién las puso?\n\nDars: No sé.\n\nJefe: Pues muévelas.\n\nDars se queda quieta.\n\nDars: Tengo otras seis cajas pendientes.\n\nJefe: Ya sé.\n\nDars: ¿Quiere que termine ésas primero?\n\nEl encargado mira la hora.\n\nJefe: Sí. Termina lo que te asigné y luego revisamos esto.\n\nDars: Está bien.\n\nLa conversación termina.\n\nEl jugador registra el estante como pendiente, pero no está obligado a resolverlo inmediatamente.\n\nEsto evita que todas las responsabilidades recaigan automáticamente sobre Dars.",
+      "map": "tiendaDars"
+    },
+    {
+      "number": 32,
+      "title": "La discusión con el encargado",
+      "script": "Mapa: `tiendaDars` · Trabajo\n\nCerca del final del turno, el encargado vuelve a revisar.\n\nJefe: ¿Cuánto te falta?\n\nDars: Dos cajas.\n\nJefe: Pensé que ya ibas a terminar.\n\nDars: Había varios productos mal etiquetados.\n\nJefe: ¿Cuáles?\n\nDars muestra las incidencias registradas.\n\nDars: Éstos.\n\nEl encargado las observa.\n\nJefe: Ah.\n\nDars: También faltaban dos paquetes que estaban en otro carrito.\n\nJefe: Bueno. Termina lo que puedas.\n\nDars lo mira.\n\nDars: ¿Quiere que me quede más tiempo?\n\nJefe: No te he pedido eso.\n\nDars: Ah.\n\nJefe: Si no alcanzas, lo continúan mañana.\n\nDars: Está bien.\n\nEl encargado se aleja.\n\nDars regresa a las cajas.\n\nDars: ...\n\nDars: Por fin alguien razonable.",
+      "map": "tiendaDars"
+    },
+    {
+      "number": 33,
+      "title": "Última revisión",
+      "script": "Mapa: `tiendaDars` · Cierre de inventario\n\nLa jornada se acerca a su fin.\n\nDars debe comprobar la clasificación.\n\nEl jugador recibe una vista general del almacén con los artículos colocados.\n\nPuede revisar cada estante.\n\nLos errores detectados aparecen marcados en el registro, pero no se corrigen solos.\n\nDebe mover físicamente los productos si quiere dejar todo correcto.\n\nHay tres comprobaciones:\n\nCategoría: el objeto pertenece a la zona indicada.\n\nPeso: el producto está en un nivel adecuado.\n\nEstado: los artículos dañados permanecen separados de los disponibles para venta.\n\nCuando termina:\n\nDars: ...\n\nDars: A ver.\n\nCuenta los artículos.\n\nRevisa el total.\n\nDars: Ya.\n\nLa tarea queda finalizada.\n\nObjetivo completado: Clasificación e inventario.\n\nEl resultado puede ser excelente, aceptable o requerir correcciones para el siguiente turno. No altera el argumento sobrenatural.",
+      "map": "tiendaDars"
+    },
+    {
+      "number": 34,
+      "title": "No fue perfecto",
+      "script": "Mapa: `tiendaDars` · Evaluación del jefe\n\nEl encargado revisa el resultado.\n\nSi el jugador trabajó con precisión:\n\nJefe: Buen trabajo.\n\nDars: Gracias.\n\nJefe: Mañana revisamos las pendientes.\n\nDars: Está bien.\n\nSi dejó errores menores:\n\nJefe: Aquí quedaron unas cosas mal.\n\nDars: ¿Cuáles?\n\nJefe: Te las marqué.\n\nDars: Bueno. Mañana lo reviso.\n\nSi existen muchos errores:\n\nJefe: Necesitamos revisar tu inventario.\n\nDars: Está bien.\n\nJefe: No quiero que se pierdan productos por una mala clasificación.\n\nDars: Entiendo.\n\nEn ningún resultado el jefe felicita exageradamente o humilla sin motivo a Dars.\n\nLa evaluación es laboral y tiene consecuencias laborales.\n\nEl jugador puede consultar su desempeño en turnos posteriores.",
+      "map": "tiendaDars"
+    },
+    {
+      "number": 35,
+      "title": "La hora de cerrar",
+      "script": "Mapa: `tiendaDars` · 8:45 p. m.\n\nLos clientes han disminuido.\n\nUna compañera está apagando algunas luces del área de ventas.\n\nDars guarda el lector de códigos.\n\nDevuelve el carrito.\n\nColoca las hojas del inventario sobre el escritorio del encargado.\n\nCompañera: ¿Ya te vas?\n\nDars: Sí.\n\nCompañera: Qué suerte.\n\nDars: Tú también sales ahorita.\n\nCompañera: Sí, pero todavía tengo que contar caja.\n\nDars: Ah.\n\nLa compañera suspira.\n\nCompañera: Mañana nos vemos.\n\nDars: Sí.\n\nDars recoge sus pertenencias.\n\nRegistra la salida.\n\nTurno terminado: 8:49 p. m.\n\nEl jugador puede abandonar el local.",
+      "map": "tiendaDars"
+    },
+    {
+      "number": 36,
+      "title": "El camino nocturno",
+      "script": "Mapa: `barrioDars` · Noche\n\nLa calle está oscura.\n\nAlgunos negocios han cerrado.\n\nOtros todavía tienen luces encendidas.\n\nDars camina con las manos dentro de los bolsillos.\n\nHace frío.\n\nSe escucha un vehículo pasar.\n\nDars: ...\n\nDars: Me duelen los pies.\n\nEl jugador puede detenerse en una tienda para comprar algo de cenar.\n\nTambién puede regresar directamente a su vivienda.\n\nSi pasa por el parque, ve a dos personas conversando en una banca.\n\nNo las conoce.\n\nNo se produce ningún encuentro misterioso.\n\nDars continúa caminando.\n\nAl acercarse a su casa:\n\nDars: ...\n\nDars: Por fin.\n\nAbre con llave.",
+      "map": "barrioDars"
+    },
+    {
+      "number": 37,
+      "title": "Llegar a casa",
+      "script": "Mapa: `casaDars` · 9:16 p. m.\n\nDars entra.\n\nCierra la puerta.\n\nSe quita los zapatos.\n\nDeja la bolsa sobre el sofá.\n\nDars: ...\n\nDars: No quiero volver a ver un estante en mi vida.\n\nCamina hacia la cocina.\n\nSi el jugador trajo comida:\n\nDars: Qué bueno que compré.\n\nSi no compró nada, puede recalentar el recipiente que guardó durante la mañana.\n\nEl jugador debe preparar la cena.\n\nDars se sienta.\n\nCome en silencio.\n\nLa televisión está apagada.\n\nNo tiene ganas de encenderla.\n\nAl terminar:\n\nDars: ...\n\nDars: Mañana lavo esto.\n\nDeja el plato en el fregadero.",
+      "map": "casaDars"
+    },
+    {
+      "number": 38,
+      "title": "Una llamada de familia",
+      "script": "Mapa: `casaDars` · Sala\n\nSu madre llama.\n\nDars contesta desde el sofá.\n\nDars: Bueno.\n\nMadre: ¿Ya saliste del trabajo?\n\nDars: Sí. Ya estoy en mi casa.\n\nMadre: Qué bueno.\n\nDars: Sí.\n\nMadre: ¿Comiste lo que te di?\n\nDars: Sí.\n\nMadre: ¿Te gustó?\n\nDars: Estaba bien.\n\nMadre: Qué entusiasmo.\n\nDars sonríe ligeramente.\n\nDars: Estaba rico.\n\nMadre: Ah, bueno.\n\nPausa.\n\nMadre: Oye, perdón por lo de la mañana.\n\nDars guarda silencio.\n\nDars: ...\n\nDars: Está bien.\n\nMadre: No quería pelear.\n\nDars: Yo tampoco.\n\nSu madre respira profundamente.\n\nMadre: Descansa.\n\nDars: Tú también.\n\nLa llamada termina.\n\nDars permanece mirando el teléfono.\n\nDars: ...\n\nDars: Bueno.",
+      "map": "casaDars"
+    },
+    {
+      "number": 39,
+      "title": "La casa en silencio",
+      "script": "Mapa: `casaDars` · Preparación para dormir\n\nDars apaga las luces principales.\n\nRevisa que la puerta esté cerrada.\n\nSe dirige al dormitorio.\n\nEl armario permanece donde lo dejó.\n\nNo se escuchan golpes.\n\nDars se acerca.\n\nLo observa.\n\nDars: ...\n\nDars: Ni se te ocurra.\n\nAbre el armario.\n\nHay ropa.\n\nAlgunas cajas.\n\nNada extraño.\n\nLo cierra.\n\nSe cambia y se sienta en la cama.\n\nRevisa el teléfono.\n\nNo hay mensajes nuevos de Rade.\n\nDars observa la conversación durante unos segundos.\n\nDespués bloquea la pantalla.\n\nDars: ...\n\nDars: Mañana.\n\nDeja el teléfono a un lado.\n\nApaga la lámpara.",
+      "map": "casaDars"
+    },
+    {
+      "number": 40,
+      "title": "Antes del sueño",
+      "script": "Mapa: `casaDars` · Dormitorio\n\nDars se acuesta.\n\nEl cuarto está casi completamente oscuro.\n\nEntra un poco de luz desde la calle.\n\nSe escucha el refrigerador funcionando en otra habitación.\n\nUn vehículo pasa por la avenida.\n\nDars cierra los ojos.\n\nLa cámara permanece fija.\n\nDespués de unos segundos, ella vuelve a abrirlos.\n\nDars: ...\n\nDars: Qué cansancio.\n\nSe acomoda bajo la cobija.\n\nVuelve a cerrar los ojos.\n\nEl jugador ya no puede moverla.\n\nEl sonido del refrigerador disminuye lentamente.\n\nSe escucha viento.\n\nPrimero muy débil.\n\nDespués algo más fuerte.\n\nLa imagen se oscurece por completo.\n\nHay un silencio.\n\nEntonces se escucha el ruido de pequeñas piedras rodando sobre tierra seca.\n\nUna respiración.\n\nLa de Dars.\n\nDespués, sus pasos sobre grava.\n\nLa pantalla vuelve a iluminarse.\n\nPero ya no está en su casa.\n\n# SEGUNDA MITAD — EL SUEÑO DEL FORTÍN\n\n## ACTO III — LA LOMA",
+      "map": "casaDars"
+    },
+    {
+      "number": 41,
+      "title": "Tierra bajo los pies",
+      "script": "Mapa nuevo: `fortinAmericanosNoche` · Entrada sur de la loma\n\nLa imagen aparece lentamente.\n\nDars está de pie sobre un camino de tierra.\n\nEs de noche.\n\nLleva su ropa negra habitual, pero no los zapatos con los que se acostó.\n\nEl suelo está cubierto de pequeñas piedras.\n\nHay vegetación seca a los lados del camino.\n\nSe escucha un viento frío y constante.\n\nDars mira alrededor.\n\nDars: ...\n\nDars: ¿Dónde chingados estoy?\n\nEl jugador recupera el control.\n\nNo aparece inmediatamente un objetivo.\n\nLa cámara permite mirar hacia arriba.\n\nEl cielo está oscuro.\n\nHay nubes desplazándose lentamente frente a la luna.\n\nA lo lejos se distinguen montañas.\n\nDars mira hacia atrás.\n\nNo hay ninguna casa.\n\nTampoco una cama.\n\nSolamente el camino descendiendo hacia la oscuridad.\n\nDars: ...\n\nDars: ¿Estoy soñando?\n\nSe agacha.\n\nToca la tierra.\n\nLas pequeñas piedras se mueven.\n\nDars: ...\n\nDars: Se siente de verdad.\n\nEl jugador puede comenzar a caminar.",
+      "map": "fortinAmericanosNoche"
+    },
+    {
+      "number": 42,
+      "title": "Una ciudad debajo",
+      "script": "Mapa: `fortinAmericanosNoche` · Primer mirador natural\n\nDespués de avanzar unos metros, Dars llega a una parte abierta de la loma.\n\nDesde ahí puede observar una ciudad iluminada.\n\nLas calles forman pequeñas líneas amarillas.\n\nAlgunos edificios destacan entre las luces.\n\nMás lejos se distinguen zonas oscuras y la silueta de las montañas.\n\nDars se aproxima al borde.\n\nDars: ...\n\nDars: Saltillo.\n\nSe queda observando.\n\nDars: ¿Estoy en Saltillo?\n\nMira hacia la pendiente.\n\nEl terreno parece árido.\n\nHay rocas y arbustos pequeños.\n\nDars: ...\n\nDars: ¿Cómo llegué aquí?\n\nSe escucha una ráfaga de viento.\n\nSu cabello se mueve ligeramente.\n\nDars se aleja del borde.\n\nEl jugador puede permanecer mirando la ciudad cuanto quiera.\n\nNo aparece ningún enemigo.\n\nNo hay música.\n\nSolamente el viento.",
+      "map": "fortinAmericanosNoche"
+    },
+    {
+      "number": 43,
+      "title": "El camino viejo",
+      "script": "Mapa: `fortinAmericanosNoche` · Sendero exterior\n\nDars continúa por el camino.\n\nEl suelo se vuelve irregular.\n\nHay piedras grandes y algunas marcas de erosión.\n\nA un lado aparece una sección de muro derrumbado.\n\nEs de color claro, con zonas de adobe deteriorado.\n\nDars se detiene.\n\nDars: ...\n\nDars: ¿Qué es esto?\n\nSe acerca.\n\nToca la superficie.\n\nSe desprende un poco de polvo.\n\nDars: Está deshaciéndose.\n\nEl jugador puede examinar la pared.\n\nNo hay inscripciones misteriosas.\n\nSolamente grietas, tierra compactada y restos de materiales antiguos.\n\nDars sigue la línea del muro.\n\nEste continúa varios metros antes de desaparecer entre los escombros.\n\nDars: ...\n\nDars: Parece un fuerte.\n\nSe escucha un pequeño desprendimiento de tierra en alguna parte de la loma.\n\nDars voltea.\n\nNo ve nada.",
+      "map": "fortinAmericanosNoche"
+    },
+    {
+      "number": 44,
+      "title": "El lugar que ya no está",
+      "script": "Mapa: `fortinAmericanosNoche` · Vista del conjunto\n\nEl camino sube hacia una plataforma natural.\n\nDesde ahí puede verse una parte importante del fortín.\n\nHay varios paredones de adobe.\n\nAlgunos permanecen relativamente altos.\n\nOtros están reducidos a fragmentos.\n\nLos muros no forman habitaciones completas.\n\nUna parte de la construcción se encuentra abierta hacia la ladera.\n\nEntre los restos hay piedras, pequeños montones de tierra y vegetación seca.\n\nDars observa.\n\nDars: ...\n\nDars: Esto...\n\nSe queda pensando.\n\nDars: Creo que lo he visto antes.\n\nNo aparece un recuerdo visual.\n\nTampoco una escena de su infancia.\n\nDars solamente reconoce vagamente el lugar.\n\nDars: ¿Era el Fortín de los Americanos?\n\nMira hacia la ciudad.\n\nDars: ...\n\nDars: Pero esto ya no existe.\n\nEl jugador recibe un objetivo.\n\nObjetivo: Recorre las ruinas y encuentra un camino seguro hacia la parte alta.",
+      "map": "fortinAmericanosNoche"
+    },
+    {
+      "number": 45,
+      "title": "Los muros de adobe",
+      "script": "Mapa: `fortinAmericanosNoche` · Sector occidental\n\nDars entra entre dos secciones de muro.\n\nLa luz de la luna ilumina algunas superficies.\n\nOtras quedan completamente oscuras.\n\nEl viento hace sonar pequeñas ramas secas.\n\nDars camina lentamente.\n\nDars: ...\n\nDars: Está más grande de lo que pensé.\n\nPuede tocar varios materiales.\n\nUn bloque de adobe.\n\nUna piedra caliza.\n\nUna pequeña sección de mortero deteriorado.\n\nCada elemento tiene una textura diferente.\n\nSi Dars intenta subir por un muro frágil:\n\nDars: No.\n\nDars: Eso se cae conmigo.\n\nEl jugador debe buscar una zona donde el terreno permita subir sin dañar las ruinas.\n\nNo hay teletransportaciones ni puertas imposibles.\n\nEl mapa mantiene una distribución física coherente.",
+      "map": "fortinAmericanosNoche"
+    },
+    {
+      "number": 46,
+      "title": "La primera piedra suelta",
+      "script": "Mapa: `fortinAmericanosNoche` · Pendiente\n\nDars llega a una pequeña pendiente cubierta de grava.\n\nIntenta subir.\n\nSu pie se desliza.\n\nVarias piedras ruedan.\n\nDars: ¡Ah!\n\nConsigue sostenerse.\n\nNo cae.\n\nMira hacia abajo.\n\nDars: ...\n\nDars: Casi.\n\nEl jugador debe buscar una ruta más estable.\n\nHay dos opciones.\n\nLa primera atraviesa una zona de rocas grandes.\n\nLa segunda rodea los restos de una muralla.\n\nAmbas conducen a la parte superior.\n\nPero la segunda es más segura.\n\nSi el jugador intenta subir repetidamente por la pendiente inestable:\n\nDars: No voy a seguir haciendo esto.\n\nLa interacción queda bloqueada durante unos segundos.\n\nDars respira profundamente.\n\nDars: ...\n\nDars: Busca otro camino.\n\nEl jugador continúa explorando.",
+      "map": "fortinAmericanosNoche"
+    },
+    {
+      "number": 47,
+      "title": "El cañón",
+      "script": "Mapa: `fortinAmericanosNoche` · Ladera oriental\n\n[Fort Union, National Monument, NM](https://images.openai.com/static-rsc-4/hdEpC5THjjSeET1u5VlSulYyXx2LVucjMgEGClJU-AyGrdW-_musOGUc9C3grOsR_rGYQEJxoMKryu6M3sdrWrd1Gx681zbVc__XTV6QvKN0rX6N4MOSFtSjRxWm2Bx_y1NQqfh_QkVtCNzioa_LIyWHaP_gvnnQEiH0YewQ5MgBWbv-U3LcEnssHDxca6mg?purpose=inline)\n\nEntre las piedras aparece un objeto metálico largo.\n\nEstá parcialmente cubierto de tierra.\n\nDars se aproxima.\n\nLa luna ilumina una parte de su superficie.\n\nSe trata de un viejo cañón.\n\nNo está instalado sobre una base moderna.\n\nDescansa directamente sobre la ladera.\n\nUna sección está oxidada.\n\nHay piedras pequeñas alrededor.\n\nDars: ...\n\nDars: Un cañón.\n\nDars observa el objeto.\n\nDars: ¿Todavía estará entero?\n\nSe acerca.\n\nToca el metal.\n\nEstá frío.\n\nDars: ...\n\nDars: Helado.\n\nEl jugador puede examinar varios detalles.\n\nEl cañón no puede levantarse ni dispararse.\n\nNo contiene mecanismos funcionales.\n\nEs un resto histórico dentro del sueño.\n\nDars se aleja lentamente.\n\nDars: ¿Cuánto tiempo llevarás aquí?\n\nEl viento continúa.\n\nNo hay respuesta.",
+      "map": "fortinAmericanosNoche"
+    },
+    {
+      "number": 48,
+      "title": "El teléfono no llegó",
+      "script": "Mapa: `fortinAmericanosNoche` · Exploración\n\nDars intenta sacar su teléfono.\n\nBusca en los bolsillos.\n\nNo está.\n\nRevisa nuevamente.\n\nDars: ...\n\nDars: ¿Y mi teléfono?\n\nMira su ropa.\n\nDars: Lo dejé en la cama.\n\nSe queda pensando.\n\nDars: ...\n\nDars: Sí estoy soñando.\n\nPero el entorno no desaparece.\n\nLa ciudad continúa iluminada a lo lejos.\n\nLas piedras permanecen bajo sus pies.\n\nDars observa el cielo.\n\nDars: Entonces puedo despertarme.\n\nCierra los ojos.\n\nEspera.\n\nLos vuelve a abrir.\n\nSigue en la loma.\n\nDars: ...\n\nDars: Bueno.\n\nVuelve a intentarlo.\n\nNada cambia.\n\nDars: Chingada madre.\n\nEl jugador recupera el control.",
+      "map": "fortinAmericanosNoche"
+    },
+    {
+      "number": 49,
+      "title": "La pared que mira al norte",
+      "script": "Mapa: `fortinAmericanosNoche` · Sector norte\n\nDars continúa rodeando los muros.\n\nLlega a un paredón más alto.\n\nEl adobe está erosionado.\n\nLa parte superior tiene pequeñas grietas y material desprendido.\n\nNo hay techo.\n\nEl interior está expuesto a la noche.\n\nDars se aproxima.\n\nDars: ...\n\nDars: ¿Aquí se quedaba la gente?\n\nObserva una zona hundida detrás del muro.\n\nParece haber formado parte de una estructura antigua.\n\nPero no se puede identificar con certeza su función original.\n\nEl jugador puede recorrer el perímetro.\n\nHay pequeños desniveles y caminos estrechos.\n\nDesde el borde norte se observa una parte diferente del valle.\n\nDars mira hacia las montañas.\n\nDars: ...\n\nDars: Nunca había visto la ciudad así.\n\nNo aparece la Figura.\n\nSolamente el paisaje.",
+      "map": "fortinAmericanosNoche"
+    },
+    {
+      "number": 50,
+      "title": "El viento",
+      "script": "Mapa: `fortinAmericanosNoche` · Zona abierta\n\nEl viento aumenta.\n\nDars se protege el rostro con un brazo.\n\nSu cabello se mueve.\n\nAlgunas ramas secas golpean la piedra.\n\nDars: ...\n\nDars: Qué frío.\n\nCamina hacia una zona protegida por un muro.\n\nEl sonido del viento disminuye ligeramente.\n\nDars se queda quieta.\n\nDars: ...\n\nDars: Aquí está mejor.\n\nEl jugador puede permanecer junto a la pared.\n\nNo hay una barra de temperatura ni un peligro de congelación.\n\nLa escena utiliza el ambiente para transmitir la sensación de estar en una loma expuesta durante una noche fría.\n\nDespués de varios segundos, se escucha algo diferente.\n\nUn pequeño golpe.\n\nProviene de la parte superior del fortín.\n\nDars levanta la cabeza.\n\nDars: ...\n\nDars: ¿Hay alguien?",
+      "map": "fortinAmericanosNoche"
+    },
+    {
+      "number": 51,
+      "title": "No se ve nadie",
+      "script": "Mapa: `fortinAmericanosNoche` · Primera búsqueda\n\nDars sube hacia el lugar del ruido.\n\nEl terreno está cubierto de escombros.\n\nHay un sendero estrecho entre dos secciones de pared.\n\nLlega a una plataforma.\n\nNo hay nadie.\n\nDars: ...\n\nDars: ¿Hola?\n\nEl viento continúa.\n\nDars mira hacia un muro parcialmente derrumbado.\n\nDars: Si hay alguien, contesta.\n\nNo hay respuesta.\n\nEl jugador puede inspeccionar el suelo.\n\nHay piedras removidas.\n\nNo se puede determinar si se movieron hace poco.\n\nDars se agacha.\n\nDars: ...\n\nDars: Probablemente fue el viento.\n\nSe levanta.\n\nDa unos pasos.\n\nEntonces escucha otro golpe.\n\nEsta vez desde una zona más baja.\n\nDars se detiene.\n\nDars: ...\n\nDars: Pues qué divertido.",
+      "map": "fortinAmericanosNoche"
+    },
+    {
+      "number": 52,
+      "title": "Tres caminos",
+      "script": "Mapa: `fortinAmericanosNoche` · Orientación\n\nDars llega a un punto donde el sendero se divide.\n\nUno conduce hacia el cañón.\n\nOtro asciende hasta una parte alta de las ruinas.\n\nEl tercero rodea la loma.\n\nEl jugador no recibe una flecha que indique automáticamente cuál es correcto.\n\nDebe orientarse usando referencias visuales.\n\nDars observa el paisaje.\n\nDars: ...\n\nDars: El cañón está allá.\n\nMira hacia la parte alta.\n\nDars: Y por ahí no he pasado.\n\nEl objetivo se actualiza.\n\nObjetivo: Encuentra tres puntos de referencia del fortín.\n\nLos puntos son:\n\n- El cañón de la ladera.\n- El paredón más alto.\n- La plataforma con vista hacia Saltillo.\n\nAl visitar los tres, Dars comprende mejor la distribución del lugar.\n\nNo obtiene un mapa mágico.\n\nEl jugador aprende a orientarse con el entorno.",
+      "map": "fortinAmericanosNoche"
+    },
+    {
+      "number": 53,
+      "title": "La vista completa",
+      "script": "Mapa: `fortinAmericanosNoche` · Plataforma superior\n\nDars llega a la parte alta.\n\nDesde allí puede observar la ciudad, los restos de las murallas y el camino por donde apareció.\n\nSe escucha el viento pasando entre los muros.\n\nLa luna ilumina una parte del suelo.\n\nDars permanece inmóvil.\n\nDars: ...\n\nDars: Qué bonito.\n\nPor primera vez en el sueño, parece relajarse.\n\nSe sienta sobre una piedra grande.\n\nMira hacia Saltillo.\n\nDars: ...\n\nDars: Ojalá pudiera quedarme aquí un rato.\n\nNo hay música.\n\nDurante varios segundos solamente se ve el paisaje nocturno.\n\nEl jugador puede girar la cámara sin levantarse.\n\nLos pequeños puntos de luz de la ciudad contrastan con la oscuridad de la loma.\n\nDars baja la mirada.\n\nDars: ...\n\nDars: No sé por qué soñé con esto.\n\nSe queda sentada.",
+      "map": "fortinAmericanosNoche"
+    },
+    {
+      "number": 54,
+      "title": "Alguien detrás del muro",
+      "script": "Mapa: `fortinAmericanosNoche` · Primera aparición\n\nDars escucha una piedra rodar.\n\nSe incorpora.\n\nMira hacia el paredón situado detrás de la plataforma.\n\nHay una silueta negra.\n\nEstá parcialmente oculta por la pared.\n\nNo se mueve.\n\nDars se queda inmóvil.\n\nDars: ...\n\nDars: ¿Hola?\n\nLa figura permanece quieta.\n\nDars se levanta lentamente.\n\nDars: ¿Quién eres?\n\nNo hay respuesta.\n\nEl viento mueve su cabello.\n\nLa silueta parece humana, pero no se distingue ningún detalle de su rostro.\n\nDars retrocede un paso.\n\nDars: ...\n\nDars: No me jodas.\n\nLa figura continúa inmóvil.\n\nEl jugador puede acercarse o rodear la zona.\n\nNo comienza ninguna persecución.\n\nCuando Dars vuelve a verla desde otro ángulo, la silueta continúa junto al muro.\n\nNo desaparece.\n\nLa escena termina cuando el jugador se aproxima lo suficiente para hablar.\n\n## ACTO IV — LA FIGURA",
+      "map": "fortinAmericanosNoche"
+    },
+    {
+      "number": 55,
+      "title": "Tú no eres de aquí",
+      "script": "Mapa: `fortinAmericanosNoche` · Encuentro\n\nDars está frente a la silueta.\n\nEs una figura humanoide completamente negra.\n\nNo se distinguen ojos, boca ni rasgos faciales.\n\nSu apariencia coincide con la entidad que Rade encontró en el cuarto de la computadora.\n\nPero Dars todavía no tiene manera de confirmarlo.\n\nDars: ¿Quién eres?\n\nLa Figura no contesta inmediatamente.\n\nDespués habla.\n\nFigura: No eres de aquí.\n\nDars la observa.\n\nDars: ¿Y tú sí?\n\nSilencio.\n\nFigura: No.\n\nDars mira alrededor.\n\nDars: Bueno.\n\nDars: Entonces estamos igual.\n\nLa Figura permanece inmóvil.\n\nDars: ¿Qué haces aquí?\n\nFigura: Estoy esperando.\n\nDars: ¿A quién?\n\nNo responde.\n\nDars: ...\n\nDars: Qué conversador.\n\nEl jugador puede continuar.",
+      "map": "fortinAmericanosNoche"
+    },
+    {
+      "number": 56,
+      "title": "La misma silueta",
+      "script": "Mapa: `fortinAmericanosNoche` · Diálogo\n\nDars observa a la Figura detenidamente.\n\nRecuerda la descripción que Rade hizo después de Navidad.\n\nDars: ...\n\nDars: Espera.\n\nLa Figura no se mueve.\n\nDars: ¿Tú eres lo que vio Rade?\n\nSilencio.\n\nFigura: Él me vio.\n\nDars se queda callada.\n\nDars: ...\n\nDars: Entonces sí.\n\nFigura: Eso no fue lo que dije.\n\nDars frunce el ceño.\n\nDars: ¿Te gusta contestar así?\n\nFigura: Me preguntaste algo.\n\nDars: Y no respondiste.\n\nLa Figura inclina ligeramente la cabeza.\n\nFigura: Él tampoco.\n\nDars permanece quieta.\n\nDars: ...\n\nDars: No estoy hablando de él.\n\nLa Figura no contesta.",
+      "map": "fortinAmericanosNoche"
+    },
+    {
+      "number": 57,
+      "title": "No hables como si me conocieras",
+      "script": "Mapa: `fortinAmericanosNoche` · Diálogo\n\nDars se cruza de brazos.\n\nDars: Mira.\n\nDars: No sé qué eres.\n\nLa Figura permanece inmóvil.\n\nDars: Y tampoco sé qué haces en mi sueño.\n\nFigura: ¿Es tu sueño?\n\nDars la mira.\n\nDars: Eso parece.\n\nFigura: Entonces deberías saber dónde estás.\n\nDars observa las ruinas.\n\nDars: Estoy en un fuerte.\n\nFigura: ¿Cuál?\n\nDars: El de los Americanos, creo.\n\nSilencio.\n\nFigura: ¿Por qué?\n\nDars: Porque se parece.\n\nFigura: ¿A qué?\n\nDars comienza a perder la paciencia.\n\nDars: A las fotos que he visto, cabrón.\n\nLa Figura no reacciona.\n\nDars suspira.\n\nDars: ...\n\nDars: No estoy para tus adivinanzas.",
+      "map": "fortinAmericanosNoche"
+    },
+    {
+      "number": 58,
+      "title": "Lo que pasó en Navidad",
+      "script": "Mapa: `fortinAmericanosNoche` · Interrogatorio\n\nDars vuelve a mirar a la entidad.\n\nDars: ¿Estuviste en la casa de Rade?\n\nFigura: Sí.\n\nDars permanece callada.\n\nEs la primera respuesta completamente directa que recibe.\n\nDars: ¿Qué hiciste allí?\n\nFigura: Estuve allí.\n\nDars: Ya entendí esa parte.\n\nFigura: Entonces no necesito repetirla.\n\nDars aprieta los labios.\n\nDars: ¿Fuiste tú quien cerró la puerta?\n\nLa Figura no responde.\n\nDars: ¿Hiciste que desaparecieran los muebles?\n\nSilencio.\n\nDars: ¿Y las llamadas?\n\nLa Figura permanece inmóvil.\n\nDars da un paso hacia ella.\n\nDars: Te estoy haciendo preguntas.\n\nFigura: Lo sé.\n\nDars: Pues contesta.\n\nFigura: No tengo todas tus respuestas.\n\nDars la mira.\n\nDars: ...\n\nDars: Qué conveniente.",
+      "map": "fortinAmericanosNoche"
+    },
+    {
+      "number": 59,
+      "title": "Rade no está aquí",
+      "script": "Mapa: `fortinAmericanosNoche` · Diálogo\n\nLa Figura vuelve a hablar.\n\nFigura: Lo buscas.\n\nDars frunce el ceño.\n\nDars: ¿A quién?\n\nFigura: A Rade.\n\nDars se queda inmóvil.\n\nDars: No.\n\nLa Figura no responde.\n\nDars: Estoy tratando de entender qué pasó.\n\nFigura: Él también.\n\nDars: Pues qué bueno por él.\n\nPausa.\n\nDars: Pero éste es mi sueño.\n\nLa Figura parece observarla.\n\nDars: No todo lo que hago tiene que ver con Rade.\n\nSilencio.\n\nFigura: Lo sé.\n\nDars baja ligeramente los brazos.\n\nDars: ...\n\nDars: Entonces deja de mencionarlo.\n\nLa Figura no vuelve a pronunciar su nombre durante un rato.\n\nEl diálogo termina.",
+      "map": "fortinAmericanosNoche"
+    },
+    {
+      "number": 60,
+      "title": "La Figura se aparta",
+      "script": "Mapa: `fortinAmericanosNoche` · Exploración\n\nLa Figura se mueve por primera vez.\n\nDa un paso hacia un lado.\n\nDespués otro.\n\nSu movimiento es lento.\n\nNo parece estar huyendo.\n\nSimplemente se aparta del camino.\n\nDars la observa.\n\nDars: ¿A dónde vas?\n\nNo responde.\n\nLa Figura camina hacia una sección más oscura del fortín.\n\nDars puede seguirla o quedarse.\n\nSi la sigue, la ve detenerse junto a otro muro.\n\nSi decide explorar, puede regresar más tarde.\n\nNo hay una persecución obligatoria.\n\nDars observa la silueta a lo lejos.\n\nDars: ...\n\nDars: Ni siquiera sé para qué le estoy hablando.\n\nEl jugador recupera el control completo.\n\n## ACTO V — LAS RUINAS NO RECUERDAN",
+      "map": "fortinAmericanosNoche"
+    },
+    {
+      "number": 61,
+      "title": "La parte hundida",
+      "script": "Mapa: `fortinAmericanosNoche` · Sector interior\n\nDars continúa caminando.\n\nLlega a una zona más baja del fortín.\n\nLas paredes están parcialmente derrumbadas.\n\nEl suelo es irregular.\n\nHay restos de materiales antiguos acumulados en las esquinas.\n\nUna sección parece haber formado parte de un pequeño recinto.\n\nPero ya no tiene techo.\n\nDars entra.\n\nDars: ...\n\nDars: ¿Qué había aquí?\n\nObserva las paredes.\n\nNo encuentra ninguna inscripción.\n\nTampoco objetos personales.\n\nSolamente ruinas.\n\nEl jugador puede examinar la textura del adobe y las piedras.\n\nDars toca una pequeña zona del muro.\n\nSe desprende polvo.\n\nDars: ...\n\nDars: No entiendo cómo sigue en pie.\n\nSe escucha viento entrando por una abertura.\n\nDars se agacha junto a una piedra.\n\nHay una pequeña marca en su superficie.\n\nNo representa letras ni símbolos.\n\nParece el resultado de desgaste natural.\n\nDars la observa.\n\nDars: ...\n\nDars: Ya estoy buscando cosas donde no hay nada.\n\nSe levanta.",
+      "map": "fortinAmericanosNoche"
+    },
+    {
+      "number": 62,
+      "title": "La luna detrás de los muros",
+      "script": "Mapa: `fortinAmericanosNoche` · Patio interior\n\nDars sale de la zona hundida.\n\nLa luna aparece entre las nubes.\n\nDurante unos segundos, parte del fortín queda iluminada con mayor claridad.\n\nLas sombras de los muros se alargan sobre el suelo.\n\nDars observa la escena.\n\nDars: ...\n\nDars: Está hermoso.\n\nCamina lentamente hacia el centro.\n\nLa luz permite distinguir la distribución de las ruinas.\n\nUn muro largo hacia el norte.\n\nOtro que forma un ángulo.\n\nUna abertura que comunica con la ladera.\n\nY una zona elevada donde todavía se distingue una sección de la fortificación.\n\nEl jugador puede explorar sin necesidad de completar objetivos.\n\nDurante esta parte, el juego reduce las indicaciones en pantalla.\n\nNo hay enemigos.\n\nNo hay objetos que recoger.\n\nSolamente el lugar.\n\nDespués de varios segundos, Dars escucha una voz.\n\nFigura: No queda mucho.\n\nDars se vuelve.",
+      "map": "fortinAmericanosNoche"
+    },
+    {
+      "number": 63,
+      "title": "No queda mucho",
+      "script": "Mapa: `fortinAmericanosNoche` · Segundo diálogo con la Figura\n\nLa Figura está junto a una sección de muralla.\n\nNo parece haberse acercado.\n\nDars la observa.\n\nDars: ¿De qué hablas?\n\nFigura: De esto.\n\nLa entidad gira ligeramente hacia los muros.\n\nDars mira alrededor.\n\nDars: Está en ruinas.\n\nFigura: Sí.\n\nDars: Eso ya lo vi.\n\nSilencio.\n\nFigura: Antes había más.\n\nDars vuelve a mirarla.\n\nDars: ¿Tú estuviste aquí antes?\n\nNo responde.\n\nDars: ¿Cuando todavía estaba completo?\n\nLa Figura continúa mirando las ruinas.\n\nDars: ¿Conociste a la gente que estuvo aquí?\n\nSilencio.\n\nDars se cruza de brazos.\n\nDars: ...\n\nDars: Otra vez no vas a contestar.\n\nLa Figura vuelve hacia ella.\n\nFigura: Tú tampoco sabes qué había.\n\nDars observa los muros.\n\nDars: No.\n\nPausa.\n\nDars: Por eso pregunto.",
+      "map": "fortinAmericanosNoche"
+    },
+    {
+      "number": 64,
+      "title": "Lo que falta",
+      "script": "Mapa: `fortinAmericanosNoche` · Diálogo\n\nDars camina unos pasos.\n\nDars: No entiendo qué quieres que haga.\n\nLa Figura permanece inmóvil.\n\nFigura: Nada.\n\nDars: ¿Nada?\n\nFigura: Nada.\n\nDars observa las piedras.\n\nDars: Pues entonces déjame pasear.\n\nLa Figura no responde.\n\nDars se aleja.\n\nAntes de salir del patio, escucha otra frase.\n\nFigura: Siempre buscas lo que falta.\n\nDars se detiene.\n\nDars: ¿Qué?\n\nFigura: Lo que ya no está.\n\nDars mira hacia los muros derrumbados.\n\nDars: Aquí falta casi todo.\n\nFigura: Sí.\n\nDars: Qué observador.\n\nSilencio.\n\nFigura: No todo puede volver a ponerse donde estaba.\n\nDars permanece quieta.\n\nRecuerda, sin que aparezca una escena retrospectiva, las cajas y estantes que ordenó durante el día.\n\nDars: ...\n\nDars: No sé qué tiene que ver eso conmigo.\n\nLa Figura no contesta.",
+      "map": "fortinAmericanosNoche"
+    },
+    {
+      "number": 65,
+      "title": "El muro más alto",
+      "script": "Mapa: `fortinAmericanosNoche` · Ascenso\n\nDars encuentra un sendero que conduce hacia una sección elevada del fortín.\n\nEl camino pasa junto al muro más alto.\n\nLa pendiente es moderada.\n\nHay piedras que pueden moverse bajo sus zapatos.\n\nEl jugador debe avanzar con cuidado.\n\nDars observa las ruinas desde una nueva perspectiva.\n\nDars: ...\n\nDars: Desde aquí se ve todo.\n\nPuede mirar hacia el cañón.\n\nDespués hacia el patio interior.\n\nFinalmente hacia la ciudad.\n\nEl recorrido permite reconocer los tres puntos de referencia visitados anteriormente.\n\nEl mapa no cambia su arquitectura.\n\nLas rutas continúan conectadas del mismo modo.\n\nDars se aproxima a una zona protegida por una pared.\n\nSe sienta.\n\nDars: ...\n\nDars: No sé si quiero despertarme todavía.\n\nEl viento continúa.",
+      "map": "fortinAmericanosNoche"
+    },
+    {
+      "number": 66,
+      "title": "Una piedra junto a otra",
+      "script": "Mapa: `fortinAmericanosNoche` · Interacción opcional\n\nEn la zona elevada hay varias piedras sueltas, separadas del muro principal.\n\nDars observa una que está a punto de rodar hacia la pendiente.\n\nPuede apartarla del sendero, sin intervenir sobre las ruinas históricas.\n\nSi lo hace:\n\nDars: Ahí.\n\nLa piedra queda junto a otras.\n\nDars se limpia las manos.\n\nDars: ...\n\nDars: Qué pendejada.\n\nMira alrededor.\n\nDars: Ni siquiera sé si esto existe.\n\nSe sienta nuevamente.\n\nEl jugador puede contemplar la loma.\n\nDurante un rato solamente se escucha el viento.\n\nEntonces se oye una piedra moviéndose cerca.\n\nDars levanta la cabeza.\n\nLa Figura permanece a varios metros.\n\nNo se acerca.",
+      "map": "fortinAmericanosNoche"
+    },
+    {
+      "number": 67,
+      "title": "No tengo que seguirte",
+      "script": "Mapa: `fortinAmericanosNoche` · Decisión\n\nLa Figura está junto a un camino que conduce hacia la ladera.\n\nDars la observa.\n\nDars: ¿Quieres que vaya contigo?\n\nLa Figura no contesta.\n\nDars: Porque no pienso seguirte nada más porque te quedaste parado ahí.\n\nSilencio.\n\nFigura: Puedes irte.\n\nDars: ¿Por dónde?\n\nLa Figura gira hacia el sendero.\n\nDars mira esa dirección.\n\nDars: ...\n\nDars: Ah.\n\nEl jugador puede elegir entre acercarse nuevamente o explorar otra parte del fortín.\n\nSi se acerca:\n\nDars: No significa que confíe en ti.\n\nFigura: Lo sé.\n\nSi decide alejarse:\n\nDars: Voy a buscar por mi cuenta.\n\nLa Figura no intenta detenerla.\n\nAmbas rutas conducen hacia la salida natural de las ruinas, pero muestran distintas conversaciones.\n\nNo existe una ruta donde Dars se convierta en subordinada de la Figura.",
+      "map": "fortinAmericanosNoche"
+    },
+    {
+      "number": 68,
+      "title": "Las voces de la casa",
+      "script": "Mapa: `fortinAmericanosNoche` · Sendero bajo\n\nMientras camina por la loma, Dars comienza a escuchar una conversación.\n\nProviene de algún lugar cercano.\n\nVoz de su madre: ¿Ya comiste?\n\nDars se detiene.\n\nDars: ...\n\nMira alrededor.\n\nNo hay nadie.\n\nDespués escucha otra voz.\n\nJefe: Necesito que acomodes esto.\n\nDars se vuelve.\n\nLa loma permanece vacía.\n\nDars: ...\n\nDars: ¿Qué?\n\nLa voz de su madre vuelve a escucharse.\n\nVoz de su madre: Descansa.\n\nDars mira el cielo.\n\nDars: ...\n\nDars: Estoy soñando.\n\nEl sonido desaparece.\n\nNo vuelve a repetirse.\n\nDars permanece unos segundos inmóvil.\n\nDars: ...\n\nDars: Ya lo sé.\n\nContinúa caminando.\n\nLas voces no se presentan como seres que imitan personas reales. Pueden ser simplemente fragmentos del día que aparecen dentro del sueño.",
+      "map": "fortinAmericanosNoche"
+    },
+    {
+      "number": 69,
+      "title": "La ciudad al revés del tiempo",
+      "script": "Mapa: `fortinAmericanosNoche` · Mirador natural\n\nDars llega nuevamente a un punto desde donde se observa Saltillo.\n\nEl fortín está en ruinas.\n\nPero la ciudad que ve debajo tiene luces y edificios contemporáneos.\n\nDars observa la contradicción.\n\nDars: ...\n\nDars: Esto no debería estar aquí.\n\nMira las murallas.\n\nDars: Las quitaron hace mucho.\n\nDespués vuelve hacia la ciudad.\n\nDars: Pero todo lo demás parece de ahorita.\n\nSe queda pensando.\n\nDars: ...\n\nDars: Qué raro sueña una.\n\nEl jugador puede permanecer contemplando el paisaje.\n\nLa contradicción temporal es propia del sueño, no una afirmación de que el fortín haya reaparecido realmente.\n\nNo se altera la topografía del lugar.\n\nEl escenario sigue siendo físicamente coherente.",
+      "map": "fortinAmericanosNoche"
+    },
+    {
+      "number": 70,
+      "title": "El cañón otra vez",
+      "script": "Mapa: `fortinAmericanosNoche` · Regreso a la ladera\n\nDars desciende hacia la zona del cañón.\n\nLa pieza continúa exactamente donde estaba.\n\nSe encuentra parcialmente iluminada por la luna.\n\nDars se acerca.\n\nDars: ...\n\nDars: Aquí sigues.\n\nToca nuevamente el metal.\n\nContinúa frío.\n\nSe sienta sobre una piedra cercana.\n\nMira hacia la ciudad.\n\nDars: ...\n\nDars: Alguien tuvo que traer esto hasta aquí.\n\nEl viento mueve algunas ramas secas.\n\nDars: Y después alguien lo dejó.\n\nPermanece sentada.\n\nDars: ...\n\nDars: No sé por qué me da tristeza.\n\nNo aparece ninguna explicación.\n\nEl juego permite al jugador permanecer varios minutos en esta zona si lo desea.\n\nDespués, desde detrás de uno de los muros, vuelve a escucharse la voz de la Figura.\n\nFigura: Dars.\n\nElla levanta la cabeza.",
+      "map": "fortinAmericanosNoche"
+    },
+    {
+      "number": 71,
+      "title": "Me sabes el nombre",
+      "script": "Mapa: `fortinAmericanosNoche` · Encuentro final\n\nDars camina hacia el origen de la voz.\n\nLa Figura está junto a una pared parcialmente derrumbada.\n\nDars: ¿Ahora qué?\n\nLa Figura no responde.\n\nDars se detiene.\n\nDars: Espera.\n\nLa observa.\n\nDars: ¿Cómo sabes mi nombre?\n\nSilencio.\n\nFigura: Lo escuché.\n\nDars: ¿Dónde?\n\nFigura: En la casa.\n\nDars permanece quieta.\n\nDars: ¿La de Rade?\n\nFigura: Sí.\n\nDars se cruza de brazos.\n\nDars: Entonces sí estabas ahí.\n\nFigura: Eso ya te lo dije.\n\nDars: Ya.\n\nPausa.\n\nDars: ¿Escuchaste todo lo que hablamos?\n\nLa Figura no responde.\n\nDars baja ligeramente la mirada.\n\nDars: ...\n\nDars: No me gusta eso.",
+      "map": "fortinAmericanosNoche"
+    },
+    {
+      "number": 72,
+      "title": "Una cosa es mirar",
+      "script": "Mapa: `fortinAmericanosNoche` · Diálogo\n\nDars vuelve a levantar la cabeza.\n\nDars: ¿Por qué apareciste en ese cuarto?\n\nFigura: Él me reconoció.\n\nDars: Eso no responde por qué estabas ahí.\n\nSilencio.\n\nDars: ¿Lo conoces desde antes?\n\nLa Figura permanece inmóvil.\n\nDars: Rade dice que sí.\n\nFigura: Rade dice muchas cosas.\n\nDars frunce el ceño.\n\nDars: ¿Estás diciendo que miente?\n\nFigura: No.\n\nDars: ¿Entonces?\n\nLa Figura mira hacia el borde de la loma.\n\nFigura: Recordar no siempre es entender.\n\nDars permanece callada.\n\nDars: ...\n\nDars: ¿Y tú sí entiendes?\n\nNo hay respuesta.\n\nDars deja escapar un suspiro.\n\nDars: Claro.\n\nEl viento vuelve a soplar.\n\nLa conversación termina.",
+      "map": "fortinAmericanosNoche"
+    },
+    {
+      "number": 73,
+      "title": "No necesito que me digas qué pensar",
+      "script": "Mapa: `fortinAmericanosNoche` · Conversación final\n\nDars permanece frente a la Figura.\n\nEl viento ha disminuido.\n\nDars: ¿Sabes qué?\n\nLa Figura no responde.\n\nDars: No pienso seguir preguntándote cosas.\n\nSilencio.\n\nDars: Si sabes algo y no quieres decirlo, es tu problema.\n\nLa entidad permanece inmóvil.\n\nFigura: ¿Eso crees?\n\nDars: Sí.\n\nPausa.\n\nDars: No voy a pasarme toda la noche rogándote que contestes.\n\nFigura: Todavía estás aquí.\n\nDars mira alrededor.\n\nDars: Porque no sé cómo despertarme.\n\nLa Figura inclina la cabeza.\n\nFigura: Entonces busca la salida.\n\nDars: ¿Dónde está?\n\nNo responde.\n\nDars deja escapar una risa seca.\n\nDars: ...\n\nDars: Claro. Otra respuesta de mierda.\n\nSe da vuelta.\n\nComienza a caminar.\n\nLa Figura no la sigue inmediatamente.",
+      "map": "fortinAmericanosNoche"
+    },
+    {
+      "number": 74,
+      "title": "La última pregunta",
+      "script": "Mapa: `fortinAmericanosNoche` · Despedida\n\nDars se detiene antes de abandonar el recinto.\n\nVuelve a mirar a la entidad.\n\nDars: Una última cosa.\n\nLa Figura permanece quieta.\n\nDars: ¿Eres real?\n\nSilencio.\n\nDars: ¿O solamente estoy soñando contigo porque Rade me habló de ti?\n\nLa Figura no responde.\n\nDars espera.\n\nDars: ...\n\nDars: Ya sé.\n\nSe prepara para marcharse.\n\nEntonces la Figura habla.\n\nFigura: ¿Importaría?\n\nDars se vuelve.\n\nDars: Sí.\n\nPausa.\n\nDars: Porque si solamente estoy soñando, puedo despertar y seguir con mi vida.\n\nLa Figura permanece inmóvil.\n\nDars: Pero si eres real...\n\nDars deja la frase incompleta.\n\nLa entidad espera.\n\nDars: ...\n\nDars: Entonces no quiero volver a encontrarte en mi casa.\n\nLa Figura no responde.\n\nDars comienza a alejarse.",
+      "map": "fortinAmericanosNoche"
+    },
+    {
+      "number": 75,
+      "title": "Los muros permanecen",
+      "script": "Mapa: `fortinAmericanosNoche` · Recorrido de salida\n\nEl jugador debe regresar hacia el camino inicial.\n\nNo aparece ningún indicador nuevo.\n\nDebe utilizar los puntos de referencia que aprendió durante la exploración.\n\nEl cañón.\n\nEl paredón alto.\n\nLa plataforma desde la que se observa Saltillo.\n\nLa salida está en una pendiente natural.\n\nDars camina.\n\nAl pasar junto al cañón, se detiene.\n\nLo observa una última vez.\n\nDars: ...\n\nDars: Qué lugar tan raro.\n\nContinúa.\n\nLas ruinas se alejan lentamente detrás de ella.\n\nLa luna vuelve a quedar cubierta por las nubes.\n\nEl paisaje se oscurece.\n\nDars mira hacia atrás.\n\nEl fortín sigue ahí.\n\nNo ha desaparecido.\n\nLa Figura permanece junto al muro más alto.\n\nAhora se distingue solamente como una pequeña silueta negra.\n\nNo se acerca.\n\nDars la observa.\n\nDars: ...\n\nDars: Hasta nunca, espero.\n\nContinúa descendiendo.",
+      "map": "fortinAmericanosNoche"
+    },
+    {
+      "number": 76,
+      "title": "No hay una puerta",
+      "script": "Mapa: `fortinAmericanosNoche` · Camino de descenso\n\nDars llega a una parte baja de la loma.\n\nEl camino continúa hacia la ciudad.\n\nNo hay puertas.\n\nNo hay escaleras imposibles.\n\nNo hay pasillos cerrados.\n\nSolamente un sendero de tierra.\n\nDars camina.\n\nDars: ...\n\nDars: Si esto es un sueño, debe terminar en algún momento.\n\nSe detiene.\n\nMira sus manos.\n\nLas tiene ligeramente sucias de tierra.\n\nDars: ...\n\nDars: Puedo sentir todo.\n\nCierra los ojos durante unos segundos.\n\nLos vuelve a abrir.\n\nContinúa en el mismo lugar.\n\nDars: Qué desesperación.\n\nEl jugador debe continuar descendiendo.\n\nConforme se aleja del fortín, el sonido del viento empieza a disminuir.\n\nEn su lugar aparece un ruido tenue.\n\nEs el motor de un refrigerador.\n\nDars se detiene.\n\nDars: ...\n\nDars: ¿Qué?\n\nEl sonido aumenta.\n\nSe escucha otro ruido.\n\nUn vehículo pasando por la calle.\n\nDars reconoce los sonidos de su vivienda.",
+      "map": "fortinAmericanosNoche"
+    },
+    {
+      "number": 77,
+      "title": "La última vista",
+      "script": "Mapa: `fortinAmericanosNoche` · Final del sueño\n\nDars llega a una pequeña explanada.\n\nLa ciudad ocupa buena parte del horizonte.\n\nEl cielo comienza a adquirir un tono azul oscuro, aunque todavía no amanece.\n\nDars se vuelve hacia la loma.\n\nEl fortín permanece arriba.\n\nSus muros de adobe se distinguen tenuemente contra la noche.\n\nEl viejo cañón ya no es visible desde esta distancia.\n\nTampoco la Figura.\n\nDars se queda mirando.\n\nDars: ...\n\nDars: Ojalá supiera cómo era antes.\n\nSe escucha el refrigerador de su casa.\n\nDespués, una pequeña vibración.\n\nComo un teléfono sobre una mesa.\n\nDars baja la mirada.\n\nDars: ...\n\nDars: ¿Ya va a sonar la alarma?\n\nEl sonido aumenta.\n\nLa cámara permanece mirando hacia el fortín.\n\nDars cierra los ojos.\n\nLa imagen se oscurece lentamente.\n\nNo hay una transición brusca.\n\nDurante varios segundos solamente se escucha su respiración.\n\nDespués, el viento desaparece.\n\nLa vibración del teléfono continúa.\n\n## EPÍLOGO — LA FOTOGRAFÍA",
+      "map": "fortinAmericanosNoche"
+    },
+    {
+      "number": 78,
+      "title": "Tres y cuarenta y seis",
+      "script": "Mapa: `casaDars` · Madrugada del 31 de diciembre\n\nDars abre los ojos.\n\nEstá acostada en su cama.\n\nLa habitación permanece oscura.\n\nEl teléfono vibra sobre la mesa.\n\nEs una notificación ordinaria.\n\nDars lo recoge.\n\nLa pantalla marca las 3:46 de la madrugada.\n\nDars: ...\n\nDars: Qué sueño.\n\nSe incorpora.\n\nMira sus manos.\n\nEstán limpias.\n\nNo tienen tierra.\n\nSe toca el cabello.\n\nDespués observa el armario.\n\nSigue cerrado.\n\nDars: ...\n\nDars: Estoy en mi casa.\n\nEl jugador recupera el control.\n\nPuede caminar por la habitación.\n\nTodo está donde debería estar.\n\nNo hay ninguna silueta.\n\nDars se sienta frente al escritorio.\n\nEnciende la lámpara.\n\nAbre una libreta.\n\nDars: ...\n\nDars: Antes de que se me olvide.",
+      "map": "casaDars"
+    },
+    {
+      "number": 79,
+      "title": "El dibujo",
+      "script": "Mapa: `casaDars` · Escritorio\n\nDars toma un lápiz.\n\nComienza a dibujar.\n\nPrimero traza la forma de la loma.\n\nDespués los restos de las murallas.\n\nEl paredón alto.\n\nEl camino.\n\nLa zona del cañón.\n\nNo dibuja perfectamente.\n\nAlgunas proporciones están equivocadas.\n\nDars borra una sección.\n\nVuelve a intentarlo.\n\nDars: ...\n\nDars: Así no era.\n\nSe queda pensando.\n\nCorrige el dibujo.\n\nFinalmente escribe:\n\nFortín de los Americanos.\n\nDebajo añade:\n\nSoñé que estaba ahí, de noche.\n\nPausa.\n\nEscribe una segunda línea.\n\nHabía alguien.\n\nDars observa las palabras.\n\nDespués escribe:\n\nLa misma figura que describió Rade.\n\nSe detiene.\n\nMira hacia su teléfono.\n\nPodría escribirle.\n\nPero decide no hacerlo.\n\nDars: ...\n\nDars: No a estas horas.\n\nCierra la libreta.",
+      "map": "casaDars"
+    },
+    {
+      "number": 80,
+      "title": "Algo que existió",
+      "script": "Mapa: `casaDars` · Última secuencia\n\nDars enciende su computadora.\n\nAbre un navegador.\n\nBusca fotografías del Fortín de los Americanos.\n\nAparecen imágenes históricas de las ruinas.\n\nMuros de adobe deteriorados.\n\nUna loma árida.\n\nUn antiguo cañón.\n\nDars observa.\n\nDars: ...\n\nDars: Sí era.\n\nAbre otra fotografía.\n\nMuestra una parte de la fortificación desde otro ángulo.\n\nDars compara con su dibujo.\n\nAlgunas partes se parecen.\n\nOtras no.\n\nDars: ...\n\nDars: ¿Cuándo vi estas fotos?\n\nIntenta recordar.\n\nNo consigue precisar si las había visto antes de aquella noche.\n\nMira la hora.\n\nSon poco más de las cuatro de la madrugada.\n\nDars: ...\n\nDars: Bueno.\n\nCierra el navegador.\n\nApaga la computadora.\n\nVuelve a mirar su dibujo.\n\nLa Figura no aparece en ninguna fotografía.\n\nDars deja la libreta sobre el escritorio.\n\nSe levanta y vuelve a la cama.\n\nApaga la lámpara.\n\nLa cámara permanece sobre el escritorio.\n\nSe distinguen las líneas del dibujo.\n\nEl fortín.\n\nLos muros.\n\nEl camino.\n\nY una pequeña figura negra dibujada cerca del paredón.\n\nDars no la había detallado especialmente.\n\nSolamente aparece como una silueta.\n\nLa habitación permanece en silencio.\n\nDespués, desde la cocina, se escucha el refrigerador iniciando su ciclo.\n\nUn ruido completamente normal.\n\nLa pantalla se oscurece.",
+      "map": "casaDars"
+    }
+  ],
+  "checkpoints": {
+    "1617": {
+      "scene": 1,
+      "title": "Siete y doce",
+      "map": "casaDars",
+      "objective": "Apaga la alarma de las 7:12"
+    },
+    "1618": {
+      "scene": 1,
+      "title": "Siete y doce",
+      "map": "casaDars",
+      "objective": "Levántate de la cama"
+    },
+    "1629": {
+      "scene": 2,
+      "title": "Su propia casa",
+      "map": "casaDars",
+      "objective": "Explora tu casa y prepárate para salir"
+    },
+    "1641": {
+      "scene": 3,
+      "title": "El baño",
+      "map": "banoDars",
+      "objective": "Mírate en el espejo"
+    },
+    "1642": {
+      "scene": 3,
+      "title": "El baño",
+      "map": "banoDars",
+      "objective": "Lávate la cara · agua, toalla y productos"
+    },
+    "1653": {
+      "scene": 4,
+      "title": "Café sin desayuno",
+      "map": "casaDars",
+      "objective": "Revisa el refrigerador"
+    },
+    "1654": {
+      "scene": 4,
+      "title": "Café sin desayuno",
+      "map": "casaDars",
+      "objective": "Prepara café · agua, café y taza"
+    },
+    "1655": {
+      "scene": 4,
+      "title": "Café sin desayuno",
+      "map": "casaDars",
+      "objective": "Café sin desayuno · acércate y pulsa E"
+    },
+    "1665": {
+      "scene": 5,
+      "title": "La lista",
+      "map": "casaDars",
+      "objective": "Revisa los pendientes"
+    },
+    "1666": {
+      "scene": 5,
+      "title": "La lista",
+      "map": "casaDars",
+      "objective": "La lista · acércate y pulsa E"
+    },
+    "1667": {
+      "scene": 5,
+      "title": "La lista",
+      "map": "casaDars",
+      "objective": "Mira la libreta del escritorio"
+    },
+    "1677": {
+      "scene": 6,
+      "title": "La llamada familiar",
+      "map": "casaDars",
+      "objective": "Contesta la llamada familiar"
+    },
+    "1689": {
+      "scene": 7,
+      "title": "Las llaves",
+      "map": "casaDars",
+      "objective": "Busca las llaves en tres lugares"
+    },
+    "1690": {
+      "scene": 7,
+      "title": "Las llaves",
+      "map": "casaDars",
+      "objective": "Recoge las llaves de la bolsa"
+    },
+    "1701": {
+      "scene": 8,
+      "title": "Una calle cualquiera",
+      "map": "barrioDars",
+      "objective": "Camina por el barrio de Dars"
+    },
+    "1702": {
+      "scene": 8,
+      "title": "Una calle cualquiera",
+      "map": "barrioDars",
+      "objective": "Una calle cualquiera · acércate y pulsa E"
+    },
+    "1703": {
+      "scene": 8,
+      "title": "Una calle cualquiera",
+      "map": "barrioDars",
+      "objective": "Ve a la parada de transporte"
+    },
+    "1713": {
+      "scene": 9,
+      "title": "Llegar sin avisar",
+      "map": "casaFamiliarDars",
+      "objective": "Saluda a tu madre"
+    },
+    "1725": {
+      "scene": 10,
+      "title": "Las cajas",
+      "map": "casaFamiliarDars",
+      "objective": "Revisa las cajas en el almacén familiar"
+    },
+    "1726": {
+      "scene": 10,
+      "title": "Las cajas",
+      "map": "casaFamiliarDars",
+      "objective": "Mueve las tres cajas ligeras · E toma y suelta"
+    },
+    "1727": {
+      "scene": 10,
+      "title": "Las cajas",
+      "map": "casaFamiliarDars",
+      "objective": "Pide ayuda con la caja pesada"
+    },
+    "1728": {
+      "scene": 10,
+      "title": "Las cajas",
+      "map": "casaFamiliarDars",
+      "objective": "Las cajas · acércate y pulsa E"
+    },
+    "1737": {
+      "scene": 11,
+      "title": "Algo que no se tira",
+      "map": "casaFamiliarDars",
+      "objective": "Revisa los objetos que quedan en la caja"
+    },
+    "1749": {
+      "scene": 12,
+      "title": "Una mesa para dos",
+      "map": "casaFamiliarDars",
+      "objective": "Siéntate a comer con tu madre"
+    },
+    "1761": {
+      "scene": 13,
+      "title": "Una discusión pequeña",
+      "map": "casaFamiliarDars",
+      "objective": "Habla con tu madre en la cocina"
+    },
+    "1773": {
+      "scene": 14,
+      "title": "Antes de salir",
+      "map": "casaFamiliarDars",
+      "objective": "Recoge la prenda antes de salir"
+    },
+    "1785": {
+      "scene": 15,
+      "title": "El regreso a su casa",
+      "map": "casaDars",
+      "objective": "Vuelve a casa antes de tu turno"
+    },
+    "1797": {
+      "scene": 16,
+      "title": "Te toca inventario",
+      "map": "casaDars",
+      "objective": "Lee el mensaje del trabajo"
+    },
+    "1798": {
+      "scene": 16,
+      "title": "Te toca inventario",
+      "map": "casaDars",
+      "objective": "Comprueba ropa, teléfono y llaves"
+    },
+    "1809": {
+      "scene": 17,
+      "title": "La tienda",
+      "map": "tiendaDarsExterior",
+      "objective": "Registra la entrada en el checador"
+    },
+    "1821": {
+      "scene": 18,
+      "title": "El jefe",
+      "map": "tiendaDars",
+      "objective": "Habla con el jefe en el almacén"
+    },
+    "1833": {
+      "scene": 19,
+      "title": "Los estantes",
+      "map": "tiendaDars",
+      "objective": "Revisa las zonas del almacén"
+    },
+    "1845": {
+      "scene": 20,
+      "title": "El primer artículo",
+      "map": "tiendaDars",
+      "objective": "Abre el primer lote de papelería"
+    },
+    "1846": {
+      "scene": 20,
+      "title": "El primer artículo",
+      "map": "tiendaDars",
+      "objective": "Lleva el cuaderno A-014 a A2 · nivel medio"
+    },
+    "1857": {
+      "scene": 21,
+      "title": "No todo lo que parece igual va junto",
+      "map": "tiendaDars",
+      "objective": "Identifica los recipientes y los vasos"
+    },
+    "1858": {
+      "scene": 21,
+      "title": "No todo lo que parece igual va junto",
+      "map": "tiendaDars",
+      "objective": "Clasifica los doce artículos · usa las fichas y niveles"
+    },
+    "1869": {
+      "scene": 22,
+      "title": "La revisión del jefe",
+      "map": "tiendaDars",
+      "objective": "Pide al jefe que revise el lote"
+    },
+    "1870": {
+      "scene": 22,
+      "title": "La revisión del jefe",
+      "map": "tiendaDars",
+      "objective": "Corrige los artículos fuera de sitio"
+    },
+    "1881": {
+      "scene": 23,
+      "title": "Un cliente y una escalera",
+      "map": "tiendaDars",
+      "objective": "Ayuda al cliente con los focos"
+    },
+    "1882": {
+      "scene": 23,
+      "title": "Un cliente y una escalera",
+      "map": "tiendaDars",
+      "objective": "Coloca la escalera frente a D1"
+    },
+    "1883": {
+      "scene": 23,
+      "title": "Un cliente y una escalera",
+      "map": "tiendaDars",
+      "objective": "Alcanza la caja y entrégala al cliente"
+    },
+    "1884": {
+      "scene": 23,
+      "title": "Un cliente y una escalera",
+      "map": "tiendaDars",
+      "objective": "Regresa la escalera a su lugar"
+    },
+    "1893": {
+      "scene": 24,
+      "title": "Una etiqueta equivocada",
+      "map": "tiendaDars",
+      "objective": "Revisa el artículo con la etiqueta dudosa"
+    },
+    "1894": {
+      "scene": 24,
+      "title": "Una etiqueta equivocada",
+      "map": "tiendaDars",
+      "objective": "Una etiqueta equivocada · acércate y pulsa E"
+    },
+    "1895": {
+      "scene": 24,
+      "title": "Una etiqueta equivocada",
+      "map": "tiendaDars",
+      "objective": "Lee la ficha con I y lleva el detergente a incidencias R2"
+    },
+    "1896": {
+      "scene": 24,
+      "title": "Una etiqueta equivocada",
+      "map": "tiendaDars",
+      "objective": "Coloca el artículo con etiqueta B-110"
+    },
+    "1905": {
+      "scene": 25,
+      "title": "Las devoluciones",
+      "map": "tiendaDars",
+      "objective": "Revisa la mesa de devoluciones"
+    },
+    "1906": {
+      "scene": 25,
+      "title": "Las devoluciones",
+      "map": "tiendaDars",
+      "objective": "Inspecciona los tres artículos y separa los dañados"
+    },
+    "1917": {
+      "scene": 26,
+      "title": "No me cambies las cosas",
+      "map": "tiendaDars",
+      "objective": "Habla con tu compañera"
+    },
+    "1929": {
+      "scene": 27,
+      "title": "La caja que falta",
+      "map": "tiendaDars",
+      "objective": "Compara la hoja de recepción con lo contado"
+    },
+    "1930": {
+      "scene": 27,
+      "title": "La caja que falta",
+      "map": "tiendaDars",
+      "objective": "Busca los dos paquetes de servilletas"
+    },
+    "1931": {
+      "scene": 27,
+      "title": "La caja que falta",
+      "map": "tiendaDars",
+      "objective": "Recoge los paquetes del carrito y regístralos en B2"
+    },
+    "1941": {
+      "scene": 28,
+      "title": "Descanso de quince minutos",
+      "map": "descansoTienda",
+      "objective": "Toma el descanso de quince minutos"
+    },
+    "1953": {
+      "scene": 29,
+      "title": "El problema de tener tiempo libre",
+      "map": "descansoTienda",
+      "objective": "Revisa el teléfono durante el descanso"
+    },
+    "1965": {
+      "scene": 30,
+      "title": "La mercancía pesada",
+      "map": "tiendaDars",
+      "objective": "Recibe el lote de cajas pesadas"
+    },
+    "1966": {
+      "scene": 30,
+      "title": "La mercancía pesada",
+      "map": "tiendaDars",
+      "objective": "Usa el carrito para llevar las cajas a H1 · nivel bajo"
+    },
+    "1977": {
+      "scene": 31,
+      "title": "El estante equivocado",
+      "map": "tiendaDars",
+      "objective": "Revisa los focos mezclados con utensilios"
+    },
+    "1978": {
+      "scene": 31,
+      "title": "El estante equivocado",
+      "map": "tiendaDars",
+      "objective": "El estante equivocado · acércate y pulsa E"
+    },
+    "1979": {
+      "scene": 31,
+      "title": "El estante equivocado",
+      "map": "tiendaDars",
+      "objective": "Mueve los focos de B1 a D1"
+    },
+    "1989": {
+      "scene": 32,
+      "title": "La discusión con el encargado",
+      "map": "tiendaDars",
+      "objective": "Habla con el encargado sobre el inventario"
+    },
+    "2001": {
+      "scene": 33,
+      "title": "Última revisión",
+      "map": "tiendaDars",
+      "objective": "Revisa categoría, peso y estado antes de cerrar"
+    },
+    "2002": {
+      "scene": 33,
+      "title": "Última revisión",
+      "map": "tiendaDars",
+      "objective": "Última revisión · acércate y pulsa E"
+    },
+    "2003": {
+      "scene": 33,
+      "title": "Última revisión",
+      "map": "tiendaDars",
+      "objective": "Corrige lo pendiente y vuelve con el encargado"
+    },
+    "2013": {
+      "scene": 34,
+      "title": "No fue perfecto",
+      "map": "tiendaDars",
+      "objective": "Escucha la evaluación del turno"
+    },
+    "2025": {
+      "scene": 35,
+      "title": "La hora de cerrar",
+      "map": "tiendaDars",
+      "objective": "Registra la salida de tu turno"
+    },
+    "2037": {
+      "scene": 36,
+      "title": "El camino nocturno",
+      "map": "barrioDars",
+      "objective": "Cruza el barrio de regreso"
+    },
+    "2038": {
+      "scene": 36,
+      "title": "El camino nocturno",
+      "map": "barrioDars",
+      "objective": "El camino nocturno · acércate y pulsa E"
+    },
+    "2039": {
+      "scene": 36,
+      "title": "El camino nocturno",
+      "map": "barrioDars",
+      "objective": "Compra la cena en abarrotes"
+    },
+    "2040": {
+      "scene": 36,
+      "title": "El camino nocturno",
+      "map": "barrioDars",
+      "objective": "Vuelve a la puerta de tu casa"
+    },
+    "2049": {
+      "scene": 37,
+      "title": "Llegar a casa",
+      "map": "casaDars",
+      "objective": "Deja la bolsa y prepara la cena"
+    },
+    "2050": {
+      "scene": 37,
+      "title": "Llegar a casa",
+      "map": "casaDars",
+      "objective": "Calienta la cena y siéntate a comer"
+    },
+    "2061": {
+      "scene": 38,
+      "title": "Una llamada de familia",
+      "map": "casaDars",
+      "objective": "Contesta la llamada de tu madre"
+    },
+    "2073": {
+      "scene": 39,
+      "title": "La casa en silencio",
+      "map": "casaDars",
+      "objective": "Recoge la ropa y prepárate para dormir"
+    },
+    "2085": {
+      "scene": 40,
+      "title": "Antes del sueño",
+      "map": "casaDars",
+      "objective": "Acuéstate"
+    },
+    "2086": {
+      "scene": 40,
+      "title": "Antes del sueño",
+      "map": "casaDars",
+      "objective": "La casa se queda en silencio"
+    },
+    "2097": {
+      "scene": 41,
+      "title": "Tierra bajo los pies",
+      "map": "fortinAmericanosNoche",
+      "objective": "Pisa la tierra y reconoce el sendero"
+    },
+    "2109": {
+      "scene": 42,
+      "title": "Una ciudad debajo",
+      "map": "fortinAmericanosNoche",
+      "objective": "Mira la ciudad desde el primer mirador"
+    },
+    "2121": {
+      "scene": 43,
+      "title": "El camino viejo",
+      "map": "fortinAmericanosNoche",
+      "objective": "Sigue el sendero exterior"
+    },
+    "2133": {
+      "scene": 44,
+      "title": "El lugar que ya no está",
+      "map": "fortinAmericanosNoche",
+      "objective": "Observa las ruinas desde el camino del sur"
+    },
+    "2145": {
+      "scene": 45,
+      "title": "Los muros de adobe",
+      "map": "fortinAmericanosNoche",
+      "objective": "Examina el adobe del paredón occidental"
+    },
+    "2169": {
+      "scene": 47,
+      "title": "El cañón",
+      "map": "fortinAmericanosNoche",
+      "objective": "Examina el cañón de la ladera oriental"
+    },
+    "2181": {
+      "scene": 48,
+      "title": "El teléfono no llegó",
+      "map": "fortinAmericanosNoche",
+      "objective": "Comprueba el bolsillo del teléfono"
+    },
+    "2193": {
+      "scene": 49,
+      "title": "La pared que mira al norte",
+      "map": "fortinAmericanosNoche",
+      "objective": "Rodea el muro que mira al norte"
+    },
+    "2205": {
+      "scene": 50,
+      "title": "El viento",
+      "map": "fortinAmericanosNoche",
+      "objective": "Escucha el viento junto al paredón"
+    },
+    "2217": {
+      "scene": 51,
+      "title": "No se ve nadie",
+      "map": "fortinAmericanosNoche",
+      "objective": "Revisa las piedras del sendero"
+    },
+    "2241": {
+      "scene": 53,
+      "title": "La vista completa",
+      "map": "fortinAmericanosNoche",
+      "objective": "Sube a la plataforma con vista a Saltillo"
+    },
+    "2253": {
+      "scene": 54,
+      "title": "Alguien detrás del muro",
+      "map": "fortinAmericanosNoche",
+      "objective": "Acércate al patio donde viste una silueta"
+    },
+    "2265": {
+      "scene": 55,
+      "title": "Tú no eres de aquí",
+      "map": "fortinAmericanosNoche",
+      "objective": "Habla con la Figura junto al muro"
+    },
+    "2277": {
+      "scene": 56,
+      "title": "La misma silueta",
+      "map": "fortinAmericanosNoche",
+      "objective": "Escucha a la Figura"
+    },
+    "2289": {
+      "scene": 57,
+      "title": "No hables como si me conocieras",
+      "map": "fortinAmericanosNoche",
+      "objective": "Habla con la Figura"
+    },
+    "2301": {
+      "scene": 58,
+      "title": "Lo que pasó en Navidad",
+      "map": "fortinAmericanosNoche",
+      "objective": "Pregunta por lo que ocurrió en Navidad"
+    },
+    "2313": {
+      "scene": 59,
+      "title": "Rade no está aquí",
+      "map": "fortinAmericanosNoche",
+      "objective": "Habla con la Figura"
+    },
+    "2337": {
+      "scene": 61,
+      "title": "La parte hundida",
+      "map": "fortinAmericanosNoche",
+      "objective": "Explora el recinto hundido"
+    },
+    "2349": {
+      "scene": 62,
+      "title": "La luna detrás de los muros",
+      "map": "fortinAmericanosNoche",
+      "objective": "Entra al patio iluminado por la luna"
+    },
+    "2361": {
+      "scene": 63,
+      "title": "No queda mucho",
+      "map": "fortinAmericanosNoche",
+      "objective": "Acércate a la Figura en el patio"
+    },
+    "2373": {
+      "scene": 64,
+      "title": "Lo que falta",
+      "map": "fortinAmericanosNoche",
+      "objective": "Escucha antes de abandonar el patio"
+    },
+    "2385": {
+      "scene": 65,
+      "title": "El muro más alto",
+      "map": "fortinAmericanosNoche",
+      "objective": "Sube por el sendero ancho del poniente"
+    },
+    "2421": {
+      "scene": 68,
+      "title": "Las voces de la casa",
+      "map": "fortinAmericanosNoche",
+      "objective": "Baja por el sendero de la ladera"
+    },
+    "2433": {
+      "scene": 69,
+      "title": "La ciudad al revés del tiempo",
+      "map": "fortinAmericanosNoche",
+      "objective": "Mira Saltillo desde el mirador oriental"
+    },
+    "2445": {
+      "scene": 70,
+      "title": "El cañón otra vez",
+      "map": "fortinAmericanosNoche",
+      "objective": "Vuelve a la ladera del cañón"
+    },
+    "2457": {
+      "scene": 71,
+      "title": "Me sabes el nombre",
+      "map": "fortinAmericanosNoche",
+      "objective": "Habla por última vez con la Figura"
+    },
+    "2469": {
+      "scene": 72,
+      "title": "Una cosa es mirar",
+      "map": "fortinAmericanosNoche",
+      "objective": "Continúa la conversación"
+    },
+    "2481": {
+      "scene": 73,
+      "title": "No necesito que me digas qué pensar",
+      "map": "fortinAmericanosNoche",
+      "objective": "Responde a la Figura"
+    },
+    "2493": {
+      "scene": 74,
+      "title": "La última pregunta",
+      "map": "fortinAmericanosNoche",
+      "objective": "Haz la última pregunta"
+    },
+    "2505": {
+      "scene": 75,
+      "title": "Los muros permanecen",
+      "map": "fortinAmericanosNoche",
+      "objective": "Regresa por la ladera del cañón"
+    },
+    "2517": {
+      "scene": 76,
+      "title": "No hay una puerta",
+      "map": "fortinAmericanosNoche",
+      "objective": "Baja al camino de tierra del sur"
+    },
+    "2529": {
+      "scene": 77,
+      "title": "La última vista",
+      "map": "fortinAmericanosNoche",
+      "objective": "Mira la loma una última vez desde el sendero"
+    },
+    "2157": {
+      "scene": 46,
+      "title": "La primera piedra suelta",
+      "map": "fortinAmericanosNoche",
+      "objective": "Prueba el sendero de grava"
+    },
+    "2158": {
+      "scene": 46,
+      "title": "La primera piedra suelta",
+      "map": "fortinAmericanosNoche",
+      "objective": "La primera piedra suelta · acércate y pulsa E"
+    },
+    "2159": {
+      "scene": 46,
+      "title": "La primera piedra suelta",
+      "map": "fortinAmericanosNoche",
+      "objective": "Rodea el muro por el sendero firme"
+    },
+    "2160": {
+      "scene": 46,
+      "title": "La primera piedra suelta",
+      "map": "fortinAmericanosNoche",
+      "objective": "Pasa entre los afloramientos de piedra"
+    },
+    "2229": {
+      "scene": 52,
+      "title": "Tres caminos",
+      "map": "fortinAmericanosNoche",
+      "objective": "Observa el cruce de los tres senderos"
+    },
+    "2230": {
+      "scene": 52,
+      "title": "Tres caminos",
+      "map": "fortinAmericanosNoche",
+      "objective": "Encuentra el cañón, el paredón alto y la plataforma sobre Saltillo"
+    },
+    "2325": {
+      "scene": 60,
+      "title": "La Figura se aparta",
+      "map": "fortinAmericanosNoche",
+      "objective": "Mira adónde se aparta la Figura"
+    },
+    "2326": {
+      "scene": 60,
+      "title": "La Figura se aparta",
+      "map": "fortinAmericanosNoche",
+      "objective": "La Figura se aparta · acércate y pulsa E"
+    },
+    "2327": {
+      "scene": 60,
+      "title": "La Figura se aparta",
+      "map": "fortinAmericanosNoche",
+      "objective": "Camina hacia el muro del fondo"
+    },
+    "2328": {
+      "scene": 60,
+      "title": "La Figura se aparta",
+      "map": "fortinAmericanosNoche",
+      "objective": "Explora el lado occidental del patio"
+    },
+    "2397": {
+      "scene": 66,
+      "title": "Una piedra junto a otra",
+      "map": "fortinAmericanosNoche",
+      "objective": "Mira la piedra suelta en el sendero"
+    },
+    "2398": {
+      "scene": 66,
+      "title": "Una piedra junto a otra",
+      "map": "fortinAmericanosNoche",
+      "objective": "Una piedra junto a otra · acércate y pulsa E"
+    },
+    "2399": {
+      "scene": 66,
+      "title": "Una piedra junto a otra",
+      "map": "fortinAmericanosNoche",
+      "objective": "Aparta la piedra sin tocar los restos del muro"
+    },
+    "2409": {
+      "scene": 67,
+      "title": "No tengo que seguirte",
+      "map": "fortinAmericanosNoche",
+      "objective": "Observa el camino de la ladera"
+    },
+    "2410": {
+      "scene": 67,
+      "title": "No tengo que seguirte",
+      "map": "fortinAmericanosNoche",
+      "objective": "No tengo que seguirte · acércate y pulsa E"
+    },
+    "2411": {
+      "scene": 67,
+      "title": "No tengo que seguirte",
+      "map": "fortinAmericanosNoche",
+      "objective": "Responde a la Figura junto al muro"
+    },
+    "2412": {
+      "scene": 67,
+      "title": "No tengo que seguirte",
+      "map": "fortinAmericanosNoche",
+      "objective": "Baja por el camino ancho"
+    },
+    "2530": {
+      "scene": 77,
+      "title": "La última vista",
+      "map": "fortinAmericanosNoche",
+      "objective": "El viento disminuye"
+    },
+    "2541": {
+      "scene": 78,
+      "title": "Tres y cuarenta y seis",
+      "map": "casaDars",
+      "objective": "Despierta en casa · 3:46 a. m."
+    },
+    "2542": {
+      "scene": 78,
+      "title": "Tres y cuarenta y seis",
+      "map": "casaDars",
+      "objective": "Ve al escritorio antes de olvidar el sueño"
+    },
+    "2553": {
+      "scene": 79,
+      "title": "El dibujo",
+      "map": "casaDars",
+      "objective": "Dibuja la loma, el cañón y los paredones"
+    },
+    "2565": {
+      "scene": 80,
+      "title": "Algo que existió",
+      "map": "casaDars",
+      "objective": "Compara el dibujo con las referencias del fortín"
+    },
+    "2566": {
+      "scene": 80,
+      "title": "Algo que existió",
+      "map": "casaDars",
+      "objective": "Algo que existió · acércate y pulsa E"
+    }
+  },
+  "complete_stage": 2577
+}

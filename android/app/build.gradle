@@ -15,8 +15,8 @@ android {
         applicationId 'com.need2dreamscape.game'
         minSdk 23
         targetSdk 35
-        versionCode 1600001
-        versionName '16.0-capitulo3'
+        versionCode 1700001
+        versionName '17.0-capitulo4'
         if (targetAbi != null) {
             ndk { abiFilters targetAbi }
         }

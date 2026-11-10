@@ -21,3 +21,8 @@ El aire acondicionado, la televisión, el goteo, el refrigerador, el ruido lejan
 ## Capítulo 3
 
 Los efectos con prefijo `c3_` se sintetizaron para este proyecto mediante código. Incluyen golpes de puerta, pestillos, cinta métrica, alarma, metal y el ambiente de vehículos de la secuencia final. No utilizan grabaciones de Petscop ni del APK original. El sonido de escritura y los pasos conservan sus fuentes y licencias indicadas arriba.
+
+
+## Capítulo 4
+
+Los efectos `c4_` de vibración, lavabo, tráfico distante, refrigerador, viento y grava fueron sintetizados para NEED2DREAMSCAPE. El viento y el tráfico se atenúan según la distancia al punto de origen. Se conservan los créditos de los sonidos de pasos y escritura usados en capítulos anteriores.

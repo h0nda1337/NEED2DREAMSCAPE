@@ -1,0 +1,7120 @@
+{
+  "name": "tiendaDars",
+  "nodes": [
+    {
+      "name": "Camera",
+      "active": true,
+      "layer": 0,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        0,
+        13.64,
+        -20.6
+      ],
+      "rot": [
+        0.31730465640509214,
+        0,
+        0,
+        0.9483236552061993
+      ],
+      "scale": [
+        0.43535417318344116,
+        2.2742371559143066,
+        0.6497822999954224
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "rect": {
+        "min": [
+          0.5,
+          0.5
+        ],
+        "max": [
+          0.5,
+          0.5
+        ],
+        "position": [
+          -49.97999954223633,
+          9.399999618530273
+        ],
+        "size": [
+          100.0,
+          100.0
+        ],
+        "pivot": [
+          0.5,
+          0.5
+        ]
+      },
+      "camera": {
+        "fov": 46,
+        "near": 0.30000001192092896,
+        "far": 1000.0,
+        "ortho": false,
+        "size": 5.0,
+        "background": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "viewport": {
+          "x": 0.0,
+          "y": 0.0,
+          "width": 1.0,
+          "height": 1.0
+        }
+      },
+      "order": 0
+    },
+    {
+      "name": "down_idle",
+      "active": true,
+      "layer": 0,
+      "parent": -1,
+      "children": [
+        8
+      ],
+      "pos": [
+        0,
+        2.64,
+        -13.1
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "scripts": [
+        {
+          "class": "Movement",
+          "fields": {
+            "m_Enabled": 1,
+            "_move1": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "_move2": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "_move3": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "_move4": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "newmaker": {
+              "node": -1,
+              "type": "",
+              "sprite": -1,
+              "audio": -1,
+              "video": -1
+            },
+            "calendar1997Main": {
+              "node": -1,
+              "type": "",
+              "sprite": -1,
+              "audio": -1,
+              "video": -1
+            },
+            "calendar1997Arrow": {
+              "node": -1,
+              "type": "",
+              "sprite": -1,
+              "audio": -1,
+              "video": -1
+            }
+          }
+        },
+        {
+          "class": "Save",
+          "fields": {
+            "m_Enabled": 1
+          }
+        }
+      ],
+      "colliders": [
+        {
+          "type": "BoxCollider",
+          "center": [
+            0,
+            -4.4,
+            0
+          ],
+          "size": [
+            3.4,
+            8.8,
+            2.4
+          ],
+          "enabled": true,
+          "trigger": false
+        }
+      ],
+      "sounds": [],
+      "sprite": {
+        "enabled": true,
+        "sprite": 240,
+        "color": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "flipx": false,
+        "flipy": false
+      },
+      "animator": {
+        "controller": 58,
+        "enabled": 1,
+        "paths": [
+          [
+            0,
+            1
+          ]
+        ]
+      },
+      "order": 1
+    },
+    {
+      "name": "Canvas",
+      "active": true,
+      "layer": 5,
+      "parent": -1,
+      "children": [
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "pos": [
+        321.5,
+        386.5,
+        0.0
+      ],
+      "rot": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "scripts": [
+        {
+          "class": "CanvasScaler",
+          "fields": {
+            "m_Enabled": 1,
+            "m_UiScaleMode": 1,
+            "m_ReferencePixelsPerUnit": 100.0,
+            "m_ScaleFactor": 1.0,
+            "m_ReferenceResolution": {
+              "x": 1920.0,
+              "y": 960.0
+            },
+            "m_ScreenMatchMode": 0,
+            "m_MatchWidthOrHeight": 0.0,
+            "m_PhysicalUnit": 3,
+            "m_FallbackScreenDPI": 96.0,
+            "m_DefaultSpriteDPI": 96.0,
+            "m_DynamicPixelsPerUnit": 1.0
+          }
+        },
+        {
+          "class": "GraphicRaycaster",
+          "fields": {
+            "m_Enabled": 1,
+            "m_IgnoreReversedGraphics": 1,
+            "m_BlockingObjects": 0,
+            "m_BlockingMask": {
+              "m_Bits": 4294967295
+            }
+          }
+        }
+      ],
+      "colliders": [],
+      "sounds": [],
+      "rect": {
+        "min": [
+          0.0,
+          0.0
+        ],
+        "max": [
+          0.0,
+          0.0
+        ],
+        "position": [
+          321.5,
+          386.5
+        ],
+        "size": [
+          643.0,
+          773.0
+        ],
+        "pivot": [
+          0.5,
+          0.5
+        ]
+      },
+      "canvas": {
+        "mode": 0,
+        "order": 0
+      },
+      "order": 2
+    },
+    {
+      "name": "ButtonInteract",
+      "active": true,
+      "layer": 5,
+      "parent": 2,
+      "children": [],
+      "pos": [
+        697.599853515625,
+        -220.8999786376953,
+        0.0
+      ],
+      "rot": [
+        -0.0,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "scale": [
+        0.8424676656723022,
+        4.54666805267334,
+        1.3372455835342407
+      ],
+      "scripts": [
+        {
+          "class": "Image",
+          "fields": {
+            "m_Enabled": 1,
+            "m_Material": {
+              "node": -1,
+              "type": "",
+              "sprite": -1,
+              "audio": -1,
+              "video": -1
+            },
+            "m_Color": {
+              "r": 0.7630919814109802,
+              "g": 0.7630919814109802,
+              "b": 0.8459999561309814,
+              "a": 1.0
+            },
+            "m_RaycastTarget": 1,
+            "m_OnCullStateChanged": {
+              "m_PersistentCalls": {
+                "m_Calls": []
+              },
+              "m_TypeName": "UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+            },
+            "m_Sprite": {
+              "node": -1,
+              "type": "Sprite",
+              "sprite": 22,
+              "audio": -1,
+              "video": -1
+            },
+            "m_Type": 0,
+            "m_PreserveAspect": 0,
+            "m_FillCenter": 1,
+            "m_FillMethod": 4,
+            "m_FillAmount": 1.0,
+            "m_FillClockwise": 1,
+            "m_FillOrigin": 0,
+            "m_UseSpriteMesh": 0
+          }
+        },
+        {
+          "class": "Button",
+          "fields": {
+            "m_Enabled": 1,
+            "m_Navigation": {
+              "m_Mode": 3,
+              "m_SelectOnUp": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              },
+              "m_SelectOnDown": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              },
+              "m_SelectOnLeft": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              },
+              "m_SelectOnRight": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              }
+            },
+            "m_Transition": 1,
+            "m_Colors": {
+              "m_NormalColor": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+              },
+              "m_HighlightedColor": {
+                "r": 0.9607843160629272,
+                "g": 0.9607843160629272,
+                "b": 0.9607843160629272,
+                "a": 1.0
+              },
+              "m_PressedColor": {
+                "r": 0.7843137383460999,
+                "g": 0.7843137383460999,
+                "b": 0.7843137383460999,
+                "a": 1.0
+              },
+              "m_DisabledColor": {
+                "r": 0.7843137383460999,
+                "g": 0.7843137383460999,
+                "b": 0.7843137383460999,
+                "a": 0.501960813999176
+              },
+              "m_ColorMultiplier": 1.0,
+              "m_FadeDuration": 0.10000000149011612
+            },
+            "m_SpriteState": {
+              "m_HighlightedSprite": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              },
+              "m_PressedSprite": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              },
+              "m_DisabledSprite": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              }
+            },
+            "m_AnimationTriggers": {
+              "m_NormalTrigger": "Normal",
+              "m_HighlightedTrigger": "Highlighted",
+              "m_PressedTrigger": "Pressed",
+              "m_DisabledTrigger": "Disabled"
+            },
+            "m_Interactable": 1,
+            "m_TargetGraphic": {
+              "node": 3,
+              "type": "Image",
+              "sprite": -1,
+              "audio": -1,
+              "video": -1
+            },
+            "m_OnClick": {
+              "m_PersistentCalls": {
+                "m_Calls": [
+                  {
+                    "m_Target": {
+                      "node": 3,
+                      "type": "Interacter",
+                      "sprite": -1,
+                      "audio": -1,
+                      "video": -1
+                    },
+                    "m_MethodName": "Click",
+                    "m_Mode": 1,
+                    "m_Arguments": {
+                      "m_ObjectArgument": {
+                        "node": -1,
+                        "type": "",
+                        "sprite": -1,
+                        "audio": -1,
+                        "video": -1
+                      },
+                      "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                      "m_IntArgument": 0,
+                      "m_FloatArgument": 0.0,
+                      "m_StringArgument": "",
+                      "m_BoolArgument": 0
+                    },
+                    "m_CallState": 2
+                  }
+                ]
+              },
+              "m_TypeName": "UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+            }
+          }
+        },
+        {
+          "class": "Interacter",
+          "fields": {
+            "m_Enabled": 1,
+            "newmaker": {
+              "node": -1,
+              "type": "",
+              "sprite": -1,
+              "audio": -1,
+              "video": -1
+            },
+            "sign": {
+              "node": -1,
+              "type": "",
+              "sprite": -1,
+              "audio": -1,
+              "video": -1
+            },
+            "keyinteracter": {
+              "node": -1,
+              "type": "",
+              "sprite": -1,
+              "audio": -1,
+              "video": -1
+            },
+            "usekey": {
+              "node": -1,
+              "type": "",
+              "sprite": -1,
+              "audio": -1,
+              "video": -1
+            },
+            "door": {
+              "node": -1,
+              "type": "",
+              "sprite": -1,
+              "audio": -1,
+              "video": -1
+            },
+            "calendar1997Main": {
+              "node": -1,
+              "type": "",
+              "sprite": -1,
+              "audio": -1,
+              "video": -1
+            },
+            "calendar1997": {
+              "node": -1,
+              "type": "",
+              "sprite": -1,
+              "audio": -1,
+              "video": -1
+            },
+            "calendar2000Main": {
+              "node": -1,
+              "type": "",
+              "sprite": -1,
+              "audio": -1,
+              "video": -1
+            },
+            "calendar2000": {
+              "node": -1,
+              "type": "",
+              "sprite": -1,
+              "audio": -1,
+              "video": -1
+            },
+            "noteTrigger": {
+              "node": -1,
+              "type": "",
+              "sprite": -1,
+              "audio": -1,
+              "video": -1
+            },
+            "ladder": {
+              "node": -1,
+              "type": "",
+              "sprite": -1,
+              "audio": -1,
+              "video": -1
+            },
+            "dialogFrozenHouse": {
+              "node": -1,
+              "type": "",
+              "sprite": -1,
+              "audio": -1,
+              "video": -1
+            },
+            "dialogKey": {
+              "node": -1,
+              "type": "",
+              "sprite": -1,
+              "audio": -1,
+              "video": -1
+            },
+            "note": {
+              "node": -1,
+              "type": "",
+              "sprite": -1,
+              "audio": -1,
+              "video": -1
+            },
+            "arrowDoor": {
+              "node": -1,
+              "type": "",
+              "sprite": -1,
+              "audio": -1,
+              "video": -1
+            }
+          }
+        }
+      ],
+      "colliders": [],
+      "sounds": [],
+      "rect": {
+        "min": [
+          0.5,
+          0.5
+        ],
+        "max": [
+          0.5,
+          0.5
+        ],
+        "position": [
+          697.599853515625,
+          -220.8999786376953
+        ],
+        "size": [
+          160.0,
+          30.0
+        ],
+        "pivot": [
+          0.5,
+          0.5
+        ]
+      },
+      "image": {
+        "sprite": 22,
+        "color": [
+          0.7630919814109802,
+          0.7630919814109802,
+          0.8459999561309814,
+          1.0
+        ],
+        "enabled": 1,
+        "raycast": 1
+      },
+      "order": 3
+    },
+    {
+      "name": "ButtonLeft",
+      "active": true,
+      "layer": 5,
+      "parent": 2,
+      "children": [],
+      "pos": [
+        558.4000244140625,
+        -220.3000030517578,
+        0.0
+      ],
+      "rot": [
+        -0.0,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "scale": [
+        0.7829084992408752,
+        4.190824508666992,
+        1.1540898084640503
+      ],
+      "scripts": [
+        {
+          "class": "Image",
+          "fields": {
+            "m_Enabled": 1,
+            "m_Material": {
+              "node": -1,
+              "type": "",
+              "sprite": -1,
+              "audio": -1,
+              "video": -1
+            },
+            "m_Color": {
+              "r": 0.7630919814109802,
+              "g": 0.7630919814109802,
+              "b": 0.8459999561309814,
+              "a": 1.0
+            },
+            "m_RaycastTarget": 1,
+            "m_OnCullStateChanged": {
+              "m_PersistentCalls": {
+                "m_Calls": []
+              },
+              "m_TypeName": "UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+            },
+            "m_Sprite": {
+              "node": -1,
+              "type": "Sprite",
+              "sprite": 17,
+              "audio": -1,
+              "video": -1
+            },
+            "m_Type": 0,
+            "m_PreserveAspect": 0,
+            "m_FillCenter": 1,
+            "m_FillMethod": 4,
+            "m_FillAmount": 1.0,
+            "m_FillClockwise": 1,
+            "m_FillOrigin": 0,
+            "m_UseSpriteMesh": 0
+          }
+        },
+        {
+          "class": "Button",
+          "fields": {
+            "m_Enabled": 1,
+            "m_Navigation": {
+              "m_Mode": 3,
+              "m_SelectOnUp": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              },
+              "m_SelectOnDown": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              },
+              "m_SelectOnLeft": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              },
+              "m_SelectOnRight": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              }
+            },
+            "m_Transition": 1,
+            "m_Colors": {
+              "m_NormalColor": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+              },
+              "m_HighlightedColor": {
+                "r": 0.9607843160629272,
+                "g": 0.9607843160629272,
+                "b": 0.9607843160629272,
+                "a": 1.0
+              },
+              "m_PressedColor": {
+                "r": 0.7843137383460999,
+                "g": 0.7843137383460999,
+                "b": 0.7843137383460999,
+                "a": 1.0
+              },
+              "m_DisabledColor": {
+                "r": 0.7843137383460999,
+                "g": 0.7843137383460999,
+                "b": 0.7843137383460999,
+                "a": 0.501960813999176
+              },
+              "m_ColorMultiplier": 1.0,
+              "m_FadeDuration": 0.10000000149011612
+            },
+            "m_SpriteState": {
+              "m_HighlightedSprite": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              },
+              "m_PressedSprite": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              },
+              "m_DisabledSprite": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              }
+            },
+            "m_AnimationTriggers": {
+              "m_NormalTrigger": "Normal",
+              "m_HighlightedTrigger": "Highlighted",
+              "m_PressedTrigger": "Pressed",
+              "m_DisabledTrigger": "Disabled"
+            },
+            "m_Interactable": 1,
+            "m_TargetGraphic": {
+              "node": 4,
+              "type": "Image",
+              "sprite": -1,
+              "audio": -1,
+              "video": -1
+            },
+            "m_OnClick": {
+              "m_PersistentCalls": {
+                "m_Calls": []
+              },
+              "m_TypeName": "UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+            }
+          }
+        },
+        {
+          "class": "EventTrigger",
+          "fields": {
+            "m_Enabled": 1,
+            "m_Delegates": [
+              {
+                "eventID": 2,
+                "callback": {
+                  "m_PersistentCalls": {
+                    "m_Calls": [
+                      {
+                        "m_Target": {
+                          "node": 4,
+                          "type": "HoldButtonEventHandlerLeft",
+                          "sprite": -1,
+                          "audio": -1,
+                          "video": -1
+                        },
+                        "m_MethodName": "SetPressed",
+                        "m_Mode": 6,
+                        "m_Arguments": {
+                          "m_ObjectArgument": {
+                            "node": -1,
+                            "type": "",
+                            "sprite": -1,
+                            "audio": -1,
+                            "video": -1
+                          },
+                          "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                          "m_IntArgument": 0,
+                          "m_FloatArgument": 0.0,
+                          "m_StringArgument": "down",
+                          "m_BoolArgument": 1
+                        },
+                        "m_CallState": 2
+                      },
+                      {
+                        "m_Target": {
+                          "node": 1,
+                          "type": "Animator",
+                          "sprite": -1,
+                          "audio": -1,
+                          "video": -1
+                        },
+                        "m_MethodName": "Play",
+                        "m_Mode": 5,
+                        "m_Arguments": {
+                          "m_ObjectArgument": {
+                            "node": -1,
+                            "type": "",
+                            "sprite": -1,
+                            "audio": -1,
+                            "video": -1
+                          },
+                          "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                          "m_IntArgument": 0,
+                          "m_FloatArgument": 0.0,
+                          "m_StringArgument": "left",
+                          "m_BoolArgument": 1
+                        },
+                        "m_CallState": 2
+                      }
+                    ]
+                  },
+                  "m_TypeName": "UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+                }
+              },
+              {
+                "eventID": 3,
+                "callback": {
+                  "m_PersistentCalls": {
+                    "m_Calls": [
+                      {
+                        "m_Target": {
+                          "node": 4,
+                          "type": "HoldButtonEventHandlerLeft",
+                          "sprite": -1,
+                          "audio": -1,
+                          "video": -1
+                        },
+                        "m_MethodName": "SetPressed",
+                        "m_Mode": 6,
+                        "m_Arguments": {
+                          "m_ObjectArgument": {
+                            "node": -1,
+                            "type": "",
+                            "sprite": -1,
+                            "audio": -1,
+                            "video": -1
+                          },
+                          "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                          "m_IntArgument": 0,
+                          "m_FloatArgument": 0.0,
+                          "m_StringArgument": "down_idle",
+                          "m_BoolArgument": 0
+                        },
+                        "m_CallState": 2
+                      },
+                      {
+                        "m_Target": {
+                          "node": 1,
+                          "type": "Animator",
+                          "sprite": -1,
+                          "audio": -1,
+                          "video": -1
+                        },
+                        "m_MethodName": "Play",
+                        "m_Mode": 5,
+                        "m_Arguments": {
+                          "m_ObjectArgument": {
+                            "node": -1,
+                            "type": "",
+                            "sprite": -1,
+                            "audio": -1,
+                            "video": -1
+                          },
+                          "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                          "m_IntArgument": 0,
+                          "m_FloatArgument": 0.0,
+                          "m_StringArgument": "left_idle",
+                          "m_BoolArgument": 0
+                        },
+                        "m_CallState": 2
+                      }
+                    ]
+                  },
+                  "m_TypeName": "UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+                }
+              }
+            ],
+            "delegates": []
+          }
+        },
+        {
+          "class": "HoldButtonEventHandlerLeft",
+          "fields": {
+            "m_Enabled": 1,
+            "OnButtonHeldLeft": {
+              "m_PersistentCalls": {
+                "m_Calls": [
+                  {
+                    "m_Target": {
+                      "node": 1,
+                      "type": "Movement",
+                      "sprite": -1,
+                      "audio": -1,
+                      "video": -1
+                    },
+                    "m_MethodName": "MoveLeft",
+                    "m_Mode": 1,
+                    "m_Arguments": {
+                      "m_ObjectArgument": {
+                        "node": -1,
+                        "type": "",
+                        "sprite": -1,
+                        "audio": -1,
+                        "video": -1
+                      },
+                      "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                      "m_IntArgument": 0,
+                      "m_FloatArgument": 0.0,
+                      "m_StringArgument": "",
+                      "m_BoolArgument": 0
+                    },
+                    "m_CallState": 2
+                  }
+                ]
+              },
+              "m_TypeName": "UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            },
+            "OnButtonHeldLeft1": {
+              "m_PersistentCalls": {
+                "m_Calls": [
+                  {
+                    "m_Target": {
+                      "node": 1,
+                      "type": "Movement",
+                      "sprite": -1,
+                      "audio": -1,
+                      "video": -1
+                    },
+                    "m_MethodName": "MoveLeftRelease",
+                    "m_Mode": 1,
+                    "m_Arguments": {
+                      "m_ObjectArgument": {
+                        "node": -1,
+                        "type": "",
+                        "sprite": -1,
+                        "audio": -1,
+                        "video": -1
+                      },
+                      "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                      "m_IntArgument": 0,
+                      "m_FloatArgument": 0.0,
+                      "m_StringArgument": "",
+                      "m_BoolArgument": 0
+                    },
+                    "m_CallState": 2
+                  }
+                ]
+              },
+              "m_TypeName": "UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            }
+          }
+        }
+      ],
+      "colliders": [],
+      "sounds": [],
+      "rect": {
+        "min": [
+          0.5,
+          0.5
+        ],
+        "max": [
+          0.5,
+          0.5
+        ],
+        "position": [
+          558.4000244140625,
+          -220.3000030517578
+        ],
+        "size": [
+          160.0,
+          30.0
+        ],
+        "pivot": [
+          0.5,
+          0.5
+        ]
+      },
+      "image": {
+        "sprite": 17,
+        "color": [
+          0.7630919814109802,
+          0.7630919814109802,
+          0.8459999561309814,
+          1.0
+        ],
+        "enabled": 1,
+        "raycast": 1
+      },
+      "order": 4
+    },
+    {
+      "name": "ButtonUp",
+      "active": true,
+      "layer": 5,
+      "parent": 2,
+      "children": [],
+      "pos": [
+        696.9999389648438,
+        -82.29998779296875,
+        0.0
+      ],
+      "rot": [
+        -0.0,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "scale": [
+        0.7732617855072021,
+        4.039351940155029,
+        1.1540898084640503
+      ],
+      "scripts": [
+        {
+          "class": "Image",
+          "fields": {
+            "m_Enabled": 1,
+            "m_Material": {
+              "node": -1,
+              "type": "",
+              "sprite": -1,
+              "audio": -1,
+              "video": -1
+            },
+            "m_Color": {
+              "r": 0.7630919814109802,
+              "g": 0.7630919814109802,
+              "b": 0.8459999561309814,
+              "a": 1.0
+            },
+            "m_RaycastTarget": 1,
+            "m_OnCullStateChanged": {
+              "m_PersistentCalls": {
+                "m_Calls": []
+              },
+              "m_TypeName": "UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+            },
+            "m_Sprite": {
+              "node": -1,
+              "type": "Sprite",
+              "sprite": 18,
+              "audio": -1,
+              "video": -1
+            },
+            "m_Type": 0,
+            "m_PreserveAspect": 0,
+            "m_FillCenter": 1,
+            "m_FillMethod": 4,
+            "m_FillAmount": 1.0,
+            "m_FillClockwise": 1,
+            "m_FillOrigin": 0,
+            "m_UseSpriteMesh": 0
+          }
+        },
+        {
+          "class": "Button",
+          "fields": {
+            "m_Enabled": 1,
+            "m_Navigation": {
+              "m_Mode": 3,
+              "m_SelectOnUp": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              },
+              "m_SelectOnDown": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              },
+              "m_SelectOnLeft": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              },
+              "m_SelectOnRight": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              }
+            },
+            "m_Transition": 1,
+            "m_Colors": {
+              "m_NormalColor": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+              },
+              "m_HighlightedColor": {
+                "r": 0.9607843160629272,
+                "g": 0.9607843160629272,
+                "b": 0.9607843160629272,
+                "a": 1.0
+              },
+              "m_PressedColor": {
+                "r": 0.7843137383460999,
+                "g": 0.7843137383460999,
+                "b": 0.7843137383460999,
+                "a": 1.0
+              },
+              "m_DisabledColor": {
+                "r": 0.7843137383460999,
+                "g": 0.7843137383460999,
+                "b": 0.7843137383460999,
+                "a": 0.501960813999176
+              },
+              "m_ColorMultiplier": 1.0,
+              "m_FadeDuration": 0.10000000149011612
+            },
+            "m_SpriteState": {
+              "m_HighlightedSprite": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              },
+              "m_PressedSprite": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              },
+              "m_DisabledSprite": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              }
+            },
+            "m_AnimationTriggers": {
+              "m_NormalTrigger": "Normal",
+              "m_HighlightedTrigger": "Highlighted",
+              "m_PressedTrigger": "Pressed",
+              "m_DisabledTrigger": "Disabled"
+            },
+            "m_Interactable": 1,
+            "m_TargetGraphic": {
+              "node": 5,
+              "type": "Image",
+              "sprite": -1,
+              "audio": -1,
+              "video": -1
+            },
+            "m_OnClick": {
+              "m_PersistentCalls": {
+                "m_Calls": []
+              },
+              "m_TypeName": "UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+            }
+          }
+        },
+        {
+          "class": "EventTrigger",
+          "fields": {
+            "m_Enabled": 1,
+            "m_Delegates": [
+              {
+                "eventID": 2,
+                "callback": {
+                  "m_PersistentCalls": {
+                    "m_Calls": [
+                      {
+                        "m_Target": {
+                          "node": 5,
+                          "type": "HoldButtonEventHandlerUp",
+                          "sprite": -1,
+                          "audio": -1,
+                          "video": -1
+                        },
+                        "m_MethodName": "SetPressed",
+                        "m_Mode": 6,
+                        "m_Arguments": {
+                          "m_ObjectArgument": {
+                            "node": -1,
+                            "type": "",
+                            "sprite": -1,
+                            "audio": -1,
+                            "video": -1
+                          },
+                          "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                          "m_IntArgument": 0,
+                          "m_FloatArgument": 0.0,
+                          "m_StringArgument": "down",
+                          "m_BoolArgument": 1
+                        },
+                        "m_CallState": 2
+                      },
+                      {
+                        "m_Target": {
+                          "node": 1,
+                          "type": "Animator",
+                          "sprite": -1,
+                          "audio": -1,
+                          "video": -1
+                        },
+                        "m_MethodName": "Play",
+                        "m_Mode": 5,
+                        "m_Arguments": {
+                          "m_ObjectArgument": {
+                            "node": -1,
+                            "type": "",
+                            "sprite": -1,
+                            "audio": -1,
+                            "video": -1
+                          },
+                          "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                          "m_IntArgument": 0,
+                          "m_FloatArgument": 0.0,
+                          "m_StringArgument": "up",
+                          "m_BoolArgument": 1
+                        },
+                        "m_CallState": 2
+                      }
+                    ]
+                  },
+                  "m_TypeName": "UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+                }
+              },
+              {
+                "eventID": 3,
+                "callback": {
+                  "m_PersistentCalls": {
+                    "m_Calls": [
+                      {
+                        "m_Target": {
+                          "node": 5,
+                          "type": "HoldButtonEventHandlerUp",
+                          "sprite": -1,
+                          "audio": -1,
+                          "video": -1
+                        },
+                        "m_MethodName": "SetPressed",
+                        "m_Mode": 6,
+                        "m_Arguments": {
+                          "m_ObjectArgument": {
+                            "node": -1,
+                            "type": "",
+                            "sprite": -1,
+                            "audio": -1,
+                            "video": -1
+                          },
+                          "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                          "m_IntArgument": 0,
+                          "m_FloatArgument": 0.0,
+                          "m_StringArgument": "down_idle",
+                          "m_BoolArgument": 0
+                        },
+                        "m_CallState": 2
+                      },
+                      {
+                        "m_Target": {
+                          "node": 1,
+                          "type": "Animator",
+                          "sprite": -1,
+                          "audio": -1,
+                          "video": -1
+                        },
+                        "m_MethodName": "Play",
+                        "m_Mode": 5,
+                        "m_Arguments": {
+                          "m_ObjectArgument": {
+                            "node": -1,
+                            "type": "",
+                            "sprite": -1,
+                            "audio": -1,
+                            "video": -1
+                          },
+                          "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                          "m_IntArgument": 0,
+                          "m_FloatArgument": 0.0,
+                          "m_StringArgument": "up_idle",
+                          "m_BoolArgument": 0
+                        },
+                        "m_CallState": 2
+                      }
+                    ]
+                  },
+                  "m_TypeName": "UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+                }
+              }
+            ],
+            "delegates": []
+          }
+        },
+        {
+          "class": "HoldButtonEventHandlerUp",
+          "fields": {
+            "m_Enabled": 1,
+            "OnButtonHeldUp": {
+              "m_PersistentCalls": {
+                "m_Calls": [
+                  {
+                    "m_Target": {
+                      "node": 1,
+                      "type": "Movement",
+                      "sprite": -1,
+                      "audio": -1,
+                      "video": -1
+                    },
+                    "m_MethodName": "MoveUp",
+                    "m_Mode": 1,
+                    "m_Arguments": {
+                      "m_ObjectArgument": {
+                        "node": -1,
+                        "type": "",
+                        "sprite": -1,
+                        "audio": -1,
+                        "video": -1
+                      },
+                      "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                      "m_IntArgument": 0,
+                      "m_FloatArgument": 0.0,
+                      "m_StringArgument": "",
+                      "m_BoolArgument": 0
+                    },
+                    "m_CallState": 2
+                  }
+                ]
+              },
+              "m_TypeName": "UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            },
+            "OnButtonHeldUp1": {
+              "m_PersistentCalls": {
+                "m_Calls": [
+                  {
+                    "m_Target": {
+                      "node": 1,
+                      "type": "Movement",
+                      "sprite": -1,
+                      "audio": -1,
+                      "video": -1
+                    },
+                    "m_MethodName": "MoveUpRelease",
+                    "m_Mode": 1,
+                    "m_Arguments": {
+                      "m_ObjectArgument": {
+                        "node": -1,
+                        "type": "",
+                        "sprite": -1,
+                        "audio": -1,
+                        "video": -1
+                      },
+                      "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                      "m_IntArgument": 0,
+                      "m_FloatArgument": 0.0,
+                      "m_StringArgument": "",
+                      "m_BoolArgument": 0
+                    },
+                    "m_CallState": 2
+                  }
+                ]
+              },
+              "m_TypeName": "UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            }
+          }
+        }
+      ],
+      "colliders": [],
+      "sounds": [],
+      "rect": {
+        "min": [
+          0.5,
+          0.5
+        ],
+        "max": [
+          0.5,
+          0.5
+        ],
+        "position": [
+          696.9999389648438,
+          -82.29998779296875
+        ],
+        "size": [
+          160.0,
+          30.0
+        ],
+        "pivot": [
+          0.5,
+          0.5
+        ]
+      },
+      "image": {
+        "sprite": 18,
+        "color": [
+          0.7630919814109802,
+          0.7630919814109802,
+          0.8459999561309814,
+          1.0
+        ],
+        "enabled": 1,
+        "raycast": 1
+      },
+      "order": 5
+    },
+    {
+      "name": "ButtonDown",
+      "active": true,
+      "layer": 5,
+      "parent": 2,
+      "children": [],
+      "pos": [
+        696.9999389648438,
+        -359.5999755859375,
+        0.0
+      ],
+      "rot": [
+        -0.0,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "scale": [
+        0.7732617855072021,
+        4.039351940155029,
+        1.1540898084640503
+      ],
+      "scripts": [
+        {
+          "class": "Image",
+          "fields": {
+            "m_Enabled": 1,
+            "m_Material": {
+              "node": -1,
+              "type": "",
+              "sprite": -1,
+              "audio": -1,
+              "video": -1
+            },
+            "m_Color": {
+              "r": 0.7630919814109802,
+              "g": 0.7630919814109802,
+              "b": 0.8459999561309814,
+              "a": 1.0
+            },
+            "m_RaycastTarget": 1,
+            "m_OnCullStateChanged": {
+              "m_PersistentCalls": {
+                "m_Calls": []
+              },
+              "m_TypeName": "UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+            },
+            "m_Sprite": {
+              "node": -1,
+              "type": "Sprite",
+              "sprite": 21,
+              "audio": -1,
+              "video": -1
+            },
+            "m_Type": 0,
+            "m_PreserveAspect": 0,
+            "m_FillCenter": 1,
+            "m_FillMethod": 4,
+            "m_FillAmount": 1.0,
+            "m_FillClockwise": 1,
+            "m_FillOrigin": 0,
+            "m_UseSpriteMesh": 0
+          }
+        },
+        {
+          "class": "Button",
+          "fields": {
+            "m_Enabled": 1,
+            "m_Navigation": {
+              "m_Mode": 3,
+              "m_SelectOnUp": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              },
+              "m_SelectOnDown": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              },
+              "m_SelectOnLeft": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              },
+              "m_SelectOnRight": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              }
+            },
+            "m_Transition": 1,
+            "m_Colors": {
+              "m_NormalColor": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+              },
+              "m_HighlightedColor": {
+                "r": 0.9607843160629272,
+                "g": 0.9607843160629272,
+                "b": 0.9607843160629272,
+                "a": 1.0
+              },
+              "m_PressedColor": {
+                "r": 0.7843137383460999,
+                "g": 0.7843137383460999,
+                "b": 0.7843137383460999,
+                "a": 1.0
+              },
+              "m_DisabledColor": {
+                "r": 0.7843137383460999,
+                "g": 0.7843137383460999,
+                "b": 0.7843137383460999,
+                "a": 0.501960813999176
+              },
+              "m_ColorMultiplier": 1.0,
+              "m_FadeDuration": 0.10000000149011612
+            },
+            "m_SpriteState": {
+              "m_HighlightedSprite": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              },
+              "m_PressedSprite": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              },
+              "m_DisabledSprite": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              }
+            },
+            "m_AnimationTriggers": {
+              "m_NormalTrigger": "Normal",
+              "m_HighlightedTrigger": "Highlighted",
+              "m_PressedTrigger": "Pressed",
+              "m_DisabledTrigger": "Disabled"
+            },
+            "m_Interactable": 1,
+            "m_TargetGraphic": {
+              "node": 6,
+              "type": "Image",
+              "sprite": -1,
+              "audio": -1,
+              "video": -1
+            },
+            "m_OnClick": {
+              "m_PersistentCalls": {
+                "m_Calls": []
+              },
+              "m_TypeName": "UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+            }
+          }
+        },
+        {
+          "class": "EventTrigger",
+          "fields": {
+            "m_Enabled": 1,
+            "m_Delegates": [
+              {
+                "eventID": 2,
+                "callback": {
+                  "m_PersistentCalls": {
+                    "m_Calls": [
+                      {
+                        "m_Target": {
+                          "node": 6,
+                          "type": "HoldButtonEventHandlerDown",
+                          "sprite": -1,
+                          "audio": -1,
+                          "video": -1
+                        },
+                        "m_MethodName": "SetPressed",
+                        "m_Mode": 6,
+                        "m_Arguments": {
+                          "m_ObjectArgument": {
+                            "node": -1,
+                            "type": "",
+                            "sprite": -1,
+                            "audio": -1,
+                            "video": -1
+                          },
+                          "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                          "m_IntArgument": 0,
+                          "m_FloatArgument": 0.0,
+                          "m_StringArgument": "down",
+                          "m_BoolArgument": 1
+                        },
+                        "m_CallState": 2
+                      },
+                      {
+                        "m_Target": {
+                          "node": 1,
+                          "type": "Animator",
+                          "sprite": -1,
+                          "audio": -1,
+                          "video": -1
+                        },
+                        "m_MethodName": "Play",
+                        "m_Mode": 5,
+                        "m_Arguments": {
+                          "m_ObjectArgument": {
+                            "node": -1,
+                            "type": "",
+                            "sprite": -1,
+                            "audio": -1,
+                            "video": -1
+                          },
+                          "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                          "m_IntArgument": 0,
+                          "m_FloatArgument": 0.0,
+                          "m_StringArgument": "down",
+                          "m_BoolArgument": 1
+                        },
+                        "m_CallState": 2
+                      }
+                    ]
+                  },
+                  "m_TypeName": "UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+                }
+              },
+              {
+                "eventID": 3,
+                "callback": {
+                  "m_PersistentCalls": {
+                    "m_Calls": [
+                      {
+                        "m_Target": {
+                          "node": 6,
+                          "type": "HoldButtonEventHandlerDown",
+                          "sprite": -1,
+                          "audio": -1,
+                          "video": -1
+                        },
+                        "m_MethodName": "SetPressed",
+                        "m_Mode": 6,
+                        "m_Arguments": {
+                          "m_ObjectArgument": {
+                            "node": -1,
+                            "type": "",
+                            "sprite": -1,
+                            "audio": -1,
+                            "video": -1
+                          },
+                          "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                          "m_IntArgument": 0,
+                          "m_FloatArgument": 0.0,
+                          "m_StringArgument": "down_idle",
+                          "m_BoolArgument": 0
+                        },
+                        "m_CallState": 2
+                      },
+                      {
+                        "m_Target": {
+                          "node": 1,
+                          "type": "Animator",
+                          "sprite": -1,
+                          "audio": -1,
+                          "video": -1
+                        },
+                        "m_MethodName": "Play",
+                        "m_Mode": 5,
+                        "m_Arguments": {
+                          "m_ObjectArgument": {
+                            "node": -1,
+                            "type": "",
+                            "sprite": -1,
+                            "audio": -1,
+                            "video": -1
+                          },
+                          "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                          "m_IntArgument": 0,
+                          "m_FloatArgument": 0.0,
+                          "m_StringArgument": "down_idle",
+                          "m_BoolArgument": 0
+                        },
+                        "m_CallState": 2
+                      }
+                    ]
+                  },
+                  "m_TypeName": "UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+                }
+              }
+            ],
+            "delegates": []
+          }
+        },
+        {
+          "class": "HoldButtonEventHandlerDown",
+          "fields": {
+            "m_Enabled": 1,
+            "OnButtonHeldDown": {
+              "m_PersistentCalls": {
+                "m_Calls": [
+                  {
+                    "m_Target": {
+                      "node": 1,
+                      "type": "Movement",
+                      "sprite": -1,
+                      "audio": -1,
+                      "video": -1
+                    },
+                    "m_MethodName": "MoveDown",
+                    "m_Mode": 1,
+                    "m_Arguments": {
+                      "m_ObjectArgument": {
+                        "node": -1,
+                        "type": "",
+                        "sprite": -1,
+                        "audio": -1,
+                        "video": -1
+                      },
+                      "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                      "m_IntArgument": 0,
+                      "m_FloatArgument": 0.0,
+                      "m_StringArgument": "",
+                      "m_BoolArgument": 0
+                    },
+                    "m_CallState": 2
+                  }
+                ]
+              },
+              "m_TypeName": "UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            },
+            "OnButtonHeldDown1": {
+              "m_PersistentCalls": {
+                "m_Calls": [
+                  {
+                    "m_Target": {
+                      "node": 1,
+                      "type": "Movement",
+                      "sprite": -1,
+                      "audio": -1,
+                      "video": -1
+                    },
+                    "m_MethodName": "MoveDownRelease",
+                    "m_Mode": 1,
+                    "m_Arguments": {
+                      "m_ObjectArgument": {
+                        "node": -1,
+                        "type": "",
+                        "sprite": -1,
+                        "audio": -1,
+                        "video": -1
+                      },
+                      "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                      "m_IntArgument": 0,
+                      "m_FloatArgument": 0.0,
+                      "m_StringArgument": "",
+                      "m_BoolArgument": 0
+                    },
+                    "m_CallState": 2
+                  }
+                ]
+              },
+              "m_TypeName": "UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            }
+          }
+        }
+      ],
+      "colliders": [],
+      "sounds": [],
+      "rect": {
+        "min": [
+          0.5,
+          0.5
+        ],
+        "max": [
+          0.5,
+          0.5
+        ],
+        "position": [
+          696.9999389648438,
+          -359.5999755859375
+        ],
+        "size": [
+          160.0,
+          30.0
+        ],
+        "pivot": [
+          0.5,
+          0.5
+        ]
+      },
+      "image": {
+        "sprite": 21,
+        "color": [
+          0.7630919814109802,
+          0.7630919814109802,
+          0.8459999561309814,
+          1.0
+        ],
+        "enabled": 1,
+        "raycast": 1
+      },
+      "order": 6
+    },
+    {
+      "name": "ButtonRight",
+      "active": true,
+      "layer": 5,
+      "parent": 2,
+      "children": [],
+      "pos": [
+        837.2999267578125,
+        -220.29998779296875,
+        0.0
+      ],
+      "rot": [
+        -0.0,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "scale": [
+        0.7829084992408752,
+        4.190824508666992,
+        1.1540898084640503
+      ],
+      "scripts": [
+        {
+          "class": "Image",
+          "fields": {
+            "m_Enabled": 1,
+            "m_Material": {
+              "node": -1,
+              "type": "",
+              "sprite": -1,
+              "audio": -1,
+              "video": -1
+            },
+            "m_Color": {
+              "r": 0.7630919814109802,
+              "g": 0.7630919814109802,
+              "b": 0.8459999561309814,
+              "a": 1.0
+            },
+            "m_RaycastTarget": 1,
+            "m_OnCullStateChanged": {
+              "m_PersistentCalls": {
+                "m_Calls": []
+              },
+              "m_TypeName": "UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+            },
+            "m_Sprite": {
+              "node": -1,
+              "type": "Sprite",
+              "sprite": 16,
+              "audio": -1,
+              "video": -1
+            },
+            "m_Type": 0,
+            "m_PreserveAspect": 0,
+            "m_FillCenter": 1,
+            "m_FillMethod": 4,
+            "m_FillAmount": 1.0,
+            "m_FillClockwise": 1,
+            "m_FillOrigin": 0,
+            "m_UseSpriteMesh": 0
+          }
+        },
+        {
+          "class": "Button",
+          "fields": {
+            "m_Enabled": 1,
+            "m_Navigation": {
+              "m_Mode": 3,
+              "m_SelectOnUp": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              },
+              "m_SelectOnDown": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              },
+              "m_SelectOnLeft": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              },
+              "m_SelectOnRight": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              }
+            },
+            "m_Transition": 1,
+            "m_Colors": {
+              "m_NormalColor": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+              },
+              "m_HighlightedColor": {
+                "r": 0.9607843160629272,
+                "g": 0.9607843160629272,
+                "b": 0.9607843160629272,
+                "a": 1.0
+              },
+              "m_PressedColor": {
+                "r": 0.7843137383460999,
+                "g": 0.7843137383460999,
+                "b": 0.7843137383460999,
+                "a": 1.0
+              },
+              "m_DisabledColor": {
+                "r": 0.7843137383460999,
+                "g": 0.7843137383460999,
+                "b": 0.7843137383460999,
+                "a": 0.501960813999176
+              },
+              "m_ColorMultiplier": 1.0,
+              "m_FadeDuration": 0.10000000149011612
+            },
+            "m_SpriteState": {
+              "m_HighlightedSprite": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              },
+              "m_PressedSprite": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              },
+              "m_DisabledSprite": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              }
+            },
+            "m_AnimationTriggers": {
+              "m_NormalTrigger": "Normal",
+              "m_HighlightedTrigger": "Highlighted",
+              "m_PressedTrigger": "Pressed",
+              "m_DisabledTrigger": "Disabled"
+            },
+            "m_Interactable": 1,
+            "m_TargetGraphic": {
+              "node": 7,
+              "type": "Image",
+              "sprite": -1,
+              "audio": -1,
+              "video": -1
+            },
+            "m_OnClick": {
+              "m_PersistentCalls": {
+                "m_Calls": []
+              },
+              "m_TypeName": "UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+            }
+          }
+        },
+        {
+          "class": "EventTrigger",
+          "fields": {
+            "m_Enabled": 1,
+            "m_Delegates": [
+              {
+                "eventID": 2,
+                "callback": {
+                  "m_PersistentCalls": {
+                    "m_Calls": [
+                      {
+                        "m_Target": {
+                          "node": 7,
+                          "type": "HoldButtonEventHandlerRight",
+                          "sprite": -1,
+                          "audio": -1,
+                          "video": -1
+                        },
+                        "m_MethodName": "SetPressed",
+                        "m_Mode": 6,
+                        "m_Arguments": {
+                          "m_ObjectArgument": {
+                            "node": -1,
+                            "type": "",
+                            "sprite": -1,
+                            "audio": -1,
+                            "video": -1
+                          },
+                          "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                          "m_IntArgument": 0,
+                          "m_FloatArgument": 0.0,
+                          "m_StringArgument": "down",
+                          "m_BoolArgument": 1
+                        },
+                        "m_CallState": 2
+                      },
+                      {
+                        "m_Target": {
+                          "node": 1,
+                          "type": "Animator",
+                          "sprite": -1,
+                          "audio": -1,
+                          "video": -1
+                        },
+                        "m_MethodName": "Play",
+                        "m_Mode": 5,
+                        "m_Arguments": {
+                          "m_ObjectArgument": {
+                            "node": -1,
+                            "type": "",
+                            "sprite": -1,
+                            "audio": -1,
+                            "video": -1
+                          },
+                          "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                          "m_IntArgument": 0,
+                          "m_FloatArgument": 0.0,
+                          "m_StringArgument": "right",
+                          "m_BoolArgument": 1
+                        },
+                        "m_CallState": 2
+                      }
+                    ]
+                  },
+                  "m_TypeName": "UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+                }
+              },
+              {
+                "eventID": 3,
+                "callback": {
+                  "m_PersistentCalls": {
+                    "m_Calls": [
+                      {
+                        "m_Target": {
+                          "node": 7,
+                          "type": "HoldButtonEventHandlerRight",
+                          "sprite": -1,
+                          "audio": -1,
+                          "video": -1
+                        },
+                        "m_MethodName": "SetPressed",
+                        "m_Mode": 6,
+                        "m_Arguments": {
+                          "m_ObjectArgument": {
+                            "node": -1,
+                            "type": "",
+                            "sprite": -1,
+                            "audio": -1,
+                            "video": -1
+                          },
+                          "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                          "m_IntArgument": 0,
+                          "m_FloatArgument": 0.0,
+                          "m_StringArgument": "down_idle",
+                          "m_BoolArgument": 0
+                        },
+                        "m_CallState": 2
+                      },
+                      {
+                        "m_Target": {
+                          "node": 1,
+                          "type": "Animator",
+                          "sprite": -1,
+                          "audio": -1,
+                          "video": -1
+                        },
+                        "m_MethodName": "Play",
+                        "m_Mode": 5,
+                        "m_Arguments": {
+                          "m_ObjectArgument": {
+                            "node": -1,
+                            "type": "",
+                            "sprite": -1,
+                            "audio": -1,
+                            "video": -1
+                          },
+                          "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                          "m_IntArgument": 0,
+                          "m_FloatArgument": 0.0,
+                          "m_StringArgument": "right_idle",
+                          "m_BoolArgument": 0
+                        },
+                        "m_CallState": 2
+                      }
+                    ]
+                  },
+                  "m_TypeName": "UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+                }
+              }
+            ],
+            "delegates": []
+          }
+        },
+        {
+          "class": "HoldButtonEventHandlerRight",
+          "fields": {
+            "m_Enabled": 1,
+            "OnButtonHeldRight": {
+              "m_PersistentCalls": {
+                "m_Calls": [
+                  {
+                    "m_Target": {
+                      "node": 1,
+                      "type": "Movement",
+                      "sprite": -1,
+                      "audio": -1,
+                      "video": -1
+                    },
+                    "m_MethodName": "MoveRight",
+                    "m_Mode": 1,
+                    "m_Arguments": {
+                      "m_ObjectArgument": {
+                        "node": -1,
+                        "type": "",
+                        "sprite": -1,
+                        "audio": -1,
+                        "video": -1
+                      },
+                      "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                      "m_IntArgument": 0,
+                      "m_FloatArgument": 0.0,
+                      "m_StringArgument": "",
+                      "m_BoolArgument": 0
+                    },
+                    "m_CallState": 2
+                  }
+                ]
+              },
+              "m_TypeName": "UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            },
+            "OnButtonHeldRight1": {
+              "m_PersistentCalls": {
+                "m_Calls": [
+                  {
+                    "m_Target": {
+                      "node": 1,
+                      "type": "Movement",
+                      "sprite": -1,
+                      "audio": -1,
+                      "video": -1
+                    },
+                    "m_MethodName": "MoveRightRelease",
+                    "m_Mode": 1,
+                    "m_Arguments": {
+                      "m_ObjectArgument": {
+                        "node": -1,
+                        "type": "",
+                        "sprite": -1,
+                        "audio": -1,
+                        "video": -1
+                      },
+                      "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                      "m_IntArgument": 0,
+                      "m_FloatArgument": 0.0,
+                      "m_StringArgument": "",
+                      "m_BoolArgument": 0
+                    },
+                    "m_CallState": 2
+                  }
+                ]
+              },
+              "m_TypeName": "UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            }
+          }
+        }
+      ],
+      "colliders": [],
+      "sounds": [],
+      "rect": {
+        "min": [
+          0.5,
+          0.5
+        ],
+        "max": [
+          0.5,
+          0.5
+        ],
+        "position": [
+          837.2999267578125,
+          -220.29998779296875
+        ],
+        "size": [
+          160.0,
+          30.0
+        ],
+        "pivot": [
+          0.5,
+          0.5
+        ]
+      },
+      "image": {
+        "sprite": 16,
+        "color": [
+          0.7630919814109802,
+          0.7630919814109802,
+          0.8459999561309814,
+          1.0
+        ],
+        "enabled": 1,
+        "raycast": 1
+      },
+      "order": 7
+    },
+    {
+      "name": "Luz del protagonista",
+      "active": true,
+      "parent": 1,
+      "children": [],
+      "pos": [
+        0,
+        1,
+        -3
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "light": {
+        "type": 2,
+        "color": [
+          1,
+          0.88,
+          0.76
+        ],
+        "range": 9,
+        "intensity": 0.27,
+        "enabled": true
+      },
+      "order": 8
+    },
+    {
+      "name": "Suelo continuo",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        0,
+        -0.12,
+        0
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [
+        {
+          "type": "BoxCollider",
+          "center": [
+            0,
+            0,
+            0
+          ],
+          "size": [
+            36.0,
+            0.24,
+            30.0
+          ],
+          "enabled": true,
+          "trigger": false
+        }
+      ],
+      "sounds": [],
+      "mesh": 1445,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          548
+        ],
+        "cutaway": false
+      },
+      "order": 9
+    },
+    {
+      "name": "Pared lateral",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        -18.0,
+        2.65,
+        0
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [
+        {
+          "type": "BoxCollider",
+          "center": [
+            0,
+            0,
+            0
+          ],
+          "size": [
+            0.24,
+            5.3,
+            30.0
+          ],
+          "enabled": true,
+          "trigger": false
+        }
+      ],
+      "sounds": [],
+      "mesh": 1446,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          549
+        ],
+        "cutaway": true
+      },
+      "order": 10
+    },
+    {
+      "name": "Pared lateral",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        18.0,
+        2.65,
+        0
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [
+        {
+          "type": "BoxCollider",
+          "center": [
+            0,
+            0,
+            0
+          ],
+          "size": [
+            0.24,
+            5.3,
+            30.0
+          ],
+          "enabled": true,
+          "trigger": false
+        }
+      ],
+      "sounds": [],
+      "mesh": 1447,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          549
+        ],
+        "cutaway": true
+      },
+      "order": 11
+    },
+    {
+      "name": "Muro del fondo",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        0,
+        2.65,
+        15.0
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [
+        {
+          "type": "BoxCollider",
+          "center": [
+            0,
+            0,
+            0
+          ],
+          "size": [
+            36.0,
+            5.3,
+            0.24
+          ],
+          "enabled": true,
+          "trigger": false
+        }
+      ],
+      "sounds": [],
+      "mesh": 1448,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          550
+        ],
+        "cutaway": true
+      },
+      "order": 12
+    },
+    {
+      "name": "Muro frontal",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        0,
+        2.65,
+        -15.0
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [
+        {
+          "type": "BoxCollider",
+          "center": [
+            0,
+            0,
+            0
+          ],
+          "size": [
+            36.0,
+            5.3,
+            0.24
+          ],
+          "enabled": true,
+          "trigger": false
+        }
+      ],
+      "sounds": [],
+      "mesh": 1449,
+      "renderer": {
+        "enabled": false,
+        "materials": [
+          550
+        ],
+        "cutaway": false
+      },
+      "order": 13
+    },
+    {
+      "name": "Pavimento",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "mesh": 1450,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          629,
+          630,
+          631
+        ],
+        "lighting": true
+      },
+      "order": 14
+    },
+    {
+      "name": "Puerta CALLE",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        0,
+        1.9,
+        -14.83
+      ],
+      "rot": [
+        0,
+        0.0,
+        0,
+        1.0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "mesh": 1451,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          589
+        ],
+        "cutaway": true,
+        "occlusion": {
+          "center": [
+            0,
+            0,
+            0
+          ],
+          "size": [
+            2.05,
+            5.5,
+            0.12
+          ]
+        }
+      },
+      "order": 15
+    },
+    {
+      "name": "CALLE",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        0,
+        3.2,
+        -15.01
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [
+        {
+          "class": "Billboard",
+          "fields": {
+            "m_Enabled": 1
+          }
+        }
+      ],
+      "colliders": [],
+      "sounds": [],
+      "sprite": {
+        "sprite": 279,
+        "enabled": true,
+        "color": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "occlusion_parent": 15,
+      "order": 16
+    },
+    {
+      "name": "Puerta DESCANSO",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        -17.82,
+        1.9,
+        3.9
+      ],
+      "rot": [
+        0,
+        0.7071067811865476,
+        0,
+        0.7071067811865476
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "mesh": 1452,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          589
+        ],
+        "cutaway": true,
+        "occlusion": {
+          "center": [
+            0,
+            0,
+            0
+          ],
+          "size": [
+            2.05,
+            5.5,
+            0.12
+          ]
+        }
+      },
+      "order": 17
+    },
+    {
+      "name": "DESCANSO",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        -17.82,
+        3.2,
+        3.7199999999999998
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [
+        {
+          "class": "Billboard",
+          "fields": {
+            "m_Enabled": 1
+          }
+        }
+      ],
+      "colliders": [],
+      "sounds": [],
+      "sprite": {
+        "sprite": 280,
+        "enabled": true,
+        "color": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "occlusion_parent": 17,
+      "order": 18
+    },
+    {
+      "name": "Mostrador de venta",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        -9.8,
+        0.575,
+        -9.45
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [
+        {
+          "type": "BoxCollider",
+          "center": [
+            0,
+            0,
+            0
+          ],
+          "size": [
+            5.4,
+            1.15,
+            1.68
+          ],
+          "enabled": true,
+          "trigger": false
+        }
+      ],
+      "sounds": [],
+      "mesh": 1453,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          632
+        ],
+        "cutaway": false
+      },
+      "order": 19
+    },
+    {
+      "name": "Caja registradora",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        -9.2,
+        1.43,
+        -9.45
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "mesh": 1454,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          633
+        ],
+        "cutaway": false
+      },
+      "order": 20
+    },
+    {
+      "name": "Mesa de devoluciones",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        13.65,
+        0.5,
+        10.1
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [
+        {
+          "type": "BoxCollider",
+          "center": [
+            0,
+            0,
+            0
+          ],
+          "size": [
+            3.15,
+            1.0,
+            1.32
+          ],
+          "enabled": true,
+          "trigger": false
+        }
+      ],
+      "sounds": [],
+      "mesh": 1455,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          634
+        ],
+        "cutaway": false
+      },
+      "order": 21
+    },
+    {
+      "name": "Luz",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        -10,
+        4.85,
+        4.2
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "light": {
+        "type": 2,
+        "color": [
+          0.92,
+          0.94,
+          1
+        ],
+        "intensity": 1.24,
+        "range": 14,
+        "enabled": true
+      },
+      "order": 22
+    },
+    {
+      "name": "Luz",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        0,
+        4.85,
+        4.2
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "light": {
+        "type": 2,
+        "color": [
+          0.92,
+          0.94,
+          1
+        ],
+        "intensity": 1.24,
+        "range": 14,
+        "enabled": true
+      },
+      "order": 23
+    },
+    {
+      "name": "Luz",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        10,
+        4.85,
+        4.2
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "light": {
+        "type": 2,
+        "color": [
+          0.92,
+          0.94,
+          1
+        ],
+        "intensity": 1.24,
+        "range": 14,
+        "enabled": true
+      },
+      "order": 24
+    },
+    {
+      "name": "Luz",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        0,
+        4.9,
+        -9
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "light": {
+        "type": 2,
+        "color": [
+          0.93,
+          0.95,
+          1
+        ],
+        "intensity": 0.98,
+        "range": 20,
+        "enabled": true
+      },
+      "order": 25
+    },
+    {
+      "name": "RECEPCIÓN DE MERCANCÍA",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        0,
+        3.5,
+        -5.7
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [
+        {
+          "class": "Billboard",
+          "fields": {
+            "m_Enabled": 1
+          }
+        }
+      ],
+      "colliders": [],
+      "sounds": [],
+      "sprite": {
+        "sprite": 281,
+        "enabled": true,
+        "color": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "order": 26
+    },
+    {
+      "name": "ÁREA DE VENTAS",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        -9.8,
+        3.28,
+        -9.82
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [
+        {
+          "class": "Billboard",
+          "fields": {
+            "m_Enabled": 1
+          }
+        }
+      ],
+      "colliders": [],
+      "sounds": [],
+      "sprite": {
+        "sprite": 282,
+        "enabled": true,
+        "color": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "order": 27
+    },
+    {
+      "name": "Jefe",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        -11.7,
+        2.89,
+        0.85
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [
+        {
+          "class": "Billboard",
+          "fields": {
+            "m_Enabled": 1
+          }
+        }
+      ],
+      "colliders": [],
+      "sounds": [],
+      "sprite": {
+        "sprite": 283,
+        "enabled": true,
+        "color": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "chapter_min": 1821,
+      "chapter_max": 1880,
+      "order": 28
+    },
+    {
+      "name": "Jefe",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        -11.7,
+        2.89,
+        0.85
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [
+        {
+          "class": "Billboard",
+          "fields": {
+            "m_Enabled": 1
+          }
+        }
+      ],
+      "colliders": [],
+      "sounds": [],
+      "sprite": {
+        "sprite": 284,
+        "enabled": true,
+        "color": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "chapter_min": 1905,
+      "chapter_max": 1940,
+      "order": 29
+    },
+    {
+      "name": "Jefe",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        -11.7,
+        2.89,
+        0.85
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [
+        {
+          "class": "Billboard",
+          "fields": {
+            "m_Enabled": 1
+          }
+        }
+      ],
+      "colliders": [],
+      "sounds": [],
+      "sprite": {
+        "sprite": 285,
+        "enabled": true,
+        "color": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "chapter_min": 1965,
+      "chapter_max": 2036,
+      "order": 30
+    },
+    {
+      "name": "Compañera",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        6.35,
+        2.87,
+        3.14
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [
+        {
+          "class": "Billboard",
+          "fields": {
+            "m_Enabled": 1
+          }
+        }
+      ],
+      "colliders": [],
+      "sounds": [],
+      "sprite": {
+        "sprite": 286,
+        "enabled": true,
+        "color": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "chapter_min": 1857,
+      "chapter_max": 1928,
+      "order": 31
+    },
+    {
+      "name": "Cliente",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        4.95,
+        2.9,
+        4.63
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [
+        {
+          "class": "Billboard",
+          "fields": {
+            "m_Enabled": 1
+          }
+        }
+      ],
+      "colliders": [],
+      "sounds": [],
+      "sprite": {
+        "sprite": 287,
+        "enabled": true,
+        "color": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "chapter_min": 1881,
+      "chapter_max": 1892,
+      "order": 32
+    },
+    {
+      "name": "Estante A2",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        -13.65,
+        0,
+        9.15
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [
+        {
+          "type": "BoxCollider",
+          "center": [
+            0,
+            1.44,
+            0
+          ],
+          "size": [
+            2.89,
+            2.88,
+            1.39
+          ],
+          "enabled": true,
+          "trigger": false
+        }
+      ],
+      "sounds": [],
+      "mesh": 1456,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          635,
+          636
+        ],
+        "lighting": true
+      },
+      "order": 33
+    },
+    {
+      "name": "A2 · Papelería",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        -13.65,
+        3.32,
+        8.47
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [
+        {
+          "class": "Billboard",
+          "fields": {
+            "m_Enabled": 1
+          }
+        }
+      ],
+      "colliders": [],
+      "sounds": [],
+      "sprite": {
+        "sprite": 288,
+        "enabled": true,
+        "color": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "order": 34
+    },
+    {
+      "name": "Estante B1",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        -9.8,
+        0,
+        9.15
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [
+        {
+          "type": "BoxCollider",
+          "center": [
+            0,
+            1.44,
+            0
+          ],
+          "size": [
+            2.89,
+            2.88,
+            1.39
+          ],
+          "enabled": true,
+          "trigger": false
+        }
+      ],
+      "sounds": [],
+      "mesh": 1457,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          637,
+          636
+        ],
+        "lighting": true
+      },
+      "order": 35
+    },
+    {
+      "name": "B1 · Cocina",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        -9.8,
+        3.32,
+        8.47
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [
+        {
+          "class": "Billboard",
+          "fields": {
+            "m_Enabled": 1
+          }
+        }
+      ],
+      "colliders": [],
+      "sounds": [],
+      "sprite": {
+        "sprite": 289,
+        "enabled": true,
+        "color": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "order": 36
+    },
+    {
+      "name": "Estante B2",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        -5.95,
+        0,
+        9.15
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [
+        {
+          "type": "BoxCollider",
+          "center": [
+            0,
+            1.44,
+            0
+          ],
+          "size": [
+            2.89,
+            2.88,
+            1.39
+          ],
+          "enabled": true,
+          "trigger": false
+        }
+      ],
+      "sounds": [],
+      "mesh": 1458,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          637,
+          636
+        ],
+        "lighting": true
+      },
+      "order": 37
+    },
+    {
+      "name": "B2 · Cocina",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        -5.95,
+        3.32,
+        8.47
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [
+        {
+          "class": "Billboard",
+          "fields": {
+            "m_Enabled": 1
+          }
+        }
+      ],
+      "colliders": [],
+      "sounds": [],
+      "sprite": {
+        "sprite": 290,
+        "enabled": true,
+        "color": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "order": 38
+    },
+    {
+      "name": "Estante C1",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        -2.1,
+        0,
+        9.15
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [
+        {
+          "type": "BoxCollider",
+          "center": [
+            0,
+            1.44,
+            0
+          ],
+          "size": [
+            2.89,
+            2.88,
+            1.39
+          ],
+          "enabled": true,
+          "trigger": false
+        }
+      ],
+      "sounds": [],
+      "mesh": 1459,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          638,
+          636
+        ],
+        "lighting": true
+      },
+      "order": 39
+    },
+    {
+      "name": "C1 · Limpieza",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        -2.1,
+        3.32,
+        8.47
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [
+        {
+          "class": "Billboard",
+          "fields": {
+            "m_Enabled": 1
+          }
+        }
+      ],
+      "colliders": [],
+      "sounds": [],
+      "sprite": {
+        "sprite": 291,
+        "enabled": true,
+        "color": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "order": 40
+    },
+    {
+      "name": "Estante D1",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        1.75,
+        0,
+        9.15
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [
+        {
+          "type": "BoxCollider",
+          "center": [
+            0,
+            1.44,
+            0
+          ],
+          "size": [
+            2.89,
+            2.88,
+            1.39
+          ],
+          "enabled": true,
+          "trigger": false
+        }
+      ],
+      "sounds": [],
+      "mesh": 1460,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          639,
+          636
+        ],
+        "lighting": true
+      },
+      "order": 41
+    },
+    {
+      "name": "D1 · Eléctricos",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        1.75,
+        3.32,
+        8.47
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [
+        {
+          "class": "Billboard",
+          "fields": {
+            "m_Enabled": 1
+          }
+        }
+      ],
+      "colliders": [],
+      "sounds": [],
+      "sprite": {
+        "sprite": 292,
+        "enabled": true,
+        "color": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "order": 42
+    },
+    {
+      "name": "Estante E1",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        5.6,
+        0,
+        9.15
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [
+        {
+          "type": "BoxCollider",
+          "center": [
+            0,
+            1.44,
+            0
+          ],
+          "size": [
+            2.89,
+            2.88,
+            1.39
+          ],
+          "enabled": true,
+          "trigger": false
+        }
+      ],
+      "sounds": [],
+      "mesh": 1461,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          640,
+          636
+        ],
+        "lighting": true
+      },
+      "order": 43
+    },
+    {
+      "name": "E1 · Frágiles",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        5.6,
+        3.32,
+        8.47
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [
+        {
+          "class": "Billboard",
+          "fields": {
+            "m_Enabled": 1
+          }
+        }
+      ],
+      "colliders": [],
+      "sounds": [],
+      "sprite": {
+        "sprite": 293,
+        "enabled": true,
+        "color": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "order": 44
+    },
+    {
+      "name": "Estante R1",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        9.45,
+        0,
+        9.15
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [
+        {
+          "type": "BoxCollider",
+          "center": [
+            0,
+            1.44,
+            0
+          ],
+          "size": [
+            2.89,
+            2.88,
+            1.39
+          ],
+          "enabled": true,
+          "trigger": false
+        }
+      ],
+      "sounds": [],
+      "mesh": 1462,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          641,
+          636
+        ],
+        "lighting": true
+      },
+      "order": 45
+    },
+    {
+      "name": "R1 · Devoluciones",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        9.45,
+        3.32,
+        8.47
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [
+        {
+          "class": "Billboard",
+          "fields": {
+            "m_Enabled": 1
+          }
+        }
+      ],
+      "colliders": [],
+      "sounds": [],
+      "sprite": {
+        "sprite": 294,
+        "enabled": true,
+        "color": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "order": 46
+    },
+    {
+      "name": "Estante R2",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        13.3,
+        0,
+        9.15
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [
+        {
+          "type": "BoxCollider",
+          "center": [
+            0,
+            1.44,
+            0
+          ],
+          "size": [
+            2.89,
+            2.88,
+            1.39
+          ],
+          "enabled": true,
+          "trigger": false
+        }
+      ],
+      "sounds": [],
+      "mesh": 1463,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          641,
+          636
+        ],
+        "lighting": true
+      },
+      "order": 47
+    },
+    {
+      "name": "R2 · Incidencias",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        13.3,
+        3.32,
+        8.47
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [
+        {
+          "class": "Billboard",
+          "fields": {
+            "m_Enabled": 1
+          }
+        }
+      ],
+      "colliders": [],
+      "sounds": [],
+      "sprite": {
+        "sprite": 295,
+        "enabled": true,
+        "color": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "order": 48
+    },
+    {
+      "name": "Estante H1",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        13.3,
+        0,
+        2.95
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [
+        {
+          "type": "BoxCollider",
+          "center": [
+            0,
+            1.44,
+            0
+          ],
+          "size": [
+            2.89,
+            2.88,
+            1.39
+          ],
+          "enabled": true,
+          "trigger": false
+        }
+      ],
+      "sounds": [],
+      "mesh": 1464,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          642,
+          636
+        ],
+        "lighting": true
+      },
+      "order": 49
+    },
+    {
+      "name": "H1 · Hogar pesado",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        13.3,
+        3.32,
+        2.27
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [
+        {
+          "class": "Billboard",
+          "fields": {
+            "m_Enabled": 1
+          }
+        }
+      ],
+      "colliders": [],
+      "sounds": [],
+      "sprite": {
+        "sprite": 296,
+        "enabled": true,
+        "color": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "order": 50
+    },
+    {
+      "name": "Carrito de carga",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        11.8,
+        0,
+        -2.75
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "mesh": 1465,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          643,
+          644,
+          645,
+          646
+        ],
+        "lighting": true
+      },
+      "order": 51
+    },
+    {
+      "name": "Cuaderno profesional",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        -11.9,
+        0.22499999999999998,
+        -2.72
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "mesh": 1466,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          647,
+          648,
+          649
+        ],
+        "lighting": true
+      },
+      "order": 52
+    },
+    {
+      "name": "Lápices",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        -8.05,
+        0.22499999999999998,
+        -2.72
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "mesh": 1467,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          650,
+          648,
+          649
+        ],
+        "lighting": true
+      },
+      "order": 53
+    },
+    {
+      "name": "Carpetas",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        -4.2,
+        0.22499999999999998,
+        -2.72
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "mesh": 1468,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          651,
+          648,
+          649
+        ],
+        "lighting": true
+      },
+      "order": 54
+    },
+    {
+      "name": "Recipientes",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        -0.34999999999999964,
+        0.22499999999999998,
+        -2.72
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "mesh": 1469,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          652,
+          648,
+          649
+        ],
+        "lighting": true
+      },
+      "order": 55
+    },
+    {
+      "name": "Servilletas",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        3.5,
+        0.22499999999999998,
+        -2.72
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "mesh": 1470,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          653,
+          648,
+          649
+        ],
+        "lighting": true
+      },
+      "order": 56
+    },
+    {
+      "name": "Utensilios",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        7.35,
+        0.22499999999999998,
+        -2.72
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "mesh": 1471,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          654,
+          648,
+          649
+        ],
+        "lighting": true
+      },
+      "order": 57
+    },
+    {
+      "name": "Jabón",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        -11.9,
+        0.22499999999999998,
+        -5.41
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "mesh": 1472,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          655,
+          648,
+          649
+        ],
+        "lighting": true
+      },
+      "order": 58
+    },
+    {
+      "name": "Esponjas",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        -8.05,
+        0.22499999999999998,
+        -5.41
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "mesh": 1473,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          656,
+          648,
+          649
+        ],
+        "lighting": true
+      },
+      "order": 59
+    },
+    {
+      "name": "Focos",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        -4.2,
+        0.22499999999999998,
+        -5.41
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "mesh": 1474,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          657,
+          648,
+          649
+        ],
+        "lighting": true
+      },
+      "order": 60
+    },
+    {
+      "name": "Extensiones",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        -0.34999999999999964,
+        0.22499999999999998,
+        -5.41
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "mesh": 1475,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          658,
+          648,
+          649
+        ],
+        "lighting": true
+      },
+      "order": 61
+    },
+    {
+      "name": "Vasos de vidrio",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        3.5,
+        0.22499999999999998,
+        -5.41
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "mesh": 1476,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          659,
+          648,
+          649
+        ],
+        "lighting": true
+      },
+      "order": 62
+    },
+    {
+      "name": "Tazas de cerámica",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        7.35,
+        0.315,
+        -5.41
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "mesh": 1477,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          660,
+          648,
+          649
+        ],
+        "lighting": true
+      },
+      "order": 63
+    },
+    {
+      "name": "Detergente mal rotulado",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        -1,
+        0.22499999999999998,
+        -0.05
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "mesh": 1478,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          661,
+          648,
+          649
+        ],
+        "lighting": true
+      },
+      "order": 64
+    },
+    {
+      "name": "Jarrón",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        10.1,
+        0.22499999999999998,
+        1.25
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "mesh": 1479,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          662,
+          648,
+          649
+        ],
+        "lighting": true
+      },
+      "order": 65
+    },
+    {
+      "name": "Lámpara",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        12.0,
+        0.22499999999999998,
+        1.25
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "mesh": 1480,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          663,
+          648,
+          649
+        ],
+        "lighting": true
+      },
+      "order": 66
+    },
+    {
+      "name": "Pieza sin etiqueta",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        14.0,
+        0.22499999999999998,
+        0.1
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "mesh": 1481,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          664,
+          648,
+          649
+        ],
+        "lighting": true
+      },
+      "order": 67
+    },
+    {
+      "name": "Servilletas encontradas",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        11.2,
+        0.22499999999999998,
+        -1.54
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "mesh": 1482,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          653,
+          648,
+          649
+        ],
+        "lighting": true
+      },
+      "order": 68
+    },
+    {
+      "name": "Caja de vajilla",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        6.1,
+        0.365,
+        -0.32
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "mesh": 1483,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          665,
+          648,
+          649
+        ],
+        "lighting": true
+      },
+      "order": 69
+    },
+    {
+      "name": "Suministros de hogar",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        8.2,
+        0.365,
+        -0.32
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "mesh": 1484,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          666,
+          648,
+          649
+        ],
+        "lighting": true
+      },
+      "order": 70
+    },
+    {
+      "name": "Caja de herramientas",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        10.4,
+        0.365,
+        -0.32
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "mesh": 1485,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          667,
+          648,
+          649
+        ],
+        "lighting": true
+      },
+      "order": 71
+    },
+    {
+      "name": "Escalera de empleados",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        1.75,
+        0,
+        1.71
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [
+        {
+          "type": "BoxCollider",
+          "center": [
+            0,
+            1.12,
+            0
+          ],
+          "size": [
+            0.88,
+            2.24,
+            0.38
+          ],
+          "enabled": true,
+          "trigger": false
+        }
+      ],
+      "sounds": [],
+      "mesh": 1486,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          668,
+          669
+        ],
+        "lighting": true
+      },
+      "chapter_min": 1881,
+      "chapter_max": 1884,
+      "order": 72
+    },
+    {
+      "name": "Focos del estante de cocina",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        -9.68,
+        0.22499999999999998,
+        8.74
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "mesh": 1527,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          717,
+          648,
+          649
+        ],
+        "lighting": true
+      },
+      "order": 73
+    },
+    {
+      "name": "Audio local",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "order": 74
+    }
+  ],
+  "ambient": [
+    0.29,
+    0.29,
+    0.32
+  ],
+  "ambient_intensity": 1,
+  "custom_camera": true,
+  "dars_player": true,
+  "walk_rate": 0.91,
+  "chapter_events": [
+    {
+      "stage": 1821,
+      "next": 1833,
+      "interact": 1,
+      "delay": 0.18,
+      "pages": [
+        {
+          "transient_texture": 4896
+        },
+        {
+          "transient_texture": 4779
+        },
+        {
+          "transient_texture": 4897
+        },
+        {
+          "transient_texture": 4816
+        },
+        {
+          "transient_texture": 4898
+        },
+        {
+          "transient_texture": 4899
+        },
+        {
+          "transient_texture": 4900
+        },
+        {
+          "transient_texture": 4901
+        },
+        {
+          "transient_texture": 4902
+        },
+        {
+          "transient_texture": 4783
+        },
+        {
+          "transient_texture": 4903
+        },
+        {
+          "transient_texture": 4904
+        },
+        {
+          "transient_texture": 4905
+        },
+        {
+          "transient_texture": 4761
+        },
+        {
+          "transient_texture": 4906
+        },
+        {
+          "transient_texture": 4822
+        },
+        {
+          "transient_texture": 4907
+        },
+        {
+          "transient_texture": 4908
+        },
+        {
+          "transient_texture": 4909
+        }
+      ],
+      "pos": [
+        -11.1,
+        2.64,
+        0.4
+      ],
+      "radius": 1.52
+    },
+    {
+      "stage": 1833,
+      "next": 1845,
+      "interact": 1,
+      "delay": 0.18,
+      "pages": [
+        {
+          "transient_texture": 4910
+        }
+      ],
+      "pos": [
+        -6.7,
+        2.64,
+        -0.5
+      ],
+      "radius": 1.52,
+      "display_frames": [
+        4743
+      ],
+      "display_tools": true
+    },
+    {
+      "stage": 1845,
+      "next": 1846,
+      "interact": 1,
+      "delay": 0.18,
+      "pages": [
+        {
+          "transient_texture": 4761
+        },
+        {
+          "transient_texture": 4911
+        }
+      ],
+      "pos": [
+        -11.8,
+        2.64,
+        -1.28
+      ],
+      "radius": 1.52
+    },
+    {
+      "stage": 1846,
+      "next": 1857,
+      "interact": 0,
+      "delay": 0.18,
+      "pages": [
+        {
+          "transient_texture": 4912
+        }
+      ],
+      "stock_check": "placed",
+      "stock_from": 0,
+      "stock_to": 0
+    },
+    {
+      "stage": 1857,
+      "next": 1858,
+      "interact": 1,
+      "delay": 0.18,
+      "pages": [
+        {
+          "transient_texture": 4747
+        },
+        {
+          "transient_texture": 4913
+        },
+        {
+          "transient_texture": 4914
+        }
+      ],
+      "pos": [
+        -1.7,
+        2.64,
+        -2.0
+      ],
+      "radius": 1.52
+    },
+    {
+      "stage": 1858,
+      "next": 1869,
+      "interact": 0,
+      "delay": 0.18,
+      "pages": [
+        {
+          "transient_texture": 4915
+        },
+        {
+          "transient_texture": 4779
+        },
+        {
+          "transient_texture": 4916
+        },
+        {
+          "transient_texture": 4783
+        },
+        {
+          "transient_texture": 4917
+        },
+        {
+          "transient_texture": 4918
+        }
+      ],
+      "stock_check": "placed",
+      "stock_from": 0,
+      "stock_to": 11
+    },
+    {
+      "stage": 1869,
+      "next": 1870,
+      "interact": 1,
+      "delay": 0.18,
+      "pages": [
+        {
+          "transient_texture": 4919
+        },
+        {
+          "transient_texture": 4920
+        },
+        {
+          "transient_texture": 4921
+        },
+        {
+          "transient_texture": 4927
+        },
+        {
+          "transient_texture": 4928
+        },
+        {
+          "transient_texture": 4929
+        }
+      ],
+      "pos": [
+        -11.6,
+        2.64,
+        0.33
+      ],
+      "radius": 1.52,
+      "variants": [
+        {
+          "stock_errors_min": 1,
+          "pages": [
+            {
+              "transient_texture": 4919
+            },
+            {
+              "transient_texture": 4920
+            },
+            {
+              "transient_texture": 4921
+            },
+            {
+              "transient_texture": 4922
+            },
+            {
+              "transient_texture": 4923
+            },
+            {
+              "transient_texture": 4924
+            },
+            {
+              "transient_texture": 4901
+            },
+            {
+              "transient_texture": 4925
+            },
+            {
+              "transient_texture": 4926
+            },
+            {
+              "transient_texture": 4822
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "stage": 1870,
+      "next": 1881,
+      "interact": 0,
+      "delay": 0.18,
+      "pages": [],
+      "stock_check": "correct",
+      "stock_from": 0,
+      "stock_to": 11
+    },
+    {
+      "stage": 1881,
+      "next": 1882,
+      "interact": 1,
+      "delay": 0.18,
+      "pages": [
+        {
+          "transient_texture": 4930
+        },
+        {
+          "transient_texture": 4931
+        },
+        {
+          "transient_texture": 4932
+        },
+        {
+          "transient_texture": 4933
+        },
+        {
+          "transient_texture": 4934
+        },
+        {
+          "transient_texture": 4935
+        },
+        {
+          "transient_texture": 4936
+        },
+        {
+          "transient_texture": 4779
+        },
+        {
+          "transient_texture": 4937
+        }
+      ],
+      "pos": [
+        4.72,
+        2.64,
+        3.65
+      ],
+      "radius": 1.52
+    },
+    {
+      "stage": 1882,
+      "next": 1883,
+      "interact": 1,
+      "delay": 0.18,
+      "pages": [],
+      "pos": [
+        4.72,
+        2.64,
+        3.65
+      ],
+      "radius": 1.52,
+      "drag_nodes": [
+        72
+      ],
+      "drag_zone": [
+        0.4,
+        1,
+        3.2,
+        7.15
+      ],
+      "drag_targets": [
+        [
+          1.75,
+          0,
+          6.22
+        ]
+      ]
+    },
+    {
+      "stage": 1883,
+      "next": 1884,
+      "interact": 1,
+      "delay": 0.18,
+      "pages": [
+        {
+          "transient_texture": 4938
+        },
+        {
+          "transient_texture": 4939
+        },
+        {
+          "transient_texture": 4940
+        },
+        {
+          "transient_texture": 4941
+        },
+        {
+          "transient_texture": 4942
+        }
+      ],
+      "pos": [
+        2.4,
+        2.64,
+        7.39
+      ],
+      "radius": 1.52
+    },
+    {
+      "stage": 1884,
+      "next": 1893,
+      "interact": 1,
+      "delay": 0.18,
+      "pages": [],
+      "pos": [
+        4.72,
+        2.64,
+        3.65
+      ],
+      "radius": 1.52,
+      "drag_nodes": [
+        72
+      ],
+      "drag_zone": [
+        0.4,
+        1,
+        3.2,
+        7.15
+      ],
+      "drag_targets": [
+        [
+          1.75,
+          0,
+          1.71
+        ]
+      ]
+    },
+    {
+      "stage": 1893,
+      "next": 1894,
+      "interact": 1,
+      "delay": 0.18,
+      "pages": [
+        {
+          "transient_texture": 4747
+        },
+        {
+          "transient_texture": 4943
+        }
+      ],
+      "pos": [
+        -1,
+        2.64,
+        -1.44
+      ],
+      "radius": 1.52
+    },
+    {
+      "stage": 1894,
+      "next": 1905,
+      "interact": 0,
+      "delay": 0.18,
+      "pages": [],
+      "choice_texture": 4944,
+      "choices": [
+        {
+          "next": 1895,
+          "set_flags": 16384
+        },
+        {
+          "next": 1896
+        }
+      ]
+    },
+    {
+      "stage": 1895,
+      "next": 1905,
+      "interact": 0,
+      "delay": 0.18,
+      "pages": [
+        {
+          "transient_texture": 4945
+        },
+        {
+          "transient_texture": 4946
+        },
+        {
+          "transient_texture": 4947
+        },
+        {
+          "transient_texture": 4948
+        },
+        {
+          "transient_texture": 4949
+        },
+        {
+          "transient_texture": 4950
+        },
+        {
+          "transient_texture": 4951
+        },
+        {
+          "transient_texture": 4952
+        }
+      ],
+      "stock_check": "correct",
+      "stock_from": 12,
+      "stock_to": 12
+    },
+    {
+      "stage": 1896,
+      "next": 1905,
+      "interact": 0,
+      "delay": 0.18,
+      "pages": [
+        {
+          "transient_texture": 4953
+        }
+      ],
+      "stock_check": "placed",
+      "stock_from": 12,
+      "stock_to": 12
+    },
+    {
+      "stage": 1905,
+      "next": 1906,
+      "interact": 1,
+      "delay": 0.18,
+      "pages": [
+        {
+          "transient_texture": 4954
+        },
+        {
+          "transient_texture": 4955
+        },
+        {
+          "transient_texture": 4956
+        },
+        {
+          "transient_texture": 4957
+        },
+        {
+          "transient_texture": 4958
+        }
+      ],
+      "pos": [
+        10.1,
+        2.64,
+        2.4
+      ],
+      "radius": 1.52
+    },
+    {
+      "stage": 1906,
+      "next": 1917,
+      "interact": 0,
+      "delay": 0.18,
+      "pages": [
+        {
+          "transient_texture": 4959
+        },
+        {
+          "transient_texture": 4960
+        }
+      ],
+      "stock_check": "correct",
+      "stock_from": 13,
+      "stock_to": 15
+    },
+    {
+      "stage": 1917,
+      "next": 1929,
+      "interact": 1,
+      "delay": 0.18,
+      "pages": [
+        {
+          "transient_texture": 4961
+        },
+        {
+          "transient_texture": 4962
+        },
+        {
+          "transient_texture": 4963
+        },
+        {
+          "transient_texture": 4964
+        },
+        {
+          "transient_texture": 4965
+        },
+        {
+          "transient_texture": 4966
+        },
+        {
+          "transient_texture": 4747
+        },
+        {
+          "transient_texture": 4761
+        },
+        {
+          "transient_texture": 4967
+        },
+        {
+          "transient_texture": 4968
+        },
+        {
+          "transient_texture": 4969
+        }
+      ],
+      "pos": [
+        6.0,
+        2.64,
+        2.13
+      ],
+      "radius": 1.52
+    },
+    {
+      "stage": 1929,
+      "next": 1930,
+      "interact": 1,
+      "delay": 0.18,
+      "pages": [
+        {
+          "transient_texture": 4970
+        },
+        {
+          "transient_texture": 4747
+        },
+        {
+          "transient_texture": 4971
+        }
+      ],
+      "pos": [
+        -8.0,
+        2.64,
+        -0.8
+      ],
+      "radius": 1.52,
+      "display_frames": [
+        4745
+      ],
+      "display_tools": true
+    },
+    {
+      "stage": 1930,
+      "next": 1931,
+      "interact": 0,
+      "delay": 0.18,
+      "pages": [],
+      "required_flags": 7,
+      "clear_flags": 31,
+      "actions": [
+        {
+          "pos": [
+            -7.7,
+            2.64,
+            -8.0
+          ],
+          "toggle": 1,
+          "once": true,
+          "radius": 1.12,
+          "texture": 4972
+        },
+        {
+          "pos": [
+            -0.1,
+            2.64,
+            -4.7
+          ],
+          "toggle": 2,
+          "once": true,
+          "radius": 1.12,
+          "texture": 4973
+        },
+        {
+          "pos": [
+            13.9,
+            2.64,
+            8.32
+          ],
+          "toggle": 4,
+          "once": true,
+          "radius": 1.12,
+          "texture": 4974
+        }
+      ]
+    },
+    {
+      "stage": 1931,
+      "next": 1941,
+      "interact": 0,
+      "delay": 0.18,
+      "pages": [
+        {
+          "transient_texture": 4975
+        },
+        {
+          "transient_texture": 4976
+        },
+        {
+          "transient_texture": 4977
+        }
+      ],
+      "stock_check": "correct",
+      "stock_from": 16,
+      "stock_to": 16
+    },
+    {
+      "stage": 1965,
+      "next": 1966,
+      "interact": 1,
+      "delay": 0.18,
+      "pages": [
+        {
+          "transient_texture": 4995
+        },
+        {
+          "transient_texture": 4779
+        },
+        {
+          "transient_texture": 4996
+        },
+        {
+          "transient_texture": 4997
+        }
+      ],
+      "pos": [
+        10.3,
+        2.64,
+        -1.5
+      ],
+      "radius": 1.52
+    },
+    {
+      "stage": 1966,
+      "next": 1977,
+      "interact": 0,
+      "delay": 0.18,
+      "pages": [
+        {
+          "transient_texture": 4998
+        },
+        {
+          "transient_texture": 4999
+        }
+      ],
+      "stock_check": "correct",
+      "stock_from": 17,
+      "stock_to": 19
+    },
+    {
+      "stage": 1977,
+      "next": 1978,
+      "interact": 1,
+      "delay": 0.18,
+      "pages": [
+        {
+          "transient_texture": 5000
+        },
+        {
+          "transient_texture": 5001
+        },
+        {
+          "transient_texture": 5002
+        },
+        {
+          "transient_texture": 5003
+        },
+        {
+          "transient_texture": 5004
+        },
+        {
+          "transient_texture": 5005
+        },
+        {
+          "transient_texture": 5006
+        },
+        {
+          "transient_texture": 5007
+        },
+        {
+          "transient_texture": 5008
+        },
+        {
+          "transient_texture": 5009
+        },
+        {
+          "transient_texture": 4822
+        }
+      ],
+      "pos": [
+        -9.8,
+        2.64,
+        7.15
+      ],
+      "radius": 1.52
+    },
+    {
+      "stage": 1978,
+      "next": 1989,
+      "interact": 0,
+      "delay": 0.18,
+      "pages": [],
+      "choice_texture": 5010,
+      "choices": [
+        {
+          "next": 1989,
+          "set_flags": 32768
+        },
+        {
+          "next": 1979
+        }
+      ]
+    },
+    {
+      "stage": 1979,
+      "next": 1989,
+      "interact": 0,
+      "delay": 0.18,
+      "pages": [
+        {
+          "transient_texture": 5011
+        }
+      ],
+      "stock_check": "correct",
+      "stock_from": 20,
+      "stock_to": 20
+    },
+    {
+      "stage": 1989,
+      "next": 2001,
+      "interact": 1,
+      "delay": 0.18,
+      "pages": [
+        {
+          "transient_texture": 5012
+        },
+        {
+          "transient_texture": 5013
+        },
+        {
+          "transient_texture": 5014
+        },
+        {
+          "transient_texture": 5015
+        },
+        {
+          "transient_texture": 5016
+        },
+        {
+          "transient_texture": 5017
+        },
+        {
+          "transient_texture": 5018
+        },
+        {
+          "transient_texture": 5019
+        },
+        {
+          "transient_texture": 5020
+        },
+        {
+          "transient_texture": 5021
+        },
+        {
+          "transient_texture": 5022
+        },
+        {
+          "transient_texture": 4901
+        },
+        {
+          "transient_texture": 5023
+        },
+        {
+          "transient_texture": 4822
+        },
+        {
+          "transient_texture": 4747
+        },
+        {
+          "transient_texture": 5024
+        }
+      ],
+      "pos": [
+        -11.6,
+        2.64,
+        0.38
+      ],
+      "radius": 1.52
+    },
+    {
+      "stage": 2001,
+      "next": 2002,
+      "interact": 1,
+      "delay": 0.18,
+      "pages": [
+        {
+          "transient_texture": 4747
+        },
+        {
+          "transient_texture": 5025
+        },
+        {
+          "transient_texture": 5026
+        }
+      ],
+      "pos": [
+        -11.6,
+        2.64,
+        0.38
+      ],
+      "radius": 1.52,
+      "stock_check": "placed",
+      "stock_from": 0,
+      "stock_to": 19,
+      "display_frames": [
+        4746
+      ],
+      "display_tools": true
+    },
+    {
+      "stage": 2002,
+      "next": 2013,
+      "interact": 0,
+      "delay": 0.18,
+      "pages": [],
+      "choice_texture": 5027,
+      "choices": [
+        {
+          "next": 2013
+        },
+        {
+          "next": 2003
+        }
+      ],
+      "display_frames": [
+        4746
+      ],
+      "display_tools": true
+    },
+    {
+      "stage": 2003,
+      "next": 2002,
+      "interact": 1,
+      "delay": 0.18,
+      "pages": [],
+      "pos": [
+        -11.6,
+        2.64,
+        0.38
+      ],
+      "radius": 1.52,
+      "stock_check": "placed",
+      "stock_from": 0,
+      "stock_to": 19
+    },
+    {
+      "stage": 2013,
+      "next": 2025,
+      "interact": 1,
+      "delay": 0.18,
+      "pages": [
+        {
+          "transient_texture": 5034
+        },
+        {
+          "transient_texture": 4874
+        },
+        {
+          "transient_texture": 5035
+        },
+        {
+          "transient_texture": 4822
+        }
+      ],
+      "pos": [
+        -11.6,
+        2.64,
+        0.38
+      ],
+      "radius": 1.52,
+      "variants": [
+        {
+          "stock_errors_min": 3,
+          "pages": [
+            {
+              "transient_texture": 5028
+            },
+            {
+              "transient_texture": 4822
+            },
+            {
+              "transient_texture": 5029
+            },
+            {
+              "transient_texture": 5030
+            }
+          ]
+        },
+        {
+          "stock_errors_min": 1,
+          "stock_errors_max": 2,
+          "pages": [
+            {
+              "transient_texture": 5031
+            },
+            {
+              "transient_texture": 4923
+            },
+            {
+              "transient_texture": 5032
+            },
+            {
+              "transient_texture": 5033
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "stage": 2025,
+      "next": 2037,
+      "interact": 1,
+      "delay": 0.18,
+      "pages": [
+        {
+          "transient_texture": 5036
+        },
+        {
+          "transient_texture": 4779
+        },
+        {
+          "transient_texture": 5037
+        },
+        {
+          "transient_texture": 5038
+        },
+        {
+          "transient_texture": 5039
+        },
+        {
+          "transient_texture": 4901
+        },
+        {
+          "transient_texture": 5040
+        },
+        {
+          "transient_texture": 4779
+        },
+        {
+          "transient_texture": 5041
+        }
+      ],
+      "pos": [
+        -8.1,
+        2.64,
+        -7.98
+      ],
+      "radius": 1.52,
+      "set_flags": 8192
+    }
+  ],
+  "search_inspections": [],
+  "portals": [
+    {
+      "target": "tiendaDarsExterior",
+      "pos": [
+        0,
+        2.64,
+        -13.72
+      ],
+      "radius": 1.16,
+      "min_stage": 1617,
+      "max_stage": 1617
+    },
+    {
+      "target": "tiendaDarsExterior",
+      "pos": [
+        0,
+        2.64,
+        -13.72
+      ],
+      "radius": 1.16,
+      "min_stage": 1618,
+      "max_stage": 1618
+    },
+    {
+      "target": "tiendaDarsExterior",
+      "pos": [
+        0,
+        2.64,
+        -13.72
+      ],
+      "radius": 1.16,
+      "min_stage": 1629,
+      "max_stage": 1629
+    },
+    {
+      "target": "tiendaDarsExterior",
+      "pos": [
+        0,
+        2.64,
+        -13.72
+      ],
+      "radius": 1.16,
+      "min_stage": 1641,
+      "max_stage": 1641
+    },
+    {
+      "target": "tiendaDarsExterior",
+      "pos": [
+        0,
+        2.64,
+        -13.72
+      ],
+      "radius": 1.16,
+      "min_stage": 1642,
+      "max_stage": 1642
+    },
+    {
+      "target": "tiendaDarsExterior",
+      "pos": [
+        0,
+        2.64,
+        -13.72
+      ],
+      "radius": 1.16,
+      "min_stage": 1653,
+      "max_stage": 1653
+    },
+    {
+      "target": "tiendaDarsExterior",
+      "pos": [
+        0,
+        2.64,
+        -13.72
+      ],
+      "radius": 1.16,
+      "min_stage": 1654,
+      "max_stage": 1654
+    },
+    {
+      "target": "tiendaDarsExterior",
+      "pos": [
+        0,
+        2.64,
+        -13.72
+      ],
+      "radius": 1.16,
+      "min_stage": 1655,
+      "max_stage": 1655
+    },
+    {
+      "target": "tiendaDarsExterior",
+      "pos": [
+        0,
+        2.64,
+        -13.72
+      ],
+      "radius": 1.16,
+      "min_stage": 1665,
+      "max_stage": 1665
+    },
+    {
+      "target": "tiendaDarsExterior",
+      "pos": [
+        0,
+        2.64,
+        -13.72
+      ],
+      "radius": 1.16,
+      "min_stage": 1666,
+      "max_stage": 1666
+    },
+    {
+      "target": "tiendaDarsExterior",
+      "pos": [
+        0,
+        2.64,
+        -13.72
+      ],
+      "radius": 1.16,
+      "min_stage": 1667,
+      "max_stage": 1667
+    },
+    {
+      "target": "tiendaDarsExterior",
+      "pos": [
+        0,
+        2.64,
+        -13.72
+      ],
+      "radius": 1.16,
+      "min_stage": 1677,
+      "max_stage": 1677
+    },
+    {
+      "target": "tiendaDarsExterior",
+      "pos": [
+        0,
+        2.64,
+        -13.72
+      ],
+      "radius": 1.16,
+      "min_stage": 1689,
+      "max_stage": 1689
+    },
+    {
+      "target": "tiendaDarsExterior",
+      "pos": [
+        0,
+        2.64,
+        -13.72
+      ],
+      "radius": 1.16,
+      "min_stage": 1690,
+      "max_stage": 1690
+    },
+    {
+      "target": "tiendaDarsExterior",
+      "pos": [
+        0,
+        2.64,
+        -13.72
+      ],
+      "radius": 1.16,
+      "min_stage": 1701,
+      "max_stage": 1701
+    },
+    {
+      "target": "tiendaDarsExterior",
+      "pos": [
+        0,
+        2.64,
+        -13.72
+      ],
+      "radius": 1.16,
+      "min_stage": 1702,
+      "max_stage": 1702
+    },
+    {
+      "target": "tiendaDarsExterior",
+      "pos": [
+        0,
+        2.64,
+        -13.72
+      ],
+      "radius": 1.16,
+      "min_stage": 1703,
+      "max_stage": 1703
+    },
+    {
+      "target": "tiendaDarsExterior",
+      "pos": [
+        0,
+        2.64,
+        -13.72
+      ],
+      "radius": 1.16,
+      "min_stage": 1713,
+      "max_stage": 1713
+    },
+    {
+      "target": "tiendaDarsExterior",
+      "pos": [
+        0,
+        2.64,
+        -13.72
+      ],
+      "radius": 1.16,
+      "min_stage": 1725,
+      "max_stage": 1725
+    },
+    {
+      "target": "tiendaDarsExterior",
+      "pos": [
+        0,
+        2.64,
+        -13.72
+      ],
+      "radius": 1.16,
+      "min_stage": 1726,
+      "max_stage": 1726
+    },
+    {
+      "target": "tiendaDarsExterior",
+      "pos": [
+        0,
+        2.64,
+        -13.72
+      ],
+      "radius": 1.16,
+      "min_stage": 1727,
+      "max_stage": 1727
+    },
+    {
+      "target": "tiendaDarsExterior",
+      "pos": [
+        0,
+        2.64,
+        -13.72
+      ],
+      "radius": 1.16,
+      "min_stage": 1728,
+      "max_stage": 1728
+    },
+    {
+      "target": "tiendaDarsExterior",
+      "pos": [
+        0,
+        2.64,
+        -13.72
+      ],
+      "radius": 1.16,
+      "min_stage": 1737,
+      "max_stage": 1737
+    },
+    {
+      "target": "tiendaDarsExterior",
+      "pos": [
+        0,
+        2.64,
+        -13.72
+      ],
+      "radius": 1.16,
+      "min_stage": 1749,
+      "max_stage": 1749
+    },
+    {
+      "target": "tiendaDarsExterior",
+      "pos": [
+        0,
+        2.64,
+        -13.72
+      ],
+      "radius": 1.16,
+      "min_stage": 1761,
+      "max_stage": 1761
+    },
+    {
+      "target": "tiendaDarsExterior",
+      "pos": [
+        0,
+        2.64,
+        -13.72
+      ],
+      "radius": 1.16,
+      "min_stage": 1773,
+      "max_stage": 1773
+    },
+    {
+      "target": "tiendaDarsExterior",
+      "pos": [
+        0,
+        2.64,
+        -13.72
+      ],
+      "radius": 1.16,
+      "min_stage": 1785,
+      "max_stage": 1785
+    },
+    {
+      "target": "tiendaDarsExterior",
+      "pos": [
+        0,
+        2.64,
+        -13.72
+      ],
+      "radius": 1.16,
+      "min_stage": 1797,
+      "max_stage": 1797
+    },
+    {
+      "target": "tiendaDarsExterior",
+      "pos": [
+        0,
+        2.64,
+        -13.72
+      ],
+      "radius": 1.16,
+      "min_stage": 1798,
+      "max_stage": 1798
+    },
+    {
+      "target": "tiendaDarsExterior",
+      "pos": [
+        0,
+        2.64,
+        -13.72
+      ],
+      "radius": 1.16,
+      "min_stage": 1809,
+      "max_stage": 1809
+    },
+    {
+      "target": "descansoTienda",
+      "pos": [
+        -16.65,
+        2.64,
+        3.9
+      ],
+      "radius": 1.18,
+      "min_stage": 1941,
+      "max_stage": 1941
+    },
+    {
+      "target": "descansoTienda",
+      "pos": [
+        -16.65,
+        2.64,
+        3.9
+      ],
+      "radius": 1.18,
+      "min_stage": 1953,
+      "max_stage": 1953
+    },
+    {
+      "target": "tiendaDarsExterior",
+      "pos": [
+        0,
+        2.64,
+        -13.72
+      ],
+      "radius": 1.16,
+      "min_stage": 2037,
+      "max_stage": 2037
+    },
+    {
+      "target": "tiendaDarsExterior",
+      "pos": [
+        0,
+        2.64,
+        -13.72
+      ],
+      "radius": 1.16,
+      "min_stage": 2038,
+      "max_stage": 2038
+    },
+    {
+      "target": "tiendaDarsExterior",
+      "pos": [
+        0,
+        2.64,
+        -13.72
+      ],
+      "radius": 1.16,
+      "min_stage": 2039,
+      "max_stage": 2039
+    },
+    {
+      "target": "tiendaDarsExterior",
+      "pos": [
+        0,
+        2.64,
+        -13.72
+      ],
+      "radius": 1.16,
+      "min_stage": 2040,
+      "max_stage": 2040
+    },
+    {
+      "target": "tiendaDarsExterior",
+      "pos": [
+        0,
+        2.64,
+        -13.72
+      ],
+      "radius": 1.16,
+      "min_stage": 2049,
+      "max_stage": 2049
+    },
+    {
+      "target": "tiendaDarsExterior",
+      "pos": [
+        0,
+        2.64,
+        -13.72
+      ],
+      "radius": 1.16,
+      "min_stage": 2050,
+      "max_stage": 2050
+    },
+    {
+      "target": "tiendaDarsExterior",
+      "pos": [
+        0,
+        2.64,
+        -13.72
+      ],
+      "radius": 1.16,
+      "min_stage": 2061,
+      "max_stage": 2061
+    },
+    {
+      "target": "tiendaDarsExterior",
+      "pos": [
+        0,
+        2.64,
+        -13.72
+      ],
+      "radius": 1.16,
+      "min_stage": 2073,
+      "max_stage": 2073
+    },
+    {
+      "target": "tiendaDarsExterior",
+      "pos": [
+        0,
+        2.64,
+        -13.72
+      ],
+      "radius": 1.16,
+      "min_stage": 2085,
+      "max_stage": 2085
+    },
+    {
+      "target": "tiendaDarsExterior",
+      "pos": [
+        0,
+        2.64,
+        -13.72
+      ],
+      "radius": 1.16,
+      "min_stage": 2086,
+      "max_stage": 2086
+    },
+    {
+      "target": "tiendaDarsExterior",
+      "pos": [
+        0,
+        2.64,
+        -13.72
+      ],
+      "radius": 1.16,
+      "min_stage": 2541,
+      "max_stage": 2541
+    },
+    {
+      "target": "tiendaDarsExterior",
+      "pos": [
+        0,
+        2.64,
+        -13.72
+      ],
+      "radius": 1.16,
+      "min_stage": 2542,
+      "max_stage": 2542
+    },
+    {
+      "target": "tiendaDarsExterior",
+      "pos": [
+        0,
+        2.64,
+        -13.72
+      ],
+      "radius": 1.16,
+      "min_stage": 2553,
+      "max_stage": 2553
+    },
+    {
+      "target": "tiendaDarsExterior",
+      "pos": [
+        0,
+        2.64,
+        -13.72
+      ],
+      "radius": 1.16,
+      "min_stage": 2565,
+      "max_stage": 2565
+    },
+    {
+      "target": "tiendaDarsExterior",
+      "pos": [
+        0,
+        2.64,
+        -13.72
+      ],
+      "radius": 1.16,
+      "min_stage": 2566,
+      "max_stage": 2566
+    }
+  ],
+  "arrival": {
+    "tiendaDarsExterior": [
+      0,
+      2.64,
+      -12.35
+    ],
+    "descansoTienda": [
+      -15.25,
+      2.64,
+      3.9
+    ]
+  },
+  "footstep_surface": "baldosa",
+  "stock": {
+    "cart": 51,
+    "items": [
+      {
+        "name": "Cuaderno profesional",
+        "sku": "A-014",
+        "shelf": 0,
+        "tier": 1,
+        "grams": 750,
+        "quantity": 6,
+        "node": 52,
+        "stage": 1845,
+        "condition": "Intacto",
+        "fragile": false
+      },
+      {
+        "name": "Lápices",
+        "sku": "A-032",
+        "shelf": 0,
+        "tier": 1,
+        "grams": 310,
+        "quantity": 8,
+        "node": 53,
+        "stage": 1845,
+        "condition": "Intacto",
+        "fragile": false
+      },
+      {
+        "name": "Carpetas",
+        "sku": "A-047",
+        "shelf": 0,
+        "tier": 1,
+        "grams": 1030,
+        "quantity": 4,
+        "node": 54,
+        "stage": 1845,
+        "condition": "Intacto",
+        "fragile": false
+      },
+      {
+        "name": "Recipientes",
+        "sku": "B-110",
+        "shelf": 1,
+        "tier": 1,
+        "grams": 970,
+        "quantity": 5,
+        "node": 55,
+        "stage": 1845,
+        "condition": "Intacto",
+        "fragile": false
+      },
+      {
+        "name": "Servilletas",
+        "sku": "B-121",
+        "shelf": 2,
+        "tier": 1,
+        "grams": 850,
+        "quantity": 16,
+        "node": 56,
+        "stage": 1845,
+        "condition": "Intacto",
+        "fragile": false
+      },
+      {
+        "name": "Utensilios",
+        "sku": "B-132",
+        "shelf": 1,
+        "tier": 1,
+        "grams": 1180,
+        "quantity": 5,
+        "node": 57,
+        "stage": 1845,
+        "condition": "Intacto",
+        "fragile": false
+      },
+      {
+        "name": "Jabón",
+        "sku": "C-201",
+        "shelf": 3,
+        "tier": 1,
+        "grams": 1160,
+        "quantity": 4,
+        "node": 58,
+        "stage": 1845,
+        "condition": "Intacto",
+        "fragile": false
+      },
+      {
+        "name": "Esponjas",
+        "sku": "C-229",
+        "shelf": 3,
+        "tier": 1,
+        "grams": 230,
+        "quantity": 8,
+        "node": 59,
+        "stage": 1845,
+        "condition": "Intacto",
+        "fragile": false
+      },
+      {
+        "name": "Focos",
+        "sku": "D-315",
+        "shelf": 4,
+        "tier": 1,
+        "grams": 520,
+        "quantity": 4,
+        "node": 60,
+        "stage": 1845,
+        "condition": "Intacto",
+        "fragile": false
+      },
+      {
+        "name": "Extensiones",
+        "sku": "D-340",
+        "shelf": 4,
+        "tier": 1,
+        "grams": 1310,
+        "quantity": 3,
+        "node": 61,
+        "stage": 1845,
+        "condition": "Intacto",
+        "fragile": false
+      },
+      {
+        "name": "Vasos de vidrio",
+        "sku": "E-452",
+        "shelf": 5,
+        "tier": 0,
+        "grams": 1430,
+        "quantity": 6,
+        "node": 62,
+        "stage": 1845,
+        "condition": "Intacto",
+        "fragile": true
+      },
+      {
+        "name": "Tazas de cerámica",
+        "sku": "E-464",
+        "shelf": 5,
+        "tier": 0,
+        "grams": 1750,
+        "quantity": 3,
+        "node": 63,
+        "stage": 1845,
+        "condition": "Intacto",
+        "fragile": true
+      },
+      {
+        "name": "Detergente mal rotulado",
+        "sku": "C-248",
+        "shelf": 7,
+        "tier": 0,
+        "grams": 1540,
+        "quantity": 1,
+        "node": 64,
+        "stage": 1893,
+        "condition": "Separado por etiqueta",
+        "printed": "Recipiente plástico",
+        "printed_sku": "B-110",
+        "must_inspect": true
+      },
+      {
+        "name": "Jarrón",
+        "sku": "E-476",
+        "shelf": 6,
+        "tier": 0,
+        "grams": 1140,
+        "quantity": 1,
+        "node": 65,
+        "stage": 1905,
+        "condition": "Grieta en la base",
+        "must_inspect": true,
+        "fragile": true
+      },
+      {
+        "name": "Lámpara",
+        "sku": "D-367",
+        "shelf": 4,
+        "tier": 1,
+        "grams": 1290,
+        "quantity": 1,
+        "node": 66,
+        "stage": 1905,
+        "condition": "Lámpara intacta",
+        "must_inspect": true
+      },
+      {
+        "name": "Pieza sin etiqueta",
+        "sku": "R-403",
+        "shelf": 6,
+        "tier": 0,
+        "grams": 720,
+        "quantity": 1,
+        "node": 67,
+        "stage": 1905,
+        "condition": "Pieza rota",
+        "must_inspect": true
+      },
+      {
+        "name": "Servilletas encontradas",
+        "sku": "B-121",
+        "shelf": 2,
+        "tier": 1,
+        "grams": 180,
+        "quantity": 2,
+        "node": 68,
+        "stage": 1931,
+        "condition": "Intacto"
+      },
+      {
+        "name": "Caja de vajilla",
+        "sku": "H-510",
+        "shelf": 8,
+        "tier": 0,
+        "grams": 5200,
+        "quantity": 1,
+        "node": 69,
+        "stage": 1965,
+        "condition": "Intacto",
+        "fragile": true
+      },
+      {
+        "name": "Suministros de hogar",
+        "sku": "H-511",
+        "shelf": 8,
+        "tier": 0,
+        "grams": 6350,
+        "quantity": 1,
+        "node": 70,
+        "stage": 1965,
+        "condition": "Intacto",
+        "fragile": false
+      },
+      {
+        "name": "Caja de herramientas",
+        "sku": "H-512",
+        "shelf": 8,
+        "tier": 0,
+        "grams": 7500,
+        "quantity": 1,
+        "node": 71,
+        "stage": 1965,
+        "condition": "Intacto",
+        "fragile": false
+      },
+      {
+        "name": "Focos del estante de cocina",
+        "sku": "D-319",
+        "shelf": 4,
+        "tier": 1,
+        "grams": 420,
+        "quantity": 2,
+        "node": 73,
+        "stage": 1979,
+        "condition": "Intacto",
+        "optional": true
+      }
+    ],
+    "shelves": [
+      {
+        "code": "A2",
+        "category": "Papelería",
+        "pos": [
+          -13.65,
+          2.64,
+          7.460000000000001
+        ],
+        "display": [
+          -13.65,
+          0.49,
+          8.96
+        ],
+        "medium_limit": 6600,
+        "low_limit": 28000
+      },
+      {
+        "code": "B1",
+        "category": "Cocina",
+        "pos": [
+          -9.8,
+          2.64,
+          7.460000000000001
+        ],
+        "display": [
+          -9.8,
+          0.49,
+          8.96
+        ],
+        "medium_limit": 6600,
+        "low_limit": 28000
+      },
+      {
+        "code": "B2",
+        "category": "Cocina",
+        "pos": [
+          -5.95,
+          2.64,
+          7.460000000000001
+        ],
+        "display": [
+          -5.95,
+          0.49,
+          8.96
+        ],
+        "medium_limit": 6600,
+        "low_limit": 28000
+      },
+      {
+        "code": "C1",
+        "category": "Limpieza",
+        "pos": [
+          -2.1,
+          2.64,
+          7.460000000000001
+        ],
+        "display": [
+          -2.1,
+          0.49,
+          8.96
+        ],
+        "medium_limit": 6600,
+        "low_limit": 28000
+      },
+      {
+        "code": "D1",
+        "category": "Eléctricos",
+        "pos": [
+          1.75,
+          2.64,
+          7.460000000000001
+        ],
+        "display": [
+          1.75,
+          0.49,
+          8.96
+        ],
+        "medium_limit": 6600,
+        "low_limit": 28000
+      },
+      {
+        "code": "E1",
+        "category": "Frágiles",
+        "pos": [
+          5.6,
+          2.64,
+          7.460000000000001
+        ],
+        "display": [
+          5.6,
+          0.49,
+          8.96
+        ],
+        "medium_limit": 6600,
+        "low_limit": 28000
+      },
+      {
+        "code": "R1",
+        "category": "Devoluciones",
+        "pos": [
+          9.45,
+          2.64,
+          7.460000000000001
+        ],
+        "display": [
+          9.45,
+          0.49,
+          8.96
+        ],
+        "medium_limit": 6600,
+        "low_limit": 28000
+      },
+      {
+        "code": "R2",
+        "category": "Incidencias",
+        "pos": [
+          13.3,
+          2.64,
+          7.460000000000001
+        ],
+        "display": [
+          13.3,
+          0.49,
+          8.96
+        ],
+        "medium_limit": 6600,
+        "low_limit": 28000
+      },
+      {
+        "code": "H1",
+        "category": "Hogar pesado",
+        "pos": [
+          13.3,
+          2.64,
+          1.2600000000000002
+        ],
+        "display": [
+          13.3,
+          0.49,
+          2.7600000000000002
+        ],
+        "medium_limit": 6600,
+        "low_limit": 28000
+      }
+    ]
+  },
+  "route_objectives": {
+    "1617": 5284,
+    "1618": 5284,
+    "1629": 5290,
+    "1641": 5296,
+    "1642": 5296,
+    "1653": 5302,
+    "1654": 5302,
+    "1655": 5302,
+    "1665": 5309,
+    "1666": 5309,
+    "1667": 5309,
+    "1677": 5316,
+    "1689": 5321,
+    "1690": 5321,
+    "1701": 5327,
+    "1702": 5327,
+    "1703": 5327,
+    "1713": 5335,
+    "1725": 5341,
+    "1726": 5341,
+    "1727": 5341,
+    "1728": 5341,
+    "1737": 5350,
+    "1749": 5356,
+    "1761": 5362,
+    "1773": 5368,
+    "1785": 5373,
+    "1797": 5378,
+    "1798": 5378,
+    "1809": 5384,
+    "1941": 5453,
+    "1953": 5459,
+    "2037": 5498,
+    "2038": 5498,
+    "2039": 5498,
+    "2040": 5498,
+    "2049": 5506,
+    "2050": 5506,
+    "2061": 5512,
+    "2073": 5517,
+    "2085": 5522,
+    "2086": 5522,
+    "2541": 5577,
+    "2542": 5577,
+    "2553": 5583,
+    "2565": 5588,
+    "2566": 5588
+  },
+  "index": 74,
+  "campaign_audio_node": 74
+}
