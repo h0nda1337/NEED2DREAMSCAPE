@@ -16,3 +16,8 @@ Las grabaciones y pistas de la tabla se distribuyen bajo [CC0 1.0](https://creat
 | `reloj_tic_1.wav` y `reloj_tic_2.wav` | Tic del reloj del dormitorio | [bart, Ticking clock](https://opengameart.org/content/ticking-clock) | Recorte de dos tics individuales, filtro y ajuste de nivel |
 
 El aire acondicionado, la televisión, el goteo, el refrigerador, el ruido lejano del patio y los golpes de metal, vidrio y puerta se sintetizaron para NEED2DREAMSCAPE.
+
+
+## Capítulo 3
+
+Los efectos con prefijo `c3_` se sintetizaron para este proyecto mediante código. Incluyen golpes de puerta, pestillos, cinta métrica, alarma, metal y el ambiente de vehículos de la secuencia final. No utilizan grabaciones de Petscop ni del APK original. El sonido de escritura y los pasos conservan sus fuentes y licencias indicadas arriba.

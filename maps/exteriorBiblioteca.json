@@ -1,0 +1,5022 @@
+{
+  "name": "exteriorBiblioteca",
+  "nodes": [
+    {
+      "name": "Camera",
+      "active": true,
+      "layer": 0,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        0,
+        13.64,
+        -20.6
+      ],
+      "rot": [
+        0.31730465640509214,
+        0,
+        0,
+        0.9483236552061993
+      ],
+      "scale": [
+        0.43535417318344116,
+        2.2742371559143066,
+        0.6497822999954224
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "rect": {
+        "min": [
+          0.5,
+          0.5
+        ],
+        "max": [
+          0.5,
+          0.5
+        ],
+        "position": [
+          -49.97999954223633,
+          9.399999618530273
+        ],
+        "size": [
+          100.0,
+          100.0
+        ],
+        "pivot": [
+          0.5,
+          0.5
+        ]
+      },
+      "camera": {
+        "fov": 46,
+        "near": 0.30000001192092896,
+        "far": 1000.0,
+        "ortho": false,
+        "size": 5.0,
+        "background": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "viewport": {
+          "x": 0.0,
+          "y": 0.0,
+          "width": 1.0,
+          "height": 1.0
+        }
+      },
+      "order": 0
+    },
+    {
+      "name": "down_idle",
+      "active": true,
+      "layer": 0,
+      "parent": -1,
+      "children": [
+        8
+      ],
+      "pos": [
+        0,
+        2.64,
+        -8.7
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "scripts": [
+        {
+          "class": "Movement",
+          "fields": {
+            "m_Enabled": 1,
+            "_move1": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "_move2": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "_move3": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "_move4": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "newmaker": {
+              "node": -1,
+              "type": "",
+              "sprite": -1,
+              "audio": -1,
+              "video": -1
+            },
+            "calendar1997Main": {
+              "node": -1,
+              "type": "",
+              "sprite": -1,
+              "audio": -1,
+              "video": -1
+            },
+            "calendar1997Arrow": {
+              "node": -1,
+              "type": "",
+              "sprite": -1,
+              "audio": -1,
+              "video": -1
+            }
+          }
+        },
+        {
+          "class": "Save",
+          "fields": {
+            "m_Enabled": 1
+          }
+        }
+      ],
+      "colliders": [
+        {
+          "type": "BoxCollider",
+          "center": [
+            0,
+            -4.4,
+            0
+          ],
+          "size": [
+            3.4,
+            8.8,
+            2.4
+          ],
+          "enabled": true,
+          "trigger": false
+        }
+      ],
+      "sounds": [],
+      "sprite": {
+        "enabled": true,
+        "sprite": 135,
+        "color": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "flipx": false,
+        "flipy": false
+      },
+      "animator": {
+        "controller": 4,
+        "enabled": 1,
+        "paths": [
+          [
+            0,
+            1
+          ]
+        ]
+      },
+      "order": 1
+    },
+    {
+      "name": "Canvas",
+      "active": true,
+      "layer": 5,
+      "parent": -1,
+      "children": [
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "pos": [
+        321.5,
+        386.5,
+        0.0
+      ],
+      "rot": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "scripts": [
+        {
+          "class": "CanvasScaler",
+          "fields": {
+            "m_Enabled": 1,
+            "m_UiScaleMode": 1,
+            "m_ReferencePixelsPerUnit": 100.0,
+            "m_ScaleFactor": 1.0,
+            "m_ReferenceResolution": {
+              "x": 1920.0,
+              "y": 960.0
+            },
+            "m_ScreenMatchMode": 0,
+            "m_MatchWidthOrHeight": 0.0,
+            "m_PhysicalUnit": 3,
+            "m_FallbackScreenDPI": 96.0,
+            "m_DefaultSpriteDPI": 96.0,
+            "m_DynamicPixelsPerUnit": 1.0
+          }
+        },
+        {
+          "class": "GraphicRaycaster",
+          "fields": {
+            "m_Enabled": 1,
+            "m_IgnoreReversedGraphics": 1,
+            "m_BlockingObjects": 0,
+            "m_BlockingMask": {
+              "m_Bits": 4294967295
+            }
+          }
+        }
+      ],
+      "colliders": [],
+      "sounds": [],
+      "rect": {
+        "min": [
+          0.0,
+          0.0
+        ],
+        "max": [
+          0.0,
+          0.0
+        ],
+        "position": [
+          321.5,
+          386.5
+        ],
+        "size": [
+          643.0,
+          773.0
+        ],
+        "pivot": [
+          0.5,
+          0.5
+        ]
+      },
+      "canvas": {
+        "mode": 0,
+        "order": 0
+      },
+      "order": 2
+    },
+    {
+      "name": "ButtonInteract",
+      "active": true,
+      "layer": 5,
+      "parent": 2,
+      "children": [],
+      "pos": [
+        697.599853515625,
+        -220.8999786376953,
+        0.0
+      ],
+      "rot": [
+        -0.0,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "scale": [
+        0.8424676656723022,
+        4.54666805267334,
+        1.3372455835342407
+      ],
+      "scripts": [
+        {
+          "class": "Image",
+          "fields": {
+            "m_Enabled": 1,
+            "m_Material": {
+              "node": -1,
+              "type": "",
+              "sprite": -1,
+              "audio": -1,
+              "video": -1
+            },
+            "m_Color": {
+              "r": 0.7630919814109802,
+              "g": 0.7630919814109802,
+              "b": 0.8459999561309814,
+              "a": 1.0
+            },
+            "m_RaycastTarget": 1,
+            "m_OnCullStateChanged": {
+              "m_PersistentCalls": {
+                "m_Calls": []
+              },
+              "m_TypeName": "UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+            },
+            "m_Sprite": {
+              "node": -1,
+              "type": "Sprite",
+              "sprite": 22,
+              "audio": -1,
+              "video": -1
+            },
+            "m_Type": 0,
+            "m_PreserveAspect": 0,
+            "m_FillCenter": 1,
+            "m_FillMethod": 4,
+            "m_FillAmount": 1.0,
+            "m_FillClockwise": 1,
+            "m_FillOrigin": 0,
+            "m_UseSpriteMesh": 0
+          }
+        },
+        {
+          "class": "Button",
+          "fields": {
+            "m_Enabled": 1,
+            "m_Navigation": {
+              "m_Mode": 3,
+              "m_SelectOnUp": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              },
+              "m_SelectOnDown": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              },
+              "m_SelectOnLeft": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              },
+              "m_SelectOnRight": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              }
+            },
+            "m_Transition": 1,
+            "m_Colors": {
+              "m_NormalColor": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+              },
+              "m_HighlightedColor": {
+                "r": 0.9607843160629272,
+                "g": 0.9607843160629272,
+                "b": 0.9607843160629272,
+                "a": 1.0
+              },
+              "m_PressedColor": {
+                "r": 0.7843137383460999,
+                "g": 0.7843137383460999,
+                "b": 0.7843137383460999,
+                "a": 1.0
+              },
+              "m_DisabledColor": {
+                "r": 0.7843137383460999,
+                "g": 0.7843137383460999,
+                "b": 0.7843137383460999,
+                "a": 0.501960813999176
+              },
+              "m_ColorMultiplier": 1.0,
+              "m_FadeDuration": 0.10000000149011612
+            },
+            "m_SpriteState": {
+              "m_HighlightedSprite": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              },
+              "m_PressedSprite": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              },
+              "m_DisabledSprite": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              }
+            },
+            "m_AnimationTriggers": {
+              "m_NormalTrigger": "Normal",
+              "m_HighlightedTrigger": "Highlighted",
+              "m_PressedTrigger": "Pressed",
+              "m_DisabledTrigger": "Disabled"
+            },
+            "m_Interactable": 1,
+            "m_TargetGraphic": {
+              "node": 3,
+              "type": "Image",
+              "sprite": -1,
+              "audio": -1,
+              "video": -1
+            },
+            "m_OnClick": {
+              "m_PersistentCalls": {
+                "m_Calls": [
+                  {
+                    "m_Target": {
+                      "node": 3,
+                      "type": "Interacter",
+                      "sprite": -1,
+                      "audio": -1,
+                      "video": -1
+                    },
+                    "m_MethodName": "Click",
+                    "m_Mode": 1,
+                    "m_Arguments": {
+                      "m_ObjectArgument": {
+                        "node": -1,
+                        "type": "",
+                        "sprite": -1,
+                        "audio": -1,
+                        "video": -1
+                      },
+                      "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                      "m_IntArgument": 0,
+                      "m_FloatArgument": 0.0,
+                      "m_StringArgument": "",
+                      "m_BoolArgument": 0
+                    },
+                    "m_CallState": 2
+                  }
+                ]
+              },
+              "m_TypeName": "UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+            }
+          }
+        },
+        {
+          "class": "Interacter",
+          "fields": {
+            "m_Enabled": 1,
+            "newmaker": {
+              "node": -1,
+              "type": "",
+              "sprite": -1,
+              "audio": -1,
+              "video": -1
+            },
+            "sign": {
+              "node": -1,
+              "type": "",
+              "sprite": -1,
+              "audio": -1,
+              "video": -1
+            },
+            "keyinteracter": {
+              "node": -1,
+              "type": "",
+              "sprite": -1,
+              "audio": -1,
+              "video": -1
+            },
+            "usekey": {
+              "node": -1,
+              "type": "",
+              "sprite": -1,
+              "audio": -1,
+              "video": -1
+            },
+            "door": {
+              "node": -1,
+              "type": "",
+              "sprite": -1,
+              "audio": -1,
+              "video": -1
+            },
+            "calendar1997Main": {
+              "node": -1,
+              "type": "",
+              "sprite": -1,
+              "audio": -1,
+              "video": -1
+            },
+            "calendar1997": {
+              "node": -1,
+              "type": "",
+              "sprite": -1,
+              "audio": -1,
+              "video": -1
+            },
+            "calendar2000Main": {
+              "node": -1,
+              "type": "",
+              "sprite": -1,
+              "audio": -1,
+              "video": -1
+            },
+            "calendar2000": {
+              "node": -1,
+              "type": "",
+              "sprite": -1,
+              "audio": -1,
+              "video": -1
+            },
+            "noteTrigger": {
+              "node": -1,
+              "type": "",
+              "sprite": -1,
+              "audio": -1,
+              "video": -1
+            },
+            "ladder": {
+              "node": -1,
+              "type": "",
+              "sprite": -1,
+              "audio": -1,
+              "video": -1
+            },
+            "dialogFrozenHouse": {
+              "node": -1,
+              "type": "",
+              "sprite": -1,
+              "audio": -1,
+              "video": -1
+            },
+            "dialogKey": {
+              "node": -1,
+              "type": "",
+              "sprite": -1,
+              "audio": -1,
+              "video": -1
+            },
+            "note": {
+              "node": -1,
+              "type": "",
+              "sprite": -1,
+              "audio": -1,
+              "video": -1
+            },
+            "arrowDoor": {
+              "node": -1,
+              "type": "",
+              "sprite": -1,
+              "audio": -1,
+              "video": -1
+            }
+          }
+        }
+      ],
+      "colliders": [],
+      "sounds": [],
+      "rect": {
+        "min": [
+          0.5,
+          0.5
+        ],
+        "max": [
+          0.5,
+          0.5
+        ],
+        "position": [
+          697.599853515625,
+          -220.8999786376953
+        ],
+        "size": [
+          160.0,
+          30.0
+        ],
+        "pivot": [
+          0.5,
+          0.5
+        ]
+      },
+      "image": {
+        "sprite": 22,
+        "color": [
+          0.7630919814109802,
+          0.7630919814109802,
+          0.8459999561309814,
+          1.0
+        ],
+        "enabled": 1,
+        "raycast": 1
+      },
+      "order": 3
+    },
+    {
+      "name": "ButtonLeft",
+      "active": true,
+      "layer": 5,
+      "parent": 2,
+      "children": [],
+      "pos": [
+        558.4000244140625,
+        -220.3000030517578,
+        0.0
+      ],
+      "rot": [
+        -0.0,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "scale": [
+        0.7829084992408752,
+        4.190824508666992,
+        1.1540898084640503
+      ],
+      "scripts": [
+        {
+          "class": "Image",
+          "fields": {
+            "m_Enabled": 1,
+            "m_Material": {
+              "node": -1,
+              "type": "",
+              "sprite": -1,
+              "audio": -1,
+              "video": -1
+            },
+            "m_Color": {
+              "r": 0.7630919814109802,
+              "g": 0.7630919814109802,
+              "b": 0.8459999561309814,
+              "a": 1.0
+            },
+            "m_RaycastTarget": 1,
+            "m_OnCullStateChanged": {
+              "m_PersistentCalls": {
+                "m_Calls": []
+              },
+              "m_TypeName": "UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+            },
+            "m_Sprite": {
+              "node": -1,
+              "type": "Sprite",
+              "sprite": 17,
+              "audio": -1,
+              "video": -1
+            },
+            "m_Type": 0,
+            "m_PreserveAspect": 0,
+            "m_FillCenter": 1,
+            "m_FillMethod": 4,
+            "m_FillAmount": 1.0,
+            "m_FillClockwise": 1,
+            "m_FillOrigin": 0,
+            "m_UseSpriteMesh": 0
+          }
+        },
+        {
+          "class": "Button",
+          "fields": {
+            "m_Enabled": 1,
+            "m_Navigation": {
+              "m_Mode": 3,
+              "m_SelectOnUp": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              },
+              "m_SelectOnDown": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              },
+              "m_SelectOnLeft": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              },
+              "m_SelectOnRight": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              }
+            },
+            "m_Transition": 1,
+            "m_Colors": {
+              "m_NormalColor": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+              },
+              "m_HighlightedColor": {
+                "r": 0.9607843160629272,
+                "g": 0.9607843160629272,
+                "b": 0.9607843160629272,
+                "a": 1.0
+              },
+              "m_PressedColor": {
+                "r": 0.7843137383460999,
+                "g": 0.7843137383460999,
+                "b": 0.7843137383460999,
+                "a": 1.0
+              },
+              "m_DisabledColor": {
+                "r": 0.7843137383460999,
+                "g": 0.7843137383460999,
+                "b": 0.7843137383460999,
+                "a": 0.501960813999176
+              },
+              "m_ColorMultiplier": 1.0,
+              "m_FadeDuration": 0.10000000149011612
+            },
+            "m_SpriteState": {
+              "m_HighlightedSprite": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              },
+              "m_PressedSprite": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              },
+              "m_DisabledSprite": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              }
+            },
+            "m_AnimationTriggers": {
+              "m_NormalTrigger": "Normal",
+              "m_HighlightedTrigger": "Highlighted",
+              "m_PressedTrigger": "Pressed",
+              "m_DisabledTrigger": "Disabled"
+            },
+            "m_Interactable": 1,
+            "m_TargetGraphic": {
+              "node": 4,
+              "type": "Image",
+              "sprite": -1,
+              "audio": -1,
+              "video": -1
+            },
+            "m_OnClick": {
+              "m_PersistentCalls": {
+                "m_Calls": []
+              },
+              "m_TypeName": "UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+            }
+          }
+        },
+        {
+          "class": "EventTrigger",
+          "fields": {
+            "m_Enabled": 1,
+            "m_Delegates": [
+              {
+                "eventID": 2,
+                "callback": {
+                  "m_PersistentCalls": {
+                    "m_Calls": [
+                      {
+                        "m_Target": {
+                          "node": 4,
+                          "type": "HoldButtonEventHandlerLeft",
+                          "sprite": -1,
+                          "audio": -1,
+                          "video": -1
+                        },
+                        "m_MethodName": "SetPressed",
+                        "m_Mode": 6,
+                        "m_Arguments": {
+                          "m_ObjectArgument": {
+                            "node": -1,
+                            "type": "",
+                            "sprite": -1,
+                            "audio": -1,
+                            "video": -1
+                          },
+                          "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                          "m_IntArgument": 0,
+                          "m_FloatArgument": 0.0,
+                          "m_StringArgument": "down",
+                          "m_BoolArgument": 1
+                        },
+                        "m_CallState": 2
+                      },
+                      {
+                        "m_Target": {
+                          "node": 1,
+                          "type": "Animator",
+                          "sprite": -1,
+                          "audio": -1,
+                          "video": -1
+                        },
+                        "m_MethodName": "Play",
+                        "m_Mode": 5,
+                        "m_Arguments": {
+                          "m_ObjectArgument": {
+                            "node": -1,
+                            "type": "",
+                            "sprite": -1,
+                            "audio": -1,
+                            "video": -1
+                          },
+                          "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                          "m_IntArgument": 0,
+                          "m_FloatArgument": 0.0,
+                          "m_StringArgument": "left",
+                          "m_BoolArgument": 1
+                        },
+                        "m_CallState": 2
+                      }
+                    ]
+                  },
+                  "m_TypeName": "UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+                }
+              },
+              {
+                "eventID": 3,
+                "callback": {
+                  "m_PersistentCalls": {
+                    "m_Calls": [
+                      {
+                        "m_Target": {
+                          "node": 4,
+                          "type": "HoldButtonEventHandlerLeft",
+                          "sprite": -1,
+                          "audio": -1,
+                          "video": -1
+                        },
+                        "m_MethodName": "SetPressed",
+                        "m_Mode": 6,
+                        "m_Arguments": {
+                          "m_ObjectArgument": {
+                            "node": -1,
+                            "type": "",
+                            "sprite": -1,
+                            "audio": -1,
+                            "video": -1
+                          },
+                          "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                          "m_IntArgument": 0,
+                          "m_FloatArgument": 0.0,
+                          "m_StringArgument": "down_idle",
+                          "m_BoolArgument": 0
+                        },
+                        "m_CallState": 2
+                      },
+                      {
+                        "m_Target": {
+                          "node": 1,
+                          "type": "Animator",
+                          "sprite": -1,
+                          "audio": -1,
+                          "video": -1
+                        },
+                        "m_MethodName": "Play",
+                        "m_Mode": 5,
+                        "m_Arguments": {
+                          "m_ObjectArgument": {
+                            "node": -1,
+                            "type": "",
+                            "sprite": -1,
+                            "audio": -1,
+                            "video": -1
+                          },
+                          "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                          "m_IntArgument": 0,
+                          "m_FloatArgument": 0.0,
+                          "m_StringArgument": "left_idle",
+                          "m_BoolArgument": 0
+                        },
+                        "m_CallState": 2
+                      }
+                    ]
+                  },
+                  "m_TypeName": "UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+                }
+              }
+            ],
+            "delegates": []
+          }
+        },
+        {
+          "class": "HoldButtonEventHandlerLeft",
+          "fields": {
+            "m_Enabled": 1,
+            "OnButtonHeldLeft": {
+              "m_PersistentCalls": {
+                "m_Calls": [
+                  {
+                    "m_Target": {
+                      "node": 1,
+                      "type": "Movement",
+                      "sprite": -1,
+                      "audio": -1,
+                      "video": -1
+                    },
+                    "m_MethodName": "MoveLeft",
+                    "m_Mode": 1,
+                    "m_Arguments": {
+                      "m_ObjectArgument": {
+                        "node": -1,
+                        "type": "",
+                        "sprite": -1,
+                        "audio": -1,
+                        "video": -1
+                      },
+                      "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                      "m_IntArgument": 0,
+                      "m_FloatArgument": 0.0,
+                      "m_StringArgument": "",
+                      "m_BoolArgument": 0
+                    },
+                    "m_CallState": 2
+                  }
+                ]
+              },
+              "m_TypeName": "UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            },
+            "OnButtonHeldLeft1": {
+              "m_PersistentCalls": {
+                "m_Calls": [
+                  {
+                    "m_Target": {
+                      "node": 1,
+                      "type": "Movement",
+                      "sprite": -1,
+                      "audio": -1,
+                      "video": -1
+                    },
+                    "m_MethodName": "MoveLeftRelease",
+                    "m_Mode": 1,
+                    "m_Arguments": {
+                      "m_ObjectArgument": {
+                        "node": -1,
+                        "type": "",
+                        "sprite": -1,
+                        "audio": -1,
+                        "video": -1
+                      },
+                      "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                      "m_IntArgument": 0,
+                      "m_FloatArgument": 0.0,
+                      "m_StringArgument": "",
+                      "m_BoolArgument": 0
+                    },
+                    "m_CallState": 2
+                  }
+                ]
+              },
+              "m_TypeName": "UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            }
+          }
+        }
+      ],
+      "colliders": [],
+      "sounds": [],
+      "rect": {
+        "min": [
+          0.5,
+          0.5
+        ],
+        "max": [
+          0.5,
+          0.5
+        ],
+        "position": [
+          558.4000244140625,
+          -220.3000030517578
+        ],
+        "size": [
+          160.0,
+          30.0
+        ],
+        "pivot": [
+          0.5,
+          0.5
+        ]
+      },
+      "image": {
+        "sprite": 17,
+        "color": [
+          0.7630919814109802,
+          0.7630919814109802,
+          0.8459999561309814,
+          1.0
+        ],
+        "enabled": 1,
+        "raycast": 1
+      },
+      "order": 4
+    },
+    {
+      "name": "ButtonUp",
+      "active": true,
+      "layer": 5,
+      "parent": 2,
+      "children": [],
+      "pos": [
+        696.9999389648438,
+        -82.29998779296875,
+        0.0
+      ],
+      "rot": [
+        -0.0,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "scale": [
+        0.7732617855072021,
+        4.039351940155029,
+        1.1540898084640503
+      ],
+      "scripts": [
+        {
+          "class": "Image",
+          "fields": {
+            "m_Enabled": 1,
+            "m_Material": {
+              "node": -1,
+              "type": "",
+              "sprite": -1,
+              "audio": -1,
+              "video": -1
+            },
+            "m_Color": {
+              "r": 0.7630919814109802,
+              "g": 0.7630919814109802,
+              "b": 0.8459999561309814,
+              "a": 1.0
+            },
+            "m_RaycastTarget": 1,
+            "m_OnCullStateChanged": {
+              "m_PersistentCalls": {
+                "m_Calls": []
+              },
+              "m_TypeName": "UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+            },
+            "m_Sprite": {
+              "node": -1,
+              "type": "Sprite",
+              "sprite": 18,
+              "audio": -1,
+              "video": -1
+            },
+            "m_Type": 0,
+            "m_PreserveAspect": 0,
+            "m_FillCenter": 1,
+            "m_FillMethod": 4,
+            "m_FillAmount": 1.0,
+            "m_FillClockwise": 1,
+            "m_FillOrigin": 0,
+            "m_UseSpriteMesh": 0
+          }
+        },
+        {
+          "class": "Button",
+          "fields": {
+            "m_Enabled": 1,
+            "m_Navigation": {
+              "m_Mode": 3,
+              "m_SelectOnUp": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              },
+              "m_SelectOnDown": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              },
+              "m_SelectOnLeft": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              },
+              "m_SelectOnRight": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              }
+            },
+            "m_Transition": 1,
+            "m_Colors": {
+              "m_NormalColor": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+              },
+              "m_HighlightedColor": {
+                "r": 0.9607843160629272,
+                "g": 0.9607843160629272,
+                "b": 0.9607843160629272,
+                "a": 1.0
+              },
+              "m_PressedColor": {
+                "r": 0.7843137383460999,
+                "g": 0.7843137383460999,
+                "b": 0.7843137383460999,
+                "a": 1.0
+              },
+              "m_DisabledColor": {
+                "r": 0.7843137383460999,
+                "g": 0.7843137383460999,
+                "b": 0.7843137383460999,
+                "a": 0.501960813999176
+              },
+              "m_ColorMultiplier": 1.0,
+              "m_FadeDuration": 0.10000000149011612
+            },
+            "m_SpriteState": {
+              "m_HighlightedSprite": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              },
+              "m_PressedSprite": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              },
+              "m_DisabledSprite": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              }
+            },
+            "m_AnimationTriggers": {
+              "m_NormalTrigger": "Normal",
+              "m_HighlightedTrigger": "Highlighted",
+              "m_PressedTrigger": "Pressed",
+              "m_DisabledTrigger": "Disabled"
+            },
+            "m_Interactable": 1,
+            "m_TargetGraphic": {
+              "node": 5,
+              "type": "Image",
+              "sprite": -1,
+              "audio": -1,
+              "video": -1
+            },
+            "m_OnClick": {
+              "m_PersistentCalls": {
+                "m_Calls": []
+              },
+              "m_TypeName": "UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+            }
+          }
+        },
+        {
+          "class": "EventTrigger",
+          "fields": {
+            "m_Enabled": 1,
+            "m_Delegates": [
+              {
+                "eventID": 2,
+                "callback": {
+                  "m_PersistentCalls": {
+                    "m_Calls": [
+                      {
+                        "m_Target": {
+                          "node": 5,
+                          "type": "HoldButtonEventHandlerUp",
+                          "sprite": -1,
+                          "audio": -1,
+                          "video": -1
+                        },
+                        "m_MethodName": "SetPressed",
+                        "m_Mode": 6,
+                        "m_Arguments": {
+                          "m_ObjectArgument": {
+                            "node": -1,
+                            "type": "",
+                            "sprite": -1,
+                            "audio": -1,
+                            "video": -1
+                          },
+                          "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                          "m_IntArgument": 0,
+                          "m_FloatArgument": 0.0,
+                          "m_StringArgument": "down",
+                          "m_BoolArgument": 1
+                        },
+                        "m_CallState": 2
+                      },
+                      {
+                        "m_Target": {
+                          "node": 1,
+                          "type": "Animator",
+                          "sprite": -1,
+                          "audio": -1,
+                          "video": -1
+                        },
+                        "m_MethodName": "Play",
+                        "m_Mode": 5,
+                        "m_Arguments": {
+                          "m_ObjectArgument": {
+                            "node": -1,
+                            "type": "",
+                            "sprite": -1,
+                            "audio": -1,
+                            "video": -1
+                          },
+                          "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                          "m_IntArgument": 0,
+                          "m_FloatArgument": 0.0,
+                          "m_StringArgument": "up",
+                          "m_BoolArgument": 1
+                        },
+                        "m_CallState": 2
+                      }
+                    ]
+                  },
+                  "m_TypeName": "UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+                }
+              },
+              {
+                "eventID": 3,
+                "callback": {
+                  "m_PersistentCalls": {
+                    "m_Calls": [
+                      {
+                        "m_Target": {
+                          "node": 5,
+                          "type": "HoldButtonEventHandlerUp",
+                          "sprite": -1,
+                          "audio": -1,
+                          "video": -1
+                        },
+                        "m_MethodName": "SetPressed",
+                        "m_Mode": 6,
+                        "m_Arguments": {
+                          "m_ObjectArgument": {
+                            "node": -1,
+                            "type": "",
+                            "sprite": -1,
+                            "audio": -1,
+                            "video": -1
+                          },
+                          "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                          "m_IntArgument": 0,
+                          "m_FloatArgument": 0.0,
+                          "m_StringArgument": "down_idle",
+                          "m_BoolArgument": 0
+                        },
+                        "m_CallState": 2
+                      },
+                      {
+                        "m_Target": {
+                          "node": 1,
+                          "type": "Animator",
+                          "sprite": -1,
+                          "audio": -1,
+                          "video": -1
+                        },
+                        "m_MethodName": "Play",
+                        "m_Mode": 5,
+                        "m_Arguments": {
+                          "m_ObjectArgument": {
+                            "node": -1,
+                            "type": "",
+                            "sprite": -1,
+                            "audio": -1,
+                            "video": -1
+                          },
+                          "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                          "m_IntArgument": 0,
+                          "m_FloatArgument": 0.0,
+                          "m_StringArgument": "up_idle",
+                          "m_BoolArgument": 0
+                        },
+                        "m_CallState": 2
+                      }
+                    ]
+                  },
+                  "m_TypeName": "UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+                }
+              }
+            ],
+            "delegates": []
+          }
+        },
+        {
+          "class": "HoldButtonEventHandlerUp",
+          "fields": {
+            "m_Enabled": 1,
+            "OnButtonHeldUp": {
+              "m_PersistentCalls": {
+                "m_Calls": [
+                  {
+                    "m_Target": {
+                      "node": 1,
+                      "type": "Movement",
+                      "sprite": -1,
+                      "audio": -1,
+                      "video": -1
+                    },
+                    "m_MethodName": "MoveUp",
+                    "m_Mode": 1,
+                    "m_Arguments": {
+                      "m_ObjectArgument": {
+                        "node": -1,
+                        "type": "",
+                        "sprite": -1,
+                        "audio": -1,
+                        "video": -1
+                      },
+                      "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                      "m_IntArgument": 0,
+                      "m_FloatArgument": 0.0,
+                      "m_StringArgument": "",
+                      "m_BoolArgument": 0
+                    },
+                    "m_CallState": 2
+                  }
+                ]
+              },
+              "m_TypeName": "UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            },
+            "OnButtonHeldUp1": {
+              "m_PersistentCalls": {
+                "m_Calls": [
+                  {
+                    "m_Target": {
+                      "node": 1,
+                      "type": "Movement",
+                      "sprite": -1,
+                      "audio": -1,
+                      "video": -1
+                    },
+                    "m_MethodName": "MoveUpRelease",
+                    "m_Mode": 1,
+                    "m_Arguments": {
+                      "m_ObjectArgument": {
+                        "node": -1,
+                        "type": "",
+                        "sprite": -1,
+                        "audio": -1,
+                        "video": -1
+                      },
+                      "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                      "m_IntArgument": 0,
+                      "m_FloatArgument": 0.0,
+                      "m_StringArgument": "",
+                      "m_BoolArgument": 0
+                    },
+                    "m_CallState": 2
+                  }
+                ]
+              },
+              "m_TypeName": "UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            }
+          }
+        }
+      ],
+      "colliders": [],
+      "sounds": [],
+      "rect": {
+        "min": [
+          0.5,
+          0.5
+        ],
+        "max": [
+          0.5,
+          0.5
+        ],
+        "position": [
+          696.9999389648438,
+          -82.29998779296875
+        ],
+        "size": [
+          160.0,
+          30.0
+        ],
+        "pivot": [
+          0.5,
+          0.5
+        ]
+      },
+      "image": {
+        "sprite": 18,
+        "color": [
+          0.7630919814109802,
+          0.7630919814109802,
+          0.8459999561309814,
+          1.0
+        ],
+        "enabled": 1,
+        "raycast": 1
+      },
+      "order": 5
+    },
+    {
+      "name": "ButtonDown",
+      "active": true,
+      "layer": 5,
+      "parent": 2,
+      "children": [],
+      "pos": [
+        696.9999389648438,
+        -359.5999755859375,
+        0.0
+      ],
+      "rot": [
+        -0.0,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "scale": [
+        0.7732617855072021,
+        4.039351940155029,
+        1.1540898084640503
+      ],
+      "scripts": [
+        {
+          "class": "Image",
+          "fields": {
+            "m_Enabled": 1,
+            "m_Material": {
+              "node": -1,
+              "type": "",
+              "sprite": -1,
+              "audio": -1,
+              "video": -1
+            },
+            "m_Color": {
+              "r": 0.7630919814109802,
+              "g": 0.7630919814109802,
+              "b": 0.8459999561309814,
+              "a": 1.0
+            },
+            "m_RaycastTarget": 1,
+            "m_OnCullStateChanged": {
+              "m_PersistentCalls": {
+                "m_Calls": []
+              },
+              "m_TypeName": "UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+            },
+            "m_Sprite": {
+              "node": -1,
+              "type": "Sprite",
+              "sprite": 21,
+              "audio": -1,
+              "video": -1
+            },
+            "m_Type": 0,
+            "m_PreserveAspect": 0,
+            "m_FillCenter": 1,
+            "m_FillMethod": 4,
+            "m_FillAmount": 1.0,
+            "m_FillClockwise": 1,
+            "m_FillOrigin": 0,
+            "m_UseSpriteMesh": 0
+          }
+        },
+        {
+          "class": "Button",
+          "fields": {
+            "m_Enabled": 1,
+            "m_Navigation": {
+              "m_Mode": 3,
+              "m_SelectOnUp": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              },
+              "m_SelectOnDown": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              },
+              "m_SelectOnLeft": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              },
+              "m_SelectOnRight": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              }
+            },
+            "m_Transition": 1,
+            "m_Colors": {
+              "m_NormalColor": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+              },
+              "m_HighlightedColor": {
+                "r": 0.9607843160629272,
+                "g": 0.9607843160629272,
+                "b": 0.9607843160629272,
+                "a": 1.0
+              },
+              "m_PressedColor": {
+                "r": 0.7843137383460999,
+                "g": 0.7843137383460999,
+                "b": 0.7843137383460999,
+                "a": 1.0
+              },
+              "m_DisabledColor": {
+                "r": 0.7843137383460999,
+                "g": 0.7843137383460999,
+                "b": 0.7843137383460999,
+                "a": 0.501960813999176
+              },
+              "m_ColorMultiplier": 1.0,
+              "m_FadeDuration": 0.10000000149011612
+            },
+            "m_SpriteState": {
+              "m_HighlightedSprite": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              },
+              "m_PressedSprite": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              },
+              "m_DisabledSprite": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              }
+            },
+            "m_AnimationTriggers": {
+              "m_NormalTrigger": "Normal",
+              "m_HighlightedTrigger": "Highlighted",
+              "m_PressedTrigger": "Pressed",
+              "m_DisabledTrigger": "Disabled"
+            },
+            "m_Interactable": 1,
+            "m_TargetGraphic": {
+              "node": 6,
+              "type": "Image",
+              "sprite": -1,
+              "audio": -1,
+              "video": -1
+            },
+            "m_OnClick": {
+              "m_PersistentCalls": {
+                "m_Calls": []
+              },
+              "m_TypeName": "UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+            }
+          }
+        },
+        {
+          "class": "EventTrigger",
+          "fields": {
+            "m_Enabled": 1,
+            "m_Delegates": [
+              {
+                "eventID": 2,
+                "callback": {
+                  "m_PersistentCalls": {
+                    "m_Calls": [
+                      {
+                        "m_Target": {
+                          "node": 6,
+                          "type": "HoldButtonEventHandlerDown",
+                          "sprite": -1,
+                          "audio": -1,
+                          "video": -1
+                        },
+                        "m_MethodName": "SetPressed",
+                        "m_Mode": 6,
+                        "m_Arguments": {
+                          "m_ObjectArgument": {
+                            "node": -1,
+                            "type": "",
+                            "sprite": -1,
+                            "audio": -1,
+                            "video": -1
+                          },
+                          "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                          "m_IntArgument": 0,
+                          "m_FloatArgument": 0.0,
+                          "m_StringArgument": "down",
+                          "m_BoolArgument": 1
+                        },
+                        "m_CallState": 2
+                      },
+                      {
+                        "m_Target": {
+                          "node": 1,
+                          "type": "Animator",
+                          "sprite": -1,
+                          "audio": -1,
+                          "video": -1
+                        },
+                        "m_MethodName": "Play",
+                        "m_Mode": 5,
+                        "m_Arguments": {
+                          "m_ObjectArgument": {
+                            "node": -1,
+                            "type": "",
+                            "sprite": -1,
+                            "audio": -1,
+                            "video": -1
+                          },
+                          "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                          "m_IntArgument": 0,
+                          "m_FloatArgument": 0.0,
+                          "m_StringArgument": "down",
+                          "m_BoolArgument": 1
+                        },
+                        "m_CallState": 2
+                      }
+                    ]
+                  },
+                  "m_TypeName": "UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+                }
+              },
+              {
+                "eventID": 3,
+                "callback": {
+                  "m_PersistentCalls": {
+                    "m_Calls": [
+                      {
+                        "m_Target": {
+                          "node": 6,
+                          "type": "HoldButtonEventHandlerDown",
+                          "sprite": -1,
+                          "audio": -1,
+                          "video": -1
+                        },
+                        "m_MethodName": "SetPressed",
+                        "m_Mode": 6,
+                        "m_Arguments": {
+                          "m_ObjectArgument": {
+                            "node": -1,
+                            "type": "",
+                            "sprite": -1,
+                            "audio": -1,
+                            "video": -1
+                          },
+                          "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                          "m_IntArgument": 0,
+                          "m_FloatArgument": 0.0,
+                          "m_StringArgument": "down_idle",
+                          "m_BoolArgument": 0
+                        },
+                        "m_CallState": 2
+                      },
+                      {
+                        "m_Target": {
+                          "node": 1,
+                          "type": "Animator",
+                          "sprite": -1,
+                          "audio": -1,
+                          "video": -1
+                        },
+                        "m_MethodName": "Play",
+                        "m_Mode": 5,
+                        "m_Arguments": {
+                          "m_ObjectArgument": {
+                            "node": -1,
+                            "type": "",
+                            "sprite": -1,
+                            "audio": -1,
+                            "video": -1
+                          },
+                          "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                          "m_IntArgument": 0,
+                          "m_FloatArgument": 0.0,
+                          "m_StringArgument": "down_idle",
+                          "m_BoolArgument": 0
+                        },
+                        "m_CallState": 2
+                      }
+                    ]
+                  },
+                  "m_TypeName": "UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+                }
+              }
+            ],
+            "delegates": []
+          }
+        },
+        {
+          "class": "HoldButtonEventHandlerDown",
+          "fields": {
+            "m_Enabled": 1,
+            "OnButtonHeldDown": {
+              "m_PersistentCalls": {
+                "m_Calls": [
+                  {
+                    "m_Target": {
+                      "node": 1,
+                      "type": "Movement",
+                      "sprite": -1,
+                      "audio": -1,
+                      "video": -1
+                    },
+                    "m_MethodName": "MoveDown",
+                    "m_Mode": 1,
+                    "m_Arguments": {
+                      "m_ObjectArgument": {
+                        "node": -1,
+                        "type": "",
+                        "sprite": -1,
+                        "audio": -1,
+                        "video": -1
+                      },
+                      "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                      "m_IntArgument": 0,
+                      "m_FloatArgument": 0.0,
+                      "m_StringArgument": "",
+                      "m_BoolArgument": 0
+                    },
+                    "m_CallState": 2
+                  }
+                ]
+              },
+              "m_TypeName": "UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            },
+            "OnButtonHeldDown1": {
+              "m_PersistentCalls": {
+                "m_Calls": [
+                  {
+                    "m_Target": {
+                      "node": 1,
+                      "type": "Movement",
+                      "sprite": -1,
+                      "audio": -1,
+                      "video": -1
+                    },
+                    "m_MethodName": "MoveDownRelease",
+                    "m_Mode": 1,
+                    "m_Arguments": {
+                      "m_ObjectArgument": {
+                        "node": -1,
+                        "type": "",
+                        "sprite": -1,
+                        "audio": -1,
+                        "video": -1
+                      },
+                      "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                      "m_IntArgument": 0,
+                      "m_FloatArgument": 0.0,
+                      "m_StringArgument": "",
+                      "m_BoolArgument": 0
+                    },
+                    "m_CallState": 2
+                  }
+                ]
+              },
+              "m_TypeName": "UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            }
+          }
+        }
+      ],
+      "colliders": [],
+      "sounds": [],
+      "rect": {
+        "min": [
+          0.5,
+          0.5
+        ],
+        "max": [
+          0.5,
+          0.5
+        ],
+        "position": [
+          696.9999389648438,
+          -359.5999755859375
+        ],
+        "size": [
+          160.0,
+          30.0
+        ],
+        "pivot": [
+          0.5,
+          0.5
+        ]
+      },
+      "image": {
+        "sprite": 21,
+        "color": [
+          0.7630919814109802,
+          0.7630919814109802,
+          0.8459999561309814,
+          1.0
+        ],
+        "enabled": 1,
+        "raycast": 1
+      },
+      "order": 6
+    },
+    {
+      "name": "ButtonRight",
+      "active": true,
+      "layer": 5,
+      "parent": 2,
+      "children": [],
+      "pos": [
+        837.2999267578125,
+        -220.29998779296875,
+        0.0
+      ],
+      "rot": [
+        -0.0,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "scale": [
+        0.7829084992408752,
+        4.190824508666992,
+        1.1540898084640503
+      ],
+      "scripts": [
+        {
+          "class": "Image",
+          "fields": {
+            "m_Enabled": 1,
+            "m_Material": {
+              "node": -1,
+              "type": "",
+              "sprite": -1,
+              "audio": -1,
+              "video": -1
+            },
+            "m_Color": {
+              "r": 0.7630919814109802,
+              "g": 0.7630919814109802,
+              "b": 0.8459999561309814,
+              "a": 1.0
+            },
+            "m_RaycastTarget": 1,
+            "m_OnCullStateChanged": {
+              "m_PersistentCalls": {
+                "m_Calls": []
+              },
+              "m_TypeName": "UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+            },
+            "m_Sprite": {
+              "node": -1,
+              "type": "Sprite",
+              "sprite": 16,
+              "audio": -1,
+              "video": -1
+            },
+            "m_Type": 0,
+            "m_PreserveAspect": 0,
+            "m_FillCenter": 1,
+            "m_FillMethod": 4,
+            "m_FillAmount": 1.0,
+            "m_FillClockwise": 1,
+            "m_FillOrigin": 0,
+            "m_UseSpriteMesh": 0
+          }
+        },
+        {
+          "class": "Button",
+          "fields": {
+            "m_Enabled": 1,
+            "m_Navigation": {
+              "m_Mode": 3,
+              "m_SelectOnUp": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              },
+              "m_SelectOnDown": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              },
+              "m_SelectOnLeft": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              },
+              "m_SelectOnRight": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              }
+            },
+            "m_Transition": 1,
+            "m_Colors": {
+              "m_NormalColor": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+              },
+              "m_HighlightedColor": {
+                "r": 0.9607843160629272,
+                "g": 0.9607843160629272,
+                "b": 0.9607843160629272,
+                "a": 1.0
+              },
+              "m_PressedColor": {
+                "r": 0.7843137383460999,
+                "g": 0.7843137383460999,
+                "b": 0.7843137383460999,
+                "a": 1.0
+              },
+              "m_DisabledColor": {
+                "r": 0.7843137383460999,
+                "g": 0.7843137383460999,
+                "b": 0.7843137383460999,
+                "a": 0.501960813999176
+              },
+              "m_ColorMultiplier": 1.0,
+              "m_FadeDuration": 0.10000000149011612
+            },
+            "m_SpriteState": {
+              "m_HighlightedSprite": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              },
+              "m_PressedSprite": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              },
+              "m_DisabledSprite": {
+                "node": -1,
+                "type": "",
+                "sprite": -1,
+                "audio": -1,
+                "video": -1
+              }
+            },
+            "m_AnimationTriggers": {
+              "m_NormalTrigger": "Normal",
+              "m_HighlightedTrigger": "Highlighted",
+              "m_PressedTrigger": "Pressed",
+              "m_DisabledTrigger": "Disabled"
+            },
+            "m_Interactable": 1,
+            "m_TargetGraphic": {
+              "node": 7,
+              "type": "Image",
+              "sprite": -1,
+              "audio": -1,
+              "video": -1
+            },
+            "m_OnClick": {
+              "m_PersistentCalls": {
+                "m_Calls": []
+              },
+              "m_TypeName": "UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+            }
+          }
+        },
+        {
+          "class": "EventTrigger",
+          "fields": {
+            "m_Enabled": 1,
+            "m_Delegates": [
+              {
+                "eventID": 2,
+                "callback": {
+                  "m_PersistentCalls": {
+                    "m_Calls": [
+                      {
+                        "m_Target": {
+                          "node": 7,
+                          "type": "HoldButtonEventHandlerRight",
+                          "sprite": -1,
+                          "audio": -1,
+                          "video": -1
+                        },
+                        "m_MethodName": "SetPressed",
+                        "m_Mode": 6,
+                        "m_Arguments": {
+                          "m_ObjectArgument": {
+                            "node": -1,
+                            "type": "",
+                            "sprite": -1,
+                            "audio": -1,
+                            "video": -1
+                          },
+                          "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                          "m_IntArgument": 0,
+                          "m_FloatArgument": 0.0,
+                          "m_StringArgument": "down",
+                          "m_BoolArgument": 1
+                        },
+                        "m_CallState": 2
+                      },
+                      {
+                        "m_Target": {
+                          "node": 1,
+                          "type": "Animator",
+                          "sprite": -1,
+                          "audio": -1,
+                          "video": -1
+                        },
+                        "m_MethodName": "Play",
+                        "m_Mode": 5,
+                        "m_Arguments": {
+                          "m_ObjectArgument": {
+                            "node": -1,
+                            "type": "",
+                            "sprite": -1,
+                            "audio": -1,
+                            "video": -1
+                          },
+                          "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                          "m_IntArgument": 0,
+                          "m_FloatArgument": 0.0,
+                          "m_StringArgument": "right",
+                          "m_BoolArgument": 1
+                        },
+                        "m_CallState": 2
+                      }
+                    ]
+                  },
+                  "m_TypeName": "UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+                }
+              },
+              {
+                "eventID": 3,
+                "callback": {
+                  "m_PersistentCalls": {
+                    "m_Calls": [
+                      {
+                        "m_Target": {
+                          "node": 7,
+                          "type": "HoldButtonEventHandlerRight",
+                          "sprite": -1,
+                          "audio": -1,
+                          "video": -1
+                        },
+                        "m_MethodName": "SetPressed",
+                        "m_Mode": 6,
+                        "m_Arguments": {
+                          "m_ObjectArgument": {
+                            "node": -1,
+                            "type": "",
+                            "sprite": -1,
+                            "audio": -1,
+                            "video": -1
+                          },
+                          "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                          "m_IntArgument": 0,
+                          "m_FloatArgument": 0.0,
+                          "m_StringArgument": "down_idle",
+                          "m_BoolArgument": 0
+                        },
+                        "m_CallState": 2
+                      },
+                      {
+                        "m_Target": {
+                          "node": 1,
+                          "type": "Animator",
+                          "sprite": -1,
+                          "audio": -1,
+                          "video": -1
+                        },
+                        "m_MethodName": "Play",
+                        "m_Mode": 5,
+                        "m_Arguments": {
+                          "m_ObjectArgument": {
+                            "node": -1,
+                            "type": "",
+                            "sprite": -1,
+                            "audio": -1,
+                            "video": -1
+                          },
+                          "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                          "m_IntArgument": 0,
+                          "m_FloatArgument": 0.0,
+                          "m_StringArgument": "right_idle",
+                          "m_BoolArgument": 0
+                        },
+                        "m_CallState": 2
+                      }
+                    ]
+                  },
+                  "m_TypeName": "UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+                }
+              }
+            ],
+            "delegates": []
+          }
+        },
+        {
+          "class": "HoldButtonEventHandlerRight",
+          "fields": {
+            "m_Enabled": 1,
+            "OnButtonHeldRight": {
+              "m_PersistentCalls": {
+                "m_Calls": [
+                  {
+                    "m_Target": {
+                      "node": 1,
+                      "type": "Movement",
+                      "sprite": -1,
+                      "audio": -1,
+                      "video": -1
+                    },
+                    "m_MethodName": "MoveRight",
+                    "m_Mode": 1,
+                    "m_Arguments": {
+                      "m_ObjectArgument": {
+                        "node": -1,
+                        "type": "",
+                        "sprite": -1,
+                        "audio": -1,
+                        "video": -1
+                      },
+                      "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                      "m_IntArgument": 0,
+                      "m_FloatArgument": 0.0,
+                      "m_StringArgument": "",
+                      "m_BoolArgument": 0
+                    },
+                    "m_CallState": 2
+                  }
+                ]
+              },
+              "m_TypeName": "UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            },
+            "OnButtonHeldRight1": {
+              "m_PersistentCalls": {
+                "m_Calls": [
+                  {
+                    "m_Target": {
+                      "node": 1,
+                      "type": "Movement",
+                      "sprite": -1,
+                      "audio": -1,
+                      "video": -1
+                    },
+                    "m_MethodName": "MoveRightRelease",
+                    "m_Mode": 1,
+                    "m_Arguments": {
+                      "m_ObjectArgument": {
+                        "node": -1,
+                        "type": "",
+                        "sprite": -1,
+                        "audio": -1,
+                        "video": -1
+                      },
+                      "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                      "m_IntArgument": 0,
+                      "m_FloatArgument": 0.0,
+                      "m_StringArgument": "",
+                      "m_BoolArgument": 0
+                    },
+                    "m_CallState": 2
+                  }
+                ]
+              },
+              "m_TypeName": "UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            }
+          }
+        }
+      ],
+      "colliders": [],
+      "sounds": [],
+      "rect": {
+        "min": [
+          0.5,
+          0.5
+        ],
+        "max": [
+          0.5,
+          0.5
+        ],
+        "position": [
+          837.2999267578125,
+          -220.29998779296875
+        ],
+        "size": [
+          160.0,
+          30.0
+        ],
+        "pivot": [
+          0.5,
+          0.5
+        ]
+      },
+      "image": {
+        "sprite": 16,
+        "color": [
+          0.7630919814109802,
+          0.7630919814109802,
+          0.8459999561309814,
+          1.0
+        ],
+        "enabled": 1,
+        "raycast": 1
+      },
+      "order": 7
+    },
+    {
+      "name": "Luz del protagonista",
+      "active": true,
+      "parent": 1,
+      "children": [],
+      "pos": [
+        0,
+        -3,
+        2
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "light": {
+        "type": 2,
+        "color": [
+          1,
+          0.88,
+          0.76
+        ],
+        "range": 5.5,
+        "intensity": 0.28,
+        "enabled": true
+      },
+      "order": 8
+    },
+    {
+      "name": "Suelo",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        0,
+        -0.12,
+        0
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [
+        {
+          "type": "BoxCollider",
+          "center": [
+            0,
+            0,
+            0
+          ],
+          "size": [
+            24.0,
+            0.24,
+            21.0
+          ],
+          "enabled": true,
+          "trigger": false
+        }
+      ],
+      "sounds": [],
+      "mesh": 863,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          484
+        ],
+        "cutaway": false
+      },
+      "order": 9
+    },
+    {
+      "name": "Calle",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        0,
+        0.011,
+        -3
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "mesh": 947,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          508
+        ],
+        "cutaway": false
+      },
+      "order": 10
+    },
+    {
+      "name": "Acera",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        0,
+        0.025,
+        0.2
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "mesh": 948,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          509
+        ],
+        "cutaway": false
+      },
+      "order": 11
+    },
+    {
+      "name": "Línea vial",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        -10,
+        0.03,
+        -3
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "mesh": 949,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          510
+        ],
+        "cutaway": false
+      },
+      "order": 12
+    },
+    {
+      "name": "Línea vial",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        -6,
+        0.03,
+        -3
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "mesh": 950,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          510
+        ],
+        "cutaway": false
+      },
+      "order": 13
+    },
+    {
+      "name": "Línea vial",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        -2,
+        0.03,
+        -3
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "mesh": 951,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          510
+        ],
+        "cutaway": false
+      },
+      "order": 14
+    },
+    {
+      "name": "Línea vial",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        2,
+        0.03,
+        -3
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "mesh": 952,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          510
+        ],
+        "cutaway": false
+      },
+      "order": 15
+    },
+    {
+      "name": "Línea vial",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        6,
+        0.03,
+        -3
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "mesh": 953,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          510
+        ],
+        "cutaway": false
+      },
+      "order": 16
+    },
+    {
+      "name": "Línea vial",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        10,
+        0.03,
+        -3
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "mesh": 954,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          510
+        ],
+        "cutaway": false
+      },
+      "order": 17
+    },
+    {
+      "name": "Luz",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        0,
+        10,
+        0
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "light": {
+        "type": 2,
+        "color": [
+          1,
+          0.94,
+          0.82
+        ],
+        "intensity": 1.15,
+        "range": 35,
+        "enabled": true
+      },
+      "order": 18
+    },
+    {
+      "name": "Fachada de la biblioteca",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        0,
+        3,
+        8.9
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [
+        {
+          "type": "BoxCollider",
+          "center": [
+            0,
+            0,
+            0
+          ],
+          "size": [
+            19.0,
+            6.0,
+            3.0
+          ],
+          "enabled": true,
+          "trigger": false
+        }
+      ],
+      "sounds": [],
+      "mesh": 1231,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          538
+        ],
+        "cutaway": false
+      },
+      "order": 19
+    },
+    {
+      "name": "Puerta BIBLIOTECA",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        0,
+        1.9,
+        7.28
+      ],
+      "rot": [
+        0,
+        0.0,
+        0,
+        1.0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "mesh": 1232,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          492
+        ],
+        "cutaway": true,
+        "occlusion": {
+          "center": [
+            0,
+            0,
+            0
+          ],
+          "size": [
+            2.05,
+            5.5,
+            0.12
+          ]
+        }
+      },
+      "order": 20
+    },
+    {
+      "name": "BIBLIOTECA",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        0,
+        3.2,
+        7.1000000000000005
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [
+        {
+          "class": "Billboard",
+          "fields": {
+            "m_Enabled": 1
+          }
+        }
+      ],
+      "colliders": [],
+      "sounds": [],
+      "sprite": {
+        "sprite": 226,
+        "enabled": true,
+        "color": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "order": 21,
+      "occlusion_parent": 20
+    },
+    {
+      "name": "BIBLIOTECA DEL BARRIO",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        0,
+        5.6,
+        7.2
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [
+        {
+          "class": "Billboard",
+          "fields": {
+            "m_Enabled": 1
+          }
+        }
+      ],
+      "colliders": [],
+      "sounds": [],
+      "sprite": {
+        "sprite": 227,
+        "enabled": true,
+        "color": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "order": 22
+    },
+    {
+      "name": "Tronco",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        -8,
+        1.4,
+        2
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "mesh": 1233,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          539
+        ],
+        "cutaway": false
+      },
+      "order": 23
+    },
+    {
+      "name": "Copa del árbol",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        -8,
+        4,
+        2
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "mesh": 1234,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          540
+        ],
+        "cutaway": false
+      },
+      "order": 24
+    },
+    {
+      "name": "Tronco",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        8,
+        1.4,
+        2
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "mesh": 1235,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          539
+        ],
+        "cutaway": false
+      },
+      "order": 25
+    },
+    {
+      "name": "Copa del árbol",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        8,
+        4,
+        2
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "mesh": 1236,
+      "renderer": {
+        "enabled": true,
+        "materials": [
+          540
+        ],
+        "cutaway": false
+      },
+      "order": 26
+    },
+    {
+      "name": "Dars",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        -2,
+        2.9,
+        5.5
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "scripts": [
+        {
+          "class": "Billboard",
+          "fields": {
+            "m_Enabled": 1
+          }
+        }
+      ],
+      "colliders": [],
+      "sounds": [],
+      "sprite": {
+        "sprite": 163,
+        "enabled": true,
+        "color": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "chapter_min": 1312,
+      "chapter_max": 1319,
+      "order": 27
+    },
+    {
+      "name": "Audio local",
+      "active": true,
+      "parent": -1,
+      "children": [],
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "scripts": [],
+      "colliders": [],
+      "sounds": [],
+      "order": 28
+    }
+  ],
+  "custom_camera": true,
+  "ambient": [
+    0.24,
+    0.25,
+    0.27
+  ],
+  "ambient_intensity": 1,
+  "chapter_events": [
+    {
+      "stage": 1312,
+      "pages": [
+        {
+          "transient_texture": 3139
+        },
+        {
+          "transient_texture": 3140
+        },
+        {
+          "transient_texture": 2279
+        },
+        {
+          "transient_texture": 3141
+        },
+        {
+          "transient_texture": 3142
+        },
+        {
+          "transient_texture": 3143
+        },
+        {
+          "transient_texture": 3144
+        },
+        {
+          "transient_texture": 3145
+        },
+        {
+          "transient_texture": 3146
+        },
+        {
+          "transient_texture": 2268
+        },
+        {
+          "transient_texture": 2473
+        },
+        {
+          "transient_texture": 2580
+        },
+        {
+          "transient_texture": 2285
+        },
+        {
+          "transient_texture": 3147
+        },
+        {
+          "transient_texture": 3148
+        },
+        {
+          "transient_texture": 3149
+        },
+        {
+          "transient_texture": 3150
+        },
+        {
+          "transient_texture": 2367
+        },
+        {
+          "transient_texture": 3151
+        }
+      ],
+      "next": 1320,
+      "interact": 1,
+      "delay": 0.25,
+      "pos": [
+        -2,
+        2.64,
+        4
+      ],
+      "radius": 1.65
+    }
+  ],
+  "search_inspections": [],
+  "portals": [
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 672,
+      "max_stage": 672
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 704,
+      "max_stage": 704
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 712,
+      "max_stage": 712
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 720,
+      "max_stage": 720
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 728,
+      "max_stage": 728
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 736,
+      "max_stage": 736
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 744,
+      "max_stage": 744
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 752,
+      "max_stage": 752
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 760,
+      "max_stage": 760
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 776,
+      "max_stage": 776
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 784,
+      "max_stage": 784
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 792,
+      "max_stage": 792
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 800,
+      "max_stage": 800
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 808,
+      "max_stage": 808
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 816,
+      "max_stage": 816
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 824,
+      "max_stage": 824
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 832,
+      "max_stage": 832
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 840,
+      "max_stage": 840
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 848,
+      "max_stage": 848
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 856,
+      "max_stage": 856
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 864,
+      "max_stage": 864
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 872,
+      "max_stage": 872
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 880,
+      "max_stage": 880
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 896,
+      "max_stage": 896
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 904,
+      "max_stage": 904
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 920,
+      "max_stage": 920
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 936,
+      "max_stage": 936
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 944,
+      "max_stage": 944
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 960,
+      "max_stage": 960
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 976,
+      "max_stage": 976
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 984,
+      "max_stage": 984
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 1000,
+      "max_stage": 1000
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 1008,
+      "max_stage": 1008
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 1024,
+      "max_stage": 1024
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 1032,
+      "max_stage": 1032
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 1040,
+      "max_stage": 1040
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 1048,
+      "max_stage": 1048
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 1056,
+      "max_stage": 1056
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 1064,
+      "max_stage": 1064
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 1080,
+      "max_stage": 1080
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 1088,
+      "max_stage": 1088
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 1104,
+      "max_stage": 1104
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 1120,
+      "max_stage": 1120
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 1128,
+      "max_stage": 1128
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 1136,
+      "max_stage": 1136
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 1144,
+      "max_stage": 1144
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 1152,
+      "max_stage": 1152
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 1160,
+      "max_stage": 1160
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 1168,
+      "max_stage": 1168
+    },
+    {
+      "target": "bibliotecaBarrio",
+      "pos": [
+        0,
+        2.64,
+        6.6
+      ],
+      "radius": 1.05,
+      "min_stage": 1184,
+      "max_stage": 1184
+    },
+    {
+      "target": "bibliotecaBarrio",
+      "pos": [
+        0,
+        2.64,
+        6.6
+      ],
+      "radius": 1.05,
+      "min_stage": 1192,
+      "max_stage": 1192
+    },
+    {
+      "target": "bibliotecaBarrio",
+      "pos": [
+        0,
+        2.64,
+        6.6
+      ],
+      "radius": 1.05,
+      "min_stage": 1208,
+      "max_stage": 1208
+    },
+    {
+      "target": "bibliotecaBarrio",
+      "pos": [
+        0,
+        2.64,
+        6.6
+      ],
+      "radius": 1.05,
+      "min_stage": 1216,
+      "max_stage": 1216
+    },
+    {
+      "target": "bibliotecaBarrio",
+      "pos": [
+        0,
+        2.64,
+        6.6
+      ],
+      "radius": 1.05,
+      "min_stage": 1224,
+      "max_stage": 1224
+    },
+    {
+      "target": "bibliotecaBarrio",
+      "pos": [
+        0,
+        2.64,
+        6.6
+      ],
+      "radius": 1.05,
+      "min_stage": 1232,
+      "max_stage": 1232
+    },
+    {
+      "target": "bibliotecaBarrio",
+      "pos": [
+        0,
+        2.64,
+        6.6
+      ],
+      "radius": 1.05,
+      "min_stage": 1240,
+      "max_stage": 1240
+    },
+    {
+      "target": "bibliotecaBarrio",
+      "pos": [
+        0,
+        2.64,
+        6.6
+      ],
+      "radius": 1.05,
+      "min_stage": 1248,
+      "max_stage": 1248
+    },
+    {
+      "target": "bibliotecaBarrio",
+      "pos": [
+        0,
+        2.64,
+        6.6
+      ],
+      "radius": 1.05,
+      "min_stage": 1256,
+      "max_stage": 1256
+    },
+    {
+      "target": "bibliotecaBarrio",
+      "pos": [
+        0,
+        2.64,
+        6.6
+      ],
+      "radius": 1.05,
+      "min_stage": 1264,
+      "max_stage": 1264
+    },
+    {
+      "target": "bibliotecaBarrio",
+      "pos": [
+        0,
+        2.64,
+        6.6
+      ],
+      "radius": 1.05,
+      "min_stage": 1272,
+      "max_stage": 1272
+    },
+    {
+      "target": "bibliotecaBarrio",
+      "pos": [
+        0,
+        2.64,
+        6.6
+      ],
+      "radius": 1.05,
+      "min_stage": 1280,
+      "max_stage": 1280
+    },
+    {
+      "target": "bibliotecaBarrio",
+      "pos": [
+        0,
+        2.64,
+        6.6
+      ],
+      "radius": 1.05,
+      "min_stage": 1288,
+      "max_stage": 1288
+    },
+    {
+      "target": "bibliotecaBarrio",
+      "pos": [
+        0,
+        2.64,
+        6.6
+      ],
+      "radius": 1.05,
+      "min_stage": 1296,
+      "max_stage": 1296
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 1328,
+      "max_stage": 1328
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 1336,
+      "max_stage": 1336
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 1360,
+      "max_stage": 1360
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 1368,
+      "max_stage": 1368
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 1376,
+      "max_stage": 1376
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 1384,
+      "max_stage": 1384
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 1392,
+      "max_stage": 1392
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 1400,
+      "max_stage": 1400
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 1408,
+      "max_stage": 1408
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 1416,
+      "max_stage": 1416
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 1432,
+      "max_stage": 1432
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 1440,
+      "max_stage": 1440
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 1448,
+      "max_stage": 1448
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 1456,
+      "max_stage": 1456
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 1464,
+      "max_stage": 1464
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 1472,
+      "max_stage": 1472
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 1480,
+      "max_stage": 1480
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 1488,
+      "max_stage": 1488
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 1496,
+      "max_stage": 1496
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 1504,
+      "max_stage": 1504
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 1512,
+      "max_stage": 1512
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 1520,
+      "max_stage": 1520
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 1528,
+      "max_stage": 1528
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 1536,
+      "max_stage": 1536
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 1544,
+      "max_stage": 1544
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 1552,
+      "max_stage": 1552
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 1560,
+      "max_stage": 1560
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 1576,
+      "max_stage": 1576
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 1584,
+      "max_stage": 1584
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 1600,
+      "max_stage": 1600
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 656,
+      "max_stage": 656
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 657,
+      "max_stage": 657
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 664,
+      "max_stage": 664
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 665,
+      "max_stage": 665
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 667,
+      "max_stage": 667
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 680,
+      "max_stage": 680
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 681,
+      "max_stage": 681
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 682,
+      "max_stage": 682
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 683,
+      "max_stage": 683
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 684,
+      "max_stage": 684
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 688,
+      "max_stage": 688
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 689,
+      "max_stage": 689
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 690,
+      "max_stage": 690
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 691,
+      "max_stage": 691
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 696,
+      "max_stage": 696
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 768,
+      "max_stage": 768
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 769,
+      "max_stage": 769
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 770,
+      "max_stage": 770
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 888,
+      "max_stage": 888
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 889,
+      "max_stage": 889
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 890,
+      "max_stage": 890
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 891,
+      "max_stage": 891
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 912,
+      "max_stage": 912
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 928,
+      "max_stage": 928
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 929,
+      "max_stage": 929
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 952,
+      "max_stage": 952
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 953,
+      "max_stage": 953
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 968,
+      "max_stage": 968
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 969,
+      "max_stage": 969
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 992,
+      "max_stage": 992
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 993,
+      "max_stage": 993
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 1016,
+      "max_stage": 1016
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 1017,
+      "max_stage": 1017
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 1072,
+      "max_stage": 1072
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 1073,
+      "max_stage": 1073
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 1096,
+      "max_stage": 1096
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 1097,
+      "max_stage": 1097
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 1112,
+      "max_stage": 1112
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 1113,
+      "max_stage": 1113
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 1176,
+      "max_stage": 1176
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 1177,
+      "max_stage": 1177
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 1178,
+      "max_stage": 1178
+    },
+    {
+      "target": "bibliotecaBarrio",
+      "pos": [
+        0,
+        2.64,
+        6.6
+      ],
+      "radius": 1.05,
+      "min_stage": 1200,
+      "max_stage": 1200
+    },
+    {
+      "target": "bibliotecaBarrio",
+      "pos": [
+        0,
+        2.64,
+        6.6
+      ],
+      "radius": 1.05,
+      "min_stage": 1201,
+      "max_stage": 1201
+    },
+    {
+      "target": "bibliotecaBarrio",
+      "pos": [
+        0,
+        2.64,
+        6.6
+      ],
+      "radius": 1.05,
+      "min_stage": 1304,
+      "max_stage": 1304
+    },
+    {
+      "target": "bibliotecaBarrio",
+      "pos": [
+        0,
+        2.64,
+        6.6
+      ],
+      "radius": 1.05,
+      "min_stage": 1305,
+      "max_stage": 1305
+    },
+    {
+      "target": "bibliotecaBarrio",
+      "pos": [
+        0,
+        2.64,
+        6.6
+      ],
+      "radius": 1.05,
+      "min_stage": 1306,
+      "max_stage": 1306
+    },
+    {
+      "target": "bibliotecaBarrio",
+      "pos": [
+        0,
+        2.64,
+        6.6
+      ],
+      "radius": 1.05,
+      "min_stage": 1307,
+      "max_stage": 1307
+    },
+    {
+      "target": "bibliotecaBarrio",
+      "pos": [
+        0,
+        2.64,
+        6.6
+      ],
+      "radius": 1.05,
+      "min_stage": 1308,
+      "max_stage": 1308
+    },
+    {
+      "target": "bibliotecaBarrio",
+      "pos": [
+        0,
+        2.64,
+        6.6
+      ],
+      "radius": 1.05,
+      "min_stage": 1320,
+      "max_stage": 1320
+    },
+    {
+      "target": "bibliotecaBarrio",
+      "pos": [
+        0,
+        2.64,
+        6.6
+      ],
+      "radius": 1.05,
+      "min_stage": 1321,
+      "max_stage": 1321
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 1344,
+      "max_stage": 1344
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 1352,
+      "max_stage": 1352
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 1424,
+      "max_stage": 1424
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 1568,
+      "max_stage": 1568
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 1569,
+      "max_stage": 1569
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 1592,
+      "max_stage": 1592
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 1593,
+      "max_stage": 1593
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 1594,
+      "max_stage": 1594
+    },
+    {
+      "target": "rutaArchivo",
+      "pos": [
+        0,
+        2.64,
+        -8.8
+      ],
+      "radius": 1.05,
+      "min_stage": 785,
+      "max_stage": 785
+    }
+  ],
+  "arrival": {
+    "rutaArchivo": [
+      0,
+      2.64,
+      -7.1
+    ],
+    "bibliotecaBarrio": [
+      0,
+      2.64,
+      5
+    ]
+  },
+  "route_objectives": {
+    "672": 3483,
+    "704": 3493,
+    "712": 3504,
+    "720": 3515,
+    "728": 3526,
+    "736": 3536,
+    "744": 3547,
+    "752": 3558,
+    "760": 3568,
+    "776": 3578,
+    "784": 3588,
+    "792": 3598,
+    "800": 3608,
+    "808": 3618,
+    "816": 3628,
+    "824": 3637,
+    "832": 3646,
+    "840": 3656,
+    "848": 3666,
+    "856": 3676,
+    "864": 3687,
+    "872": 3698,
+    "880": 3708,
+    "896": 3719,
+    "904": 3730,
+    "920": 3739,
+    "936": 3749,
+    "944": 3759,
+    "960": 3768,
+    "976": 3777,
+    "984": 3786,
+    "1000": 3796,
+    "1008": 3806,
+    "1024": 3816,
+    "1032": 3825,
+    "1040": 3834,
+    "1048": 3843,
+    "1056": 3853,
+    "1064": 3863,
+    "1080": 3873,
+    "1088": 3883,
+    "1104": 3893,
+    "1120": 3903,
+    "1128": 3913,
+    "1136": 3922,
+    "1144": 3931,
+    "1152": 3940,
+    "1160": 3949,
+    "1168": 3958,
+    "1184": 3971,
+    "1192": 3981,
+    "1208": 3991,
+    "1216": 4001,
+    "1224": 4011,
+    "1232": 4021,
+    "1240": 4031,
+    "1248": 4041,
+    "1256": 4051,
+    "1264": 4061,
+    "1272": 4071,
+    "1280": 4081,
+    "1288": 4091,
+    "1296": 4101,
+    "1328": 4117,
+    "1336": 4127,
+    "1360": 4138,
+    "1368": 4149,
+    "1376": 4159,
+    "1384": 4169,
+    "1392": 4179,
+    "1400": 4189,
+    "1408": 4199,
+    "1416": 4209,
+    "1432": 4219,
+    "1440": 4229,
+    "1448": 4239,
+    "1456": 4249,
+    "1464": 4259,
+    "1472": 4269,
+    "1480": 4279,
+    "1488": 4289,
+    "1496": 4299,
+    "1504": 4309,
+    "1512": 4319,
+    "1520": 4329,
+    "1528": 4339,
+    "1536": 4349,
+    "1544": 4359,
+    "1552": 4370,
+    "1560": 4380,
+    "1576": 4390,
+    "1584": 4400,
+    "1600": 4410,
+    "656": 4420,
+    "657": 4420,
+    "664": 4430,
+    "665": 4430,
+    "667": 4430,
+    "680": 4441,
+    "681": 4441,
+    "682": 4441,
+    "683": 4441,
+    "684": 4441,
+    "688": 4452,
+    "689": 4452,
+    "690": 4452,
+    "691": 4452,
+    "696": 4464,
+    "768": 4474,
+    "769": 4474,
+    "770": 4474,
+    "888": 4484,
+    "889": 4484,
+    "890": 4484,
+    "891": 4484,
+    "912": 4495,
+    "928": 4504,
+    "929": 4504,
+    "952": 4514,
+    "953": 4514,
+    "968": 4524,
+    "969": 4524,
+    "992": 4534,
+    "993": 4534,
+    "1016": 4545,
+    "1017": 4545,
+    "1072": 4556,
+    "1073": 4556,
+    "1096": 4567,
+    "1097": 4567,
+    "1112": 4577,
+    "1113": 4577,
+    "1176": 4589,
+    "1177": 4589,
+    "1178": 4589,
+    "1200": 4603,
+    "1201": 4603,
+    "1304": 4614,
+    "1305": 4614,
+    "1306": 4614,
+    "1307": 4614,
+    "1308": 4614,
+    "1320": 4625,
+    "1321": 4625,
+    "1344": 4634,
+    "1352": 4645,
+    "1424": 4655,
+    "1568": 4665,
+    "1569": 4665,
+    "1592": 4676,
+    "1593": 4676,
+    "1594": 4676,
+    "785": 3588
+  },
+  "chapter_routes": {
+    "1608": "calleServicioFinal"
+  },
+  "index": 67,
+  "footstep_surface": "concreto",
+  "campaign_audio_node": 28
+}

@@ -9,18 +9,19 @@ Rade vuelve a casa en Navidad y encuentra a Dars junto a su computadora. Al ence
 Descarga y extrae el ZIP. Abre `compile_and_playnow.cmd` para jugar. Si tienes GCC para Windows con SDL2 y zlib, el acceso compila el código C89 y lo ejecuta. En el resto de las instalaciones abre el ejecutable incluido. El mismo acceso funciona en una copia completa del repositorio. [Descargar NEED2DREAMSCAPE para Windows](https://github.com/h0nda1337/NEED2DREAMSCAPE/releases/latest)
 
 - `game/jugar.cmd` abre el ejecutable incluido.
+- `game/capitulo_3.cmd` permite probar el capítulo 3 con el guardado desactivado. Continuar desde una partida del capítulo 2 activa el guardado y conserva las decisiones anteriores.
 - `game/capitulo_2.cmd` abre el segundo capítulo si aún no hay una partida y retoma el progreso si ya existe.
 - **Cargar partida** muestra el autoguardado y los tres espacios manuales, con capítulo, mapa y fecha si está disponible.
 - Pulsa **Esc** para pausar el juego, revisar el autoguardado y guardar o cargar partidas. Si el espacio ya está ocupado, pulsa **Guardar** otra vez para reemplazarlo.
 - En el Escritorio de Windows quedan `history-progress.n2d` para el autoguardado y `history-progress-1.n2d`, `history-progress-2.n2d` y `history-progress-3.n2d` para los manuales. Si aún no hay autoguardado en el Escritorio, el juego puede recuperar el `.save` más reciente de `game/`.
 
-Usa WASD o las flechas para moverte, E para interactuar, clic o Enter para avanzar los diálogos e I para abrir el inventario del capítulo 2.
+Usa WASD o las flechas para moverte, E para interactuar, clic o Enter para avanzar los diálogos e I para abrir el inventario y el registro de investigación.
 
 ## Android
 
 La compilación de prueba para Android incluye los mapas y recursos del juego, controles táctiles y guardado en el almacenamiento privado de la aplicación. Se adapta a la resolución del teléfono en horizontal. Las instrucciones para generar el APK están en [android/README.md](android/README.md).
 
-En pantalla, mantén una flecha para caminar y desliza el dedo entre flechas para cambiar de dirección. PAUSA o el botón Atrás de Android abren el menú de guardado. OBJETOS abre el inventario del capítulo 2.
+En pantalla, mantén una flecha para caminar y desliza el dedo entre flechas para cambiar de dirección. PAUSA o el botón Atrás de Android abren el menú de guardado. OBJETOS abre el inventario y el registro de investigación.
 
 En el capítulo 2, la señal que cambia de amarillo a azul marca el próximo punto del recorrido.
 
@@ -42,3 +43,16 @@ Los ocho escenarios del primer capítulo se construyeron para NEED2DREAMSCAPE co
 ## Capítulo 2 — Los cuartos que no caben
 
 Rade busca una salida del pasillo, vuelve a casa y se reúne con Dars. El capítulo termina en el cuarto de Dars. En `maps/` están los mapas propios y las variantes de la casa, con sus puertas y eventos. `story/capitulo-2.json` contiene el recorrido, el diálogo y sus variantes. Los efectos de audio sintetizados llevan el prefijo `cap2_`.
+
+
+## Capítulo 3 — Las casas que nadie contó
+
+Incluye las 120 escenas del guion, el final y las decisiones opcionales. Continúa desde el cierre del capítulo 2. Los nueve mapas nuevos son el cuarto de documentos, el paso de servicio, la ruta al archivo, la recepción y consulta municipal, la avenida industrial, el depósito de materiales, la biblioteca y su exterior. La casa tiene estados de mañana, tarde, noche y apagón.
+
+La cinta métrica registra dos extremos seleccionados con E. Los muebles se pueden arrastrar manteniendo E al caminar, o alternando agarrar/soltar con E y con el botón táctil. Los documentos admiten páginas y ampliación mediante sus botones, las flechas y + / -. I u OBJETOS abren el registro de pruebas. Sus categorías —confirmado, hipótesis y descartado— se guardan con la partida. Durante el apagón, F o LUZ controlan la iluminación del teléfono.
+
+Las elecciones con Dars, los documentos recogidos y las solicitudes al archivo se guardan por separado del capítulo anterior. El reloj continúa la cronología ficticia ya iniciada en el capítulo 2, con los cambios de día del guion. Las grabaciones de la llamada conservan las palabras de la escena original.
+
+El guion y los eventos están en `story/capitulo-3.json`, las variantes de los mapas en `maps/` y los efectos originales nuevos usan el prefijo `c3_`. Los diálogos se muestran como texto animado con el sonido por personaje del juego. Las llamadas usan esa misma representación sonora.
+
+`tests/run-chapter3.ps1` compila y ejecuta dos recorridos completos con movimiento y colisiones. Usa archivos temporales propios para probar el guardado.

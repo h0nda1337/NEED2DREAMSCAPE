@@ -1,0 +1,54 @@
+newmtl color_480
+Kd 0.47500 0.46700 0.42400
+d 1.0
+illum 1
+
+newmtl color_481
+Kd 0.60800 0.60800 0.54900
+d 1.0
+illum 1
+
+newmtl color_526
+Kd 0.39600 0.42000 0.40400
+d 1.0
+illum 1
+
+newmtl color_527
+Kd 0.54500 0.55300 0.51400
+d 1.0
+illum 1
+
+newmtl color_528
+Kd 0.47500 0.42700 0.32500
+d 1.0
+illum 1
+
+newmtl color_529
+Kd 0.42700 0.45500 0.42000
+d 1.0
+illum 1
+
+newmtl color_530
+Kd 0.60800 0.60400 0.47500
+d 1.0
+illum 1
+
+newmtl color_531
+Kd 0.57600 0.49400 0.40800
+d 1.0
+illum 1
+
+newmtl color_496
+Kd 0.49400 0.39600 0.31400
+d 1.0
+illum 1
+
+newmtl color_497
+Kd 0.31800 0.28200 0.24300
+d 1.0
+illum 1
+
+newmtl color_492
+Kd 0.32500 0.29400 0.27100
+d 1.0
+illum 1

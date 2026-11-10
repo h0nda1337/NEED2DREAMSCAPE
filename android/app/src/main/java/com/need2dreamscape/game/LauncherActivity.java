@@ -15,7 +15,7 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 
 public final class LauncherActivity extends Activity {
-    static final String DATA_DIRECTORY = "game-v158-android1";
+    static final String DATA_DIRECTORY = "game-v160-capitulo3";
 
     @Override
     public void onCreate(Bundle state) {

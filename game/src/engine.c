@@ -38,6 +38,8 @@ enum { SAVE_AUTO, SAVE_FIRST, SAVE_SECOND, SAVE_THIRD, SAVE_COUNT };
 enum { SAVE_MENU_CLOSED, SAVE_MENU_LOAD, SAVE_MENU_PAUSE };
 typedef struct {
     int level, story, key, computer, stage, choice, flags;
+    int third_flags, relationship;
+    unsigned long categories;
     int has_position;
     double clock_seconds;
     int clock_anchor;
@@ -75,6 +77,13 @@ static int dialogue_clock_seconds;
 static int click_hit(double x, double y);
 static void mesh_data_load(int index);
 static void custom_camera_update(void);
+static int chapter_complete(void);
+static void render_investigation(void);
+static int investigation_input(SDL_Event *event);
+static void render_chapter_documents(void);
+static void menu_text(const char *value,double x,double y,double scale);
+static void save_box(double x,double y,double w,double h,int selected);
+static void chapter_drag_release(void);
 
 static void path_join(char *out, const char *relative)
 {
@@ -777,6 +786,7 @@ void campaign_reset(void)
     E.computer_progress=COMPUTER_LOCKED;
     E.search_progress=0;
     E.chapter2_choice=0;E.chapter2_flags=0;
+    E.chapter3_flags=0;E.chapter3_relationship=0;E.evidence_categories=0;
     E.story_clock_seconds=-1;E.story_clock_anchor=-1;E.story_clock_jump=0;
 }
 static int portal_at_stage(Json *portal)
@@ -895,6 +905,10 @@ static Json *chapter_event(void)
     }
     return NULL;
 }
+static int *chapter_flags(void)
+{
+    return E.search_progress>=ji(jg(E.game,"chapter_three_start"),INT_MAX)?&E.chapter3_flags:&E.chapter2_flags;
+}
 static Json *search_pages(void)
 {
     Json *event;
@@ -906,7 +920,10 @@ static Json *search_pages(void)
     variants=jg(event,"variants");
     for(i=0;i<jc(variants);++i){
         variant=ja(variants,i);flags=ji(jg(variant,"flags"),0);
-        if((E.chapter2_flags&flags)==flags)return jg(variant,"pages");
+        if((*chapter_flags()&flags)==flags&&
+           (E.chapter2_flags&ji(jg(variant,"legacy_flags"),0))==ji(jg(variant,"legacy_flags"),0)&&
+           E.chapter3_relationship>=ji(jg(variant,"relationship_min"),-9)&&
+           E.chapter3_relationship<=ji(jg(variant,"relationship_max"),9))return jg(variant,"pages");
     }
     if(E.chapter2_choice==2&&jg(event,"hostile"))return jg(event,"hostile");
     return event?jg(event,"pages"):jg(E.scene,"search_pages");
@@ -926,8 +943,8 @@ static void chapter_visibility(void)
         if(jg(node,"chapter_min"))
             E.nodes[i].active=stage>=ji(jg(node,"chapter_min"),0)&&
                 stage<=ji(jg(node,"chapter_max"),99)&&
-                (E.chapter2_flags&ji(jg(node,"required_flags"),0))==ji(jg(node,"required_flags"),0)&&
-                !(E.chapter2_flags&ji(jg(node,"absent_flags"),0));
+                (*chapter_flags()&ji(jg(node,"required_flags"),0))==ji(jg(node,"required_flags"),0)&&
+                !(*chapter_flags()&ji(jg(node,"absent_flags"),0));
         if(!scene_loading&&previous!=E.nodes[i].active){
             sound=ja(jg(node,"sounds"),0);
             if(!E.nodes[i].active)audio_stop(i);
@@ -949,11 +966,13 @@ static int chapter_event_ready(int interact)
     event=chapter_event();
     if(!event||E.fading||E.search_page>=0||E.search_inspection>=0||!node_valid(E.player))return 0;
     flags=ji(jg(event,"required_flags"),0);
-    if((E.chapter2_flags&flags)!=flags||jg(event,"choice_texture"))return 0;
+    if((*chapter_flags()&flags)!=flags||jg(event,"choice_texture"))return 0;
+    if(jg(event,"measure_points")&&!E.measure_complete)return 0;
+    if(jg(event,"drag_nodes")&&E.chapter_press_count<jc(jg(event,"drag_nodes")))return 0;
     delay=json_number(jg(event,"delay"),0);
     if(E.chapter2_choice==2)delay=json_number(jg(event,"hostile_delay"),delay);
     if(ji(jg(event,"interact"),0)!=interact||E.chapter_time<delay)return 0;
-    if(!jg(event,"pos"))return 1;
+    if(!jg(event,"pos")||jg(event,"measure_points")||jg(event,"drag_nodes"))return 1;
     jvec(jg(event,"pos"),p,3);
     dx=E.nodes[E.player].p[0]-p[0];dz=E.nodes[E.player].p[2]-p[2];
     radius=json_number(jg(event,"radius"),2);
@@ -975,7 +994,7 @@ static int chapter_aux_action(int apply)
         dx=pos[0]-E.nodes[E.player].p[0];dz=pos[2]-E.nodes[E.player].p[2];
         if(dx*dx+dz*dz>=.58*.58)continue;
         if(!apply)return 1;
-        E.chapter2_flags^=ji(jg(action,"toggle"),0);
+        *chapter_flags()^=ji(jg(action,"toggle"),0);
         sound=ji(jg(action,"sound"),-1);
         if(node_valid(sound))audio_play(sound,0);
         chapter_visibility();engine_save();return 1;
@@ -984,11 +1003,14 @@ static int chapter_aux_action(int apply)
 }
 static void chapter_enter_stage(int stage)
 {
+    chapter_drag_release();
     E.search_progress=stage;
     campaign_clock_sync(1);
     E.chapter_time=0;
     E.chapter_press_count=0;
     E.chapter_last_press=-1;
+    E.measure_first=-1;E.measure_complete=0;E.drag_node=-1;E.drag_moved=0;
+    E.document_index=0;E.document_zoom=1;E.choice_notice_time=0;
     if(stage>=8)chapter_visibility();
     engine_save();
 }
@@ -1008,13 +1030,13 @@ static void chapter_finish_event(void)
     int stage;
     event=chapter_event();
     stage=ji(jg(event,"next"),E.search_progress+1);
-    if(jg(event,"if_flags")&&(E.chapter2_flags&ji(jg(event,"if_flags"),0))==ji(jg(event,"if_flags"),0))
+    if(jg(event,"if_flags")&&(*chapter_flags()&ji(jg(event,"if_flags"),0))==ji(jg(event,"if_flags"),0))
         stage=ji(jg(event,"flag_next"),stage);
-    E.chapter2_flags|=ji(jg(event,"set_flags"),0);
-    E.chapter2_flags&=~ji(jg(event,"clear_flags"),0);
+    *chapter_flags()|=ji(jg(event,"set_flags"),0);
+    *chapter_flags()&=~ji(jg(event,"clear_flags"),0);
     if(jg(event,"warp")&&node_valid(E.player))jvec(jg(event,"warp"),E.nodes[E.player].p,3);
     chapter_enter_stage(stage);
-    if(chapter_two_complete()){
+    if(chapter_complete()){
         stage=ji(jg(E.scene,"chapter_final_sound"),-1);
         if(node_valid(stage))audio_play(stage,0);
     }
@@ -1082,13 +1104,35 @@ static void chapter_choose(int choice)
     }
     option=ja(jg(chapter_event(),"choices"),choice-1);
     if(!option)return;
-    E.chapter2_flags|=ji(jg(option,"set_flags"),0);
-    E.chapter2_flags&=~ji(jg(option,"clear_flags"),0);
+    if((*chapter_flags()&ji(jg(option,"blocked_flags"),0))||ji(jg(option,"retry"),0)){
+        E.choice_notice_time=2.0;return;
+    }
+    *chapter_flags()|=ji(jg(option,"set_flags"),0);
+    *chapter_flags()&=~ji(jg(option,"clear_flags"),0);
+    E.chapter3_relationship+=ji(jg(option,"relationship"),0);
+    E.story_clock_seconds+=json_number(jg(option,"clock_add"),0);
+    if(E.chapter3_relationship>9)E.chapter3_relationship=9;
+    if(E.chapter3_relationship< -9)E.chapter3_relationship=-9;
     chapter_enter_stage(ji(jg(option,"next"),E.search_progress+1));
 }
 static int chapter_two_complete(void)
 {
     return E.search_progress==ji(jg(E.game,"chapter_two_complete"),-1)&&jg(E.scene,"chapter_two_end");
+}
+static int chapter_complete(void)
+{
+    return chapter_two_complete()||
+        (E.search_progress==ji(jg(E.game,"chapter_three_complete"),-1)&&jg(E.scene,"chapter_three_end"));
+}
+static void chapter_next(void)
+{
+    const char *next;
+    next=js(jg(E.scene,"chapter_next"));
+    if(!*next){engine_fade("mainmenu2",2.1,0);return;}
+    E.chapter3_relationship=E.chapter2_choice==2||(E.chapter2_flags&256)?-1:0;
+    E.search_progress=ji(jg(E.scene,"chapter_next_stage"),E.search_progress+1);
+    campaign_clock_sync(0);
+    engine_fade(next,1.35,0);
 }
 static Json *chapter_stage_entry(const char *group)
 {
@@ -1134,8 +1178,101 @@ static int search_modal(void)
 }
 int custom_movement_locked(void)
 {
-    return E.story_clock_jump>0||E.chapter_inventory_open||chapter_two_complete()||ji(jg(E.scene,"chapter_cutscene"),0)||(E.search_progress==12&&jg(E.scene,"chapter_end"))||
+    return E.story_clock_jump>0||E.chapter_inventory_open||chapter_complete()||ji(jg(E.scene,"chapter_cutscene"),0)||(E.search_progress==12&&jg(E.scene,"chapter_end"))||
         (E.search_progress==13&&ji(jg(E.scene,"chapter2_entry"),0))||chapter_choice_pending()||search_modal()||E.computer_time>0||E.npc_dialog_page>=0||E.custom_key_page>=0||E.custom_key_insert>0||E.custom_door_time>0||(E.fading&&jc(jg(E.scene,"portals"))>0);
+}
+static void chapter_drag_release(void)
+{
+    Json *objects;
+    double origin[3];
+    double dx;
+    double dz;
+    double minimum;
+    int i;
+    if(!node_valid(E.drag_node)){E.drag_node=-1;return;}
+    objects=jg(chapter_event(),"drag_nodes");
+    jvec(jg(E.nodes[E.drag_node].data,"pos"),origin,3);
+    dx=E.nodes[E.drag_node].p[0]-origin[0];dz=E.nodes[E.drag_node].p[2]-origin[2];
+    minimum=json_number(jg(chapter_event(),"drag_distance"),1);
+    for(i=0;i<jc(objects)&&i<30;++i)
+        if(ji(ja(objects,i),-1)==E.drag_node&&dx*dx+dz*dz>=minimum*minimum)
+            E.drag_moved|=1U<<i;
+    E.chapter_press_count=0;
+    for(i=0;i<jc(objects)&&i<30;++i)if(E.drag_moved&(1U<<i))++E.chapter_press_count;
+    E.nodes[E.drag_node].collider_enabled=1;E.drag_node=-1;
+    world_update();
+}
+static int chapter_tools_interact(void)
+{
+    Json *points;
+    double point[3];
+    double dx;
+    double dz;
+    double closest;
+    int i;
+    int selected;
+    int object;
+    if(!node_valid(E.player)||E.search_page>=0||chapter_choice_pending())return 0;
+    points=jg(chapter_event(),"measure_points");
+    if(points&&!E.measure_complete){
+        closest=1.7*1.7;selected=-1;
+        for(i=0;i<jc(points);++i){
+            jvec(ja(points,i),point,3);
+            dx=E.nodes[E.player].p[0]-point[0];dz=E.nodes[E.player].p[2]-point[2];
+            if(dx*dx+dz*dz<closest){closest=dx*dx+dz*dz;selected=i;}
+        }
+        if(selected<0)return 1;
+        if(E.measure_first<0)E.measure_first=selected;
+        else if(selected!=E.measure_first){E.measure_complete=1;chapter_start_event(1);}
+        return 1;
+    }
+    points=jg(chapter_event(),"drag_nodes");
+    if(!points)return 0;
+    if(E.drag_node>=0){
+        chapter_drag_release();
+        if(E.chapter_press_count>=jc(points))chapter_start_event(1);
+        return 1;
+    }
+    closest=2.7*2.7;selected=-1;
+    for(i=0;i<jc(points)&&i<30;++i){
+        if(E.drag_moved&(1U<<i))continue;
+        object=ji(ja(points,i),-1);if(!node_valid(object))continue;
+        dx=E.nodes[object].p[0]-E.nodes[E.player].p[0];dz=E.nodes[object].p[2]-E.nodes[E.player].p[2];
+        if(dx*dx+dz*dz<closest){closest=dx*dx+dz*dz;selected=object;}
+    }
+    if(selected>=0){
+        E.drag_node=selected;E.nodes[selected].collider_enabled=0;
+        memcpy(E.drag_player,E.nodes[E.player].p,sizeof(E.drag_player));
+    }
+    return 1;
+}
+static void chapter_tools_update(double dt)
+{
+    Json *zone;
+    Json *event;
+    double lo;
+    double hi;
+    int axis;
+    if(E.choice_notice_time>0)E.choice_notice_time-=dt;
+    event=chapter_event();
+    if(node_valid(E.drag_node)&&node_valid(E.player)&&!custom_movement_locked()){
+        zone=jg(event,"drag_zone");
+        for(axis=0;axis<3;axis+=2){
+            E.nodes[E.drag_node].p[axis]+=E.nodes[E.player].p[axis]-E.drag_player[axis];
+            lo=json_number(ja(zone,axis==0?0:1),-1e9);hi=json_number(ja(zone,axis==0?2:3),1e9);
+            if(E.nodes[E.drag_node].p[axis]<lo)E.nodes[E.drag_node].p[axis]=lo;
+            if(E.nodes[E.drag_node].p[axis]>hi)E.nodes[E.drag_node].p[axis]=hi;
+        }
+        memcpy(E.drag_player,E.nodes[E.player].p,sizeof(E.drag_player));world_update();
+    }
+    if(jg(event,"flashlight")&&node_valid(E.player)){
+        axis=node_find("Flashlight");
+        if(axis<0)axis=8;
+        if(node_valid(axis)&&jg(E.nodes[axis].data,"light")){
+            E.nodes[axis].light_enabled=E.phone_light;
+            E.nodes[axis].light_intensity=E.search_progress==ji(jg(E.game,"chapter_three_start"),656)+95*8&&E.chapter_time<.2?0:.36;
+        }
+    }
 }
 static Json *chapter_waypoint(void)
 {
@@ -1155,7 +1292,16 @@ static Json *chapter_waypoint(void)
     if(E.search_progress<13||E.fading||E.pending_scene>=0||!node_valid(E.player)||custom_movement_locked())return NULL;
     event=chapter_event();
     if(event){
-        missing=ji(jg(event,"required_flags"),0)&~E.chapter2_flags;
+        items=jg(event,"measure_points");
+        if(items&&!E.measure_complete)return ja(items,E.measure_first==0?1:0);
+        items=jg(event,"drag_nodes");
+        if(items&&E.chapter_press_count<jc(items)){
+            for(i=0;i<jc(items)&&i<30;++i)if(!(E.drag_moved&(1U<<i))){
+                start=ji(ja(items,i),-1);
+                if(node_valid(start))return jg(E.nodes[start].data,"pos");
+            }
+        }
+        missing=ji(jg(event,"required_flags"),0)&~*chapter_flags();
         if(!missing)return jg(event,"pos");
         items=jg(event,"actions");
         for(i=0;i<jc(items);++i){
@@ -1195,7 +1341,7 @@ static DialogueCue current_dialogue(void)
     DialogueCue cue;
     Json *page;
     cue=no_dialogue;
-    if(E.fading||E.chapter_inventory_open||chapter_choice_pending()||chapter_two_complete()||
+    if(E.fading||E.chapter_inventory_open||chapter_choice_pending()||chapter_complete()||
        (E.search_progress==12&&jg(E.scene,"chapter_end"))||
        (E.computer_time>0&&E.computer_time<COMPUTER_FINAL_LINE)||
        (E.search_exit_time>0&&E.search_exit_time<.12))return cue;
@@ -1236,7 +1382,7 @@ int custom_interact(void)
     if(E.story_clock_jump>0)return 1;
     if(E.fading)return jc(jg(E.scene,"portals"))>0;
     if(E.chapter_inventory_open){E.chapter_inventory_open=0;return 1;}
-    if(chapter_two_complete()){engine_fade("mainmenu2",2.1,0);return 1;}
+    if(chapter_complete()){chapter_next();return 1;}
     if(dialogue_waiting(0))return 1;
     if(E.computer_time>0){
         if(E.computer_time>=COMPUTER_FINAL_LINE)E.computer_time=0;
@@ -1268,6 +1414,7 @@ int custom_interact(void)
         }
         return 1;
     }
+    if(chapter_tools_interact())return 1;
     if(chapter_start_event(1))return 1;
     if(chapter_aux_action(1))return 1;
     item=search_near_item();
@@ -1479,6 +1626,8 @@ static int save_current(int slot)
         written=fprintf(f,"DATE %s\n",stamp);
     if(written>=0&&E.story_clock_seconds>=0)
         written=fprintf(f,"CLOCK %.17g %d\n",E.story_clock_seconds,E.story_clock_anchor);
+    if(written>=0)
+        written=fprintf(f,"CHAPTER3 %d %d %lu\n",E.chapter3_flags,E.chapter3_relationship,E.evidence_categories);
     if(written>=0&&slot!=SAVE_AUTO&&node_valid(E.player)&&!custom_movement_locked()&&E.custom_story_page<0){
         p=E.nodes[E.player].p;
         written=fprintf(f,"POSITION %.17g %.17g %.17g\n",p[0],p[1],p[2]);
@@ -1510,6 +1659,8 @@ static int read_progress(FILE *f,Progress *record)
     double x,y,z;
     double clock_seconds;
     int clock_anchor;
+    int third_flags,relationship;
+    unsigned long categories;
     int level;
     if(!f)return 0;
     if(!fgets(line,sizeof(line),f)||strcmp(line,"PETSCOP_C89_SAVE_1\n")||
@@ -1523,7 +1674,8 @@ static int read_progress(FILE *f,Progress *record)
         record->key=record->story||level==9||level>=engine_scene_index("casaCustom");
     if(fscanf(f,"%d",&record->computer)!=1||record->computer<COMPUTER_LOCKED||record->computer>COMPUTER_EMPTY)
         record->computer=COMPUTER_LOCKED;
-    if(fscanf(f,"%d",&record->stage)!=1||record->stage<0||record->stage>ji(jg(E.game,"chapter_two_complete"),31))record->stage=0;
+    if(fscanf(f,"%d",&record->stage)!=1||record->stage<0||
+       record->stage>ji(jg(E.game,"campaign_complete"),ji(jg(E.game,"chapter_two_complete"),31)))record->stage=0;
     if(fscanf(f,"%d",&record->choice)!=1||record->choice<0||record->choice>2)record->choice=0;
     if(fscanf(f,"%d",&record->flags)!=1||record->flags<0)record->flags=0;
     while(fgets(line,sizeof(line),f)){
@@ -1533,6 +1685,10 @@ static int read_progress(FILE *f,Progress *record)
         else if(sscanf(line,"CLOCK %lf %d",&clock_seconds,&clock_anchor)==2&&
                 clock_seconds>=0&&clock_seconds<1e9&&clock_anchor>=0&&clock_anchor<=record->stage){
             record->clock_seconds=clock_seconds;record->clock_anchor=clock_anchor;
+        }
+        else if(sscanf(line,"CHAPTER3 %d %d %lu",&third_flags,&relationship,&categories)==3&&
+                third_flags>=0&&relationship>=-9&&relationship<=9&&categories<=0xFFFFFFFFUL){
+            record->third_flags=third_flags;record->relationship=relationship;record->categories=categories;
         }
     }
     fclose(f);
@@ -1559,6 +1715,7 @@ static void apply_progress(const Progress *record)
     E.custom_story_seen=record->story;E.custom_key_unlocked=record->key;
     E.computer_progress=record->computer;E.search_progress=record->stage;
     E.chapter2_choice=record->choice;E.chapter2_flags=record->flags;
+    E.chapter3_flags=record->third_flags;E.chapter3_relationship=record->relationship;E.evidence_categories=record->categories;
     E.story_clock_seconds=record->clock_seconds;E.story_clock_anchor=record->clock_anchor;E.story_clock_jump=0;
     campaign_clock_sync(0);
 }
@@ -1671,6 +1828,8 @@ void engine_load_scene(int index)
     E.chapter_press_count=0;E.chapter_last_press=-1;
     E.search_page=-1;E.search_inspection=-1;E.search_exit_time=0;E.chapter_time=0;E.chapter_door_tried=0;
     E.chapter_inventory_open=0;E.chapter_page_time=0;
+    E.measure_first=-1;E.measure_complete=0;E.drag_node=-1;E.drag_moved=0;E.phone_light=1;
+    E.evidence_selected=0;E.document_index=0;E.document_zoom=1;E.choice_notice_time=0;
     if(E.search_progress>0&&E.search_progress==ji(jg(E.scene,"search_stage"),-1))
         E.search_page=0;
     E.custom_key_insert=0;E.custom_key_page=-1;E.custom_door_time=0;
@@ -2178,9 +2337,41 @@ static void custom_camera_update(void)
     double x;
     double y;
     double z;
+    Json *keys;
+    Json *first;
+    Json *second;
+    double eye_a[3];
+    double eye_b[3];
+    double aim_a[3];
+    double aim_b[3];
+    double blend;
+    double begin;
+    double end;
+    int key;
     if(!ji(jg(E.scene,"custom_camera"),0)||!node_valid(E.camera)||!node_valid(E.player))return;
     camera=E.nodes+E.camera;
     player=E.nodes+E.player;
+    keys=jg(E.scene,"cinematic");
+    if(jc(keys)>0){
+        first=second=ja(keys,0);
+        for(key=1;key<jc(keys);++key){
+            second=ja(keys,key);
+            if(E.chapter_time<=json_number(jg(second,"time"),0))break;
+            first=second;
+        }
+        begin=json_number(jg(first,"time"),0);end=json_number(jg(second,"time"),begin);
+        blend=end>begin?(E.chapter_time-begin)/(end-begin):0;
+        if(blend<0)blend=0;
+        if(blend>1)blend=1;
+        blend=blend*blend*(3-2*blend);
+        jvec(jg(first,"eye"),eye_a,3);jvec(jg(second,"eye"),eye_b,3);
+        jvec(jg(first,"target"),aim_a,3);jvec(jg(second,"target"),aim_b,3);
+        for(key=0;key<3;++key){camera->p[key]=eye_a[key]+(eye_b[key]-eye_a[key])*blend;target[key]=aim_a[key]+(aim_b[key]-aim_a[key])*blend;}
+        x=target[0]-camera->p[0];y=camera->p[1]-target[1];z=target[2]-camera->p[2];
+        camera->using_euler=1;camera->euler[0]=atan2(y,sqrt(x*x+z*z))*57.29577951308232;
+        camera->euler[1]=atan2(x,z)*57.29577951308232;camera->euler[2]=0;
+        world_update();return;
+    }
     x=player->p[0];y=player->p[1]+11;z=player->p[2]-15;
     if(jg(E.scene,"chapter_camera")){
         jvec(jg(E.scene,"chapter_camera"),target,3);
@@ -2210,6 +2401,7 @@ static int wall_obscures_player(int index)
     int axis;
     if(!node_valid(E.camera)||!node_valid(E.player)||!strcmp(js(jg(E.scene,"name")),"exteriorCustom"))return 0;
     collider=ja(jg(E.nodes[index].data,"colliders"),0);
+    if(!collider)collider=jg(jg(E.nodes[index].data,"renderer"),"occlusion");
     if(!collider)return 0;
     camera=E.nodes+E.camera;
     player=E.nodes+E.player;
@@ -2301,6 +2493,8 @@ static void draw_sprite_node(int index)
     int r;
     int textured;
     n=E.nodes+index;if(n->sprite<0||!n->renderer_enabled)return;
+    c=ji(jg(n->data,"occlusion_parent"),-1);
+    if(node_valid(c)&&wall_obscures_player(c))return;
     sprite=ja(jg(E.game,"sprites"),n->sprite);settings=jg(n->data,"sprite");if(!sprite)return;
     size[0]=size[1]=1;pivot[0]=pivot[1]=.5;jvec(jg(sprite,"size"),size,2);jvec(jg(sprite,"pivot"),pivot,2);
     memcpy(matrix,n->world,sizeof(matrix));
@@ -2451,6 +2645,16 @@ static void lights_setup(void)
     int type;
     ambient[0]=ambient[1]=ambient[2]=0;ambient[3]=1;jvec(jg(E.scene,"ambient"),ambient,4);
     ambient_intensity=json_number(jg(E.scene,"ambient_intensity"),1);
+    if(jg(chapter_event(),"ambient")){
+        double fade_seconds;
+        double weight;
+        double darkness;
+        fade_seconds=json_number(jg(chapter_event(),"ambient_fade"),0);
+        weight=fade_seconds>0?E.chapter_time/fade_seconds:1;
+        if(weight>1)weight=1;
+        darkness=json_number(jg(chapter_event(),"ambient"),.04);
+        for(j=0;j<3;++j)ambient[j]+=(darkness-ambient[j])*weight;
+    }
     for(j=0;j<3;++j)base[j]=(GLfloat)(ambient[j]*ambient_intensity);
     memset(positions,0,sizeof(positions));memset(colors,0,sizeof(colors));memset(ranges,0,sizeof(ranges));
     glGetDoublev(GL_MODELVIEW_MATRIX,view);
@@ -2717,10 +2921,12 @@ static void render_custom_overlay(void)
     previous_panel=texture;
     if(E.fading)return;
     if(E.story_clock_jump>0){render_computer_clock(E.story_clock_jump);return;}
+    if(jg(E.scene,"cinematic"))return;
     if(E.chapter_inventory_open){
         Json *inventory;
         Json *item;
         int row;
+        if(E.search_progress>=ji(jg(E.game,"chapter_three_start"),INT_MAX)){render_investigation();return;}
         inventory=jg(E.game,"chapter_inventory");
         glColor4d(1,1,1,1);bind_texture(ji(jg(E.game,"chapter_inventory_title"),-1));
         draw_quad(70,794,720,66,0,0);
@@ -2746,9 +2952,11 @@ static void render_custom_overlay(void)
         texture=ji(jg(jg(E.scene,"computer"),"objective"),-1);
         glColor4d(1,1,1,1);bind_texture(texture);draw_quad(70,832,680,66,0,0);
     }
+    render_chapter_documents();
     if(chapter_choice_pending()){
         glColor4d(1,1,1,1);bind_texture(ji(chapter_choice_texture(),-1));
         draw_quad(70,50,1250,208,0,0);
+        if(E.choice_notice_time>0){glColor4d(1,.77,.4,1);menu_text("Revisa los documentos y elige otra opción.",85,275,1.0);}
         return;
     }
     if(E.search_progress>0&&(jg(E.scene,"search_pages")||jg(E.scene,"chapter_events"))&&E.search_page<0&&E.search_exit_time<=0){
@@ -2790,7 +2998,7 @@ static void render_custom_overlay(void)
     displays=jg(chapter_event(),"display_frames");
     if(E.search_inspection>=0&&E.search_inspection_screen>=0){
         glColor4d(1,1,1,1);bind_texture(E.search_inspection_screen);draw_quad(589,334,742,430,0,0);
-    }else if(E.search_page>=ji(jg(chapter_event(),"display_start"),0)&&
+    }else if(!ji(jg(chapter_event(),"display_tools"),0)&&E.search_page>=ji(jg(chapter_event(),"display_start"),0)&&
              E.search_page<ji(jg(chapter_event(),"display_end"),100000)&&jc(displays)>0){
         i=(int)(E.chapter_page_time*3)%jc(displays);
         glColor4d(1,1,1,1);bind_texture(ji(ja(displays,i),-1));draw_quad(589,334,742,430,0,0);
@@ -2849,6 +3057,150 @@ static void save_button(const char *label,double x,double y,double width,int ena
     else glColor4d(.40,.49,.59,1);
     menu_text(label,x+14,y+13,1.15);
 }
+static int evidence_list(int *indices)
+{
+    Json *items;
+    int i;
+    int count;
+    items=jg(E.game,"chapter3_evidence");count=0;
+    for(i=0;i<jc(items)&&count<16;++i)
+        if(E.chapter3_flags&ji(jg(ja(items,i),"flag"),0))indices[count++]=i;
+    return count;
+}
+static void evidence_classify(int category)
+{
+    int indices[16];
+    int count;
+    unsigned int shift;
+    count=evidence_list(indices);
+    if(count<1)return;
+    if(E.evidence_selected>=count)E.evidence_selected=count-1;
+    shift=(unsigned int)indices[E.evidence_selected]*2;
+    E.evidence_categories=(E.evidence_categories&~(3UL<<shift))|((unsigned long)category<<shift);
+    engine_save();
+}
+static void render_investigation(void)
+{
+    static const char *categories[]={"SIN CLASIFICAR","CONFIRMADO","HIPÓTESIS","DESCARTADO"};
+    Json *item;
+    int indices[16];
+    int count;
+    int i;
+    int category;
+    count=evidence_list(indices);
+    if(E.evidence_selected>=count)E.evidence_selected=count>0?count-1:0;
+    glDisable(GL_TEXTURE_2D);glColor4d(.015,.022,.036,.96);draw_quad(55,85,1810,765,0,0);
+    glColor4d(.79,.86,1,1);menu_text("REGISTRO DE INVESTIGACIÓN",85,802,1.7);
+    for(i=0;i<count;++i){
+        item=ja(jg(E.game,"chapter3_evidence"),indices[i]);
+        save_box(80,730-i*49,500,44,i==E.evidence_selected);
+        glColor4d(.85,.89,.97,1);menu_text(js(jg(item,"title")),94,744-i*49,1.0);
+    }
+    if(count>0){
+        item=ja(jg(E.game,"chapter3_evidence"),indices[E.evidence_selected]);
+        glColor4d(1,1,1,1);bind_texture(ji(jg(item,"texture"),-1));draw_quad(620,260,1180,490,0,0);
+        category=(int)((E.evidence_categories>>((unsigned int)indices[E.evidence_selected]*2))&3UL);
+        glColor4d(.92,.8,.48,1);menu_text(categories[category],630,222,1.3);
+        for(i=1;i<=3;++i){save_box(620+(i-1)*390,135,375,58,category==i);glColor4d(.82,.88,1,1);menu_text(categories[i],633+(i-1)*390,154,1.0);}
+    }else{glColor4d(.77,.8,.9,1);menu_text("Las pruebas aparecerán cuando las encuentres.",630,500,1.2);}
+    save_box(85,110,460,70,0);glColor4d(.82,.9,1,1);menu_text("CERRAR [I / ESC / E]",105,133,1.15);
+    glColor4d(.67,.74,.85,1);menu_text("Flechas eligen prueba · 1 / 2 / 3 cambian su categoría",620,99,.96);
+}
+static void render_chapter_documents(void)
+{
+    Json *frames;
+    double zoom;
+    double p[3];
+    double q[3];
+    double distance;
+    char detail[120];
+    int count;
+    int i;
+    frames=jg(chapter_event(),"display_frames");count=jc(frames);
+    if(ji(jg(chapter_event(),"display_tools"),0)&&count>0&&(E.search_page>=0||chapter_choice_pending())){
+        if(E.document_index>=count)E.document_index=0;
+        zoom=E.document_zoom>0?E.document_zoom:1;
+        save_box(100,295,1230,490,0);
+        glEnable(GL_SCISSOR_TEST);glScissor((GLint)(110.0*E.width/1920),(GLint)(305.0*E.height/960),
+            (GLsizei)(1210.0*E.width/1920),(GLsizei)(470.0*E.height/960));
+        glColor4d(1,1,1,1);bind_texture(ji(ja(frames,E.document_index),-1));
+        draw_quad(715-600*zoom,540-230*zoom,1200*zoom,460*zoom,0,0);glDisable(GL_SCISSOR_TEST);
+        for(i=0;i<4;++i)save_box(100+i*210,795,200,54,0);
+        glColor4d(.82,.89,1,1);menu_text("< ANTERIOR",110,812,1);menu_text("SIGUIENTE >",320,812,1);
+        menu_text("- ALEJAR",530,812,1);menu_text("+ ACERCAR",740,812,1);
+    }
+    if(E.search_page<0&&jg(chapter_event(),"measure_points")){
+        jvec(ja(jg(chapter_event(),"measure_points"),0),p,3);jvec(ja(jg(chapter_event(),"measure_points"),1),q,3);
+        distance=sqrt((q[0]-p[0])*(q[0]-p[0])+(q[2]-p[2])*(q[2]-p[2]))*json_number(jg(chapter_event(),"unit_scale"),1);
+        if(E.measure_first>=0)sprintf(detail,"CINTA · %.2f m · selecciona el otro extremo con E",distance);
+        else strcpy(detail,"CINTA · selecciona el primer extremo con E");
+        glColor4d(.93,.83,.52,1);menu_text(detail,85,780,1);
+    }
+    if(E.search_page<0&&jg(chapter_event(),"drag_nodes")){
+        sprintf(detail,"%d / %d objetos colocados · %s",E.chapter_press_count,jc(jg(chapter_event(),"drag_nodes")),
+            E.drag_node>=0?"E para soltar":"E para agarrar");
+        glColor4d(.9,.82,.55,1);menu_text(detail,85,780,1);
+    }
+    if(jg(chapter_event(),"flashlight")){
+        save_box(970,866,350,68,0);glColor4d(.82,.89,1,1);
+        menu_text(E.phone_light?"LUZ ENCENDIDA [F]":"LUZ APAGADA [F]",985,888,1.03);
+    }
+}
+static int investigation_input(SDL_Event *event)
+{
+    SDL_Keycode key;
+    double x;
+    double y;
+    int indices[16];
+    int count;
+    int width;
+    int height;
+    int control;
+    int documents;
+    if(E.search_progress<ji(jg(E.game,"chapter_three_start"),INT_MAX))return 0;
+    key=event->type==SDL_KEYDOWN?event->key.keysym.sym:0;
+    documents=ji(jg(chapter_event(),"display_tools"),0)&&(E.search_page>=0||chapter_choice_pending());
+    count=evidence_list(indices);
+    if(E.chapter_inventory_open){
+        if(event->type==SDL_KEYDOWN&&!event->key.repeat){
+            if(key==SDLK_i||key==SDLK_ESCAPE||key==SDLK_e)E.chapter_inventory_open=0;
+            else if(count>0&&(key==SDLK_UP||key==SDLK_DOWN))E.evidence_selected=(E.evidence_selected+(key==SDLK_UP?count-1:1))%count;
+            else if(key>=SDLK_1&&key<=SDLK_3)evidence_classify((int)(key-SDLK_1)+1);
+        }
+        if(event->type==SDL_MOUSEBUTTONUP){
+            SDL_GetWindowSize(E.window,&width,&height);x=event->button.x*1920.0/width;y=960-event->button.y*960.0/height;
+            if(x>=80&&x<=580&&y>=195&&y<=774){control=(int)((774-y)/49);if(control<count)E.evidence_selected=control;}
+            else if(x>=620&&x<=1790&&y>=135&&y<=193)evidence_classify(1+(int)((x-620)/390));
+            else if((x>=85&&x<=545&&y>=110&&y<=180)||y>=866)E.chapter_inventory_open=0;
+            E.mouse_node=-1;
+        }
+        return event->type!=SDL_QUIT&&event->type!=SDL_WINDOWEVENT;
+    }
+    if(jg(chapter_event(),"flashlight")&&event->type==SDL_KEYDOWN&&!event->key.repeat&&key==SDLK_f){E.phone_light=!E.phone_light;return 1;}
+    if(documents&&event->type==SDL_KEYDOWN&&!event->key.repeat){
+        if(key==SDLK_LEFT)E.document_index=(E.document_index+jc(jg(chapter_event(),"display_frames"))-1)%jc(jg(chapter_event(),"display_frames"));
+        else if(key==SDLK_RIGHT)E.document_index=(E.document_index+1)%jc(jg(chapter_event(),"display_frames"));
+        else if(key==SDLK_EQUALS||key==SDLK_PLUS)E.document_zoom+=.25;
+        else if(key==SDLK_MINUS)E.document_zoom-=.25;
+        else return 0;
+        if(E.document_zoom<1)E.document_zoom=1;
+        if(E.document_zoom>2)E.document_zoom=2;
+        return 1;
+    }
+    if(event->type==SDL_MOUSEBUTTONUP){
+        SDL_GetWindowSize(E.window,&width,&height);x=event->button.x*1920.0/width;y=960-event->button.y*960.0/height;
+        if(documents&&x>=100&&x<940&&y>=795&&y<=849){
+            control=(int)((x-100)/210);
+            if(control==0)E.document_index=(E.document_index+jc(jg(chapter_event(),"display_frames"))-1)%jc(jg(chapter_event(),"display_frames"));
+            if(control==1)E.document_index=(E.document_index+1)%jc(jg(chapter_event(),"display_frames"));
+            if(control==2&&E.document_zoom>1)E.document_zoom-=.25;
+            if(control==3&&E.document_zoom<2)E.document_zoom+=.25;
+            E.mouse_node=-1;return 1;
+        }
+        if(jg(chapter_event(),"flashlight")&&x>=970&&x<=1320&&y>=866&&y<=934){E.phone_light=!E.phone_light;E.mouse_node=-1;return 1;}
+    }
+    return 0;
+}
 static void render_save_menu(void)
 {
     static const char *labels[SAVE_COUNT]={"AUTOGUARDADO","MANUAL 1","MANUAL 2","MANUAL 3"};
@@ -2875,7 +3227,9 @@ static void render_save_menu(void)
         if(record->level>=0){
             name=js(ja(jg(E.game,"save_map_names"),record->level));
             if(!*name)name=js(jg(ja(jg(E.game,"scenes"),record->level),"name"));
-            sprintf(detail,"CAP. %d  |  %.26s  |  %.16s",record->stage>=13?2:1,name,record->date[0]?record->date:"SIN FECHA");
+            sprintf(detail,"CAP. %d  |  %.26s  |  %.16s",
+                record->stage>=ji(jg(E.game,"chapter_three_start"),INT_MAX)?3:record->stage>=13?2:1,
+                name,record->date[0]?record->date:"SIN FECHA");
             glColor4d(.69,.78,.88,1);menu_text(detail,394,y+19,1.08);
         }else{
             glColor4d(.48,.57,.69,1);menu_text("ESPACIO VACÍO",394,y+19,1.08);
@@ -2932,9 +3286,10 @@ static void render_scene(void)
     bg[0]=bg[1]=bg[2]=0;bg[3]=1;c=node_valid(E.camera)?jg(E.nodes[E.camera].data,"camera"):NULL;jvec(jg(c,"background"),bg,4);
     glViewport(0,0,E.width,E.height);
     dark_intro=E.search_progress==13&&ji(jg(E.scene,"chapter2_entry"),0);
-    if(chapter_two_complete()&&!E.fading){
+    if(chapter_complete()&&!E.fading){
         glClearColor(0,0,0,1);glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
-        overlay_begin();glColor4d(1,1,1,1);bind_texture(ji(jg(E.scene,"chapter_two_end"),-1));
+        overlay_begin();glColor4d(1,1,1,1);
+        bind_texture(ji(jg(E.scene,"chapter_three_end"),ji(jg(E.scene,"chapter_two_end"),-1)));
         draw_quad(335,378,1250,204,0,0);
         return;
     }
@@ -3030,6 +3385,17 @@ static void input_events(void)
             }
             continue;
         }
+        if(investigation_input(&e))continue;
+#ifndef __ANDROID__
+        if(e.type==SDL_KEYUP&&e.key.keysym.sym==SDLK_e&&node_valid(E.drag_node)){
+            double original[3];
+            double dragged_x;
+            double dragged_z;
+            jvec(jg(E.nodes[E.drag_node].data,"pos"),original,3);
+            dragged_x=E.nodes[E.drag_node].p[0]-original[0];dragged_z=E.nodes[E.drag_node].p[2]-original[2];
+            if(dragged_x*dragged_x+dragged_z*dragged_z>.09){chapter_drag_release();chapter_start_event(1);}
+        }
+#endif
         if(e.type==SDL_KEYDOWN&&!e.key.repeat){
             if(title_menu&&!E.fading&&(e.key.keysym.sym==SDLK_RETURN||e.key.keysym.sym==SDLK_SPACE)){
                 Progress available;
@@ -3043,12 +3409,12 @@ static void input_events(void)
                 if(E.search_progress!=20||node<=2)chapter_choose(node);
                 continue;
             }
-            if(e.key.keysym.sym==SDLK_i&&E.search_progress>=31&&!title_menu&&!E.fading&&!chapter_two_complete()&&
+            if(e.key.keysym.sym==SDLK_i&&E.search_progress>=31&&!title_menu&&!E.fading&&!chapter_complete()&&
                !chapter_choice_pending()&&!ji(jg(E.scene,"chapter_cutscene"),0)&&E.search_page<0){
                 E.chapter_inventory_open=!E.chapter_inventory_open;continue;
             }
             if((e.key.keysym.sym==SDLK_e||e.key.keysym.sym==SDLK_SPACE)&&E.custom_story_page<0&&E.custom_key_page<0)scripts_interact(1);
-            if(e.key.keysym.sym==SDLK_RETURN&&(chapter_two_complete()||chapter_continue_ready()||E.search_page>=0||E.search_inspection>=0||E.computer_time>=COMPUTER_FINAL_LINE||E.npc_dialog_page>=0||E.custom_story_page>=0||E.custom_key_page>=0||custom_key_at_door()))custom_interact();
+            if(e.key.keysym.sym==SDLK_RETURN&&(chapter_complete()||chapter_continue_ready()||E.search_page>=0||E.search_inspection>=0||E.computer_time>=COMPUTER_FINAL_LINE||E.npc_dialog_page>=0||E.custom_story_page>=0||E.custom_key_page>=0||custom_key_at_door()))custom_interact();
             if(e.key.keysym.sym==SDLK_ESCAPE){
                 if(node_valid(E.player)&&ji(jg(E.scene,"custom_camera"),0))engine_open_save_menu(1);
                 else scripts_escape();
@@ -3092,13 +3458,13 @@ static void input_events(void)
                 if(node_valid(node))event_trigger(node,3);
                 E.mouse_node=-1;
                 if(x>=1650)engine_open_save_menu(1);
-                else if(x<=1630&&E.search_progress>=31&&!E.fading&&!chapter_two_complete()&&
+                else if(x<=1630&&E.search_progress>=31&&!E.fading&&!chapter_complete()&&
                         !chapter_choice_pending()&&!ji(jg(E.scene,"chapter_cutscene"),0)&&E.search_page<0)
                     E.chapter_inventory_open=!E.chapter_inventory_open;
                 continue;
             }
 #endif
-            if(chapter_two_complete()){custom_interact();E.mouse_node=-1;continue;}
+            if(chapter_complete()){custom_interact();E.mouse_node=-1;continue;}
             if(chapter_choice_pending()&&x>=70&&x<=1320&&y>=55&&y<=207){
                 int option;
                 option=y>=120?1:2;
@@ -3128,8 +3494,14 @@ static void chapter_animate_props(double dt)
     double speed;
     double amount;
     double origin[3];
+    Json *flash;
     for(i=0;i<E.count;++i){
         if(!node_active(i))continue;
+        flash=jg(E.nodes[i].data,"cinematic_flash");
+        if(flash){
+            amount=(E.chapter_time-json_number(jg(flash,"start"),0))/json_number(jg(flash,"duration"),1);
+            E.nodes[i].light_intensity=amount>0&&amount<1?sin(amount*3.141592653589793)*json_number(jg(jg(E.nodes[i].data,"light"),"intensity"),1):0;
+        }
         speed=json_number(jg(E.nodes[i].data,"chapter_slide"),0);
         if(speed!=0&&E.search_progress==ji(jg(E.nodes[i].data,"slide_stage"),-1)){
             jvec(jg(E.nodes[i].data,"pos"),origin,3);
@@ -3168,6 +3540,7 @@ static void tick(double dt)
     }
     custom_key_update(dt);
     chapter_animate_props(dt);
+    chapter_tools_update(dt);
     world_update();physics_update(dt);video_update(dt);audio_refresh();
     if(E.fading){
         if(E.fade_in){E.fade_alpha-=E.fade_rate*dt;if(E.fade_alpha<=0){E.fade_alpha=0;E.fading=0;}}
@@ -3650,6 +4023,7 @@ int main(int argc,char **argv)
         else if(!strcmp(argv[i],"--lang")&&i+1<argc)language=argv[++i];
         else if(!strcmp(argv[i],"--save")&&i+1<argc){if(strlen(argv[++i])<MAX_PATH_SIZE)strcpy(E.save_path,argv[i]);}
         else if(!strcmp(argv[i],"--chapter2"))preview_chapter=1;
+        else if(!strcmp(argv[i],"--chapter3"))preview_chapter=2;
         else if(!strcmp(argv[i],"--self-test")){selftest=1;E.headless=1;no_save=1;}
         else if(!strcmp(argv[i],"--audio-test")&&i+1<argc){audio_test=argv[++i];E.headless=1;no_save=1;}
         else if(!strcmp(argv[i],"--no-save"))no_save=1;
@@ -3674,7 +4048,11 @@ int main(int argc,char **argv)
     if(SDL_Init(E.headless?SDL_INIT_TIMER:SDL_INIT_VIDEO|SDL_INIT_AUDIO|SDL_INIT_TIMER)!=0){fprintf(stderr,"SDL: %s\n",SDL_GetError());cleanup();return 1;}
     if(!E.save_path[0])desktop_save_init();
     save_read();
-    if(preview_chapter){
+    if(preview_chapter==2){
+        E.search_progress=ji(jg(E.game,"chapter_three_start"),656);E.computer_progress=COMPUTER_EMPTY;
+        E.custom_story_seen=1;E.custom_key_unlocked=1;scene="dormitorioRadeC3";
+        progress_pending=0;campaign_clock_sync(0);
+    }else if(preview_chapter){
         if(E.saved_level>=0&&E.search_progress!=12)scene="loader";
         else{
             E.search_progress=12;E.computer_progress=COMPUTER_EMPTY;
